@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Messages>
+
+  <Hindi>
+    <HMess Code="EDC" Description="vkidk vafdr fo|qr Hkkj fcfyax Hkkj ls vf/kd ik;k x;k gSA d`i;k viuk Lohd`r Hkkj fu;fer djk;saA"></HMess>
+    <HMess Code="IDC" Description="cdk;k jkf'k ds dkj.k ;g la;kstu ¼dusD'ku½ foPNsnu ;ksX; gSAd`i;k Hkqxrku rqjar djsaA"></HMess>
+    <HMess Code="DAD" Description="Mhohoh,u,y 'ks&#34;k jkf'k dk Hkqxrku rRdky lqfuf'pr djsa vU;Fkk vkidk fo|qr la;kstu foPNsfnr dj fn;k tk;sxk A"></HMess>
+    <HMess Code="TFA" Description="fo|qr pksjh@vizkf/kd`r iz;ksx ds vkadyu dh cdk;k {0} Åij n'kkZ;h x;h fcy @cdk;k jkf'k ds vfrfjDr gS A"></HMess>
+    <HMess Code="AB1" Description=";g fcy okLrfod ehVj jhfMxa ds vk/kkj ij {0} ;wfuV dk] fnukad {1} ls {2} rd ¼{3}½ dh vof/k ds fy, cuk;k x;k gSAa"></HMess>
+    <HMess Code="AB2" Description="fiNys vuqekfur fcy dk lek;kstu bl fcy eas dj fn;k x;k gSA"></HMess>
+    <HMess Code="PFM" Description="fiNys ekg vkids la;kstu dk ikoj QSDVj {0} ls de ntZ fd;k x;k gSA i= Hkstk x;k gSA vf/kHkkj ls cpus ds fy, d`i;k mfpr dne mBk;sa A"></HMess>
+    <HMess Code="TPC" Description="vkids vkosnu ifjlj fufj{k.k esa Lohd`r ls fHkUu Js.kh dk mi;ksx ik;s tkus ds vk/kkj ij vkidh VSfjQ Js.kh esa ifjorZu fd;k x;k gSA "></HMess>   
+  </Hindi>
+  <English>
+    <EMess Code="BRDCST1" Description="BROADCASTMESS"></EMess>
+    <EMess Code="BRDCST2" Description="BROADCASTMESS"></EMess>
+    <EMess Code="BRDCST3" Description="As per UPERC Supply code Clause 5.3(d), 2% of demand and 3% of units are increased for billing"></EMess>
+
+  </English>
+  <BROADCAST>
+    <BCAST SRVNO="BRDCST1" ENGMESSAGE="DUMMY MSG" HINMESSAGE=""  MSGTYP="ENG"></BCAST>
+    <BCAST SRVNO="670240416" HINMESSAGE="Mhohoh,u,y '" ENGMESSAGE="" MSGTYP="HIN"></BCAST>
+  </BROADCAST>
+  <EBill>
+    <OutputLocation DestinationPath="C:\Bills"></OutputLocation>
+  </EBill>
+</Messages>

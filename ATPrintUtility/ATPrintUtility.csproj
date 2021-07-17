@@ -1,0 +1,856 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D4985B16-4003-4D4B-94CF-B12B95A9ACF8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AT.Print</RootNamespace>
+    <AssemblyName>AT.Print</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.BonusSkins.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Charts.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Export, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.1.UI, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v20.1.Extensions, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="LumenWorks.Framework.IO, Version=3.8.0.0, Culture=neutral, PublicKeyToken=5ad3ea2f85776344, processorArchitecture=MSIL">
+      <HintPath>..\packages\LumenWorks.Framework.IO.3.8.0\lib\net20\LumenWorks.Framework.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EbillOutputLocation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EbillOutputLocation.Designer.cs">
+      <DependentUpon>EbillOutputLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HomeControl.Designer.cs">
+      <DependentUpon>HomeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Messages\BroadcastMessages.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Messages\BroadcastMessages.Designer.cs">
+      <DependentUpon>BroadcastMessages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Messages\ManageEnglishMessages.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Messages\ManageHindiMessages - Copy.Designer.cs">
+      <DependentUpon>ManageEnglishMessages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Messages\ManageHindiMessages.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Messages\ManageHindiMessages.Designer.cs">
+      <DependentUpon>ManageHindiMessages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutputFolderPath.cs" />
+    <Compile Include="PDF\Rpt_HTPDF.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PDF\Rpt_HTPDF.Designer.cs">
+      <DependentUpon>Rpt_HTPDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PDF\Rpt_HT_Solar_PDF.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PDF\Rpt_HT_Solar_PDF.Designer.cs">
+      <DependentUpon>Rpt_HT_Solar_PDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PDF\Rpt_HT_Solar_back_PDF.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PDF\Rpt_HT_Solar_back_PDF.Designer.cs">
+      <DependentUpon>Rpt_HT_Solar_back_PDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PDF\Rpt_LTMD_Solar_PDF.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PDF\Rpt_LTMD_Solar_PDF.Designer.cs">
+      <DependentUpon>Rpt_LTMD_Solar_PDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PDF\Rpt_LTMD_Solar_back_PDF.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PDF\Rpt_LTMD_Solar_back_PDF.Designer.cs">
+      <DependentUpon>Rpt_LTMD_Solar_back_PDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PDF\rpt_HT_Back .cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PDF\rpt_HT_Back .Designer.cs">
+      <DependentUpon>rpt_HT_Back .cs</DependentUpon>
+    </Compile>
+    <Compile Include="PDF\Rpt_HT_TodPDF.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PDF\Rpt_HT_TodPDF.Designer.cs">
+      <DependentUpon>Rpt_HT_TodPDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PDF\Rpt_LTMDPDF.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PDF\Rpt_LTMDPDF.Designer.cs">
+      <DependentUpon>Rpt_LTMDPDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PDF\Rpt_LTMDwTodPDF.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PDF\Rpt_LTMDwTodPDF.Designer.cs">
+      <DependentUpon>Rpt_LTMDwTodPDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PDF\rpt_HT_BackPDF.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PDF\rpt_HT_BackPDF.Designer.cs">
+      <DependentUpon>rpt_HT_BackPDF.cs</DependentUpon>
+    </Compile>
+    <None Include="Fonts\ARIALMT.ttf" />
+    <None Include="Fonts\Helvetica-Bold.ttf" />
+    <None Include="Fonts\Helvetica-Condensed.otf" />
+    <None Include="Fonts\Helvetica.ttf" />
+    <None Include="Fonts\K016.TTF" />
+    <None Include="Fonts\KRDV021_0.TTF" />
+    <None Include="Fonts\Kruti Dev 016 Thin.ttf" />
+    <None Include="PDF\rpt_HT_BackPDF1.Designer.cs">
+      <DependentUpon>rpt_HT_BackPDF.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </None>
+    <Compile Include="PDF\rpt_LTMDwT_BackPDF.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PDF\rpt_LTMDwT_BackPDF.Designer.cs">
+      <DependentUpon>rpt_LTMDwT_BackPDF.cs</DependentUpon>
+    </Compile>
+    <None Include="PDF\rpt_LTMDwT_BackPDF.resx.bak" />
+    <None Include="PDF\rpt_LTMDwT_BackPDF1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_LTMDwT_BackPDF.resx</DependentUpon>
+    </None>
+    <None Include="PDF\rpt_LTMD_Back1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_LTMD_Back.resx</DependentUpon>
+    </None>
+    <Compile Include="PDF\rpt_LTMD_Back.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PDF\rpt_LTMD_Back.Designer.cs">
+      <DependentUpon>rpt_LTMD_Back.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PDF\Rpt_LTPDF.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PDF\Rpt_LTPDF.Designer.cs">
+      <DependentUpon>Rpt_LTPDF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PDF\rpt_LT_Back.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PDF\rpt_LT_Back.Designer.cs">
+      <DependentUpon>rpt_LT_Back.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintLTMD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PrintLTMD.Designer.cs">
+      <DependentUpon>PrintLTMD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Rpt_HT_Solar_Print_Back.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Rpt_HT_Solar_Print_Back.Designer.cs">
+      <DependentUpon>Rpt_HT_Solar_Print_Back.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Rpt_HT_Solar_Print.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Rpt_HT_Solar_Print.Designer.cs">
+      <DependentUpon>Rpt_HT_Solar_Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Rpt_HT_TOD_Print_Back.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Rpt_HT_TOD_Print_Back.Designer.cs">
+      <DependentUpon>Rpt_HT_TOD_Print_Back.cs</DependentUpon>
+    </Compile>
+    <None Include="Print\Rpt_HT_TOD_Print_Back1.Designer.cs">
+      <DependentUpon>Rpt_HT_TOD_Print_Back.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </None>
+    <Compile Include="Print\Rpt_HT_Print.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Rpt_HT_Print.Designer.cs">
+      <DependentUpon>Rpt_HT_Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Rpt_HT_Print_Back.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Rpt_HT_Print_Back.Designer.cs">
+      <DependentUpon>Rpt_HT_Print_Back.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Rpt_HT_TOD_Print.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Rpt_HT_TOD_Print.Designer.cs">
+      <DependentUpon>Rpt_HT_TOD_Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Rpt_LTMD_Solar_Print_Back.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Rpt_LTMD_Solar_Print_Back.Designer.cs">
+      <DependentUpon>Rpt_LTMD_Solar_Print_Back.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Rpt_LTMD_Solar_Print.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Rpt_LTMD_Solar_Print.Designer.cs">
+      <DependentUpon>Rpt_LTMD_Solar_Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Rpt_LTMD_TOD_Print.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Rpt_LTMD_TOD_Print.Designer.cs">
+      <DependentUpon>Rpt_LTMD_TOD_Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Rpt_LTMD_TOD_Print_Back.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Rpt_LTMD_TOD_Print_Back.Designer.cs">
+      <DependentUpon>Rpt_LTMD_TOD_Print_Back.cs</DependentUpon>
+    </Compile>
+    <None Include="Print\Rpt_LTMD_TOD_Print_Back1.Designer.cs">
+      <DependentUpon>Rpt_LTMD_TOD_Print_Back.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </None>
+    <Compile Include="Print\Rpt_LTMD_Print.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Rpt_LTMD_Print.Designer.cs">
+      <DependentUpon>Rpt_LTMD_Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Rpt_LTMD_Print_Back.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Rpt_LTMD_Print_Back.Designer.cs">
+      <DependentUpon>Rpt_LTMD_Print_Back.cs</DependentUpon>
+    </Compile>
+    <None Include="Print\Rpt_LTMD_Print_Back1.Designer.cs">
+      <DependentUpon>Rpt_LTMD_Print_Back.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </None>
+    <Compile Include="Print\Rpt_LT_Print.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Rpt_LT_Print.Designer.cs">
+      <DependentUpon>Rpt_LT_Print.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Rpt_LT_Print_Back.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\Rpt_LT_Print_Back.Designer.cs">
+      <DependentUpon>Rpt_LT_Print_Back.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print_Solar_HT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Print_Solar_HT.Designer.cs">
+      <DependentUpon>Print_Solar_HT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print_Solar_LTMD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Print_Solar_LTMD.Designer.cs">
+      <DependentUpon>Print_Solar_LTMD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print_HT1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Print_HT1.Designer.cs">
+      <DependentUpon>Print_HT1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Rpt_Saprator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rpt_Saprator.Designer.cs">
+      <DependentUpon>Rpt_Saprator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\BillDetails.cs" />
+    <Compile Include="Utils\BroadcastMessage.cs" />
+    <Compile Include="Utils\ChartData.cs" />
+    <Compile Include="Utils\LoadStaticData.cs" />
+    <Compile Include="Utils\SingleHTBill.cs" />
+    <Compile Include="Utils\Solar_Bill_HT.cs" />
+    <Compile Include="Utils\SolarBill.cs" />
+    <Compile Include="Utils\SingleLTMDBill.cs" />
+    <Compile Include="Utils\SingleLTBill.cs" />
+    <Compile Include="PrintLT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PrintLT.Designer.cs">
+      <DependentUpon>PrintLT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\AppFunctions.cs" />
+    <Compile Include="ATWaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ATWaitForm.Designer.cs">
+      <DependentUpon>ATWaitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\ParseAsDataTable.cs" />
+    <Compile Include="XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReport2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReport2.Designer.cs">
+      <DependentUpon>XtraReport2.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="EbillOutputLocation.resx">
+      <DependentUpon>EbillOutputLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeControl.resx">
+      <DependentUpon>HomeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Messages\BroadcastMessages.resx">
+      <DependentUpon>BroadcastMessages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Messages\ManageHindiMessages - Copy.resx">
+      <DependentUpon>ManageEnglishMessages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Messages\ManageHindiMessages.resx">
+      <DependentUpon>ManageHindiMessages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PDF\Rpt_HTPDF.resx">
+      <DependentUpon>Rpt_HTPDF.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PDF\Rpt_HT_Solar_PDF.resx">
+      <DependentUpon>Rpt_HT_Solar_PDF.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PDF\Rpt_HT_Solar_back_PDF.resx">
+      <DependentUpon>Rpt_HT_Solar_back_PDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PDF\Rpt_LTMD_Solar_PDF.resx">
+      <DependentUpon>Rpt_LTMD_Solar_PDF.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PDF\Rpt_LTMD_Solar_back_PDF.resx">
+      <DependentUpon>Rpt_LTMD_Solar_back_PDF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PDF\rpt_HT_Back .resx">
+      <DependentUpon>rpt_HT_Back .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PDF\Rpt_HT_TodPDF.resx">
+      <DependentUpon>Rpt_HT_TodPDF.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PDF\Rpt_LTMDPDF.resx">
+      <DependentUpon>Rpt_LTMDPDF.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PDF\Rpt_LTMDwTodPDF.resx">
+      <DependentUpon>Rpt_LTMDwTodPDF.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PDF\rpt_HT_BackPDF.resx">
+      <DependentUpon>rpt_HT_BackPDF.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>rpt_HT_BackPDF1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PDF\rpt_LTMDwT_BackPDF.resx">
+      <DependentUpon>rpt_LTMDwT_BackPDF.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>rpt_LTMDwT_BackPDF1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PDF\rpt_LTMD_Back.resx">
+      <DependentUpon>rpt_LTMD_Back.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>rpt_LTMD_Back1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PDF\Rpt_LTPDF.resx">
+      <DependentUpon>Rpt_LTPDF.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PDF\rpt_LT_Back.resx">
+      <DependentUpon>rpt_LT_Back.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintLTMD.resx">
+      <DependentUpon>PrintLTMD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintLT.resx">
+      <DependentUpon>PrintLT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Rpt_HT_Solar_Print_Back.resx">
+      <DependentUpon>Rpt_HT_Solar_Print_Back.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Rpt_HT_Solar_Print.resx">
+      <DependentUpon>Rpt_HT_Solar_Print.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Rpt_HT_TOD_Print_Back.resx">
+      <DependentUpon>Rpt_HT_TOD_Print_Back.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Rpt_HT_TOD_Print_Back1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Rpt_HT_Print.resx">
+      <DependentUpon>Rpt_HT_Print.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Rpt_HT_Print_Back.resx">
+      <DependentUpon>Rpt_HT_Print_Back.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Rpt_HT_TOD_Print.resx">
+      <DependentUpon>Rpt_HT_TOD_Print.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Rpt_LTMD_Solar_Print_Back.resx">
+      <DependentUpon>Rpt_LTMD_Solar_Print_Back.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Rpt_LTMD_Solar_Print.resx">
+      <DependentUpon>Rpt_LTMD_Solar_Print.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Rpt_LTMD_TOD_Print.resx">
+      <DependentUpon>Rpt_LTMD_TOD_Print.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Rpt_LTMD_TOD_Print_Back.resx">
+      <DependentUpon>Rpt_LTMD_TOD_Print_Back.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Rpt_LTMD_TOD_Print_Back1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Rpt_LTMD_Print.resx">
+      <DependentUpon>Rpt_LTMD_Print.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Rpt_LTMD_Print_Back.resx">
+      <DependentUpon>Rpt_LTMD_Print_Back.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Rpt_LTMD_Print_Back1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Rpt_LT_Print.resx">
+      <DependentUpon>Rpt_LT_Print.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\Rpt_LT_Print_Back.resx">
+      <DependentUpon>Rpt_LT_Print_Back.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print_Solar_HT.resx">
+      <DependentUpon>Print_Solar_HT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print_Solar_LTMD.resx">
+      <DependentUpon>Print_Solar_LTMD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print_HT1.resx">
+      <DependentUpon>Print_HT1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ATWaitForm.resx">
+      <DependentUpon>ATWaitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rpt_Saprator.resx">
+      <DependentUpon>Rpt_Saprator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReport2.resx">
+      <DependentUpon>XtraReport2.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Fonts\arial.ttf" />
+    <None Include="Fonts\calibrib.ttf" />
+    <None Include="Fonts\DINPro.otf" />
+    <None Include="Fonts\KRDV010.TTF" />
+    <None Include="Fonts\krutidev021.ttf" />
+    <None Include="Fonts\Rupee_Foradian.ttf" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\AT.Print.Utils.SingleLTBill.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smalllogo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMAGE.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Contents\CategorySlabImages\HV 1A.png" />
+    <Content Include="bin\Debug\Contents\CategorySlabImages\HV 1B.png" />
+    <Content Include="bin\Debug\Contents\CategorySlabImages\HV 1D.png" />
+    <Content Include="bin\Debug\Contents\CategorySlabImages\HV 2A.png" />
+    <Content Include="bin\Debug\Contents\CategorySlabImages\HV 2C.png" />
+    <Content Include="bin\Debug\Contents\CategorySlabImages\LMV 10A.png" />
+    <Content Include="bin\Debug\Contents\CategorySlabImages\LMV 10B.png" />
+    <Content Include="bin\Debug\Contents\CategorySlabImages\LMV 10C.png" />
+    <Content Include="bin\Debug\Contents\CategorySlabImages\LMV 10D.png" />
+    <Content Include="bin\Debug\Contents\CategorySlabImages\LMV 1B.png" />
+    <Content Include="bin\Debug\Contents\CategorySlabImages\LMV 1C.png" />
+    <Content Include="bin\Debug\Contents\CategorySlabImages\LMV 2B.png" />
+    <Content Include="bin\Debug\Contents\CategorySlabImages\LMV 2C.png" />
+    <Content Include="bin\Debug\Contents\CategorySlabImages\LMV 3A.png" />
+    <Content Include="bin\Debug\Contents\CategorySlabImages\LMV 3B.png" />
+    <Content Include="bin\Debug\Contents\CategorySlabImages\LMV 4A.png" />
+    <Content Include="bin\Debug\Contents\CategorySlabImages\LMV 4B.png" />
+    <Content Include="bin\Debug\Contents\CategorySlabImages\LMV 5B.png" />
+    <Content Include="bin\Debug\Contents\CategorySlabImages\LMV 6A.png" />
+    <Content Include="bin\Debug\Contents\CategorySlabImages\LMV 7A.png" />
+    <Content Include="bin\Debug\Contents\CategorySlabImages\LMV 9B.png" />
+    <Content Include="bin\Debug\DBEntity\PriceRateSlab.xml" />
+    <Content Include="bin\Debug\DBEntity\xMessage.xml" />
+    <Content Include="Contents\CategorySlabImages\Duplex_Non_Tod_Back_Page.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\Duplex_Non_TOD_Front_Page.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\Duplex_Solar_Back_Page.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\Duplex_Solar_Front_Page.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\Duplex_TOD_Back_Page.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\Duplex_TOD_Front_Page.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\ErrorLog.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\HV 1A.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\HV 1B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\HV 1D.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\HV 2A.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\HV 2C.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\LMV 10A.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\LMV 10B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\LMV 10C.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\LMV 10D.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\LMV 1B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\LMV 1C.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\LMV 2B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\LMV 2C.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\LMV 3A.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\LMV 3B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\LMV 4A.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\LMV 4B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\LMV 5B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\LMV 6A.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\LMV 7A.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\LMV 9B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\Template Conditional With Service No English.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\Template Conditional With Service No Hindi.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\Template Conditional With ST English.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Contents\CategorySlabImages\Template Conditional With ST Hindi.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DBEntity\PriceRateSlab.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DBEntity\xMessage.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="inputtorrentfiles\A10120210714_191758_L11T_1_NORMAL.TXT" />
+    <None Include="inputtorrentfiles\A30120210714_171649_LT_1_NORMAL.TXT" />
+    <Content Include="Resources\Add.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Bill.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Date.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Duplex_Non_TOD_Front_Page.png" />
+    <None Include="Resources\Duplex_Non_TOD_Front_Page1.png" />
+    <None Include="Resources\Duplex_Non_Tod_Back_Page.png" />
+    <Content Include="Resources\Duplex_TOD_Front_Page.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\meter.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Month.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\New folder\Duplex_Non_Tod_Back_Page.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\New folder\Duplex_Tod_Back_Page.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ONLY For TOD NON TOD\Duplex_Non_Tod_Back_Page.png" />
+    <Content Include="Resources\ONLY For TOD NON TOD\Duplex_Non_TOD_Front_Page.png" />
+    <Content Include="Resources\ONLY For TOD NON TOD\Duplex_Tod_Back_Page.png" />
+    <Content Include="Resources\ONLY For TOD NON TOD\Duplex_TOD_Front_Page.png" />
+    <Content Include="Resources\Solar_Duplex_Page_01.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Solar_Duplex_Page_02.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Watermark_Back_NonTOD.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Watermark_Back_TOD.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Watermark_Back_TOD_Sized.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Watermark_Back_TOD_Sized_Margined.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Watermark_Back_TOD_Sized_Margined2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Watermark_Back_TOD_Sized_Margined3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Watermark_Back_TOD_Sized_Margined4.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Watermark_Front_LTMD_Tod.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Watermark_Front_LTMD_Tod_MarginsEdit.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Watermark_Front_LTMD_Tod_MarginsEdit2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Watermark_Front_NonTOD.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Watermark_Front_NonTOD1.png" />
+    <None Include="Resources\Watermark_Front_NonTOD2.png" />
+    <Content Include="Resources\Watermark_Front_NonTOD_Marginized.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\broadcastMSG.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Torrent_Bill_new_logo-f_%284%29 %281%29.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Google-Hindi-Input-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Torrent_Bill_new_logo-f_%284%29.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Config\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

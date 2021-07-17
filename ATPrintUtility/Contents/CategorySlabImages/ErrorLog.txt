@@ -1,0 +1,1139 @@
+Time: 12/06/2021 05:15:26 PM
+-----------------------------------------------------------
+Message: Input string was not in a correct format.
+StackTrace:    at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDecimal(String value, IFormatProvider provider)
+   at System.String.System.IConvertible.ToDecimal(IFormatProvider provider)
+   at System.Convert.ToDecimal(Object value)
+   at AT.Print.PrintLT.parseSingleLTBill(DataTable dtSingleLTBill) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 691
+   at AT.Print.PrintLT.ValidatetxtFile(String[] bills) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1056
+Source: mscorlib
+TargetSite: Void StringToNumber(System.String, System.Globalization.NumberStyles, NumberBuffer ByRef, System.Globalization.NumberFormatInfo, Boolean)
+-----------------------------------------------------------
+
+Time: 12/06/2021 05:37:25 PM
+-----------------------------------------------------------
+Message: Input string was not in a correct format.
+StackTrace:    at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDecimal(String value, IFormatProvider provider)
+   at System.String.System.IConvertible.ToDecimal(IFormatProvider provider)
+   at System.Convert.ToDecimal(Object value)
+   at AT.Print.PrintLT.parseSingleLTBill(DataTable dtSingleLTBill) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 691
+   at AT.Print.PrintLT.ValidatetxtFile(String[] bills) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1057
+Source: mscorlib
+TargetSite: Void StringToNumber(System.String, System.Globalization.NumberStyles, NumberBuffer ByRef, System.Globalization.NumberFormatInfo, Boolean)
+-----------------------------------------------------------
+
+Time: 15/06/2021 10:17:17 AM
+-----------------------------------------------------------
+Message: Input string was not in a correct format.
+StackTrace:    at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDecimal(String value, IFormatProvider provider)
+   at System.String.System.IConvertible.ToDecimal(IFormatProvider provider)
+   at System.Convert.ToDecimal(Object value)
+   at AT.Print.PrintLT.parseSingleLTBill(DataTable dtSingleLTBill) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 691
+   at AT.Print.PrintLT.ValidatetxtFile(String[] bills) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1057
+Source: mscorlib
+TargetSite: Void StringToNumber(System.String, System.Globalization.NumberStyles, NumberBuffer ByRef, System.Globalization.NumberFormatInfo, Boolean)
+-----------------------------------------------------------
+
+Time: 15/06/2021 10:18:14 AM
+-----------------------------------------------------------
+Message: Input string was not in a correct format.
+StackTrace:    at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDecimal(String value, IFormatProvider provider)
+   at System.String.System.IConvertible.ToDecimal(IFormatProvider provider)
+   at System.Convert.ToDecimal(Object value)
+   at AT.Print.PrintLT.parseSingleLTBill(DataTable dtSingleLTBill) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 691
+   at AT.Print.PrintLT.ValidatetxtFile(String[] bills) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1057
+Source: mscorlib
+TargetSite: Void StringToNumber(System.String, System.Globalization.NumberStyles, NumberBuffer ByRef, System.Globalization.NumberFormatInfo, Boolean)
+-----------------------------------------------------------
+
+Time: 15/06/2021 10:20:42 AM
+-----------------------------------------------------------
+Message: Input string was not in a correct format.
+StackTrace:    at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDecimal(String value, IFormatProvider provider)
+   at System.String.System.IConvertible.ToDecimal(IFormatProvider provider)
+   at System.Convert.ToDecimal(Object value)
+   at AT.Print.PrintLTMD.parseSingleLTMDBill(DataTable dtSingleLTBill) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLTMD.cs:line 765
+   at AT.Print.PrintLTMD.ValidatetxtFile(String[] bills) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLTMD.cs:line 1150
+Source: mscorlib
+TargetSite: Void StringToNumber(System.String, System.Globalization.NumberStyles, NumberBuffer ByRef, System.Globalization.NumberFormatInfo, Boolean)
+-----------------------------------------------------------
+
+Time: 15/06/2021 10:22:38 AM
+-----------------------------------------------------------
+Message: Input string was not in a correct format.
+StackTrace:    at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDecimal(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDecimal(String value, IFormatProvider provider)
+   at System.String.System.IConvertible.ToDecimal(IFormatProvider provider)
+   at System.Convert.ToDecimal(Object value)
+   at AT.Print.PrintLTMD.parseSingleLTMDBill(DataTable dtSingleLTBill) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLTMD.cs:line 765
+   at AT.Print.PrintLTMD.ValidatetxtFile(String[] bills) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLTMD.cs:line 1150
+Source: mscorlib
+TargetSite: Void StringToNumber(System.String, System.Globalization.NumberStyles, NumberBuffer ByRef, System.Globalization.NumberFormatInfo, Boolean)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:50:33 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\675023951.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:50:33 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\675023951.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:50:33 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\675023951.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:50:33 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\675023951.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:54:55 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\675022200.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:54:55 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\675022200.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:54:55 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\675022200.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:54:55 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\675022200.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:54:55 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\675022200.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:54:56 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\675022200.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:54:56 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\675022200.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:54:56 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\675022200.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:54:57 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\675022200.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:55:01 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\670077367.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:55:05 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\670391772.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:55:05 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\670391772.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:55:05 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\670391772.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:55:06 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\708602429.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:55:08 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\708651407.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:55:08 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\708651407.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:55:09 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\675022657.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:55:10 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\675022657.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:55:10 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\675022657.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:55:09 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\675022657.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:57:18 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\675022200.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:57:18 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\675022200.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:57:18 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\675022200.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:57:18 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\675022200.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:57:19 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\675022200.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:57:19 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\675022200.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:57:19 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\675022200.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:57:19 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\675022200.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 09:57:20 AM
+-----------------------------------------------------------
+Message: The process cannot access the file 'C:\Bills\LT Files\April 2021\LT_1175_FILES\675022200.pdf' because it is being used by another process.
+StackTrace:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass15_0.<StartPrinting_LTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 311
+Source: mscorlib
+TargetSite: Void WinIOError(Int32, System.String)
+-----------------------------------------------------------
+
+Time: 16/06/2021 11:41:46 PM
+-----------------------------------------------------------
+Message: Object is currently in use elsewhere.
+StackTrace:    at System.Drawing.Image.Clone()
+   at DevExpress.XtraPrinting.Drawing.ImageSource.Clone()
+   at DevExpress.XtraPrinting.Drawing.PageWatermark.CopyFromInternal(PageWatermark watermark)
+   at DevExpress.XtraPrinting.Drawing.Watermark.CopyFrom(Watermark watermark)
+   at AT.Print.PrintLT.<>c__DisplayClass30_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1457
+Source: System.Drawing
+TargetSite: System.Object Clone()
+-----------------------------------------------------------
+
+Time: 16/06/2021 11:45:49 PM
+-----------------------------------------------------------
+Message: Index was outside the bounds of the array.
+StackTrace:    at System.Collections.Generic.List`1.Add(T item)
+   at DevExpress.XtraReports.Native.ReportCodeGeneratorBase.AddVariable(String name, Object val)
+   at DevExpress.XtraReports.UI.XRControl.InitializeScripts()
+   at DevExpress.XtraReports.UI.Band.InitializeScripts()
+   at DevExpress.XtraReports.UI.XRControl.InitializeScripts()
+   at DevExpress.XtraReports.UI.Band.InitializeScripts()
+   at DevExpress.XtraReports.UI.XtraReport.InitializeScripts()
+   at DevExpress.XtraReports.UI.XtraReport.InitializeDocumentCreation()
+   at DevExpress.XtraReports.UI.XtraReport.DevExpress.XtraReports.IReport.InitializeDocumentCreation()
+   at DevExpress.XtraReports.Native.DocumentCreator.Create(Single progressRange, Boolean buildForInstantPreview)
+   at DevExpress.XtraReports.UI.XtraReport.CreateDocument(Boolean buildForInstantPreview)
+   at AT.Print.PrintLT.<>c__DisplayClass30_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1458
+Source: mscorlib
+TargetSite: Void Add(T)
+-----------------------------------------------------------
+
+Time: 16/06/2021 11:45:49 PM
+-----------------------------------------------------------
+Message: Index was outside the bounds of the array.
+StackTrace:    at System.Collections.Generic.List`1.Add(T item)
+   at DevExpress.XtraReports.Native.ReportCodeGeneratorBase.AddVariable(String name, Object val)
+   at DevExpress.XtraReports.UI.XRControl.InitializeScripts()
+   at DevExpress.XtraReports.UI.Band.InitializeScripts()
+   at DevExpress.XtraReports.UI.XRControl.InitializeScripts()
+   at DevExpress.XtraReports.UI.Band.InitializeScripts()
+   at DevExpress.XtraReports.UI.XtraReport.InitializeScripts()
+   at DevExpress.XtraReports.UI.XtraReport.InitializeDocumentCreation()
+   at DevExpress.XtraReports.UI.XtraReport.DevExpress.XtraReports.IReport.InitializeDocumentCreation()
+   at DevExpress.XtraReports.Native.DocumentCreator.Create(Single progressRange, Boolean buildForInstantPreview)
+   at DevExpress.XtraReports.UI.XtraReport.CreateDocument(Boolean buildForInstantPreview)
+   at AT.Print.PrintLT.<>c__DisplayClass30_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1458
+Source: mscorlib
+TargetSite: Void Add(T)
+-----------------------------------------------------------
+
+Time: 16/06/2021 11:45:49 PM
+-----------------------------------------------------------
+Message: Index was outside the bounds of the array.
+StackTrace:    at System.Collections.Generic.List`1.Add(T item)
+   at DevExpress.XtraReports.Native.ReportCodeGeneratorBase.AddVariable(String name, Object val)
+   at DevExpress.XtraReports.UI.XRControl.InitializeScripts()
+   at DevExpress.XtraReports.UI.Band.InitializeScripts()
+   at DevExpress.XtraReports.UI.XRControl.InitializeScripts()
+   at DevExpress.XtraReports.UI.Band.InitializeScripts()
+   at DevExpress.XtraReports.UI.XtraReport.InitializeScripts()
+   at DevExpress.XtraReports.UI.XtraReport.InitializeDocumentCreation()
+   at DevExpress.XtraReports.UI.XtraReport.DevExpress.XtraReports.IReport.InitializeDocumentCreation()
+   at DevExpress.XtraReports.Native.DocumentCreator.Create(Single progressRange, Boolean buildForInstantPreview)
+   at DevExpress.XtraReports.UI.XtraReport.CreateDocument(Boolean buildForInstantPreview)
+   at AT.Print.PrintLT.<>c__DisplayClass30_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1458
+Source: mscorlib
+TargetSite: Void Add(T)
+-----------------------------------------------------------
+
+Time: 17/06/2021 07:38:02 AM
+-----------------------------------------------------------
+Message: Object is currently in use elsewhere.
+StackTrace:    at System.Drawing.Image.Clone()
+   at DevExpress.XtraPrinting.Drawing.ImageSource.Clone()
+   at DevExpress.XtraPrinting.Drawing.PageWatermark.CopyFromInternal(PageWatermark watermark)
+   at DevExpress.XtraPrinting.Drawing.Watermark.CopyFrom(Watermark watermark)
+   at AT.Print.PrintLT.<>c__DisplayClass30_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1457
+Source: System.Drawing
+TargetSite: System.Object Clone()
+-----------------------------------------------------------
+
+Time: 17/06/2021 07:38:02 AM
+-----------------------------------------------------------
+Message: Object is currently in use elsewhere.
+StackTrace:    at System.Drawing.Image.Clone()
+   at DevExpress.XtraPrinting.Drawing.ImageSource.Clone()
+   at DevExpress.XtraPrinting.Drawing.PageWatermark.CopyFromInternal(PageWatermark watermark)
+   at DevExpress.XtraPrinting.Drawing.Watermark.CopyFrom(Watermark watermark)
+   at AT.Print.PrintLT.<>c__DisplayClass30_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1457
+Source: System.Drawing
+TargetSite: System.Object Clone()
+-----------------------------------------------------------
+
+Time: 17/06/2021 07:45:29 AM
+-----------------------------------------------------------
+Message: Object is currently in use elsewhere.
+StackTrace:    at System.Drawing.Image.Clone()
+   at DevExpress.XtraPrinting.Drawing.ImageSource.Clone()
+   at DevExpress.XtraPrinting.Drawing.PageWatermark.CopyFromInternal(PageWatermark watermark)
+   at DevExpress.XtraPrinting.Drawing.Watermark.CopyFrom(Watermark watermark)
+   at AT.Print.PrintLT.<>c__DisplayClass30_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1458
+Source: System.Drawing
+TargetSite: System.Object Clone()
+-----------------------------------------------------------
+
+Time: 17/06/2021 07:45:29 AM
+-----------------------------------------------------------
+Message: Object is currently in use elsewhere.
+StackTrace:    at System.Drawing.Image.Clone()
+   at DevExpress.XtraPrinting.Drawing.ImageSource.Clone()
+   at DevExpress.XtraPrinting.Drawing.PageWatermark.CopyFromInternal(PageWatermark watermark)
+   at DevExpress.XtraPrinting.Drawing.Watermark.CopyFrom(Watermark watermark)
+   at AT.Print.PrintLT.<>c__DisplayClass30_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1458
+Source: System.Drawing
+TargetSite: System.Object Clone()
+-----------------------------------------------------------
+
+Time: 17/06/2021 07:52:13 AM
+-----------------------------------------------------------
+Message: Object is currently in use elsewhere.
+StackTrace:    at System.Drawing.Image.Clone()
+   at DevExpress.XtraPrinting.Drawing.ImageSource.Clone()
+   at DevExpress.XtraPrinting.Drawing.PageWatermark.CopyFromInternal(PageWatermark watermark)
+   at DevExpress.XtraPrinting.Drawing.Watermark.CopyFrom(Watermark watermark)
+   at AT.Print.PrintLT.<>c__DisplayClass30_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1459
+Source: System.Drawing
+TargetSite: System.Object Clone()
+-----------------------------------------------------------
+
+Time: 17/06/2021 07:52:13 AM
+-----------------------------------------------------------
+Message: Object is currently in use elsewhere.
+StackTrace:    at System.Drawing.Image.Clone()
+   at DevExpress.XtraPrinting.Drawing.ImageSource.Clone()
+   at DevExpress.XtraPrinting.Drawing.PageWatermark.CopyFromInternal(PageWatermark watermark)
+   at DevExpress.XtraPrinting.Drawing.Watermark.CopyFrom(Watermark watermark)
+   at AT.Print.PrintLT.<>c__DisplayClass30_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1459
+Source: System.Drawing
+TargetSite: System.Object Clone()
+-----------------------------------------------------------
+
+Time: 17/06/2021 07:52:13 AM
+-----------------------------------------------------------
+Message: Object is currently in use elsewhere.
+StackTrace:    at System.Drawing.Image.Clone()
+   at DevExpress.XtraPrinting.Drawing.ImageSource.Clone()
+   at DevExpress.XtraPrinting.Drawing.PageWatermark.CopyFromInternal(PageWatermark watermark)
+   at DevExpress.XtraPrinting.Drawing.Watermark.CopyFrom(Watermark watermark)
+   at AT.Print.PrintLT.<>c__DisplayClass30_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1459
+Source: System.Drawing
+TargetSite: System.Object Clone()
+-----------------------------------------------------------
+
+Time: 17/06/2021 08:00:39 AM
+-----------------------------------------------------------
+Message: Object is currently in use elsewhere.
+StackTrace:    at System.Drawing.Image.Clone()
+   at DevExpress.XtraPrinting.Drawing.ImageSource.Clone()
+   at DevExpress.XtraPrinting.Drawing.PageWatermark.CopyFromInternal(PageWatermark watermark)
+   at DevExpress.XtraPrinting.Drawing.Watermark.CopyFrom(Watermark watermark)
+   at AT.Print.PrintLT.<>c__DisplayClass30_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1459
+Source: System.Drawing
+TargetSite: System.Object Clone()
+-----------------------------------------------------------
+
+Time: 17/06/2021 08:00:39 AM
+-----------------------------------------------------------
+Message: Object is currently in use elsewhere.
+StackTrace:    at System.Drawing.Image.Clone()
+   at DevExpress.XtraPrinting.Drawing.ImageSource.Clone()
+   at DevExpress.XtraPrinting.Drawing.PageWatermark.CopyFromInternal(PageWatermark watermark)
+   at DevExpress.XtraPrinting.Drawing.Watermark.CopyFrom(Watermark watermark)
+   at AT.Print.PrintLT.<>c__DisplayClass30_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1459
+Source: System.Drawing
+TargetSite: System.Object Clone()
+-----------------------------------------------------------
+
+Time: 17/06/2021 08:03:18 AM
+-----------------------------------------------------------
+Message: Object is currently in use elsewhere.
+StackTrace:    at System.Drawing.Image.Clone()
+   at DevExpress.XtraPrinting.Drawing.ImageSource.Clone()
+   at DevExpress.XtraPrinting.Drawing.PageWatermark.CopyFromInternal(PageWatermark watermark)
+   at DevExpress.XtraPrinting.Drawing.Watermark.CopyFrom(Watermark watermark)
+   at AT.Print.PrintLT.<>c__DisplayClass30_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1459
+Source: System.Drawing
+TargetSite: System.Object Clone()
+-----------------------------------------------------------
+
+Time: 17/06/2021 08:03:18 AM
+-----------------------------------------------------------
+Message: Object is currently in use elsewhere.
+StackTrace:    at System.Drawing.Image.Clone()
+   at DevExpress.XtraPrinting.Drawing.ImageSource.Clone()
+   at DevExpress.XtraPrinting.Drawing.PageWatermark.CopyFromInternal(PageWatermark watermark)
+   at DevExpress.XtraPrinting.Drawing.Watermark.CopyFrom(Watermark watermark)
+   at AT.Print.PrintLT.<>c__DisplayClass30_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1459
+Source: System.Drawing
+TargetSite: System.Object Clone()
+-----------------------------------------------------------
+
+Time: 17/06/2021 08:03:18 AM
+-----------------------------------------------------------
+Message: Object is currently in use elsewhere.
+StackTrace:    at System.Drawing.Image.Clone()
+   at DevExpress.XtraPrinting.Drawing.ImageSource.Clone()
+   at DevExpress.XtraPrinting.Drawing.PageWatermark.CopyFromInternal(PageWatermark watermark)
+   at DevExpress.XtraPrinting.Drawing.Watermark.CopyFrom(Watermark watermark)
+   at AT.Print.PrintLT.<>c__DisplayClass30_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1459
+Source: System.Drawing
+TargetSite: System.Object Clone()
+-----------------------------------------------------------
+
+Time: 17/06/2021 08:34:14 AM
+-----------------------------------------------------------
+Message: Object is currently in use elsewhere.
+StackTrace:    at System.Drawing.Image.Clone()
+   at DevExpress.XtraPrinting.Drawing.ImageSource.Clone()
+   at DevExpress.XtraPrinting.Drawing.PageWatermark.CopyFromInternal(PageWatermark watermark)
+   at DevExpress.XtraPrinting.Drawing.Watermark.CopyFrom(Watermark watermark)
+   at AT.Print.PrintLT.<>c__DisplayClass30_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1460
+Source: System.Drawing
+TargetSite: System.Object Clone()
+-----------------------------------------------------------
+
+Time: 17/06/2021 08:34:14 AM
+-----------------------------------------------------------
+Message: Object is currently in use elsewhere.
+StackTrace:    at System.Drawing.Image.Clone()
+   at DevExpress.XtraPrinting.Drawing.ImageSource.Clone()
+   at DevExpress.XtraPrinting.Drawing.PageWatermark.CopyFromInternal(PageWatermark watermark)
+   at DevExpress.XtraPrinting.Drawing.Watermark.CopyFrom(Watermark watermark)
+   at AT.Print.PrintLT.<>c__DisplayClass30_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1460
+Source: System.Drawing
+TargetSite: System.Object Clone()
+-----------------------------------------------------------
+
+Time: 17/06/2021 08:34:14 AM
+-----------------------------------------------------------
+Message: Object is currently in use elsewhere.
+StackTrace:    at System.Drawing.Image.Clone()
+   at DevExpress.XtraPrinting.Drawing.ImageSource.Clone()
+   at DevExpress.XtraPrinting.Drawing.PageWatermark.CopyFromInternal(PageWatermark watermark)
+   at DevExpress.XtraPrinting.Drawing.Watermark.CopyFrom(Watermark watermark)
+   at AT.Print.PrintLT.<>c__DisplayClass30_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1460
+Source: System.Drawing
+TargetSite: System.Object Clone()
+-----------------------------------------------------------
+
+Time: 17/06/2021 08:36:18 AM
+-----------------------------------------------------------
+Message: Object is currently in use elsewhere.
+StackTrace:    at System.Drawing.Image.Clone()
+   at DevExpress.XtraPrinting.Drawing.ImageSource.Clone()
+   at DevExpress.XtraPrinting.Drawing.PageWatermark.CopyFromInternal(PageWatermark watermark)
+   at DevExpress.XtraPrinting.Drawing.Watermark.CopyFrom(Watermark watermark)
+   at AT.Print.PrintLT.<>c__DisplayClass30_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1464
+Source: System.Drawing
+TargetSite: System.Object Clone()
+-----------------------------------------------------------
+
+Time: 17/06/2021 08:37:50 AM
+-----------------------------------------------------------
+Message: Object is currently in use elsewhere.
+StackTrace:    at System.Drawing.Image.Clone()
+   at DevExpress.XtraPrinting.Drawing.ImageSource.Clone()
+   at DevExpress.XtraPrinting.Drawing.PageWatermark.CopyFromInternal(PageWatermark watermark)
+   at DevExpress.XtraPrinting.Page.AssignWatermark(PageWatermark source)
+   at AT.Print.PrintLT.<>c__DisplayClass30_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1471
+Source: System.Drawing
+TargetSite: System.Object Clone()
+-----------------------------------------------------------
+
+Time: 17/06/2021 08:38:35 AM
+-----------------------------------------------------------
+Message: Object is currently in use elsewhere.
+StackTrace:    at System.Drawing.Image.Clone()
+   at DevExpress.XtraPrinting.Drawing.ImageSource.Clone()
+   at DevExpress.XtraPrinting.Drawing.PageWatermark.CopyFromInternal(PageWatermark watermark)
+   at DevExpress.XtraPrinting.Page.AssignWatermark(PageWatermark source)
+   at AT.Print.PrintLT.<>c__DisplayClass30_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1471
+Source: System.Drawing
+TargetSite: System.Object Clone()
+-----------------------------------------------------------
+
+Time: 17/06/2021 08:41:52 AM
+-----------------------------------------------------------
+Message: Object is currently in use elsewhere.
+StackTrace:    at System.Drawing.Image.Clone()
+   at DevExpress.XtraPrinting.Drawing.ImageSource.Clone()
+   at DevExpress.XtraPrinting.Drawing.PageWatermark.CopyFromInternal(PageWatermark watermark)
+   at DevExpress.XtraPrinting.Drawing.Watermark.CopyFrom(Watermark watermark)
+   at AT.Print.PrintLT.<>c__DisplayClass30_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1460
+Source: System.Drawing
+TargetSite: System.Object Clone()
+-----------------------------------------------------------
+
+Time: 17/06/2021 08:42:51 AM
+-----------------------------------------------------------
+Message: Object is currently in use elsewhere.
+StackTrace:    at System.Drawing.Image.Clone()
+   at DevExpress.XtraPrinting.Drawing.ImageSource.Clone()
+   at DevExpress.XtraPrinting.Drawing.PageWatermark.CopyFromInternal(PageWatermark watermark)
+   at DevExpress.XtraPrinting.Page.AssignWatermark(PageWatermark source)
+   at AT.Print.PrintLT.<>c__DisplayClass30_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1471
+Source: System.Drawing
+TargetSite: System.Object Clone()
+-----------------------------------------------------------
+
+Time: 17/06/2021 08:46:07 AM
+-----------------------------------------------------------
+Message: Object is currently in use elsewhere.
+StackTrace:    at System.Drawing.Image.Clone()
+   at DevExpress.XtraPrinting.Drawing.ImageSource.Clone()
+   at DevExpress.XtraPrinting.Drawing.PageWatermark.CopyFromInternal(PageWatermark watermark)
+   at DevExpress.XtraPrinting.Page.AssignWatermark(PageWatermark source)
+   at AT.Print.PrintLT.<>c__DisplayClass30_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1471
+Source: System.Drawing
+TargetSite: System.Object Clone()
+-----------------------------------------------------------
+
+Time: 17/06/2021 08:46:12 AM
+-----------------------------------------------------------
+Message: Object is currently in use elsewhere.
+StackTrace:    at System.Drawing.Image.Clone()
+   at DevExpress.XtraPrinting.Drawing.ImageSource.Clone()
+   at DevExpress.XtraPrinting.Drawing.PageWatermark.CopyFromInternal(PageWatermark watermark)
+   at DevExpress.XtraPrinting.Page.AssignWatermark(PageWatermark source)
+   at AT.Print.PrintLT.<>c__DisplayClass30_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1471
+Source: System.Drawing
+TargetSite: System.Object Clone()
+-----------------------------------------------------------
+
+Time: 17/06/2021 11:33:37 AM
+-----------------------------------------------------------
+Message: The service DevExpress.Data.IParameterSupplierBase already exists in the service container.
+Parameter name: serviceType
+StackTrace:    at System.ComponentModel.Design.ServiceContainer.AddService(Type serviceType, Object serviceInstance, Boolean promote)
+   at DevExpress.XtraPrinting.PrintingSystemBase.AddService(Type serviceType, Object serviceInstance)
+   at DevExpress.XtraPrinting.Native.ServiceContainerExtensions.AddService[T](IServiceContainer container, T service)
+   at DevExpress.XtraReports.UI.XtraReport.SetPrintingSystemValue(PrintingSystemBase val)
+   at DevExpress.XtraReports.UI.XtraReport.get_PrintingSystem()
+   at DevExpress.XtraReports.UI.XtraReport.DevExpress.XtraPrinting.IDocumentSource.get_PrintingSystemBase()
+   at DevExpress.XtraReports.Native.DocumentCreator.Create(Single progressRange, Boolean buildForInstantPreview)
+   at DevExpress.XtraReports.UI.XtraReport.CreateDocument(Boolean buildForInstantPreview)
+   at AT.Print.PrintLT.<>c__DisplayClass28_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1432
+Source: System
+TargetSite: Void AddService(System.Type, System.Object, Boolean)
+-----------------------------------------------------------
+
+Time: 17/06/2021 11:33:37 AM
+-----------------------------------------------------------
+Message: The service DevExpress.XtraReports.IReport already exists in the service container.
+Parameter name: serviceType
+StackTrace:    at System.ComponentModel.Design.ServiceContainer.AddService(Type serviceType, Object serviceInstance, Boolean promote)
+   at DevExpress.XtraPrinting.PrintingSystemBase.AddService(Type serviceType, Object serviceInstance)
+   at DevExpress.XtraPrinting.Native.ServiceContainerExtensions.AddService[T](IServiceContainer container, T service)
+   at DevExpress.XtraReports.UI.XtraReport.SetPrintingSystemValue(PrintingSystemBase val)
+   at DevExpress.XtraReports.UI.XtraReport.get_PrintingSystem()
+   at DevExpress.XtraReports.UI.XtraReport.DevExpress.XtraPrinting.IDocumentSource.get_PrintingSystemBase()
+   at DevExpress.XtraReports.Native.DocumentCreator.Create(Single progressRange, Boolean buildForInstantPreview)
+   at DevExpress.XtraReports.UI.XtraReport.CreateDocument(Boolean buildForInstantPreview)
+   at AT.Print.PrintLT.<>c__DisplayClass28_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1432
+Source: System
+TargetSite: Void AddService(System.Type, System.Object, Boolean)
+-----------------------------------------------------------
+
+Time: 17/06/2021 11:38:55 AM
+-----------------------------------------------------------
+Message: The service DevExpress.XtraReports.IReport already exists in the service container.
+Parameter name: serviceType
+StackTrace:    at System.ComponentModel.Design.ServiceContainer.AddService(Type serviceType, Object serviceInstance, Boolean promote)
+   at DevExpress.XtraPrinting.PrintingSystemBase.AddService(Type serviceType, Object serviceInstance)
+   at DevExpress.XtraPrinting.Native.ServiceContainerExtensions.AddService[T](IServiceContainer container, T service)
+   at DevExpress.XtraReports.UI.XtraReport.SetPrintingSystemValue(PrintingSystemBase val)
+   at DevExpress.XtraReports.UI.XtraReport.get_PrintingSystem()
+   at DevExpress.XtraReports.UI.XtraReport.DevExpress.XtraPrinting.IDocumentSource.get_PrintingSystemBase()
+   at DevExpress.XtraReports.Native.DocumentCreator.Create(Single progressRange, Boolean buildForInstantPreview)
+   at DevExpress.XtraReports.UI.XtraReport.CreateDocument(Boolean buildForInstantPreview)
+   at AT.Print.PrintLT.<>c__DisplayClass28_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1436
+Source: System
+TargetSite: Void AddService(System.Type, System.Object, Boolean)
+-----------------------------------------------------------
+
+Time: 17/06/2021 11:38:55 AM
+-----------------------------------------------------------
+Message: The service DevExpress.XtraPrinting.Native.Interaction.IInteractionService already exists in the service container.
+Parameter name: serviceType
+StackTrace:    at System.ComponentModel.Design.ServiceContainer.AddService(Type serviceType, ServiceCreatorCallback callback, Boolean promote)
+   at DevExpress.XtraPrinting.PrintingSystemBase.AddService(Type serviceType, ServiceCreatorCallback callback)
+   at DevExpress.XtraReports.UI.XtraReport.SetPrintingSystemValue(PrintingSystemBase val)
+   at DevExpress.XtraReports.UI.XtraReport.get_PrintingSystem()
+   at DevExpress.XtraReports.UI.XtraReport.DevExpress.XtraPrinting.IDocumentSource.get_PrintingSystemBase()
+   at DevExpress.XtraReports.Native.DocumentCreator.Create(Single progressRange, Boolean buildForInstantPreview)
+   at DevExpress.XtraReports.UI.XtraReport.CreateDocument(Boolean buildForInstantPreview)
+   at AT.Print.PrintLT.<>c__DisplayClass28_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1436
+Source: System
+TargetSite: Void AddService(System.Type, System.ComponentModel.Design.ServiceCreatorCallback, Boolean)
+-----------------------------------------------------------
+
+Time: 17/06/2021 11:38:55 AM
+-----------------------------------------------------------
+Message: The service DevExpress.XtraReports.IReport already exists in the service container.
+Parameter name: serviceType
+StackTrace:    at System.ComponentModel.Design.ServiceContainer.AddService(Type serviceType, Object serviceInstance, Boolean promote)
+   at DevExpress.XtraPrinting.PrintingSystemBase.AddService(Type serviceType, Object serviceInstance)
+   at DevExpress.XtraPrinting.Native.ServiceContainerExtensions.AddService[T](IServiceContainer container, T service)
+   at DevExpress.XtraReports.UI.XtraReport.SetPrintingSystemValue(PrintingSystemBase val)
+   at DevExpress.XtraReports.UI.XtraReport.get_PrintingSystem()
+   at DevExpress.XtraReports.UI.XtraReport.DevExpress.XtraPrinting.IDocumentSource.get_PrintingSystemBase()
+   at DevExpress.XtraReports.Native.DocumentCreator.Create(Single progressRange, Boolean buildForInstantPreview)
+   at DevExpress.XtraReports.UI.XtraReport.CreateDocument(Boolean buildForInstantPreview)
+   at AT.Print.PrintLT.<>c__DisplayClass28_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1436
+Source: System
+TargetSite: Void AddService(System.Type, System.Object, Boolean)
+-----------------------------------------------------------
+
+Time: 17/06/2021 11:39:00 AM
+-----------------------------------------------------------
+Message: The service DevExpress.XtraPrinting.Native.IDeferredBorderPainter already exists in the service container.
+Parameter name: serviceType
+StackTrace:    at System.ComponentModel.Design.ServiceContainer.AddService(Type serviceType, Object serviceInstance, Boolean promote)
+   at System.ComponentModel.Design.ServiceContainer.AddService(Type serviceType, Object serviceInstance, Boolean promote)
+   at DevExpress.XtraPrinting.PrintingSystemBase.BeforePdfExport()
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(Stream stream, PdfExportOptions options)
+   at DevExpress.XtraPrinting.PrintingSystemBase.<>c__DisplayClass462_0.<ExportToPdf>b__0(Stream stream)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass28_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1473
+Source: System
+TargetSite: Void AddService(System.Type, System.Object, Boolean)
+-----------------------------------------------------------
+
+Time: 17/06/2021 11:39:00 AM
+-----------------------------------------------------------
+Message: The service DevExpress.XtraPrinting.Native.IDeferredBorderPainter already exists in the service container.
+Parameter name: serviceType
+StackTrace:    at System.ComponentModel.Design.ServiceContainer.AddService(Type serviceType, Object serviceInstance, Boolean promote)
+   at System.ComponentModel.Design.ServiceContainer.AddService(Type serviceType, Object serviceInstance, Boolean promote)
+   at DevExpress.XtraPrinting.PrintingSystemBase.BeforePdfExport()
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(Stream stream, PdfExportOptions options)
+   at DevExpress.XtraPrinting.PrintingSystemBase.<>c__DisplayClass462_0.<ExportToPdf>b__0(Stream stream)
+   at DevExpress.XtraPrinting.Native.FileExportHelper.Do(String filePath, Action1`1 action)
+   at DevExpress.XtraPrinting.PrintingSystemBase.ExportToPdf(String filePath, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.XtraReport.ExportToPdf(String path, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName, PdfExportOptions options)
+   at DevExpress.XtraReports.UI.PdfStreamingExporter.Export(String fileName)
+   at AT.Print.PrintLT.<>c__DisplayClass28_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1473
+Source: System
+TargetSite: Void AddService(System.Type, System.Object, Boolean)
+-----------------------------------------------------------
+
+Time: 17/06/2021 11:39:53 AM
+-----------------------------------------------------------
+Message: Collection was modified; enumeration operation may not execute.
+StackTrace:    at System.Collections.ArrayList.ArrayListEnumeratorSimple.MoveNext()
+   at DevExpress.XtraReports.Native.ObjectEnumeratorBase.MoveNext()
+   at DevExpress.XtraReports.Native.NestedObjectEnumeratorBase.MoveNext()
+   at DevExpress.XtraReports.Native.Navigation.NavigationManager.SelectControls(ControlSelector selector, IList components)
+   at DevExpress.XtraReports.Native.Navigation.NavigationManager.Initialize()
+   at DevExpress.XtraReports.UI.XtraReport.BeforeReportPrint()
+   at DevExpress.XtraReports.UI.XtraReport.OnBeforePrint(PrintEventArgs e)
+   at DevExpress.XtraReports.UI.XtraReport.AbortDocumentCreation(ICancellationService serv)
+   at DevExpress.XtraReports.UI.XtraReport.DevExpress.XtraReports.IReport.CreateDocumentCore(Single progressRange, Boolean buildForInstantPreview)
+   at DevExpress.XtraReports.Native.DocumentCreator.Create(Single progressRange, Boolean buildForInstantPreview)
+   at DevExpress.XtraReports.UI.XtraReport.CreateDocument(Boolean buildForInstantPreview)
+   at AT.Print.PrintLT.<>c__DisplayClass28_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1436
+Source: mscorlib
+TargetSite: Boolean MoveNext()
+-----------------------------------------------------------
+
+Time: 17/06/2021 11:39:54 AM
+-----------------------------------------------------------
+Message: Object is currently in use elsewhere.
+StackTrace:    at System.Drawing.Graphics.set_PageUnit(GraphicsUnit value)
+   at DevExpress.XtraPrinting.Native.GdiPlusMeasurer.MeasureString(String text, Font font, SizeF size, StringFormat stringFormat, GraphicsUnit pageUnit)
+   at DevExpress.XtraReports.UI.XRLabel.MeasureTextCore(String text, Single width, Single dpi, BrickStyle bs, Measurer measurer)
+   at DevExpress.XtraReports.UI.XRLabel.<>c__DisplayClass135_0.<MeasureText>b__0()
+   at DevExpress.XtraReports.UI.BestSizeEstimator.MeasureString(StringFormat stringFormat, Font font, Int32 textLength, Func`1 func)
+   at DevExpress.XtraReports.UI.XRLabel.AccurateWidthMeasurment(BrickStyle bs, Int32 textLength, Func`1 func)
+   at DevExpress.XtraReports.UI.XRLabel.MeasureText(String text, Single width, BrickStyle bs)
+   at DevExpress.XtraReports.UI.XRLabel.MeasureTextWithStyle(String text, Single width, BrickStyle style)
+   at DevExpress.XtraReports.UI.XRLabel.MeasureBrickSize(VisualBrick brick)
+   at DevExpress.XtraReports.UI.XRLabel.UpdateBrickBounds(VisualBrick brick)
+   at DevExpress.XtraReports.UI.XRControl.DevExpress.XtraPrinting.IBrickOwner.UpdateBrickBounds(VisualBrick brick)
+   at DevExpress.XtraPrinting.Native.LayoutAdjustment.VisualBrickLayoutData.UpdateViewBounds()
+   at DevExpress.XtraPrinting.Native.LayoutAdjustment.LayoutAdjuster.Adjust(List`1 layoutData)
+   at DevExpress.XtraPrinting.Native.LayoutAdjustment.LayoutAdjuster.Adjust(List`1 layoutData)
+   at DevExpress.XtraPrinting.Native.LayoutAdjustment.LayoutAdjuster.Adjust(List`1 layoutData)
+   at DevExpress.XtraPrinting.Native.LayoutAdjustment.LayoutAdjusterWithAnchoring.Adjust(List`1 layoutData)
+   at DevExpress.XtraPrinting.Native.LayoutAdjustment.LayoutAdjuster.Process(List`1 layoutData)
+   at DevExpress.XtraReports.Native.LayoutAdjustment.LayoutDecomposer.Decompose()
+   at DevExpress.XtraReports.UI.Band.<>c__DisplayClass232_0.<GenerateContentAndDecompose>b__1()
+   at DevExpress.XtraPrinting.Diagnostics.Benchmark.Exec(Action action, String name)
+   at DevExpress.XtraReports.UI.Band.GenerateContentAndDecompose(DocumentBand docBand, Int32 rowIndex, PrintEventArgs args)
+   at DevExpress.XtraReports.UI.Band.CreateDocumentBand(PrintingSystemBase ps, Int32 rowIndex, PageBuildInfo pageBuildInfo, Boolean raiseEnvent)
+   at DevExpress.XtraReports.UI.DetailBand.CreateDocumentBand(PrintingSystemBase ps, Int32 rowIndex, PageBuildInfo pageBuildInfo, Boolean raiseEnvent)
+   at DevExpress.XtraReports.Native.Printing.DetailWriterBase.CreateDocumentBand(PrintingSystemBase ps, PageBuildInfo pageBuildInfo)
+   at DevExpress.XtraReports.Native.Printing.DetailWriterBase.WriteDetailCore(PageBuildInfo pageBuildInfo)
+   at DevExpress.XtraReports.Native.Printing.DetailWriterBase.Write(DocumentBand rootBand, PageBuildInfo pageBuildInfo)
+   at DevExpress.XtraReports.Native.Printing.DocumentBuilder.GetBand(DocumentBand rootBand, PageBuildInfo pageBuildInfo)
+   at DevExpress.XtraPrinting.Native.DocumentBand.GetBand(Int32 index, RectangleF bounds, PointF offset)
+   at DevExpress.XtraPrinting.Native.DocumentBand.GetBand(Int32 index)
+   at DevExpress.XtraPrinting.Native.BuildInfoContainer.GetDetailContainer(DocumentBand rootBand, PageRowBuilderBase pageRowBuilderBase, RectangleF bounds)
+   at DevExpress.XtraPrinting.Native.PageHeaderFooterRowBuilder.GetHeaderRowIndex(DocumentBand rootBand)
+   at DevExpress.XtraPrinting.Native.PageHeaderFooterRowBuilderBase.FillPageHeader(DocumentBand rootBand, RectangleF bounds)
+   at DevExpress.XtraPrinting.Native.PageHeaderFooterRowBuilderBase.FillReportDetailsAndFooter(DocumentBand rootBand, RectangleF bounds)
+   at DevExpress.XtraPrinting.Native.PageRowBuilderBase.FillPage(DocumentBand rootBand, RectangleF bounds)
+   at DevExpress.XtraPrinting.Native.PageBuildEngine.Build()
+   at DevExpress.XtraPrinting.Diagnostics.Benchmark.Exec(Action action, String name)
+   at DevExpress.XtraPrinting.Native.PageBuildEngine.BuildPages(DocumentBand rootBand)
+   at DevExpress.XtraPrinting.Native.DocumentHelper.BuildPagesCore()
+   at DevExpress.XtraPrinting.Native.DocumentHelper.BuildPages()
+   at DevExpress.XtraPrinting.Native.PrintingDocument.BuildPages()
+   at DevExpress.XtraPrinting.Native.PrintingDocument.End(Boolean buildPagesInBackground)
+   at DevExpress.XtraPrinting.PrintingSystemBase.End(Boolean buildForInstantPreview)
+   at DevExpress.XtraReports.UI.XtraReport.DevExpress.XtraReports.IReport.CreateDocumentCore(Single progressRange, Boolean buildForInstantPreview)
+   at DevExpress.XtraReports.Native.DocumentCreator.Create(Single progressRange, Boolean buildForInstantPreview)
+   at DevExpress.XtraReports.UI.XtraReport.CreateDocument(Boolean buildForInstantPreview)
+   at AT.Print.PrintLT.<>c__DisplayClass28_0.<GeneratePDFFormatsForLTBills>b__0(Int32 z) in C:\Torrent20210419\TorrentPowerElecticityBills-Silver\ATPrintUtility\PrintLT.cs:line 1436
+Source: System.Drawing
+TargetSite: Void set_PageUnit(System.Drawing.GraphicsUnit)
+-----------------------------------------------------------
+

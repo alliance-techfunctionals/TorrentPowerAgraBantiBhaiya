@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Category-Rate-Card>
+  <Category>
+    <CRC Slab="LMV 1C" ImageName="LMV1C.png"></CRC>
+    <CRC Slab="LMV 2C" ImageName="LMV2C.png"></CRC>
+  </Category>
+</Category-Rate-Card>
