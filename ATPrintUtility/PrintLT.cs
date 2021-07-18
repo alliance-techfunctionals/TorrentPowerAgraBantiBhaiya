@@ -374,7 +374,7 @@ namespace AT.Print
                 DisplayName = "LT Print",
             };
 
-            DataTable dtSingleLTBill=new DataTable();
+            DataTable dtSingleLTBill = new DataTable();
             List<SingleLTBill> lstformattedbills;
             MemoryStream ms = new MemoryStream();
             SingleLTBill billSaprator = new SingleLTBill();
@@ -487,7 +487,7 @@ namespace AT.Print
                 {
                     //XtraMessageBox.Show("Error Parsing Bill " + BillNo + " of the given file", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     AppFunctions.LogError("Error Parsing Service No. " + ServiceNo + " of the given file due to out of memory.");
-                    AppFunctions.LogProcessedBill(Convert.ToString(dtSingleLTBill.Rows[0][1]), Convert.ToString(dtSingleLTBill.Rows[0][4]), Convert.ToString(dtSingleLTBill.Rows[0][2]), Convert.ToString(dtSingleLTBill.Rows[0][5]), ServiceNo, FileName,"No");
+                    AppFunctions.LogProcessedBill(Convert.ToString(dtSingleLTBill.Rows[0][1]), Convert.ToString(dtSingleLTBill.Rows[0][4]), Convert.ToString(dtSingleLTBill.Rows[0][2]), Convert.ToString(dtSingleLTBill.Rows[0][5]), ServiceNo, FileName, "No");
                     //SaveFile(Convert.ToString(ServiceNo));
                     System.Runtime.GCSettings.LargeObjectHeapCompactionMode = System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce;
                     GC.Collect();
@@ -1869,72 +1869,82 @@ namespace AT.Print
                                 slt.MVPicture = mVImagePath;
                                 lstformattedbills.Add(slt);
 
-                                AT.Print.PDF.Rpt_LTPDF rptsd = new AT.Print.PDF.Rpt_LTPDF
+                                using (AT.Print.PDF.Rpt_LTPDF rptsd = new AT.Print.PDF.Rpt_LTPDF
                                 {
                                     DataSource = lstformattedbills,
                                     // ShowPrintStatusDialog = false,
                                     //ShowPreviewMarginLines = false
 
-                                };
-                                #region WaterMark Picture Front Page PDF Non-TOD
-                                DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkFrontNonTOD = new DevExpress.XtraPrinting.Drawing.Watermark();
-                                pictureWatermarkFrontNonTOD.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_Non_TOD_Front_Page.png");
-                                pictureWatermarkFrontNonTOD.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                                pictureWatermarkFrontNonTOD.ImageTiling = false;
-                                pictureWatermarkFrontNonTOD.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Clip;
-                                pictureWatermarkFrontNonTOD.ImageTransparency = 0;
-                                pictureWatermarkFrontNonTOD.ShowBehind = true;
-                                rptsd.Watermark.CopyFrom(pictureWatermarkFrontNonTOD);
-                                #endregion
-
-
-
-                                //pictureWatermark.PageRange = "2,4";
-
-
-
-                                rptsd.CreateDocument(false);
-
-                                AT.Print.PDF.rpt_LT_Back rpts = new AT.Print.PDF.rpt_LT_Back
+                                })
                                 {
-                                    DataSource = lstformattedbills,
-                                    //ShowPrintStatusDialog = false,
-                                    // ShowPreviewMarginLines = false
-
-                                };
-                                #region WaterMark Picture Back Page PDF Non-TOD
-                                DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkBackNonTOD = new DevExpress.XtraPrinting.Drawing.Watermark();
-                                pictureWatermarkBackNonTOD.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_Non_TOD_Back_Page.png");
-                                pictureWatermarkBackNonTOD.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                                pictureWatermarkBackNonTOD.ImageTiling = false;
-                                pictureWatermarkBackNonTOD.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Clip;
-                                pictureWatermarkBackNonTOD.ImageTransparency = 0;
-                                pictureWatermarkBackNonTOD.ShowBehind = true;
-                                //pictureWatermark.PageRange = "2,4";
-                                rpts.Watermark.CopyFrom(pictureWatermarkBackNonTOD);
-                                #endregion
+                                    #region WaterMark Picture Front Page PDF Non-TOD
+                                    DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkFrontNonTOD = new DevExpress.XtraPrinting.Drawing.Watermark();
+                                    pictureWatermarkFrontNonTOD.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_Non_TOD_Front_Page.png");
+                                    pictureWatermarkFrontNonTOD.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                                    pictureWatermarkFrontNonTOD.ImageTiling = false;
+                                    pictureWatermarkFrontNonTOD.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Clip;
+                                    pictureWatermarkFrontNonTOD.ImageTransparency = 0;
+                                    pictureWatermarkFrontNonTOD.ShowBehind = true;
+                                    rptsd.Watermark.CopyFrom(pictureWatermarkFrontNonTOD);
+                                    #endregion
 
 
-                                rpts.CreateDocument(false);
 
-                                rptsd.ModifyDocument(x => { x.AddPages(rpts.Pages); });
-                                DevExpress.XtraPrinting.Page myPage2 = rptsd.Pages[1];
-                                myPage2.AssignWatermark(pictureWatermarkBackNonTOD);
-                                string billdate = lstformattedbills.FirstOrDefault().L1_MonthYear;
-                                string ServiceNo = lstformattedbills.FirstOrDefault().L6_SERVDET_SERVNO;
-                                var outputfolder = "C://Bills//LT Files//" + billdate + "//" + textFileName;
-                                OutputFolderPath OFP = new OutputFolderPath();
-                                outputfolder = OFP.LoadLocation() + "//LT Files//" + billdate + "//" + textFileName;
-                                if (!Directory.Exists(outputfolder))
-                                    Directory.CreateDirectory(outputfolder);
-                                //var OutPutFolder = 
-                                if (Directory.Exists(outputfolder))
-                                {
-                                    rptsd.ExportToPdf(outputfolder + "//" + ServiceNo + ".pdf");
+                                    //pictureWatermark.PageRange = "2,4";
+
+
+
+                                    rptsd.CreateDocument(false);
+
+                                    using (AT.Print.PDF.rpt_LT_Back rpts = new AT.Print.PDF.rpt_LT_Back
+                                    {
+                                        DataSource = lstformattedbills,
+                                        //ShowPrintStatusDialog = false,
+                                        // ShowPreviewMarginLines = false
+
+                                    })
+                                    {
+                                        #region WaterMark Picture Back Page PDF Non-TOD
+                                        DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkBackNonTOD = new DevExpress.XtraPrinting.Drawing.Watermark();
+                                        pictureWatermarkBackNonTOD.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_Non_TOD_Back_Page.png");
+                                        pictureWatermarkBackNonTOD.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                                        pictureWatermarkBackNonTOD.ImageTiling = false;
+                                        pictureWatermarkBackNonTOD.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Clip;
+                                        pictureWatermarkBackNonTOD.ImageTransparency = 0;
+                                        pictureWatermarkBackNonTOD.ShowBehind = true;
+                                        //pictureWatermark.PageRange = "2,4";
+                                        rpts.Watermark.CopyFrom(pictureWatermarkBackNonTOD);
+                                        #endregion
+
+
+                                        rpts.CreateDocument(false);
+
+                                        rptsd.ModifyDocument(x => { x.AddPages(rpts.Pages); });
+                                        DevExpress.XtraPrinting.Page myPage2 = rptsd.Pages[1];
+                                        myPage2.AssignWatermark(pictureWatermarkBackNonTOD);
+                                        string billdate = lstformattedbills.FirstOrDefault().L1_MonthYear;
+                                        string ServiceNo = lstformattedbills.FirstOrDefault().L6_SERVDET_SERVNO;
+                                        var outputfolder = "C://Bills//LT Files//" + billdate + "//" + textFileName;
+                                        OutputFolderPath OFP = new OutputFolderPath();
+                                        outputfolder = OFP.LoadLocation() + "//LT Files//" + billdate + "//" + textFileName;
+                                        if (!Directory.Exists(outputfolder))
+                                            Directory.CreateDirectory(outputfolder);
+                                        //var OutPutFolder = 
+                                        if (Directory.Exists(outputfolder))
+                                        {
+                                            rptsd.ExportToPdf(outputfolder + "//" + ServiceNo + ".pdf");
+                                        }
+                                    }
+
+
+                                    ParsedBills++;
+                                    if (ParsedBills % 100 == 0)
+                                    {
+                                        System.Runtime.GCSettings.LargeObjectHeapCompactionMode = System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce;
+                                        GC.Collect();
+                                    }
                                 }
-                                rpts.Dispose();
-                                rptsd.Dispose();
-                                ParsedBills++;
+
                             }
                             catch (System.OutOfMemoryException)
                             {
@@ -1969,72 +1979,80 @@ namespace AT.Print
                                 slt.MVPicture = mVImagePath;
                                 lstformattedbills.Add(slt);
 
-                                AT.Print.PDF.Rpt_LTPDF rptsd = new AT.Print.PDF.Rpt_LTPDF
+                                using (AT.Print.PDF.Rpt_LTPDF rptsd = new AT.Print.PDF.Rpt_LTPDF
                                 {
                                     DataSource = lstformattedbills,
                                     // ShowPrintStatusDialog = false,
                                     //ShowPreviewMarginLines = false
 
-                                };
-                                #region WaterMark Picture Front Page PDF Non-TOD
-                                DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkFrontNonTOD = new DevExpress.XtraPrinting.Drawing.Watermark();
-                                pictureWatermarkFrontNonTOD.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_Non_TOD_Front_Page.png");
-                                pictureWatermarkFrontNonTOD.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                                pictureWatermarkFrontNonTOD.ImageTiling = false;
-                                pictureWatermarkFrontNonTOD.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Clip;
-                                pictureWatermarkFrontNonTOD.ImageTransparency = 0;
-                                pictureWatermarkFrontNonTOD.ShowBehind = true;
-                                rptsd.Watermark.CopyFrom(pictureWatermarkFrontNonTOD);
-                                #endregion
-
-
-
-                                //pictureWatermark.PageRange = "2,4";
-
-
-
-                                rptsd.CreateDocument(false);
-
-                                AT.Print.PDF.rpt_LT_Back rpts = new AT.Print.PDF.rpt_LT_Back
+                                })
                                 {
-                                    DataSource = lstformattedbills,
-                                    //ShowPrintStatusDialog = false,
-                                    // ShowPreviewMarginLines = false
-
-                                };
-                                #region WaterMark Picture Back Page PDF Non-TOD
-                                DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkBackNonTOD = new DevExpress.XtraPrinting.Drawing.Watermark();
-                                pictureWatermarkBackNonTOD.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_Non_TOD_Back_Page.png");
-                                pictureWatermarkBackNonTOD.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                                pictureWatermarkBackNonTOD.ImageTiling = false;
-                                pictureWatermarkBackNonTOD.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Clip;
-                                pictureWatermarkBackNonTOD.ImageTransparency = 0;
-                                pictureWatermarkBackNonTOD.ShowBehind = true;
-                                //pictureWatermark.PageRange = "2,4";
-                                rpts.Watermark.CopyFrom(pictureWatermarkBackNonTOD);
-                                #endregion
+                                    #region WaterMark Picture Front Page PDF Non-TOD
+                                    DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkFrontNonTOD = new DevExpress.XtraPrinting.Drawing.Watermark();
+                                    pictureWatermarkFrontNonTOD.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_Non_TOD_Front_Page.png");
+                                    pictureWatermarkFrontNonTOD.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                                    pictureWatermarkFrontNonTOD.ImageTiling = false;
+                                    pictureWatermarkFrontNonTOD.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Clip;
+                                    pictureWatermarkFrontNonTOD.ImageTransparency = 0;
+                                    pictureWatermarkFrontNonTOD.ShowBehind = true;
+                                    rptsd.Watermark.CopyFrom(pictureWatermarkFrontNonTOD);
+                                    #endregion
 
 
-                                rpts.CreateDocument(false);
 
-                                rptsd.ModifyDocument(x => { x.AddPages(rpts.Pages); });
-                                DevExpress.XtraPrinting.Page myPage2 = rptsd.Pages[1];
-                                myPage2.AssignWatermark(pictureWatermarkBackNonTOD);
-                                string billdate = lstformattedbills.FirstOrDefault().L1_MonthYear;
-                                string ServiceNo = lstformattedbills.FirstOrDefault().L6_SERVDET_SERVNO;
-                                var outputfolder = "C://Bills//LT Files//" + billdate + "//" + textFileName;
-                                OutputFolderPath OFP = new OutputFolderPath();
-                                outputfolder = OFP.LoadLocation() + "//LT Files//" + billdate + "//" + textFileName;
-                                if (!Directory.Exists(outputfolder))
-                                    Directory.CreateDirectory(outputfolder);
-                                //var OutPutFolder = 
-                                if (Directory.Exists(outputfolder))
-                                {
-                                    rptsd.ExportToPdf(outputfolder + "//" + ServiceNo + ".pdf");
+                                    //pictureWatermark.PageRange = "2,4";
+
+
+
+                                    rptsd.CreateDocument(false);
+
+                                    using (AT.Print.PDF.rpt_LT_Back rpts = new AT.Print.PDF.rpt_LT_Back
+                                    {
+                                        DataSource = lstformattedbills,
+                                        //ShowPrintStatusDialog = false,
+                                        // ShowPreviewMarginLines = false
+
+                                    })
+                                    {
+                                        #region WaterMark Picture Back Page PDF Non-TOD
+                                        DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkBackNonTOD = new DevExpress.XtraPrinting.Drawing.Watermark();
+                                        pictureWatermarkBackNonTOD.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_Non_TOD_Back_Page.png");
+                                        pictureWatermarkBackNonTOD.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                                        pictureWatermarkBackNonTOD.ImageTiling = false;
+                                        pictureWatermarkBackNonTOD.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Clip;
+                                        pictureWatermarkBackNonTOD.ImageTransparency = 0;
+                                        pictureWatermarkBackNonTOD.ShowBehind = true;
+                                        //pictureWatermark.PageRange = "2,4";
+                                        rpts.Watermark.CopyFrom(pictureWatermarkBackNonTOD);
+                                        #endregion
+
+
+                                        rpts.CreateDocument(false);
+
+                                        rptsd.ModifyDocument(x => { x.AddPages(rpts.Pages); });
+                                        DevExpress.XtraPrinting.Page myPage2 = rptsd.Pages[1];
+                                        myPage2.AssignWatermark(pictureWatermarkBackNonTOD);
+                                        string billdate = lstformattedbills.FirstOrDefault().L1_MonthYear;
+                                        string ServiceNo = lstformattedbills.FirstOrDefault().L6_SERVDET_SERVNO;
+                                        var outputfolder = "C://Bills//LT Files//" + billdate + "//" + textFileName;
+                                        OutputFolderPath OFP = new OutputFolderPath();
+                                        outputfolder = OFP.LoadLocation() + "//LT Files//" + billdate + "//" + textFileName;
+                                        if (!Directory.Exists(outputfolder))
+                                            Directory.CreateDirectory(outputfolder);
+                                        //var OutPutFolder = 
+                                        if (Directory.Exists(outputfolder))
+                                        {
+                                            rptsd.ExportToPdf(outputfolder + "//" + ServiceNo + ".pdf");
+                                        }
+                                    }
+                                    ParsedBills++;
+                                    if (ParsedBills % 100 == 0)
+                                    {
+                                        System.Runtime.GCSettings.LargeObjectHeapCompactionMode = System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce;
+                                        GC.Collect();
+                                    }
                                 }
-                                rpts.Dispose();
-                                rptsd.Dispose();
-                                ParsedBills++;
+                                long mem = GC.GetTotalMemory(true);
                             }
                             catch (System.OutOfMemoryException)
                             {
@@ -2052,6 +2070,7 @@ namespace AT.Print
                         }
                     }
                 });
+              
 
                 DSBill.Reset();
                 DSBill.Dispose();
