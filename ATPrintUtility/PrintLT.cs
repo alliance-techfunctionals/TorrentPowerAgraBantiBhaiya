@@ -1821,8 +1821,17 @@ namespace AT.Print
                         var sb = sender as SimpleButton;
                         if (ValidatetxtFile(singleLTBills))
                         {
-                            GeneratePDFFormatsForLTBills(singleLTBills, sb.Name, 0, singleLTBills.Count(), "1");
+                            int i = -1;
+                            while (i < singleLTBills.Count())
+                            {
+                                GeneratePDFFormatsForLTBillsNewOptimized(i + 1);
+                                i += 500;
+                            }
+                            DSBill.Reset();
+                            DSBill.Dispose();
                             AppFunctions.CloseWaitForm();
+
+                            XtraMessageBox.Show(singleLTBills + " singleLTBills.Count())", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -1839,6 +1848,101 @@ namespace AT.Print
             }
         }
 
+
+        void GeneratePDFFormatsForLTBillsNewOptimized(int startingBillNumber)
+        {
+
+            XtraReport collectorReport = new XtraReport
+            {
+                DisplayName = "LT Print",
+            };
+
+
+            List<int> inlist = Enumerable.Range(startingBillNumber, 500).ToList();
+            Parallel.ForEach(inlist, z =>
+            {
+                if (z < DSBill.Tables.Count)
+                {
+                    DataTable dtSingleLTBill = DSBill.Tables[z];
+                    if (dtSingleLTBill.Rows.Count != 0)
+                    {
+                        try
+                        {
+                            List<SingleLTBill> lstformattedbills = new List<SingleLTBill>();
+
+                            SingleLTBill slt = parseSingleLTBill(dtSingleLTBill);
+                            slt.MVPicture = mVImagePath;
+                            lstformattedbills.Add(slt);
+
+                            using (AT.Print.PDF.Rpt_LTPDF rptsd = new AT.Print.PDF.Rpt_LTPDF
+                            {
+                                DataSource = lstformattedbills
+                            })
+                            {
+                                #region WaterMark Picture Front Page PDF Non-TOD
+
+                                rptsd.Watermark.CopyFrom(pictureWatermarkFrontNonTOD);
+                                #endregion
+
+                                rptsd.CreateDocument(false);
+
+                                using (AT.Print.PDF.rpt_LT_Back rpts = new AT.Print.PDF.rpt_LT_Back
+                                {
+                                    DataSource = lstformattedbills
+                                })
+                                {
+                                    #region WaterMark Picture Back Page PDF Non-TOD
+                                    DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkBackNonTOD = new DevExpress.XtraPrinting.Drawing.Watermark();
+                                    pictureWatermarkBackNonTOD.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_Non_TOD_Back_Page.png");
+                                    pictureWatermarkBackNonTOD.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                                    pictureWatermarkBackNonTOD.ImageTiling = false;
+                                    pictureWatermarkBackNonTOD.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Clip;
+                                    pictureWatermarkBackNonTOD.ImageTransparency = 0;
+                                    pictureWatermarkBackNonTOD.ShowBehind = true;
+                                    rpts.Watermark.CopyFrom(pictureWatermarkBackNonTOD);
+                                    #endregion
+
+
+                                    rpts.CreateDocument(false);
+
+                                    rptsd.ModifyDocument(x => { x.AddPages(rpts.Pages); });
+                                    DevExpress.XtraPrinting.Page myPage2 = rptsd.Pages[1];
+                                    myPage2.AssignWatermark(pictureWatermarkBackNonTOD);
+                                    string billdate = lstformattedbills.FirstOrDefault().L1_MonthYear;
+                                    string ServiceNo = lstformattedbills.FirstOrDefault().L6_SERVDET_SERVNO;
+                                    var outputfolder = "C://Bills//LT Files//" + billdate + "//" + textFileName;
+                                    OutputFolderPath OFP = new OutputFolderPath();
+                                    outputfolder = OFP.LoadLocation() + "//LT Files//" + billdate + "//" + textFileName;
+                                    if (!Directory.Exists(outputfolder))
+                                        Directory.CreateDirectory(outputfolder);
+                                    //var OutPutFolder = 
+                                    if (Directory.Exists(outputfolder))
+                                    {
+                                        rptsd.ExportToPdf(outputfolder + "//" + ServiceNo + ".pdf");
+                                    }
+                                }
+                            }
+
+                        }
+                        catch (System.OutOfMemoryException)
+                        {
+                            System.Runtime.GCSettings.LargeObjectHeapCompactionMode = System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce;
+                            GC.Collect();
+                            GC.RemoveMemoryPressure(1024 * 1024);
+                        }
+                        catch (Exception ex)
+                        {
+                            AppFunctions.LogError(ex);
+                            AppFunctions.CloseWaitForm();
+                            XtraMessageBox.Show("Error Parsing Bill Service No. " + ServiceNo + " of the given file", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            });
+
+        }
+
+
         void GeneratePDFFormatsForLTBills(string[] Bills, string Name, int Initial, int Final, string FolderName)
         {
             int ParsedBills = 0;
@@ -1848,13 +1952,13 @@ namespace AT.Print
                 DisplayName = "LT Print",
             };
 
+            Final = 1000;
             if (Final > 200)
             {
                 List<int> inlist = Enumerable.Range(0, Final / 2).ToList();
-                List<int> inlist1 = Enumerable.Range(Final / 2, Final / 2 + 1).ToList();
+                List<int> inlist1 = Enumerable.Range(Final / 2 + 1, Final / 2 + 1).ToList();
 
-                Parallel.ForEach(inlist, new ParallelOptions { MaxDegreeOfParallelism = 1000 }, z =>
-                //inlist.ForEach(z =>
+                Parallel.ForEach(inlist, z =>
                 {
                     if (z < DSBill.Tables.Count)
                     {
@@ -1938,11 +2042,11 @@ namespace AT.Print
 
 
                                     ParsedBills++;
-                                    if (ParsedBills % 100 == 0)
-                                    {
-                                        System.Runtime.GCSettings.LargeObjectHeapCompactionMode = System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce;
-                                        GC.Collect();
-                                    }
+                                    //if (ParsedBills % 1500 == 0)
+                                    //{
+                                    //    System.Runtime.GCSettings.LargeObjectHeapCompactionMode = System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce;
+                                    //    GC.Collect();
+                                    //}
                                 }
 
                             }
@@ -1963,8 +2067,7 @@ namespace AT.Print
                     }
                 });
 
-                Parallel.ForEach(inlist1, new ParallelOptions { MaxDegreeOfParallelism = 1000 }, z =>
-                //inlist.ForEach(z =>
+                Parallel.ForEach(inlist1, z =>
                 {
                     if (z < DSBill.Tables.Count)
                     {
@@ -2046,13 +2149,13 @@ namespace AT.Print
                                         }
                                     }
                                     ParsedBills++;
-                                    if (ParsedBills % 100 == 0)
-                                    {
-                                        System.Runtime.GCSettings.LargeObjectHeapCompactionMode = System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce;
-                                        GC.Collect();
-                                    }
+                                    //if (ParsedBills % 100 == 0)
+                                    //{
+                                    //    System.Runtime.GCSettings.LargeObjectHeapCompactionMode = System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce;
+                                    //    GC.Collect();
+                                    //}
                                 }
-                                long mem = GC.GetTotalMemory(true);
+                                //long mem = GC.GetTotalMemory(true);
                             }
                             catch (System.OutOfMemoryException)
                             {
@@ -2070,7 +2173,7 @@ namespace AT.Print
                         }
                     }
                 });
-              
+
 
                 DSBill.Reset();
                 DSBill.Dispose();

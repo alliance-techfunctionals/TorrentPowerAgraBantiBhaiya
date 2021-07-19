@@ -183,6 +183,19 @@ namespace AT.Print.Utils
 
         }
 
+        public static void LogInfo(string str)
+        {
+            string message = string.Format("Time: {0}", DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss tt"));
+            message += string.Format(str);
+            string path = Application.StartupPath + "\\Contents\\CategorySlabImages\\ErrorLog.txt";
+            using (StreamWriter writer = new StreamWriter(path, true))
+            {
+                writer.WriteLine(message);
+                writer.Close();
+            }
+
+        }
+
 
         public static void LogError(string str, Exception ex)
         {
