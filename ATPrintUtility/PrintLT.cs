@@ -1825,13 +1825,13 @@ namespace AT.Print
                             while (i < singleLTBills.Count())
                             {
                                 GeneratePDFFormatsForLTBillsNewOptimized(i + 1);
-                                i += 500;
+                                i += 50;
                             }
                             DSBill.Reset();
                             DSBill.Dispose();
                             AppFunctions.CloseWaitForm();
 
-                            XtraMessageBox.Show(singleLTBills + " singleLTBills.Count())", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            XtraMessageBox.Show(singleLTBills.Count() + " bills has been parsed.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -1858,7 +1858,7 @@ namespace AT.Print
             };
 
 
-            List<int> inlist = Enumerable.Range(startingBillNumber, 500).ToList();
+            List<int> inlist = Enumerable.Range(startingBillNumber, 50).ToList();
             Parallel.ForEach(inlist, z =>
             {
                 if (z < DSBill.Tables.Count)
@@ -1880,7 +1880,13 @@ namespace AT.Print
                             })
                             {
                                 #region WaterMark Picture Front Page PDF Non-TOD
-
+                                DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkFrontNonTOD = new DevExpress.XtraPrinting.Drawing.Watermark();
+                                pictureWatermarkFrontNonTOD.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_Non_TOD_Front_Page.png");
+                                pictureWatermarkFrontNonTOD.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                                pictureWatermarkFrontNonTOD.ImageTiling = false;
+                                pictureWatermarkFrontNonTOD.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Clip;
+                                pictureWatermarkFrontNonTOD.ImageTransparency = 0;
+                                pictureWatermarkFrontNonTOD.ShowBehind = true;
                                 rptsd.Watermark.CopyFrom(pictureWatermarkFrontNonTOD);
                                 #endregion
 
