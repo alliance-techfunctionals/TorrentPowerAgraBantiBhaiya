@@ -135,7 +135,7 @@
             this.xrLabel53,
             this.xrLabel57,
             this.xrLabel56});
-            this.xrPanel2.LocationFloat = new DevExpress.Utils.PointFloat(13.04053F, 1084.076F);
+            this.xrPanel2.LocationFloat = new DevExpress.Utils.PointFloat(13.04053F, 1103.076F);
             this.xrPanel2.LockedInUserDesigner = true;
             this.xrPanel2.Name = "xrPanel2";
             this.xrPanel2.SizeF = new System.Drawing.SizeF(795.9595F, 55.92383F);
@@ -357,7 +357,7 @@
             this.xrChart1.ImageType = DevExpress.XtraReports.UI.ChartImageType.Bitmap;
             this.xrChart1.Legend.Name = "Default Legend";
             this.xrChart1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.xrChart1.LocationFloat = new DevExpress.Utils.PointFloat(19.04063F, 308.7916F);
+            this.xrChart1.LocationFloat = new DevExpress.Utils.PointFloat(19.04063F, 363.7916F);
             this.xrChart1.Name = "xrChart1";
             this.xrChart1.PaletteBaseColorNumber = 2;
             this.xrChart1.PaletteName = "Black and White";
@@ -428,7 +428,7 @@
             this.xrChart2.ImageType = DevExpress.XtraReports.UI.ChartImageType.Bitmap;
             this.xrChart2.Legend.Name = "Default Legend";
             this.xrChart2.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.xrChart2.LocationFloat = new DevExpress.Utils.PointFloat(19.04064F, 472.7916F);
+            this.xrChart2.LocationFloat = new DevExpress.Utils.PointFloat(19.04064F, 527.7916F);
             this.xrChart2.Name = "xrChart2";
             this.xrChart2.PaletteBaseColorNumber = 2;
             this.xrChart2.PaletteName = "Black and White";
@@ -499,7 +499,7 @@
             this.xrChart3.ImageType = DevExpress.XtraReports.UI.ChartImageType.Bitmap;
             this.xrChart3.Legend.Name = "Default Legend";
             this.xrChart3.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.xrChart3.LocationFloat = new DevExpress.Utils.PointFloat(19.04178F, 636.7916F);
+            this.xrChart3.LocationFloat = new DevExpress.Utils.PointFloat(19.04178F, 691.7916F);
             this.xrChart3.Name = "xrChart3";
             this.xrChart3.PaletteBaseColorNumber = 2;
             this.xrChart3.PaletteName = "Black and White";
@@ -531,17 +531,17 @@
             // 
             // xrPictureBox2
             // 
-            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(14.99999F, 16F);
+            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(14.99999F, 94F);
             this.xrPictureBox2.Name = "xrPictureBox2";
-            this.xrPictureBox2.SizeF = new System.Drawing.SizeF(466.8723F, 281.3333F);
+            this.xrPictureBox2.SizeF = new System.Drawing.SizeF(466.8723F, 261.2914F);
             this.xrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
             // 
             // xrPictureBox1
             // 
             this.xrPictureBox1.ImageAlignment = DevExpress.XtraPrinting.ImageAlignment.MiddleCenter;
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(497.8739F, 16F);
+            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(497.8739F, 93.99999F);
             this.xrPictureBox1.Name = "xrPictureBox1";
-            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(278.2512F, 261.2914F);
+            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(278.2513F, 249.8331F);
             // 
             // xrPictureBox3
             // 
@@ -553,26 +553,6 @@
             // dpiAwareImageCollection1
             // 
             this.dpiAwareImageCollection1.Stream = ((DevExpress.Utils.DPIAwareImageCollectionStreamer)(resources.GetObject("dpiAwareImageCollection1.Stream")));
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = typeof(AT.Print.Utils.SingleLTBill);
-            // 
-            // bindingSource2
-            // 
-            this.bindingSource2.DataSource = typeof(AT.Print.Utils.SingleLTBill);
-            // 
-            // bindingSource3
-            // 
-            this.bindingSource3.DataSource = typeof(AT.Print.Utils.SingleLTBill);
-            // 
-            // bindingSource4
-            // 
-            this.bindingSource4.DataSource = typeof(AT.Print.Utils.SingleLTBill);
-            // 
-            // bindingSource5
-            // 
-            this.bindingSource5.DataSource = typeof(AT.Print.Utils.SingleLTBill);
             // 
             // rpt_LTMDwT_BackPDF
             // 

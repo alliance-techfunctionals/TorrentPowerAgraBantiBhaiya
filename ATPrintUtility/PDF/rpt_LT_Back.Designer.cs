@@ -226,26 +226,6 @@
             this.xrPictureBox3.Name = "xrPictureBox3";
             this.xrPictureBox3.SizeF = new System.Drawing.SizeF(804.0002F, 1151.058F);
             // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = typeof(AT.Print.Utils.SingleLTBill);
-            // 
-            // bindingSource2
-            // 
-            this.bindingSource2.DataSource = typeof(AT.Print.Utils.SingleLTBill);
-            // 
-            // bindingSource3
-            // 
-            this.bindingSource3.DataSource = typeof(AT.Print.Utils.SingleLTBill);
-            // 
-            // bindingSource4
-            // 
-            this.bindingSource4.DataSource = typeof(AT.Print.Utils.SingleLTBill);
-            // 
-            // bindingSource5
-            // 
-            this.bindingSource5.DataSource = typeof(AT.Print.Utils.SingleLTBill);
-            // 
             // rpt_LT_Back
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -263,6 +243,7 @@
             this.DrawGrid = false;
             this.DrawWatermark = true;
             this.ExportOptions.Pdf.ImageQuality = DevExpress.XtraPrinting.PdfJpegImageQuality.Low;
+            this.ExportOptions.Pdf.RasterizationResolution = 0;
             this.Font = new System.Drawing.Font("Arial", 9.75F);
             this.Margins = new System.Drawing.Printing.Margins(10, 13, 0, 0);
             this.PageHeight = 1169;

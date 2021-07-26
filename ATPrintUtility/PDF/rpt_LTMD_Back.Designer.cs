@@ -309,9 +309,9 @@
             // 
             // xrPictureBox2
             // 
-            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(14.99999F, 26.00002F);
+            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(14.99999F, 29.20834F);
             this.xrPictureBox2.Name = "xrPictureBox2";
-            this.xrPictureBox2.SizeF = new System.Drawing.SizeF(479.6217F, 292.7916F);
+            this.xrPictureBox2.SizeF = new System.Drawing.SizeF(479.6217F, 288F);
             this.xrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
             // 
             // xrPictureBox1
@@ -327,26 +327,6 @@
             this.xrPictureBox3.Name = "xrPictureBox3";
             this.xrPictureBox3.SizeF = new System.Drawing.SizeF(827F, 1169F);
             this.xrPictureBox3.Sizing = DevExpress.XtraPrinting.ImageSizeMode.Squeeze;
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = typeof(AT.Print.Utils.SingleLTMDBill);
-            // 
-            // bindingSource2
-            // 
-            this.bindingSource2.DataSource = typeof(AT.Print.Utils.SingleLTMDBill);
-            // 
-            // bindingSource3
-            // 
-            this.bindingSource3.DataSource = typeof(AT.Print.Utils.SingleLTMDBill);
-            // 
-            // bindingSource4
-            // 
-            this.bindingSource4.DataSource = typeof(AT.Print.Utils.SingleLTMDBill);
-            // 
-            // bindingSource5
-            // 
-            this.bindingSource5.DataSource = typeof(AT.Print.Utils.SingleLTMDBill);
             // 
             // rpt_LTMD_Back
             // 
