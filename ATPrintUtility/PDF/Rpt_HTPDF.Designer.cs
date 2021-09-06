@@ -2721,7 +2721,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TopPanel_Row_5]")});
             this.xrlTopPanelRow_5.Font = new System.Drawing.Font("Calibri", 7F, System.Drawing.FontStyle.Bold);
             this.xrlTopPanelRow_5.InteractiveSorting.FieldName = "OwnerName";
-            this.xrlTopPanelRow_5.LocationFloat = new DevExpress.Utils.PointFloat(267.24F, 84.32F);
+            this.xrlTopPanelRow_5.LocationFloat = new DevExpress.Utils.PointFloat(240.24F, 84.32F);
             this.xrlTopPanelRow_5.Name = "xrlTopPanelRow_5";
             this.xrlTopPanelRow_5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrlTopPanelRow_5.SizeF = new System.Drawing.SizeF(226F, 11.60381F);
@@ -2735,7 +2735,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TopPanel_Row_4]")});
             this.xrlTopPanelRow_4.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold);
             this.xrlTopPanelRow_4.InteractiveSorting.FieldName = "OwnerName";
-            this.xrlTopPanelRow_4.LocationFloat = new DevExpress.Utils.PointFloat(268.24F, 67.24002F);
+            this.xrlTopPanelRow_4.LocationFloat = new DevExpress.Utils.PointFloat(241.24F, 67.24002F);
             this.xrlTopPanelRow_4.Name = "xrlTopPanelRow_4";
             this.xrlTopPanelRow_4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrlTopPanelRow_4.SizeF = new System.Drawing.SizeF(226F, 17.07997F);
@@ -2749,7 +2749,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TopPanel_Row_3]")});
             this.xrlTopPanel_Row_3.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold);
             this.xrlTopPanel_Row_3.InteractiveSorting.FieldName = "OwnerName";
-            this.xrlTopPanel_Row_3.LocationFloat = new DevExpress.Utils.PointFloat(268.24F, 52.15999F);
+            this.xrlTopPanel_Row_3.LocationFloat = new DevExpress.Utils.PointFloat(241.24F, 52.15999F);
             this.xrlTopPanel_Row_3.Name = "xrlTopPanel_Row_3";
             this.xrlTopPanel_Row_3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrlTopPanel_Row_3.SizeF = new System.Drawing.SizeF(226F, 15.08003F);
@@ -2763,7 +2763,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TopPanel_Row_2]")});
             this.xrlTopPanelRow_2.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold);
             this.xrlTopPanelRow_2.InteractiveSorting.FieldName = "OwnerName";
-            this.xrlTopPanelRow_2.LocationFloat = new DevExpress.Utils.PointFloat(268.24F, 35.08F);
+            this.xrlTopPanelRow_2.LocationFloat = new DevExpress.Utils.PointFloat(241.24F, 35.08F);
             this.xrlTopPanelRow_2.Name = "xrlTopPanelRow_2";
             this.xrlTopPanelRow_2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrlTopPanelRow_2.SizeF = new System.Drawing.SizeF(226F, 17.07999F);
@@ -2777,7 +2777,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TopPanel_Row_1]")});
             this.xrlTopPanelRow_1.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold);
             this.xrlTopPanelRow_1.InteractiveSorting.FieldName = "OwnerName";
-            this.xrlTopPanelRow_1.LocationFloat = new DevExpress.Utils.PointFloat(268.24F, 19F);
+            this.xrlTopPanelRow_1.LocationFloat = new DevExpress.Utils.PointFloat(241.24F, 19F);
             this.xrlTopPanelRow_1.Name = "xrlTopPanelRow_1";
             this.xrlTopPanelRow_1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrlTopPanelRow_1.SizeF = new System.Drawing.SizeF(226F, 16.08F);
@@ -3094,7 +3094,7 @@
             this.xrBarCode1.Name = "xrBarCode1";
             this.xrBarCode1.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 96F);
             this.xrBarCode1.ShowText = false;
-            this.xrBarCode1.SizeF = new System.Drawing.SizeF(187.3333F, 26.16F);
+            this.xrBarCode1.SizeF = new System.Drawing.SizeF(235F, 26.16F);
             eaN128Generator1.CharacterSet = DevExpress.XtraPrinting.BarCode.Code128Charset.CharsetAuto;
             this.xrBarCode1.Symbology = eaN128Generator1;
             // 

@@ -399,7 +399,7 @@
             this.xrBarCode1.Name = "xrBarCode1";
             this.xrBarCode1.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 100F);
             this.xrBarCode1.ShowText = false;
-            this.xrBarCode1.SizeF = new System.Drawing.SizeF(212.5F, 27F);
+            this.xrBarCode1.SizeF = new System.Drawing.SizeF(235F, 27F);
             eaN128Generator1.CharacterSet = DevExpress.XtraPrinting.BarCode.Code128Charset.CharsetAuto;
             this.xrBarCode1.Symbology = eaN128Generator1;
             // 
@@ -506,26 +506,6 @@
             // dpiAwareImageCollection1
             // 
             this.dpiAwareImageCollection1.Stream = ((DevExpress.Utils.DPIAwareImageCollectionStreamer)(resources.GetObject("dpiAwareImageCollection1.Stream")));
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = typeof(AT.Print.Utils.SingleLTBill);
-            // 
-            // bindingSource2
-            // 
-            this.bindingSource2.DataSource = typeof(AT.Print.Utils.SingleLTBill);
-            // 
-            // bindingSource3
-            // 
-            this.bindingSource3.DataSource = typeof(AT.Print.Utils.SingleLTBill);
-            // 
-            // bindingSource4
-            // 
-            this.bindingSource4.DataSource = typeof(AT.Print.Utils.SingleLTBill);
-            // 
-            // bindingSource5
-            // 
-            this.bindingSource5.DataSource = typeof(AT.Print.Utils.SingleLTBill);
             // 
             // Rpt_LTMD_TOD_Print_Back
             // 

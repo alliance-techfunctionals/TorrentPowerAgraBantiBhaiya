@@ -132,15 +132,29 @@ namespace AT.Print
                     MTR2_KWH3.Text = Data[0].L22_TOD3_KVAH_Units;
                     MTR2_KWH4.Text = Data[0].L22_TOD4_KVAH_Units;
                     //
-                    MTR2_KW1_ex.Text = Data[0].L53_Exp_TOD1_KW_Units;
-                    MTR2_KW2_ex.Text = Data[0].L53_Exp_TOD2_KW_Units;
-                    MTR2_KW3_ex.Text = Data[0].L53_Exp_TOD3_KW_Units;
-                    MTR2_KW4_ex.Text = Data[0].L53_Exp_TOD4_KW_Units;
+                    //MTR2_KW1_ex.Text = Data[0].L53_Exp_TOD1_KW_Units;
+                    //MTR2_KW2_ex.Text = Data[0].L53_Exp_TOD2_KW_Units;
+                    //MTR2_KW3_ex.Text = Data[0].L53_Exp_TOD3_KW_Units;
+                    //MTR2_KW4_ex.Text = Data[0].L53_Exp_TOD4_KW_Units;
 
-                    MTR2_KWH1_ex.Text = Data[0].L51_Exp_TOD1_KWH_Units;
-                    MTR2_KWH2_ex.Text = Data[0].L51_Exp_TOD2_KWH_Units;
-                    MTR2_KWH3_ex.Text = Data[0].L51_Exp_TOD3_KWH_Units;
-                    MTR2_KWH4_ex.Text = Data[0].L51_Exp_TOD4_KWH_Units;
+                    //4 Sep 2021
+                    MTR2_KW1_ex.Text = Data[0].L54_Exp_TOD1_KW_Units;
+                    MTR2_KW2_ex.Text = Data[0].L54_Exp_TOD2_KW_Units;
+                    MTR2_KW3_ex.Text = Data[0].L54_Exp_TOD3_KW_Units;
+                    MTR2_KW4_ex.Text = Data[0].L54_Exp_TOD4_KW_Units;
+                    //
+
+                    //MTR2_KWH1_ex.Text = Data[0].L51_Exp_TOD1_KWH_Units;
+                    //MTR2_KWH2_ex.Text = Data[0].L51_Exp_TOD2_KWH_Units;
+                    //MTR2_KWH3_ex.Text = Data[0].L51_Exp_TOD3_KWH_Units;
+                    //MTR2_KWH4_ex.Text = Data[0].L51_Exp_TOD4_KWH_Units;
+
+                    //4 Sep 2021
+                    MTR2_KWH1_ex.Text = Data[0].L50_Exp_TOD1_KVAH_Units;
+                    MTR2_KWH2_ex.Text = Data[0].L50_Exp_TOD2_KVAH_Units;
+                    MTR2_KWH3_ex.Text = Data[0].L50_Exp_TOD3_KVAH_Units;
+                    MTR2_KWH4_ex.Text = Data[0].L50_Exp_TOD4_KVAH_Units;
+                    //
                 }
                 // IMP
                 if (!string.IsNullOrEmpty(Data[0].L6_Kvah_indicator) || Data[0].L6_Kvah_indicator == "1")
@@ -201,10 +215,17 @@ namespace AT.Print
                     MTR2_KW3_ex.Text  = Data[0].L52_Exp_TOD3_KVA_Units;
                     MTR2_KW4_ex.Text  = Data[0].L52_Exp_TOD4_KVA_Units;
 
-                    MTR2_KWH1_ex.Text = Data[0].L50_Exp_TOD1_KVAH_Units;
-                    MTR2_KWH2_ex.Text = Data[0].L50_Exp_TOD2_KVAH_Units;
-                    MTR2_KWH3_ex.Text = Data[0].L50_Exp_TOD3_KVAH_Units;
-                    MTR2_KWH4_ex.Text = Data[0].L50_Exp_TOD4_KVAH_Units;
+                    //MTR2_KWH1_ex.Text = Data[0].L50_Exp_TOD1_KVAH_Units;
+                    //MTR2_KWH2_ex.Text = Data[0].L50_Exp_TOD2_KVAH_Units;
+                    //MTR2_KWH3_ex.Text = Data[0].L50_Exp_TOD3_KVAH_Units;
+                    //MTR2_KWH4_ex.Text = Data[0].L50_Exp_TOD4_KVAH_Units;
+
+                    //4 Sep 2021
+                    MTR2_KWH1_ex.Text = Data[0].L51_Exp_TOD1_KWH_Units;
+                    MTR2_KWH2_ex.Text = Data[0].L51_Exp_TOD2_KWH_Units;
+                    MTR2_KWH3_ex.Text = Data[0].L51_Exp_TOD3_KWH_Units;
+                    MTR2_KWH4_ex.Text = Data[0].L51_Exp_TOD4_KWH_Units;
+                    //
                 }
 
             }
@@ -235,15 +256,29 @@ namespace AT.Print
                     MTR1_KWH3.Text = Data[0].L16_TOD3_KVAH_Units;
                     MTR1_KWH4.Text = Data[0].L16_TOD4_KVAH_Units;
 
-                     MTR1_KW1_ex.Text = Data[0].L36_Exp_TOD1_KVA_Units;
-                     MTR1_KW2_ex.Text = Data[0].L36_Exp_TOD2_KVA_Units;
-                     MTR1_KW3_ex.Text = Data[0].L36_Exp_TOD3_KVA_Units;
-                     MTR1_KW4_ex.Text = Data[0].L36_Exp_TOD4_KVA_Units;
+                    //MTR1_KW1_ex.Text = Data[0].L36_Exp_TOD1_KVA_Units;
+                    //MTR1_KW2_ex.Text = Data[0].L36_Exp_TOD2_KVA_Units;
+                    //MTR1_KW3_ex.Text = Data[0].L36_Exp_TOD3_KVA_Units;
+                    //MTR1_KW4_ex.Text = Data[0].L36_Exp_TOD4_KVA_Units;
 
-                    MTR1_KWH1_ex.Text = Data[0].L35_Exp_TOD1_KVAH_Units;
-                    MTR1_KWH2_ex.Text = Data[0].L35_Exp_TOD2_KVAH_Units;
-                    MTR1_KWH3_ex.Text = Data[0].L35_Exp_TOD3_KVAH_Units;
-                    MTR1_KWH4_ex.Text = Data[0].L35_Exp_TOD4_KVAH_Units;
+                    //4 Sep 2021
+                    MTR1_KW1_ex.Text = Data[0].L53_Exp_TOD1_KW_Units;
+                    MTR1_KW2_ex.Text = Data[0].L53_Exp_TOD2_KW_Units;
+                    MTR1_KW3_ex.Text = Data[0].L53_Exp_TOD3_KW_Units;
+                    MTR1_KW4_ex.Text = Data[0].L53_Exp_TOD4_KW_Units;
+                    //
+
+                    //MTR1_KWH1_ex.Text = Data[0].L35_Exp_TOD1_KVAH_Units;
+                    //MTR1_KWH2_ex.Text = Data[0].L35_Exp_TOD2_KVAH_Units;
+                    //MTR1_KWH3_ex.Text = Data[0].L35_Exp_TOD3_KVAH_Units;
+                    //MTR1_KWH4_ex.Text = Data[0].L35_Exp_TOD4_KVAH_Units;
+
+                    //4 Sep 2021
+                    MTR1_KWH1_ex.Text = Data[0].L34_Exp_TOD1_KWH_Units;
+                    MTR1_KWH2_ex.Text = Data[0].L34_Exp_TOD2_KWH_Units;
+                    MTR1_KWH3_ex.Text = Data[0].L34_Exp_TOD3_KWH_Units;
+                    MTR1_KWH4_ex.Text = Data[0].L34_Exp_TOD4_KWH_Units;
+                    //
 
                     MTR1_NET1.Text = Data[0].L43_Exp_CURRENT_NET_EXPORT_TOD1_KWH_UNITS;
                     MTR1_NET2.Text = Data[0].L43_Exp_CURRENT_NET_EXPORT_TOD2_KWH_UNITS;
@@ -282,15 +317,29 @@ namespace AT.Print
                     MTR1_KWH3.Text = Data[0].L16_TOD3_KVAH_Units;
                     MTR1_KWH4.Text = Data[0].L16_TOD4_KVAH_Units;
 
-                    MTR1_KW1_ex.Text = Data[0].L53_Exp_TOD1_KW_Units;
-                    MTR1_KW2_ex.Text = Data[0].L53_Exp_TOD2_KW_Units;
-                    MTR1_KW3_ex.Text = Data[0].L53_Exp_TOD3_KW_Units;
-                    MTR1_KW4_ex.Text = Data[0].L53_Exp_TOD4_KW_Units;
+                    //MTR1_KW1_ex.Text = Data[0].L53_Exp_TOD1_KW_Units;
+                    //MTR1_KW2_ex.Text = Data[0].L53_Exp_TOD2_KW_Units;
+                    //MTR1_KW3_ex.Text = Data[0].L53_Exp_TOD3_KW_Units;
+                    //MTR1_KW4_ex.Text = Data[0].L53_Exp_TOD4_KW_Units;
 
-                    MTR1_KWH1_ex.Text = Data[0].L50_Exp_TOD1_KVAH_Units;
-                    MTR1_KWH2_ex.Text = Data[0].L50_Exp_TOD2_KVAH_Units;
-                    MTR1_KWH3_ex.Text = Data[0].L50_Exp_TOD3_KVAH_Units;
-                    MTR1_KWH4_ex.Text = Data[0].L50_Exp_TOD4_KVAH_Units;
+                    // 4 Sep 2021
+                    MTR1_KW1_ex.Text = Data[0].L36_Exp_TOD1_KVA_Units;
+                    MTR1_KW2_ex.Text = Data[0].L36_Exp_TOD2_KVA_Units;
+                    MTR1_KW3_ex.Text = Data[0].L36_Exp_TOD3_KVA_Units;
+                    MTR1_KW4_ex.Text = Data[0].L36_Exp_TOD4_KVA_Units;
+                    //
+
+                    //MTR1_KWH1_ex.Text = Data[0].L50_Exp_TOD1_KVAH_Units;
+                    //MTR1_KWH2_ex.Text = Data[0].L50_Exp_TOD2_KVAH_Units;
+                    //MTR1_KWH3_ex.Text = Data[0].L50_Exp_TOD3_KVAH_Units;
+                    //MTR1_KWH4_ex.Text = Data[0].L50_Exp_TOD4_KVAH_Units;
+
+                    //4 Sep 2021
+                    MTR1_KWH1_ex.Text = Data[0].L35_Exp_TOD1_KVAH_Units;
+                    MTR1_KWH2_ex.Text = Data[0].L35_Exp_TOD2_KVAH_Units;
+                    MTR1_KWH3_ex.Text = Data[0].L35_Exp_TOD3_KVAH_Units;
+                    MTR1_KWH4_ex.Text = Data[0].L35_Exp_TOD4_KVAH_Units;
+                    //
 
                     MTR1_NET1.Text = Data[0].L42_Exp_CURRENT_NET_EXPORT_TOD1_KVAH_UNITS;
                     MTR1_NET2.Text = Data[0].L42_Exp_CURRENT_NET_EXPORT_TOD2_KVAH_UNITS;

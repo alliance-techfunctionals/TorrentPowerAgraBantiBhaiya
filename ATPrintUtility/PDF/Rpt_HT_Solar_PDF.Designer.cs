@@ -1431,11 +1431,11 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L9_Total_Bill_payable_rounded]")});
             this.xrLabel10.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold);
             this.xrLabel10.InteractiveSorting.FieldName = "OwnerName";
-            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(636.6F, 329.414F);
+            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(632.6F, 329.414F);
             this.xrLabel10.Multiline = true;
             this.xrLabel10.Name = "xrLabel10";
             this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel10.SizeF = new System.Drawing.SizeF(99.39999F, 29.8927F);
+            this.xrLabel10.SizeF = new System.Drawing.SizeF(111.3999F, 29.8927F);
             this.xrLabel10.StylePriority.UseFont = false;
             this.xrLabel10.StylePriority.UseTextAlignment = false;
             this.xrLabel10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;

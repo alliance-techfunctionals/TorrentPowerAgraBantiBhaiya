@@ -136,9 +136,9 @@
   <data name="Torrent_Bill_new_logo_f__4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Torrent_Bill_new_logo-f_(4).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Solar_Duplex_Page_021" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <!--<data name="Solar_Duplex_Page_021" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Solar_Duplex_Page_02.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  </data>-->
   <data name="Duplex_Non_Tod_Back_Page" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Duplex_Non_Tod_Back_Page.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,9 +157,9 @@
   <data name="Google_Hindi_Input_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Google-Hindi-Input-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Solar_Duplex_Page_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <!--<data name="Solar_Duplex_Page_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Solar_Duplex_Page_02.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  </data>-->
   <data name="Watermark_Back_NonTOD" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Watermark_Back_NonTOD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

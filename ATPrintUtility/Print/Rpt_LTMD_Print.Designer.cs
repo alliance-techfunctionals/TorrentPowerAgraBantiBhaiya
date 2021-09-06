@@ -3212,7 +3212,7 @@
             this.xrBarCode1.Name = "xrBarCode1";
             this.xrBarCode1.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 96F);
             this.xrBarCode1.ShowText = false;
-            this.xrBarCode1.SizeF = new System.Drawing.SizeF(204F, 27F);
+            this.xrBarCode1.SizeF = new System.Drawing.SizeF(235F, 27F);
             eaN128Generator1.CharacterSet = DevExpress.XtraPrinting.BarCode.Code128Charset.CharsetAuto;
             this.xrBarCode1.Symbology = eaN128Generator1;
             // 
@@ -3324,7 +3324,7 @@
             // 
             this.xrDisconnectionDate.CanGrow = false;
             this.xrDisconnectionDate.Dpi = 96F;
-            this.xrDisconnectionDate.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrDisconnectionDate.Font = new System.Drawing.Font("DIN Pro Regular", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrDisconnectionDate.InteractiveSorting.FieldName = "OwnerName";
             this.xrDisconnectionDate.LocationFloat = new DevExpress.Utils.PointFloat(650F, 568.5087F);
             this.xrDisconnectionDate.Multiline = true;
@@ -3334,10 +3334,6 @@
             this.xrDisconnectionDate.StylePriority.UseFont = false;
             this.xrDisconnectionDate.StylePriority.UseTextAlignment = false;
             this.xrDisconnectionDate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = typeof(AT.Print.Utils.SingleLTBill);
             // 
             // Rpt_LTMD_Print
             // 

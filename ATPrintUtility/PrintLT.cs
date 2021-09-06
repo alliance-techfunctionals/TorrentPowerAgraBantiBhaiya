@@ -387,7 +387,8 @@ namespace AT.Print
                 try
                 {
                     lstformattedbills = new List<SingleLTBill>();
-                    if ((LotNoCopy != dtSingleLTBill.Rows[0][4].ToString().Trim() || Counter == 51) && LotNoCopy != "InitialLot")
+                    
+                    if ((LotNoCopy != dtSingleLTBill.Rows[0][4].ToString().Trim()) && LotNoCopy != "InitialLot")// || Counter == 51
                     {
                         pae = 0;
                         var buffer = ms.GetBuffer();
@@ -404,7 +405,7 @@ namespace AT.Print
                         Counter = 1;
                         collectorReport.Dispose();
                     }
-
+                    
                     if (LotNo != dtSingleLTBill.Rows[0][4].ToString().Trim())
                     {
                         LotNo = dtSingleLTBill.Rows[0][4].ToString().Trim();
@@ -468,7 +469,7 @@ namespace AT.Print
                     rpta.ModifyDocument(x => { x.AddPages(rptb.Pages); });
                     collectorReport.PrinterName = cbDefaultPrinter.Name;
                     collectorReport.Pages.AddRange(rpta.Pages);
-
+                    
                     if (DSBill.Tables.Count == BillNo && LotNoCopy != "InitialLot")
                     {
                         collectorReport.PrintProgress += new DevExpress.XtraPrinting.PrintProgressEventHandler(CR_PrintProgress);
@@ -479,6 +480,7 @@ namespace AT.Print
                         rpta.Dispose();
                         rptb.Dispose();
                     }
+                    
                     AppFunctions.CloseWaitForm();
                     ParsedBills++;
                     Counter++;
@@ -504,8 +506,11 @@ namespace AT.Print
                 }
 
                 AppFunctions.LogProcessedBill(Convert.ToString(dtSingleLTBill.Rows[0][1]), Convert.ToString(dtSingleLTBill.Rows[0][4]), Convert.ToString(dtSingleLTBill.Rows[0][2]), Convert.ToString(dtSingleLTBill.Rows[0][5]), ServiceNo, FileName, "Yes");
+                
                 BillNo++;
+                
             }
+            
             DSBill.Reset();
             DSBill.Dispose();
             XtraMessageBox.Show(ParsedBills + " Bills Parsed Successfully", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);

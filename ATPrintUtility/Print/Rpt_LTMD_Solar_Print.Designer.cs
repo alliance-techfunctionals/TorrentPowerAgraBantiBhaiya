@@ -393,7 +393,7 @@
             this.xrLine7.ForeColor = System.Drawing.Color.DimGray;
             this.xrLine7.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
             this.xrLine7.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.xrLine7.LocationFloat = new DevExpress.Utils.PointFloat(326.7998F, 254.254F);
+            this.xrLine7.LocationFloat = new DevExpress.Utils.PointFloat(326.7998F, 250.254F);
             this.xrLine7.Name = "xrLine7";
             this.xrLine7.SizeF = new System.Drawing.SizeF(12.20001F, 78.33603F);
             this.xrLine7.StylePriority.UseForeColor = false;
@@ -404,7 +404,7 @@
             this.xrLine6.ForeColor = System.Drawing.Color.DimGray;
             this.xrLine6.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
             this.xrLine6.LineStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.xrLine6.LocationFloat = new DevExpress.Utils.PointFloat(190.2001F, 254.254F);
+            this.xrLine6.LocationFloat = new DevExpress.Utils.PointFloat(190.2001F, 250.254F);
             this.xrLine6.Name = "xrLine6";
             this.xrLine6.SizeF = new System.Drawing.SizeF(12.20001F, 78.33603F);
             this.xrLine6.StylePriority.UseForeColor = false;
@@ -413,7 +413,7 @@
             // 
             this.xrLine5.Dpi = 96F;
             this.xrLine5.ForeColor = System.Drawing.Color.DimGray;
-            this.xrLine5.LocationFloat = new DevExpress.Utils.PointFloat(338.9998F, 281.5067F);
+            this.xrLine5.LocationFloat = new DevExpress.Utils.PointFloat(338.9998F, 277.5067F);
             this.xrLine5.Name = "xrLine5";
             this.xrLine5.SizeF = new System.Drawing.SizeF(118.0002F, 22.08F);
             this.xrLine5.StylePriority.UseForeColor = false;
@@ -422,7 +422,7 @@
             // 
             this.xrLine4.Dpi = 96F;
             this.xrLine4.ForeColor = System.Drawing.Color.DimGray;
-            this.xrLine4.LocationFloat = new DevExpress.Utils.PointFloat(206.1039F, 281.5067F);
+            this.xrLine4.LocationFloat = new DevExpress.Utils.PointFloat(206.1039F, 277.5067F);
             this.xrLine4.Name = "xrLine4";
             this.xrLine4.SizeF = new System.Drawing.SizeF(118.0002F, 22.08F);
             this.xrLine4.StylePriority.UseForeColor = false;
@@ -431,7 +431,7 @@
             // 
             this.xrLine3.Dpi = 96F;
             this.xrLine3.ForeColor = System.Drawing.Color.DimGray;
-            this.xrLine3.LocationFloat = new DevExpress.Utils.PointFloat(66.99985F, 281.5067F);
+            this.xrLine3.LocationFloat = new DevExpress.Utils.PointFloat(66.99985F, 277.5067F);
             this.xrLine3.Name = "xrLine3";
             this.xrLine3.SizeF = new System.Drawing.SizeF(118.0002F, 22.08F);
             this.xrLine3.StylePriority.UseForeColor = false;
@@ -676,7 +676,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L6_TARIFF_DESCR]")});
             this.xrLabel17.Font = new System.Drawing.Font("Helvetica", 8F);
             this.xrLabel17.InteractiveSorting.FieldName = "OwnerName";
-            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(363.9999F, 318.002F);
+            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(363.9999F, 314.002F);
             this.xrLabel17.Multiline = true;
             this.xrLabel17.Name = "xrLabel17";
             this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -692,7 +692,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L6_SUPPLY_VOLTAGE]")});
             this.xrLabel15.Font = new System.Drawing.Font("Helvetica", 8F);
             this.xrLabel15.InteractiveSorting.FieldName = "OwnerName";
-            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(216.3999F, 318.002F);
+            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(216.3999F, 314.002F);
             this.xrLabel15.Multiline = true;
             this.xrLabel15.Name = "xrLabel15";
             this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -708,7 +708,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L6_Bill_Demand]")});
             this.xrLabel14.Font = new System.Drawing.Font("Helvetica", 8F);
             this.xrLabel14.InteractiveSorting.FieldName = "OwnerName";
-            this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(80.328F, 318.002F);
+            this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(80.328F, 314.002F);
             this.xrLabel14.Multiline = true;
             this.xrLabel14.Name = "xrLabel14";
             this.xrLabel14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -724,7 +724,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L6_EXCESS_DEMAND]")});
             this.VlL6ExcessDemand.Font = new System.Drawing.Font("Helvetica", 8F);
             this.VlL6ExcessDemand.InteractiveSorting.FieldName = "OwnerName";
-            this.VlL6ExcessDemand.LocationFloat = new DevExpress.Utils.PointFloat(365F, 275.334F);
+            this.VlL6ExcessDemand.LocationFloat = new DevExpress.Utils.PointFloat(365F, 271.334F);
             this.VlL6ExcessDemand.Multiline = true;
             this.VlL6ExcessDemand.Name = "VlL6ExcessDemand";
             this.VlL6ExcessDemand.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -740,7 +740,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L6_ACTUAL_DEMAND]")});
             this.xrLabel11.Font = new System.Drawing.Font("Helvetica", 8F);
             this.xrLabel11.InteractiveSorting.FieldName = "OwnerName";
-            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(216.3999F, 275.334F);
+            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(216.3999F, 271.334F);
             this.xrLabel11.Multiline = true;
             this.xrLabel11.Name = "xrLabel11";
             this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -757,11 +757,11 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L9_Total_Bill_payable_rounded]")});
             this.xrLabel10.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold);
             this.xrLabel10.InteractiveSorting.FieldName = "OwnerName";
-            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(632.6F, 345.414F);
+            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(623.6F, 345.414F);
             this.xrLabel10.Multiline = true;
             this.xrLabel10.Name = "xrLabel10";
             this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel10.SizeF = new System.Drawing.SizeF(99.39999F, 29.8927F);
+            this.xrLabel10.SizeF = new System.Drawing.SizeF(117.4F, 29.8927F);
             this.xrLabel10.StylePriority.UseFont = false;
             this.xrLabel10.StylePriority.UseTextAlignment = false;
             this.xrLabel10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
@@ -1411,7 +1411,7 @@
             this.xrlL6BillDemand.Dpi = 96F;
             this.xrlL6BillDemand.Font = new System.Drawing.Font("Helvetica", 8F);
             this.xrlL6BillDemand.InteractiveSorting.FieldName = "OwnerName";
-            this.xrlL6BillDemand.LocationFloat = new DevExpress.Utils.PointFloat(370F, 296.922F);
+            this.xrlL6BillDemand.LocationFloat = new DevExpress.Utils.PointFloat(370F, 292.922F);
             this.xrlL6BillDemand.Multiline = true;
             this.xrlL6BillDemand.Name = "xrlL6BillDemand";
             this.xrlL6BillDemand.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1426,7 +1426,7 @@
             this.xrlL6_AcutalDemand.Dpi = 96F;
             this.xrlL6_AcutalDemand.Font = new System.Drawing.Font("Helvetica", 8F);
             this.xrlL6_AcutalDemand.InteractiveSorting.FieldName = "OwnerName";
-            this.xrlL6_AcutalDemand.LocationFloat = new DevExpress.Utils.PointFloat(202.4001F, 296.922F);
+            this.xrlL6_AcutalDemand.LocationFloat = new DevExpress.Utils.PointFloat(202.4001F, 292.922F);
             this.xrlL6_AcutalDemand.Multiline = true;
             this.xrlL6_AcutalDemand.Name = "xrlL6_AcutalDemand";
             this.xrlL6_AcutalDemand.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1441,7 +1441,7 @@
             this.xrlL6Servdet_Sanc_load.Dpi = 96F;
             this.xrlL6Servdet_Sanc_load.Font = new System.Drawing.Font("Helvetica", 8F);
             this.xrlL6Servdet_Sanc_load.InteractiveSorting.FieldName = "OwnerName";
-            this.xrlL6Servdet_Sanc_load.LocationFloat = new DevExpress.Utils.PointFloat(71F, 296.922F);
+            this.xrlL6Servdet_Sanc_load.LocationFloat = new DevExpress.Utils.PointFloat(71F, 292.922F);
             this.xrlL6Servdet_Sanc_load.Multiline = true;
             this.xrlL6Servdet_Sanc_load.Name = "xrlL6Servdet_Sanc_load";
             this.xrlL6Servdet_Sanc_load.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1457,7 +1457,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L6_SERVDET_SANC_LOAD]")});
             this.xrlContractDemand_Hindi.Font = new System.Drawing.Font("Helvetica", 8F);
             this.xrlContractDemand_Hindi.InteractiveSorting.FieldName = "OwnerName";
-            this.xrlContractDemand_Hindi.LocationFloat = new DevExpress.Utils.PointFloat(71F, 275.334F);
+            this.xrlContractDemand_Hindi.LocationFloat = new DevExpress.Utils.PointFloat(71F, 271.334F);
             this.xrlContractDemand_Hindi.Multiline = true;
             this.xrlContractDemand_Hindi.Name = "xrlContractDemand_Hindi";
             this.xrlContractDemand_Hindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1471,7 +1471,7 @@
             this.xrlL6ExcessDemand.Dpi = 96F;
             this.xrlL6ExcessDemand.Font = new System.Drawing.Font("Helvetica", 8F);
             this.xrlL6ExcessDemand.InteractiveSorting.FieldName = "OwnerName";
-            this.xrlL6ExcessDemand.LocationFloat = new DevExpress.Utils.PointFloat(335F, 254.254F);
+            this.xrlL6ExcessDemand.LocationFloat = new DevExpress.Utils.PointFloat(335F, 250.254F);
             this.xrlL6ExcessDemand.Multiline = true;
             this.xrlL6ExcessDemand.Name = "xrlL6ExcessDemand";
             this.xrlL6ExcessDemand.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1485,7 +1485,7 @@
             this.xrlRecordedDemand.Dpi = 96F;
             this.xrlRecordedDemand.Font = new System.Drawing.Font("Helvetica", 8F);
             this.xrlRecordedDemand.InteractiveSorting.FieldName = "OwnerName";
-            this.xrlRecordedDemand.LocationFloat = new DevExpress.Utils.PointFloat(199.4001F, 254.254F);
+            this.xrlRecordedDemand.LocationFloat = new DevExpress.Utils.PointFloat(199.4001F, 250.254F);
             this.xrlRecordedDemand.Multiline = true;
             this.xrlRecordedDemand.Name = "xrlRecordedDemand";
             this.xrlRecordedDemand.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1499,7 +1499,7 @@
             this.xrlContractDemand.Dpi = 96F;
             this.xrlContractDemand.Font = new System.Drawing.Font("Helvetica", 8F);
             this.xrlContractDemand.InteractiveSorting.FieldName = "OwnerName";
-            this.xrlContractDemand.LocationFloat = new DevExpress.Utils.PointFloat(55.12801F, 254.254F);
+            this.xrlContractDemand.LocationFloat = new DevExpress.Utils.PointFloat(55.12801F, 250.254F);
             this.xrlContractDemand.Multiline = true;
             this.xrlContractDemand.Name = "xrlContractDemand";
             this.xrlContractDemand.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -3274,7 +3274,7 @@
             // 
             // objectDataSource1
             // 
-            this.objectDataSource1.DataSource = typeof(AT.Print.Utils.SolarBill);
+            this.objectDataSource1.DataSourceType = null;
             this.objectDataSource1.Name = "objectDataSource1";
             // 
             // Rpt_LTMD_Solar_Print

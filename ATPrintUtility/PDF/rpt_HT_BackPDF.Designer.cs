@@ -122,7 +122,7 @@
             this.xrPictureBox2,
             this.xrPictureBox1,
             this.xrPictureBox3});
-            this.Detail.HeightF = 1155.996F;
+            this.Detail.HeightF = 1158.996F;
             this.Detail.Name = "Detail";
             // 
             // xrChart4
@@ -308,7 +308,7 @@
             this.xrLabel53,
             this.xrLabel57,
             this.xrLabel56});
-            this.xrPanel2.LocationFloat = new DevExpress.Utils.PointFloat(14.04053F, 1098.076F);
+            this.xrPanel2.LocationFloat = new DevExpress.Utils.PointFloat(14.04053F, 1101.076F);
             this.xrPanel2.LockedInUserDesigner = true;
             this.xrPanel2.Name = "xrPanel2";
             this.xrPanel2.SizeF = new System.Drawing.SizeF(795.9595F, 57.92F);
@@ -419,7 +419,7 @@
             this.xrBarCode1.Name = "xrBarCode1";
             this.xrBarCode1.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 100F);
             this.xrBarCode1.ShowText = false;
-            this.xrBarCode1.SizeF = new System.Drawing.SizeF(212.5F, 27F);
+            this.xrBarCode1.SizeF = new System.Drawing.SizeF(235F, 27F);
             eaN128Generator1.CharacterSet = DevExpress.XtraPrinting.BarCode.Code128Charset.CharsetAuto;
             this.xrBarCode1.Symbology = eaN128Generator1;
             // 
