@@ -45,6 +45,7 @@ namespace AT.Print
             }
             catch (Exception ex)
             {
+                AT.Print.Utils.AppFunctions.LogError(ex.Message);
             }
 
 

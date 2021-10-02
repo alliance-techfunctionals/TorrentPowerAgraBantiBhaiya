@@ -131,7 +131,7 @@ namespace AT.Print
 
         private void StartPrinting_LTMD_Solar_Bills(string[] Bills, string Name)
         {
-            string LotNo = "InitialLot";
+            //string LotNo = "InitialLot";
             int BillNo = 1,  ParsedBills = 0;
             DataTable dtSolarBill = new DataTable();
             string FileName = AppFunctions.ProcessedBillData();

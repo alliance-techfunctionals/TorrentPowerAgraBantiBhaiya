@@ -306,7 +306,7 @@
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
         private DevExpress.XtraBars.BarButtonItem bbiPrintLT;
         private DevExpress.XtraBars.Docking.DockManager dockManager;
-        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager;
+        //private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager;
         private DevExpress.XtraBars.BarButtonItem bbiPrintHT;
         private DevExpress.XtraBars.BarButtonItem HomePage;
         private DevExpress.XtraBars.BarButtonItem bbiHindi;

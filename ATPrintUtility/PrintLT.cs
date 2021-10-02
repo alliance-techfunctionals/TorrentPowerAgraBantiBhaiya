@@ -23,6 +23,7 @@ namespace AT.Print
 {
     public partial class PrintLT : UserControl
     {
+        int pae = 0;
         public PrintLT()
         {
             InitializeComponent();
@@ -1175,7 +1176,7 @@ namespace AT.Print
         //private void PrintDocument_QueryPageSettings(object sender, QueryPageSettingsEventArgs e)
         //{ }
         //
-        int pae = 0;
+        
         private void CR_PrintProgress(object sender, PrintProgressEventArgs e)
         {
 
@@ -2347,7 +2348,7 @@ namespace AT.Print
 
         async void GeneratePDFFormatsForLTBillsSir(string[] Bills, string Name, int Initial, int Final, string FolderName)
         {
-            int BillNo = 1;
+            
             int processedBills = 0;
 
             List<int> inlist = Enumerable.Range(0, Final).ToList();
