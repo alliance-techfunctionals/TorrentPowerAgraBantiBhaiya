@@ -322,6 +322,14 @@ namespace AT.Print
             sht.L1_PC = dtSolarBill.Rows[0][3].ToString();
             sht.L1_route = dtSolarBill.Rows[0][4].ToString();
             sht.L1_Bill_seq_no = dtSolarBill.Rows[0][5].ToString();
+            if (dtSolarBill.Rows[0][9].ToString() == "" || dtSolarBill.Rows[0][9].ToString().Contains("AVAILABLE"))
+            {
+                sht.L1_Customer_PAN = "PAN: " + dtSolarBill.Rows[0][9].ToString();
+            }
+            else
+            {
+                sht.L1_Customer_PAN = "PAN: " + dtSolarBill.Rows[0][9].ToString();
+            }
             //  Line 1 End
             #endregion
 

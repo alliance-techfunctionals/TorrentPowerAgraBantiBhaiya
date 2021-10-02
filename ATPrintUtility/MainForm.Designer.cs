@@ -287,7 +287,7 @@
             this.Name = "MainForm";
             this.Ribbon = this.rcRibbonControl;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Torrent Power (Version 1.1)";
+            this.Text = "Torrent Power (Version 2.1.5)";
             ((System.ComponentModel.ISupportInitialize)(this.rcRibbonControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ATDocumentManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();

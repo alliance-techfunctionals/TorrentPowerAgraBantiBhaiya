@@ -167,6 +167,8 @@ namespace AT.Print
 
                     if ((LotNoCopy != dtSingleLTBill.Rows[0][4].ToString().Trim() || Counter == 51 || TOD_NonTODFlag!= dtSingleLTBill.Rows[0][10].ToString().Trim()) && LotNoCopy != "InitialLot" && TOD_NonTODFlag!="")
                     {
+                        //ReportPrintTool printTool = new ReportPrintTool(collectorReport);
+                        //printTool.ShowPreview();
                         MemoryStream ms = new MemoryStream();
                         var buffer = ms.GetBuffer();
                         Array.Clear(buffer, 0, buffer.Length);
@@ -505,6 +507,14 @@ namespace AT.Print
             slt.L1_AKY_indicator = dtSingleLTBill.Rows[0][11].ToString();
             slt.L1_DisconnectionMSGPrintingIMMEDIATE = dtSingleLTBill.Rows[0][12].ToString();
             slt.L1_BillingCode = dtSingleLTBill.Rows[0][13].ToString();
+            if (dtSingleLTBill.Rows[0][14].ToString() == "" || dtSingleLTBill.Rows[0][14].ToString().Contains("AVAILABLE"))
+            {
+                slt.L1_Customer_PAN = "PAN: " + dtSingleLTBill.Rows[0][14].ToString();
+            }
+            else
+            {
+                slt.L1_Customer_PAN = "PAN: " + dtSingleLTBill.Rows[0][14].ToString();
+            }
             //Line 1 End
             #endregion
 

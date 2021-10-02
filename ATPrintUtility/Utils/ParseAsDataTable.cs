@@ -73,7 +73,7 @@ namespace AT.Print.Utils
                         {
                             case 1:
                                 {
-                                    if (fields.Length != 13)
+                                    if (fields.Length != 14)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 1 has " + fields.Length + " columns only.");
@@ -530,7 +530,7 @@ namespace AT.Print.Utils
                         {
                             case 1:
                                 {
-                                    if (fields.Length != 14)
+                                    if (fields.Length != 15)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 1 has " + fields.Length + " columns only.");
@@ -1008,7 +1008,7 @@ namespace AT.Print.Utils
                         {
                             case 1:
                                 {
-                                    if (BillType == "HT" && fields.Length != 11)
+                                    if (BillType == "HT" && fields.Length != 12)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 1 has " + fields.Length + " columns only.");
@@ -1529,7 +1529,7 @@ namespace AT.Print.Utils
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 1 has " + fields.Length + " columns only.");
                                         return dt;
                                     }
-                                    else if (BillType == "HT Solar" && fields.Length != 7)
+                                    else if (BillType == "HT Solar" && fields.Length != 10)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 1 has " + fields.Length + " columns only.");

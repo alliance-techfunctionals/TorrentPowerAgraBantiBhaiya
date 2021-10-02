@@ -20,6 +20,7 @@ namespace AT.Print.Utils
         public string L1_AKY_indicator { get; set; }
         public string L1_DisconnectionMSGPrintingIMMEDIATE { get; set; }
         public string L1_BillingCode { get; set; }
+        public string L1_Customer_PAN { get; set; }
         public string L2_Name { get; set; }
         public string L3_Addr1 { get; set; }
         public string L4_Addr2 { get; set; }

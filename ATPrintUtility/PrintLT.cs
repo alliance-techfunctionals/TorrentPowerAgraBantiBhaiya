@@ -373,6 +373,11 @@ namespace AT.Print
             {
                 DisplayName = "LT Print",
             };
+            
+
+
+
+
 
             DataTable dtSingleLTBill = new DataTable();
             List<SingleLTBill> lstformattedbills;
@@ -388,7 +393,8 @@ namespace AT.Print
                 {
                     lstformattedbills = new List<SingleLTBill>();
                     
-                    if ((LotNoCopy != dtSingleLTBill.Rows[0][4].ToString().Trim()) && LotNoCopy != "InitialLot")// || Counter == 51
+                    //if ((LotNoCopy != dtSingleLTBill.Rows[0][4].ToString().Trim()) && LotNoCopy != "InitialLot")                      // Complete Loat
+                    if ((LotNoCopy != dtSingleLTBill.Rows[0][4].ToString().Trim() || Counter == 51) && LotNoCopy != "InitialLot")       // 51 Pages Loat
                     {
                         pae = 0;
                         var buffer = ms.GetBuffer();
@@ -472,6 +478,34 @@ namespace AT.Print
                     
                     if (DSBill.Tables.Count == BillNo && LotNoCopy != "InitialLot")
                     {
+                        /*
+                        string printerName = cbDefaultPrinter.Text;
+                        string query = string.Format("SELECT * from Win32_Printer WHERE Name LIKE '%{0}'", printerName);
+
+                        using (ManagementObjectSearcher searcher = new ManagementObjectSearcher(query))
+                        using (ManagementObjectCollection coll = searcher.Get())
+                        {
+                            try
+                            {
+                                foreach (ManagementObject printer in coll)
+                                {
+                                    foreach (PropertyData property in printer.Properties)
+                                    {
+                                        Console.WriteLine(string.Format("{0}: {1}", property.Name, property.Value));
+                                    }
+                                }
+                            }
+                            catch (ManagementException ex)
+                            {
+                                Console.WriteLine(ex.Message);
+                            }
+                        }
+                        */
+
+
+                        //ReportPrintTool printTool = new ReportPrintTool(collectorReport);
+                        //printTool.ShowPreview();
+
                         collectorReport.PrintProgress += new DevExpress.XtraPrinting.PrintProgressEventHandler(CR_PrintProgress);
                         //collectorReport.BeforePrint += BeforePrint;
                         collectorReport.Print(cbDefaultPrinter.Text);
@@ -558,6 +592,15 @@ namespace AT.Print
             slt.L1_AKY_indicator = dtSingleLTBill.Rows[0][10].ToString();
             slt.L1_DisconnectionMSGPrintingIMMEDIATE = dtSingleLTBill.Rows[0][11].ToString();
             slt.L1_BillingCode = dtSingleLTBill.Rows[0][12].ToString();
+            if(dtSingleLTBill.Rows[0][13].ToString() == "" || dtSingleLTBill.Rows[0][13].ToString().Contains("AVAILABLE"))
+            {
+                slt.L1_Customer_PAN = "PAN: " + dtSingleLTBill.Rows[0][13].ToString();
+            }
+            else
+            {
+                slt.L1_Customer_PAN = "PAN: " + dtSingleLTBill.Rows[0][13].ToString();
+            }
+            
             //Line 1 End
             #endregion
 

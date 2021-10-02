@@ -62,15 +62,41 @@ namespace AT.Print.PDF
             #endregion
 
             //if (Convert.ToInt32(op[0].L8_AmountPayableBeforeDueDate.Contains('-')?("-" + op[0].L8_AmountPayableBeforeDueDate.Replace('-',' ')): op[0].L8_AmountPayableBeforeDueDate) >= 200000)
+
             if (Convert.ToInt32(op[0].L8_AmountPayableBeforeDueDate) >= 200000)
             {
                 xrLabel31.Visible = true;
-
+                xrLabel23.Visible = true;
             }
             else
             {
                 xrLabel31.Visible = false;
+                xrLabel23.Visible = false;
             }
+
+            // To keep Address and PAN together         
+            if(op[0].L2_Name.ToString() == "")
+            {
+                xrLabel139.Visible = false;
+                xrLabel140.TopF = xrLabel139.TopF;
+            }
+            if (op[0].L3_Addr1.ToString() == "")
+            {
+                xrLabel140.Visible = false;
+                xrLabel141.TopF = xrLabel140.TopF;
+            }
+            if (op[0].L4_Addr2.ToString() == "")
+            {
+                xrLabel141.Visible = false;
+                xrLabel142.TopF = xrLabel141.TopF;
+            }
+            if (op[0].L5_Addr3.ToString() == "")
+            {
+                xrLabel142.Visible = false;
+                xrLabel23.TopF = xrLabel142.TopF;
+            }
+            
+
 
             string unit = "KW";
             if (!string.IsNullOrEmpty(op[0].L6_Kvah_Indicator) && op[0].L6_Kvah_Indicator == "1")
@@ -877,7 +903,33 @@ namespace AT.Print.PDF
                 }
             }
             #endregion
-           
+
+            #region Security Deposit Message   
+                if ((string.IsNullOrEmpty(op[0].L10_SecDeptBdt) || Convert.ToDouble(op[0].L10_SecDeptBdt) == 0) && Convert.ToDouble(op[0].L6_SERVDET_SERVNO) < 674199999)
+                {
+                messageFromFile++;
+                XRLabel xrMessage11 = new XRLabel
+                {
+                    Font = new System.Drawing.Font("Kruti Dev 010", 9),
+                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+                    Text = "vfHkys[kksa ds vuqlkj vkids la;kstu ij tekur ?kujkf'k 'kqU; vfdr gSA ;fn vkids }kjk l;kstu jkf'k tek dh xbZ gS rks mDr tekur jkf'k dh ewy jlhn ds lkFk \r\ngekjs xzkgd lsok dsUnz ij lEidZ djsaA",
+                    WordWrap = false,
+                    AutoWidth = true,
+                    Multiline = true,
+                    KeepTogether = true,
+                    HeightF = 0.1f,
+                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+                    //BorderDashStyle = BorderDashStyle.Dot,
+                    //Borders = DevExpress.XtraPrinting.BorderSide.All,
+                    //BorderWidth = 1,
+                };
+                xrPanel1.Controls.Add(xrMessage11);
+                adjustMessages(xrMessage11);
+
+            }
+
+            #endregion
+
         }
 
         #region Helper Functions

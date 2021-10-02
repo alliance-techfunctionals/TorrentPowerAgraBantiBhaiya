@@ -14,6 +14,7 @@ namespace AT.Print.Utils
         public string L1_route { get; set; }
         public string L1_subroute { get; set; }
         public string L1_Bill_seq_no { get; set; }
+        public string L1_Customer_PAN { get; set; }
         public string L2_NAME { get; set; }
         public string L3_ADDR1 { get; set; }
         public string L4_ADDR2 { get; set; }

@@ -184,6 +184,8 @@ namespace AT.Print
 
                     if ((LotNoCopy != dtSingleHTBill.Rows[0][4].ToString().Trim() || Counter == 51 || TOD_NonTODFlag != dtSingleHTBill.Rows[0][7].ToString().Trim()) && LotNoCopy != "InitialLot" && TOD_NonTODFlag != "")
                     {
+                        ReportPrintTool printTool = new ReportPrintTool(collectorReport);
+                        printTool.ShowPreview();
                         MemoryStream ms = new MemoryStream();
                         var buffer = ms.GetBuffer();
                         Array.Clear(buffer, 0, buffer.Length);
@@ -470,7 +472,7 @@ namespace AT.Print
             DSBill.Reset();
             DSBill.Dispose();
             //AppFunctions.CloseWaitForm();
-            XtraMessageBox.Show(ParsedBills + " Bills Parsed Successfully", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //XtraMessageBox.Show(ParsedBills + " Bills Parsed Successfully", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             //TODReport.PrintingSystem.StartPrint += TOD_StartPrint;
             // NonTODReport.PrintingSystem.StartPrint += NonTOD_StartPrint;
             // TODReport.ExportToPdf("C://Bills//TOD.pdf");
@@ -501,6 +503,14 @@ namespace AT.Print
             sht.L1_AKY_indicator = dtSingleHTBill.Rows[0][8].ToString();
             sht.L1_DisconnectionMSGPrintingIMMEDIATE = dtSingleHTBill.Rows[0][9].ToString();
             sht.L1_BillingCode = dtSingleHTBill.Rows[0][10].ToString();
+            if (dtSingleHTBill.Rows[0][11].ToString() == "" || dtSingleHTBill.Rows[0][11].ToString().Contains("AVAILABLE"))
+            {
+                sht.L1_Customer_PAN = "PAN: " + dtSingleHTBill.Rows[0][11].ToString();
+            }
+            else
+            {
+                sht.L1_Customer_PAN = "PAN: " + dtSingleHTBill.Rows[0][11].ToString();
+            }
             //Line 1 End
             #endregion
 

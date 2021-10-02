@@ -57,6 +57,37 @@ namespace AT.Print
             }
             #endregion
 
+            if (Convert.ToInt32(op[0].L9_Total_Bill_payable_rounded) >= 200000)
+            {
+                xrLabel3.Visible = true;
+            }
+            else
+            {
+                xrLabel3.Visible = false;
+            }
+
+            // To keep Address and PAN together             
+            if (op[0].L2_NAME.ToString() == "")
+            {
+                xrLabel139.Visible = false;
+                xrLabel140.TopF = xrLabel139.TopF;
+            }
+            if (op[0].L3_ADDR1.ToString() == "")
+            {
+                xrLabel140.Visible = false;
+                xrLabel141.TopF = xrLabel140.TopF;
+            }
+            if (op[0].L4_ADDR2.ToString() == "")
+            {
+                xrLabel141.Visible = false;
+                xrLabel142.TopF = xrLabel141.TopF;
+            }
+            if (op[0].L5_ADDR3.ToString() == "")
+            {
+                xrLabel142.Visible = false;
+                xrLabel3.TopF = xrLabel142.TopF;
+            }
+
             string unit = "KW";
             if (!string.IsNullOrEmpty(op[0].L6_Kvah_indicator) && op[0].L6_Kvah_indicator == "1")
             {
@@ -961,6 +992,32 @@ namespace AT.Print
                     adjustMessages(xrMessageTheftAmount);
                 }
             }
+            #endregion
+
+            #region Security Deposit Message   
+            if ((string.IsNullOrEmpty(op[0].L10_SECDEPT_BDT) || Convert.ToDouble(op[0].L10_SECDEPT_BDT) == 0) && Convert.ToDouble(op[0].L6_SERVDET_SERVNO) < 674199999)
+            {
+                messageFromFile++;
+                XRLabel xrMessage11 = new XRLabel
+                {
+                    Font = new System.Drawing.Font("Kruti Dev 010", 9),
+                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+                    Text = "vfHkys[kksa ds vuqlkj vkids la;kstu ij tekur ?kujkf'k 'kqU; vfdr gSA \r\n;fn vkids }kjk l;kstu jkf'k tek dh xbZ gS rks mDr tekur jkf'k dh ewy jlhn ds lkFk \r\ngekjs xzkgd lsok dsUnz ij lEidZ djsaA",
+                    WordWrap = false,
+                    AutoWidth = true,
+                    Multiline = true,
+                    KeepTogether = true,
+                    HeightF = 0.1f,
+                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+                    //BorderDashStyle = BorderDashStyle.Dot,
+                    //Borders = DevExpress.XtraPrinting.BorderSide.All,
+                    //BorderWidth = 1,
+                };
+                xrPanel1.Controls.Add(xrMessage11);
+                adjustMessages(xrMessage11);
+
+            }
+
             #endregion
         }
 
