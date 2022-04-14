@@ -507,9 +507,9 @@ namespace AT.Print
             slt.L1_AKY_indicator = dtSingleLTBill.Rows[0][11].ToString();
             slt.L1_DisconnectionMSGPrintingIMMEDIATE = dtSingleLTBill.Rows[0][12].ToString();
             slt.L1_BillingCode = dtSingleLTBill.Rows[0][13].ToString();
-            if (dtSingleLTBill.Rows[0][14].ToString() == "" || dtSingleLTBill.Rows[0][14].ToString().Contains("AVAILABLE"))
+            if (dtSingleLTBill.Rows[0][14].ToString() == "")
             {
-                slt.L1_Customer_PAN = "PAN: " + dtSingleLTBill.Rows[0][14].ToString();
+                slt.L1_Customer_PAN = dtSingleLTBill.Rows[0][14].ToString();
             }
             else
             {

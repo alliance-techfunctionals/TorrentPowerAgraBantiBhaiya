@@ -19,6 +19,12 @@ using DevExpress.XtraPrinting.Drawing;
 using System.Management;
 using DevExpress.XtraPrinting;
 
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using Document = iTextSharp.text.Document;
+using System.Web;
+using System.Web.UI.HtmlControls;
+
 namespace AT.Print
 {
     public partial class PrintLT : UserControl
@@ -374,7 +380,7 @@ namespace AT.Print
             {
                 DisplayName = "LT Print",
             };
-            
+
 
 
 
@@ -393,7 +399,7 @@ namespace AT.Print
                 try
                 {
                     lstformattedbills = new List<SingleLTBill>();
-                    
+
                     //if ((LotNoCopy != dtSingleLTBill.Rows[0][4].ToString().Trim()) && LotNoCopy != "InitialLot")                      // Complete Loat
                     if ((LotNoCopy != dtSingleLTBill.Rows[0][4].ToString().Trim() || Counter == 51) && LotNoCopy != "InitialLot")       // 51 Pages Loat
                     {
@@ -412,7 +418,7 @@ namespace AT.Print
                         Counter = 1;
                         collectorReport.Dispose();
                     }
-                    
+
                     if (LotNo != dtSingleLTBill.Rows[0][4].ToString().Trim())
                     {
                         LotNo = dtSingleLTBill.Rows[0][4].ToString().Trim();
@@ -476,7 +482,7 @@ namespace AT.Print
                     rpta.ModifyDocument(x => { x.AddPages(rptb.Pages); });
                     collectorReport.PrinterName = cbDefaultPrinter.Name;
                     collectorReport.Pages.AddRange(rpta.Pages);
-                    
+
                     if (DSBill.Tables.Count == BillNo && LotNoCopy != "InitialLot")
                     {
                         /*
@@ -515,7 +521,7 @@ namespace AT.Print
                         rpta.Dispose();
                         rptb.Dispose();
                     }
-                    
+
                     AppFunctions.CloseWaitForm();
                     ParsedBills++;
                     Counter++;
@@ -541,11 +547,11 @@ namespace AT.Print
                 }
 
                 AppFunctions.LogProcessedBill(Convert.ToString(dtSingleLTBill.Rows[0][1]), Convert.ToString(dtSingleLTBill.Rows[0][4]), Convert.ToString(dtSingleLTBill.Rows[0][2]), Convert.ToString(dtSingleLTBill.Rows[0][5]), ServiceNo, FileName, "Yes");
-                
+
                 BillNo++;
-                
+
             }
-            
+
             DSBill.Reset();
             DSBill.Dispose();
             XtraMessageBox.Show(ParsedBills + " Bills Parsed Successfully", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -593,15 +599,15 @@ namespace AT.Print
             slt.L1_AKY_indicator = dtSingleLTBill.Rows[0][10].ToString();
             slt.L1_DisconnectionMSGPrintingIMMEDIATE = dtSingleLTBill.Rows[0][11].ToString();
             slt.L1_BillingCode = dtSingleLTBill.Rows[0][12].ToString();
-            if(dtSingleLTBill.Rows[0][13].ToString() == "" || dtSingleLTBill.Rows[0][13].ToString().Contains("AVAILABLE"))
+            if (dtSingleLTBill.Rows[0][13].ToString().Trim() == "")
             {
-                slt.L1_Customer_PAN = "PAN: " + dtSingleLTBill.Rows[0][13].ToString();
+                slt.L1_Customer_PAN = dtSingleLTBill.Rows[0][13].ToString();
             }
             else
             {
                 slt.L1_Customer_PAN = "PAN: " + dtSingleLTBill.Rows[0][13].ToString();
             }
-            
+
             //Line 1 End
             #endregion
 
@@ -1176,7 +1182,7 @@ namespace AT.Print
         //private void PrintDocument_QueryPageSettings(object sender, QueryPageSettingsEventArgs e)
         //{ }
         //
-        
+
         private void CR_PrintProgress(object sender, PrintProgressEventArgs e)
         {
 
@@ -1920,6 +1926,11 @@ namespace AT.Print
                             List<SingleLTBill> lstformattedbills = new List<SingleLTBill>();
 
                             SingleLTBill slt = parseSingleLTBill(dtSingleLTBill);
+
+                            //iTextSharpGeneratePDF(slt); //28 December 2021
+
+
+
                             slt.MVPicture = mVImagePath;
                             lstformattedbills.Add(slt);
 
@@ -2348,7 +2359,7 @@ namespace AT.Print
 
         async void GeneratePDFFormatsForLTBillsSir(string[] Bills, string Name, int Initial, int Final, string FolderName)
         {
-            
+
             int processedBills = 0;
 
             List<int> inlist = Enumerable.Range(0, Final).ToList();
@@ -2512,5 +2523,6 @@ namespace AT.Print
         }
 
     }
+    
 }
 

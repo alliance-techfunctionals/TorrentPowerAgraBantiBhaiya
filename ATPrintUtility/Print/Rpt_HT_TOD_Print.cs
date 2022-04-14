@@ -39,16 +39,23 @@ namespace AT.Print
             if (Convert.ToDouble(op[0].L8_AmountPayableBeforeDueDate.Replace("CR", "").Contains('-') ? ("-" + op[0].L8_AmountPayableBeforeDueDate.Replace("CR", "").Replace('-', ' ').Trim()) : op[0].L8_AmountPayableBeforeDueDate.Replace("CR", "")) >= 200000)
             {
                 xrLabel31.Visible = true;
-                xrLabel24.Visible = true;
             }
             else
             {
                 xrLabel31.Visible = false;
+            }
+
+            if (!string.IsNullOrEmpty(op[0].L1_Customer_PAN))
+            {
+                xrLabel24.Visible = true;
+            }
+            else
+            {
                 xrLabel24.Visible = false;
             }
 
-            // To keep Address and PAN together           
-            if (op[0].L2_Name.ToString() == "")
+                // To keep Address and PAN together           
+                if (op[0].L2_Name.ToString() == "")
             {
                 xrLabel139.Visible = false;
                 xrLabel140.TopF = xrLabel139.TopF;
@@ -899,7 +906,7 @@ namespace AT.Print
                 {
                     Font = new System.Drawing.Font("Kruti Dev 010", 9),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                    Text = "vfHkys[kksa ds vuqlkj vkids la;kstu ij tekur ?kujkf'k 'kqU; vfdr gSA ;fn vkids }kjk l;kstu jkf'k tek dh xbZ gS rks mDr tekur jkf'k dh ewy jlhn ds lkFk \r\ngekjs xzkgd lsok dsUnz ij lEidZ djsaA",
+                    Text = "vfHkys[kksa ds vuqlkj vkids la;kstu ij tekur /kujkf'k 'kwU; vafdr gSaA ;fn vkids }kjk la;kstu jkf'k tek dh xbZ gS rks mDr tekur jkf'k dh ewy jlhn ds lkFk \r\ngekjs xzkgd lsok dsUnz  ij lEidZ djsaA ",
                     WordWrap = false,
                     AutoWidth = true,
                     Multiline = true,

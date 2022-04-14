@@ -51,7 +51,7 @@ namespace AT.Print
             #endregion
             //if (Convert.ToInt32(op[0].L8_AmountPayableBeforeDueDate.Contains('-') ? ("-" + op[0].L8_AmountPayableBeforeDueDate.Replace('-', ' ')) : op[0].L8_AmountPayableBeforeDueDate) >= 200000)
 
-            if (Convert.ToInt32(op[0].L8_AmountPayableBeforeDueDate) >= 200000)
+            if (!string.IsNullOrEmpty(op[0].L1_Customer_PAN))
             {
                 xrLabel31.Visible = true;
                 xrLabel23.Visible = true;
@@ -829,7 +829,7 @@ namespace AT.Print
                 {
                     Font = new System.Drawing.Font("Kruti Dev 010", 9),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                    Text = "vfHkys[kksa ds vuqlkj vkids la;kstu ij tekur ?kujkf'k 'kqU; vfdr gSA ;fn vkids }kjk l;kstu jkf'k tek dh xbZ gS rks mDr tekur jkf'k dh ewy jlhn ds lkFk \r\ngekjs xzkgd lsok dsUnz ij lEidZ djsaA",
+                    Text = "vfHkys[kksa ds vuqlkj vkids la;kstu ij tekur /kujkf'k 'kwU; vafdr gSaA ;fn vkids }kjk la;kstu jkf'k tek dh xbZ gS rks mDr tekur jkf'k dh ewy jlhn ds lkFk \r\ngekjs xzkgd lsok dsUnz  ij lEidZ djsaA ",
                     WordWrap = false,
                     AutoWidth = true,
                     Multiline = true,
