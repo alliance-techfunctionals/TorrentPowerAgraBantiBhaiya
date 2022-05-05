@@ -483,7 +483,36 @@ namespace AT.Print
                 bd_OtherChargesHindi.TopF = bdPowerFactor.BottomF;
                 bd_OtherChargesValue.TopF = bdPowerFactor.BottomF;
 
+                
 
+
+
+            }
+          
+
+            if (!op[0].L6_TARIFF_DESCR.Contains("LMV") || (op[0].L8_Subsidy_Charges == "" || op[0].L8_Subsidy_Charges == "0.00"))
+            {
+
+
+                Subsidy.Visible = false;
+                Subsidy_Hindi.Visible = false;
+                SubsidyValue.Visible = false;
+
+                bdpowerfactorhindi.TopF = bd_OtherCharges.BottomF;
+                bdPowerFactor.TopF = bd_OtherCharges.BottomF;
+                bdPowerFactorValues.TopF = bd_OtherCharges.BottomF;
+
+            }
+            else
+            {
+
+                Subsidy.Visible = true;
+                Subsidy_Hindi.Visible = true;
+                SubsidyValue.Visible = true;
+                Subsidy.TopF = bd_OtherCharges.BottomF;
+                Subsidy_Hindi.TopF = bd_OtherChargesHindi.BottomF;
+                SubsidyValue.TopF = bd_OtherChargesValue.BottomF;
+              
 
             }
 

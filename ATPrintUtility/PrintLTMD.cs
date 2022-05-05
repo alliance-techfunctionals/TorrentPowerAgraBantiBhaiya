@@ -603,6 +603,7 @@ namespace AT.Print
             slt.L8_AmountPayableBeforeDueDate = slt.L8_AmountPayableBeforeDueDate.Contains("CR") ? ("-" + slt.L8_AmountPayableBeforeDueDate.Replace("CR", "")) : (slt.L8_AmountPayableBeforeDueDate.Contains("-")? ("-" + slt.L8_AmountPayableBeforeDueDate.Replace("-", "")) : slt.L8_AmountPayableBeforeDueDate);
             slt.L8_TNo = dtSingleLTBill.Rows[7][12].ToString().Trim('�');
             slt.L8_ParkingAmount = dtSingleLTBill.Rows[7][13].ToString();
+            slt.L8_Subsidy_Charges = dtSingleLTBill.Rows[7][14].ToString();
             if (!string.IsNullOrEmpty(slt.L8_ParkingAmount))
             {
                 slt.L8_ParkingAmountCeilied = Convert.ToDecimal(slt.L8_ParkingAmount);

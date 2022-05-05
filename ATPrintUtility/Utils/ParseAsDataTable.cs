@@ -161,12 +161,12 @@ namespace AT.Print.Utils
                                 break;
                             case 8:
                                 {
-                                    if (fields.Length != 13)
-                                    {
-                                        AppFunctions.CloseWaitForm();
-                                        XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 8 has " + fields.Length + " columns only.");
-                                        return dt;
-                                    }
+                                    //if (fields.Length != 13)
+                                    //{
+                                    //    AppFunctions.CloseWaitForm();
+                                    //    XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 8 has " + fields.Length + " columns only.");
+                                    //    return dt;
+                                    //}
                                 }
                                 break;
                             case 9:
@@ -618,12 +618,12 @@ namespace AT.Print.Utils
                                 break;
                             case 8:
                                 {
-                                    if (fields.Length != 14)
-                                    {
-                                        AppFunctions.CloseWaitForm();
-                                        XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 8 has " + fields.Length + " columns only.");
-                                        return dt;
-                                    }
+                                    //if (fields.Length != 14)
+                                    //{
+                                    //    AppFunctions.CloseWaitForm();
+                                    //    XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 8 has " + fields.Length + " columns only.");
+                                    //    return dt;
+                                    //}
                                 }
                                 break;
                             case 9:

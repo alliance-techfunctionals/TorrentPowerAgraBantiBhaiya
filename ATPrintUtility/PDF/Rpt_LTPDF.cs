@@ -18,7 +18,7 @@ namespace AT.Print.PDF
         }
         private void Rpt_LT_Back_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
         {
-            
+
         }
         private void Rpt_LTPDF_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
         {
@@ -75,7 +75,7 @@ namespace AT.Print.PDF
             }
 
             // To keep Address and PAN together         
-            if(op[0].L2_Name.ToString() == "")
+            if (op[0].L2_Name.ToString() == "")
             {
                 xrLabel139.Visible = false;
                 xrLabel140.TopF = xrLabel139.TopF;
@@ -95,7 +95,7 @@ namespace AT.Print.PDF
                 xrLabel142.Visible = false;
                 xrLabel23.TopF = xrLabel142.TopF;
             }
-            
+
 
 
             string unit = "KW";
@@ -245,7 +245,7 @@ namespace AT.Print.PDF
             bd_AcChargeHindi.TopF = bd_EnergyChargeHindi.BottomF;
             bd_AcChargeValue.TopF = bd_EnergyChargeValues.BottomF;
             //AC Charge Print
-           
+
             if (op[0].L8_ACCharge == "0.00" || string.IsNullOrEmpty(op[0].L8_ACCharge))
             {
                 bd_AcCharge.Visible = false;
@@ -256,7 +256,7 @@ namespace AT.Print.PDF
                 bd_AcChargeHindi.TopF = bd_EnergyCharge.TopF;
                 bd_AcChargeValue.TopF = bd_EnergyCharge.TopF;
 
-                
+
             }
             bdPowerFactorCharges.TopF = bd_AcCharge.BottomF;
             bdPowerFactorHindi.TopF = bd_AcCharge.BottomF;
@@ -320,10 +320,47 @@ namespace AT.Print.PDF
                 bd_OtherChargesHindi.Visible = false;
                 bd_OtherChargesValue.Visible = false;
 
+                Subsidy.TopF = bd_OtherCharges.TopF;
+                SubsidyHindi.TopF = bd_OtherChargesHindi.TopF;
+                SubsidyValue.TopF = bd_OtherChargesValue.TopF;
+
+
+            }
+            else
+            {
+                Subsidy.TopF = bd_OtherCharges.BottomF;
+                SubsidyHindi.TopF = bd_OtherChargesHindi.BottomF;
+                SubsidyValue.TopF = bd_OtherChargesValue.BottomF;
+
             }
             bd_OtherCharges.TopF = bd_RlSC2.BottomF;
             bd_OtherChargesHindi.TopF = bd_RlSC2.BottomF;
             bd_OtherChargesValue.TopF = bd_RlSC2.BottomF;
+
+            if (!op[0].L6_TARIFF_DESCR.Contains("LMV") || (op[0].L8_Subsidy_Charges == "" || op[0].L8_Subsidy_Charges == "0.00"))
+            {
+
+
+                Subsidy.Visible = false;
+                SubsidyHindi.Visible = false;
+                SubsidyValue.Visible = false;
+
+            }
+            else
+            {
+
+                Subsidy.Visible = true;
+                SubsidyHindi.Visible = true;
+                SubsidyValue.Visible = true;
+            }
+
+
+
+
+
+
+
+
 
 
             //Late Payment Surcharge
@@ -333,6 +370,7 @@ namespace AT.Print.PDF
                 LPSCHindi.Visible = false;
                 LPSCValue.Visible = false;
             }
+
             #endregion
 
             var messageFromFile = 0;
@@ -596,7 +634,7 @@ namespace AT.Print.PDF
                         Font = new System.Drawing.Font("Kruti Dev 010", 9),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         //Text = string.Format(getMessage(LoadStaticData._HindiMessage, "PFM"), op[0].L8_PowerFactorAdj),
-                        Text = string.Format(getMessage(LoadStaticData._HindiMessage, "PFM"), "0.90".ToString().Replace('.','-')),
+                        Text = string.Format(getMessage(LoadStaticData._HindiMessage, "PFM"), "0.90".ToString().Replace('.', '-')),
                         WordWrap = false,
                         AutoWidth = true,
                         KeepTogether = true,
@@ -797,7 +835,7 @@ namespace AT.Print.PDF
                     Multiline = true,
                     KeepTogether = true,
                     HeightF = 0.1f,
-                    Padding= new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
                     //BorderDashStyle = BorderDashStyle.Dot,
                     //Borders = DevExpress.XtraPrinting.BorderSide.All,
                     //BorderWidth = 1,
@@ -883,7 +921,7 @@ namespace AT.Print.PDF
                     totalMessages++;
                     XRLabel xrMessageTheftAmount = new XRLabel
                     {
-                         
+
 
                         Font = brdcstMsg.MessageType.ToUpper() == "ENG" ? Font = new System.Drawing.Font("DIN Pro Regular", 8) : new System.Drawing.Font("Kruti Dev 010", 9),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
@@ -905,8 +943,8 @@ namespace AT.Print.PDF
             #endregion
 
             #region Security Deposit Message   
-                if ((string.IsNullOrEmpty(op[0].L10_SecDeptBdt) || Convert.ToDouble(op[0].L10_SecDeptBdt) == 0) && Convert.ToDouble(op[0].L6_SERVDET_SERVNO) < 674199999)
-                {
+            if ((string.IsNullOrEmpty(op[0].L10_SecDeptBdt) || Convert.ToDouble(op[0].L10_SecDeptBdt) == 0) && Convert.ToDouble(op[0].L6_SERVDET_SERVNO) < 674199999)
+            {
                 messageFromFile++;
                 XRLabel xrMessage11 = new XRLabel
                 {
