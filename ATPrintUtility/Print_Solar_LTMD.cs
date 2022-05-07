@@ -419,6 +419,7 @@ namespace AT.Print
             sht.L8_amount_payable_before_due_date = sht.L8_amount_payable_before_due_date.Contains("CR") ? ("-" + sht.L8_amount_payable_before_due_date.Replace("CR", "")) : (sht.L8_amount_payable_before_due_date.Contains("-") ? ("-" + sht.L8_amount_payable_before_due_date.Replace("-", "")) : sht.L8_amount_payable_before_due_date);
             sht.L8_T_No = dtSolarBill.Rows[7][12].ToString();
             sht.L8_Parking_Amount = dtSolarBill.Rows[7][13].ToString();
+            sht.L8_Subsidy_Charges = dtSolarBill.Rows[7][14].ToString();
             // Line 8 End
             #endregion
 

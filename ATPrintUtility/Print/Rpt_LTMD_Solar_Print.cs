@@ -572,7 +572,20 @@ namespace AT.Print
             bd_TotalDues.TopF = bd_TotalDuesVALUE.TopF;
 
 
+            if (!op[0].L6_TARIFF_DESCR.Contains("LMV") || (op[0].L8_Subsidy_Charges == "" || op[0].L8_Subsidy_Charges == "0.00"))
+            {
+                Subsidy.Visible = false;
+                SubsidyValue.Visible = false;
 
+            }
+            else
+            {
+
+                Subsidy.Visible = true;
+                SubsidyValue.Visible = true;
+                Subsidy.TopF = bd_TotalDues.BottomF;
+                SubsidyValue.TopF = bd_TotalDues.BottomF;
+            }
 
 
 
