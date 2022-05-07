@@ -432,6 +432,8 @@ namespace AT.Print
 
             
             sht.L8_T_No = dtSolarBill.Rows[7][11].ToString().Trim('�');
+            sht.L8_Subsidy_Charges = dtSolarBill.Rows[7][12].ToString();
+
 
             // Line 8 End
             #endregion

@@ -1623,18 +1623,18 @@ namespace AT.Print.Utils
                                 break;
                             case 8:
                                 {
-                                    if (BillType == "LTMD Solar" && fields.Length != 14)
-                                    {
-                                        AppFunctions.CloseWaitForm();
-                                        XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 8 has " + fields.Length + " columns only.");
-                                        return dt;
-                                    }
-                                    else if (BillType == "HT Solar" && fields.Length != 12)
-                                    {
-                                        AppFunctions.CloseWaitForm();
-                                        XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 8 has " + fields.Length + " columns only.");
-                                        return dt;
-                                    }
+                                    //if (BillType == "LTMD Solar" && fields.Length != 14)
+                                    //{
+                                    //    AppFunctions.CloseWaitForm();
+                                    //    XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 8 has " + fields.Length + " columns only.");
+                                    //    return dt;
+                                    //}
+                                    //else if (BillType == "HT Solar" && fields.Length != 12)
+                                    //{
+                                    //    AppFunctions.CloseWaitForm();
+                                    //    XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 8 has " + fields.Length + " columns only.");
+                                    //    return dt;
+                                    //}
                                 }
                                 break;
                             case 9:

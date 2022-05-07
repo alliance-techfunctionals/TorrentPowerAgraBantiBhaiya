@@ -54,6 +54,7 @@ namespace AT.Print.Utils
         public string L8_Rebate_incurred_of_current_month { get; set; }
         public string L8_amount_payable_before_due_date { get; set; }
         public string L8_T_No { get; set; }
+        public string L8_Subsidy_Charges { get; set; }
 
         public string L9_TOT_DB_ARR { get; set; }
         public string L9_CurrBillamt{ get; set; }
