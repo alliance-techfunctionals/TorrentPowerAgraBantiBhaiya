@@ -1096,12 +1096,12 @@ namespace AT.Print.Utils
                                 break;
                             case 8:
                                 {
-                                    if (BillType == "HT" && fields.Length != 12)
-                                    {
-                                        AppFunctions.CloseWaitForm();
-                                        XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 8 has " + fields.Length + " columns only.");
-                                        return dt;
-                                    }
+                                    //if (BillType == "HT" && fields.Length != 12)
+                                    //{
+                                    //    AppFunctions.CloseWaitForm();
+                                    //    XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 8 has " + fields.Length + " columns only.");
+                                    //    return dt;
+                                    //}
                                 }
                                 break;
                             case 9:

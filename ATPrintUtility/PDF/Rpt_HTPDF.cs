@@ -20,9 +20,9 @@ namespace AT.Print.PDF
             var data = sender as Rpt_HTPDF;
             var op = data.DataSource as List<SingleHTBill>;
 
-           // xrLabel6.Visible = true;
+            // xrLabel6.Visible = true;
 
-           #region RISC1 Change
+            #region RISC1 Change
             if (op[0].L6_TARIFF_DESCR.ToUpper().Equals("LMV 5A") || op[0].L6_TARIFF_DESCR.ToUpper().Equals("LMV 5B") || op[0].L6_TARIFF_DESCR.ToUpper().Equals("LMV 1B") || op[0].L6_TARIFF_DESCR.ToUpper().Equals("LMV 1C"))
             {
                 bd_RlSC1Rate.Text = "@ 1.14%";
@@ -30,7 +30,7 @@ namespace AT.Print.PDF
             }
             #endregion
             //if (Convert.ToInt32(op[0].L8_AmountPayableBeforeDueDate) >= 200000)
-            if (Convert.ToDouble(op[0].L8_AmountPayableBeforeDueDate.Replace("CR","").Contains('-') ? ("-" + op[0].L8_AmountPayableBeforeDueDate.Replace("CR","").Replace('-', ' ').Trim()) : op[0].L8_AmountPayableBeforeDueDate.Replace("CR","")) >= 200000)
+            if (Convert.ToDouble(op[0].L8_AmountPayableBeforeDueDate.Replace("CR", "").Contains('-') ? ("-" + op[0].L8_AmountPayableBeforeDueDate.Replace("CR", "").Replace('-', ' ').Trim()) : op[0].L8_AmountPayableBeforeDueDate.Replace("CR", "")) >= 200000)
             {
                 xrLabel31.Visible = true;
             }
@@ -48,8 +48,8 @@ namespace AT.Print.PDF
                 xrLabel30.Visible = false;
             }
 
-                // To keep Address and PAN together             
-                if (op[0].L2_Name.ToString() == "")
+            // To keep Address and PAN together             
+            if (op[0].L2_Name.ToString() == "")
             {
                 xrLabel139.Visible = false;
                 xrLabel140.TopF = xrLabel139.TopF;
@@ -75,22 +75,22 @@ namespace AT.Print.PDF
             //Disconnection Messages Print
             if (op[0].L1_DisconnectionMSGPrintingIMMEDIATE == "1")
             {
-                 xrDueDate.Text = "IMMEDIATE/";           
-                 xrDueDate2.Text = "IMMEDIATE";            
-                 xrDisconnectionDate.Text = "IMMEDIATE/"; 
-                 xrImmediatelbl.Visible = true;            
-                 xrLabel20.Visible = true;                 
+                xrDueDate.Text = "IMMEDIATE/";
+                xrDueDate2.Text = "IMMEDIATE";
+                xrDisconnectionDate.Text = "IMMEDIATE/";
+                xrImmediatelbl.Visible = true;
+                xrLabel20.Visible = true;
                 // xrLabel6_2.Visible = true;                
 
             }
             else
             {
-                 xrDueDate.Text = op[0].L7_Due_Date;
-                 xrDueDate2.Text = op[0].L7_Due_Date;
-                 xrDisconnectionDate.Text = op[0].L10_DisconnDate;
-                 //xrDueDate.TextAlignment = TextAlignment.MiddleRight;
-                 //xrDueDate2.TextAlignment = TextAlignment.MiddleRight;
-                 xrDisconnectionDate.TextAlignment = TextAlignment.MiddleRight;
+                xrDueDate.Text = op[0].L7_Due_Date;
+                xrDueDate2.Text = op[0].L7_Due_Date;
+                xrDisconnectionDate.Text = op[0].L10_DisconnDate;
+                //xrDueDate.TextAlignment = TextAlignment.MiddleRight;
+                //xrDueDate2.TextAlignment = TextAlignment.MiddleRight;
+                xrDisconnectionDate.TextAlignment = TextAlignment.MiddleRight;
             }
             #endregion
 
@@ -132,9 +132,9 @@ namespace AT.Print.PDF
             }
 
             //op[0].L6_SERVDET_SANC_LOAD = op[0].L6_SERVDET_SANC_LOAD + "(" + op[0].L6_MeasureContractDemand + ")";
-            
 
-         
+
+
 
             if (op[0].L6_MeasureContractDemand == "HP")
             {
@@ -146,9 +146,9 @@ namespace AT.Print.PDF
                     op[0].L6_ACTUAL_DEMAND = op[0].L6_ACTUAL_DEMAND + "(" + unit1 + ")";
                     op[0].L6_EXCESS_DEMAND = op[0].L6_EXCESS_DEMAND + "(" + unit1 + ")";
                     op[0].L6_bill_demand = op[0].L6_bill_demand + "(" + unit1 + ")";
-                    
+
                     met1_headingMDKW.Text = "MD" + unit1;
-                    met1_headingMDKW_1.Text  = unit1 + "H";
+                    met1_headingMDKW_1.Text = unit1 + "H";
                     met2_headingMDKW.Text = "MD" + unit1;
                     met2_headingMDKW_2.Text = unit1 + "H";
                 }
@@ -233,19 +233,19 @@ namespace AT.Print.PDF
 
 
 
-           // #region Excess Demand Print
-           // //Excess Demand Print
-           // if (op[0].L6_EXCESS_DEMAND != "0.00(" + unit + ")")
-           // {
-           //     xrlL6ExcessDemand.Text = op[0].L6_EXCESS_DEMAND;
-           //     xrlL6ExcessDemand.Visible = true;
-           // }
-           // #endregion
+            // #region Excess Demand Print
+            // //Excess Demand Print
+            // if (op[0].L6_EXCESS_DEMAND != "0.00(" + unit + ")")
+            // {
+            //     xrlL6ExcessDemand.Text = op[0].L6_EXCESS_DEMAND;
+            //     xrlL6ExcessDemand.Visible = true;
+            // }
+            // #endregion
             #region Excess Demand Print
-             //Excess Demand Print
-             if (op[0].L6_EXCESS_DEMAND.Substring(0, 4) != "0.00")
-             {
-                 xrlL6ExcessDemand.Text = op[0].L6_EXCESS_DEMAND;
+            //Excess Demand Print
+            if (op[0].L6_EXCESS_DEMAND.Substring(0, 4) != "0.00")
+            {
+                xrlL6ExcessDemand.Text = op[0].L6_EXCESS_DEMAND;
                 xrlL6ExcessDemand.Visible = true;
             }
             #endregion
@@ -285,7 +285,7 @@ namespace AT.Print.PDF
                     met2_31.Text = op[0].L20_Multiplying_Factor_KVA;
                     met2_32.Text = op[0].L20_Multiplying_Factor_KVAH;
                     met2_41.Text = op[0].L21_KVA_UNITS;
-                    met2_42.Text = op[0].L21_KWH_UNITS; 
+                    met2_42.Text = op[0].L21_KWH_UNITS;
                 }
                 else
                 {
@@ -297,7 +297,7 @@ namespace AT.Print.PDF
                     met1_31.Text = op[0].L14_Multiplying_factor_KVA;
                     met1_32.Text = op[0].L14_Multiplying_factor_KVAH;
                     met1_41.Text = op[0].L15_KVA_UNITS;
-                    met1_42.Text = op[0].L15_KVAH_UNITS; 
+                    met1_42.Text = op[0].L15_KVAH_UNITS;
                     //Meter New 
                     met2_11.Text = "____";
                     met2_12.Text = op[0].L19_KVAH_PASTREAD;
@@ -306,7 +306,7 @@ namespace AT.Print.PDF
                     met2_31.Text = op[0].L20_Multiplying_Factor_KVA;
                     met2_32.Text = op[0].L20_Multiplying_Factor_KVAH;
                     met2_41.Text = op[0].L21_KVA_UNITS;
-                    met2_42.Text = op[0].L21_KVAH_UNITS; 
+                    met2_42.Text = op[0].L21_KVAH_UNITS;
                 }
             }
             else
@@ -326,7 +326,7 @@ namespace AT.Print.PDF
                     met2_42.Text = op[0].L15_KWH_UNITS;
                 }
                 else
-                { 
+                {
                     met1_headingMDKW.Visible = false;
                     met1_headingMDKW_1.Visible = false;
                     xrLabel5.Text = op[0].L11_MTRSNO_1;
@@ -443,10 +443,39 @@ namespace AT.Print.PDF
                 bd_OtherChargesHindi.TopF = bd_RlSC2.BottomF;
                 bd_OtherChargesValue.TopF = bd_RlSC2.BottomF;
 
+                Subsidy.TopF = bd_OtherCharges.TopF;
+                SubsidyHindi.TopF = bd_OtherChargesHindi.TopF;
+                SubsidyValue.TopF = bd_OtherChargesValue.TopF;
+
+
+            }
+            else
+            {
+                Subsidy.TopF = bd_OtherCharges.TopF;
+                SubsidyHindi.TopF = bd_OtherChargesHindi.TopF;
+                SubsidyValue.TopF = bd_OtherChargesValue.TopF;
+
             }
             bd_OtherCharges.TopF = bd_RlSC2.BottomF;
             bd_OtherChargesHindi.TopF = bd_RlSC2.BottomF;
             bd_OtherChargesValue.TopF = bd_RlSC2.BottomF;
+
+
+
+            if (!op[0].L6_TARIFF_DESCR.Contains("LMV") || (op[0].L8_Subsidy_Charges == "" || op[0].L8_Subsidy_Charges == "0.00"))
+            {
+                Subsidy.Visible = false;
+                SubsidyHindi.Visible = false;
+                SubsidyValue.Visible = false;
+
+            }
+            else
+            {
+
+                Subsidy.Visible = true;
+                SubsidyHindi.Visible = true;
+                SubsidyValue.Visible = true;
+            }
 
             //Late Payment Surcharge
             if (op[0].L9_Int_Tpl == "0.00" || string.IsNullOrEmpty(op[0].L9_Int_Tpl))
@@ -869,7 +898,7 @@ namespace AT.Print.PDF
                         HeightF = 1,
                         Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
                     };
-           
+
                     xrPanel1.Controls.Add(xrMessageTheftAmount);
                     adjustMessages(xrMessageTheftAmount);
                 }

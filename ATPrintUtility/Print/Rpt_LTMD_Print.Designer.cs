@@ -3376,7 +3376,7 @@
             // 
             this.SubsidyValue.Dpi = 96F;
             this.SubsidyValue.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_Subsidy_Charges]\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_Subsidy_Charges]")});
             this.SubsidyValue.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
             this.SubsidyValue.LocationFloat = new DevExpress.Utils.PointFloat(291F, 160.5749F);
             this.SubsidyValue.Multiline = true;

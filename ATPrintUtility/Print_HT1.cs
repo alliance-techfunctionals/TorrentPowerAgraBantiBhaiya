@@ -599,6 +599,7 @@ namespace AT.Print
             sht.L8_TNo = dtSingleHTBill.Rows[7][11].ToString().Trim('�');
             //sht.L8_ParkingAmount = dtSingleHTBill.Rows[7][12].ToString();
             sht.L8_ParkingAmount = Math.Ceiling(Convert.ToDecimal(string.IsNullOrEmpty(dtSingleHTBill.Rows[7][12].ToString()) ? "0" : dtSingleHTBill.Rows[7][12].ToString())).ToString();
+            sht.L8_Subsidy_Charges = dtSingleHTBill.Rows[7][13].ToString();
             //Line 8 End
             #endregion
 
