@@ -36,9 +36,9 @@ namespace AT.Print
             {
                 foreach (XRLabel plbl in xrPanel1.Controls)
                 {
-                  
+
                     lbl.TopF = plbl.BottomF;
-                    
+
                 }
             }
             else
@@ -187,7 +187,7 @@ namespace AT.Print
                 }
             }
 
-            
+
 
             if (op[0].L6_MeasureContractDemand == "HP")
             {
@@ -285,7 +285,7 @@ namespace AT.Print
 
             if (!string.IsNullOrEmpty(op[0].L6_Kvah_Indicator) && op[0].L6_Kvah_Indicator == "1")
             {
-                
+
             }
             else
             {
@@ -456,65 +456,71 @@ namespace AT.Print
             bd_OtherChargesHindi.TopF = bd_RlSC2.BottomF;
             bd_OtherChargesValue.TopF = bd_RlSC2.BottomF;
 
-
-
-            if (op[0].L8_ACCharge == "0.00" || string.IsNullOrEmpty(op[0].L8_ACCharge))
-            {
-                bdPowerFactor.Visible = false;
-                bdpowerfactorhindi.Visible = false;
-                bdPowerFactorValues.Visible = false;
-
-                bdPowerFactor.TopF = bd_RlSC2.TopF;
-                bdpowerfactorhindi.TopF = bd_RlSC2.TopF;
-                bdPowerFactorValues.TopF = bd_RlSC2.TopF;
-
-
-            }
-
-
-            //Other Charges Print
             if (op[0].L8_ServdetTotbBdtOthr == "0.00" || string.IsNullOrEmpty(op[0].L8_ServdetTotbBdtOthr))
             {
                 bd_OtherCharges.Visible = false;
                 bd_OtherChargesHindi.Visible = false;
                 bd_OtherChargesValue.Visible = false;
 
-                bd_OtherCharges.TopF = bdPowerFactor.BottomF;
-                bd_OtherChargesHindi.TopF = bdPowerFactor.BottomF;
-                bd_OtherChargesValue.TopF = bdPowerFactor.BottomF;
-
-                
-
-
+                bdPowerFactor.TopF = bd_RlSC2.BottomF;
+                bdpowerfactorhindi.TopF = bd_RlSC2.BottomF;
+                bdPowerFactorValues.TopF = bd_RlSC2.BottomF;
+                Subsidy.TopF = bdPowerFactor.BottomF;
+                Subsidy_Hindi.TopF = bdPowerFactor.BottomF;
+                SubsidyValue.TopF = bdPowerFactor.BottomF;
 
             }
-          
-
-            if (!op[0].L6_TARIFF_DESCR.Contains("LMV") || (op[0].L8_Subsidy_Charges == "" || op[0].L8_Subsidy_Charges == "0.00"))
+            else 
             {
-
-
-                Subsidy.Visible = false;
-                Subsidy_Hindi.Visible = false;
-                SubsidyValue.Visible = false;
-
-                bdpowerfactorhindi.TopF = bd_OtherCharges.BottomF;
                 bdPowerFactor.TopF = bd_OtherCharges.BottomF;
+                bdpowerfactorhindi.TopF  = bd_OtherCharges.BottomF;
                 bdPowerFactorValues.TopF = bd_OtherCharges.BottomF;
+
+            }
+
+
+
+
+            if (op[0].L8_PowerFactorAdj == "" || op[0].L8_PowerFactorAdj == "0.00")
+            {
+                bdPowerFactor.Visible = false;
+                bdpowerfactorhindi.Visible = false;
+                bdPowerFactorValues.Visible = false;
+
+                Subsidy.TopF = bd_OtherCharges.BottomF;
+                Subsidy_Hindi.TopF = bd_OtherCharges.BottomF;
+                SubsidyValue.TopF = bd_OtherCharges.BottomF;
+            }
+            
+
+            if ((op[0].L8_PowerFactorAdj == "" || op[0].L8_PowerFactorAdj == "0.00") && (op[0].L8_ServdetTotbBdtOthr == "0.00" || string.IsNullOrEmpty(op[0].L8_ServdetTotbBdtOthr)))
+            {
+                Subsidy.TopF = bd_RlSC2.BottomF;
+                Subsidy_Hindi.TopF = bd_RlSC2.BottomF;
+                SubsidyValue.TopF = bd_RlSC2.BottomF;
 
             }
             else
             {
 
-                Subsidy.Visible = true;
-                Subsidy_Hindi.Visible = true;
-                SubsidyValue.Visible = true;
-                Subsidy.TopF = bd_OtherCharges.BottomF;
-                Subsidy_Hindi.TopF = bd_OtherChargesHindi.BottomF;
-                SubsidyValue.TopF = bd_OtherChargesValue.BottomF;
-              
+                Subsidy.TopF = bdPowerFactor.BottomF;
+                Subsidy_Hindi.TopF = bdPowerFactor.BottomF;
+                SubsidyValue.TopF = bdPowerFactor.BottomF;
+            }
+
+
+
+
+            if (!op[0].L6_TARIFF_DESCR.Contains("LMV") || (op[0].L8_Subsidy_Charges == "" || op[0].L8_Subsidy_Charges == "0.00"))
+            {
+
+                Subsidy.Visible = false;
+                Subsidy_Hindi.Visible = false;
+                SubsidyValue.Visible = false;
 
             }
+           
+        
 
             //Late Payment Surcharge
             if (op[0].L9_Int_Tpl == "0.00" || string.IsNullOrEmpty(op[0].L9_Int_Tpl))
@@ -641,7 +647,7 @@ namespace AT.Print
             #region Custom Messages
             var totalMessages = messageFromFile;
 
-            if ((!string.IsNullOrEmpty(op[0].L6_EXCESS_DEMAND) && op[0].L6_EXCESS_DEMAND != "0.00(" + op[0].unit + ")") || ((!string.IsNullOrEmpty(op[0].L9_MessageIndication) && (op[0].L9_MessageIndication=="2"))))
+            if ((!string.IsNullOrEmpty(op[0].L6_EXCESS_DEMAND) && op[0].L6_EXCESS_DEMAND != "0.00(" + op[0].unit + ")") || ((!string.IsNullOrEmpty(op[0].L9_MessageIndication) && (op[0].L9_MessageIndication == "2"))))
             {
                 if (!IsMessageLimitExceeds(totalMessages))
                 {

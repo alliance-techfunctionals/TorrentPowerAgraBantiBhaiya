@@ -416,6 +416,7 @@ namespace AT.Print
             sht.L8_Regulatory_Charge2 = dtSolarBill.Rows[7][8].ToString();
             sht.L8_Rebate_incurred_of_current_month = dtSolarBill.Rows[7][9].ToString();
             sht.L8_amount_payable_before_due_date = dtSolarBill.Rows[7][10].ToString();
+            
             /*
             if (string.IsNullOrEmpty(sht.L8_amount_payable_before_due_date))
             {
@@ -432,7 +433,7 @@ namespace AT.Print
 
             
             sht.L8_T_No = dtSolarBill.Rows[7][11].ToString().Trim('�');
-            sht.L8_Subsidy_Charges = dtSolarBill.Rows[7][12].ToString();
+            sht.L8_Subsidy_Charges = dtSolarBill.Rows[7][13].ToString();
 
 
             // Line 8 End

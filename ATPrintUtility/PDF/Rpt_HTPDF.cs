@@ -412,9 +412,6 @@ namespace AT.Print.PDF
                 bd_AdjustmentMinimumCharges.TopF = bd_AcCharge.TopF;
                 bd_AdjustmentMinimumChargesHindi.TopF = bd_AcCharge.TopF;
                 bd_AdjustmentMinimumChargesValue.TopF = bd_AcCharge.TopF;
-
-
-
             }
 
             bd_ElectricityDuty.TopF = bd_AdjustmentMinimumCharges.BottomF;
@@ -432,6 +429,10 @@ namespace AT.Print.PDF
             bd_RlSC2Value.TopF = bd_RlSC1.BottomF;
             bd_RlSC2Rate.TopF = bd_RlSC1.BottomF;
 
+            bd_OtherCharges.TopF = bd_RlSC2.BottomF;
+            bd_OtherChargesHindi.TopF = bd_RlSC2.BottomF;
+            bd_OtherChargesValue.TopF = bd_RlSC2.BottomF;
+
 
             //Other Charges Print
             if (op[0].L8_ServdetTotbBdtOthr == "0.00" || string.IsNullOrEmpty(op[0].L8_ServdetTotbBdtOthr))
@@ -439,44 +440,26 @@ namespace AT.Print.PDF
                 bd_OtherCharges.Visible = false;
                 bd_OtherChargesHindi.Visible = false;
                 bd_OtherChargesValue.Visible = false;
-                bd_OtherCharges.TopF = bd_RlSC2.BottomF;
-                bd_OtherChargesHindi.TopF = bd_RlSC2.BottomF;
-                bd_OtherChargesValue.TopF = bd_RlSC2.BottomF;
 
+                bd_OtherCharges.TopF = bd_RlSC2.TopF;
+                bd_OtherChargesHindi.TopF = bd_RlSC2.TopF;
+                bd_OtherChargesValue.TopF = bd_RlSC2.TopF;
                 Subsidy.TopF = bd_OtherCharges.TopF;
-                SubsidyHindi.TopF = bd_OtherChargesHindi.TopF;
-                SubsidyValue.TopF = bd_OtherChargesValue.TopF;
-
-
+                SubsidyHindi.TopF = bd_OtherCharges.TopF;
+                SubsidyValue.TopF = bd_OtherCharges.TopF;
             }
-            else
-            {
-                Subsidy.TopF = bd_OtherCharges.TopF;
-                SubsidyHindi.TopF = bd_OtherChargesHindi.TopF;
-                SubsidyValue.TopF = bd_OtherChargesValue.TopF;
 
-            }
-            bd_OtherCharges.TopF = bd_RlSC2.BottomF;
-            bd_OtherChargesHindi.TopF = bd_RlSC2.BottomF;
-            bd_OtherChargesValue.TopF = bd_RlSC2.BottomF;
-
-
+            Subsidy.TopF = bd_OtherCharges.BottomF;
+            SubsidyHindi.TopF = bd_OtherCharges.BottomF;
+            SubsidyValue.TopF = bd_OtherCharges.BottomF;
 
             if (!op[0].L6_TARIFF_DESCR.Contains("LMV") || (op[0].L8_Subsidy_Charges == "" || op[0].L8_Subsidy_Charges == "0.00"))
             {
                 Subsidy.Visible = false;
                 SubsidyHindi.Visible = false;
                 SubsidyValue.Visible = false;
-
             }
-            else
-            {
-
-                Subsidy.Visible = true;
-                SubsidyHindi.Visible = true;
-                SubsidyValue.Visible = true;
-            }
-
+           
             //Late Payment Surcharge
             if (op[0].L9_Int_Tpl == "0.00" || string.IsNullOrEmpty(op[0].L9_Int_Tpl))
             {

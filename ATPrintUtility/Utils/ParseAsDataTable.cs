@@ -13,7 +13,7 @@ namespace AT.Print.Utils
         static string ServiceNoLine = "";
         public static DataTable LT_FileTxtToDataTable(string path, int BillNo = 0, string BillType = "Bill")
         {
-            //int LineNo = 0;
+            int LineNo = 0;
             DataTable dt = new DataTable();
             try
             {
@@ -26,11 +26,11 @@ namespace AT.Print.Utils
                 }
                 if (TotalLines != 36)
                 {
-                    XtraMessageBox.Show("Bill No: " + BillNo + " and Service No: "+ ServiceNoLine + " has not 36 rows.");
+                    XtraMessageBox.Show("Bill No: " + BillNo + " and Service No: " + ServiceNoLine + " has not 36 rows.");
                     AppFunctions.CloseWaitForm();
                     return dt;
                 }
-                
+
                 string[] fields;
                 dt.Columns.Add("1");
                 dt.Columns.Add("2");
@@ -63,13 +63,13 @@ namespace AT.Print.Utils
                 while (sr.Peek() > 0)
                 {
                     LineNo++;
-                    
+
                     var field = sr.ReadLine();
                     fields = field.Split('|');
                     DataRow dr = dt.NewRow();
                     if (fields != null)
                     {
-                        switch(LineNo)
+                        switch (LineNo)
                         {
                             case 1:
                                 {
@@ -85,7 +85,7 @@ namespace AT.Print.Utils
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 1 column 10th is blank or value differ from 0 or 1");
                                         return dt;
                                     }
-                                    else if((fields[11].ToString() == "") || (fields[11].ToString() != "0" && fields[11].ToString() != "1"))
+                                    else if ((fields[11].ToString() == "") || (fields[11].ToString() != "0" && fields[11].ToString() != "1"))
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 1 column 12th is either blank or value differ from 0 or 1");
@@ -161,12 +161,12 @@ namespace AT.Print.Utils
                                 break;
                             case 8:
                                 {
-                                    //if (fields.Length != 13)
-                                    //{
-                                    //    AppFunctions.CloseWaitForm();
-                                    //    XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 8 has " + fields.Length + " columns only.");
-                                    //    return dt;
-                                    //}
+                                    if (fields.Length != 14)
+                                    {
+                                        AppFunctions.CloseWaitForm();
+                                        XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 8 has " + fields.Length + " columns only.");
+                                        return dt;
+                                    }
                                 }
                                 break;
                             case 9:
@@ -465,13 +465,13 @@ namespace AT.Print.Utils
                 XtraMessageBox.Show("Problem creating Datatable!", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Console.WriteLine(ex.Message);
             }
-            
+
             return dt;
         }
 
         public static DataTable LTMD_FileTxtToDataTable(string path, int BillNo = 0, string BillType = "Bill")
         {
-            //int LineNo = 0;
+            int LineNo = 0;
             DataTable dt = new DataTable();
             try
             {
@@ -618,12 +618,12 @@ namespace AT.Print.Utils
                                 break;
                             case 8:
                                 {
-                                    //if (fields.Length != 14)
-                                    //{
-                                    //    AppFunctions.CloseWaitForm();
-                                    //    XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 8 has " + fields.Length + " columns only.");
-                                    //    return dt;
-                                    //}
+                                    if (fields.Length != 15)
+                                    {
+                                        AppFunctions.CloseWaitForm();
+                                        XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 8 has " + fields.Length + " columns only.");
+                                        return dt;
+                                    }
                                 }
                                 break;
                             case 9:
@@ -939,7 +939,7 @@ namespace AT.Print.Utils
 
         public static DataTable HT_FileTxtToDataTable(string path, int BillNo = 0, string BillType = "Bill")
         {
-            //int LineNo = 0;
+            int LineNo = 0;
             DataTable dt = new DataTable();
             string DoubleMeterValue = "";
             decimal value;
@@ -1096,12 +1096,12 @@ namespace AT.Print.Utils
                                 break;
                             case 8:
                                 {
-                                    //if (BillType == "HT" && fields.Length != 12)
-                                    //{
-                                    //    AppFunctions.CloseWaitForm();
-                                    //    XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 8 has " + fields.Length + " columns only.");
-                                    //    return dt;
-                                    //}
+                                    if (BillType == "HT" && fields.Length != 14)
+                                    {
+                                        AppFunctions.CloseWaitForm();
+                                        XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 8 has " + fields.Length + " columns only.");
+                                        return dt;
+                                    }
                                 }
                                 break;
                             case 9:
@@ -1399,8 +1399,8 @@ namespace AT.Print.Utils
                                 break;
                             case 37:
                                 {
-                                    
-                                    for (int Chart = 0; Chart < fields.Length-1; Chart += 2)
+
+                                    for (int Chart = 0; Chart < fields.Length - 1; Chart += 2)
                                     {
                                         if (!string.IsNullOrEmpty(Convert.ToString(fields[Chart + 1])) && !Decimal.TryParse(fields[Chart + 1], out value))
                                         {
@@ -1437,7 +1437,7 @@ namespace AT.Print.Utils
 
         public static DataTable LTMD_Solar_FileTxtToDataTable(string path, int BillNo = 0, string BillType = "Bill")
         {
-            //int LineNo = 0;
+            int LineNo = 0;
             DataTable dt = new DataTable();
             int TotalLines = path.Split('\n').Length - 1;
             //string ServiceNoLine = "";
@@ -1529,11 +1529,19 @@ namespace AT.Print.Utils
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 1 has " + fields.Length + " columns only.");
                                         return dt;
                                     }
-                                    else if (BillType == "HT Solar" && fields.Length != 10)
+                                    //else if (BillType == "HT Solar" && fields.Length != 7)
+                                    //{
+                                    //    AppFunctions.CloseWaitForm();
+                                    //    XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 1 has " + fields.Length + " columns only.");
+                                    //    return dt;
+
+                                    //}
+                                    else if(BillType == "HT Solar" && fields.Length != 7)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 1 has " + fields.Length + " columns only.");
                                         return dt;
+
                                     }
                                     //else if ((fields[10].ToString() == "" && BillType == "LTMD Solar") || (fields[10].ToString() != "0" && fields[10].ToString() != "1" && BillType == "LTMD Solar"))
                                     //{
@@ -1623,18 +1631,18 @@ namespace AT.Print.Utils
                                 break;
                             case 8:
                                 {
-                                    //if (BillType == "LTMD Solar" && fields.Length != 14)
-                                    //{
-                                    //    AppFunctions.CloseWaitForm();
-                                    //    XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 8 has " + fields.Length + " columns only.");
-                                    //    return dt;
-                                    //}
-                                    //else if (BillType == "HT Solar" && fields.Length != 12)
-                                    //{
-                                    //    AppFunctions.CloseWaitForm();
-                                    //    XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 8 has " + fields.Length + " columns only.");
-                                    //    return dt;
-                                    //}
+                                    if (BillType == "LTMD Solar" && fields.Length != 15)
+                                    {
+                                        AppFunctions.CloseWaitForm();
+                                        XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 8 has " + fields.Length + " columns only.");
+                                        return dt;
+                                    }
+                                    else if (BillType == "HT Solar" && fields.Length != 14)
+                                    {
+                                        AppFunctions.CloseWaitForm();
+                                        XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 8 has " + fields.Length + " columns only.");
+                                        return dt;
+                                    }
                                 }
                                 break;
                             case 9:
@@ -2263,38 +2271,38 @@ namespace AT.Print.Utils
             //contents= contents.Split(new String[] { "LTMD|" }, StringSplitOptions.RemoveEmptyEntries);
 
             DataTable dt = new DataTable();
-                try
-                {
-                    StringReader sr = new StringReader(contents);
-                    string[] fields;
-                    dt.Columns.Add("1", typeof(string));
-                    dt.Columns.Add("2", typeof(string));
-                    dt.Columns.Add("3", typeof(string));
-                    dt.Columns.Add("4", typeof(string));
+            try
+            {
+                StringReader sr = new StringReader(contents);
+                string[] fields;
+                dt.Columns.Add("1", typeof(string));
+                dt.Columns.Add("2", typeof(string));
+                dt.Columns.Add("3", typeof(string));
+                dt.Columns.Add("4", typeof(string));
 
-                    while (sr.Peek() > 0)
+                while (sr.Peek() > 0)
+                {
+                    var field = sr.ReadLine();
+                    fields = field.Split('|');
+                    DataRow dr = dt.NewRow();
+                    if (fields != null)
                     {
-                        var field = sr.ReadLine();
-                        fields = field.Split('|');
-                        DataRow dr = dt.NewRow();
-                        if (fields != null)
+                        for (int i = 0; i < fields.Length; i++)
                         {
-                            for (int i = 0; i < fields.Length; i++)
-                            {
-                                dr[i] = fields[i].ToString().Trim('�');
-                            }
-                            dt.Rows.Add(dr);
+                            dr[i] = fields[i].ToString().Trim('�');
                         }
+                        dt.Rows.Add(dr);
                     }
                 }
-                catch (Exception ex)
-                {
-                    AppFunctions.LogError(ex);
-                    XtraMessageBox.Show("Problem creating Datatable!", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Console.WriteLine(ex.Message);
-                }
+            }
+            catch (Exception ex)
+            {
+                AppFunctions.LogError(ex);
+                XtraMessageBox.Show("Problem creating Datatable!", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine(ex.Message);
+            }
 
-                return dt;
+            return dt;
 
         }
 
@@ -2417,6 +2425,6 @@ namespace AT.Print.Utils
 
         }
 
-        
+
     }
 }

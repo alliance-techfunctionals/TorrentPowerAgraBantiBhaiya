@@ -138,9 +138,9 @@ namespace AT.Print.PDF
                     op[0].L6_bill_demand = op[0].L6_bill_demand + "(" + unit1 + ")";
 
                     xrLabel25.Text = "MD" + unit1;
-                    xrLabel26.Text = unit1+"H";
+                    xrLabel26.Text = unit1 + "H";
                     xrLabel67.Text = "MD" + unit1;
-                    xrLabel68.Text = unit1+"H";
+                    xrLabel68.Text = unit1 + "H";
                 }
                 else
                 {
@@ -151,7 +151,7 @@ namespace AT.Print.PDF
                     op[0].L6_bill_demand = op[0].L6_bill_demand + "(" + unit1 + ")";
 
                     xrLabel25.Text = "MD" + unit1;
-                    xrLabel26.Text = unit1+"H";
+                    xrLabel26.Text = unit1 + "H";
                     xrLabel67.Text = "MD" + unit1;
                     xrLabel68.Text = unit1 + "H";
                 }
@@ -240,7 +240,7 @@ namespace AT.Print.PDF
                 MdkvaPresLabel2.Text = op[0].L12_KVA_PRESREAD == "0.00" ? "0.00" : op[0].L12_KVA_PRESREAD == "" ? "" : op[0].L12_KVA_PRESREAD;
                 MdkvaMfLabel2.Text = op[0].L14_Multiplying_factor_KVA == "0.00" ? "0.00" : op[0].L14_Multiplying_factor_KVA == "" ? "" : op[0].L14_Multiplying_factor_KVA;
                 MdkvaTotalLabel2.Text = op[0].L15_KVA_UNITS == "0.00" ? "0.00" : op[0].L15_KVA_UNITS == "" ? "" : op[0].L15_KVA_UNITS;
-                
+
                 Tod1Label2.Text = op[0].L16_TOD1_KVAH_Units;
                 Tod2Label2.Text = op[0].L16_TOD2_KVAH_Units;
                 Tod3Label2.Text = op[0].L16_TOD3_KVAH_Units;
@@ -254,7 +254,7 @@ namespace AT.Print.PDF
                     KvahMfLabel2.Text = op[0].L14_Multiplying_factor_KVAH == "0.00" ? "0.00" : op[0].L14_Multiplying_factor_KVAH == "" ? "" : op[0].L14_Multiplying_factor_KVAH;
                     KvahTotalLabel2.Text = op[0].L15_KVAH_UNITS == "0.00" ? "0.00" : op[0].L15_KVAH_UNITS == "" ? "" : op[0].L15_KVAH_UNITS;
                 }
-                else 
+                else
                 {
                     KvahPastLabel2.Text = op[0].L13_KWH_PASTREAD == "0.00" ? "0.00" : op[0].L13_KWH_PASTREAD == "" ? "" : op[0].L13_KWH_PASTREAD;
                     KvahPresLabel2.Text = op[0].L12_KWH_PRESREAD == "0.00" ? "0.00" : op[0].L12_KWH_PRESREAD == "" ? "" : op[0].L12_KWH_PRESREAD;
@@ -274,7 +274,7 @@ namespace AT.Print.PDF
                 MdkvaPresLabel.Text = op[0].L18_KVA_PRESREAD == "0.00" ? "0.00" : op[0].L18_KVA_PRESREAD == "" ? "" : op[0].L18_KVA_PRESREAD;
                 MdkvaMfLabel.Text = op[0].L20_Multiplying_Factor_KVA == "0.00" ? "0.00" : op[0].L20_Multiplying_Factor_KVA == "" ? "" : op[0].L20_Multiplying_Factor_KVA;
                 MdkvaTotalLabel.Text = op[0].L21_KVA_UNITS == "0.00" ? "0.00" : op[0].L21_KVA_UNITS == "" ? "" : op[0].L21_KVA_UNITS;
-                
+
                 Tod1Label.Text = op[0].L22_TOD1_KVAH_Units;
                 Tod2Label.Text = op[0].L22_TOD2_KVAH_Units;
                 Tod3Label.Text = op[0].L22_TOD3_KVAH_Units;
@@ -290,7 +290,7 @@ namespace AT.Print.PDF
                     KvahMfLabel.Text = op[0].L20_Multiplying_Factor_KVAH == "0.00" ? "0.00" : op[0].L20_Multiplying_Factor_KVAH == "" ? "" : op[0].L20_Multiplying_Factor_KVAH;
                     KvahTotalLabel.Text = op[0].L21_KVAH_UNITS == "0.00" ? "0.00" : op[0].L21_KVAH_UNITS == "" ? "" : op[0].L21_KVAH_UNITS;
                 }
-                else 
+                else
                 {
                     KvahPastLabel.Text = op[0].L19_KWH_PASTREAD == "0.00" ? "0.00" : op[0].L19_KWH_PASTREAD == "" ? "" : op[0].L19_KWH_PASTREAD;
                     KvahPresLabel.Text = op[0].L18_KWH_PRESREAD == "0.00" ? "0.00" : op[0].L18_KWH_PRESREAD == "" ? "" : op[0].L18_KWH_PRESREAD;
@@ -311,7 +311,7 @@ namespace AT.Print.PDF
                 MdkvaPresLabel.Text = op[0].L12_KVA_PRESREAD == "0.00" ? "0.00" : op[0].L12_KVA_PRESREAD == "" ? "" : op[0].L12_KVA_PRESREAD;
                 MdkvaMfLabel.Text = op[0].L14_Multiplying_factor_KVA == "0.00" ? "0.00" : op[0].L14_Multiplying_factor_KVA == "" ? "" : op[0].L14_Multiplying_factor_KVA;
                 MdkvaTotalLabel.Text = op[0].L15_KVA_UNITS == "0.00" ? "0.00" : op[0].L15_KVA_UNITS == "" ? "" : op[0].L15_KVA_UNITS;
-               
+
                 Tod1Label.Text = op[0].L16_TOD1_KVAH_Units;
                 Tod2Label.Text = op[0].L16_TOD2_KVAH_Units;
                 Tod3Label.Text = op[0].L16_TOD3_KVAH_Units;
@@ -323,8 +323,8 @@ namespace AT.Print.PDF
                     KvahPresLabel.Text = op[0].L12_KVAH_PRESREAD == "0.00" ? "0.00" : op[0].L12_KVAH_PRESREAD == "" ? "" : op[0].L12_KVAH_PRESREAD;
                     KvahMfLabel.Text = op[0].L14_Multiplying_factor_KVAH == "0.00" ? "0.00" : op[0].L14_Multiplying_factor_KVAH == "" ? "" : op[0].L14_Multiplying_factor_KVAH;
                     KvahTotalLabel.Text = op[0].L15_KVAH_UNITS == "0.00" ? "0.00" : op[0].L15_KVAH_UNITS == "" ? "" : op[0].L15_KVAH_UNITS;
-                 }
-                else 
+                }
+                else
                 {
                     KvahPastLabel.Text = op[0].L13_KWH_PASTREAD == "0.00" ? "0.00" : op[0].L13_KWH_PASTREAD == "" ? "" : op[0].L13_KWH_PASTREAD;
                     KvahPresLabel.Text = op[0].L12_KWH_PRESREAD == "0.00" ? "0.00" : op[0].L12_KWH_PRESREAD == "" ? "" : op[0].L12_KWH_PRESREAD;
@@ -333,7 +333,7 @@ namespace AT.Print.PDF
 
                 }
 
-               
+
             }
             #endregion
 
@@ -433,24 +433,24 @@ namespace AT.Print.PDF
             bd_RlSC2Rate.TopF = bd_RlSC1.BottomF;
 
             bd_PowerFectorCharges.TopF = bd_RlSC2.BottomF;
-            bd_PowerFectorChargesHindi.TopF= bd_RlSC2.BottomF;
-            bd_PowerFectorChargesValues.TopF= bd_RlSC2.BottomF;
+            bd_PowerFectorChargesHindi.TopF = bd_RlSC2.BottomF;
+            bd_PowerFectorChargesValues.TopF = bd_RlSC2.BottomF;
 
             //Power Factor Charges
-            if (String.Equals(op[0].L1_PowerFactorMSGIndicator, ""))
+            if (op[0].L1_PowerFactorMSGIndicator== "0.00"||string.IsNullOrEmpty(op[0].L1_PowerFactorMSGIndicator))
             {
                 bd_PowerFectorCharges.Visible = false;
                 bd_PowerFectorChargesHindi.Visible = false;
                 bd_PowerFectorChargesValues.Visible = false;
-               
+
                 bd_PowerFectorCharges.TopF = bd_RlSC2.TopF;
                 bd_PowerFectorChargesHindi.TopF = bd_RlSC2Hindi.TopF;
                 bd_PowerFectorChargesValues.TopF = bd_RlSC2Value.TopF;
             }
-            bd_OtherCharges.TopF = bd_PowerFectorCharges.TopF;
-            bd_OtherChargesValue.TopF = bd_PowerFectorCharges.TopF;
-            bd_OtherChargesHindi.TopF = bd_PowerFectorCharges.TopF; 
-            
+            bd_OtherCharges.TopF = bd_PowerFectorCharges.BottomF;
+            bd_OtherChargesValue.TopF = bd_PowerFectorCharges.BottomF;
+            bd_OtherChargesHindi.TopF = bd_PowerFectorCharges.BottomF;
+
             //Other Charges Print
             if (op[0].L8_ServdetTotbBdtOthr == "0.00" || string.IsNullOrEmpty(op[0].L8_ServdetTotbBdtOthr))
             {
@@ -458,6 +458,36 @@ namespace AT.Print.PDF
                 bd_OtherChargesHindi.Visible = false;
                 bd_OtherChargesValue.Visible = false;
 
+                bd_OtherCharges.TopF = bd_PowerFectorCharges.TopF;
+                bd_OtherChargesValue.TopF = bd_PowerFectorCharges.TopF;
+                bd_OtherChargesHindi.TopF = bd_PowerFectorCharges.TopF;
+            }
+            Subsidy.TopF = bd_OtherCharges.BottomF;
+            SubsidyHindi.TopF = bd_OtherCharges.BottomF;
+            SubsidyValue.TopF = bd_OtherCharges.BottomF;
+
+
+            if (!op[0].L6_TARIFF_DESCR.Contains("LMV") || (op[0].L8_Subsidy_Charges == "" || op[0].L8_Subsidy_Charges == "0.00"))
+            {
+                Subsidy.Visible = false;
+                SubsidyHindi.Visible = false;
+                SubsidyValue.Visible = false;
+
+                Subsidy.TopF = bd_OtherCharges.TopF;
+                SubsidyHindi.TopF = bd_OtherCharges.TopF;
+                SubsidyValue.TopF = bd_OtherCharges.TopF;
+
+            }
+
+
+
+
+            if ((op[0].L8_ServdetTotbBdtOthr == "0.00" || string.IsNullOrEmpty(op[0].L8_ServdetTotbBdtOthr)) && (op[0].L1_PowerFactorMSGIndicator == "0.00" || string.IsNullOrEmpty(op[0].L1_PowerFactorMSGIndicator)))
+            {
+
+                Subsidy.TopF = bd_RlSC2.BottomF;
+                SubsidyHindi.TopF = bd_RlSC2.BottomF;
+                SubsidyValue.TopF = bd_RlSC2.BottomF;
             }
 
             //Late Payment Surcharge
