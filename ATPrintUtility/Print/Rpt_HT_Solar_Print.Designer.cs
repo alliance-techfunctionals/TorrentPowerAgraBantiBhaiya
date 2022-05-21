@@ -3028,7 +3028,7 @@
             this.bd_RlSC1Hindi.CanGrow = false;
             this.bd_RlSC1Hindi.CanShrink = true;
             this.bd_RlSC1Hindi.Dpi = 96F;
-            this.bd_RlSC1Hindi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.bd_RlSC1Hindi.Font = new System.Drawing.Font("Kruti Dev 010", 9F);
             this.bd_RlSC1Hindi.LocationFloat = new DevExpress.Utils.PointFloat(129F, 79.40134F);
             this.bd_RlSC1Hindi.Name = "bd_RlSC1Hindi";
             this.bd_RlSC1Hindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -3063,7 +3063,7 @@
             this.bd_RlSC2Hindi.CanGrow = false;
             this.bd_RlSC2Hindi.CanShrink = true;
             this.bd_RlSC2Hindi.Dpi = 96F;
-            this.bd_RlSC2Hindi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.bd_RlSC2Hindi.Font = new System.Drawing.Font("Kruti Dev 010", 9F);
             this.bd_RlSC2Hindi.LocationFloat = new DevExpress.Utils.PointFloat(129F, 95.48164F);
             this.bd_RlSC2Hindi.Name = "bd_RlSC2Hindi";
             this.bd_RlSC2Hindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
