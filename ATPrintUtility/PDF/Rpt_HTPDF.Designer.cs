@@ -1881,7 +1881,7 @@
             this.xrLabel117.Multiline = true;
             this.xrLabel117.Name = "xrLabel117";
             this.xrLabel117.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel117.SizeF = new System.Drawing.SizeF(117.268F, 14.588F);
+            this.xrLabel117.SizeF = new System.Drawing.SizeF(156.1922F, 14.588F);
             this.xrLabel117.StylePriority.UseFont = false;
             this.xrLabel117.Text = "vfrfjä Mhohoh,u,y vo\'ks\"k";
             // 

@@ -42,7 +42,6 @@
             this.xrLabel23 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPanel3 = new DevExpress.XtraReports.UI.XRPanel();
             this.Subsidy_Hindi = new DevExpress.XtraReports.UI.XRLabel();
-            this.SubsidyValue = new DevExpress.XtraReports.UI.XRLabel();
             this.bdpowerfactorhindi = new DevExpress.XtraReports.UI.XRLabel();
             this.bdPowerFactorValues = new DevExpress.XtraReports.UI.XRLabel();
             this.bd_ExcessDemandChargesValue = new DevExpress.XtraReports.UI.XRLabel();
@@ -75,6 +74,7 @@
             this.bd_RlSC2 = new DevExpress.XtraReports.UI.XRLabel();
             this.bd_FixedCharge = new DevExpress.XtraReports.UI.XRLabel();
             this.bdPowerFactor = new DevExpress.XtraReports.UI.XRLabel();
+            this.SubsidyValue = new DevExpress.XtraReports.UI.XRLabel();
             this.Subsidy = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel20 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPanel1 = new DevExpress.XtraReports.UI.XRPanel();
@@ -562,23 +562,6 @@
             this.Subsidy_Hindi.StylePriority.UseTextAlignment = false;
             this.Subsidy_Hindi.Text = "lfClMh";
             this.Subsidy_Hindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // SubsidyValue
-            // 
-            this.SubsidyValue.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
-            this.SubsidyValue.CanGrow = false;
-            this.SubsidyValue.Dpi = 96F;
-            this.SubsidyValue.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_Subsidy_Charges]")});
-            this.SubsidyValue.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
-            this.SubsidyValue.LocationFloat = new DevExpress.Utils.PointFloat(292F, 160.0949F);
-            this.SubsidyValue.Name = "SubsidyValue";
-            this.SubsidyValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.SubsidyValue.SizeF = new System.Drawing.SizeF(96F, 16.08F);
-            this.SubsidyValue.StylePriority.UseFont = false;
-            this.SubsidyValue.StylePriority.UsePadding = false;
-            this.SubsidyValue.StylePriority.UseTextAlignment = false;
-            this.SubsidyValue.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // bdpowerfactorhindi
             // 
@@ -1172,6 +1155,23 @@
             this.bdPowerFactor.StylePriority.UseFont = false;
             this.bdPowerFactor.StylePriority.UsePadding = false;
             this.bdPowerFactor.Text = "Power Factor Charges / ";
+            // 
+            // SubsidyValue
+            // 
+            this.SubsidyValue.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
+            this.SubsidyValue.CanGrow = false;
+            this.SubsidyValue.Dpi = 96F;
+            this.SubsidyValue.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_Subsidy_Charges]")});
+            this.SubsidyValue.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.SubsidyValue.LocationFloat = new DevExpress.Utils.PointFloat(292F, 160.0949F);
+            this.SubsidyValue.Name = "SubsidyValue";
+            this.SubsidyValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.SubsidyValue.SizeF = new System.Drawing.SizeF(96F, 16.08F);
+            this.SubsidyValue.StylePriority.UseFont = false;
+            this.SubsidyValue.StylePriority.UsePadding = false;
+            this.SubsidyValue.StylePriority.UseTextAlignment = false;
+            this.SubsidyValue.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // Subsidy
             // 
@@ -1867,7 +1867,7 @@
             this.xrLabel117.Multiline = true;
             this.xrLabel117.Name = "xrLabel117";
             this.xrLabel117.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel117.SizeF = new System.Drawing.SizeF(117.268F, 14.588F);
+            this.xrLabel117.SizeF = new System.Drawing.SizeF(148.0001F, 14.588F);
             this.xrLabel117.StylePriority.UseFont = false;
             this.xrLabel117.Text = "vfrfjä Mhohoh,u,y vo\'ks\"k";
             // 
