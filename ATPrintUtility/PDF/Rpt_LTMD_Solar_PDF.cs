@@ -552,19 +552,17 @@ namespace AT.Print.PDF
             }
 
 
+
+            Subsidy.TopF = bd_Other.BottomF;
+            SubsidyValue.TopF = bd_OtherValues.BottomF;
             if (!op[0].L6_TARIFF_DESCR.Contains("LMV") || (op[0].L8_Subsidy_Charges == "" || op[0].L8_Subsidy_Charges == "0.00"))
             {
                 Subsidy.Visible = false;
                 SubsidyValue.Visible = false;
 
-            }
-            else
-            {
+                Subsidy.TopF = bd_Other.TopF;
+                SubsidyValue.TopF = bd_OtherValues.TopF;
 
-                Subsidy.Visible = true;
-                SubsidyValue.Visible = true;
-                Subsidy.TopF = bd_Other.BottomF;
-                SubsidyValue.TopF = bd_Other.BottomF;
             }
 
             bd_TotalCurrentDues.TopF = Subsidy.BottomF;
@@ -588,6 +586,14 @@ namespace AT.Print.PDF
 
             bd_TotalDuesVALUE.TopF = bd_LatePaymentSurcharges.BottomF;
             bd_TotalDues.TopF = bd_TotalDuesVALUE.TopF;
+
+           
+
+           
+
+
+
+          
 
 
           

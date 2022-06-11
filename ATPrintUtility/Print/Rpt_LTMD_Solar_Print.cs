@@ -541,7 +541,7 @@ namespace AT.Print
             }
             bd_Other.TopF = bd_AdjustmentCharges.BottomF;
             bd_OtherValues.TopF = bd_AdjustmentChargesValues.BottomF;
-            if (op[0].L8_SERVDET_TOTDB_BDT_OTHER=="0.00" || string.IsNullOrEmpty(op[0].L8_SERVDET_TOTDB_BDT_OTHER)) 
+            if (op[0].L8_SERVDET_TOTDB_BDT_OTHER == "0.00" || string.IsNullOrEmpty(op[0].L8_SERVDET_TOTDB_BDT_OTHER))
             {
                 bd_Other.Visible = false;
                 bd_OtherValues.Visible = false;
@@ -549,8 +549,59 @@ namespace AT.Print
                 bd_Other.TopF = bd_AdjustmentCharges.TopF;
                 bd_OtherValues.TopF = bd_AdjustmentChargesValues.TopF;
             }
-            bd_TotalCurrentDues.TopF = bd_Other.BottomF;
-            bd_TotalCurrentDuesValues.TopF = bd_OtherValues.BottomF;
+            //bd_TotalCurrentDues.TopF = bd_Other.BottomF;
+            //bd_TotalCurrentDuesValues.TopF = bd_OtherValues.BottomF;
+
+            //bd_Arrears.TopF = bd_TotalCurrentDues.BottomF;
+            //bd_Arrears_values.TopF = bd_TotalCurrentDues.BottomF;
+
+            //bd_LatePaymentSurcharges.TopF = bd_Arrears.BottomF;
+            //bd_LatePaymentSurchargesVALUE.TopF = bd_Arrears.BottomF;
+
+
+            //if (op[0].L9_INT_TPL == "0.00" || string.IsNullOrEmpty(op[0].L9_INT_TPL))
+            //{
+            //    bd_LatePaymentSurcharges.Visible = false;
+            //    bd_LatePaymentSurchargesVALUE.Visible = false;
+
+            //    bd_LatePaymentSurcharges.TopF = bd_Arrears.TopF;
+            //    bd_LatePaymentSurchargesVALUE.TopF = bd_Arrears_values.TopF;
+            //}
+
+            //bd_TotalDuesVALUE.TopF = bd_LatePaymentSurcharges.BottomF;
+            //bd_TotalDues.TopF = bd_TotalDuesVALUE.TopF;
+
+
+            //if (!op[0].L6_TARIFF_DESCR.Contains("LMV") || (op[0].L8_Subsidy_Charges == "" || op[0].L8_Subsidy_Charges == "0.00"))
+            //{
+            //    Subsidy.Visible = false;
+            //    SubsidyValue.Visible = false;
+
+            //}
+            //else
+            //{
+
+            //    Subsidy.Visible = true;
+            //    SubsidyValue.Visible = true;
+            //    Subsidy.TopF = bd_TotalDues.BottomF;
+            //    SubsidyValue.TopF = bd_TotalDues.BottomF;
+            //}
+
+
+            Subsidy.TopF = bd_Other.BottomF;
+            SubsidyValue.TopF = bd_OtherValues.BottomF;
+            if (!op[0].L6_TARIFF_DESCR.Contains("LMV") || (op[0].L8_Subsidy_Charges == "" || op[0].L8_Subsidy_Charges == "0.00"))
+            {
+                Subsidy.Visible = false;
+                SubsidyValue.Visible = false;
+
+                Subsidy.TopF = bd_Other.TopF;
+                SubsidyValue.TopF = bd_OtherValues.TopF;
+
+            }
+
+            bd_TotalCurrentDues.TopF = Subsidy.BottomF;
+            bd_TotalCurrentDuesValues.TopF = SubsidyValue.BottomF;
 
             bd_Arrears.TopF = bd_TotalCurrentDues.BottomF;
             bd_Arrears_values.TopF = bd_TotalCurrentDues.BottomF;
@@ -572,20 +623,6 @@ namespace AT.Print
             bd_TotalDues.TopF = bd_TotalDuesVALUE.TopF;
 
 
-            if (!op[0].L6_TARIFF_DESCR.Contains("LMV") || (op[0].L8_Subsidy_Charges == "" || op[0].L8_Subsidy_Charges == "0.00"))
-            {
-                Subsidy.Visible = false;
-                SubsidyValue.Visible = false;
-
-            }
-            else
-            {
-
-                Subsidy.Visible = true;
-                SubsidyValue.Visible = true;
-                Subsidy.TopF = bd_TotalDues.BottomF;
-                SubsidyValue.TopF = bd_TotalDues.BottomF;
-            }
 
 
 
