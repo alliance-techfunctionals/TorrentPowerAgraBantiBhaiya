@@ -531,15 +531,15 @@
             // 
             // xrPictureBox2
             // 
-            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(14.99999F, 94F);
+            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(19.04063F, 79.83332F);
             this.xrPictureBox2.Name = "xrPictureBox2";
-            this.xrPictureBox2.SizeF = new System.Drawing.SizeF(466.8723F, 261.2914F);
+            this.xrPictureBox2.SizeF = new System.Drawing.SizeF(487.58F, 283.9583F);
             this.xrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
             // 
             // xrPictureBox1
             // 
             this.xrPictureBox1.ImageAlignment = DevExpress.XtraPrinting.ImageAlignment.MiddleCenter;
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(497.8739F, 93.99999F);
+            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(529.7485F, 93.99999F);
             this.xrPictureBox1.Name = "xrPictureBox1";
             this.xrPictureBox1.SizeF = new System.Drawing.SizeF(278.2513F, 249.8331F);
             // 

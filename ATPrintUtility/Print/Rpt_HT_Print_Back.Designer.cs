@@ -273,7 +273,7 @@
             // 
             this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(33.70834F, 27.16667F);
             this.xrPictureBox2.Name = "xrPictureBox2";
-            this.xrPictureBox2.SizeF = new System.Drawing.SizeF(466.9134F, 265.7067F);
+            this.xrPictureBox2.SizeF = new System.Drawing.SizeF(475.8716F, 265.7067F);
             this.xrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
             // 
             // xrPictureBox1

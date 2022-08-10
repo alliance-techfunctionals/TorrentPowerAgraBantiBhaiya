@@ -149,7 +149,7 @@
             this.xrChart1.Diagram = xyDiagram1;
             this.xrChart1.Legend.Name = "Default Legend";
             this.xrChart1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.xrChart1.LocationFloat = new DevExpress.Utils.PointFloat(14.99999F, 314.7916F);
+            this.xrChart1.LocationFloat = new DevExpress.Utils.PointFloat(14.99999F, 321.7916F);
             this.xrChart1.Name = "xrChart1";
             this.xrChart1.PaletteBaseColorNumber = 2;
             this.xrChart1.PaletteName = "Grayscale";
@@ -206,7 +206,7 @@
             this.xrChart2.Diagram = xyDiagram2;
             this.xrChart2.Legend.Name = "Default Legend";
             this.xrChart2.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.xrChart2.LocationFloat = new DevExpress.Utils.PointFloat(14.99999F, 490.8816F);
+            this.xrChart2.LocationFloat = new DevExpress.Utils.PointFloat(14.99999F, 500.8816F);
             this.xrChart2.Name = "xrChart2";
             this.xrChart2.PaletteBaseColorNumber = 2;
             this.xrChart2.PaletteName = "Grayscale";
@@ -262,7 +262,7 @@
             this.xrChart3.Diagram = xyDiagram3;
             this.xrChart3.Legend.Name = "Default Legend";
             this.xrChart3.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.xrChart3.LocationFloat = new DevExpress.Utils.PointFloat(14.99999F, 661.2616F);
+            this.xrChart3.LocationFloat = new DevExpress.Utils.PointFloat(14.99999F, 675.2616F);
             this.xrChart3.Name = "xrChart3";
             this.xrChart3.PaletteBaseColorNumber = 2;
             this.xrChart3.PaletteName = "Grayscale";
@@ -485,15 +485,15 @@
             // 
             // xrPictureBox2
             // 
-            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(14.99999F, 42.00001F);
+            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(14.99999F, 39.00001F);
             this.xrPictureBox2.Name = "xrPictureBox2";
-            this.xrPictureBox2.SizeF = new System.Drawing.SizeF(466.8723F, 261.2914F);
+            this.xrPictureBox2.SizeF = new System.Drawing.SizeF(487.58F, 279.7916F);
             this.xrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
             // 
             // xrPictureBox1
             // 
             this.xrPictureBox1.ImageAlignment = DevExpress.XtraPrinting.ImageAlignment.MiddleCenter;
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(497.8739F, 42F);
+            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(505.8739F, 41F);
             this.xrPictureBox1.Name = "xrPictureBox1";
             this.xrPictureBox1.SizeF = new System.Drawing.SizeF(278.2512F, 261.2914F);
             // 

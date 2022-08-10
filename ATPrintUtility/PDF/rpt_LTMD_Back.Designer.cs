@@ -311,13 +311,13 @@
             // 
             this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(14.99999F, 29.20834F);
             this.xrPictureBox2.Name = "xrPictureBox2";
-            this.xrPictureBox2.SizeF = new System.Drawing.SizeF(479.6217F, 288F);
+            this.xrPictureBox2.SizeF = new System.Drawing.SizeF(487.58F, 288F);
             this.xrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
             // 
             // xrPictureBox1
             // 
             this.xrPictureBox1.ImageAlignment = DevExpress.XtraPrinting.ImageAlignment.MiddleCenter;
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(508.375F, 26.20834F);
+            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(527.7083F, 29.20834F);
             this.xrPictureBox1.Name = "xrPictureBox1";
             this.xrPictureBox1.SizeF = new System.Drawing.SizeF(289.2917F, 254.9166F);
             // 
