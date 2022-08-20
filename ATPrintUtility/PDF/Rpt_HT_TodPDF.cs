@@ -944,7 +944,7 @@ namespace AT.Print.PDF
                 adjustMessages(xrMessage11);
 
             }
-            if (!string.IsNullOrEmpty(op[0].L8_Intrest_Amount))
+            if (!string.IsNullOrEmpty(op[0].L8_Intrest_Amount) && Convert.ToDecimal(op[0].L8_Intrest_Amount) > 0)
             {
                 if (!IsMessageLimitExceeds(totalMessages))
                 {
