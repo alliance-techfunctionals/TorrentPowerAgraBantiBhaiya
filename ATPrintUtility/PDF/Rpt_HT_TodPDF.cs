@@ -824,7 +824,7 @@ namespace AT.Print.PDF
                 XRLabel xrMessage7 = new XRLabel
                 {
                     Font = new System.Drawing.Font("Kruti Dev 010", 9),
-                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify,
                     Text = op[0].L33_MESSAGE7,
                     WordWrap = false,
                     AutoWidth = true,
@@ -843,7 +843,7 @@ namespace AT.Print.PDF
                 XRLabel xrMessage8 = new XRLabel
                 {
                     Font = new System.Drawing.Font("DIN Pro Regular", 8),
-                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify,
                     Text = op[0].L34_MESSAGE8,
                     WordWrap = false,
                     CanShrink = true,
@@ -862,7 +862,7 @@ namespace AT.Print.PDF
                 XRLabel xrMessage9 = new XRLabel
                 {
                     Font = new System.Drawing.Font("Kruti Dev 010", 9),
-                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify,
                     Text = op[0].L35_MESSAGE9,
                     WordWrap = false,
                     CanShrink = true,
@@ -881,7 +881,7 @@ namespace AT.Print.PDF
                 XRLabel xrMessage10 = new XRLabel
                 {
                     Font = new System.Drawing.Font("DIN Pro Regular", 8),
-                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify,
                     Text = op[0].L36_MESSAGE10,
                     WordWrap = false,
                     CanShrink = true,
@@ -944,29 +944,29 @@ namespace AT.Print.PDF
                 adjustMessages(xrMessage11);
 
             }
-            if (!string.IsNullOrEmpty(op[0].L8_Intrest_Amount) && Convert.ToDecimal(op[0].L8_Intrest_Amount) > 0)
-            {
-                if (!IsMessageLimitExceeds(totalMessages))
-                {
-                    totalMessages++;
-                    XRLabel xrMessageExcessDemand = new XRLabel
-                    {
-                        Font = new System.Drawing.Font("Kruti Dev 010", 9),
-                        TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                        Text = string.Format(getMessage(LoadStaticData._HindiMessage, "IAE"), op[0].L8_Intrest_Amount.ToString().Replace('.', '-')),
-                        WordWrap = false,
-                        AutoWidth = true,
-                        KeepTogether = true,
-                        HeightF = (float)0.01,
-                        Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                        //BorderDashStyle = BorderDashStyle.Dot,
-                        //Borders = DevExpress.XtraPrinting.BorderSide.All,
-                        //BorderWidth = 1,
-                    };
-                    MessagesPanel.Controls.Add(xrMessageExcessDemand);
-                    adjustMessages(xrMessageExcessDemand);
-                }
-            }
+            //if (!string.IsNullOrEmpty(op[0].L8_Intrest_Amount) && Convert.ToDecimal(op[0].L8_Intrest_Amount) > 0)
+            //{
+            //    if (!IsMessageLimitExceeds(totalMessages))
+            //    {
+            //        totalMessages++;
+            //        XRLabel xrMessageExcessDemand = new XRLabel
+            //        {
+            //            Font = new System.Drawing.Font("Kruti Dev 010", 9),
+            //            TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+            //            Text = string.Format(getMessage(LoadStaticData._HindiMessage, "IAE"), op[0].L8_Intrest_Amount.ToString().Replace('.', '-')),
+            //            WordWrap = false,
+            //            AutoWidth = true,
+            //            KeepTogether = true,
+            //            HeightF = (float)0.01,
+            //            Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+            //            //BorderDashStyle = BorderDashStyle.Dot,
+            //            //Borders = DevExpress.XtraPrinting.BorderSide.All,
+            //            //BorderWidth = 1,
+            //        };
+            //        MessagesPanel.Controls.Add(xrMessageExcessDemand);
+            //        adjustMessages(xrMessageExcessDemand);
+            //    }
+            //}
 
             #endregion
 

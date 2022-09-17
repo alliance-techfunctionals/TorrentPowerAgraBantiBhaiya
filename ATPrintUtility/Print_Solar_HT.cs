@@ -435,7 +435,7 @@ namespace AT.Print
             
             sht.L8_T_No = dtSolarBill.Rows[7][11].ToString().Trim('�');
             sht.L8_Subsidy_Charges = dtSolarBill.Rows[7][13].ToString();
-            sht.L8_Intrest_Amount = dtSolarBill.Rows[7][14].ToString();
+           // sht.L8_Intrest_Amount = dtSolarBill.Rows[7][14].ToString();
 
 
             // Line 8 End

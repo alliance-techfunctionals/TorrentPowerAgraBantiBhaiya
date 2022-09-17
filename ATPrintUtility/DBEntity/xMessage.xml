@@ -10,7 +10,7 @@
     <HMess Code="AB2" Description="fiNys vuqekfur fcy dk lek;kstu bl fcy eas dj fn;k x;k gSA"></HMess>
     <HMess Code="PFM" Description="fiNys ekg vkids la;kstu dk ikoj QSDVj {0} ls de ntZ fd;k x;k gSA i= Hkstk x;k gSA vf/kHkkj ls cpus ds fy, d`i;k mfpr dne mBk;sa A"></HMess>
     <HMess Code="TPC" Description="vkids vkosnu ifjlj fufj{k.k esa Lohd`r ls fHkUu Js.kh dk mi;ksx ik;s tkus ds vk/kkj ij vkidh VSfjQ Js.kh esa ifjorZu fd;k x;k gSA "></HMess>
-    <HMess Code="IAE" Description="fiz; miHkksäk] ,d eq'r ;kstuk ds varxZr 100 izfr'kr C;kt ekQ+h dk ykHk mBkus ds fy,] d`Ik;k mijksDr orZeku fcy ds lkFk ekfld fdLr jkf'k : {0} dk Hkqxrku djsaA"></HMess>
+    <!--<HMess Code="IAE" Description="fiz; miHkksäk] ,d eq'r ;kstuk ds varxZr 100 izfr'kr C;kt ekQ+h dk ykHk mBkus ds fy,] d`Ik;k mijksDr orZeku fcy ds lkFk ekfld fdLr jkf'k : {0} dk Hkqxrku djsaA"></HMess>-->
   </Hindi>
   <English>
     <EMess Code="BRDCST1" Description="BROADCASTMESS"></EMess>

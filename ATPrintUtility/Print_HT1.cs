@@ -88,8 +88,7 @@ namespace AT.Print
                             return;
                         }
                         XtraMessageBox.Show("Total Bills in this file: " + singleHTBills.Length.ToString(), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                       // StartPrinting_HTBills(singleHTBills, sb.Name);
-
+                        AppFunctions.ShowWaitForm("Validating HT Bills Now before I generate the PDF files !!");
                         if (ValidatetxtFile(singleHTBills))
                         {
                             /*
@@ -111,6 +110,7 @@ namespace AT.Print
                                 myNewThread1.Start();
                             }
                             //StartPrinting_HTBills(singleHTBills, sb.Name);
+                            
                         }
                         else
                         {
@@ -118,9 +118,13 @@ namespace AT.Print
                             AppFunctions.CloseWaitForm();
                             return;
                         }
+                        AppFunctions.CloseWaitForm();
+                        XtraMessageBox.Show(singleHTBills.Count() + " bills has been parsed.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     }
                     else
                     {
+                        AppFunctions.CloseWaitForm();
                         XtraMessageBox.Show("It seeems that you have chosen a wrong file,\n try again and pick correct file!!", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
@@ -600,7 +604,7 @@ namespace AT.Print
             //sht.L8_ParkingAmount = dtSingleHTBill.Rows[7][12].ToString();
             sht.L8_ParkingAmount = Math.Ceiling(Convert.ToDecimal(string.IsNullOrEmpty(dtSingleHTBill.Rows[7][12].ToString()) ? "0" : dtSingleHTBill.Rows[7][12].ToString())).ToString();
             sht.L8_Subsidy_Charges = dtSingleHTBill.Rows[7][13].ToString();
-            sht.L8_Intrest_Amount = dtSingleHTBill.Rows[7][14].ToString();
+           // sht.L8_Intrest_Amount = dtSingleHTBill.Rows[7][14].ToString();
             //Line 8 End
             #endregion
 

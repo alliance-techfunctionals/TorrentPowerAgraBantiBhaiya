@@ -1137,3 +1137,29 @@ Source: System.Drawing
 TargetSite: Void set_PageUnit(System.Drawing.GraphicsUnit)
 -----------------------------------------------------------
 
+Time: 22/08/2022 10:56:17 AMMessage: D:\Amit\Inst. Msg\Release\Contents\CategorySlabImages\Duplex_Non_TOD_Front_Page.pngStackTrace:    at DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(String filename)
+   at AT.Print.PrintLT.<GeneratePDFFormatsForLTBillsNewOptimized>b__29_0(Int32 z) in C:\WorkSpace_CpSingh\Torrent agra\Torrent\TorrentPower\ATPrintUtility\PrintLT.cs:line 1946Source: DevExpress.Printing.v21.2.CoreTargetSite: DevExpress.XtraPrinting.Drawing.ImageSource FromFile(System.String)
+Time: 22/08/2022 10:57:24 AMMessage: D:\Amit\Inst. Msg\Release\Contents\CategorySlabImages\Duplex_Non_TOD_Front_Page.pngStackTrace:    at DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(String filename)
+   at AT.Print.PrintLT.<GeneratePDFFormatsForLTBillsNewOptimized>b__29_0(Int32 z) in C:\WorkSpace_CpSingh\Torrent agra\Torrent\TorrentPower\ATPrintUtility\PrintLT.cs:line 1946Source: DevExpress.Printing.v21.2.CoreTargetSite: DevExpress.XtraPrinting.Drawing.ImageSource FromFile(System.String)
+Time: 31/08/2022 12:14:33 AMMessage: Input string was not in a correct format.StackTrace:    at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDouble(String value)
+   at AT.Print.PrintLT.parseSingleLTBill(DataTable dtSingleLTBill) in C:\WorkSpace_CpSingh\Torrent agra\Torrent\TorrentPower\ATPrintUtility\PrintLT.cs:line 1066
+   at AT.Print.PrintLT.<GeneratePDFFormatsForLTBillsNewOptimized>b__29_0(Int32 z) in C:\WorkSpace_CpSingh\Torrent agra\Torrent\TorrentPower\ATPrintUtility\PrintLT.cs:line 1930Source: mscorlibTargetSite: Double ParseDouble(System.String, System.Globalization.NumberStyles, System.Globalization.NumberFormatInfo)
+Time: 31/08/2022 12:14:43 AMMessage: Input string was not in a correct format.StackTrace:    at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDouble(String value)
+   at AT.Print.PrintLT.parseSingleLTBill(DataTable dtSingleLTBill) in C:\WorkSpace_CpSingh\Torrent agra\Torrent\TorrentPower\ATPrintUtility\PrintLT.cs:line 1066
+   at AT.Print.PrintLT.<GeneratePDFFormatsForLTBillsNewOptimized>b__29_0(Int32 z) in C:\WorkSpace_CpSingh\Torrent agra\Torrent\TorrentPower\ATPrintUtility\PrintLT.cs:line 1930Source: mscorlibTargetSite: Double ParseDouble(System.String, System.Globalization.NumberStyles, System.Globalization.NumberFormatInfo)
+Time: 31/08/2022 12:14:56 AMMessage: Input string was not in a correct format.StackTrace:    at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDouble(String value)
+   at AT.Print.PrintLT.parseSingleLTBill(DataTable dtSingleLTBill) in C:\WorkSpace_CpSingh\Torrent agra\Torrent\TorrentPower\ATPrintUtility\PrintLT.cs:line 1066
+   at AT.Print.PrintLT.<GeneratePDFFormatsForLTBillsNewOptimized>b__29_0(Int32 z) in C:\WorkSpace_CpSingh\Torrent agra\Torrent\TorrentPower\ATPrintUtility\PrintLT.cs:line 1930Source: mscorlibTargetSite: Double ParseDouble(System.String, System.Globalization.NumberStyles, System.Globalization.NumberFormatInfo)
+Time: 31/08/2022 12:15:58 AMMessage: Input string was not in a correct format.StackTrace:    at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDouble(String value)
+   at AT.Print.PrintLT.parseSingleLTBill(DataTable dtSingleLTBill) in C:\WorkSpace_CpSingh\Torrent agra\Torrent\TorrentPower\ATPrintUtility\PrintLT.cs:line 1066
+   at AT.Print.PrintLT.<GeneratePDFFormatsForLTBillsNewOptimized>b__29_0(Int32 z) in C:\WorkSpace_CpSingh\Torrent agra\Torrent\TorrentPower\ATPrintUtility\PrintLT.cs:line 1930Source: mscorlibTargetSite: Double ParseDouble(System.String, System.Globalization.NumberStyles, System.Globalization.NumberFormatInfo)
+Time: 31/08/2022 12:17:22 AMMessage: Cannot find column 2.StackTrace:    at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at AT.Print.Utils.ParseAsDataTable.TemplateConditionalWithServiceNoEnglish() in C:\WorkSpace_CpSingh\Torrent agra\Torrent\TorrentPower\ATPrintUtility\Utils\ParseAsDataTable.cs:line 2412Source: System.DataTargetSite: System.Data.DataColumn get_Item(Int32)
+Time: 31/08/2022 12:18:30 AMMessage: Cannot find column 2.StackTrace:    at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at AT.Print.Utils.ParseAsDataTable.TemplateConditionalWithServiceNoEnglish() in C:\WorkSpace_CpSingh\Torrent agra\Torrent\TorrentPower\ATPrintUtility\Utils\ParseAsDataTable.cs:line 2412Source: System.DataTargetSite: System.Data.DataColumn get_Item(Int32)
+Time: 31/08/2022 12:19:17 AMMessage: Cannot find column 2.StackTrace:    at System.Data.DataColumnCollection.get_Item(Int32 index)
+   at AT.Print.Utils.ParseAsDataTable.TemplateConditionalWithServiceNoEnglish() in C:\WorkSpace_CpSingh\Torrent agra\Torrent\TorrentPower\ATPrintUtility\Utils\ParseAsDataTable.cs:line 2412Source: System.DataTargetSite: System.Data.DataColumn get_Item(Int32)
