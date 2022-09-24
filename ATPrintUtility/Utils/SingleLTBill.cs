@@ -64,7 +64,7 @@ namespace AT.Print.Utils
         public string L8_TNo { get; set; }
         public string L8_ParkingAmount { get; set; }
         public string L8_Subsidy_Charges { get; set; }
-        //public string L8_Intrest_Amount { get; set; }
+        public string L8_Intrest_Amount { get; set; }
         public string L9_TotDbArr { get; set; }
         public string L9_CurrBillAmt { get; set; }
         public string L9_Int_Tpl { get; set; }
