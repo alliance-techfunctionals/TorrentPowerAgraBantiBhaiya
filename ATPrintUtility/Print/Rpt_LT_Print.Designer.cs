@@ -476,7 +476,7 @@
             this.xrPanel1.LocationFloat = new DevExpress.Utils.PointFloat(49.99999F, 851.4265F);
             this.xrPanel1.LockedInUserDesigner = true;
             this.xrPanel1.Name = "xrPanel1";
-            this.xrPanel1.SizeF = new System.Drawing.SizeF(695.0001F, 155.3668F);
+            this.xrPanel1.SizeF = new System.Drawing.SizeF(692F, 164.76F);
             this.xrPanel1.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.xrPanel1_BeforePrint);
             // 
             // xrLabel18
@@ -3370,7 +3370,7 @@
             this.PaperKind = System.Drawing.Printing.PaperKind.A4;
             this.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.Pixels;
             this.SnapGridSize = 12.5F;
-            this.Version = "20.1";
+            this.Version = "21.2";
             this.Watermark.ImageTiling = true;
             this.Watermark.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Zoom;
             this.Watermark.PageRange = "1";

@@ -3314,10 +3314,10 @@
             // 
             this.xrPanel1.CanGrow = false;
             this.xrPanel1.Dpi = 96F;
-            this.xrPanel1.LocationFloat = new DevExpress.Utils.PointFloat(64.328F, 561.27F);
+            this.xrPanel1.LocationFloat = new DevExpress.Utils.PointFloat(16.55F, 551.27F);
             this.xrPanel1.LockedInUserDesigner = true;
             this.xrPanel1.Name = "xrPanel1";
-            this.xrPanel1.SizeF = new System.Drawing.SizeF(376.67F, 180F);
+            this.xrPanel1.SizeF = new System.Drawing.SizeF(447.45F, 190.11F);
             // 
             // objectDataSource1
             // 
@@ -3344,7 +3344,7 @@
             this.PaperKind = System.Drawing.Printing.PaperKind.A4;
             this.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.Pixels;
             this.SnapGridSize = 12.5F;
-            this.Version = "20.1";
+            this.Version = "21.2";
             this.Watermark.PageRange = "1";
             this.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.Rpt_solar_Print_BeforePrint);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();

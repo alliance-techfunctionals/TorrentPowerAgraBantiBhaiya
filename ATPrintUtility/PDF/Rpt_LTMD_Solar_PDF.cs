@@ -924,7 +924,7 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage7 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("Kruti Dev 010", 9),
+                    Font = new System.Drawing.Font("Kruti Dev 010", 6.5f),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify,
                     Text = op[0].L33_MESSAGE7,
                     WordWrap = false,
@@ -1053,9 +1053,9 @@ namespace AT.Print.PDF
                     totalMessages++;
                     XRLabel xrMessageExcessDemand = new XRLabel
                     {
-                        Font = new System.Drawing.Font("Kruti Dev 010", 9),
+                        Font = new System.Drawing.Font("Kruti Dev 010", 6.5f),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                        Text = "fiz; miHkksäk] ,d eq'r ;kstuk ds varxZr 100 izfr'kr C;kt ekQ+h dk ykHk mBkus ds fy,] \nd`Ik;k mijksDr orZeku fcy ds lkFk ekfld fdLr jkf'k : " + op[0].L8_Intrest_Amount.ToString().Replace('.', '-') + " dk Hkqxrku djsaA",
+                        Text = "     fiz; miHkksäk] ,d eq'r ;kstuk ds varxZr 100 izfr'kr C;kt ekQ+h dk ykHk mBkus ds fy,] d`Ik;k mijksDr orZeku fcy ds lkFk ekfld fdLr jkf'k : \r\n     " + op[0].L8_Intrest_Amount.ToString().Replace('.', '-') + " dk Hkqxrku djsaA",
                         WordWrap = false,
                         AutoWidth = true,
                         Multiline = true,

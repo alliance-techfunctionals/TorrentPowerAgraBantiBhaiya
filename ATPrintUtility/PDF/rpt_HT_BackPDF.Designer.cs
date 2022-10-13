@@ -501,9 +501,9 @@
             // xrPictureBox1
             // 
             this.xrPictureBox1.ImageAlignment = DevExpress.XtraPrinting.ImageAlignment.MiddleCenter;
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(519.7458F, 82.54164F);
+            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(519.25F, 39.17F);
             this.xrPictureBox1.Name = "xrPictureBox1";
-            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(265.7949F, 218.0589F);
+            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(259.0042F, 243.2117F);
             // 
             // xrPictureBox3
             // 

@@ -278,9 +278,9 @@
             // 
             // xrPictureBox1
             // 
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(526.8349F, 27.16667F);
+            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(519.25F, 39.17F);
             this.xrPictureBox1.Name = "xrPictureBox1";
-            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(286.1651F, 254.92F);
+            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(259F, 243.21F);
             // 
             // objectDataSource1
             // 
@@ -310,7 +310,7 @@
             this.PageWidth = 827;
             this.PaperKind = System.Drawing.Printing.PaperKind.A4;
             this.ScriptsSource = "\r\n";
-            this.Version = "20.1";
+            this.Version = "21.2";
             this.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.Rpt_HT_Back_BeforePrint);
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel1)).EndInit();
