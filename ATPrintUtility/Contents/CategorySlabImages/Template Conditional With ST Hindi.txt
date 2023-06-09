@@ -1,7 +1,9 @@
-LMV 1B|0|999|Û ek- mRrj izns'k fon~;qr fu;ked vk;ksx }kjk fnukad 20 tqykbZ 2022 dks vuqeksfnr ubZ fon~;qr njsa fnukad 04 vxLr 2022 ls izHkkoh gSaA vkidk orZeku fcy --    
+LMV 1B|0|999|Û ek- mRrj izns'k fon~;qr fu;ked vk;ksx }kjk fnukad 20 tqykbZ 2022 dks vuqeksfnr ubZ fon~;qr njsa fnukad 04 vxLr 2022 ls izHkkoh gSaA vkidk orZeku fcy --   
 LMV 1B|0|999|    vkuqikfrd vk/kkj ij cuk;k x;k gSA ;w-ih-bZ-vkj-lh- VSfjQ vkMZj dh izfrfyfi ;w-ih-bZ-vkj-lh- vFkok VksjsaV ikoj dh osclkbV ls izkIr dj ldrs gSaA
-LMV 1C|0|999|Û ek- mRrj izns'k fon~;qr fu;ked vk;ksx }kjk fnukad 20 tqykbZ 2022 dks vuqeksfnr ubZ fon~;qr njsa fnukad 04 vxLr 2022 ls izHkkoh gSaA vkidk orZeku fcy vkuqikfrd vk/kkj .    
-LMV 1C|0|999|     ij cuk;k x;k gSA ;w-ih-bZ-vkj-lh- VSfjQ vkMZj dh izfrfyfi ;w-ih-bZ-vkj-lh- vFkok VksjsaV ikoj dh osclkbV ls izkIr dj ldrs gSaA
+LMV 1C|0|999|Û ek- mRrj izns'k fon~;qr fu;ked vk;ksx }kjk fnukad 20 tqykbZ 2022 dks vuqeksfnr ubZ fon~;qr 
+LMV 1C|0|999|     njsa fnukad 04 vxLr 2022 ls izHkkoh gSaA vkidk orZeku fcy  vkuqikfrd vk/kkj ij cuk;k 
+LMV 1C|0|999|     x;k gSA ;w-ih-bZ-vkj-lh- VSfjQ vkMZj dh izfrfyfi ;w-ih-bZ-vkj-lh- vFkok VksjsaV ikoj dh 
+LMV 1C|0|999|     osclkbV ls izkIr dj ldrs gSaA
 LMV 2B|0|999|Û ek- mRrj izns'k fon~;qr fu;ked vk;ksx }kjk fnukad 20 tqykbZ 2022 dks vuqeksfnr ubZ fon~;qr njsa fnukad 04 vxLr 2022 ls izHkkoh gSaA vkidk orZeku fcy 
 LMV 2B|0|999|    vkuqikfrd vk/kkj ij cuk;k x;k gSA ;w-ih-bZ-vkj-lh- VSfjQ vkMZj dh izfrfyfi ;w-ih-bZ-vkj-lh- vFkok VksjsaV ikoj dh osclkbV ls izkIr dj ldrs gSaA
 LMV 2C|0|999|Û ek- mRrj izns'k fon~;qr fu;ked vk;ksx }kjk fnukad 20 tqykbZ 2022 dks vuqeksfnr ubZ fon~;qr njsa fnukad 04 vxLr 2022 ls izHkkoh gSaA vkidk orZeku fcy 
@@ -14,8 +16,10 @@ LMV 4A|0|999|Û ek- mRrj izns'k fon~;qr fu;ked vk;ksx }kjk fnukad 20 tqykbZ 2022
 LMV 4A|0|999|     vkuqikfrd vk/kkj ij cuk;k x;k gSA ;w-ih-bZ-vkj-lh- VSfjQ vkMZj dh izfrfyfi ;w-ih-bZ-vkj-lh- vFkok VksjsaV ikoj dh osclkbV ls izkIr dj ldrs gSaA
 LMV 4B|0|999|Û ek- mRrj izns'k fon~;qr fu;ked vk;ksx }kjk fnukad 20 tqykbZ 2022 dks vuqeksfnr ubZ fon~;qr njsa fnukad 04 vxLr 2022 ls izHkkoh gSaA vkidk orZeku fcy 
 LMV 4B|0|999|     vkuqikfrd vk/kkj ij cuk;k x;k gSA ;w-ih-bZ-vkj-lh- VSfjQ vkMZj dh izfrfyfi ;w-ih-bZ-vkj-lh- vFkok VksjsaV ikoj dh osclkbV ls izkIr dj ldrs gSaA
-LMV 5B|0|999|Û ek- mRrj izns'k fon~;qr fu;ked vk;ksx }kjk fnukad 20 tqykbZ 2022 dks vuqeksfnr ubZ fon~;qr njsa fnukad 04 vxLr 2022 ls izHkkoh gSaA vkidk orZeku fcy 
-LMV 5B|0|999|     vkuqikfrd vk/kkj ij cuk;k x;k gSA ;w-ih-bZ-vkj-lh- VSfjQ vkMZj dh izfrfyfi ;w-ih-bZ-vkj-lh- vFkok VksjsaV ikoj dh osclkbV ls izkIr dj ldrs gSaA
+LMV 5B|0|999|Û ek- mRrj izns'k fon~;qr fu;ked vk;ksx }kjk fnukad 20 tqykbZ 2022 dks vuqeksfnr ubZ fon~;qr njsa 
+LMV 5B|0|999|     fnukad 04 vxLr 2022 ls izHkkoh gSaA vkidk orZeku fcy vkuqikfrd vk/kkj ij cuk;k x;k gSA 
+LMV 5B|0|999|     ;w-ih-bZ-vkj-lh- VSfjQ vkMZj dh izfrfyfi ;w-ih-bZ-vkj-lh- vFkok VksjsaV ikoj dh osclkbV ls 
+LMV 5B|0|999|     izkIr dj ldrs gSaA
 LMV 6A|0|999|Û ek- mRrj izns'k fon~;qr fu;ked vk;ksx }kjk fnukad 20 tqykbZ 2022 dks vuqeksfnr ubZ fon~;qr njsa fnukad 04 vxLr 2022 ls izHkkoh gSaA vkidk orZeku fcy 
 LMV 6A|0|999|     vkuqikfrd vk/kkj ij cuk;k x;k gSA ;w-ih-bZ-vkj-lh- VSfjQ vkMZj dh izfrfyfi ;w-ih-bZ-vkj-lh- vFkok VksjsaV ikoj dh osclkbV ls izkIr dj ldrs gSaA
 LMV 7A|0|999|Û ek- mRrj izns'k fon~;qr fu;ked vk;ksx }kjk fnukad 20 tqykbZ 2022 dks vuqeksfnr ubZ fon~;qr njsa fnukad 04 vxLr 2022 ls izHkkoh gSaA vkidk orZeku fcy  
@@ -55,6 +59,7 @@ LMV 10E|0|999|    vkuqikfrd vk/kkj ij cuk;k x;k gSA ;w-ih-bZ-vkj-lh- VSfjQ vkMZj
 LMV 10F|0|999|Û ek- mRrj izns'k fon~;qr fu;ked vk;ksx }kjk fnukad 20 tqykbZ 2022 dks vuqeksfnr ubZ fon~;qr njsa fnukad 04 vxLr 2022 ls izHkkoh gSaA vkidk orZeku fcy
 LMV 10F|0|999|    vkuqikfrd vk/kkj ij cuk;k x;k gSA ;w-ih-bZ-vkj-lh- VSfjQ vkMZj dh izfrfyfi ;w-ih-bZ-vkj-lh- vFkok VksjsaV ikoj dh osclkbV ls izkIr dj ldrs gSaA
 LMV 10G|0|999|Û ek- mRrj izns'k fon~;qr fu;ked vk;ksx }kjk fnukad 20 tqykbZ 2022 dks vuqeksfnr ubZ fon~;qr njsa fnukad 04 vxLr 2022 ls izHkkoh gSaA vkidk orZeku fcy 
-LMV 10G|0|999|   vkuqikfrd vk/kkj  ij cuk;k x;k gSA ;w-ih-bZ-vkj-lh- VSfjQ vkMZj dh izfrfyfi ;w-ih-bZ-vkj-lh- vFkok VksjsaV ikoj dh osclkbV ls izkIr dj ldrs gSaA
-LMV 5B|0|999|Û  mizikdkfy ds funsZ'kkuqlkj lHkh futh uydwi ¼,y0,e0oh&5½ miHkksDrkvksa dks fu/kkZfjr VSfjQ nj ¼ÅtkZ pktZ@fQDl pktZ@fefuee pktZ½ ij 50 izfr'kr NwV iznku dh x;h gS]
-LMV 5B|0|999|     tks vkids orZeku fcy esa lek;ksftr dj nh x;h gSA
+LMV 10G|0|999|   vkuqikfrd vk/kkj  ij cuk;k x;k gSA ;w-ih-bZ-vkj-lh- VSfjQ vkMZj dh izfrfyfi ;w-ih-bZ-vkj-lh- vFkok VksjsaV ikoj dh osclkbV ls izkIr dj ldrs gSaA 
+LMV 5B|0|999|Û  mizikdkfy ds funsZ'kkuqlkj lHkh futh uydwi ¼,y0,e0oh&5½ miHkksDrkvksa dks fu/kkZfjr VSfjQ nj 
+LMV 5B|0|999|   ¼ÅtkZ pktZ@fQDl pktZ@fefuee pktZ½ ij 50 izfr'kr NwV iznku dh x;h gS] tks vkids orZeku
+LMV 5B|0|999|   fcy esa lek;ksftr dj nh x;h gSA

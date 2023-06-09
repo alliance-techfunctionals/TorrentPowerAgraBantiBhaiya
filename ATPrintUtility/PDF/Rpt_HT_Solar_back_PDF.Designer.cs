@@ -135,34 +135,34 @@
             this.xrLabel64 = new DevExpress.XtraReports.UI.XRLabel();
             this.MTR1_KW4_ex = new DevExpress.XtraReports.UI.XRLabel();
             this.MTR1_KWH4_ex = new DevExpress.XtraReports.UI.XRLabel();
-            this.MTR1_NET4 = new DevExpress.XtraReports.UI.XRLabel();
-            this.MTR1_Pre4 = new DevExpress.XtraReports.UI.XRLabel();
-            this.MTR1_NBU4 = new DevExpress.XtraReports.UI.XRLabel();
-            this.MTR1_CF4 = new DevExpress.XtraReports.UI.XRLabel();
+            MTR1_NET4 = new DevExpress.XtraReports.UI.XRLabel();
+            MTR1_Pre4 = new DevExpress.XtraReports.UI.XRLabel();
+            MTR1_NBU4 = new DevExpress.XtraReports.UI.XRLabel();
+            MTR1_CF4 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel57 = new DevExpress.XtraReports.UI.XRLabel();
             this.MTR1_KW3_ex = new DevExpress.XtraReports.UI.XRLabel();
             this.MTR1_KWH3_ex = new DevExpress.XtraReports.UI.XRLabel();
-            this.MTR1_NET3 = new DevExpress.XtraReports.UI.XRLabel();
-            this.MTR1_Pre3 = new DevExpress.XtraReports.UI.XRLabel();
-            this.MTR1_NBU3 = new DevExpress.XtraReports.UI.XRLabel();
-            this.MTR1_CF3 = new DevExpress.XtraReports.UI.XRLabel();
+            MTR1_NET3 = new DevExpress.XtraReports.UI.XRLabel();
+            MTR1_Pre3 = new DevExpress.XtraReports.UI.XRLabel();
+            MTR1_NBU3 = new DevExpress.XtraReports.UI.XRLabel();
+            MTR1_CF3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel50 = new DevExpress.XtraReports.UI.XRLabel();
             this.MTR1_KW2_ex = new DevExpress.XtraReports.UI.XRLabel();
             this.MTR1_KWH2_ex = new DevExpress.XtraReports.UI.XRLabel();
-            this.MTR1_NET2 = new DevExpress.XtraReports.UI.XRLabel();
-            this.MTR1_Pre2 = new DevExpress.XtraReports.UI.XRLabel();
-            this.MTR1_NBU2 = new DevExpress.XtraReports.UI.XRLabel();
-            this.MTR1_CF2 = new DevExpress.XtraReports.UI.XRLabel();
+            MTR1_NET2 = new DevExpress.XtraReports.UI.XRLabel();
+            MTR1_Pre2 = new DevExpress.XtraReports.UI.XRLabel();
+            MTR1_NBU2 = new DevExpress.XtraReports.UI.XRLabel();
+            MTR1_CF2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel43 = new DevExpress.XtraReports.UI.XRLabel();
             this.MTR1_KW3 = new DevExpress.XtraReports.UI.XRLabel();
             this.MTR1_KWH3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel36 = new DevExpress.XtraReports.UI.XRLabel();
             this.MTR1_KW1_ex = new DevExpress.XtraReports.UI.XRLabel();
             this.MTR1_KWH1_ex = new DevExpress.XtraReports.UI.XRLabel();
-            this.MTR1_NET1 = new DevExpress.XtraReports.UI.XRLabel();
-            this.MTR1_Pre1 = new DevExpress.XtraReports.UI.XRLabel();
-            this.MTR1_NBU1 = new DevExpress.XtraReports.UI.XRLabel();
-            this.MTR1_CF1 = new DevExpress.XtraReports.UI.XRLabel();
+            MTR1_NET1 = new DevExpress.XtraReports.UI.XRLabel();
+            MTR1_Pre1 = new DevExpress.XtraReports.UI.XRLabel();
+            MTR1_NBU1 = new DevExpress.XtraReports.UI.XRLabel();
+            MTR1_CF1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel29 = new DevExpress.XtraReports.UI.XRLabel();
             this.MTR1_KW4 = new DevExpress.XtraReports.UI.XRLabel();
             this.MTR1_KWH4 = new DevExpress.XtraReports.UI.XRLabel();
@@ -175,10 +175,10 @@
             this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
             this.mtr1 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
+            xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
+            xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
+            xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
+            xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
@@ -1044,34 +1044,34 @@
             this.xrLabel64,
             this.MTR1_KW4_ex,
             this.MTR1_KWH4_ex,
-            this.MTR1_NET4,
-            this.MTR1_Pre4,
-            this.MTR1_NBU4,
-            this.MTR1_CF4,
+            MTR1_NET4,
+            MTR1_Pre4,
+            MTR1_NBU4,
+            MTR1_CF4,
             this.xrLabel57,
             this.MTR1_KW3_ex,
             this.MTR1_KWH3_ex,
-            this.MTR1_NET3,
-            this.MTR1_Pre3,
-            this.MTR1_NBU3,
-            this.MTR1_CF3,
+            MTR1_NET3,
+            MTR1_Pre3,
+            MTR1_NBU3,
+            MTR1_CF3,
             this.xrLabel50,
             this.MTR1_KW2_ex,
             this.MTR1_KWH2_ex,
-            this.MTR1_NET2,
-            this.MTR1_Pre2,
-            this.MTR1_NBU2,
-            this.MTR1_CF2,
+            MTR1_NET2,
+            MTR1_Pre2,
+            MTR1_NBU2,
+            MTR1_CF2,
             this.xrLabel43,
             this.MTR1_KW3,
             this.MTR1_KWH3,
             this.xrLabel36,
             this.MTR1_KW1_ex,
             this.MTR1_KWH1_ex,
-            this.MTR1_NET1,
-            this.MTR1_Pre1,
-            this.MTR1_NBU1,
-            this.MTR1_CF1,
+            MTR1_NET1,
+            MTR1_Pre1,
+            MTR1_NBU1,
+            MTR1_CF1,
             this.xrLabel29,
             this.MTR1_KW4,
             this.MTR1_KWH4,
@@ -1084,10 +1084,10 @@
             this.xrLabel14,
             this.xrLabel13,
             this.mtr1,
-            this.xrLabel10,
-            this.xrLabel9,
-            this.xrLabel8,
-            this.xrLabel7,
+            xrLabel10,
+            xrLabel9,
+            xrLabel8,
+            xrLabel7,
             this.xrLabel6,
             this.xrLabel5,
             this.xrLabel4,
@@ -1681,51 +1681,51 @@
             // 
             // MTR1_NET4
             // 
-            this.MTR1_NET4.Font = new System.Drawing.Font("Helvetica", 6F);
-            this.MTR1_NET4.LocationFloat = new DevExpress.Utils.PointFloat(209.8264F, 118.5201F);
-            this.MTR1_NET4.Multiline = true;
-            this.MTR1_NET4.Name = "MTR1_NET4";
-            this.MTR1_NET4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.MTR1_NET4.SizeF = new System.Drawing.SizeF(42F, 19.62F);
-            this.MTR1_NET4.StylePriority.UseFont = false;
-            this.MTR1_NET4.StylePriority.UseTextAlignment = false;
-            this.MTR1_NET4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            MTR1_NET4.Font = new System.Drawing.Font("Helvetica", 6F);
+            MTR1_NET4.LocationFloat = new DevExpress.Utils.PointFloat(209.8264F, 118.5201F);
+            MTR1_NET4.Multiline = true;
+            MTR1_NET4.Name = "MTR1_NET4";
+            MTR1_NET4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            MTR1_NET4.SizeF = new System.Drawing.SizeF(42F, 19.62F);
+            MTR1_NET4.StylePriority.UseFont = false;
+            MTR1_NET4.StylePriority.UseTextAlignment = false;
+            MTR1_NET4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // MTR1_Pre4
             // 
-            this.MTR1_Pre4.Font = new System.Drawing.Font("Helvetica", 6F);
-            this.MTR1_Pre4.LocationFloat = new DevExpress.Utils.PointFloat(209.8264F, 138.1401F);
-            this.MTR1_Pre4.Multiline = true;
-            this.MTR1_Pre4.Name = "MTR1_Pre4";
-            this.MTR1_Pre4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.MTR1_Pre4.SizeF = new System.Drawing.SizeF(42F, 19.62F);
-            this.MTR1_Pre4.StylePriority.UseFont = false;
-            this.MTR1_Pre4.StylePriority.UseTextAlignment = false;
-            this.MTR1_Pre4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            MTR1_Pre4.Font = new System.Drawing.Font("Helvetica", 6F);
+            MTR1_Pre4.LocationFloat = new DevExpress.Utils.PointFloat(209.8264F, 138.1401F);
+            MTR1_Pre4.Multiline = true;
+            MTR1_Pre4.Name = "MTR1_Pre4";
+            MTR1_Pre4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            MTR1_Pre4.SizeF = new System.Drawing.SizeF(42F, 19.62F);
+            MTR1_Pre4.StylePriority.UseFont = false;
+            MTR1_Pre4.StylePriority.UseTextAlignment = false;
+            MTR1_Pre4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // MTR1_NBU4
             // 
-            this.MTR1_NBU4.Font = new System.Drawing.Font("Helvetica", 6F);
-            this.MTR1_NBU4.LocationFloat = new DevExpress.Utils.PointFloat(209.8264F, 157.7601F);
-            this.MTR1_NBU4.Multiline = true;
-            this.MTR1_NBU4.Name = "MTR1_NBU4";
-            this.MTR1_NBU4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.MTR1_NBU4.SizeF = new System.Drawing.SizeF(42F, 19.62F);
-            this.MTR1_NBU4.StylePriority.UseFont = false;
-            this.MTR1_NBU4.StylePriority.UseTextAlignment = false;
-            this.MTR1_NBU4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            MTR1_NBU4.Font = new System.Drawing.Font("Helvetica", 6F);
+            MTR1_NBU4.LocationFloat = new DevExpress.Utils.PointFloat(209.8264F, 157.7601F);
+            MTR1_NBU4.Multiline = true;
+            MTR1_NBU4.Name = "MTR1_NBU4";
+            MTR1_NBU4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            MTR1_NBU4.SizeF = new System.Drawing.SizeF(42F, 19.62F);
+            MTR1_NBU4.StylePriority.UseFont = false;
+            MTR1_NBU4.StylePriority.UseTextAlignment = false;
+            MTR1_NBU4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // MTR1_CF4
             // 
-            this.MTR1_CF4.Font = new System.Drawing.Font("Helvetica", 6F);
-            this.MTR1_CF4.LocationFloat = new DevExpress.Utils.PointFloat(209.8264F, 177.38F);
-            this.MTR1_CF4.Multiline = true;
-            this.MTR1_CF4.Name = "MTR1_CF4";
-            this.MTR1_CF4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.MTR1_CF4.SizeF = new System.Drawing.SizeF(42F, 19.62F);
-            this.MTR1_CF4.StylePriority.UseFont = false;
-            this.MTR1_CF4.StylePriority.UseTextAlignment = false;
-            this.MTR1_CF4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            MTR1_CF4.Font = new System.Drawing.Font("Helvetica", 6F);
+            MTR1_CF4.LocationFloat = new DevExpress.Utils.PointFloat(209.8264F, 177.38F);
+            MTR1_CF4.Multiline = true;
+            MTR1_CF4.Name = "MTR1_CF4";
+            MTR1_CF4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            MTR1_CF4.SizeF = new System.Drawing.SizeF(42F, 19.62F);
+            MTR1_CF4.StylePriority.UseFont = false;
+            MTR1_CF4.StylePriority.UseTextAlignment = false;
+            MTR1_CF4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // xrLabel57
             // 
@@ -1766,51 +1766,51 @@
             // 
             // MTR1_NET3
             // 
-            this.MTR1_NET3.Font = new System.Drawing.Font("Helvetica", 6F);
-            this.MTR1_NET3.LocationFloat = new DevExpress.Utils.PointFloat(167.9249F, 118.5201F);
-            this.MTR1_NET3.Multiline = true;
-            this.MTR1_NET3.Name = "MTR1_NET3";
-            this.MTR1_NET3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.MTR1_NET3.SizeF = new System.Drawing.SizeF(42F, 19.62F);
-            this.MTR1_NET3.StylePriority.UseFont = false;
-            this.MTR1_NET3.StylePriority.UseTextAlignment = false;
-            this.MTR1_NET3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            MTR1_NET3.Font = new System.Drawing.Font("Helvetica", 6F);
+            MTR1_NET3.LocationFloat = new DevExpress.Utils.PointFloat(167.9249F, 118.5201F);
+            MTR1_NET3.Multiline = true;
+            MTR1_NET3.Name = "MTR1_NET3";
+            MTR1_NET3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            MTR1_NET3.SizeF = new System.Drawing.SizeF(42F, 19.62F);
+            MTR1_NET3.StylePriority.UseFont = false;
+            MTR1_NET3.StylePriority.UseTextAlignment = false;
+            MTR1_NET3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // MTR1_Pre3
             // 
-            this.MTR1_Pre3.Font = new System.Drawing.Font("Helvetica", 6F);
-            this.MTR1_Pre3.LocationFloat = new DevExpress.Utils.PointFloat(167.9249F, 138.1401F);
-            this.MTR1_Pre3.Multiline = true;
-            this.MTR1_Pre3.Name = "MTR1_Pre3";
-            this.MTR1_Pre3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.MTR1_Pre3.SizeF = new System.Drawing.SizeF(42F, 19.62F);
-            this.MTR1_Pre3.StylePriority.UseFont = false;
-            this.MTR1_Pre3.StylePriority.UseTextAlignment = false;
-            this.MTR1_Pre3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            MTR1_Pre3.Font = new System.Drawing.Font("Helvetica", 6F);
+            MTR1_Pre3.LocationFloat = new DevExpress.Utils.PointFloat(167.9249F, 138.1401F);
+            MTR1_Pre3.Multiline = true;
+            MTR1_Pre3.Name = "MTR1_Pre3";
+            MTR1_Pre3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            MTR1_Pre3.SizeF = new System.Drawing.SizeF(42F, 19.62F);
+            MTR1_Pre3.StylePriority.UseFont = false;
+            MTR1_Pre3.StylePriority.UseTextAlignment = false;
+            MTR1_Pre3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // MTR1_NBU3
             // 
-            this.MTR1_NBU3.Font = new System.Drawing.Font("Helvetica", 6F);
-            this.MTR1_NBU3.LocationFloat = new DevExpress.Utils.PointFloat(167.9249F, 157.7601F);
-            this.MTR1_NBU3.Multiline = true;
-            this.MTR1_NBU3.Name = "MTR1_NBU3";
-            this.MTR1_NBU3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.MTR1_NBU3.SizeF = new System.Drawing.SizeF(42F, 19.62F);
-            this.MTR1_NBU3.StylePriority.UseFont = false;
-            this.MTR1_NBU3.StylePriority.UseTextAlignment = false;
-            this.MTR1_NBU3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            MTR1_NBU3.Font = new System.Drawing.Font("Helvetica", 6F);
+            MTR1_NBU3.LocationFloat = new DevExpress.Utils.PointFloat(167.9249F, 157.7601F);
+            MTR1_NBU3.Multiline = true;
+            MTR1_NBU3.Name = "MTR1_NBU3";
+            MTR1_NBU3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            MTR1_NBU3.SizeF = new System.Drawing.SizeF(42F, 19.62F);
+            MTR1_NBU3.StylePriority.UseFont = false;
+            MTR1_NBU3.StylePriority.UseTextAlignment = false;
+            MTR1_NBU3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // MTR1_CF3
             // 
-            this.MTR1_CF3.Font = new System.Drawing.Font("Helvetica", 6F);
-            this.MTR1_CF3.LocationFloat = new DevExpress.Utils.PointFloat(167.9249F, 177.38F);
-            this.MTR1_CF3.Multiline = true;
-            this.MTR1_CF3.Name = "MTR1_CF3";
-            this.MTR1_CF3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.MTR1_CF3.SizeF = new System.Drawing.SizeF(42F, 19.62F);
-            this.MTR1_CF3.StylePriority.UseFont = false;
-            this.MTR1_CF3.StylePriority.UseTextAlignment = false;
-            this.MTR1_CF3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            MTR1_CF3.Font = new System.Drawing.Font("Helvetica", 6F);
+            MTR1_CF3.LocationFloat = new DevExpress.Utils.PointFloat(167.9249F, 177.38F);
+            MTR1_CF3.Multiline = true;
+            MTR1_CF3.Name = "MTR1_CF3";
+            MTR1_CF3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            MTR1_CF3.SizeF = new System.Drawing.SizeF(42F, 19.62F);
+            MTR1_CF3.StylePriority.UseFont = false;
+            MTR1_CF3.StylePriority.UseTextAlignment = false;
+            MTR1_CF3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // xrLabel50
             // 
@@ -1851,51 +1851,51 @@
             // 
             // MTR1_NET2
             // 
-            this.MTR1_NET2.Font = new System.Drawing.Font("Helvetica", 6F);
-            this.MTR1_NET2.LocationFloat = new DevExpress.Utils.PointFloat(126.4743F, 117.5201F);
-            this.MTR1_NET2.Multiline = true;
-            this.MTR1_NET2.Name = "MTR1_NET2";
-            this.MTR1_NET2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.MTR1_NET2.SizeF = new System.Drawing.SizeF(42F, 19.62F);
-            this.MTR1_NET2.StylePriority.UseFont = false;
-            this.MTR1_NET2.StylePriority.UseTextAlignment = false;
-            this.MTR1_NET2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            MTR1_NET2.Font = new System.Drawing.Font("Helvetica", 6F);
+            MTR1_NET2.LocationFloat = new DevExpress.Utils.PointFloat(126.4743F, 117.5201F);
+            MTR1_NET2.Multiline = true;
+            MTR1_NET2.Name = "MTR1_NET2";
+            MTR1_NET2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            MTR1_NET2.SizeF = new System.Drawing.SizeF(42F, 19.62F);
+            MTR1_NET2.StylePriority.UseFont = false;
+            MTR1_NET2.StylePriority.UseTextAlignment = false;
+            MTR1_NET2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // MTR1_Pre2
             // 
-            this.MTR1_Pre2.Font = new System.Drawing.Font("Helvetica", 6F);
-            this.MTR1_Pre2.LocationFloat = new DevExpress.Utils.PointFloat(126.4743F, 137.1401F);
-            this.MTR1_Pre2.Multiline = true;
-            this.MTR1_Pre2.Name = "MTR1_Pre2";
-            this.MTR1_Pre2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.MTR1_Pre2.SizeF = new System.Drawing.SizeF(42F, 19.62F);
-            this.MTR1_Pre2.StylePriority.UseFont = false;
-            this.MTR1_Pre2.StylePriority.UseTextAlignment = false;
-            this.MTR1_Pre2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            MTR1_Pre2.Font = new System.Drawing.Font("Helvetica", 6F);
+            MTR1_Pre2.LocationFloat = new DevExpress.Utils.PointFloat(126.4743F, 137.1401F);
+            MTR1_Pre2.Multiline = true;
+            MTR1_Pre2.Name = "MTR1_Pre2";
+            MTR1_Pre2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            MTR1_Pre2.SizeF = new System.Drawing.SizeF(42F, 19.62F);
+            MTR1_Pre2.StylePriority.UseFont = false;
+            MTR1_Pre2.StylePriority.UseTextAlignment = false;
+            MTR1_Pre2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // MTR1_NBU2
             // 
-            this.MTR1_NBU2.Font = new System.Drawing.Font("Helvetica", 6F);
-            this.MTR1_NBU2.LocationFloat = new DevExpress.Utils.PointFloat(126.4743F, 156.7601F);
-            this.MTR1_NBU2.Multiline = true;
-            this.MTR1_NBU2.Name = "MTR1_NBU2";
-            this.MTR1_NBU2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.MTR1_NBU2.SizeF = new System.Drawing.SizeF(42F, 19.62F);
-            this.MTR1_NBU2.StylePriority.UseFont = false;
-            this.MTR1_NBU2.StylePriority.UseTextAlignment = false;
-            this.MTR1_NBU2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            MTR1_NBU2.Font = new System.Drawing.Font("Helvetica", 6F);
+            MTR1_NBU2.LocationFloat = new DevExpress.Utils.PointFloat(126.4743F, 156.7601F);
+            MTR1_NBU2.Multiline = true;
+            MTR1_NBU2.Name = "MTR1_NBU2";
+            MTR1_NBU2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            MTR1_NBU2.SizeF = new System.Drawing.SizeF(42F, 19.62F);
+            MTR1_NBU2.StylePriority.UseFont = false;
+            MTR1_NBU2.StylePriority.UseTextAlignment = false;
+            MTR1_NBU2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // MTR1_CF2
             // 
-            this.MTR1_CF2.Font = new System.Drawing.Font("Helvetica", 6F);
-            this.MTR1_CF2.LocationFloat = new DevExpress.Utils.PointFloat(126.4743F, 176.38F);
-            this.MTR1_CF2.Multiline = true;
-            this.MTR1_CF2.Name = "MTR1_CF2";
-            this.MTR1_CF2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.MTR1_CF2.SizeF = new System.Drawing.SizeF(42F, 19.62F);
-            this.MTR1_CF2.StylePriority.UseFont = false;
-            this.MTR1_CF2.StylePriority.UseTextAlignment = false;
-            this.MTR1_CF2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            MTR1_CF2.Font = new System.Drawing.Font("Helvetica", 6F);
+            MTR1_CF2.LocationFloat = new DevExpress.Utils.PointFloat(126.4743F, 176.38F);
+            MTR1_CF2.Multiline = true;
+            MTR1_CF2.Name = "MTR1_CF2";
+            MTR1_CF2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            MTR1_CF2.SizeF = new System.Drawing.SizeF(42F, 19.62F);
+            MTR1_CF2.StylePriority.UseFont = false;
+            MTR1_CF2.StylePriority.UseTextAlignment = false;
+            MTR1_CF2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // xrLabel43
             // 
@@ -1973,51 +1973,51 @@
             // 
             // MTR1_NET1
             // 
-            this.MTR1_NET1.Font = new System.Drawing.Font("Helvetica", 6F);
-            this.MTR1_NET1.LocationFloat = new DevExpress.Utils.PointFloat(85.02361F, 117.5201F);
-            this.MTR1_NET1.Multiline = true;
-            this.MTR1_NET1.Name = "MTR1_NET1";
-            this.MTR1_NET1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.MTR1_NET1.SizeF = new System.Drawing.SizeF(42F, 19.62F);
-            this.MTR1_NET1.StylePriority.UseFont = false;
-            this.MTR1_NET1.StylePriority.UseTextAlignment = false;
-            this.MTR1_NET1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            MTR1_NET1.Font = new System.Drawing.Font("Helvetica", 6F);
+            MTR1_NET1.LocationFloat = new DevExpress.Utils.PointFloat(85.02361F, 117.5201F);
+            MTR1_NET1.Multiline = true;
+            MTR1_NET1.Name = "MTR1_NET1";
+            MTR1_NET1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            MTR1_NET1.SizeF = new System.Drawing.SizeF(42F, 19.62F);
+            MTR1_NET1.StylePriority.UseFont = false;
+            MTR1_NET1.StylePriority.UseTextAlignment = false;
+            MTR1_NET1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // MTR1_Pre1
             // 
-            this.MTR1_Pre1.Font = new System.Drawing.Font("Helvetica", 6F);
-            this.MTR1_Pre1.LocationFloat = new DevExpress.Utils.PointFloat(85.02361F, 137.1401F);
-            this.MTR1_Pre1.Multiline = true;
-            this.MTR1_Pre1.Name = "MTR1_Pre1";
-            this.MTR1_Pre1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.MTR1_Pre1.SizeF = new System.Drawing.SizeF(42F, 19.62F);
-            this.MTR1_Pre1.StylePriority.UseFont = false;
-            this.MTR1_Pre1.StylePriority.UseTextAlignment = false;
-            this.MTR1_Pre1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            MTR1_Pre1.Font = new System.Drawing.Font("Helvetica", 6F);
+            MTR1_Pre1.LocationFloat = new DevExpress.Utils.PointFloat(85.02361F, 137.1401F);
+            MTR1_Pre1.Multiline = true;
+            MTR1_Pre1.Name = "MTR1_Pre1";
+            MTR1_Pre1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            MTR1_Pre1.SizeF = new System.Drawing.SizeF(42F, 19.62F);
+            MTR1_Pre1.StylePriority.UseFont = false;
+            MTR1_Pre1.StylePriority.UseTextAlignment = false;
+            MTR1_Pre1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // MTR1_NBU1
             // 
-            this.MTR1_NBU1.Font = new System.Drawing.Font("Helvetica", 6F);
-            this.MTR1_NBU1.LocationFloat = new DevExpress.Utils.PointFloat(85.02361F, 156.7601F);
-            this.MTR1_NBU1.Multiline = true;
-            this.MTR1_NBU1.Name = "MTR1_NBU1";
-            this.MTR1_NBU1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.MTR1_NBU1.SizeF = new System.Drawing.SizeF(42F, 19.62F);
-            this.MTR1_NBU1.StylePriority.UseFont = false;
-            this.MTR1_NBU1.StylePriority.UseTextAlignment = false;
-            this.MTR1_NBU1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            MTR1_NBU1.Font = new System.Drawing.Font("Helvetica", 6F);
+            MTR1_NBU1.LocationFloat = new DevExpress.Utils.PointFloat(85.02361F, 156.7601F);
+            MTR1_NBU1.Multiline = true;
+            MTR1_NBU1.Name = "MTR1_NBU1";
+            MTR1_NBU1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            MTR1_NBU1.SizeF = new System.Drawing.SizeF(42F, 19.62F);
+            MTR1_NBU1.StylePriority.UseFont = false;
+            MTR1_NBU1.StylePriority.UseTextAlignment = false;
+            MTR1_NBU1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // MTR1_CF1
             // 
-            this.MTR1_CF1.Font = new System.Drawing.Font("Helvetica", 6F);
-            this.MTR1_CF1.LocationFloat = new DevExpress.Utils.PointFloat(84.92961F, 176.38F);
-            this.MTR1_CF1.Multiline = true;
-            this.MTR1_CF1.Name = "MTR1_CF1";
-            this.MTR1_CF1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.MTR1_CF1.SizeF = new System.Drawing.SizeF(42F, 19.62F);
-            this.MTR1_CF1.StylePriority.UseFont = false;
-            this.MTR1_CF1.StylePriority.UseTextAlignment = false;
-            this.MTR1_CF1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            MTR1_CF1.Font = new System.Drawing.Font("Helvetica", 6F);
+            MTR1_CF1.LocationFloat = new DevExpress.Utils.PointFloat(84.92961F, 176.38F);
+            MTR1_CF1.Multiline = true;
+            MTR1_CF1.Name = "MTR1_CF1";
+            MTR1_CF1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            MTR1_CF1.SizeF = new System.Drawing.SizeF(42F, 19.62F);
+            MTR1_CF1.StylePriority.UseFont = false;
+            MTR1_CF1.StylePriority.UseTextAlignment = false;
+            MTR1_CF1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // xrLabel29
             // 
@@ -2170,79 +2170,79 @@
             // 
             // xrLabel10
             // 
-            this.xrLabel10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.xrLabel10.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
-            this.xrLabel10.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.xrLabel10.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
-            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(0F, 176.58F);
-            this.xrLabel10.Multiline = true;
-            this.xrLabel10.Name = "xrLabel10";
-            this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel10.SizeF = new System.Drawing.SizeF(766F, 19.62F);
-            this.xrLabel10.StylePriority.UseBorderColor = false;
-            this.xrLabel10.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel10.StylePriority.UseBorders = false;
-            this.xrLabel10.StylePriority.UseFont = false;
-            this.xrLabel10.StylePriority.UseTextAlignment = false;
-            this.xrLabel10.Text = "Carry Forward";
-            this.xrLabel10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            xrLabel10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            xrLabel10.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
+            xrLabel10.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            xrLabel10.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(0F, 176.58F);
+            xrLabel10.Multiline = true;
+            xrLabel10.Name = "xrLabel10";
+            xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            xrLabel10.SizeF = new System.Drawing.SizeF(766F, 19.62F);
+            xrLabel10.StylePriority.UseBorderColor = false;
+            xrLabel10.StylePriority.UseBorderDashStyle = false;
+            xrLabel10.StylePriority.UseBorders = false;
+            xrLabel10.StylePriority.UseFont = false;
+            xrLabel10.StylePriority.UseTextAlignment = false;
+            xrLabel10.Text = "Carry Forward";
+            xrLabel10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel9
             // 
-            this.xrLabel9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.xrLabel9.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
-            this.xrLabel9.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.xrLabel9.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
-            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(0F, 156.96F);
-            this.xrLabel9.Multiline = true;
-            this.xrLabel9.Name = "xrLabel9";
-            this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel9.SizeF = new System.Drawing.SizeF(766F, 19.62F);
-            this.xrLabel9.StylePriority.UseBorderColor = false;
-            this.xrLabel9.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel9.StylePriority.UseBorders = false;
-            this.xrLabel9.StylePriority.UseFont = false;
-            this.xrLabel9.StylePriority.UseTextAlignment = false;
-            this.xrLabel9.Text = "Net Billed Units";
-            this.xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+           xrLabel9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+           xrLabel9.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
+           xrLabel9.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+           xrLabel9.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+           xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(0F, 156.96F);
+           xrLabel9.Multiline = true;
+           xrLabel9.Name = "xrLabel9";
+           xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+           xrLabel9.SizeF = new System.Drawing.SizeF(766F, 19.62F);
+           xrLabel9.StylePriority.UseBorderColor = false;
+           xrLabel9.StylePriority.UseBorderDashStyle = false;
+           xrLabel9.StylePriority.UseBorders = false;
+           xrLabel9.StylePriority.UseFont = false;
+           xrLabel9.StylePriority.UseTextAlignment = false;
+           xrLabel9.Text = "Net Billed Units";
+           xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel8
             // 
-            this.xrLabel8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.xrLabel8.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
-            this.xrLabel8.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.xrLabel8.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
-            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(0F, 137.34F);
-            this.xrLabel8.Multiline = true;
-            this.xrLabel8.Name = "xrLabel8";
-            this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel8.SizeF = new System.Drawing.SizeF(766F, 19.62F);
-            this.xrLabel8.StylePriority.UseBorderColor = false;
-            this.xrLabel8.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel8.StylePriority.UseBorders = false;
-            this.xrLabel8.StylePriority.UseFont = false;
-            this.xrLabel8.StylePriority.UseTextAlignment = false;
-            this.xrLabel8.Text = "Pre. CR Units";
-            this.xrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            xrLabel8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            xrLabel8.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
+            xrLabel8.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            xrLabel8.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(0F, 137.34F);
+            xrLabel8.Multiline = true;
+            xrLabel8.Name = "xrLabel8";
+            xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            xrLabel8.SizeF = new System.Drawing.SizeF(766F, 19.62F);
+            xrLabel8.StylePriority.UseBorderColor = false;
+            xrLabel8.StylePriority.UseBorderDashStyle = false;
+            xrLabel8.StylePriority.UseBorders = false;
+            xrLabel8.StylePriority.UseFont = false;
+            xrLabel8.StylePriority.UseTextAlignment = false;
+            xrLabel8.Text = "Pre. CR Units";
+            xrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel7
             // 
-            this.xrLabel7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.xrLabel7.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
-            this.xrLabel7.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.xrLabel7.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
-            this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(0F, 117.72F);
-            this.xrLabel7.Multiline = true;
-            this.xrLabel7.Name = "xrLabel7";
-            this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel7.SizeF = new System.Drawing.SizeF(766F, 19.62F);
-            this.xrLabel7.StylePriority.UseBorderColor = false;
-            this.xrLabel7.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel7.StylePriority.UseBorders = false;
-            this.xrLabel7.StylePriority.UseFont = false;
-            this.xrLabel7.StylePriority.UseTextAlignment = false;
-            this.xrLabel7.Text = "Net";
-            this.xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+           xrLabel7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+           xrLabel7.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
+           xrLabel7.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+           xrLabel7.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+           xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(0F, 117.72F);
+           xrLabel7.Multiline = true;
+           xrLabel7.Name = "xrLabel7";
+           xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+           xrLabel7.SizeF = new System.Drawing.SizeF(766F, 19.62F);
+           xrLabel7.StylePriority.UseBorderColor = false;
+           xrLabel7.StylePriority.UseBorderDashStyle = false;
+           xrLabel7.StylePriority.UseBorders = false;
+           xrLabel7.StylePriority.UseFont = false;
+           xrLabel7.StylePriority.UseTextAlignment = false;
+           xrLabel7.Text = "Net";
+           xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel6
             // 
@@ -2411,10 +2411,10 @@
         private System.Windows.Forms.BindingSource bindingSource6;
         private DevExpress.XtraReports.UI.XRPanel xrPanel2;
         private DevExpress.XtraReports.UI.XRPanel xrPanel1;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel10;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel9;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel8;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel7;
+        public static DevExpress.XtraReports.UI.XRLabel xrLabel10;
+        public static DevExpress.XtraReports.UI.XRLabel xrLabel9;
+        public static DevExpress.XtraReports.UI.XRLabel xrLabel8;
+        public static DevExpress.XtraReports.UI.XRLabel xrLabel7;
         private DevExpress.XtraReports.UI.XRLabel xrLabel6;
         private DevExpress.XtraReports.UI.XRLabel xrLabel5;
         private DevExpress.XtraReports.UI.XRLabel xrLabel4;
@@ -2422,34 +2422,34 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel2;
         private DevExpress.XtraReports.UI.XRLabel MTR1_KW4_ex;
         private DevExpress.XtraReports.UI.XRLabel MTR1_KWH4_ex;
-        private DevExpress.XtraReports.UI.XRLabel MTR1_NET4;
-        private DevExpress.XtraReports.UI.XRLabel MTR1_Pre4;
-        private DevExpress.XtraReports.UI.XRLabel MTR1_NBU4;
-        private DevExpress.XtraReports.UI.XRLabel MTR1_CF4;
+        public static DevExpress.XtraReports.UI.XRLabel MTR1_NET4;
+        public static DevExpress.XtraReports.UI.XRLabel MTR1_Pre4;
+        public static DevExpress.XtraReports.UI.XRLabel MTR1_NBU4;
+        public static DevExpress.XtraReports.UI.XRLabel MTR1_CF4;
         private DevExpress.XtraReports.UI.XRLabel xrLabel57;
         private DevExpress.XtraReports.UI.XRLabel MTR1_KW3_ex;
         private DevExpress.XtraReports.UI.XRLabel MTR1_KWH3_ex;
-        private DevExpress.XtraReports.UI.XRLabel MTR1_NET3;
-        private DevExpress.XtraReports.UI.XRLabel MTR1_Pre3;
-        private DevExpress.XtraReports.UI.XRLabel MTR1_NBU3;
-        private DevExpress.XtraReports.UI.XRLabel MTR1_CF3;
+        public static DevExpress.XtraReports.UI.XRLabel MTR1_NET3;
+        public static DevExpress.XtraReports.UI.XRLabel MTR1_Pre3;
+        public static DevExpress.XtraReports.UI.XRLabel MTR1_NBU3;
+        public static DevExpress.XtraReports.UI.XRLabel MTR1_CF3;
         private DevExpress.XtraReports.UI.XRLabel xrLabel50;
         private DevExpress.XtraReports.UI.XRLabel MTR1_KW2_ex;
         private DevExpress.XtraReports.UI.XRLabel MTR1_KWH2_ex;
-        private DevExpress.XtraReports.UI.XRLabel MTR1_NET2;
-        private DevExpress.XtraReports.UI.XRLabel MTR1_Pre2;
-        private DevExpress.XtraReports.UI.XRLabel MTR1_NBU2;
-        private DevExpress.XtraReports.UI.XRLabel MTR1_CF2;
+        public static DevExpress.XtraReports.UI.XRLabel MTR1_NET2;
+        public static DevExpress.XtraReports.UI.XRLabel MTR1_Pre2;
+        public static DevExpress.XtraReports.UI.XRLabel MTR1_NBU2;
+        public static DevExpress.XtraReports.UI.XRLabel MTR1_CF2;
         private DevExpress.XtraReports.UI.XRLabel xrLabel43;
         private DevExpress.XtraReports.UI.XRLabel MTR1_KW3;
         private DevExpress.XtraReports.UI.XRLabel MTR1_KWH3;
         private DevExpress.XtraReports.UI.XRLabel xrLabel36;
         private DevExpress.XtraReports.UI.XRLabel MTR1_KW1_ex;
         private DevExpress.XtraReports.UI.XRLabel MTR1_KWH1_ex;
-        private DevExpress.XtraReports.UI.XRLabel MTR1_NET1;
-        private DevExpress.XtraReports.UI.XRLabel MTR1_Pre1;
-        private DevExpress.XtraReports.UI.XRLabel MTR1_NBU1;
-        private DevExpress.XtraReports.UI.XRLabel MTR1_CF1;
+        public static DevExpress.XtraReports.UI.XRLabel MTR1_NET1;
+        public static DevExpress.XtraReports.UI.XRLabel MTR1_Pre1;
+        public static DevExpress.XtraReports.UI.XRLabel MTR1_NBU1;
+        public static DevExpress.XtraReports.UI.XRLabel MTR1_CF1;
         private DevExpress.XtraReports.UI.XRLabel xrLabel29;
         private DevExpress.XtraReports.UI.XRLabel MTR1_KW4;
         private DevExpress.XtraReports.UI.XRLabel MTR1_KWH4;

@@ -17,8 +17,7 @@ namespace AT.Print.PDF
         #region Meter Print
         private void Rpt_LTMD_solar_Back_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
         {
-
-           // var data = sender as Rpt_LTMD_Solar_PDF;
+            // var data = sender as Rpt_LTMD_Solar_PDF;
             //var op = data.DataSource as List<SolarBill>;
 
             var Data = this.DataSource as List<SolarBill>;
@@ -439,8 +438,51 @@ namespace AT.Print.PDF
 
         }
         #endregion
-
-
-
+        public void visible()
+        {
+            xrLabel39.Visible = false;
+            xrLabel7.Visible = false;
+            xrLabel8.Visible = false;
+            xrLabel9.Visible = false;
+            xrLabel10.Visible = false;
+            xrLabel40.Visible = false;
+            xrLabel41.Visible = false;
+            xrLabel42.Visible = false;
+            xrLabel53.Visible = false;
+            xrLabel54.Visible = false;
+            xrLabel55.Visible = false;
+            xrLabel56.Visible = false;
+            xrLabel60.Visible = false;
+            xrLabel61.Visible = false;
+            xrLabel62.Visible = false;
+            xrLabel63.Visible = false;
+            xrLabel67.Visible = false;
+            xrLabel68.Visible = false;
+            xrLabel69.Visible = false;
+            xrLabel70.Visible = false;
+        }
+        public void visibleon()
+        {
+            xrLabel39.Visible = true;
+            xrLabel7.Visible = true;
+            xrLabel8.Visible = true;
+            xrLabel9.Visible = true;
+            xrLabel10.Visible = true;
+            xrLabel40.Visible = true;
+            xrLabel41.Visible = true;
+            xrLabel42.Visible = true;
+            xrLabel53.Visible = true;
+            xrLabel54.Visible = true;
+            xrLabel55.Visible = true;
+            xrLabel56.Visible = true;
+            xrLabel60.Visible = true;
+            xrLabel61.Visible = true;
+            xrLabel62.Visible = true;
+            xrLabel63.Visible = true;
+            xrLabel67.Visible = true;
+            xrLabel68.Visible = true;
+            xrLabel69.Visible = true;
+            xrLabel70.Visible = true;
+        }
     }
 }

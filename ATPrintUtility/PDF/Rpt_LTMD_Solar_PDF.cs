@@ -10,12 +10,14 @@ namespace AT.Print.PDF
 {
     public partial class Rpt_LTMD_Solar_PDF : DevExpress.XtraReports.UI.XtraReport
     {
-        public Rpt_LTMD_Solar_PDF()
+        public Rpt_LTMD_Solar_back_PDF Rpt_LTMD_Solar_back_visible;
+        public Rpt_LTMD_Solar_PDF(Rpt_LTMD_Solar_back_PDF d = null)
         {
             InitializeComponent();
+            Rpt_LTMD_Solar_back_visible =d;
         }
 
-        #region Helper Functions
+      #region Helper Functions
 
         bool IsMessageLimitExceeds(int messagesCount)
         {
@@ -236,7 +238,7 @@ namespace AT.Print.PDF
                 bd_TotalDues.TopF = bd_TotalDues.TopF;
                 bd_TotalDuesVALUE.TopF = bd_TotalDuesVALUE.TopF;
             }
-
+        
             #region  LF Fector
             if (op[0].L6_MTRDET_LF_PERC == "0.00" || op[0].L6_MTRDET_LF_PERC == " " || op[0].L6_MTRDET_LF_PERC == "0")
             {
@@ -587,19 +589,6 @@ namespace AT.Print.PDF
             bd_TotalDuesVALUE.TopF = bd_LatePaymentSurcharges.BottomF;
             bd_TotalDues.TopF = bd_TotalDuesVALUE.TopF;
 
-           
-
-           
-
-
-
-          
-
-
-          
-
-
-
 
             #endregion
 
@@ -924,11 +913,12 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage7 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("Kruti Dev 010", 6.5f),
+                    Font = new System.Drawing.Font("Kruti Dev 010", 9f),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify,
                     Text = op[0].L33_MESSAGE7,
-                    WordWrap = false,
+                    WordWrap = true,
                     AutoWidth = true,
+                    WidthF = 410f,
                     Multiline = true,
                     KeepTogether = true,
                     HeightF = 0.1f,
@@ -1071,6 +1061,42 @@ namespace AT.Print.PDF
                 }
             }
 
+            #endregion
+
+            #region Solar Export Energy Adjustment
+            //Solar Export Energy Adjustment
+
+            if (!(op[0].L8_Solar_Export_Energy == "0.00" || op[0].L8_Solar_Export_Energy == ""))
+            {
+                xrLabel34.Visible = false;
+                xrLabel33.Visible = false;
+                xrLabel35.Visible = false;
+                xrLabel36.Visible = false;
+                kvah21.Visible = false;
+                kva11.Visible = false;
+                kva12.Visible = false;
+                kva13.Visible = false;
+                kva14.Visible = false;
+                Rpt_LTMD_Solar_back_visible?.visible();
+
+                bd_SolarExportEnergy.TopF = bd_TotalCurrentDues.TopF;
+                bd_Solar_Export_Value.TopF = bd_TotalCurrentDuesValues.TopF;
+                bd_TotalCurrentDues.TopF = bd_Arrears.TopF;
+                bd_TotalCurrentDuesValues.TopF = bd_Arrears_values.TopF;
+                bd_Arrears.TopF = bd_TotalDues.TopF;
+                bd_Arrears_values.TopF = bd_TotalDuesVALUE.TopF;
+                bd_TotalDues.TopF = bd_TotalDues.BottomF;
+                bd_TotalDuesVALUE.TopF = bd_TotalDuesVALUE.BottomF;
+
+            }
+            else
+            {
+                Rpt_LTMD_Solar_back_visible?.visibleon();
+                bd_SolarExportEnergy.Visible = false;
+                bd_Solar_Export_Value.Visible = false;
+                bd_SolarExportEnergy.TopF = Subsidy.TopF;
+                bd_Solar_Export_Value.TopF = SubsidyValue.TopF;
+            }
             #endregion
         }
 

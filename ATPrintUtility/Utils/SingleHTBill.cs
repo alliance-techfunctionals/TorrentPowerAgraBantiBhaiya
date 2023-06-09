@@ -64,6 +64,8 @@ namespace AT.Print.Utils
       
         public string L8_ParkingAmount { get; set; }
         public string L8_Subsidy_Charges { get; set; }
+        public string L8_Solar_Export_Energy { get; set; }
+
         public string L8_Intrest_Amount { get; set; }
 
         public string L9_TotDbArr { get; set; }

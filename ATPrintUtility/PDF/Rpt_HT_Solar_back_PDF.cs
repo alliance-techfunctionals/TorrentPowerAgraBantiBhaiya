@@ -14,13 +14,8 @@ namespace AT.Print.PDF
         }
             private void Rpt_HT_solar_Back_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
         {
-
-           // var data = sender as Rpt_LTMD_Solar_PDF;
+            // var data = sender as Rpt_LTMD_Solar_PDF;
             //var op = data.DataSource as List<SolarBill>;
-
-
-
-           
 
             var Data = this.DataSource as List<Solar_Bill_HT>;
             xrPictureBox2.ImageUrl = Application.StartupPath + "\\Contents\\CategorySlabImages\\" + Data[0].L6_TARIFF_DESCR + ".png";
@@ -364,10 +359,6 @@ namespace AT.Print.PDF
                     MTR1_CF3.Text = Data[0].L44_Carry_Forward_Units_TOD3_KVAH;
                     MTR1_CF4.Text = Data[0].L44_Carry_Forward_Units_TOD4_KVAH;
 
-
-
-
-
                 }
 
 
@@ -482,45 +473,53 @@ namespace AT.Print.PDF
                     #endregion
 
                 }
-            }
-
-            
-            
-            
-            
-            
-            
-
-            
-            
-            
-            
-            
-            
-
-            
-            
-            
-            
-            
-            
-
-            
-            
-            
-            
-            
-            
-            
-
-
-            
-            
-            
-            
-            
-            
-
+            }   
+        }
+        public void visible()
+        {
+            xrLabel7.Visible = false;
+            xrLabel8.Visible = false;
+            xrLabel9.Visible = false;
+            xrLabel10.Visible = false;
+            MTR1_NET1.Visible = false;
+            MTR1_NET2.Visible = false;
+            MTR1_NET3.Visible = false;
+            MTR1_NET4.Visible = false;
+            MTR1_Pre1.Visible = false;
+            MTR1_Pre2.Visible = false;
+            MTR1_Pre3.Visible = false;
+            MTR1_Pre4.Visible = false;
+            MTR1_NBU1.Visible = false;
+            MTR1_NBU2.Visible = false;
+            MTR1_NBU3.Visible = false;
+            MTR1_NBU4.Visible = false;
+            MTR1_CF1.Visible = false;
+            MTR1_CF2.Visible = false;
+            MTR1_CF3.Visible = false;
+            MTR1_CF4.Visible = false;
+        }
+        public void visibleon()
+        {
+            xrLabel7.Visible = true;
+            xrLabel8.Visible = true;
+            xrLabel9.Visible = true;
+            xrLabel10.Visible = true;
+            MTR1_NET1.Visible = true;
+            MTR1_NET2.Visible = true;
+            MTR1_NET3.Visible = true;
+            MTR1_NET4.Visible = true;
+            MTR1_Pre1.Visible = true;
+            MTR1_Pre2.Visible = true;
+            MTR1_Pre3.Visible = true;
+            MTR1_Pre4.Visible = true;
+            MTR1_NBU1.Visible = true;
+            MTR1_NBU2.Visible = true;
+            MTR1_NBU3.Visible = true;
+            MTR1_NBU4.Visible = true;
+            MTR1_CF1.Visible = true;
+            MTR1_CF2.Visible = true;
+            MTR1_CF3.Visible = true;
+            MTR1_CF4.Visible = true;
         }
     }
 }

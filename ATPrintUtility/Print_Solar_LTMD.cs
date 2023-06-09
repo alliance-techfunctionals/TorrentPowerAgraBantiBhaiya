@@ -180,8 +180,12 @@ namespace AT.Print
 
                     if (Name == "sbSavePDF")
                     {
+                        AT.Print.PDF.Rpt_LTMD_Solar_back_PDF rpts = new AT.Print.PDF.Rpt_LTMD_Solar_back_PDF
+                        {
+                            DataSource = lstformattedbills,
+                        };
 
-                        AT.Print.PDF.Rpt_LTMD_Solar_PDF rptsd = new AT.Print.PDF.Rpt_LTMD_Solar_PDF
+                        AT.Print.PDF.Rpt_LTMD_Solar_PDF rptsd = new AT.Print.PDF.Rpt_LTMD_Solar_PDF(rpts)
                         {
                             DataSource = lstformattedbills,
                         };
@@ -199,10 +203,6 @@ namespace AT.Print
                         #endregion
 
                         rptsd.CreateDocument(false);
-                        AT.Print.PDF.Rpt_LTMD_Solar_back_PDF rpts = new AT.Print.PDF.Rpt_LTMD_Solar_back_PDF
-                        {
-                            DataSource = lstformattedbills,
-                        };
 
                         #region WaterMark Picture Back Page PDF Solar
                         DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkBackSolar = new DevExpress.XtraPrinting.Drawing.Watermark();
@@ -245,7 +245,11 @@ namespace AT.Print
                              Margins MinMargins = DevExpress.XtraPrinting.Native.DeviceCaps.GetMinMargins(g);
                              Console.WriteLine("Minimum Margins for " + ps.PrinterName + ": " + MinMargins.ToString());
                          }
-                         AT.Print.Rpt_LTMD_Solar_Print rpta = new Rpt_LTMD_Solar_Print
+                        AT.Print.Rpt_LTMD_Solar_Print_Back rptb = new Rpt_LTMD_Solar_Print_Back
+                        {
+                            DataSource = lstformattedbills,
+                        };
+                        AT.Print.Rpt_LTMD_Solar_Print rpta = new Rpt_LTMD_Solar_Print(rptb)
                          {
                              DataSource = lstformattedbills,
                              DisplayName = sht.L6_SERVDET_SERVNO,
@@ -254,10 +258,7 @@ namespace AT.Print
                          rpta.PrinterName = cbDefaultPrinter.SelectedItem.ToString();    //the printername property should be specified before creating a document (which is performed using the xtrareport.createdocument method)
                          rpta.PrintingSystem.Document.Name = sht.L6_SERVDET_SERVNO;
                          rpta.CreateDocument();
-                         AT.Print.Rpt_LTMD_Solar_Print_Back rptb = new Rpt_LTMD_Solar_Print_Back
-                         {
-                             DataSource = lstformattedbills,
-                         };
+                       
                          rptb.CreateDocument();
                          rpta.ModifyDocument(x => { x.AddPages(rptb.Pages); });
                          rpta.PrintingSystem.StartPrint += NonTOD_StartPrint;
@@ -420,7 +421,8 @@ namespace AT.Print
             sht.L8_T_No = dtSolarBill.Rows[7][12].ToString();
             sht.L8_Parking_Amount = dtSolarBill.Rows[7][13].ToString();
             sht.L8_Subsidy_Charges = dtSolarBill.Rows[7][14].ToString();
-            sht.L8_Intrest_Amount = dtSolarBill.Rows[7][15].ToString();
+            sht.L8_Solar_Export_Energy = dtSolarBill.Rows[7][15].ToString();
+            sht.L8_Intrest_Amount = dtSolarBill.Rows[7][16].ToString();
             // Line 8 End
             #endregion
 

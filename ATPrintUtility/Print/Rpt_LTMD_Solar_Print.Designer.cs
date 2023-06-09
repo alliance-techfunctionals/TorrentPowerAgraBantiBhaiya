@@ -182,6 +182,8 @@
             this.xrLabel19 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPanel3 = new DevExpress.XtraReports.UI.XRPanel();
+            this.bd_Solar_Export_Value = new DevExpress.XtraReports.UI.XRLabel();
+            this.bd_SolarExportEnergy = new DevExpress.XtraReports.UI.XRLabel();
             this.SubsidyValue = new DevExpress.XtraReports.UI.XRLabel();
             this.Subsidy = new DevExpress.XtraReports.UI.XRLabel();
             this.bd_OtherValues = new DevExpress.XtraReports.UI.XRLabel();
@@ -342,7 +344,7 @@
             this.xrLabel3.Dpi = 96F;
             this.xrLabel3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "trim([L1_Customer_PAN])")});
-            this.xrLabel3.Font = new System.Drawing.Font("DIN Pro Regular", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(70F, 232.174F);
             this.xrLabel3.Multiline = true;
             this.xrLabel3.Name = "xrLabel3";
@@ -479,7 +481,7 @@
             // 
             this.xrLabel24.CanGrow = false;
             this.xrLabel24.Dpi = 96F;
-            this.xrLabel24.Font = new System.Drawing.Font("Rupee Foradian", 11.25F);
+            this.xrLabel24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.xrLabel24.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabel24.LocationFloat = new DevExpress.Utils.PointFloat(393.2398F, 345.2267F);
             this.xrLabel24.Name = "xrLabel24";
@@ -1971,7 +1973,7 @@
             // 
             this.xrLabel63.CanGrow = false;
             this.xrLabel63.Dpi = 96F;
-            this.xrLabel63.Font = new System.Drawing.Font("DIN Pro Regular", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.xrLabel63.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.xrLabel63.LocationFloat = new DevExpress.Utils.PointFloat(73.32799F, 280.9214F);
             this.xrLabel63.Name = "xrLabel63";
             this.xrLabel63.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2575,6 +2577,8 @@
             this.xrPanel3.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrPanel3.CanGrow = false;
             this.xrPanel3.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.bd_Solar_Export_Value,
+            this.bd_SolarExportEnergy,
             this.SubsidyValue,
             this.Subsidy,
             this.bd_OtherValues,
@@ -2612,35 +2616,74 @@
             this.bd_TotalDues,
             this.bd_AcCharges});
             this.xrPanel3.Dpi = 96F;
-            this.xrPanel3.LocationFloat = new DevExpress.Utils.PointFloat(65.00001F, 365F);
+            this.xrPanel3.LocationFloat = new DevExpress.Utils.PointFloat(65F, 365F);
             this.xrPanel3.Name = "xrPanel3";
-            this.xrPanel3.SizeF = new System.Drawing.SizeF(375F, 256.9523F);
+            this.xrPanel3.SizeF = new System.Drawing.SizeF(375F, 270.9523F);
             this.xrPanel3.StylePriority.UseBorderColor = false;
             this.xrPanel3.StylePriority.UseBorderDashStyle = false;
             this.xrPanel3.StylePriority.UseBorders = false;
+            // 
+            // bd_Solar_Export_Value
+            // 
+            this.bd_Solar_Export_Value.Dpi = 96F;
+            this.bd_Solar_Export_Value.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_Solar_Export_Energy]")});
+            this.bd_Solar_Export_Value.Font = new System.Drawing.Font("Arial", 8F);
+            this.bd_Solar_Export_Value.LocationFloat = new DevExpress.Utils.PointFloat(279F, 193.1083F);
+            this.bd_Solar_Export_Value.Multiline = true;
+            this.bd_Solar_Export_Value.Name = "bd_Solar_Export_Value";
+            this.bd_Solar_Export_Value.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.bd_Solar_Export_Value.SizeF = new System.Drawing.SizeF(96.00006F, 15.07999F);
+            this.bd_Solar_Export_Value.StylePriority.UseFont = false;
+            this.bd_Solar_Export_Value.StylePriority.UseTextAlignment = false;
+            this.bd_Solar_Export_Value.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
+            // bd_SolarExportEnergy
+            // 
+            this.bd_SolarExportEnergy.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
+            this.bd_SolarExportEnergy.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.bd_SolarExportEnergy.Dpi = 96F;
+            this.bd_SolarExportEnergy.Font = new System.Drawing.Font("Arial", 8F);
+            this.bd_SolarExportEnergy.LocationFloat = new DevExpress.Utils.PointFloat(0F, 191.666F);
+            this.bd_SolarExportEnergy.Multiline = true;
+            this.bd_SolarExportEnergy.Name = "bd_SolarExportEnergy";
+            this.bd_SolarExportEnergy.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.bd_SolarExportEnergy.SizeF = new System.Drawing.SizeF(373.3281F, 15.07999F);
+            this.bd_SolarExportEnergy.StylePriority.UseBorderDashStyle = false;
+            this.bd_SolarExportEnergy.StylePriority.UseBorders = false;
+            this.bd_SolarExportEnergy.StylePriority.UseFont = false;
+            this.bd_SolarExportEnergy.Text = "Solar Export Energy";
             // 
             // SubsidyValue
             // 
             this.SubsidyValue.Dpi = 96F;
             this.SubsidyValue.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_Subsidy_Charges]")});
-            this.SubsidyValue.LocationFloat = new DevExpress.Utils.PointFloat(279F, 241.8723F);
+            this.SubsidyValue.Font = new System.Drawing.Font("Arial", 8F);
+            this.SubsidyValue.LocationFloat = new DevExpress.Utils.PointFloat(279F, 176.586F);
             this.SubsidyValue.Multiline = true;
             this.SubsidyValue.Name = "SubsidyValue";
             this.SubsidyValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.SubsidyValue.SizeF = new System.Drawing.SizeF(96.00006F, 15.07999F);
+            this.SubsidyValue.StylePriority.UseFont = false;
             this.SubsidyValue.StylePriority.UseTextAlignment = false;
             this.SubsidyValue.Text = "Subsidy";
             this.SubsidyValue.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // Subsidy
             // 
+            this.Subsidy.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
+            this.Subsidy.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.Subsidy.Dpi = 96F;
-            this.Subsidy.LocationFloat = new DevExpress.Utils.PointFloat(1.000015F, 240.43F);
+            this.Subsidy.Font = new System.Drawing.Font("Arial", 8F);
+            this.Subsidy.LocationFloat = new DevExpress.Utils.PointFloat(1.000015F, 176.586F);
             this.Subsidy.Multiline = true;
             this.Subsidy.Name = "Subsidy";
             this.Subsidy.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.Subsidy.SizeF = new System.Drawing.SizeF(373.3281F, 15.07999F);
+            this.Subsidy.StylePriority.UseBorderDashStyle = false;
+            this.Subsidy.StylePriority.UseBorders = false;
+            this.Subsidy.StylePriority.UseFont = false;
             this.Subsidy.Text = "Subsidy";
             // 
             // bd_OtherValues
@@ -2807,7 +2850,7 @@
             this.bd_TotalDuesVALUE.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L9_nCurrBillamt_INT_TPL_ARRS_TPL]")});
             this.bd_TotalDuesVALUE.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
-            this.bd_TotalDuesVALUE.LocationFloat = new DevExpress.Utils.PointFloat(279F, 224.43F);
+            this.bd_TotalDuesVALUE.LocationFloat = new DevExpress.Utils.PointFloat(279F, 254.9068F);
             this.bd_TotalDuesVALUE.Name = "bd_TotalDuesVALUE";
             this.bd_TotalDuesVALUE.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.bd_TotalDuesVALUE.SizeF = new System.Drawing.SizeF(96F, 15F);
@@ -2826,7 +2869,7 @@
             this.bd_LatePaymentSurchargesVALUE.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L9_INT_TPL]")});
             this.bd_LatePaymentSurchargesVALUE.Font = new System.Drawing.Font("Arial", 8F);
-            this.bd_LatePaymentSurchargesVALUE.LocationFloat = new DevExpress.Utils.PointFloat(279F, 208.43F);
+            this.bd_LatePaymentSurchargesVALUE.LocationFloat = new DevExpress.Utils.PointFloat(279F, 238.9874F);
             this.bd_LatePaymentSurchargesVALUE.Name = "bd_LatePaymentSurchargesVALUE";
             this.bd_LatePaymentSurchargesVALUE.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.bd_LatePaymentSurchargesVALUE.SizeF = new System.Drawing.SizeF(96F, 15F);
@@ -2845,7 +2888,7 @@
             this.bd_Arrears_values.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L9_Arrs_TPL]")});
             this.bd_Arrears_values.Font = new System.Drawing.Font("Arial", 8F);
-            this.bd_Arrears_values.LocationFloat = new DevExpress.Utils.PointFloat(279F, 192.27F);
+            this.bd_Arrears_values.LocationFloat = new DevExpress.Utils.PointFloat(279F, 222.8268F);
             this.bd_Arrears_values.Name = "bd_Arrears_values";
             this.bd_Arrears_values.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.bd_Arrears_values.SizeF = new System.Drawing.SizeF(96F, 16.08F);
@@ -2864,7 +2907,7 @@
             this.bd_LatePaymentSurcharges.CanShrink = true;
             this.bd_LatePaymentSurcharges.Dpi = 96F;
             this.bd_LatePaymentSurcharges.Font = new System.Drawing.Font("Arial", 8F);
-            this.bd_LatePaymentSurcharges.LocationFloat = new DevExpress.Utils.PointFloat(1.000008F, 208.3494F);
+            this.bd_LatePaymentSurcharges.LocationFloat = new DevExpress.Utils.PointFloat(1.000008F, 238.9068F);
             this.bd_LatePaymentSurcharges.Name = "bd_LatePaymentSurcharges";
             this.bd_LatePaymentSurcharges.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.bd_LatePaymentSurcharges.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;
@@ -2884,7 +2927,7 @@
             this.bd_Arrears.CanShrink = true;
             this.bd_Arrears.Dpi = 96F;
             this.bd_Arrears.Font = new System.Drawing.Font("Arial", 8F);
-            this.bd_Arrears.LocationFloat = new DevExpress.Utils.PointFloat(1F, 192.2697F);
+            this.bd_Arrears.LocationFloat = new DevExpress.Utils.PointFloat(1F, 222.8265F);
             this.bd_Arrears.Name = "bd_Arrears";
             this.bd_Arrears.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.bd_Arrears.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;
@@ -2958,7 +3001,7 @@
             this.bd_TotalCurrentDuesValues.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L9_CurrBillamt]")});
             this.bd_TotalCurrentDuesValues.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
-            this.bd_TotalCurrentDuesValues.LocationFloat = new DevExpress.Utils.PointFloat(279F, 176.1898F);
+            this.bd_TotalCurrentDuesValues.LocationFloat = new DevExpress.Utils.PointFloat(279F, 206.7465F);
             this.bd_TotalCurrentDuesValues.Name = "bd_TotalCurrentDuesValues";
             this.bd_TotalCurrentDuesValues.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.bd_TotalCurrentDuesValues.SizeF = new System.Drawing.SizeF(96F, 16.08F);
@@ -2977,7 +3020,7 @@
             this.bd_TotalCurrentDues.CanShrink = true;
             this.bd_TotalCurrentDues.Dpi = 96F;
             this.bd_TotalCurrentDues.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
-            this.bd_TotalCurrentDues.LocationFloat = new DevExpress.Utils.PointFloat(1.000008F, 176.1894F);
+            this.bd_TotalCurrentDues.LocationFloat = new DevExpress.Utils.PointFloat(1.000008F, 206.746F);
             this.bd_TotalCurrentDues.Name = "bd_TotalCurrentDues";
             this.bd_TotalCurrentDues.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.bd_TotalCurrentDues.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;
@@ -3259,7 +3302,7 @@
             this.bd_TotalDues.CanShrink = true;
             this.bd_TotalDues.Dpi = 96F;
             this.bd_TotalDues.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
-            this.bd_TotalDues.LocationFloat = new DevExpress.Utils.PointFloat(0.9999924F, 224.43F);
+            this.bd_TotalDues.LocationFloat = new DevExpress.Utils.PointFloat(0.9999924F, 254.9068F);
             this.bd_TotalDues.Name = "bd_TotalDues";
             this.bd_TotalDues.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.bd_TotalDues.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;
@@ -3314,10 +3357,10 @@
             // 
             this.xrPanel1.CanGrow = false;
             this.xrPanel1.Dpi = 96F;
-            this.xrPanel1.LocationFloat = new DevExpress.Utils.PointFloat(16.55F, 551.27F);
+            this.xrPanel1.LocationFloat = new DevExpress.Utils.PointFloat(65F, 587.8262F);
             this.xrPanel1.LockedInUserDesigner = true;
             this.xrPanel1.Name = "xrPanel1";
-            this.xrPanel1.SizeF = new System.Drawing.SizeF(447.45F, 190.11F);
+            this.xrPanel1.SizeF = new System.Drawing.SizeF(375.0001F, 153.5538F);
             // 
             // objectDataSource1
             // 
@@ -3547,6 +3590,8 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel3;
         private DevExpress.XtraReports.UI.XRLabel SubsidyValue;
         private DevExpress.XtraReports.UI.XRLabel Subsidy;
+        private DevExpress.XtraReports.UI.XRLabel bd_Solar_Export_Value;
+        private DevExpress.XtraReports.UI.XRLabel bd_SolarExportEnergy;
         //private System.Windows.Forms.BindingSource bsrptData;
         //private System.Windows.Forms.BindingSource bindingSource1;
     }
