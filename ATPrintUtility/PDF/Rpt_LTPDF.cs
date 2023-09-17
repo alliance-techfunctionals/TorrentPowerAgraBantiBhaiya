@@ -5,8 +5,12 @@ using DevExpress.XtraReports.UI;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
+using System.Text;
 using System.Windows.Forms;
+using ZXing;
+using ZXing.Common;
 
 namespace AT.Print.PDF
 {
@@ -33,6 +37,28 @@ namespace AT.Print.PDF
             }
             #endregion
 
+            #region QRCODE
+
+            if (ConfigurationManager.AppSettings["generateQRCodeinLTBills"].ToString() == "True")
+            {
+                string qrServiceno = "AGR@" + (op[0].L6_SERVDET_SERVNO);
+                byte[] bytesToEncode = Encoding.UTF8.GetBytes(qrServiceno);
+                string base64Encoded = Convert.ToBase64String(bytesToEncode);
+                string textToEncode = (ConfigurationManager.AppSettings["generateQRCodeURL"].ToString())+ base64Encoded;
+                BarcodeWriter barcodeWriter = new BarcodeWriter();
+                barcodeWriter.Format = BarcodeFormat.QR_CODE;
+                var encodingOptions = new ZXing.Common.EncodingOptions
+                {
+                    Margin = 0,
+                    Width = 80,
+                    Height = 80,
+                };
+                barcodeWriter.Options = encodingOptions;
+                var qrCodeBitmap = barcodeWriter.Write(textToEncode);
+                xrQRCODE.Image = qrCodeBitmap;
+            }
+
+            #endregion
 
 
 
