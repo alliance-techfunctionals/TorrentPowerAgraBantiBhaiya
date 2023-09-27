@@ -253,6 +253,7 @@
             this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
             this.MeterDetailTotLabel = new DevExpress.XtraReports.UI.XRLabel();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.xrQRCODE = new DevExpress.XtraReports.UI.XRPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -271,6 +272,7 @@
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrQRCODE,
             this.xrLabel24,
             this.xrLine3,
             this.xrLabel14,
@@ -436,7 +438,7 @@
             this.xrLabel24.Dpi = 96F;
             this.xrLabel24.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "trim([L1_Customer_PAN])")});
-            this.xrLabel24.Font = new System.Drawing.Font("DIN Pro Regular", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel24.LocationFloat = new DevExpress.Utils.PointFloat(61F, 216.586F);
             this.xrLabel24.Multiline = true;
             this.xrLabel24.Name = "xrLabel24";
@@ -477,7 +479,7 @@
             this.xrLabel31.BackColor = System.Drawing.Color.Gainsboro;
             this.xrLabel31.CanGrow = false;
             this.xrLabel31.Dpi = 96F;
-            this.xrLabel31.Font = new System.Drawing.Font("DIN Pro Regular", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.xrLabel31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.xrLabel31.LocationFloat = new DevExpress.Utils.PointFloat(484.6364F, 121.92F);
             this.xrLabel31.Multiline = true;
             this.xrLabel31.Name = "xrLabel31";
@@ -707,7 +709,7 @@
             this.xrLabel67.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel67.CanGrow = false;
             this.xrLabel67.Dpi = 96F;
-            this.xrLabel67.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel67.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel67.LocationFloat = new DevExpress.Utils.PointFloat(295.7299F, 8.4491F);
             this.xrLabel67.Name = "xrLabel67";
             this.xrLabel67.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -724,7 +726,7 @@
             this.xrLabel68.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel68.CanGrow = false;
             this.xrLabel68.Dpi = 96F;
-            this.xrLabel68.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel68.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel68.LocationFloat = new DevExpress.Utils.PointFloat(365.7409F, 8.4491F);
             this.xrLabel68.Name = "xrLabel68";
             this.xrLabel68.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -741,7 +743,7 @@
             this.xrLabel69.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel69.CanGrow = false;
             this.xrLabel69.Dpi = 96F;
-            this.xrLabel69.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel69.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel69.LocationFloat = new DevExpress.Utils.PointFloat(437.7301F, 8.4491F);
             this.xrLabel69.Name = "xrLabel69";
             this.xrLabel69.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -759,7 +761,7 @@
             this.xrLabel70.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel70.CanGrow = false;
             this.xrLabel70.Dpi = 96F;
-            this.xrLabel70.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel70.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel70.LocationFloat = new DevExpress.Utils.PointFloat(572.998F, 8.4491F);
             this.xrLabel70.Name = "xrLabel70";
             this.xrLabel70.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -777,7 +779,7 @@
             this.xrLabel71.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel71.CanGrow = false;
             this.xrLabel71.Dpi = 96F;
-            this.xrLabel71.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel71.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel71.LocationFloat = new DevExpress.Utils.PointFloat(504.9871F, 8.4491F);
             this.xrLabel71.Name = "xrLabel71";
             this.xrLabel71.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -795,7 +797,7 @@
             this.MdkvaPastLabel2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.MdkvaPastLabel2.CanGrow = false;
             this.MdkvaPastLabel2.Dpi = 96F;
-            this.MdkvaPastLabel2.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.MdkvaPastLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.MdkvaPastLabel2.LocationFloat = new DevExpress.Utils.PointFloat(290.402F, 27.17787F);
             this.MdkvaPastLabel2.Multiline = true;
             this.MdkvaPastLabel2.Name = "MdkvaPastLabel2";
@@ -813,7 +815,7 @@
             this.MdkvaPresLabel2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.MdkvaPresLabel2.CanGrow = false;
             this.MdkvaPresLabel2.Dpi = 96F;
-            this.MdkvaPresLabel2.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.MdkvaPresLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.MdkvaPresLabel2.LocationFloat = new DevExpress.Utils.PointFloat(288.402F, 46.25795F);
             this.MdkvaPresLabel2.Multiline = true;
             this.MdkvaPresLabel2.Name = "MdkvaPresLabel2";
@@ -831,7 +833,7 @@
             this.MdkvaTotalLabel2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.MdkvaTotalLabel2.CanGrow = false;
             this.MdkvaTotalLabel2.Dpi = 96F;
-            this.MdkvaTotalLabel2.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.MdkvaTotalLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.MdkvaTotalLabel2.LocationFloat = new DevExpress.Utils.PointFloat(288.402F, 84.41595F);
             this.MdkvaTotalLabel2.Multiline = true;
             this.MdkvaTotalLabel2.Name = "MdkvaTotalLabel2";
@@ -849,7 +851,7 @@
             this.MdkvaMfLabel2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.MdkvaMfLabel2.CanGrow = false;
             this.MdkvaMfLabel2.Dpi = 96F;
-            this.MdkvaMfLabel2.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.MdkvaMfLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.MdkvaMfLabel2.LocationFloat = new DevExpress.Utils.PointFloat(288.402F, 65.33795F);
             this.MdkvaMfLabel2.Multiline = true;
             this.MdkvaMfLabel2.Name = "MdkvaMfLabel2";
@@ -867,7 +869,7 @@
             this.KvahMfLabel2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.KvahMfLabel2.CanGrow = false;
             this.KvahMfLabel2.Dpi = 96F;
-            this.KvahMfLabel2.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.KvahMfLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.KvahMfLabel2.LocationFloat = new DevExpress.Utils.PointFloat(358.402F, 65.33795F);
             this.KvahMfLabel2.Multiline = true;
             this.KvahMfLabel2.Name = "KvahMfLabel2";
@@ -885,7 +887,7 @@
             this.KvahTotalLabel2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.KvahTotalLabel2.CanGrow = false;
             this.KvahTotalLabel2.Dpi = 96F;
-            this.KvahTotalLabel2.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.KvahTotalLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.KvahTotalLabel2.LocationFloat = new DevExpress.Utils.PointFloat(358.402F, 84.41595F);
             this.KvahTotalLabel2.Multiline = true;
             this.KvahTotalLabel2.Name = "KvahTotalLabel2";
@@ -903,7 +905,7 @@
             this.KvahPresLabel2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.KvahPresLabel2.CanGrow = false;
             this.KvahPresLabel2.Dpi = 96F;
-            this.KvahPresLabel2.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.KvahPresLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.KvahPresLabel2.LocationFloat = new DevExpress.Utils.PointFloat(358.402F, 46.25787F);
             this.KvahPresLabel2.Multiline = true;
             this.KvahPresLabel2.Name = "KvahPresLabel2";
@@ -921,7 +923,7 @@
             this.KvahPastLabel2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.KvahPastLabel2.CanGrow = false;
             this.KvahPastLabel2.Dpi = 96F;
-            this.KvahPastLabel2.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.KvahPastLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.KvahPastLabel2.LocationFloat = new DevExpress.Utils.PointFloat(360.402F, 27.17787F);
             this.KvahPastLabel2.Multiline = true;
             this.KvahPastLabel2.Name = "KvahPastLabel2";
@@ -939,7 +941,7 @@
             this.Tod2Label2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Tod2Label2.CanGrow = false;
             this.Tod2Label2.Dpi = 96F;
-            this.Tod2Label2.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.Tod2Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.Tod2Label2.LocationFloat = new DevExpress.Utils.PointFloat(506.3665F, 84.41803F);
             this.Tod2Label2.Multiline = true;
             this.Tod2Label2.Name = "Tod2Label2";
@@ -957,7 +959,7 @@
             this.Tod1Label2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Tod1Label2.CanGrow = false;
             this.Tod1Label2.Dpi = 96F;
-            this.Tod1Label2.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.Tod1Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.Tod1Label2.LocationFloat = new DevExpress.Utils.PointFloat(430.3665F, 84.41803F);
             this.Tod1Label2.Multiline = true;
             this.Tod1Label2.Name = "Tod1Label2";
@@ -975,7 +977,7 @@
             this.Tod3Label2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Tod3Label2.CanGrow = false;
             this.Tod3Label2.Dpi = 96F;
-            this.Tod3Label2.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.Tod3Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.Tod3Label2.LocationFloat = new DevExpress.Utils.PointFloat(564.166F, 84.41595F);
             this.Tod3Label2.Multiline = true;
             this.Tod3Label2.Name = "Tod3Label2";
@@ -1008,7 +1010,7 @@
             this.Tod4Label2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Tod4Label2.CanGrow = false;
             this.Tod4Label2.Dpi = 96F;
-            this.Tod4Label2.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.Tod4Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.Tod4Label2.LocationFloat = new DevExpress.Utils.PointFloat(632.0015F, 84.41608F);
             this.Tod4Label2.Multiline = true;
             this.Tod4Label2.Name = "Tod4Label2";
@@ -1026,7 +1028,7 @@
             this.xrLabel144.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel144.CanGrow = false;
             this.xrLabel144.Dpi = 96F;
-            this.xrLabel144.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel144.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel144.LocationFloat = new DevExpress.Utils.PointFloat(637.9871F, 8.4491F);
             this.xrLabel144.Name = "xrLabel144";
             this.xrLabel144.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1045,7 +1047,7 @@
             this.xrLabel65.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrLabel65.CanGrow = false;
             this.xrLabel65.Dpi = 96F;
-            this.xrLabel65.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel65.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel65.LocationFloat = new DevExpress.Utils.PointFloat(2.729973F, 7.590088F);
             this.xrLabel65.Multiline = true;
             this.xrLabel65.Name = "xrLabel65";
@@ -1067,7 +1069,7 @@
             this.xrLabel54.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrLabel54.CanGrow = false;
             this.xrLabel54.Dpi = 96F;
-            this.xrLabel54.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel54.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel54.LocationFloat = new DevExpress.Utils.PointFloat(2.730007F, 65.33795F);
             this.xrLabel54.Multiline = true;
             this.xrLabel54.Name = "xrLabel54";
@@ -1090,7 +1092,7 @@
             this.xrLabel53.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrLabel53.CanGrow = false;
             this.xrLabel53.Dpi = 96F;
-            this.xrLabel53.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel53.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel53.LocationFloat = new DevExpress.Utils.PointFloat(2.73F, 84.41803F);
             this.xrLabel53.Multiline = true;
             this.xrLabel53.Name = "xrLabel53";
@@ -1113,7 +1115,7 @@
             this.xrLabel57.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrLabel57.CanGrow = false;
             this.xrLabel57.Dpi = 96F;
-            this.xrLabel57.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel57.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel57.LocationFloat = new DevExpress.Utils.PointFloat(2.73F, 26.66998F);
             this.xrLabel57.Multiline = true;
             this.xrLabel57.Name = "xrLabel57";
@@ -1135,7 +1137,7 @@
             this.xrLabel55.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrLabel55.CanGrow = false;
             this.xrLabel55.Dpi = 96F;
-            this.xrLabel55.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel55.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel55.LocationFloat = new DevExpress.Utils.PointFloat(2.730007F, 45.74994F);
             this.xrLabel55.Multiline = true;
             this.xrLabel55.Name = "xrLabel55";
@@ -1244,7 +1246,7 @@
             this.xrLabel64.Dpi = 96F;
             this.xrLabel64.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L6_BILL_PF]")});
-            this.xrLabel64.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel64.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel64.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabel64.LocationFloat = new DevExpress.Utils.PointFloat(363.512F, 295.08F);
             this.xrLabel64.Multiline = true;
@@ -1276,7 +1278,7 @@
             this.Tod3Label.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Tod3Label.CanGrow = false;
             this.Tod3Label.Dpi = 96F;
-            this.Tod3Label.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.Tod3Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.Tod3Label.LocationFloat = new DevExpress.Utils.PointFloat(599.436F, 812.8093F);
             this.Tod3Label.Multiline = true;
             this.Tod3Label.Name = "Tod3Label";
@@ -1294,7 +1296,7 @@
             this.Tod4Label.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Tod4Label.CanGrow = false;
             this.Tod4Label.Dpi = 96F;
-            this.Tod4Label.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.Tod4Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.Tod4Label.LocationFloat = new DevExpress.Utils.PointFloat(667.2716F, 812.8094F);
             this.Tod4Label.Multiline = true;
             this.Tod4Label.Name = "Tod4Label";
@@ -1312,7 +1314,7 @@
             this.Tod1Label.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Tod1Label.CanGrow = false;
             this.Tod1Label.Dpi = 96F;
-            this.Tod1Label.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.Tod1Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.Tod1Label.LocationFloat = new DevExpress.Utils.PointFloat(465.6365F, 812.8113F);
             this.Tod1Label.Multiline = true;
             this.Tod1Label.Name = "Tod1Label";
@@ -1330,7 +1332,7 @@
             this.Tod2Label.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Tod2Label.CanGrow = false;
             this.Tod2Label.Dpi = 96F;
-            this.Tod2Label.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.Tod2Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.Tod2Label.LocationFloat = new DevExpress.Utils.PointFloat(541.6364F, 812.8113F);
             this.Tod2Label.Multiline = true;
             this.Tod2Label.Name = "Tod2Label";
@@ -1348,7 +1350,7 @@
             this.KvahPastLabel.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.KvahPastLabel.CanGrow = false;
             this.KvahPastLabel.Dpi = 96F;
-            this.KvahPastLabel.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.KvahPastLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.KvahPastLabel.LocationFloat = new DevExpress.Utils.PointFloat(393.672F, 755.5713F);
             this.KvahPastLabel.Multiline = true;
             this.KvahPastLabel.Name = "KvahPastLabel";
@@ -1366,7 +1368,7 @@
             this.KvahPresLabel.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.KvahPresLabel.CanGrow = false;
             this.KvahPresLabel.Dpi = 96F;
-            this.KvahPresLabel.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.KvahPresLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.KvahPresLabel.LocationFloat = new DevExpress.Utils.PointFloat(393.672F, 774.6513F);
             this.KvahPresLabel.Multiline = true;
             this.KvahPresLabel.Name = "KvahPresLabel";
@@ -1384,7 +1386,7 @@
             this.KvahTotalLabel.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.KvahTotalLabel.CanGrow = false;
             this.KvahTotalLabel.Dpi = 96F;
-            this.KvahTotalLabel.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.KvahTotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.KvahTotalLabel.LocationFloat = new DevExpress.Utils.PointFloat(393.672F, 812.8093F);
             this.KvahTotalLabel.Multiline = true;
             this.KvahTotalLabel.Name = "KvahTotalLabel";
@@ -1402,7 +1404,7 @@
             this.KvahMfLabel.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.KvahMfLabel.CanGrow = false;
             this.KvahMfLabel.Dpi = 96F;
-            this.KvahMfLabel.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.KvahMfLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.KvahMfLabel.LocationFloat = new DevExpress.Utils.PointFloat(393.672F, 793.7313F);
             this.KvahMfLabel.Multiline = true;
             this.KvahMfLabel.Name = "KvahMfLabel";
@@ -1420,7 +1422,7 @@
             this.MdkvaMfLabel.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.MdkvaMfLabel.CanGrow = false;
             this.MdkvaMfLabel.Dpi = 96F;
-            this.MdkvaMfLabel.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.MdkvaMfLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.MdkvaMfLabel.LocationFloat = new DevExpress.Utils.PointFloat(323.672F, 793.7313F);
             this.MdkvaMfLabel.Multiline = true;
             this.MdkvaMfLabel.Name = "MdkvaMfLabel";
@@ -1438,7 +1440,7 @@
             this.MdkvaTotalLabel.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.MdkvaTotalLabel.CanGrow = false;
             this.MdkvaTotalLabel.Dpi = 96F;
-            this.MdkvaTotalLabel.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.MdkvaTotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.MdkvaTotalLabel.LocationFloat = new DevExpress.Utils.PointFloat(323.672F, 812.8093F);
             this.MdkvaTotalLabel.Multiline = true;
             this.MdkvaTotalLabel.Name = "MdkvaTotalLabel";
@@ -1456,7 +1458,7 @@
             this.MdkvaPresLabel.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.MdkvaPresLabel.CanGrow = false;
             this.MdkvaPresLabel.Dpi = 96F;
-            this.MdkvaPresLabel.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.MdkvaPresLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.MdkvaPresLabel.LocationFloat = new DevExpress.Utils.PointFloat(323.672F, 774.6513F);
             this.MdkvaPresLabel.Multiline = true;
             this.MdkvaPresLabel.Name = "MdkvaPresLabel";
@@ -1474,7 +1476,7 @@
             this.MdkvaPastLabel.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.MdkvaPastLabel.CanGrow = false;
             this.MdkvaPastLabel.Dpi = 96F;
-            this.MdkvaPastLabel.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.MdkvaPastLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.MdkvaPastLabel.LocationFloat = new DevExpress.Utils.PointFloat(323.672F, 755.5713F);
             this.MdkvaPastLabel.Multiline = true;
             this.MdkvaPastLabel.Name = "MdkvaPastLabel";
@@ -1492,7 +1494,7 @@
             this.xrLabel28.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel28.CanGrow = false;
             this.xrLabel28.Dpi = 96F;
-            this.xrLabel28.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel28.LocationFloat = new DevExpress.Utils.PointFloat(540.257F, 737.8425F);
             this.xrLabel28.Name = "xrLabel28";
             this.xrLabel28.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1510,7 +1512,7 @@
             this.xrLabel29.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel29.CanGrow = false;
             this.xrLabel29.Dpi = 96F;
-            this.xrLabel29.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel29.LocationFloat = new DevExpress.Utils.PointFloat(608.268F, 737.8425F);
             this.xrLabel29.Name = "xrLabel29";
             this.xrLabel29.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1528,7 +1530,7 @@
             this.xrLabel30.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel30.CanGrow = false;
             this.xrLabel30.Dpi = 96F;
-            this.xrLabel30.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel30.LocationFloat = new DevExpress.Utils.PointFloat(673.2571F, 737.8425F);
             this.xrLabel30.Name = "xrLabel30";
             this.xrLabel30.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1546,7 +1548,7 @@
             this.xrLabel27.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel27.CanGrow = false;
             this.xrLabel27.Dpi = 96F;
-            this.xrLabel27.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel27.LocationFloat = new DevExpress.Utils.PointFloat(473.0001F, 737.8425F);
             this.xrLabel27.Name = "xrLabel27";
             this.xrLabel27.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1564,7 +1566,7 @@
             this.xrLabel26.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel26.CanGrow = false;
             this.xrLabel26.Dpi = 96F;
-            this.xrLabel26.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel26.LocationFloat = new DevExpress.Utils.PointFloat(401.011F, 737.8425F);
             this.xrLabel26.Name = "xrLabel26";
             this.xrLabel26.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1583,7 +1585,7 @@
             this.xrLabel25.Dpi = 96F;
             this.xrLabel25.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\r\n")});
-            this.xrLabel25.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel25.LocationFloat = new DevExpress.Utils.PointFloat(331F, 737.8425F);
             this.xrLabel25.Multiline = true;
             this.xrLabel25.Name = "xrLabel25";
@@ -1619,7 +1621,7 @@
             this.xrLabel23.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrLabel23.CanGrow = false;
             this.xrLabel23.Dpi = 96F;
-            this.xrLabel23.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel23.LocationFloat = new DevExpress.Utils.PointFloat(37.99998F, 735.9834F);
             this.xrLabel23.Multiline = true;
             this.xrLabel23.Name = "xrLabel23";
@@ -1733,7 +1735,7 @@
             // 
             this.xrLabel2.CanGrow = false;
             this.xrLabel2.Dpi = 96F;
-            this.xrLabel2.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(458F, 429F);
             this.xrLabel2.Multiline = true;
             this.xrLabel2.Name = "xrLabel2";
@@ -1761,7 +1763,7 @@
             // 
             this.xrLabel4.CanGrow = false;
             this.xrLabel4.Dpi = 96F;
-            this.xrLabel4.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(458F, 449.3658F);
             this.xrLabel4.Multiline = true;
             this.xrLabel4.Name = "xrLabel4";
@@ -1776,7 +1778,7 @@
             this.xrLabel5.Dpi = 96F;
             this.xrLabel5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L13_Purpose]")});
-            this.xrLabel5.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel5.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(570.372F, 430.4173F);
             this.xrLabel5.Multiline = true;
@@ -1793,7 +1795,7 @@
             this.xrLabel6.Dpi = 96F;
             this.xrLabel6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L6_SUPPLY_VOLTAGE]")});
-            this.xrLabel6.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel6.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(655F, 450.4973F);
             this.xrLabel6.Multiline = true;
@@ -1910,7 +1912,7 @@
             this.bd_PowerFectorChargesValues.Dpi = 96F;
             this.bd_PowerFectorChargesValues.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_PowerFactorAdj]")});
-            this.bd_PowerFectorChargesValues.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.bd_PowerFectorChargesValues.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.bd_PowerFectorChargesValues.LocationFloat = new DevExpress.Utils.PointFloat(292F, 145.0837F);
             this.bd_PowerFectorChargesValues.Name = "bd_PowerFectorChargesValues";
             this.bd_PowerFectorChargesValues.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1930,7 +1932,7 @@
             this.bd_PowerFectorCharges.CanGrow = false;
             this.bd_PowerFectorCharges.CanShrink = true;
             this.bd_PowerFectorCharges.Dpi = 96F;
-            this.bd_PowerFectorCharges.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.bd_PowerFectorCharges.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.bd_PowerFectorCharges.LocationFloat = new DevExpress.Utils.PointFloat(0F, 145.7225F);
             this.bd_PowerFectorCharges.Name = "bd_PowerFectorCharges";
             this.bd_PowerFectorCharges.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1951,7 +1953,7 @@
             this.bd_TODChargesValue.Dpi = 96F;
             this.bd_TODChargesValue.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_TODCharges]")});
-            this.bd_TODChargesValue.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.bd_TODChargesValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.bd_TODChargesValue.LocationFloat = new DevExpress.Utils.PointFloat(292F, 49.24088F);
             this.bd_TODChargesValue.Name = "bd_TODChargesValue";
             this.bd_TODChargesValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1987,7 +1989,7 @@
             this.bd_TODCharges.CanGrow = false;
             this.bd_TODCharges.CanShrink = true;
             this.bd_TODCharges.Dpi = 96F;
-            this.bd_TODCharges.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.bd_TODCharges.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.bd_TODCharges.LocationFloat = new DevExpress.Utils.PointFloat(0F, 49.24094F);
             this.bd_TODCharges.Name = "bd_TODCharges";
             this.bd_TODCharges.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2007,7 +2009,7 @@
             this.bd_ExcessDemandChargesValue.Dpi = 96F;
             this.bd_ExcessDemandChargesValue.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L10_DmdChgPenalty]")});
-            this.bd_ExcessDemandChargesValue.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.bd_ExcessDemandChargesValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.bd_ExcessDemandChargesValue.LocationFloat = new DevExpress.Utils.PointFloat(293F, 17.08062F);
             this.bd_ExcessDemandChargesValue.Name = "bd_ExcessDemandChargesValue";
             this.bd_ExcessDemandChargesValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2024,7 +2026,7 @@
             this.bd_EnergyChargeValues.Dpi = 96F;
             this.bd_EnergyChargeValues.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_EnergyCharge]")});
-            this.bd_EnergyChargeValues.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.bd_EnergyChargeValues.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.bd_EnergyChargeValues.LocationFloat = new DevExpress.Utils.PointFloat(293F, 33.1606F);
             this.bd_EnergyChargeValues.Name = "bd_EnergyChargeValues";
             this.bd_EnergyChargeValues.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2055,7 +2057,7 @@
             this.bd_AdjustmentMinimumChargesValue.Dpi = 96F;
             this.bd_AdjustmentMinimumChargesValue.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_MinCharge]")});
-            this.bd_AdjustmentMinimumChargesValue.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.bd_AdjustmentMinimumChargesValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.bd_AdjustmentMinimumChargesValue.LocationFloat = new DevExpress.Utils.PointFloat(293F, 81.40123F);
             this.bd_AdjustmentMinimumChargesValue.Name = "bd_AdjustmentMinimumChargesValue";
             this.bd_AdjustmentMinimumChargesValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2087,7 +2089,7 @@
             this.bd_OtherChargesValue.Dpi = 96F;
             this.bd_OtherChargesValue.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_ServdetTotbBdtOthr]")});
-            this.bd_OtherChargesValue.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.bd_OtherChargesValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.bd_OtherChargesValue.LocationFloat = new DevExpress.Utils.PointFloat(293F, 161.8028F);
             this.bd_OtherChargesValue.Name = "bd_OtherChargesValue";
             this.bd_OtherChargesValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2120,7 +2122,7 @@
             this.bd_ElectricityDutyValues.Dpi = 96F;
             this.bd_ElectricityDutyValues.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_GovTax]")});
-            this.bd_ElectricityDutyValues.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.bd_ElectricityDutyValues.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.bd_ElectricityDutyValues.LocationFloat = new DevExpress.Utils.PointFloat(293F, 97.48187F);
             this.bd_ElectricityDutyValues.Name = "bd_ElectricityDutyValues";
             this.bd_ElectricityDutyValues.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2184,7 +2186,7 @@
             this.bd_OtherCharges.CanGrow = false;
             this.bd_OtherCharges.CanShrink = true;
             this.bd_OtherCharges.Dpi = 96F;
-            this.bd_OtherCharges.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.bd_OtherCharges.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.bd_OtherCharges.LocationFloat = new DevExpress.Utils.PointFloat(1F, 162.4415F);
             this.bd_OtherCharges.Name = "bd_OtherCharges";
             this.bd_OtherCharges.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2218,7 +2220,7 @@
             this.bd_RlSC2Value.Dpi = 96F;
             this.bd_RlSC2Value.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_RegulatoryCharge_2]")});
-            this.bd_RlSC2Value.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.bd_RlSC2Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.bd_RlSC2Value.LocationFloat = new DevExpress.Utils.PointFloat(293F, 129.6425F);
             this.bd_RlSC2Value.Name = "bd_RlSC2Value";
             this.bd_RlSC2Value.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2237,7 +2239,7 @@
             this.bd_ExcessDemandCharges.CanGrow = false;
             this.bd_ExcessDemandCharges.CanShrink = true;
             this.bd_ExcessDemandCharges.Dpi = 96F;
-            this.bd_ExcessDemandCharges.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.bd_ExcessDemandCharges.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.bd_ExcessDemandCharges.LocationFloat = new DevExpress.Utils.PointFloat(1F, 17.08032F);
             this.bd_ExcessDemandCharges.Name = "bd_ExcessDemandCharges";
             this.bd_ExcessDemandCharges.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2272,7 +2274,7 @@
             this.bd_AcChargeValue.Dpi = 96F;
             this.bd_AcChargeValue.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_ACCharge]")});
-            this.bd_AcChargeValue.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.bd_AcChargeValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.bd_AcChargeValue.LocationFloat = new DevExpress.Utils.PointFloat(293F, 65.32123F);
             this.bd_AcChargeValue.Name = "bd_AcChargeValue";
             this.bd_AcChargeValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2304,7 +2306,7 @@
             this.bd_DemandChargeValue.Dpi = 96F;
             this.bd_DemandChargeValue.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_FixedCharge]")});
-            this.bd_DemandChargeValue.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.bd_DemandChargeValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.bd_DemandChargeValue.LocationFloat = new DevExpress.Utils.PointFloat(293F, 1.080687F);
             this.bd_DemandChargeValue.Name = "bd_DemandChargeValue";
             this.bd_DemandChargeValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2321,7 +2323,7 @@
             this.bd_RlSC1Value.Dpi = 96F;
             this.bd_RlSC1Value.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_RegulatoryCharge_1]")});
-            this.bd_RlSC1Value.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.bd_RlSC1Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.bd_RlSC1Value.LocationFloat = new DevExpress.Utils.PointFloat(293F, 113.5622F);
             this.bd_RlSC1Value.Name = "bd_RlSC1Value";
             this.bd_RlSC1Value.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2340,7 +2342,7 @@
             this.bd_AcCharge.CanGrow = false;
             this.bd_AcCharge.CanShrink = true;
             this.bd_AcCharge.Dpi = 96F;
-            this.bd_AcCharge.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.bd_AcCharge.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.bd_AcCharge.LocationFloat = new DevExpress.Utils.PointFloat(1F, 65.96025F);
             this.bd_AcCharge.Name = "bd_AcCharge";
             this.bd_AcCharge.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2377,7 +2379,7 @@
             this.bd_ElectricityDuty.CanGrow = false;
             this.bd_ElectricityDuty.CanShrink = true;
             this.bd_ElectricityDuty.Dpi = 96F;
-            this.bd_ElectricityDuty.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.bd_ElectricityDuty.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.bd_ElectricityDuty.LocationFloat = new DevExpress.Utils.PointFloat(1F, 98.12065F);
             this.bd_ElectricityDuty.Name = "bd_ElectricityDuty";
             this.bd_ElectricityDuty.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2399,7 +2401,7 @@
             this.bd_AdjustmentMinimumCharges.CanGrow = false;
             this.bd_AdjustmentMinimumCharges.CanShrink = true;
             this.bd_AdjustmentMinimumCharges.Dpi = 96F;
-            this.bd_AdjustmentMinimumCharges.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.bd_AdjustmentMinimumCharges.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.bd_AdjustmentMinimumCharges.LocationFloat = new DevExpress.Utils.PointFloat(1F, 82.04033F);
             this.bd_AdjustmentMinimumCharges.Name = "bd_AdjustmentMinimumCharges";
             this.bd_AdjustmentMinimumCharges.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2436,7 +2438,7 @@
             this.bd_EnergyCharge.CanGrow = false;
             this.bd_EnergyCharge.CanShrink = true;
             this.bd_EnergyCharge.Dpi = 96F;
-            this.bd_EnergyCharge.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.bd_EnergyCharge.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.bd_EnergyCharge.LocationFloat = new DevExpress.Utils.PointFloat(1F, 33.16064F);
             this.bd_EnergyCharge.Name = "bd_EnergyCharge";
             this.bd_EnergyCharge.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2458,7 +2460,7 @@
             this.bd_RlSC1.CanGrow = false;
             this.bd_RlSC1.CanShrink = true;
             this.bd_RlSC1.Dpi = 96F;
-            this.bd_RlSC1.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.bd_RlSC1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.bd_RlSC1.LocationFloat = new DevExpress.Utils.PointFloat(1F, 114.201F);
             this.bd_RlSC1.Name = "bd_RlSC1";
             this.bd_RlSC1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2480,7 +2482,7 @@
             this.bd_RlSC2.CanGrow = false;
             this.bd_RlSC2.CanShrink = true;
             this.bd_RlSC2.Dpi = 96F;
-            this.bd_RlSC2.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.bd_RlSC2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.bd_RlSC2.LocationFloat = new DevExpress.Utils.PointFloat(1F, 130.2813F);
             this.bd_RlSC2.Name = "bd_RlSC2";
             this.bd_RlSC2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2502,7 +2504,7 @@
             this.bd_DemandCharge.CanGrow = false;
             this.bd_DemandCharge.CanShrink = true;
             this.bd_DemandCharge.Dpi = 96F;
-            this.bd_DemandCharge.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.bd_DemandCharge.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.bd_DemandCharge.LocationFloat = new DevExpress.Utils.PointFloat(1F, 1F);
             this.bd_DemandCharge.Name = "bd_DemandCharge";
             this.bd_DemandCharge.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2562,7 +2564,7 @@
             this.xrLabel18.Dpi = 96F;
             this.xrLabel18.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_ParkingAmount]")});
-            this.xrLabel18.Font = new System.Drawing.Font("DIN Pro Regular", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.xrLabel18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.xrLabel18.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabel18.LocationFloat = new DevExpress.Utils.PointFloat(634.9999F, 613.1376F);
             this.xrLabel18.Multiline = true;
@@ -2627,7 +2629,7 @@
             this.xrLabel140.Dpi = 96F;
             this.xrLabel140.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "trim([L3_Addr1])")});
-            this.xrLabel140.Font = new System.Drawing.Font("DIN Pro Regular", 10F);
+            this.xrLabel140.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.xrLabel140.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabel140.LocationFloat = new DevExpress.Utils.PointFloat(61F, 160.16F);
             this.xrLabel140.Name = "xrLabel140";
@@ -2643,7 +2645,7 @@
             this.xrLabel141.Dpi = 96F;
             this.xrLabel141.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "trim([L4_Addr2])")});
-            this.xrLabel141.Font = new System.Drawing.Font("DIN Pro Regular", 10F);
+            this.xrLabel141.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.xrLabel141.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabel141.LocationFloat = new DevExpress.Utils.PointFloat(61F, 178.24F);
             this.xrLabel141.Name = "xrLabel141";
@@ -2659,7 +2661,7 @@
             this.xrLabel142.Dpi = 96F;
             this.xrLabel142.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "trim([L5_Addr3])")});
-            this.xrLabel142.Font = new System.Drawing.Font("DIN Pro Regular", 10F);
+            this.xrLabel142.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.xrLabel142.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabel142.LocationFloat = new DevExpress.Utils.PointFloat(61F, 198.506F);
             this.xrLabel142.Name = "xrLabel142";
@@ -2675,7 +2677,7 @@
             this.xrLabel138.Dpi = 96F;
             this.xrLabel138.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L10_TotArrUPPCLIntUPPCLIntArrUPPCL]")});
-            this.xrLabel138.Font = new System.Drawing.Font("DIN Pro Regular", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel138.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel138.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabel138.LocationFloat = new DevExpress.Utils.PointFloat(671.0001F, 678.4345F);
             this.xrLabel138.Multiline = true;
@@ -2703,7 +2705,7 @@
             // 
             this.xrLabel137.CanGrow = false;
             this.xrLabel137.Dpi = 96F;
-            this.xrLabel137.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel137.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel137.LocationFloat = new DevExpress.Utils.PointFloat(462F, 645.4344F);
             this.xrLabel137.Multiline = true;
             this.xrLabel137.Name = "xrLabel137";
@@ -2742,7 +2744,7 @@
             // 
             this.xrLabel120.CanGrow = false;
             this.xrLabel120.Dpi = 96F;
-            this.xrLabel120.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel120.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel120.LocationFloat = new DevExpress.Utils.PointFloat(462F, 661.3546F);
             this.xrLabel120.Multiline = true;
             this.xrLabel120.Name = "xrLabel120";
@@ -2770,7 +2772,7 @@
             this.xrLabel134.Dpi = 96F;
             this.xrLabel134.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L10_UPPCL_ArrearAmount]")});
-            this.xrLabel134.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel134.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel134.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabel134.LocationFloat = new DevExpress.Utils.PointFloat(671.0001F, 645.4344F);
             this.xrLabel134.Multiline = true;
@@ -2787,7 +2789,7 @@
             this.xrLabel135.Dpi = 96F;
             this.xrLabel135.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L10_UPPCLIntOnArrearAmount]")});
-            this.xrLabel135.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel135.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel135.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabel135.LocationFloat = new DevExpress.Utils.PointFloat(671.0001F, 661.3546F);
             this.xrLabel135.Multiline = true;
@@ -2804,7 +2806,7 @@
             this.xrLabel132.Dpi = 96F;
             this.xrLabel132.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L10_SecDeptBdt]")});
-            this.xrLabel132.Font = new System.Drawing.Font("DIN Pro Regular", 8F, System.Drawing.FontStyle.Bold);
+            this.xrLabel132.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.xrLabel132.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabel132.LocationFloat = new DevExpress.Utils.PointFloat(673.9999F, 593.0575F);
             this.xrLabel132.Multiline = true;
@@ -2821,7 +2823,7 @@
             this.xrLabel131.Dpi = 96F;
             this.xrLabel131.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L7_LastPayementMode]")});
-            this.xrLabel131.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel131.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel131.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabel131.LocationFloat = new DevExpress.Utils.PointFloat(674F, 569.2313F);
             this.xrLabel131.Multiline = true;
@@ -2838,7 +2840,7 @@
             this.xrLabel130.Dpi = 96F;
             this.xrLabel130.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L7_LastPayementAmount]")});
-            this.xrLabel130.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel130.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel130.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabel130.LocationFloat = new DevExpress.Utils.PointFloat(674F, 549.3894F);
             this.xrLabel130.Multiline = true;
@@ -2855,7 +2857,7 @@
             this.xrLabel129.Dpi = 96F;
             this.xrLabel129.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L7_LastPymtDate]")});
-            this.xrLabel129.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel129.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel129.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabel129.LocationFloat = new DevExpress.Utils.PointFloat(674F, 532.4053F);
             this.xrLabel129.Multiline = true;
@@ -2872,7 +2874,7 @@
             this.xrLabel127.Dpi = 96F;
             this.xrLabel127.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L7_PrevReadDt]")});
-            this.xrLabel127.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel127.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel127.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabel127.LocationFloat = new DevExpress.Utils.PointFloat(674F, 493.7375F);
             this.xrLabel127.Multiline = true;
@@ -2889,7 +2891,7 @@
             this.xrLabel126.Dpi = 96F;
             this.xrLabel126.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L7_ReaDt]")});
-            this.xrLabel126.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel126.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel126.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabel126.LocationFloat = new DevExpress.Utils.PointFloat(674F, 474.6573F);
             this.xrLabel126.Multiline = true;
@@ -2906,7 +2908,7 @@
             this.xrLabel124.Dpi = 96F;
             this.xrLabel124.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L6_BILL_TYPE]")});
-            this.xrLabel124.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel124.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel124.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabel124.LocationFloat = new DevExpress.Utils.PointFloat(655F, 410.3373F);
             this.xrLabel124.Multiline = true;
@@ -2923,7 +2925,7 @@
             this.xrLabel123.Dpi = 96F;
             this.xrLabel123.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L6_TARIFF_DESCR]")});
-            this.xrLabel123.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel123.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel123.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabel123.LocationFloat = new DevExpress.Utils.PointFloat(654.9999F, 388.84F);
             this.xrLabel123.Multiline = true;
@@ -2977,7 +2979,7 @@
             // 
             this.xrLabel114.CanGrow = false;
             this.xrLabel114.Dpi = 96F;
-            this.xrLabel114.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel114.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel114.LocationFloat = new DevExpress.Utils.PointFloat(458F, 593.0576F);
             this.xrLabel114.Multiline = true;
             this.xrLabel114.Name = "xrLabel114";
@@ -3003,7 +3005,7 @@
             // 
             this.xrLabel106.CanGrow = false;
             this.xrLabel106.Dpi = 96F;
-            this.xrLabel106.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel106.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel106.LocationFloat = new DevExpress.Utils.PointFloat(458F, 531.4053F);
             this.xrLabel106.Multiline = true;
             this.xrLabel106.Name = "xrLabel106";
@@ -3042,7 +3044,7 @@
             // 
             this.xrLabel109.CanGrow = false;
             this.xrLabel109.Dpi = 96F;
-            this.xrLabel109.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel109.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel109.LocationFloat = new DevExpress.Utils.PointFloat(458F, 549.3894F);
             this.xrLabel109.Multiline = true;
             this.xrLabel109.Name = "xrLabel109";
@@ -3068,7 +3070,7 @@
             // 
             this.xrLabel111.CanGrow = false;
             this.xrLabel111.Dpi = 96F;
-            this.xrLabel111.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel111.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel111.LocationFloat = new DevExpress.Utils.PointFloat(458F, 569.2313F);
             this.xrLabel111.Multiline = true;
             this.xrLabel111.Name = "xrLabel111";
@@ -3094,7 +3096,7 @@
             // 
             this.xrLabel105.CanGrow = false;
             this.xrLabel105.Dpi = 96F;
-            this.xrLabel105.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel105.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel105.LocationFloat = new DevExpress.Utils.PointFloat(458F, 511.8173F);
             this.xrLabel105.Multiline = true;
             this.xrLabel105.Name = "xrLabel105";
@@ -3120,7 +3122,7 @@
             // 
             this.xrLabel103.CanGrow = false;
             this.xrLabel103.Dpi = 96F;
-            this.xrLabel103.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel103.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel103.LocationFloat = new DevExpress.Utils.PointFloat(458F, 493.7375F);
             this.xrLabel103.Multiline = true;
             this.xrLabel103.Name = "xrLabel103";
@@ -3133,7 +3135,7 @@
             // 
             this.xrLabel100.CanGrow = false;
             this.xrLabel100.Dpi = 96F;
-            this.xrLabel100.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel100.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel100.LocationFloat = new DevExpress.Utils.PointFloat(458F, 475.5772F);
             this.xrLabel100.Multiline = true;
             this.xrLabel100.Name = "xrLabel100";
@@ -3159,7 +3161,7 @@
             // 
             this.xrLabel98.CanGrow = false;
             this.xrLabel98.Dpi = 96F;
-            this.xrLabel98.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel98.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel98.LocationFloat = new DevExpress.Utils.PointFloat(458F, 408.92F);
             this.xrLabel98.Multiline = true;
             this.xrLabel98.Name = "xrLabel98";
@@ -3185,7 +3187,7 @@
             // 
             this.xrLabel94.CanGrow = false;
             this.xrLabel94.Dpi = 96F;
-            this.xrLabel94.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel94.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel94.LocationFloat = new DevExpress.Utils.PointFloat(458F, 388.84F);
             this.xrLabel94.Multiline = true;
             this.xrLabel94.Name = "xrLabel94";
@@ -3456,7 +3458,7 @@
             this.LPSCValue.Dpi = 96F;
             this.LPSCValue.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L9_Int_Tpl]")});
-            this.LPSCValue.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.LPSCValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.LPSCValue.LocationFloat = new DevExpress.Utils.PointFloat(333.4639F, 636.9637F);
             this.LPSCValue.LockedInUserDesigner = true;
             this.LPSCValue.Name = "LPSCValue";
@@ -3472,7 +3474,7 @@
             this.xrLabel76.Dpi = 96F;
             this.xrLabel76.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L9_ArrsTpl]")});
-            this.xrLabel76.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel76.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel76.LocationFloat = new DevExpress.Utils.PointFloat(333.4639F, 620.8835F);
             this.xrLabel76.LockedInUserDesigner = true;
             this.xrLabel76.Name = "xrLabel76";
@@ -3548,7 +3550,7 @@
             this.LPSC.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.LPSC.CanGrow = false;
             this.LPSC.Dpi = 96F;
-            this.LPSC.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.LPSC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.LPSC.LocationFloat = new DevExpress.Utils.PointFloat(44.46392F, 636.9637F);
             this.LPSC.LockedInUserDesigner = true;
             this.LPSC.Name = "LPSC";
@@ -3704,7 +3706,7 @@
             // xrlL6ExcessDemand
             // 
             this.xrlL6ExcessDemand.Dpi = 96F;
-            this.xrlL6ExcessDemand.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrlL6ExcessDemand.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrlL6ExcessDemand.InteractiveSorting.FieldName = "OwnerName";
             this.xrlL6ExcessDemand.LocationFloat = new DevExpress.Utils.PointFloat(280.7067F, 295.08F);
             this.xrlL6ExcessDemand.Multiline = true;
@@ -3720,7 +3722,7 @@
             this.xrlL6BillDemand.Dpi = 96F;
             this.xrlL6BillDemand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L6_bill_demand]")});
-            this.xrlL6BillDemand.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrlL6BillDemand.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrlL6BillDemand.InteractiveSorting.FieldName = "OwnerName";
             this.xrlL6BillDemand.LocationFloat = new DevExpress.Utils.PointFloat(206.864F, 295.08F);
             this.xrlL6BillDemand.Multiline = true;
@@ -3736,7 +3738,7 @@
             this.xrlL6_AcutalDemand.Dpi = 96F;
             this.xrlL6_AcutalDemand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L6_ACTUAL_DEMAND]")});
-            this.xrlL6_AcutalDemand.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrlL6_AcutalDemand.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrlL6_AcutalDemand.InteractiveSorting.FieldName = "OwnerName";
             this.xrlL6_AcutalDemand.LocationFloat = new DevExpress.Utils.PointFloat(133F, 295.08F);
             this.xrlL6_AcutalDemand.Multiline = true;
@@ -3752,7 +3754,7 @@
             this.xrlL6Servdet_Sanc_load.Dpi = 96F;
             this.xrlL6Servdet_Sanc_load.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L6_SERVDET_SANC_LOAD]")});
-            this.xrlL6Servdet_Sanc_load.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrlL6Servdet_Sanc_load.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrlL6Servdet_Sanc_load.InteractiveSorting.FieldName = "OwnerName";
             this.xrlL6Servdet_Sanc_load.LocationFloat = new DevExpress.Utils.PointFloat(34.00006F, 295.08F);
             this.xrlL6Servdet_Sanc_load.Multiline = true;
@@ -3891,7 +3893,7 @@
             this.xrLabel36.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrLabel36.CanGrow = false;
             this.xrLabel36.Dpi = 96F;
-            this.xrLabel36.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel36.LocationFloat = new DevExpress.Utils.PointFloat(44.46392F, 620.8835F);
             this.xrLabel36.LockedInUserDesigner = true;
             this.xrLabel36.Name = "xrLabel36";
@@ -3907,7 +3909,7 @@
             // 
             this.xrDisconnectionDate.CanGrow = false;
             this.xrDisconnectionDate.Dpi = 96F;
-            this.xrDisconnectionDate.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrDisconnectionDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrDisconnectionDate.InteractiveSorting.FieldName = "OwnerName";
             this.xrDisconnectionDate.LocationFloat = new DevExpress.Utils.PointFloat(649F, 511.8173F);
             this.xrDisconnectionDate.Multiline = true;
@@ -3925,7 +3927,7 @@
             this.xrLabel9.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrLabel9.CanGrow = false;
             this.xrLabel9.Dpi = 96F;
-            this.xrLabel9.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(38F, 755.0634F);
             this.xrLabel9.Multiline = true;
             this.xrLabel9.Name = "xrLabel9";
@@ -3947,7 +3949,7 @@
             this.xrLabel10.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrLabel10.CanGrow = false;
             this.xrLabel10.Dpi = 96F;
-            this.xrLabel10.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(38.00001F, 774.1434F);
             this.xrLabel10.Multiline = true;
             this.xrLabel10.Name = "xrLabel10";
@@ -3969,7 +3971,7 @@
             this.xrLabel13.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrLabel13.CanGrow = false;
             this.xrLabel13.Dpi = 96F;
-            this.xrLabel13.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.xrLabel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(38.00001F, 793.7294F);
             this.xrLabel13.Multiline = true;
             this.xrLabel13.Name = "xrLabel13";
@@ -3992,7 +3994,7 @@
             this.MeterDetailTotLabel.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.MeterDetailTotLabel.CanGrow = false;
             this.MeterDetailTotLabel.Dpi = 96F;
-            this.MeterDetailTotLabel.Font = new System.Drawing.Font("DIN Pro Regular", 8F);
+            this.MeterDetailTotLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.MeterDetailTotLabel.LocationFloat = new DevExpress.Utils.PointFloat(38F, 812.8093F);
             this.MeterDetailTotLabel.Multiline = true;
             this.MeterDetailTotLabel.Name = "MeterDetailTotLabel";
@@ -4007,6 +4009,13 @@
             this.MeterDetailTotLabel.StylePriority.UseTextAlignment = false;
             this.MeterDetailTotLabel.Text = "Total / ";
             this.MeterDetailTotLabel.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // xrQRCODE
+            // 
+            this.xrQRCODE.Dpi = 96F;
+            this.xrQRCODE.LocationFloat = new DevExpress.Utils.PointFloat(494F, 36F);
+            this.xrQRCODE.Name = "xrQRCODE";
+            this.xrQRCODE.SizeF = new System.Drawing.SizeF(70F, 70F);
             // 
             // Rpt_HT_TodPDF
             // 
@@ -4262,6 +4271,7 @@
         private DevExpress.XtraReports.UI.XRLabel Subsidy;
         private DevExpress.XtraReports.UI.XRLabel SubsidyHindi;
         private DevExpress.XtraReports.UI.XRLabel SubsidyValue;
+        private DevExpress.XtraReports.UI.XRPictureBox xrQRCODE;
         //private System.Windows.Forms.BindingSource bsrptData;
         //private System.Windows.Forms.BindingSource bindingSource1;
     }

@@ -33,6 +33,7 @@
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.xrQRCODE = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLine12 = new DevExpress.XtraReports.UI.XRLine();
             this.xrLine11 = new DevExpress.XtraReports.UI.XRLine();
@@ -243,6 +244,7 @@
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrQRCODE,
             this.xrLabel5,
             this.xrLine12,
             this.xrLine11,
@@ -330,6 +332,13 @@
             this.Detail.HeightF = 1106.116F;
             this.Detail.Name = "Detail";
             this.Detail.StylePriority.UseFont = false;
+            // 
+            // xrQRCODE
+            // 
+            this.xrQRCODE.Dpi = 96F;
+            this.xrQRCODE.LocationFloat = new DevExpress.Utils.PointFloat(548.1999F, 64F);
+            this.xrQRCODE.Name = "xrQRCODE";
+            this.xrQRCODE.SizeF = new System.Drawing.SizeF(70F, 70F);
             // 
             // xrLabel5
             // 
@@ -3497,6 +3506,7 @@
         private DevExpress.XtraReports.UI.XRLabel Subsidy;
         private DevExpress.XtraReports.UI.XRLabel bd_SolarExportEnergy;
         private DevExpress.XtraReports.UI.XRLabel bd_Solar_Export_Value;
+        private DevExpress.XtraReports.UI.XRPictureBox xrQRCODE;
         //private System.Windows.Forms.BindingSource bsrptData;
         //private System.Windows.Forms.BindingSource bindingSource1;
     }

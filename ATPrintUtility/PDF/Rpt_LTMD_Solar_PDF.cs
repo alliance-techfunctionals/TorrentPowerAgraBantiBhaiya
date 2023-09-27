@@ -5,6 +5,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Configuration;
+using System.Text;
+using ZXing;
+using ZXing.Common;
 
 namespace AT.Print.PDF
 {
@@ -59,6 +63,28 @@ namespace AT.Print.PDF
             }
             #endregion
 
+            #region QRCODE
+
+            if (ConfigurationManager.AppSettings["generateQRCodeinSolarLTMDBills"].ToString() == "True")
+            {
+                string qrServiceno = "AGR@" + (op[0].L6_SERVDET_SERVNO);
+                byte[] bytesToEncode = Encoding.UTF8.GetBytes(qrServiceno);
+                string base64Encoded = Convert.ToBase64String(bytesToEncode);
+                string textToEncode = (ConfigurationManager.AppSettings["generateQRCodeURL"].ToString()) + base64Encoded;
+                BarcodeWriter barcodeWriter = new BarcodeWriter();
+                barcodeWriter.Format = BarcodeFormat.QR_CODE;
+                var encodingOptions = new ZXing.Common.EncodingOptions
+                {
+                    Margin = 0,
+                    Width = 67,
+                    Height = 67,
+                };
+                barcodeWriter.Options = encodingOptions;
+                var qrCodeBitmap = barcodeWriter.Write(textToEncode);
+                xrQRCODE.Image = qrCodeBitmap;
+            }
+
+            #endregion
             if (!string.IsNullOrEmpty(op[0].L1_Customer_PAN))
             {
                 xrLabel3.Visible = true;
