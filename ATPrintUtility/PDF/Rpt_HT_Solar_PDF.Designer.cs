@@ -33,6 +33,7 @@
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.xrQRCODE = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLine10 = new DevExpress.XtraReports.UI.XRLine();
             this.xrLine5 = new DevExpress.XtraReports.UI.XRLine();
@@ -223,7 +224,6 @@
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.objectDataSource1 = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
             this.objectDataSource2 = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
-            this.xrQRCODE = new DevExpress.XtraReports.UI.XRPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource2)).BeginInit();
@@ -332,6 +332,15 @@
             this.Detail.HeightF = 1106.116F;
             this.Detail.Name = "Detail";
             this.Detail.StylePriority.UseFont = false;
+            // 
+            // xrQRCODE
+            // 
+            this.xrQRCODE.Dpi = 96F;
+            this.xrQRCODE.ImageAlignment = DevExpress.XtraPrinting.ImageAlignment.MiddleCenter;
+            this.xrQRCODE.LocationFloat = new DevExpress.Utils.PointFloat(569.104F, 57F);
+            this.xrQRCODE.Name = "xrQRCODE";
+            this.xrQRCODE.SizeF = new System.Drawing.SizeF(52F, 52F);
+            this.xrQRCODE.Sizing = DevExpress.XtraPrinting.ImageSizeMode.Cover;
             // 
             // xrLabel5
             // 
@@ -3271,13 +3280,6 @@
             // 
             this.objectDataSource2.DataSourceType = null;
             this.objectDataSource2.Name = "objectDataSource2";
-            // 
-            // xrQRCODE
-            // 
-            this.xrQRCODE.Dpi = 96F;
-            this.xrQRCODE.LocationFloat = new DevExpress.Utils.PointFloat(560.64F, 56F);
-            this.xrQRCODE.Name = "xrQRCODE";
-            this.xrQRCODE.SizeF = new System.Drawing.SizeF(67F, 67F);
             // 
             // Rpt_HT_Solar_PDF
             // 

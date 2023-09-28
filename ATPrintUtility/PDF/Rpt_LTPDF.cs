@@ -50,12 +50,12 @@ namespace AT.Print.PDF
                 var encodingOptions = new ZXing.Common.EncodingOptions
                 {
                     Margin = 0,
-                    Width = 80,
-                    Height = 80,
+                   
                 };
                 barcodeWriter.Options = encodingOptions;
                 var qrCodeBitmap = barcodeWriter.Write(textToEncode);
                 xrQRCODE.Image = qrCodeBitmap;
+                xrQRCODE.SizeF = new System.Drawing.SizeF(60, 60);
             }
 
             #endregion

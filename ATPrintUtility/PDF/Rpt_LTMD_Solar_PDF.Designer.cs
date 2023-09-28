@@ -343,9 +343,11 @@
             // xrQRCODE
             // 
             this.xrQRCODE.Dpi = 96F;
-            this.xrQRCODE.LocationFloat = new DevExpress.Utils.PointFloat(569.9998F, 52.52003F);
+            this.xrQRCODE.ImageAlignment = DevExpress.XtraPrinting.ImageAlignment.MiddleCenter;
+            this.xrQRCODE.LocationFloat = new DevExpress.Utils.PointFloat(575.9998F, 56.52003F);
             this.xrQRCODE.Name = "xrQRCODE";
-            this.xrQRCODE.SizeF = new System.Drawing.SizeF(67F, 67F);
+            this.xrQRCODE.SizeF = new System.Drawing.SizeF(51F, 51F);
+            this.xrQRCODE.Sizing = DevExpress.XtraPrinting.ImageSizeMode.Cover;
             // 
             // xrLabel3
             // 

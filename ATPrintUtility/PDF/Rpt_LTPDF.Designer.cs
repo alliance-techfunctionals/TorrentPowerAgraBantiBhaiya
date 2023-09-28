@@ -33,6 +33,7 @@
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.xrQRCODE = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrLabel23 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel142 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel141 = new DevExpress.XtraReports.UI.XRLabel();
@@ -223,7 +224,6 @@
             this.xrImmediatedissconnectiondate = new DevExpress.XtraReports.UI.XRLabel();
             this.xrImmediatelbl = new DevExpress.XtraReports.UI.XRLabel();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.xrQRCODE = new DevExpress.XtraReports.UI.XRPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -391,6 +391,15 @@
             this.Detail.Name = "Detail";
             this.Detail.StylePriority.UseBorderDashStyle = false;
             this.Detail.StylePriority.UseFont = false;
+            // 
+            // xrQRCODE
+            // 
+            this.xrQRCODE.Dpi = 96F;
+            this.xrQRCODE.ImageAlignment = DevExpress.XtraPrinting.ImageAlignment.MiddleCenter;
+            this.xrQRCODE.LocationFloat = new DevExpress.Utils.PointFloat(488.4101F, 40.31273F);
+            this.xrQRCODE.Name = "xrQRCODE";
+            this.xrQRCODE.SizeF = new System.Drawing.SizeF(60F, 60F);
+            this.xrQRCODE.Sizing = DevExpress.XtraPrinting.ImageSizeMode.Cover;
             // 
             // xrLabel23
             // 
@@ -3359,13 +3368,6 @@
             this.xrImmediatelbl.Text = "rqjar";
             this.xrImmediatelbl.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrImmediatelbl.Visible = false;
-            // 
-            // xrQRCODE
-            // 
-            this.xrQRCODE.Dpi = 96F;
-            this.xrQRCODE.LocationFloat = new DevExpress.Utils.PointFloat(480.4101F, 29.31273F);
-            this.xrQRCODE.Name = "xrQRCODE";
-            this.xrQRCODE.SizeF = new System.Drawing.SizeF(80F, 80F);
             // 
             // Rpt_LTPDF
             // 

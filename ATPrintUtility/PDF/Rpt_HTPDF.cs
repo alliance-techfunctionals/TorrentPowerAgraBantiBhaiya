@@ -44,12 +44,12 @@ namespace AT.Print.PDF
                 var encodingOptions = new ZXing.Common.EncodingOptions
                 {
                     Margin = 0,
-                    Width = 67,
-                    Height = 67,
+                  
                 };
                 barcodeWriter.Options = encodingOptions;
                 var qrCodeBitmap = barcodeWriter.Write(textToEncode);
                 xrQRCODE.Image = qrCodeBitmap;
+                xrQRCODE.SizeF = new System.Drawing.SizeF(60, 60);
             }
             #endregion
             //if (Convert.ToInt32(op[0].L8_AmountPayableBeforeDueDate) >= 200000)

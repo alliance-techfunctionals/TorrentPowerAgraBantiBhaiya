@@ -128,12 +128,12 @@ namespace AT.Print
                 var encodingOptions = new ZXing.Common.EncodingOptions
                 {
                     Margin = 0,
-                    Width = 70,
-                    Height = 70,
+               
                 };
                 barcodeWriter.Options = encodingOptions;
                 var qrCodeBitmap = barcodeWriter.Write(textToEncode);
                 xrQRCODE.Image = qrCodeBitmap;
+                xrQRCODE.SizeF = new System.Drawing.SizeF(60, 60);
             }
 
             #endregion
