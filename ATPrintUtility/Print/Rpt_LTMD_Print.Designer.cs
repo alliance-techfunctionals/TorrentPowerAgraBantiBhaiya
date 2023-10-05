@@ -400,7 +400,7 @@
             // 
             this.xrQRCODE.Dpi = 96F;
             this.xrQRCODE.ImageAlignment = DevExpress.XtraPrinting.ImageAlignment.MiddleCenter;
-            this.xrQRCODE.LocationFloat = new DevExpress.Utils.PointFloat(506.5641F, 47.70129F);
+            this.xrQRCODE.LocationFloat = new DevExpress.Utils.PointFloat(494.5641F, 42.70129F);
             this.xrQRCODE.Name = "xrQRCODE";
             this.xrQRCODE.SizeF = new System.Drawing.SizeF(60F, 60F);
             this.xrQRCODE.Sizing = DevExpress.XtraPrinting.ImageSizeMode.Cover;
