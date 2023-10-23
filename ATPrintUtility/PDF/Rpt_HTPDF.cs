@@ -481,7 +481,19 @@ namespace AT.Print.PDF
                 Subsidy.Visible = false;
                 SubsidyHindi.Visible = false;
                 SubsidyValue.Visible = false;
+
+                Subsidy.TopF = bd_RlSC2.TopF;
+                SubsidyHindi.TopF = bd_RlSC2.TopF;
+                SubsidyValue.TopF = bd_RlSC2.TopF;
+                GreenTarrif.TopF = Subsidy.TopF;
+                GreenTarrifHindi.TopF = Subsidy.TopF;
+                GreenTarrifValue.TopF = Subsidy.TopF;
             }
+            GreenTarrif.TopF = Subsidy.BottomF;
+            GreenTarrifHindi.TopF = Subsidy.BottomF;
+            GreenTarrifValue.TopF = Subsidy.BottomF;
+
+        
            
             //Late Payment Surcharge
             if (op[0].L9_Int_Tpl == "0.00" || string.IsNullOrEmpty(op[0].L9_Int_Tpl))
