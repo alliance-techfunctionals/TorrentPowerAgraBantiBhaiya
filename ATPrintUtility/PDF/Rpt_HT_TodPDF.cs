@@ -496,13 +496,13 @@ namespace AT.Print.PDF
                 SubsidyHindi.Visible = false;
                 SubsidyValue.Visible = false;
 
-                //Subsidy.TopF = bd_OtherCharges.TopF;
-               // SubsidyHindi.TopF = bd_OtherCharges.TopF;
-                //SubsidyValue.TopF = bd_OtherCharges.TopF;
+                Subsidy.TopF = bd_OtherCharges.TopF;
+                SubsidyHindi.TopF = bd_OtherCharges.TopF;
+                SubsidyValue.TopF = bd_OtherCharges.TopF;
 
-                Subsidy.TopF = bd_PowerFectorCharges.TopF;
-                SubsidyHindi.TopF = bd_PowerFectorCharges.TopF;
-                SubsidyValue.TopF = bd_PowerFectorCharges.TopF;
+                //Subsidy.TopF = bd_PowerFectorCharges.TopF;
+                //SubsidyHindi.TopF = bd_PowerFectorCharges.TopF;
+               // SubsidyValue.TopF = bd_PowerFectorCharges.TopF;
                 GreenTarrif.TopF = Subsidy.TopF;
                 GreenTarrifHindi.TopF = Subsidy.TopF;
                 GreenTarrifValue.TopF = Subsidy.TopF;

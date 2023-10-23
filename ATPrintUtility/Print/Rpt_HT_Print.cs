@@ -487,7 +487,19 @@ namespace AT.Print
                 Subsidy.Visible = false;
                 SubsidyHindi.Visible = false;
                 SubsidyValue.Visible = false;
+
+                Subsidy.TopF = bd_RlSC2.TopF;
+                SubsidyHindi.TopF = bd_RlSC2.TopF;
+                SubsidyValue.TopF = bd_RlSC2.TopF;
+                GreenTarrif.TopF = Subsidy.TopF;
+                GreenTarrifHindi.TopF = Subsidy.TopF;
+                GreenTarrifValue.TopF = Subsidy.TopF;
             }
+            GreenTarrif.TopF = Subsidy.BottomF;
+            GreenTarrifHindi.TopF = Subsidy.BottomF;
+            GreenTarrifValue.TopF = Subsidy.BottomF;
+
+
 
 
             //Late Payment Surcharge

@@ -509,8 +509,16 @@ namespace AT.Print
                 Subsidy.TopF = bd_OtherCharges.TopF;
                 SubsidyHindi.TopF = bd_OtherCharges.TopF;
                 SubsidyValue.TopF = bd_OtherCharges.TopF;
-
+                GreenTarrif.TopF = Subsidy.TopF;
+                GreenTarrifHindi.TopF = Subsidy.TopF;
+                GreenTarrifValue.TopF = Subsidy.TopF;
             }
+            GreenTarrif.TopF = Subsidy.BottomF;
+            GreenTarrifHindi.TopF = Subsidy.BottomF;
+            GreenTarrifValue.TopF = Subsidy.BottomF;
+
+
+    
 
 
 

@@ -4049,15 +4049,12 @@
             // 
             // GreenTarrifHindi
             //
-          
-
             this.GreenTarrifHindi.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
             this.GreenTarrifHindi.CanGrow = false;
             this.GreenTarrifHindi.CanShrink = true;
             this.GreenTarrifHindi.Dpi = 96F;
             this.GreenTarrifHindi.Font = new System.Drawing.Font("Kruti Dev 010", 9F);
             this.GreenTarrifHindi.LocationFloat = new DevExpress.Utils.PointFloat(68.4639F, 195.0294F);
-            
             this.GreenTarrifHindi.Name = "GreenTarrifHindi";
             this.GreenTarrifHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.GreenTarrifHindi.SizeF = new System.Drawing.SizeF(86.29407F, 11.97743F);
@@ -4067,7 +4064,6 @@
             // 
             // GreenTarrifValue
             //
-
             this.GreenTarrifValue.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
             this.GreenTarrifValue.CanGrow = false;
             this.GreenTarrifValue.Dpi = 96F;
