@@ -120,6 +120,7 @@
             this.SubsidyValue = new DevExpress.XtraReports.UI.XRLabel();
             this.SubsidyHindi = new DevExpress.XtraReports.UI.XRLabel();
             this.Subsidy = new DevExpress.XtraReports.UI.XRLabel();
+            this.GreenTarrif = new DevExpress.XtraReports.UI.XRLabel();
             this.bd_PowerFectorChargesHindi = new DevExpress.XtraReports.UI.XRLabel();
             this.bd_PowerFectorChargesValues = new DevExpress.XtraReports.UI.XRLabel();
             this.bd_PowerFectorCharges = new DevExpress.XtraReports.UI.XRLabel();
@@ -254,6 +255,8 @@
             this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
             this.MeterDetailTotLabel = new DevExpress.XtraReports.UI.XRLabel();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.GreenTarrifHindi = new DevExpress.XtraReports.UI.XRLabel();
+            this.GreenTarrifValue = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -1819,9 +1822,12 @@
             // 
             this.xrPanel3.CanGrow = false;
             this.xrPanel3.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.GreenTarrifValue,
+            this.GreenTarrifHindi,
             this.SubsidyValue,
             this.SubsidyHindi,
             this.Subsidy,
+            this.GreenTarrif,
             this.bd_PowerFectorChargesHindi,
             this.bd_PowerFectorChargesValues,
             this.bd_PowerFectorCharges,
@@ -1860,7 +1866,7 @@
             this.xrPanel3.Dpi = 96F;
             this.xrPanel3.LocationFloat = new DevExpress.Utils.PointFloat(39F, 355.3759F);
             this.xrPanel3.Name = "xrPanel3";
-            this.xrPanel3.SizeF = new System.Drawing.SizeF(387F, 195.0294F);
+            this.xrPanel3.SizeF = new System.Drawing.SizeF(387F, 208.6015F);
             // 
             // SubsidyValue
             // 
@@ -1897,6 +1903,28 @@
             this.Subsidy.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.Subsidy.SizeF = new System.Drawing.SizeF(386F, 18.08F);
             this.Subsidy.Text = "Subsidy /";
+            // 
+            // GreenTarrif
+            // 
+            this.GreenTarrif.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
+            this.GreenTarrif.BorderColor = System.Drawing.Color.Silver;
+            this.GreenTarrif.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
+            this.GreenTarrif.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.GreenTarrif.CanGrow = false;
+            this.GreenTarrif.CanShrink = true;
+            this.GreenTarrif.Dpi = 96F;
+            this.GreenTarrif.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.GreenTarrif.LocationFloat = new DevExpress.Utils.PointFloat(1F, 193.0294F);
+            this.GreenTarrif.Name = "GreenTarrif";
+            this.GreenTarrif.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.GreenTarrif.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;
+            this.GreenTarrif.SizeF = new System.Drawing.SizeF(388F, 16.08F);
+            this.GreenTarrif.StylePriority.UseBorderColor = false;
+            this.GreenTarrif.StylePriority.UseBorderDashStyle = false;
+            this.GreenTarrif.StylePriority.UseBorders = false;
+            this.GreenTarrif.StylePriority.UseFont = false;
+            this.GreenTarrif.StylePriority.UsePadding = false;
+            this.GreenTarrif.Text = "Green Tarrif / ";
             // 
             // bd_PowerFectorChargesHindi
             // 
@@ -4019,6 +4047,42 @@
             this.MeterDetailTotLabel.Text = "Total / ";
             this.MeterDetailTotLabel.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
+            // GreenTarrifHindi
+            //
+          
+
+            this.GreenTarrifHindi.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
+            this.GreenTarrifHindi.CanGrow = false;
+            this.GreenTarrifHindi.CanShrink = true;
+            this.GreenTarrifHindi.Dpi = 96F;
+            this.GreenTarrifHindi.Font = new System.Drawing.Font("Kruti Dev 010", 9F);
+            this.GreenTarrifHindi.LocationFloat = new DevExpress.Utils.PointFloat(68.4639F, 195.0294F);
+            
+            this.GreenTarrifHindi.Name = "GreenTarrifHindi";
+            this.GreenTarrifHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.GreenTarrifHindi.SizeF = new System.Drawing.SizeF(86.29407F, 11.97743F);
+            this.GreenTarrifHindi.StylePriority.UseFont = false;
+            this.GreenTarrifHindi.StylePriority.UsePadding = false;
+            this.GreenTarrifHindi.Text = "xzhu VSfjQ";
+            // 
+            // GreenTarrifValue
+            //
+
+            this.GreenTarrifValue.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
+            this.GreenTarrifValue.CanGrow = false;
+            this.GreenTarrifValue.Dpi = 96F;
+            this.GreenTarrifValue.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_GreenTarrif_Charges]")});
+            this.GreenTarrifValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.GreenTarrifValue.LocationFloat = new DevExpress.Utils.PointFloat(293F, 195.0294F);
+            this.GreenTarrifValue.Name = "GreenTarrifValue";
+            this.GreenTarrifValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.GreenTarrifValue.SizeF = new System.Drawing.SizeF(94F, 11.97742F);
+            this.GreenTarrifValue.StylePriority.UseFont = false;
+            this.GreenTarrifValue.StylePriority.UsePadding = false;
+            this.GreenTarrifValue.StylePriority.UseTextAlignment = false;
+            this.GreenTarrifValue.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
             // Rpt_HT_TodPDF
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -4273,7 +4337,12 @@
         private DevExpress.XtraReports.UI.XRLabel Subsidy;
         private DevExpress.XtraReports.UI.XRLabel SubsidyHindi;
         private DevExpress.XtraReports.UI.XRLabel SubsidyValue;
+        private DevExpress.XtraReports.UI.XRLabel GreenTarrif;
+        //private DevExpress.XtraReports.UI.XRLabel GreenTarrifHindi;
+       // private DevExpress.XtraReports.UI.XRLabel GreenTarrifValue;
         private DevExpress.XtraReports.UI.XRPictureBox xrQRCODE;
+        private DevExpress.XtraReports.UI.XRLabel GreenTarrifValue;
+        private DevExpress.XtraReports.UI.XRLabel GreenTarrifHindi;
         //private System.Windows.Forms.BindingSource bsrptData;
         //private System.Windows.Forms.BindingSource bindingSource1;
     }

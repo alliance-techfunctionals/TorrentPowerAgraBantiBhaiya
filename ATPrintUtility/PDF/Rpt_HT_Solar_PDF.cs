@@ -560,13 +560,14 @@ namespace AT.Print.PDF
                 SubsidyValue.TopF = bd_Other.TopF;
 
             }
-          
+
+           GreenTarrif.TopF = Subsidy.BottomF;
+            GreenTarrifValue.TopF = Subsidy.BottomF;
 
 
 
-
-            bd_TotalCurrentDues.TopF = Subsidy.BottomF;
-            bd_TotalCurrentDuesValues.TopF = Subsidy.BottomF;
+            bd_TotalCurrentDues.TopF = GreenTarrif.BottomF;
+            bd_TotalCurrentDuesValues.TopF = GreenTarrif.BottomF;
 
             bd_Arrears.TopF = bd_TotalCurrentDues.BottomF;
             bd_Arrears_values.TopF = bd_TotalCurrentDues.BottomF;
