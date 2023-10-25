@@ -467,9 +467,9 @@ namespace AT.Print.PDF
                 bd_OtherCharges.TopF = bd_RlSC2.TopF;
                 bd_OtherChargesHindi.TopF = bd_RlSC2.TopF;
                 bd_OtherChargesValue.TopF = bd_RlSC2.TopF;
-                Subsidy.TopF = bd_OtherCharges.TopF;
-                SubsidyHindi.TopF = bd_OtherCharges.TopF;
-                SubsidyValue.TopF = bd_OtherCharges.TopF;
+                //Subsidy.TopF = bd_OtherCharges.TopF;
+               // SubsidyHindi.TopF = bd_OtherCharges.TopF;
+                //SubsidyValue.TopF = bd_OtherCharges.TopF;
             }
 
             Subsidy.TopF = bd_OtherCharges.BottomF;
@@ -482,21 +482,32 @@ namespace AT.Print.PDF
                 SubsidyHindi.Visible = false;
                 SubsidyValue.Visible = false;
 
-                Subsidy.TopF = bd_RlSC2.TopF;
-                SubsidyHindi.TopF = bd_RlSC2.TopF;
-                SubsidyValue.TopF = bd_RlSC2.TopF;
-                GreenTarrif.TopF = Subsidy.TopF;
-                GreenTarrifHindi.TopF = Subsidy.TopF;
-                GreenTarrifValue.TopF = Subsidy.TopF;
+                Subsidy.TopF = bd_OtherCharges.TopF;
+                SubsidyHindi.TopF = bd_OtherCharges.TopF;
+                SubsidyValue.TopF = bd_OtherCharges.TopF;
+
+                //Subsidy.TopF = bd_RlSC2.TopF;
+                //SubsidyHindi.TopF = bd_RlSC2.TopF;
+                //SubsidyValue.TopF = bd_RlSC2.TopF;
+                //GreenTarrif.TopF = Subsidy.TopF;
+                //GreenTarrifHindi.TopF = Subsidy.TopF;
+                //GreenTarrifValue.TopF = Subsidy.TopF;
             }
             GreenTarrif.TopF = Subsidy.BottomF;
             GreenTarrifHindi.TopF = Subsidy.BottomF;
             GreenTarrifValue.TopF = Subsidy.BottomF;
 
-        
-           
-            //Late Payment Surcharge
-            if (op[0].L9_Int_Tpl == "0.00" || string.IsNullOrEmpty(op[0].L9_Int_Tpl))
+            if (op[0].L8_GreenTarrif_Charges == "0.00" || string.IsNullOrEmpty(op[0].L8_GreenTarrif_Charges))
+            {
+                GreenTarrif.Visible = false;
+                GreenTarrifHindi.Visible = false;
+                GreenTarrifValue.Visible = false;
+            }
+
+
+
+                //Late Payment Surcharge
+                if (op[0].L9_Int_Tpl == "0.00" || string.IsNullOrEmpty(op[0].L9_Int_Tpl))
             {
                 LPSC.Visible = false;
                 LPSCHindi.Visible = false;
