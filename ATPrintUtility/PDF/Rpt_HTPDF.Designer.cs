@@ -671,8 +671,6 @@
             this.xrPanel3.Name = "xrPanel3";
             this.xrPanel3.SizeF = new System.Drawing.SizeF(387F, 175.8822F);
             // 
-
-           
             // GreenTarrifHindi
             // 
             this.GreenTarrifHindi.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
@@ -681,20 +679,16 @@
             this.GreenTarrifHindi.Dpi = 96F;
             this.GreenTarrifHindi.Font = new System.Drawing.Font("Kruti Dev 010", 9F);
             this.GreenTarrifHindi.LocationFloat = new DevExpress.Utils.PointFloat(69.15204F, 162.5717F);
-            //this.GreenTarrifHindi.Multiline = true;
             this.GreenTarrifHindi.Name = "GreenTarrifHindi";
             this.GreenTarrifHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.GreenTarrifHindi.SizeF = new System.Drawing.SizeF(55.84795F, 13.31047F);
             this.GreenTarrifHindi.StylePriority.UseFont = false;
-            this.bd_ElectricityDutyHindi.StylePriority.UsePadding = false;
             this.GreenTarrifHindi.StylePriority.UseTextAlignment = false;
             this.GreenTarrifHindi.Text = "xzhu VSfjQ";
             this.GreenTarrifHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
-            // 
             // GreenTarrifValue
             // 
-
             this.GreenTarrifValue.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
             this.GreenTarrifValue.CanGrow = false;
             this.GreenTarrifValue.Dpi = 96F;
@@ -708,7 +702,6 @@
             this.GreenTarrifValue.StylePriority.UseFont = false;
             this.GreenTarrifValue.StylePriority.UsePadding = false;
             this.GreenTarrifValue.StylePriority.UseTextAlignment = false;
-            //this.GreenTarrifValue.Text = "GreenTarrifValue";
             this.GreenTarrifValue.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // SubsidyValue
@@ -721,11 +714,11 @@
             this.SubsidyValue.Multiline = true;
             this.SubsidyValue.Name = "SubsidyValue";
             this.SubsidyValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.SubsidyValue.SizeF = new System.Drawing.SizeF(92F, 15.08F);
+            this.SubsidyValue.SizeF = new System.Drawing.SizeF(96F, 13.31F);
             this.SubsidyValue.StylePriority.UseFont = false;
             this.SubsidyValue.StylePriority.UseTextAlignment = false;
             this.SubsidyValue.Text = "xrLabel32";
-            this.SubsidyValue.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.SubsidyValue.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // SubsidyHindi
             // 
@@ -743,16 +736,25 @@
             // 
             // Subsidy
             // 
+            this.Subsidy.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
+            this.Subsidy.BorderColor = System.Drawing.Color.LightGray;
+            this.Subsidy.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
+            this.Subsidy.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.Subsidy.Dpi = 96F;
             this.Subsidy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.Subsidy.LocationFloat = new DevExpress.Utils.PointFloat(0.9999847F, 145.7223F);
             this.Subsidy.Multiline = true;
             this.Subsidy.Name = "Subsidy";
             this.Subsidy.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.Subsidy.ProcessDuplicatesMode = DevExpress.XtraReports.UI.ProcessDuplicatesMode.Suppress;
+            this.Subsidy.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;
             this.Subsidy.SizeF = new System.Drawing.SizeF(388F, 16.08F);
+            this.Subsidy.StylePriority.UseBorderColor = false;
+            this.Subsidy.StylePriority.UseBorderDashStyle = false;
+            this.Subsidy.StylePriority.UseBorders = false;
             this.Subsidy.StylePriority.UseFont = false;
             this.Subsidy.Text = "Subsidy /";
-            //
+            // 
             // GreenTarrif
             // 
             this.GreenTarrif.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
