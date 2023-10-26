@@ -606,8 +606,9 @@ namespace AT.Print
             sht.L8_Subsidy_Charges = dtSingleHTBill.Rows[7][13].ToString();
            
             sht.L8_Solar_Export_Energy = dtSingleHTBill.Rows[7][14].ToString();
-            //sht.L8_Intrest_Amount = dtSingleHTBill.Rows[7][15].ToString();
             sht.L8_GreenTarrif_Charges = dtSingleHTBill.Rows[7][15].ToString();
+            sht.L8_Intrest_Amount = dtSingleHTBill.Rows[7][16].ToString();
+           
             //Line 8 End
             #endregion
 

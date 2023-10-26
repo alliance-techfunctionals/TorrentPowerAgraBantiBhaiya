@@ -530,7 +530,7 @@
             // 
             this.xrLabel22.CanGrow = false;
             this.xrLabel22.Dpi = 96F;
-            this.xrLabel22.Font = new System.Drawing.Font("Kruti Dev 010", 9F);
+            this.xrLabel22.Font = new System.Drawing.Font("Kruti Dev 010 Condensed", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel22.LocationFloat = new DevExpress.Utils.PointFloat(548F, 673.5624F);
             this.xrLabel22.Multiline = true;
             this.xrLabel22.Name = "xrLabel22";
@@ -543,7 +543,7 @@
             // 
             this.xrLabel23.CanGrow = false;
             this.xrLabel23.Dpi = 96F;
-            this.xrLabel23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.xrLabel23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel23.LocationFloat = new DevExpress.Utils.PointFloat(458F, 673.5624F);
             this.xrLabel23.Multiline = true;
             this.xrLabel23.Name = "xrLabel23";
@@ -1969,7 +1969,7 @@
             // 
             this.xrLabel116.CanGrow = false;
             this.xrLabel116.Dpi = 96F;
-            this.xrLabel116.Font = new System.Drawing.Font("Kruti Dev 010", 11F);
+            this.xrLabel116.Font = new System.Drawing.Font("Kruti Dev 010 Condensed", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel116.LocationFloat = new DevExpress.Utils.PointFloat(457F, 742.08F);
             this.xrLabel116.Multiline = true;
             this.xrLabel116.Name = "xrLabel116";
@@ -2481,7 +2481,7 @@
             this.xrLabel75.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L9_CurrBillAmt]")});
             this.xrLabel75.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
-            this.xrLabel75.LocationFloat = new DevExpress.Utils.PointFloat(336F, 742.08F);
+            this.xrLabel75.LocationFloat = new DevExpress.Utils.PointFloat(338F, 742.08F);
             this.xrLabel75.LockedInUserDesigner = true;
             this.xrLabel75.Name = "xrLabel75";
             this.xrLabel75.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);

@@ -3060,7 +3060,7 @@
             // 
             this.xrLabel114.CanGrow = false;
             this.xrLabel114.Dpi = 96F;
-            this.xrLabel114.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.xrLabel114.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel114.LocationFloat = new DevExpress.Utils.PointFloat(458F, 593.0576F);
             this.xrLabel114.Multiline = true;
             this.xrLabel114.Name = "xrLabel114";
@@ -3073,7 +3073,7 @@
             // 
             this.xrLabel115.CanGrow = false;
             this.xrLabel115.Dpi = 96F;
-            this.xrLabel115.Font = new System.Drawing.Font("Kruti Dev 010", 9F);
+            this.xrLabel115.Font = new System.Drawing.Font("Kruti Dev 010 Condensed", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel115.LocationFloat = new DevExpress.Utils.PointFloat(550.6364F, 593.0576F);
             this.xrLabel115.Multiline = true;
             this.xrLabel115.Name = "xrLabel115";
