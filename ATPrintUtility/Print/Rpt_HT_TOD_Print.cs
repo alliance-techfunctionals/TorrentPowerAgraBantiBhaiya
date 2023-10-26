@@ -416,6 +416,11 @@ namespace AT.Print
             bd_TODChargesHindi.TopF = bd_EnergyChargeHindi.BottomF;
             bd_TODChargesValue.TopF = bd_EnergyChargeValues.BottomF;
 
+            bd_AcCharge.TopF = bd_TODCharges.BottomF;
+            bd_AcChargeHindi.TopF = bd_TODChargesHindi.BottomF;
+            bd_AcChargeValue.TopF = bd_TODChargesValue.BottomF;
+
+
             //AC Charge Print
             if (op[0].L8_ACCharge == "0.00" || string.IsNullOrEmpty(op[0].L8_ACCharge))
             {
@@ -429,9 +434,7 @@ namespace AT.Print
 
 
             }
-            bd_AcCharge.TopF = bd_TODCharges.BottomF;
-            bd_AcChargeHindi.TopF = bd_TODChargesHindi.BottomF;
-            bd_AcChargeValue.TopF = bd_TODChargesValue.BottomF;
+       
 
             bd_AdjustmentMinimumCharges.TopF = bd_AcCharge.BottomF;
             bd_AdjustmentMinimumChargesHindi.TopF = bd_AcCharge.BottomF;

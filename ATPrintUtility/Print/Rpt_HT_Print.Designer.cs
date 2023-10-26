@@ -490,7 +490,7 @@
             this.xrLabel24.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrLabel24.SizeF = new System.Drawing.SizeF(32.896F, 14.588F);
             this.xrLabel24.StylePriority.UseFont = false;
-            this.xrLabel24.Text = "mís\';";
+            this.xrLabel24.Text = "mn~ns\';";
             // 
             // xrLabel27
             // 

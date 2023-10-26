@@ -1741,7 +1741,7 @@
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrLabel1.SizeF = new System.Drawing.SizeF(58.37199F, 14.588F);
             this.xrLabel1.StylePriority.UseFont = false;
-            this.xrLabel1.Text = "mís\';";
+            this.xrLabel1.Text = "mn~ns\';";
             // 
             // xrLabel2
             // 
@@ -1922,7 +1922,7 @@
             this.SubsidyHindi.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
             this.SubsidyHindi.Dpi = 96F;
             this.SubsidyHindi.Font = new System.Drawing.Font("Kruti Dev 010", 9F);
-            this.SubsidyHindi.LocationFloat = new DevExpress.Utils.PointFloat(44.99999F, 176.9494F);
+            this.SubsidyHindi.LocationFloat = new DevExpress.Utils.PointFloat(47F, 176.95F);
             this.SubsidyHindi.Multiline = true;
             this.SubsidyHindi.Name = "SubsidyHindi";
             this.SubsidyHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2051,10 +2051,10 @@
             this.bd_TODChargesHindi.CanShrink = true;
             this.bd_TODChargesHindi.Dpi = 96F;
             this.bd_TODChargesHindi.Font = new System.Drawing.Font("Kruti Dev 010", 9F);
-            this.bd_TODChargesHindi.LocationFloat = new DevExpress.Utils.PointFloat(70.73F, 52.73F);
+            this.bd_TODChargesHindi.LocationFloat = new DevExpress.Utils.PointFloat(74.73F, 49.24F);
             this.bd_TODChargesHindi.Name = "bd_TODChargesHindi";
             this.bd_TODChargesHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.bd_TODChargesHindi.SizeF = new System.Drawing.SizeF(66.27211F, 14.58801F);
+            this.bd_TODChargesHindi.SizeF = new System.Drawing.SizeF(66.27211F, 17.0791F);
             this.bd_TODChargesHindi.StylePriority.UseFont = false;
             this.bd_TODChargesHindi.StylePriority.UsePadding = false;
             this.bd_TODChargesHindi.StylePriority.UseTextAlignment = false;
@@ -2187,7 +2187,7 @@
             this.bd_ExcessDemandChargesHindi.CanShrink = true;
             this.bd_ExcessDemandChargesHindi.Dpi = 96F;
             this.bd_ExcessDemandChargesHindi.Font = new System.Drawing.Font("Kruti Dev 010", 9F);
-            this.bd_ExcessDemandChargesHindi.LocationFloat = new DevExpress.Utils.PointFloat(129F, 18.08032F);
+            this.bd_ExcessDemandChargesHindi.LocationFloat = new DevExpress.Utils.PointFloat(131F, 18.08F);
             this.bd_ExcessDemandChargesHindi.Name = "bd_ExcessDemandChargesHindi";
             this.bd_ExcessDemandChargesHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.bd_ExcessDemandChargesHindi.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;
@@ -2339,7 +2339,7 @@
             this.bd_AcChargeHindi.CanGrow = false;
             this.bd_AcChargeHindi.Dpi = 96F;
             this.bd_AcChargeHindi.Font = new System.Drawing.Font("Kruti Dev 010", 9F);
-            this.bd_AcChargeHindi.LocationFloat = new DevExpress.Utils.PointFloat(68.4639F, 65.32123F);
+            this.bd_AcChargeHindi.LocationFloat = new DevExpress.Utils.PointFloat(68.46F, 66.32F);
             this.bd_AcChargeHindi.Name = "bd_AcChargeHindi";
             this.bd_AcChargeHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.bd_AcChargeHindi.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;
@@ -3616,7 +3616,7 @@
             this.LPSCHindi.CanGrow = false;
             this.LPSCHindi.Dpi = 96F;
             this.LPSCHindi.Font = new System.Drawing.Font("Kruti Dev 010", 9F);
-            this.LPSCHindi.LocationFloat = new DevExpress.Utils.PointFloat(166F, 642.452F);
+            this.LPSCHindi.LocationFloat = new DevExpress.Utils.PointFloat(172F, 642.45F);
             this.LPSCHindi.LockedInUserDesigner = true;
             this.LPSCHindi.Name = "LPSCHindi";
             this.LPSCHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
