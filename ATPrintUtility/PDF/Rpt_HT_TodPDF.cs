@@ -421,6 +421,10 @@ namespace AT.Print.PDF
 
 
             }
+            bd_AcCharge.TopF = bd_TODCharges.BottomF;
+            bd_AcChargeHindi.TopF = bd_TODChargesHindi.BottomF;
+            bd_AcChargeValue.TopF = bd_TODChargesValue.BottomF;
+
             bd_AdjustmentMinimumCharges.TopF = bd_AcCharge.BottomF;
             bd_AdjustmentMinimumChargesHindi.TopF = bd_AcCharge.BottomF;
             bd_AdjustmentMinimumChargesValue.TopF = bd_AcCharge.BottomF;
