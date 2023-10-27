@@ -1189,7 +1189,7 @@
             // xrLabel46
             // 
             this.xrLabel46.Dpi = 96F;
-            this.xrLabel46.Font = new System.Drawing.Font("Kruti Dev 021", 9F);
+            this.xrLabel46.Font = new System.Drawing.Font("Kruti Dev 010", 9F);
             this.xrLabel46.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabel46.LocationFloat = new DevExpress.Utils.PointFloat(368.442F, 285.746F);
             this.xrLabel46.Multiline = true;
