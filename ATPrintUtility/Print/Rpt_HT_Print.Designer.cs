@@ -669,7 +669,7 @@
             this.xrPanel3.Dpi = 96F;
             this.xrPanel3.LocationFloat = new DevExpress.Utils.PointFloat(47.00002F, 563.5084F);
             this.xrPanel3.Name = "xrPanel3";
-            this.xrPanel3.SizeF = new System.Drawing.SizeF(387F, 175.8021F);
+            this.xrPanel3.SizeF = new System.Drawing.SizeF(387F, 162F);
             // 
             // SubsidyValue
             // 
@@ -731,7 +731,7 @@
             this.GreenTarrif.CanShrink = true;
             this.GreenTarrif.Dpi = 96F;
             this.GreenTarrif.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.GreenTarrif.LocationFloat = new DevExpress.Utils.PointFloat(0F, 161.8022F);
+            this.GreenTarrif.LocationFloat = new DevExpress.Utils.PointFloat(1F, 145.72F);
             this.GreenTarrif.Name = "GreenTarrif";
             this.GreenTarrif.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.GreenTarrif.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;
@@ -751,7 +751,7 @@
             this.GreenTarrifValue.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_GreenTarrif_Charges]")});
             this.GreenTarrifValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.GreenTarrifValue.LocationFloat = new DevExpress.Utils.PointFloat(293F, 162.5717F);
+            this.GreenTarrifValue.LocationFloat = new DevExpress.Utils.PointFloat(294F, 146.72F);
             this.GreenTarrifValue.Name = "GreenTarrifValue";
             this.GreenTarrifValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.GreenTarrifValue.SizeF = new System.Drawing.SizeF(96F, 13.31047F);
@@ -767,7 +767,7 @@
             this.GreenTarrifHindi.CanShrink = true;
             this.GreenTarrifHindi.Dpi = 96F;
             this.GreenTarrifHindi.Font = new System.Drawing.Font("Kruti Dev 010", 9F);
-            this.GreenTarrifHindi.LocationFloat = new DevExpress.Utils.PointFloat(69.15204F, 162.5717F);
+            this.GreenTarrifHindi.LocationFloat = new DevExpress.Utils.PointFloat(69.15F, 146.72F);
             this.GreenTarrifHindi.Name = "GreenTarrifHindi";
             this.GreenTarrifHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.GreenTarrifHindi.SizeF = new System.Drawing.SizeF(55.84795F, 13.31047F);
@@ -2449,7 +2449,7 @@
             this.LPSCValue.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L9_Int_Tpl]")});
             this.LPSCValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.LPSCValue.LocationFloat = new DevExpress.Utils.PointFloat(336F, 782.35F);
+            this.LPSCValue.LocationFloat = new DevExpress.Utils.PointFloat(336F, 771.35F);
             this.LPSCValue.LockedInUserDesigner = true;
             this.LPSCValue.Name = "LPSCValue";
             this.LPSCValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2465,7 +2465,7 @@
             this.xrLabel76.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L9_ArrsTpl]")});
             this.xrLabel76.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.xrLabel76.LocationFloat = new DevExpress.Utils.PointFloat(336F, 766.27F);
+            this.xrLabel76.LocationFloat = new DevExpress.Utils.PointFloat(336F, 755.27F);
             this.xrLabel76.LockedInUserDesigner = true;
             this.xrLabel76.Name = "xrLabel76";
             this.xrLabel76.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2481,7 +2481,7 @@
             this.xrLabel75.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L9_CurrBillAmt]")});
             this.xrLabel75.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
-            this.xrLabel75.LocationFloat = new DevExpress.Utils.PointFloat(338F, 742.08F);
+            this.xrLabel75.LocationFloat = new DevExpress.Utils.PointFloat(338F, 731.08F);
             this.xrLabel75.LockedInUserDesigner = true;
             this.xrLabel75.Name = "xrLabel75";
             this.xrLabel75.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2594,7 +2594,7 @@
             this.LPSCHindi.CanGrow = false;
             this.LPSCHindi.Dpi = 96F;
             this.LPSCHindi.Font = new System.Drawing.Font("Kruti Dev 010", 9F);
-            this.LPSCHindi.LocationFloat = new DevExpress.Utils.PointFloat(180F, 782.76F);
+            this.LPSCHindi.LocationFloat = new DevExpress.Utils.PointFloat(180F, 771.76F);
             this.LPSCHindi.LockedInUserDesigner = true;
             this.LPSCHindi.Name = "LPSCHindi";
             this.LPSCHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2612,7 +2612,7 @@
             this.LPSC.CanGrow = false;
             this.LPSC.Dpi = 96F;
             this.LPSC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.LPSC.LocationFloat = new DevExpress.Utils.PointFloat(48F, 782.35F);
+            this.LPSC.LocationFloat = new DevExpress.Utils.PointFloat(48F, 771.35F);
             this.LPSC.LockedInUserDesigner = true;
             this.LPSC.Name = "LPSC";
             this.LPSC.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2628,7 +2628,7 @@
             this.xrLabel37.CanGrow = false;
             this.xrLabel37.Dpi = 96F;
             this.xrLabel37.Font = new System.Drawing.Font("Kruti Dev 010", 9F);
-            this.xrLabel37.LocationFloat = new DevExpress.Utils.PointFloat(98.02F, 767.76F);
+            this.xrLabel37.LocationFloat = new DevExpress.Utils.PointFloat(98.02F, 756.76F);
             this.xrLabel37.LockedInUserDesigner = true;
             this.xrLabel37.Name = "xrLabel37";
             this.xrLabel37.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2643,7 +2643,7 @@
             this.xrLabel34.CanGrow = false;
             this.xrLabel34.Dpi = 96F;
             this.xrLabel34.Font = new System.Drawing.Font("Kruti Dev 010", 9F);
-            this.xrLabel34.LocationFloat = new DevExpress.Utils.PointFloat(146F, 745.91F);
+            this.xrLabel34.LocationFloat = new DevExpress.Utils.PointFloat(146F, 732.91F);
             this.xrLabel34.LockedInUserDesigner = true;
             this.xrLabel34.Name = "xrLabel34";
             this.xrLabel34.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2658,7 +2658,7 @@
             this.xrLabel35.CanGrow = false;
             this.xrLabel35.Dpi = 96F;
             this.xrLabel35.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold);
-            this.xrLabel35.LocationFloat = new DevExpress.Utils.PointFloat(48F, 742.08F);
+            this.xrLabel35.LocationFloat = new DevExpress.Utils.PointFloat(48F, 729.08F);
             this.xrLabel35.LockedInUserDesigner = true;
             this.xrLabel35.Name = "xrLabel35";
             this.xrLabel35.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -3121,7 +3121,7 @@
             this.xrLabel36.CanGrow = false;
             this.xrLabel36.Dpi = 96F;
             this.xrLabel36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.xrLabel36.LocationFloat = new DevExpress.Utils.PointFloat(48F, 766.27F);
+            this.xrLabel36.LocationFloat = new DevExpress.Utils.PointFloat(48F, 755.27F);
             this.xrLabel36.LockedInUserDesigner = true;
             this.xrLabel36.Name = "xrLabel36";
             this.xrLabel36.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
