@@ -2595,7 +2595,7 @@
             this.LPSCHindi.CanGrow = false;
             this.LPSCHindi.Dpi = 96F;
             this.LPSCHindi.Font = new System.Drawing.Font("Kruti Dev 010", 9F);
-            this.LPSCHindi.LocationFloat = new DevExpress.Utils.PointFloat(166.78F, 768.16F);
+            this.LPSCHindi.LocationFloat = new DevExpress.Utils.PointFloat(173.78F, 768.16F);
             this.LPSCHindi.LockedInUserDesigner = true;
             this.LPSCHindi.Name = "LPSCHindi";
             this.LPSCHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2629,7 +2629,7 @@
             this.xrLabel37.CanGrow = false;
             this.xrLabel37.Dpi = 96F;
             this.xrLabel37.Font = new System.Drawing.Font("Kruti Dev 010", 9F);
-            this.xrLabel37.LocationFloat = new DevExpress.Utils.PointFloat(87.35F, 752.6F);
+            this.xrLabel37.LocationFloat = new DevExpress.Utils.PointFloat(94.02F, 752.08F);
             this.xrLabel37.LockedInUserDesigner = true;
             this.xrLabel37.Name = "xrLabel37";
             this.xrLabel37.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);

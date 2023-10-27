@@ -2594,7 +2594,7 @@
             this.LPSCHindi.CanGrow = false;
             this.LPSCHindi.Dpi = 96F;
             this.LPSCHindi.Font = new System.Drawing.Font("Kruti Dev 010", 9F);
-            this.LPSCHindi.LocationFloat = new DevExpress.Utils.PointFloat(173F, 782.76F);
+            this.LPSCHindi.LocationFloat = new DevExpress.Utils.PointFloat(180F, 782.76F);
             this.LPSCHindi.LockedInUserDesigner = true;
             this.LPSCHindi.Name = "LPSCHindi";
             this.LPSCHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
