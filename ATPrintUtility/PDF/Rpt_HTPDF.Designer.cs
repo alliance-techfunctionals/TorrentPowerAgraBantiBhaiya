@@ -50,12 +50,12 @@
             this.xrLabel46 = new DevExpress.XtraReports.UI.XRLabel();
             this.met2_headingMDKW = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPanel3 = new DevExpress.XtraReports.UI.XRPanel();
-            this.GreenTarrifHindi = new DevExpress.XtraReports.UI.XRLabel();
-            this.GreenTarrifValue = new DevExpress.XtraReports.UI.XRLabel();
+            this.GreenTariffHindi = new DevExpress.XtraReports.UI.XRLabel();
+            this.GreenTariffValue = new DevExpress.XtraReports.UI.XRLabel();
             this.SubsidyValue = new DevExpress.XtraReports.UI.XRLabel();
             this.SubsidyHindi = new DevExpress.XtraReports.UI.XRLabel();
             this.Subsidy = new DevExpress.XtraReports.UI.XRLabel();
-            this.GreenTarrif = new DevExpress.XtraReports.UI.XRLabel();
+            this.GreenTariff = new DevExpress.XtraReports.UI.XRLabel();
             this.bd_ExcessDemandChargesValue = new DevExpress.XtraReports.UI.XRLabel();
             this.bd_EnergyChargeValues = new DevExpress.XtraReports.UI.XRLabel();
             this.bd_RlSC1Rate = new DevExpress.XtraReports.UI.XRLabel();
@@ -631,12 +631,12 @@
             // 
             this.xrPanel3.CanGrow = false;
             this.xrPanel3.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.GreenTarrifHindi,
-            this.GreenTarrifValue,
+            this.GreenTariffHindi,
+            this.GreenTariffValue,
             this.SubsidyValue,
             this.SubsidyHindi,
             this.Subsidy,
-            this.GreenTarrif,
+            this.GreenTariff,
             this.bd_ExcessDemandChargesValue,
             this.bd_EnergyChargeValues,
             this.bd_RlSC1Rate,
@@ -671,38 +671,38 @@
             this.xrPanel3.Name = "xrPanel3";
             this.xrPanel3.SizeF = new System.Drawing.SizeF(387F, 160.2942F);
             // 
-            // GreenTarrifHindi
+            // GreenTariffHindi
             // 
-            this.GreenTarrifHindi.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
-            this.GreenTarrifHindi.CanGrow = false;
-            this.GreenTarrifHindi.CanShrink = true;
-            this.GreenTarrifHindi.Dpi = 96F;
-            this.GreenTarrifHindi.Font = new System.Drawing.Font("Kruti Dev 010", 9F);
-            this.GreenTarrifHindi.LocationFloat = new DevExpress.Utils.PointFloat(69.15F, 144.23F);
-            this.GreenTarrifHindi.Name = "GreenTarrifHindi";
-            this.GreenTarrifHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.GreenTarrifHindi.SizeF = new System.Drawing.SizeF(55.84795F, 13.31047F);
-            this.GreenTarrifHindi.StylePriority.UseFont = false;
-            this.GreenTarrifHindi.StylePriority.UseTextAlignment = false;
-            this.GreenTarrifHindi.Text = "xzhu VSfjQ";
-            this.GreenTarrifHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.GreenTariffHindi.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
+            this.GreenTariffHindi.CanGrow = false;
+            this.GreenTariffHindi.CanShrink = true;
+            this.GreenTariffHindi.Dpi = 96F;
+            this.GreenTariffHindi.Font = new System.Drawing.Font("Kruti Dev 010", 9F);
+            this.GreenTariffHindi.LocationFloat = new DevExpress.Utils.PointFloat(69.15F, 144.23F);
+            this.GreenTariffHindi.Name = "GreenTariffHindi";
+            this.GreenTariffHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.GreenTariffHindi.SizeF = new System.Drawing.SizeF(55.84795F, 13.31047F);
+            this.GreenTariffHindi.StylePriority.UseFont = false;
+            this.GreenTariffHindi.StylePriority.UseTextAlignment = false;
+            this.GreenTariffHindi.Text = "xzhu VSfjQ";
+            this.GreenTariffHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
-            // GreenTarrifValue
+            // GreenTariffValue
             // 
-            this.GreenTarrifValue.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
-            this.GreenTarrifValue.CanGrow = false;
-            this.GreenTarrifValue.Dpi = 96F;
-            this.GreenTarrifValue.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_GreenTarrif_Charges]")});
-            this.GreenTarrifValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.GreenTarrifValue.LocationFloat = new DevExpress.Utils.PointFloat(293F, 146.72F);
-            this.GreenTarrifValue.Name = "GreenTarrifValue";
-            this.GreenTarrifValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.GreenTarrifValue.SizeF = new System.Drawing.SizeF(96F, 13.31047F);
-            this.GreenTarrifValue.StylePriority.UseFont = false;
-            this.GreenTarrifValue.StylePriority.UsePadding = false;
-            this.GreenTarrifValue.StylePriority.UseTextAlignment = false;
-            this.GreenTarrifValue.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.GreenTariffValue.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
+            this.GreenTariffValue.CanGrow = false;
+            this.GreenTariffValue.Dpi = 96F;
+            this.GreenTariffValue.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_GreenTariff_Charges]")});
+            this.GreenTariffValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.GreenTariffValue.LocationFloat = new DevExpress.Utils.PointFloat(293F, 146.72F);
+            this.GreenTariffValue.Name = "GreenTariffValue";
+            this.GreenTariffValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.GreenTariffValue.SizeF = new System.Drawing.SizeF(96F, 13.31047F);
+            this.GreenTariffValue.StylePriority.UseFont = false;
+            this.GreenTariffValue.StylePriority.UsePadding = false;
+            this.GreenTariffValue.StylePriority.UseTextAlignment = false;
+            this.GreenTariffValue.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // SubsidyValue
             // 
@@ -755,27 +755,27 @@
             this.Subsidy.StylePriority.UseFont = false;
             this.Subsidy.Text = "Subsidy /";
             // 
-            // GreenTarrif
+            // GreenTariff
             // 
-            this.GreenTarrif.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
-            this.GreenTarrif.BorderColor = System.Drawing.Color.LightGray;
-            this.GreenTarrif.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
-            this.GreenTarrif.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.GreenTarrif.CanGrow = false;
-            this.GreenTarrif.CanShrink = true;
-            this.GreenTarrif.Dpi = 96F;
-            this.GreenTarrif.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.GreenTarrif.LocationFloat = new DevExpress.Utils.PointFloat(1F, 145.72F);
-            this.GreenTarrif.Name = "GreenTarrif";
-            this.GreenTarrif.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.GreenTarrif.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;
-            this.GreenTarrif.SizeF = new System.Drawing.SizeF(388F, 16.08F);
-            this.GreenTarrif.StylePriority.UseBorderColor = false;
-            this.GreenTarrif.StylePriority.UseBorderDashStyle = false;
-            this.GreenTarrif.StylePriority.UseBorders = false;
-            this.GreenTarrif.StylePriority.UseFont = false;
-            this.GreenTarrif.StylePriority.UsePadding = false;
-            this.GreenTarrif.Text = "Green Tarrif /";
+            this.GreenTariff.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
+            this.GreenTariff.BorderColor = System.Drawing.Color.LightGray;
+            this.GreenTariff.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
+            this.GreenTariff.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.GreenTariff.CanGrow = false;
+            this.GreenTariff.CanShrink = true;
+            this.GreenTariff.Dpi = 96F;
+            this.GreenTariff.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.GreenTariff.LocationFloat = new DevExpress.Utils.PointFloat(1F, 145.72F);
+            this.GreenTariff.Name = "GreenTariff";
+            this.GreenTariff.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.GreenTariff.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;
+            this.GreenTariff.SizeF = new System.Drawing.SizeF(388F, 16.08F);
+            this.GreenTariff.StylePriority.UseBorderColor = false;
+            this.GreenTariff.StylePriority.UseBorderDashStyle = false;
+            this.GreenTariff.StylePriority.UseBorders = false;
+            this.GreenTariff.StylePriority.UseFont = false;
+            this.GreenTariff.StylePriority.UsePadding = false;
+            this.GreenTariff.Text = "Green Tariff /";
             // 
             // bd_ExcessDemandChargesValue
             // 
@@ -3661,10 +3661,10 @@
         private DevExpress.XtraReports.UI.XRLabel SubsidyValue;
         private DevExpress.XtraReports.UI.XRLabel SubsidyHindi;
         private DevExpress.XtraReports.UI.XRLabel Subsidy;
-        private DevExpress.XtraReports.UI.XRLabel GreenTarrif;
+        private DevExpress.XtraReports.UI.XRLabel GreenTariff;
         private DevExpress.XtraReports.UI.XRPictureBox xrQRCODE;
-        private DevExpress.XtraReports.UI.XRLabel GreenTarrifHindi;
-        private DevExpress.XtraReports.UI.XRLabel GreenTarrifValue;
+        private DevExpress.XtraReports.UI.XRLabel GreenTariffHindi;
+        private DevExpress.XtraReports.UI.XRLabel GreenTariffValue;
         //private System.Windows.Forms.BindingSource bsrptData;
         //private System.Windows.Forms.BindingSource bindingSource1;
     }

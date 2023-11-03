@@ -493,15 +493,15 @@ namespace AT.Print
                 SubsidyHindi.TopF = bd_OtherCharges.TopF;
                 SubsidyValue.TopF = bd_OtherCharges.TopF;
             }
-            GreenTarrif.TopF = Subsidy.BottomF;
-            GreenTarrifHindi.TopF = Subsidy.BottomF;
-            GreenTarrifValue.TopF = Subsidy.BottomF;
+            GreenTariff.TopF = Subsidy.BottomF;
+            GreenTariffHindi.TopF = Subsidy.BottomF;
+            GreenTariffValue.TopF = Subsidy.BottomF;
 
-            if (op[0].L8_GreenTarrif_Charges == "0.00" || string.IsNullOrEmpty(op[0].L8_GreenTarrif_Charges))
+            if (op[0].L8_GreenTariff_Charges == "0.00" || string.IsNullOrEmpty(op[0].L8_GreenTariff_Charges))
             {
-                GreenTarrif.Visible = false;
-                GreenTarrifHindi.Visible = false;
-                GreenTarrifValue.Visible = false;
+                GreenTariff.Visible = false;
+                GreenTariffHindi.Visible = false;
+                GreenTariffValue.Visible = false;
             }
 
 
