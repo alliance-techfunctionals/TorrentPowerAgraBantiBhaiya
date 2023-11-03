@@ -247,7 +247,7 @@
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrQRCODE,
             this.xrLabel23,
-             this.xrLabel75,
+            this.xrLabel75,
             this.xrLabel35,
             this.xrLabel34,
             this.xrLabel22,
