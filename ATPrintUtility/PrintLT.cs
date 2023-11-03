@@ -695,6 +695,7 @@ namespace AT.Print
             slt.L8_ParkingAmount = dtSingleLTBill.Rows[7][12].ToString();
             slt.L8_Subsidy_Charges = dtSingleLTBill.Rows[7][13].ToString();
             slt.L8_Solar_Export_Energy = dtSingleLTBill.Rows[7][14].ToString();
+            slt.L8_GreenTariff_Charges = dtSingleLTBill.Rows[7][15].ToString();
             slt.L8_Intrest_Amount = dtSingleLTBill.Rows[7][15].ToString();
             //Line 8 End
             #endregion
@@ -1676,6 +1677,7 @@ namespace AT.Print
                 slt.L31_MESSAGE10 = dtSingleLTBill.Rows[30][0].ToString();
             //Line 31 End
             #endregion
+
 
             LineNo = "6";
             #region TemplateConditionalWithSTHindi
