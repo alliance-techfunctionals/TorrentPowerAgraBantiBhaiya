@@ -618,7 +618,7 @@ namespace AT.Print.Utils
                                 break;
                             case 8:
                                 {
-                                    if (fields.Length != 16)
+                                    if (fields.Length != 17)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 8 has " + fields.Length + " columns only.");
