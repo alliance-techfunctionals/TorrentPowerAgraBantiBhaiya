@@ -441,11 +441,17 @@ namespace AT.Print
             bd_OtherChargesHindi.TopF = bd_AcCharge.BottomF;
             bd_OtherChargesValue.TopF = bd_AcCharge.BottomF;
 
+
             if (op[0].L8_ServdetTotbBdtOthr == "0.00" || string.IsNullOrEmpty(op[0].L8_ServdetTotbBdtOthr))
             {
                 bd_OtherCharges.Visible = false;
                 bd_OtherChargesHindi.Visible = false;
                 bd_OtherChargesValue.Visible = false;
+
+                //Subsidy.TopF = bd_AcCharge.TopF;
+                //SubsidyHindi.TopF = bd_AcCharge.TopF;
+                //SubsidyValue.TopF = bd_AcCharge.TopF;
+
                 bd_OtherCharges.TopF = bd_AcCharge.TopF;
                 bd_OtherChargesHindi.TopF = bd_AcCharge.TopF;
                 bd_OtherChargesValue.TopF = bd_AcCharge.TopF;
@@ -469,15 +475,28 @@ namespace AT.Print
 
 
             }
+            GreenTariff.TopF = Subsidy.BottomF;
+            GreenTariffHindi.TopF = Subsidy.BottomF;
+            GreenTariffValue.TopF = Subsidy.BottomF;
 
 
-            if ((op[0].L8_ServdetTotbBdtOthr == "0.00" || string.IsNullOrEmpty(op[0].L8_ServdetTotbBdtOthr)) && (op[0].L8_ACCharge == "0.00" || string.IsNullOrEmpty(op[0].L8_ACCharge)) && (string.IsNullOrEmpty(op[0].L8_PowerFactorAdj) || String.Equals(op[0].L8_PowerFactorAdj, "0.00")))
+
+
+            if (op[0].L8_GreenTariff_Charges == "0.00" || string.IsNullOrEmpty(op[0].L8_GreenTariff_Charges))
             {
-                Subsidy.TopF = bd_RlSC2.BottomF;
-                SubsidyHindi.TopF = bd_RlSC2.BottomF;
-                SubsidyValue.TopF = bd_RlSC2.BottomF;
-
+                GreenTariff.Visible = false;
+                GreenTariffHindi.Visible = false;
+                GreenTariffValue.Visible = false;
             }
+
+
+            //if ((op[0].L8_ServdetTotbBdtOthr == "0.00" || string.IsNullOrEmpty(op[0].L8_ServdetTotbBdtOthr)) && (op[0].L8_ACCharge == "0.00" || string.IsNullOrEmpty(op[0].L8_ACCharge)) && (string.IsNullOrEmpty(op[0].L8_PowerFactorAdj) || String.Equals(op[0].L8_PowerFactorAdj, "0.00")))
+            //{
+            //    Subsidy.TopF = bd_RlSC2.BottomF;
+            //    SubsidyHindi.TopF = bd_RlSC2.BottomF;
+            //    SubsidyValue.TopF = bd_RlSC2.BottomF;
+
+            //}
 
             //Other Charges Print
             //if (op[0].L8_ServdetTotbBdtOthr == "0.00" || string.IsNullOrEmpty(op[0].L8_ServdetTotbBdtOthr))
@@ -549,7 +568,7 @@ namespace AT.Print
                 messageFromFile++;
                 XRLabel xrMessage2 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                    Font = new System.Drawing.Font("DIN Pro Regular", 9),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L27_MESSAGE2,
                     WordWrap = false,
@@ -567,7 +586,7 @@ namespace AT.Print
                 messageFromFile++;
                 XRLabel xrMessage3 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                    Font = new System.Drawing.Font("DIN Pro Regular", 9),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L28_MESSAGE3,
                     WordWrap = false,
@@ -733,7 +752,7 @@ namespace AT.Print
                     totalMessages++;
                     XRLabel xrMessageTheftAmount = new XRLabel
                     {
-                        Font = new System.Drawing.Font("Kruti Dev 010", 9),
+                        Font = new System.Drawing.Font("Kruti Dev 010", 10),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = string.Format(getMessage(LoadStaticData._HindiMessage, "TFA"), op[0].L10_TheftAmount.Replace('.', '-')),
                         WordWrap = false,
