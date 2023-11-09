@@ -507,8 +507,9 @@ namespace AT.Print
             SubsidyValue.TopF = bd_OtherCharges.BottomF;
 
 
-            if (!op[0].L6_TARIFF_DESCR.Contains("LMV") || (op[0].L8_Subsidy_Charges == "" || op[0].L8_Subsidy_Charges == "0.00"))
-            {
+          
+            if (op[0].L8_Subsidy_Charges == "0.00" || string.IsNullOrEmpty(op[0].L8_Subsidy_Charges))
+             {
                 Subsidy.Visible = false;
                 SubsidyHindi.Visible = false;
                 SubsidyValue.Visible = false;
@@ -578,7 +579,7 @@ namespace AT.Print
                 messageFromFile++;
                 XRLabel xrMessage2 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                    Font = new System.Drawing.Font("DIN Pro Regular", 9),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L27_MESSAGE2,
                     WordWrap = false,
@@ -596,7 +597,7 @@ namespace AT.Print
                 messageFromFile++;
                 XRLabel xrMessage3 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                    Font = new System.Drawing.Font("DIN Pro Regular", 9),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L28_MESSAGE3,
                     WordWrap = false,
@@ -740,7 +741,7 @@ namespace AT.Print
                     totalMessages++;
                     XRLabel xrMessageTheftAmount = new XRLabel
                     {
-                        Font = new System.Drawing.Font("Kruti Dev 010", 9),
+                        Font = new System.Drawing.Font("Kruti Dev 010", 10),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = string.Format(getMessage(LoadStaticData._HindiMessage, "TFA"), op[0].L10_TheftAmount.Replace('.', '-')),
                         WordWrap = false,
