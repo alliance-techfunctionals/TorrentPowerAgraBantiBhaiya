@@ -335,10 +335,7 @@ namespace AT.Print
                 bd_OtherChargesValue.TopF = bd_RlSC2.TopF;
 
 
-                //Subsidy.TopF = bd_OtherCharges.TopF;
-                //SubsidyHindi.TopF = bd_OtherChargesHindi.TopF;
-                //SubsidyValue.TopF = bd_OtherChargesValue.TopF;
-
+            
 
             }
             //  else
@@ -352,8 +349,7 @@ namespace AT.Print
             //bd_OtherChargesHindi.TopF = bd_RlSC2.BottomF;
             // bd_OtherChargesValue.TopF = bd_RlSC2.BottomF;
 
-
-            if (!op[0].L6_TARIFF_DESCR.Contains("LMV") || (op[0].L8_Subsidy_Charges == "" || op[0].L8_Subsidy_Charges == "0.00"))
+            if (op[0].L8_Subsidy_Charges == "0.00" || string.IsNullOrEmpty(op[0].L8_Subsidy_Charges))  
             {
                 Subsidy.Visible = false;
                 SubsidyHindi.Visible = false;

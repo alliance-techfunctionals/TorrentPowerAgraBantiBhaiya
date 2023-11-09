@@ -363,12 +363,8 @@ namespace AT.Print.PDF
                 SubsidyHindi.TopF = bd_OtherChargesHindi.BottomF;
                 SubsidyValue.TopF = bd_OtherChargesValue.BottomF;
 
-           // }
-           // bd_OtherCharges.TopF = bd_RlSC2.BottomF;
-            //bd_OtherChargesHindi.TopF = bd_RlSC2.BottomF;
-           // bd_OtherChargesValue.TopF = bd_RlSC2.BottomF;
-
-            if (!op[0].L6_TARIFF_DESCR.Contains("LMV") || (op[0].L8_Subsidy_Charges == "" || op[0].L8_Subsidy_Charges == "0.00"))
+        
+            if (op[0].L8_Subsidy_Charges == "0.00" || string.IsNullOrEmpty(op[0].L8_Subsidy_Charges))
             {
 
 
