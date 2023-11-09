@@ -330,41 +330,79 @@ namespace AT.Print
                 bd_OtherChargesHindi.Visible = false;
                 bd_OtherChargesValue.Visible = false;
 
+                bd_OtherCharges.TopF = bd_RlSC2.TopF;
+                bd_OtherChargesHindi.TopF = bd_RlSC2.TopF;
+                bd_OtherChargesValue.TopF = bd_RlSC2.TopF;
 
-                Subsidy.TopF = bd_OtherCharges.TopF;
-                SubsidyHindi.TopF = bd_OtherChargesHindi.TopF;
-                SubsidyValue.TopF = bd_OtherChargesValue.TopF;
 
-
-            }
-            else
-            {
-                Subsidy.TopF = bd_OtherCharges.BottomF;
-                SubsidyHindi.TopF = bd_OtherChargesHindi.BottomF;
-                SubsidyValue.TopF = bd_OtherChargesValue.BottomF;
+            
 
             }
-            bd_OtherCharges.TopF = bd_RlSC2.BottomF;
-            bd_OtherChargesHindi.TopF = bd_RlSC2.BottomF;
-            bd_OtherChargesValue.TopF = bd_RlSC2.BottomF;
+            //  else
+            //  {
+            Subsidy.TopF = bd_OtherCharges.BottomF;
+            SubsidyHindi.TopF = bd_OtherChargesHindi.BottomF;
+            SubsidyValue.TopF = bd_OtherChargesValue.BottomF;
 
+            // }
+            // bd_OtherCharges.TopF = bd_RlSC2.BottomF;
+            //bd_OtherChargesHindi.TopF = bd_RlSC2.BottomF;
+            // bd_OtherChargesValue.TopF = bd_RlSC2.BottomF;
 
-            if (!op[0].L6_TARIFF_DESCR.Contains("LMV") || (op[0].L8_Subsidy_Charges == "" || op[0].L8_Subsidy_Charges == "0.00"))
+            if (op[0].L8_Subsidy_Charges == "0.00" || string.IsNullOrEmpty(op[0].L8_Subsidy_Charges))  
             {
-
-
                 Subsidy.Visible = false;
                 SubsidyHindi.Visible = false;
                 SubsidyValue.Visible = false;
 
-            }
-            else
-            {
+                Subsidy.TopF = bd_OtherCharges.TopF;
+                SubsidyHindi.TopF = bd_OtherCharges.TopF;
+                SubsidyValue.TopF = bd_OtherCharges.TopF;
 
-                Subsidy.Visible = true;
-                SubsidyHindi.Visible = true;
-                SubsidyValue.Visible = true;
+                // GreenTariff.TopF = Subsidy.TopF;
+                // GreenTariffHindi.TopF = SubsidyHindi.TopF;
+                // GreenTariffValue.TopF = SubsidyValue.TopF;
+
+
             }
+            GreenTariff.TopF = Subsidy.BottomF;
+            GreenTariffHindi.TopF = Subsidy.BottomF;
+            GreenTariffValue.TopF = Subsidy.BottomF;
+
+            // else
+            // {
+
+            //    Subsidy.Visible = true;
+            //    SubsidyHindi.Visible = true;
+            //   SubsidyValue.Visible = true;
+            //  }
+
+            if (op[0].L8_GreenTariff_Charges == "0.00" || string.IsNullOrEmpty(op[0].L8_GreenTariff_Charges))
+            {
+                GreenTariff.Visible = false;
+                GreenTariffHindi.Visible = false;
+                GreenTariffValue.Visible = false;
+            }
+
+            if (bd_ExcessDemandCharges.Visible == true && bd_AcCharge.Visible == true && bdPowerFactorCharges.Visible == true && bd_AdjustmentMinimumCharges.Visible == true && bd_OtherCharges.Visible == true && Subsidy.Visible == true && GreenTariff.Visible == true)
+            {
+                xrLabel35.TopF = GreenTariff.BottomF;
+                xrLabel34.TopF = GreenTariff.BottomF;
+                xrLabel75.TopF = GreenTariff.BottomF;
+            }
+            else if (bd_ExcessDemandCharges.Visible == true && bd_AcCharge.Visible == true && bdPowerFactorCharges.Visible == true && bd_AdjustmentMinimumCharges.Visible == true && bd_OtherCharges.Visible == true && Subsidy.Visible == true)
+            {
+                xrLabel35.TopF = Subsidy.BottomF;
+                xrLabel34.TopF = Subsidy.BottomF;
+                xrLabel75.TopF = Subsidy.BottomF;
+            }
+            else if (bd_ExcessDemandCharges.Visible == true && bd_AcCharge.Visible == true && bdPowerFactorCharges.Visible == true && bd_AdjustmentMinimumCharges.Visible == true && bd_OtherCharges.Visible == true && GreenTariff.Visible == true)
+            {
+                xrLabel35.TopF = GreenTariff.BottomF;
+                xrLabel34.TopF = GreenTariff.BottomF;
+                xrLabel75.TopF = GreenTariff.BottomF;
+            }
+
 
 
             //Late Payment Surcharge
@@ -403,7 +441,7 @@ namespace AT.Print
                 messageFromFile++;
                 XRLabel xrMessage2 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                    Font = new System.Drawing.Font("DIN Pro Regular", 9),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L23_MESSAGE2,
                     WordWrap = false,
@@ -421,7 +459,7 @@ namespace AT.Print
                 messageFromFile++;
                 XRLabel xrMessage3 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                    Font = new System.Drawing.Font("DIN Pro Regular", 9),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L24_MESSAGE3,
                     WordWrap = false,
@@ -643,7 +681,7 @@ namespace AT.Print
                     totalMessages++;
                     XRLabel xrMessageTheftAmount = new XRLabel
                     {
-                        Font = new System.Drawing.Font("Kruti Dev 010", 9),
+                        Font = new System.Drawing.Font("Kruti Dev 010", 10),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = string.Format(getMessage(LoadStaticData._HindiMessage, "TFA"), op[0].L10_TheftAmount.Replace('.', '-')),
                         WordWrap = false,
@@ -726,7 +764,7 @@ namespace AT.Print
 
                         XRLabel xrAB2Msg = new XRLabel
                         {
-                            Font = new System.Drawing.Font("Kruti Dev 010", 9),
+                            Font = new System.Drawing.Font("kruti Dev 010", 9),
                             TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                             Text = string.Format(getMessage(LoadStaticData._HindiMessage, "AB2")),
                             WordWrap = false,
