@@ -68,12 +68,18 @@
             this.bd_FixedChargeValue = new DevExpress.XtraReports.UI.XRLabel();
             this.bd_RlSC1Value = new DevExpress.XtraReports.UI.XRLabel();
             this.bd_AcCharge = new DevExpress.XtraReports.UI.XRLabel();
+            this.GreenTariffValue = new DevExpress.XtraReports.UI.XRLabel();
+            this.GreenTariffHindi = new DevExpress.XtraReports.UI.XRLabel();
+            this.GreenTariff = new DevExpress.XtraReports.UI.XRLabel();
             this.bd_RlSC1Hindi = new DevExpress.XtraReports.UI.XRLabel();
             this.bd_ElectricityDuty = new DevExpress.XtraReports.UI.XRLabel();
             this.bd_AdjustmentMinimumCharges = new DevExpress.XtraReports.UI.XRLabel();
             this.bd_RlSC2Hindi = new DevExpress.XtraReports.UI.XRLabel();
             this.bd_EnergyCharge = new DevExpress.XtraReports.UI.XRLabel();
             this.bd_RlSC1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel34 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel35 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel75 = new DevExpress.XtraReports.UI.XRLabel();
             this.bd_RlSC2 = new DevExpress.XtraReports.UI.XRLabel();
             this.bd_FixedCharge = new DevExpress.XtraReports.UI.XRLabel();
             this.bdPowerFactor = new DevExpress.XtraReports.UI.XRLabel();
@@ -162,7 +168,6 @@
             this.xrLabel78 = new DevExpress.XtraReports.UI.XRLabel();
             this.LPSCValue = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel76 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel75 = new DevExpress.XtraReports.UI.XRLabel();
             this.met2_42 = new DevExpress.XtraReports.UI.XRLabel();
             this.met2_32 = new DevExpress.XtraReports.UI.XRLabel();
             this.met2_22 = new DevExpress.XtraReports.UI.XRLabel();
@@ -173,8 +178,6 @@
             this.LPSCHindi = new DevExpress.XtraReports.UI.XRLabel();
             this.LPSC = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel37 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel34 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel35 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
@@ -339,7 +342,6 @@
             this.xrLabel78,
             this.LPSCValue,
             this.xrLabel76,
-            this.xrLabel75,
             this.met2_42,
             this.met2_32,
             this.met2_22,
@@ -350,8 +352,6 @@
             this.LPSCHindi,
             this.LPSC,
             this.xrLabel37,
-            this.xrLabel34,
-            this.xrLabel35,
             this.xrLabel16,
             this.xrLabel17,
             this.xrLabel15,
@@ -543,19 +543,25 @@
             this.bd_FixedChargeValue,
             this.bd_RlSC1Value,
             this.bd_AcCharge,
+            this.GreenTariffValue,
+            this.GreenTariffHindi,
+            this.GreenTariff,
             this.bd_RlSC1Hindi,
             this.bd_ElectricityDuty,
             this.bd_AdjustmentMinimumCharges,
             this.bd_RlSC2Hindi,
             this.bd_EnergyCharge,
             this.bd_RlSC1,
+            this.xrLabel34,
+            this.xrLabel35,
+            this.xrLabel75,
             this.bd_RlSC2,
             this.bd_FixedCharge,
             this.bdPowerFactor});
             this.xrPanel3.Dpi = 96F;
             this.xrPanel3.LocationFloat = new DevExpress.Utils.PointFloat(51F, 561.4281F);
             this.xrPanel3.Name = "xrPanel3";
-            this.xrPanel3.SizeF = new System.Drawing.SizeF(387F, 176.214F);
+            this.xrPanel3.SizeF = new System.Drawing.SizeF(387F, 208.5719F);
             // 
             // Subsidy_Hindi
             // 
@@ -589,13 +595,19 @@
             // 
             // Subsidy
             // 
+            this.Subsidy.BorderColor = System.Drawing.Color.Silver;
+            this.Subsidy.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
+            this.Subsidy.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.Subsidy.Dpi = 96F;
             this.Subsidy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.Subsidy.LocationFloat = new DevExpress.Utils.PointFloat(1F, 161.2139F);
             this.Subsidy.Multiline = true;
             this.Subsidy.Name = "Subsidy";
             this.Subsidy.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.Subsidy.SizeF = new System.Drawing.SizeF(386F, 14.08F);
+            this.Subsidy.SizeF = new System.Drawing.SizeF(386F, 16.08F);
+            this.Subsidy.StylePriority.UseBorderColor = false;
+            this.Subsidy.StylePriority.UseBorderDashStyle = false;
+            this.Subsidy.StylePriority.UseBorders = false;
             this.Subsidy.StylePriority.UseFont = false;
             this.Subsidy.Text = "Subsidy /";
             // 
@@ -1004,6 +1016,57 @@
             this.bd_AcCharge.StylePriority.UsePadding = false;
             this.bd_AcCharge.Text = "AC Charges /";
             // 
+            // GreenTariffValue
+            // 
+            this.GreenTariffValue.Dpi = 96F;
+            this.GreenTariffValue.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_GreenTariff_Charges]")});
+            this.GreenTariffValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.GreenTariffValue.LocationFloat = new DevExpress.Utils.PointFloat(291F, 161F);
+          
+            this.GreenTariffValue.Multiline = true;
+            this.GreenTariffValue.Name = "GreenTariffValue";
+            this.GreenTariffValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.GreenTariffValue.SizeF = new System.Drawing.SizeF(96F, 16.08F);
+            this.GreenTariffValue.StylePriority.UseFont = false;
+            this.GreenTariffValue.Text = "L8_GreenTariff_Charges";
+            this.GreenTariffValue.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            // 
+            // GreenTariffHindi
+            // 
+            this.GreenTariffHindi.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
+            this.GreenTariffHindi.CanGrow = false;
+            this.GreenTariffHindi.CanShrink = true;
+            this.GreenTariffHindi.Dpi = 96F;
+            this.GreenTariffHindi.Font = new System.Drawing.Font("Kruti Dev 010", 9F);
+            this.GreenTariffHindi.LocationFloat = new DevExpress.Utils.PointFloat(70F, 161F);
+            this.GreenTariffHindi.Name = "GreenTariffHindi";
+            this.GreenTariffHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.GreenTariffHindi.SizeF = new System.Drawing.SizeF(78F, 16.08F);
+            this.GreenTariffHindi.StylePriority.UseFont = false;
+            this.GreenTariffHindi.StylePriority.UsePadding = false;
+            this.GreenTariffHindi.StylePriority.UseTextAlignment = false;
+            this.GreenTariffHindi.Text = "xzhu VSfjQ";
+            this.GreenTariffHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // GreenTariff
+            // 
+            this.GreenTariff.BorderColor = System.Drawing.Color.Silver;
+            this.GreenTariff.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
+            this.GreenTariff.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.GreenTariff.Dpi = 96F;
+            this.GreenTariff.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.GreenTariff.LocationFloat = new DevExpress.Utils.PointFloat(1F, 161F);
+            this.GreenTariff.Name = "GreenTariff";
+            this.GreenTariff.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.GreenTariff.SizeF = new System.Drawing.SizeF(386F, 16.08F);
+            this.GreenTariff.StylePriority.UseBorderColor = false;
+            this.GreenTariff.StylePriority.UseBorderDashStyle = false;
+            this.GreenTariff.StylePriority.UseBorders = false;
+            this.GreenTariff.StylePriority.UseFont = false;
+            this.GreenTariff.Text = "Green Tariff /";
+            this.GreenTariff.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
             // bd_RlSC1Hindi
             // 
             this.bd_RlSC1Hindi.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
@@ -1126,6 +1189,52 @@
             this.bd_RlSC1.StylePriority.UsePadding = false;
             this.bd_RlSC1.Text = "Regulatory Surcharge 1 / ";
             // 
+            // xrLabel34
+            // 
+            this.xrLabel34.CanGrow = false;
+            this.xrLabel34.Dpi = 96F;
+            this.xrLabel34.Font = new System.Drawing.Font("Kruti Dev 010", 10F);
+            this.xrLabel34.LocationFloat = new DevExpress.Utils.PointFloat(100F, 174F);
+            this.xrLabel34.LockedInUserDesigner = true;
+            this.xrLabel34.Name = "xrLabel34";
+            this.xrLabel34.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel34.SizeF = new System.Drawing.SizeF(108F, 14.58801F);
+            this.xrLabel34.StylePriority.UseFont = false;
+            this.xrLabel34.StylePriority.UseTextAlignment = false;
+            this.xrLabel34.Text = "dqy orZeku ns; jkf\'k";
+            this.xrLabel34.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // xrLabel35
+            // 
+            this.xrLabel35.CanGrow = false;
+            this.xrLabel35.Dpi = 96F;
+            this.xrLabel35.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold);
+            this.xrLabel35.LocationFloat = new DevExpress.Utils.PointFloat(1F, 170F);
+            this.xrLabel35.LockedInUserDesigner = true;
+            this.xrLabel35.Name = "xrLabel35";
+            this.xrLabel35.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel35.SizeF = new System.Drawing.SizeF(125F, 24.08002F);
+            this.xrLabel35.StylePriority.UseFont = false;
+            this.xrLabel35.StylePriority.UseTextAlignment = false;
+            this.xrLabel35.Text = "Total Current Dues / ";
+            this.xrLabel35.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // xrLabel75
+            // 
+            this.xrLabel75.CanGrow = false;
+            this.xrLabel75.Dpi = 96F;
+            this.xrLabel75.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L9_CurrBillAmt]")});
+            this.xrLabel75.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
+            this.xrLabel75.LocationFloat = new DevExpress.Utils.PointFloat(292F, 175F);
+            this.xrLabel75.LockedInUserDesigner = true;
+            this.xrLabel75.Name = "xrLabel75";
+            this.xrLabel75.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel75.SizeF = new System.Drawing.SizeF(96F, 22.08F);
+            this.xrLabel75.StylePriority.UseFont = false;
+            this.xrLabel75.StylePriority.UseTextAlignment = false;
+            this.xrLabel75.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
             // bd_RlSC2
             // 
             this.bd_RlSC2.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
@@ -1173,6 +1282,7 @@
             // bdPowerFactor
             // 
             this.bdPowerFactor.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
+            this.bdPowerFactor.BorderColor = System.Drawing.Color.Silver;
             this.bdPowerFactor.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
             this.bdPowerFactor.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.bdPowerFactor.CanGrow = false;
@@ -1184,6 +1294,7 @@
             this.bdPowerFactor.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.bdPowerFactor.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;
             this.bdPowerFactor.SizeF = new System.Drawing.SizeF(388F, 16.08029F);
+            this.bdPowerFactor.StylePriority.UseBorderColor = false;
             this.bdPowerFactor.StylePriority.UseBorderDashStyle = false;
             this.bdPowerFactor.StylePriority.UseBorders = false;
             this.bdPowerFactor.StylePriority.UseFont = false;
@@ -2415,7 +2526,7 @@
             this.LPSCValue.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L9_Int_Tpl]")});
             this.LPSCValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.LPSCValue.LocationFloat = new DevExpress.Utils.PointFloat(340F, 764.08F);
+            this.LPSCValue.LocationFloat = new DevExpress.Utils.PointFloat(340F, 786.08F);
             this.LPSCValue.LockedInUserDesigner = true;
             this.LPSCValue.Name = "LPSCValue";
             this.LPSCValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2431,7 +2542,7 @@
             this.xrLabel76.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L9_ArrsTpl]")});
             this.xrLabel76.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.xrLabel76.LocationFloat = new DevExpress.Utils.PointFloat(340F, 748F);
+            this.xrLabel76.LocationFloat = new DevExpress.Utils.PointFloat(340F, 770F);
             this.xrLabel76.LockedInUserDesigner = true;
             this.xrLabel76.Name = "xrLabel76";
             this.xrLabel76.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2439,22 +2550,6 @@
             this.xrLabel76.StylePriority.UseFont = false;
             this.xrLabel76.StylePriority.UseTextAlignment = false;
             this.xrLabel76.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            // 
-            // xrLabel75
-            // 
-            this.xrLabel75.CanGrow = false;
-            this.xrLabel75.Dpi = 96F;
-            this.xrLabel75.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L9_CurrBillAmt]")});
-            this.xrLabel75.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
-            this.xrLabel75.LocationFloat = new DevExpress.Utils.PointFloat(340F, 724.92F);
-            this.xrLabel75.LockedInUserDesigner = true;
-            this.xrLabel75.Name = "xrLabel75";
-            this.xrLabel75.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel75.SizeF = new System.Drawing.SizeF(96F, 22.08F);
-            this.xrLabel75.StylePriority.UseFont = false;
-            this.xrLabel75.StylePriority.UseTextAlignment = false;
-            this.xrLabel75.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // met2_42
             // 
@@ -2560,7 +2655,7 @@
             this.LPSCHindi.CanGrow = false;
             this.LPSCHindi.Dpi = 96F;
             this.LPSCHindi.Font = new System.Drawing.Font("Kruti Dev 010", 10F);
-            this.LPSCHindi.LocationFloat = new DevExpress.Utils.PointFloat(179F, 764.0801F);
+            this.LPSCHindi.LocationFloat = new DevExpress.Utils.PointFloat(179F, 786.0801F);
             this.LPSCHindi.LockedInUserDesigner = true;
             this.LPSCHindi.Name = "LPSCHindi";
             this.LPSCHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2578,7 +2673,7 @@
             this.LPSC.CanGrow = false;
             this.LPSC.Dpi = 96F;
             this.LPSC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.LPSC.LocationFloat = new DevExpress.Utils.PointFloat(51.00001F, 764.08F);
+            this.LPSC.LocationFloat = new DevExpress.Utils.PointFloat(51.00001F, 786.08F);
             this.LPSC.LockedInUserDesigner = true;
             this.LPSC.Name = "LPSC";
             this.LPSC.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2594,43 +2689,13 @@
             this.xrLabel37.CanGrow = false;
             this.xrLabel37.Dpi = 96F;
             this.xrLabel37.Font = new System.Drawing.Font("Kruti Dev 010", 9F);
-            this.xrLabel37.LocationFloat = new DevExpress.Utils.PointFloat(98F, 748F);
+            this.xrLabel37.LocationFloat = new DevExpress.Utils.PointFloat(98F, 770F);
             this.xrLabel37.LockedInUserDesigner = true;
             this.xrLabel37.Name = "xrLabel37";
             this.xrLabel37.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrLabel37.SizeF = new System.Drawing.SizeF(28.64799F, 14.588F);
             this.xrLabel37.StylePriority.UseFont = false;
             this.xrLabel37.Text = "vo\'ks\"k";
-            // 
-            // xrLabel34
-            // 
-            this.xrLabel34.CanGrow = false;
-            this.xrLabel34.Dpi = 96F;
-            this.xrLabel34.Font = new System.Drawing.Font("Kruti Dev 010", 10F);
-            this.xrLabel34.LocationFloat = new DevExpress.Utils.PointFloat(142.9999F, 727.666F);
-            this.xrLabel34.LockedInUserDesigner = true;
-            this.xrLabel34.Name = "xrLabel34";
-            this.xrLabel34.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel34.SizeF = new System.Drawing.SizeF(121.055F, 14.58801F);
-            this.xrLabel34.StylePriority.UseFont = false;
-            this.xrLabel34.StylePriority.UseTextAlignment = false;
-            this.xrLabel34.Text = "dqy orZeku ns; jkf\'k";
-            this.xrLabel34.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // xrLabel35
-            // 
-            this.xrLabel35.CanGrow = false;
-            this.xrLabel35.Dpi = 96F;
-            this.xrLabel35.Font = new System.Drawing.Font("Calibri", 8F, System.Drawing.FontStyle.Bold);
-            this.xrLabel35.LocationFloat = new DevExpress.Utils.PointFloat(51F, 722.92F);
-            this.xrLabel35.LockedInUserDesigner = true;
-            this.xrLabel35.Name = "xrLabel35";
-            this.xrLabel35.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel35.SizeF = new System.Drawing.SizeF(125F, 24.08002F);
-            this.xrLabel35.StylePriority.UseFont = false;
-            this.xrLabel35.StylePriority.UseTextAlignment = false;
-            this.xrLabel35.Text = "Total Current Dues / ";
-            this.xrLabel35.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel16
             // 
@@ -3090,7 +3155,7 @@
             this.xrLabel36.CanGrow = false;
             this.xrLabel36.Dpi = 96F;
             this.xrLabel36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.xrLabel36.LocationFloat = new DevExpress.Utils.PointFloat(51.00001F, 748F);
+            this.xrLabel36.LocationFloat = new DevExpress.Utils.PointFloat(51.00001F, 770F);
             this.xrLabel36.LockedInUserDesigner = true;
             this.xrLabel36.Name = "xrLabel36";
             this.xrLabel36.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -3639,6 +3704,9 @@
         private DevExpress.XtraReports.UI.XRLabel SubsidyValue;
         private DevExpress.XtraReports.UI.XRLabel Subsidy;
         private DevExpress.XtraReports.UI.XRPictureBox xrQRCODE;
+        private DevExpress.XtraReports.UI.XRLabel GreenTariffHindi;
+        private DevExpress.XtraReports.UI.XRLabel GreenTariff;
+        private DevExpress.XtraReports.UI.XRLabel GreenTariffValue;
         //private System.Windows.Forms.BindingSource bsrptData;
         //private System.Windows.Forms.BindingSource bindingSource1;
     }
