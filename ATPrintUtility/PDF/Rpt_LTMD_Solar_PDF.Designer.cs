@@ -187,6 +187,8 @@
             this.bd_Solar_Export_Value = new DevExpress.XtraReports.UI.XRLabel();
             this.SubsidyValue = new DevExpress.XtraReports.UI.XRLabel();
             this.Subsidy = new DevExpress.XtraReports.UI.XRLabel();
+            this.GreenTariffValue = new DevExpress.XtraReports.UI.XRLabel();
+            this.GreenTariff = new DevExpress.XtraReports.UI.XRLabel();
             this.bd_OtherValues = new DevExpress.XtraReports.UI.XRLabel();
             this.bd_Other = new DevExpress.XtraReports.UI.XRLabel();
             this.bd_AdjustmentChargesValues = new DevExpress.XtraReports.UI.XRLabel();
@@ -225,6 +227,8 @@
             this.xrPanel1 = new DevExpress.XtraReports.UI.XRPanel();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.objectDataSource1 = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
+            this.SolarLoad = new DevExpress.XtraReports.UI.XRLabel();
+            this.SolarLoadValue = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -244,6 +248,8 @@
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.SolarLoadValue,
+            this.SolarLoad,
             this.xrQRCODE,
             this.xrLabel3,
             this.xrLine12,
@@ -1118,7 +1124,7 @@
             this.xrLabel149.Dpi = 96F;
             this.xrLabel149.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.xrLabel149.InteractiveSorting.FieldName = "OwnerName";
-            this.xrLabel149.LocationFloat = new DevExpress.Utils.PointFloat(464F, 165.346F);
+            this.xrLabel149.LocationFloat = new DevExpress.Utils.PointFloat(469F, 165.346F);
             this.xrLabel149.Multiline = true;
             this.xrLabel149.Name = "xrLabel149";
             this.xrLabel149.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2592,6 +2598,8 @@
             this.bd_Solar_Export_Value,
             this.SubsidyValue,
             this.Subsidy,
+            this.GreenTariffValue,
+            this.GreenTariff,
             this.bd_OtherValues,
             this.bd_Other,
             this.bd_AdjustmentChargesValues,
@@ -2701,6 +2709,41 @@
             this.Subsidy.StylePriority.UseBorders = false;
             this.Subsidy.StylePriority.UseFont = false;
             this.Subsidy.Text = "Subsidy";
+            // 
+            // GreenTariffValue
+            // 
+            this.GreenTariffValue.Dpi = 96F;
+            this.GreenTariffValue.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_GreenTariff_Charges]")});
+            this.GreenTariffValue.Font = new System.Drawing.Font("Arial", 8F);
+            this.GreenTariffValue.LocationFloat = new DevExpress.Utils.PointFloat(278.328F, 176.1893F);
+            this.GreenTariffValue.Multiline = true;
+            this.GreenTariffValue.Name = "GreenTariffValue";
+            this.GreenTariffValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.GreenTariffValue.SizeF = new System.Drawing.SizeF(96F, 16.08F);
+            this.GreenTariffValue.StylePriority.UseFont = false;
+            this.GreenTariffValue.StylePriority.UseTextAlignment = false;
+            this.GreenTariffValue.Text = "GreenTariffValue";
+            this.GreenTariffValue.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
+            // GreenTariff
+            // 
+            this.GreenTariff.BorderColor = System.Drawing.Color.Silver;
+            this.GreenTariff.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
+            this.GreenTariff.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.GreenTariff.Dpi = 96F;
+            this.GreenTariff.Font = new System.Drawing.Font("Arial", 8F);
+            this.GreenTariff.LocationFloat = new DevExpress.Utils.PointFloat(0.3799133F, 176.1891F);
+            this.GreenTariff.Multiline = true;
+            this.GreenTariff.Name = "GreenTariff";
+            this.GreenTariff.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.GreenTariff.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;
+            this.GreenTariff.SizeF = new System.Drawing.SizeF(374F, 16.08F);
+            this.GreenTariff.StylePriority.UseBorderDashStyle = false;
+            this.GreenTariff.StylePriority.UseBorders = false;
+            this.GreenTariff.StylePriority.UseFont = false;
+            this.GreenTariff.StylePriority.UsePadding = false;
+            this.GreenTariff.Text = "Green Tariff";
             // 
             // bd_OtherValues
             // 
@@ -3383,6 +3426,34 @@
             this.objectDataSource1.DataSourceType = null;
             this.objectDataSource1.Name = "objectDataSource1";
             // 
+            // SolarLoad
+            // 
+            this.SolarLoad.Dpi = 96F;
+            this.SolarLoad.Font = new System.Drawing.Font("Arial", 8F);
+            this.SolarLoad.LocationFloat = new DevExpress.Utils.PointFloat(467.62F, 601F);
+            this.SolarLoad.Multiline = true;
+            this.SolarLoad.Name = "SolarLoad";
+            this.SolarLoad.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.SolarLoad.SizeF = new System.Drawing.SizeF(101.82F, 18.68F);
+            this.SolarLoad.StylePriority.UseFont = false;
+            this.SolarLoad.Text = "Solar Load";
+            // 
+            // SolarLoadValue
+            // 
+            this.SolarLoadValue.Dpi = 96F;
+            this.SolarLoadValue.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L46_SolarLoad]")});
+            this.SolarLoadValue.Font = new System.Drawing.Font("Arial", 8F);
+            this.SolarLoadValue.LocationFloat = new DevExpress.Utils.PointFloat(634F, 601F);
+            this.SolarLoadValue.Multiline = true;
+            this.SolarLoadValue.Name = "SolarLoadValue";
+            this.SolarLoadValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.SolarLoadValue.SizeF = new System.Drawing.SizeF(107F, 18.68F);
+            this.SolarLoadValue.StylePriority.UseFont = false;
+            this.SolarLoadValue.StylePriority.UseTextAlignment = false;
+            this.SolarLoadValue.Text = "SolarLoadValue";
+            this.SolarLoadValue.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
             // Rpt_LTMD_Solar_PDF
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -3609,6 +3680,10 @@
         private DevExpress.XtraReports.UI.XRLabel bd_Solar_Export_Value;
         private DevExpress.XtraReports.UI.XRLabel bd_SolarExportEnergy;
         private DevExpress.XtraReports.UI.XRPictureBox xrQRCODE;
+        private DevExpress.XtraReports.UI.XRLabel GreenTariff;
+        private DevExpress.XtraReports.UI.XRLabel GreenTariffValue;
+        private DevExpress.XtraReports.UI.XRLabel SolarLoadValue;
+        private DevExpress.XtraReports.UI.XRLabel SolarLoad;
         //private System.Windows.Forms.BindingSource bsrptData;
         //private System.Windows.Forms.BindingSource bindingSource1;
     }
