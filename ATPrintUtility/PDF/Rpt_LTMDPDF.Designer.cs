@@ -561,7 +561,7 @@
             this.xrPanel3.Dpi = 96F;
             this.xrPanel3.LocationFloat = new DevExpress.Utils.PointFloat(47F, 542.4281F);
             this.xrPanel3.Name = "xrPanel3";
-            this.xrPanel3.SizeF = new System.Drawing.SizeF(387F, 208.5719F);
+            this.xrPanel3.SizeF = new System.Drawing.SizeF(387F, 212.5719F);
             // 
             // Subsidy_Hindi
             // 
@@ -2539,7 +2539,7 @@
             this.LPSCValue.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L9_Int_Tpl]")});
             this.LPSCValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.LPSCValue.LocationFloat = new DevExpress.Utils.PointFloat(336F, 767.08F);
+            this.LPSCValue.LocationFloat = new DevExpress.Utils.PointFloat(336F, 771.08F);
             this.LPSCValue.LockedInUserDesigner = true;
             this.LPSCValue.Name = "LPSCValue";
             this.LPSCValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2555,7 +2555,7 @@
             this.xrLabel76.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L9_ArrsTpl]")});
             this.xrLabel76.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.xrLabel76.LocationFloat = new DevExpress.Utils.PointFloat(336F, 751F);
+            this.xrLabel76.LocationFloat = new DevExpress.Utils.PointFloat(336F, 755F);
             this.xrLabel76.LockedInUserDesigner = true;
             this.xrLabel76.Name = "xrLabel76";
             this.xrLabel76.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2668,7 +2668,7 @@
             this.LPSCHindi.CanGrow = false;
             this.LPSCHindi.Dpi = 96F;
             this.LPSCHindi.Font = new System.Drawing.Font("Kruti Dev 010", 10F);
-            this.LPSCHindi.LocationFloat = new DevExpress.Utils.PointFloat(175F, 767.0801F);
+            this.LPSCHindi.LocationFloat = new DevExpress.Utils.PointFloat(175F, 771.0801F);
             this.LPSCHindi.LockedInUserDesigner = true;
             this.LPSCHindi.Name = "LPSCHindi";
             this.LPSCHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2686,7 +2686,7 @@
             this.LPSC.CanGrow = false;
             this.LPSC.Dpi = 96F;
             this.LPSC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.LPSC.LocationFloat = new DevExpress.Utils.PointFloat(47.00001F, 767.08F);
+            this.LPSC.LocationFloat = new DevExpress.Utils.PointFloat(47.00001F, 771.08F);
             this.LPSC.LockedInUserDesigner = true;
             this.LPSC.Name = "LPSC";
             this.LPSC.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2702,7 +2702,7 @@
             this.xrLabel37.CanGrow = false;
             this.xrLabel37.Dpi = 96F;
             this.xrLabel37.Font = new System.Drawing.Font("Kruti Dev 010", 9F);
-            this.xrLabel37.LocationFloat = new DevExpress.Utils.PointFloat(94F, 751F);
+            this.xrLabel37.LocationFloat = new DevExpress.Utils.PointFloat(94F, 755F);
             this.xrLabel37.LockedInUserDesigner = true;
             this.xrLabel37.Name = "xrLabel37";
             this.xrLabel37.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -3168,7 +3168,7 @@
             this.xrLabel36.CanGrow = false;
             this.xrLabel36.Dpi = 96F;
             this.xrLabel36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.xrLabel36.LocationFloat = new DevExpress.Utils.PointFloat(47.00001F, 751F);
+            this.xrLabel36.LocationFloat = new DevExpress.Utils.PointFloat(47.00001F, 755F);
             this.xrLabel36.LockedInUserDesigner = true;
             this.xrLabel36.Name = "xrLabel36";
             this.xrLabel36.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
