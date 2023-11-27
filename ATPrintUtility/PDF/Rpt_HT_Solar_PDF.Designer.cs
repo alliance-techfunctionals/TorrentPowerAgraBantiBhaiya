@@ -53,8 +53,7 @@
             this.bd_SolarExportEnergy = new DevExpress.XtraReports.UI.XRLabel();
             this.SubsidyValue = new DevExpress.XtraReports.UI.XRLabel();
             this.Subsidy = new DevExpress.XtraReports.UI.XRLabel();
-            this.GreenTariff = new DevExpress.XtraReports.UI.XRLabel();
-            this.GreenTariffValue = new DevExpress.XtraReports.UI.XRLabel();
+            
             this.bd_OtherValues = new DevExpress.XtraReports.UI.XRLabel();
             this.bd_Other = new DevExpress.XtraReports.UI.XRLabel();
             this.bd_AdjustmentChargesValues = new DevExpress.XtraReports.UI.XRLabel();
