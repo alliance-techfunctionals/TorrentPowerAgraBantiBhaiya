@@ -254,11 +254,11 @@ namespace AT.Print.PDF
                // SolarLoadValue. TopF = Load_Factor.TopF;
            
             }
-            if (op[0].L46_SolarLoad == "0.00" || string.IsNullOrEmpty(op[0].L46_SolarLoad))
-            {
-                //SolarLoad.Visible = false;
-                //SolarLoadValue.Visible = false;
-            }
+            //if (op[0].L46_SolarLoad == "0.00" || string.IsNullOrEmpty(op[0].L46_SolarLoad))
+            //{
+            //    //SolarLoad.Visible = false;
+            //    //SolarLoadValue.Visible = false;
+            //}
 
             #endregion
 
@@ -1030,30 +1030,30 @@ namespace AT.Print.PDF
 
             }
 
-            if (!string.IsNullOrEmpty(op[0].L8_Intrest_Amount) && Convert.ToDecimal(op[0].L8_Intrest_Amount) > 0)
-            {
-                if (!IsMessageLimitExceeds(totalMessages))
-                {
-                    totalMessages++;
-                    XRLabel xrMessageExcessDemand = new XRLabel
-                    {
-                        Font = new System.Drawing.Font("Kruti Dev 010", 9),
-                        TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                        Text = "fiz; miHkksäk] ,d eq'r ;kstuk ds varxZr 100 izfr'kr C;kt ekQ+h dk ykHk mBkus ds fy,] \nd`Ik;k mijksDr orZeku fcy ds lkFk ekfld fdLr jkf'k : " + op[0].L8_Intrest_Amount.ToString().Replace('.', '-') + " dk Hkqxrku djsaA",
-                        WordWrap = false,
-                        AutoWidth = true,
-                        Multiline = true,
-                        KeepTogether = true,
-                        HeightF = (float)0.01,
-                        Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                        //BorderDashStyle = BorderDashStyle.Dot,
-                        //Borders = DevExpress.XtraPrinting.BorderSide.All,
-                        //BorderWidth = 1,
-                    };
-                    xrPanel1.Controls.Add(xrMessageExcessDemand);
-                    adjustMessages(xrMessageExcessDemand);
-                }
-            }
+            //if (!string.IsNullOrEmpty(op[0].L8_Intrest_Amount) && Convert.ToDecimal(op[0].L8_Intrest_Amount) > 0)
+            //{
+            //    if (!IsMessageLimitExceeds(totalMessages))
+            //    {
+            //        totalMessages++;
+            //        XRLabel xrMessageExcessDemand = new XRLabel
+            //        {
+            //            Font = new System.Drawing.Font("Kruti Dev 010", 9),
+            //            TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+            //            Text = "fiz; miHkksäk] ,d eq'r ;kstuk ds varxZr 100 izfr'kr C;kt ekQ+h dk ykHk mBkus ds fy,] \nd`Ik;k mijksDr orZeku fcy ds lkFk ekfld fdLr jkf'k : " + op[0].L8_Intrest_Amount.ToString().Replace('.', '-') + " dk Hkqxrku djsaA",
+            //            WordWrap = false,
+            //            AutoWidth = true,
+            //            Multiline = true,
+            //            KeepTogether = true,
+            //            HeightF = (float)0.01,
+            //            Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+            //            //BorderDashStyle = BorderDashStyle.Dot,
+            //            //Borders = DevExpress.XtraPrinting.BorderSide.All,
+            //            //BorderWidth = 1,
+            //        };
+            //        xrPanel1.Controls.Add(xrMessageExcessDemand);
+            //        adjustMessages(xrMessageExcessDemand);
+            //    }
+            //}
 
 
             #endregion
