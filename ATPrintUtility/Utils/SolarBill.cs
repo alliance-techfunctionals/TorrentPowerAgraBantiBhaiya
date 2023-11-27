@@ -54,7 +54,7 @@ namespace AT.Print.Utils
         public string L8_Subsidy_Charges { get; set; }
         public string L8_Parking_Amount { get; set; }
         public string L8_GreenTariff_Charges { get; set; }
-        public string L8_Intrest_Amount { get; set; }
+        //public string L8_Intrest_Amount { get; set; }
         public string L8_Solar_Export_Energy { get; set; }
         public string L9_TOT_DB_ARR { get; set; }
         public string L9_CurrBillamt{ get; set; }
@@ -238,7 +238,7 @@ namespace AT.Print.Utils
         public string L46_Net_Billed_Units_MAIN_TOD3_KWH  { get; set; }
         public string L46_Net_Billed_Units_MAIN_TOD4_KWH  { get; set; }
         public string L46_Carry_Forward_Units_MAIN_KWH { get; set; }
-        public string L46_SolarLoad {get; set;}
+        //public string L46_SolarLoad {get; set;}
         public string L47_MonYear1        { get; set; }
         public string L47_Exp_KVAH_UNITS1 { get; set; }
         public string L47_MonYear2        { get; set; }
