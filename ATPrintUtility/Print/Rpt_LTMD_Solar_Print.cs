@@ -269,16 +269,20 @@ namespace AT.Print
             if (op[0].L6_MTRDET_LF_PERC == "0.00" || op[0].L6_MTRDET_LF_PERC == " " || op[0].L6_MTRDET_LF_PERC == "0")
             {
                 Load_Factor.Visible = false;
+                xrLabel7.Visible = false;
+                SolarLoad.TopF = xrLabel7.TopF;
+                SolarLoadValue.TopF = Load_Factor.TopF;
+
 
             }
 
             #endregion
 
             #region  LF Fector
-            if (op[0].L6_MTRDET_LF_PERC == "0.00" || op[0].L6_MTRDET_LF_PERC == " " || op[0].L6_MTRDET_LF_PERC == "0")
-            {
-                Load_Factor.Visible = false;
-            }
+            //if (op[0].L6_MTRDET_LF_PERC == "0.00" || op[0].L6_MTRDET_LF_PERC == " " || op[0].L6_MTRDET_LF_PERC == "0")
+            //{
+            //    Load_Factor.Visible = false;
+            //}
             #endregion
 
             #region Meter Change
@@ -534,7 +538,7 @@ namespace AT.Print
             bd_AcCharges.TopF = bd_RlSC2.BottomF;
             bd_AcChargesValues.TopF = bd_RlSC2.BottomF;
 
-            if (op[0].L8_AC_Charges == "0.00" || string.IsNullOrEmpty(op[0].L8_AC_Charges)) 
+            if (op[0].L8_AC_Charges == "0.00" || string.IsNullOrEmpty(op[0].L8_AC_Charges))
             {
                 bd_AcCharges.Visible = false;
                 bd_AcChargesValues.Visible = false;
@@ -578,48 +582,11 @@ namespace AT.Print
                 bd_Other.TopF = bd_AdjustmentCharges.TopF;
                 bd_OtherValues.TopF = bd_AdjustmentChargesValues.TopF;
             }
-            //bd_TotalCurrentDues.TopF = bd_Other.BottomF;
-            //bd_TotalCurrentDuesValues.TopF = bd_OtherValues.BottomF;
-
-            //bd_Arrears.TopF = bd_TotalCurrentDues.BottomF;
-            //bd_Arrears_values.TopF = bd_TotalCurrentDues.BottomF;
-
-            //bd_LatePaymentSurcharges.TopF = bd_Arrears.BottomF;
-            //bd_LatePaymentSurchargesVALUE.TopF = bd_Arrears.BottomF;
-
-
-            //if (op[0].L9_INT_TPL == "0.00" || string.IsNullOrEmpty(op[0].L9_INT_TPL))
-            //{
-            //    bd_LatePaymentSurcharges.Visible = false;
-            //    bd_LatePaymentSurchargesVALUE.Visible = false;
-
-            //    bd_LatePaymentSurcharges.TopF = bd_Arrears.TopF;
-            //    bd_LatePaymentSurchargesVALUE.TopF = bd_Arrears_values.TopF;
-            //}
-
-            //bd_TotalDuesVALUE.TopF = bd_LatePaymentSurcharges.BottomF;
-            //bd_TotalDues.TopF = bd_TotalDuesVALUE.TopF;
-
-
-            //if (!op[0].L6_TARIFF_DESCR.Contains("LMV") || (op[0].L8_Subsidy_Charges == "" || op[0].L8_Subsidy_Charges == "0.00"))
-            //{
-            //    Subsidy.Visible = false;
-            //    SubsidyValue.Visible = false;
-
-            //}
-            //else
-            //{
-
-            //    Subsidy.Visible = true;
-            //    SubsidyValue.Visible = true;
-            //    Subsidy.TopF = bd_TotalDues.BottomF;
-            //    SubsidyValue.TopF = bd_TotalDues.BottomF;
-            //}
-
 
             Subsidy.TopF = bd_Other.BottomF;
             SubsidyValue.TopF = bd_OtherValues.BottomF;
-            if (!op[0].L6_TARIFF_DESCR.Contains("LMV") || (op[0].L8_Subsidy_Charges == "" || op[0].L8_Subsidy_Charges == "0.00"))
+
+            if (op[0].L8_Subsidy_Charges == "" || op[0].L8_Subsidy_Charges == "0.00")
             {
                 Subsidy.Visible = false;
                 SubsidyValue.Visible = false;
@@ -629,8 +596,21 @@ namespace AT.Print
 
             }
 
-            bd_TotalCurrentDues.TopF = Subsidy.BottomF;
-            bd_TotalCurrentDuesValues.TopF = SubsidyValue.BottomF;
+            GreenTariff.TopF = Subsidy.BottomF;
+            GreenTariffValue.TopF = SubsidyValue.BottomF;
+
+            if (op[0].L8_GreenTariff_Charges == "0.00" || string.IsNullOrEmpty(op[0].L8_GreenTariff_Charges))
+            {
+                GreenTariff.Visible = false;
+                GreenTariffValue.Visible = false;
+
+                GreenTariff.TopF = Subsidy.TopF;
+                GreenTariffValue.TopF = SubsidyValue.TopF;
+            }
+
+
+            bd_TotalCurrentDues.TopF = GreenTariff.BottomF;
+            bd_TotalCurrentDuesValues.TopF = GreenTariffValue.BottomF;
 
             bd_Arrears.TopF = bd_TotalCurrentDues.BottomF;
             bd_Arrears_values.TopF = bd_TotalCurrentDues.BottomF;
@@ -650,9 +630,6 @@ namespace AT.Print
 
             bd_TotalDuesVALUE.TopF = bd_LatePaymentSurcharges.BottomF;
             bd_TotalDues.TopF = bd_TotalDuesVALUE.TopF;
-
-
-
 
 
             #endregion
@@ -682,7 +659,7 @@ namespace AT.Print
                 messageFromFile++;
                 XRLabel xrMessage2 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                    Font = new System.Drawing.Font("DIN Pro Regular", 9),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L27_Message_2,
                     WordWrap = false,
@@ -700,7 +677,7 @@ namespace AT.Print
                 messageFromFile++;
                 XRLabel xrMessage3 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                    Font = new System.Drawing.Font("DIN Pro Regular", 9),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L28_Message_3,
                     WordWrap = false,
@@ -867,7 +844,7 @@ namespace AT.Print
                     totalMessages++;
                     XRLabel xrMessageTheftAmount = new XRLabel
                     {
-                        Font = new System.Drawing.Font("Kruti Dev 010", 9),
+                        Font = new System.Drawing.Font("Kruti Dev 010", 10),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = string.Format(getMessage(LoadStaticData._HindiMessage, "TFA"), op[0].L10_Theft_Amount.Replace('.', '-')),
                         WordWrap = true,
@@ -1098,30 +1075,30 @@ namespace AT.Print
 
             }
 
-            if (!string.IsNullOrEmpty(op[0].L8_Intrest_Amount) && Convert.ToDecimal(op[0].L8_Intrest_Amount) > 0)
-            {
-                if (!IsMessageLimitExceeds(totalMessages))
-                {
-                    totalMessages++;
-                    XRLabel xrMessageExcessDemand = new XRLabel
-                    {
-                        Font = new System.Drawing.Font("Kruti Dev 010", 6.5f),
-                        TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                        Text = "     fiz; miHkksäk] ,d eq'r ;kstuk ds varxZr 100 izfr'kr C;kt ekQ+h dk ykHk mBkus ds fy,] d`Ik;k mijksDr orZeku fcy ds lkFk ekfld fdLr jkf'k : \r\n     " + op[0].L8_Intrest_Amount.ToString().Replace('.', '-') + " dk Hkqxrku djsaA",
-                        WordWrap = false,
-                        AutoWidth = true,
-                        Multiline = true,
-                        KeepTogether = true,
-                        HeightF = (float)0.01,
-                        Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                        //BorderDashStyle = BorderDashStyle.Dot,
-                        //Borders = DevExpress.XtraPrinting.BorderSide.All,
-                        //BorderWidth = 1,
-                    };
-                    xrPanel1.Controls.Add(xrMessageExcessDemand);
-                    adjustMessages(xrMessageExcessDemand);
-                }
-            }
+            //if (!string.IsNullOrEmpty(op[0].L8_Intrest_Amount) && Convert.ToDecimal(op[0].L8_Intrest_Amount) > 0)
+            //{
+            //    if (!IsMessageLimitExceeds(totalMessages))
+            //    {
+            //        totalMessages++;
+            //        XRLabel xrMessageExcessDemand = new XRLabel
+            //        {
+            //            Font = new System.Drawing.Font("Kruti Dev 010", 6.5f),
+            //            TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+            //            Text = "     fiz; miHkksäk] ,d eq'r ;kstuk ds varxZr 100 izfr'kr C;kt ekQ+h dk ykHk mBkus ds fy,] d`Ik;k mijksDr orZeku fcy ds lkFk ekfld fdLr jkf'k : \r\n     " + op[0].L8_Intrest_Amount.ToString().Replace('.', '-') + " dk Hkqxrku djsaA",
+            //            WordWrap = false,
+            //            AutoWidth = true,
+            //            Multiline = true,
+            //            KeepTogether = true,
+            //            HeightF = (float)0.01,
+            //            Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+            //            //BorderDashStyle = BorderDashStyle.Dot,
+            //            //Borders = DevExpress.XtraPrinting.BorderSide.All,
+            //            //BorderWidth = 1,
+            //        };
+            //        xrPanel1.Controls.Add(xrMessageExcessDemand);
+            //        adjustMessages(xrMessageExcessDemand);
+            //    }
+            //}
 
             #endregion
 
@@ -1150,17 +1127,17 @@ namespace AT.Print
                 bd_Arrears_values.TopF = bd_TotalDuesVALUE.TopF;
                 bd_TotalDues.TopF = bd_TotalDues.BottomF;
                 bd_TotalDuesVALUE.TopF = bd_TotalDuesVALUE.BottomF;
+
             }
             else
             {
                 Rpt_LTMD_Solar_back_visible?.visibleon();
                 bd_SolarExportEnergy.Visible = false;
                 bd_Solar_Export_Value.Visible = false;
-                bd_SolarExportEnergy.TopF = Subsidy.TopF;
-                bd_Solar_Export_Value.TopF = SubsidyValue.TopF;
+                bd_SolarExportEnergy.TopF = GreenTariff.TopF;
+                bd_Solar_Export_Value.TopF = GreenTariffValue.TopF;
             }
             #endregion
-
         }
 
         #region  Helper Functions
