@@ -248,8 +248,16 @@ namespace AT.Print.PDF
             #region  LF Fector
             if (op[0].L6_MTRDET_LF_PERC == "0.00" || op[0].L6_MTRDET_LF_PERC == " " || op[0].L6_MTRDET_LF_PERC == "0")
              {
-                 Load_Factor.Visible = false;
+                Load_Factor.Visible = false;
+                xrLabel7.Visible = false;
+               // SolarLoad.TopF = xrLabel7.TopF;
+               // SolarLoadValue. TopF = Load_Factor.TopF;
            
+            }
+            if (op[0].L46_SolarLoad == "0.00" || string.IsNullOrEmpty(op[0].L46_SolarLoad))
+            {
+                //SolarLoad.Visible = false;
+                //SolarLoadValue.Visible = false;
             }
 
             #endregion
@@ -551,7 +559,7 @@ namespace AT.Print.PDF
             Subsidy.TopF = bd_Other.BottomF;
             SubsidyValue.TopF = bd_Other.BottomF;
 
-            if (!op[0].L6_TARIFF_DESCR.Contains("LMV") || (op[0].L8_Subsidy_Charges == "" || op[0].L8_Subsidy_Charges == "0.00"))
+            if ((op[0].L8_Subsidy_Charges == "" || op[0].L8_Subsidy_Charges == "0.00"))
             {
                 Subsidy.Visible = false;
                 SubsidyValue.Visible = false;
@@ -560,13 +568,21 @@ namespace AT.Print.PDF
                 SubsidyValue.TopF = bd_Other.TopF;
 
             }
-          
 
+            GreenTariff.TopF = Subsidy.BottomF;
+            GreenTariffValue.TopF = Subsidy.BottomF;
 
+            if (op[0].L8_GreenTariff_Charges == "0.00"  || string.IsNullOrEmpty(op[0].L8_GreenTariff_Charges))
+            {
+                GreenTariff.Visible = false;
+                GreenTariffValue.Visible = false;
 
+                GreenTariff.TopF = Subsidy.TopF;
+                GreenTariffValue.TopF= Subsidy.TopF;
+            }
 
-            bd_TotalCurrentDues.TopF = Subsidy.BottomF;
-            bd_TotalCurrentDuesValues.TopF = Subsidy.BottomF;
+            bd_TotalCurrentDues.TopF = GreenTariff.BottomF;
+            bd_TotalCurrentDuesValues.TopF = GreenTariff.BottomF;
 
             bd_Arrears.TopF = bd_TotalCurrentDues.BottomF;
             bd_Arrears_values.TopF = bd_TotalCurrentDues.BottomF;
@@ -622,7 +638,7 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage2 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                    Font = new System.Drawing.Font("DIN Pro Regular", 9),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L27_MESSAGE2,
                     WordWrap = false,
@@ -640,7 +656,7 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage3 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                    Font = new System.Drawing.Font("DIN Pro Regular", 9),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L28_MESSAGE3,
                     WordWrap = false,
@@ -784,7 +800,7 @@ namespace AT.Print.PDF
                     totalMessages++;
                     XRLabel xrMessageTheftAmount = new XRLabel
                     {
-                        Font = new System.Drawing.Font("Kruti Dev 010", 9),
+                        Font = new System.Drawing.Font("Kruti Dev 010", 10),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = string.Format(getMessage(LoadStaticData._HindiMessage, "TFA"), op[0].L10_Theft_Amount.Replace('.', '-')),
                         WordWrap = true,
@@ -1073,8 +1089,8 @@ namespace AT.Print.PDF
                 Rpt_HT_Solar_PDF_visible.visibleon();
                 bd_SolarExportEnergy.Visible = false;
                 bd_Solar_Export_Value.Visible = false;
-                bd_SolarExportEnergy.TopF = Subsidy.TopF;
-                bd_Solar_Export_Value.TopF = SubsidyValue.TopF;
+                bd_SolarExportEnergy.TopF = GreenTariff.TopF;
+                bd_Solar_Export_Value.TopF = GreenTariffValue.TopF;
             }
 #endregion
         }

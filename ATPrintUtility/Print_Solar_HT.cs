@@ -437,7 +437,9 @@ namespace AT.Print
             sht.L8_T_No = dtSolarBill.Rows[7][11].ToString().Trim('�');
             sht.L8_Subsidy_Charges = dtSolarBill.Rows[7][13].ToString();
             sht.L8_Solar_Export_Energy = dtSolarBill.Rows[7][14].ToString();
+            sht.L8_GreenTariff_Charges = dtSolarBill.Rows[7][15].ToString();
             sht.L8_Intrest_Amount = dtSolarBill.Rows[7][15].ToString();
+           
 
 
             // Line 8 End
@@ -950,6 +952,7 @@ namespace AT.Print
             sht.L46_Net_Billed_Units_MAIN_TOD4_KWH = dtSolarBill.Rows[45][12].ToString();
 
             sht.L46_Carry_Forward_Units_MAIN_KWH = dtSolarBill.Rows[45][13].ToString();
+            sht.L46_SolarLoad = dtSolarBill.Rows[45][14].ToString();
             //   Line 46 end
             #endregion
 
