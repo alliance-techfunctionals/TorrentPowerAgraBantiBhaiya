@@ -27,7 +27,7 @@ namespace AT.Print.Utils
         public string L6_SUPPLY_VOLTAGE { get; set; }
         public string L6_Avg_Power_Factor { get; set; }
         public string L6_MTRDET_LF_PERC { get; set; }
-        public string L6_Bill_Type_Assess_OR_normal { get; set; } 
+        public string L6_Bill_Type_Assess_OR_normal { get; set; }
         public string L6_MEASURE_OF_CONTRACT_Demand { get; set; }
         public string L6_Kvah_indicator { get; set; }
         public string L6_LT_Metering_Flag { get; set; }
@@ -39,7 +39,7 @@ namespace AT.Print.Utils
         public string L7_readt { get; set; }
         public string L7_LastpymtDate { get; set; }
         public string L7_Last_Payement_amount { get; set; }
-        
+
 
         public string L8_FixedCharge { get; set; }
         public string L8_EnergyCharge { get; set; }
@@ -58,7 +58,8 @@ namespace AT.Print.Utils
         public string L8_GreenTarrif_Charges { get; set; }
 
         public string L8_Solar_Export_Energy { get; set; }
-        public string L8_Intrest_Amount { get; set; }
+        public string L8_GreenTariff_Charges { get; set; }
+       
         public string L9_TOT_DB_ARR { get; set; }
         public string L9_CurrBillamt{ get; set; }
         public string L9_INT_TPL    { get; set; }
@@ -266,6 +267,7 @@ namespace AT.Print.Utils
         public string L46_Net_Billed_Units_MAIN_TOD3_KWH  { get; set; }
         public string L46_Net_Billed_Units_MAIN_TOD4_KWH  { get; set; }
         public string L46_Carry_Forward_Units_MAIN_KWH { get; set; }
+        //public string L46_SolarLoad { get; set; }   
         public string L47_MonYear1        { get; set; }
         public string L47_Exp_KVAH_UNITS1 { get; set; }
         public string L47_MonYear2        { get; set; }
