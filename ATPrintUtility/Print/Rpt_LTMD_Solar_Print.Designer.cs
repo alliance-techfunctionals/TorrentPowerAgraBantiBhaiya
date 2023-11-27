@@ -33,8 +33,6 @@
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
-            this.SolarLoadValue = new DevExpress.XtraReports.UI.XRLabel();
-            this.SolarLoad = new DevExpress.XtraReports.UI.XRLabel();
             this.xrQRCODE = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLine12 = new DevExpress.XtraReports.UI.XRLine();
@@ -248,8 +246,6 @@
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.SolarLoadValue,
-            this.SolarLoad,
             this.xrQRCODE,
             this.xrLabel3,
             this.xrLine12,
@@ -345,34 +341,6 @@
             this.Detail.HeightF = 1101.449F;
             this.Detail.Name = "Detail";
             this.Detail.StylePriority.UseFont = false;
-            // 
-            // SolarLoadValue
-            // 
-            this.SolarLoadValue.Dpi = 96F;
-            this.SolarLoadValue.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L46_SolarLoad]")});
-            this.SolarLoadValue.Font = new System.Drawing.Font("Arial", 8F);
-            this.SolarLoadValue.LocationFloat = new DevExpress.Utils.PointFloat(624.0001F, 613.8268F);
-            this.SolarLoadValue.Multiline = true;
-            this.SolarLoadValue.Name = "SolarLoadValue";
-            this.SolarLoadValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.SolarLoadValue.SizeF = new System.Drawing.SizeF(107F, 18.68F);
-            this.SolarLoadValue.StylePriority.UseFont = false;
-            this.SolarLoadValue.StylePriority.UseTextAlignment = false;
-            this.SolarLoadValue.Text = "SolarLoadValue";
-            this.SolarLoadValue.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            // 
-            // SolarLoad
-            // 
-            this.SolarLoad.Dpi = 96F;
-            this.SolarLoad.Font = new System.Drawing.Font("Arial", 8F);
-            this.SolarLoad.LocationFloat = new DevExpress.Utils.PointFloat(458F, 613.83F);
-            this.SolarLoad.Multiline = true;
-            this.SolarLoad.Name = "SolarLoad";
-            this.SolarLoad.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.SolarLoad.SizeF = new System.Drawing.SizeF(101.82F, 18.68F);
-            this.SolarLoad.StylePriority.UseFont = false;
-            this.SolarLoad.Text = "Solar Load";
             // 
             // xrQRCODE
             // 
@@ -3675,8 +3643,6 @@
         private DevExpress.XtraReports.UI.XRLabel bd_Solar_Export_Value;
         private DevExpress.XtraReports.UI.XRLabel bd_SolarExportEnergy;
         private DevExpress.XtraReports.UI.XRPictureBox xrQRCODE;
-        private DevExpress.XtraReports.UI.XRLabel SolarLoadValue;
-        private DevExpress.XtraReports.UI.XRLabel SolarLoad;
         private DevExpress.XtraReports.UI.XRLabel GreenTariffValue;
         private DevExpress.XtraReports.UI.XRLabel GreenTariff;
         //private System.Windows.Forms.BindingSource bsrptData;

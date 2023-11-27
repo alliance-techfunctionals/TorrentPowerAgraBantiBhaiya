@@ -48,7 +48,7 @@
             this.xrLine11 = new DevExpress.XtraReports.UI.XRLine();
             this.xrLine12 = new DevExpress.XtraReports.UI.XRLine();
             this.xrPanel3 = new DevExpress.XtraReports.UI.XRPanel();
-            this.GreenTarrif = new DevExpress.XtraReports.UI.XRLabel();
+           
             this.bd_Solar_Export_Value = new DevExpress.XtraReports.UI.XRLabel();
             this.bd_SolarExportEnergy = new DevExpress.XtraReports.UI.XRLabel();
             this.SubsidyValue = new DevExpress.XtraReports.UI.XRLabel();
@@ -227,9 +227,7 @@
             this.xrPictureBox3 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrPictureBox2 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
-            this.GreenTariffValue = new DevExpress.XtraReports.UI.XRLabel();
            
-            this.GreenTariff = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource2)).BeginInit();
@@ -498,8 +496,7 @@
             this.xrPanel3.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrPanel3.CanGrow = false;
             this.xrPanel3.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.GreenTarrifValue,
-            this.GreenTarrif,
+          
             this.bd_Solar_Export_Value,
             this.bd_SolarExportEnergy,
             this.SubsidyValue,
@@ -543,26 +540,8 @@
             this.xrPanel3.StylePriority.UseBorderColor = false;
             this.xrPanel3.StylePriority.UseBorderDashStyle = false;
             this.xrPanel3.StylePriority.UseBorders = false;
-            // 
-            // GreenTarrif
-            // 
-            this.GreenTarrif.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
-            this.GreenTarrif.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
-            this.GreenTarrif.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.GreenTarrif.CanGrow = false;
-            this.GreenTarrif.CanShrink = true;
-            this.GreenTarrif.Dpi = 96F;
-            this.GreenTarrif.Font = new System.Drawing.Font("Arial", 8F);
-            this.GreenTarrif.LocationFloat = new DevExpress.Utils.PointFloat(0F, 192.3492F);
-            this.GreenTarrif.Name = "GreenTarrif";
-            this.GreenTarrif.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.GreenTarrif.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;
-            this.GreenTarrif.SizeF = new System.Drawing.SizeF(374.9999F, 16.08F);
-            this.GreenTarrif.StylePriority.UseBorderDashStyle = false;
-            this.GreenTarrif.StylePriority.UseBorders = false;
-            this.GreenTarrif.StylePriority.UseFont = false;
-            this.GreenTarrif.StylePriority.UsePadding = false;
-            this.GreenTarrif.Text = "Green Tarrif";
+          
+            
             // 
             // bd_Solar_Export_Value
             // 

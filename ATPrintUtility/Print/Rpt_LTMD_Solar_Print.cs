@@ -270,8 +270,7 @@ namespace AT.Print
             {
                 Load_Factor.Visible = false;
                 xrLabel7.Visible = false;
-                SolarLoad.TopF = xrLabel7.TopF;
-                SolarLoadValue.TopF = Load_Factor.TopF;
+               
 
 
             }
