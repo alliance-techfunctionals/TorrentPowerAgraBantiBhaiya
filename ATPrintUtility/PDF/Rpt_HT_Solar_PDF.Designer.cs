@@ -227,6 +227,8 @@
             this.xrPictureBox2 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
            
+            this.GREENTariff = new DevExpress.XtraReports.UI.XRLabel();
+            this.GREENTariffValue = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource2)).BeginInit();
@@ -495,7 +497,8 @@
             this.xrPanel3.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrPanel3.CanGrow = false;
             this.xrPanel3.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-          
+            this.GREENTariffValue,
+            this.GREENTariff,
             this.bd_Solar_Export_Value,
             this.bd_SolarExportEnergy,
             this.SubsidyValue,
@@ -3285,49 +3288,36 @@
             this.objectDataSource2.DataSourceType = null;
             this.objectDataSource2.Name = "objectDataSource2";
             // 
-            // xrPictureBox5
+            // GREENTariff
             // 
-            this.xrPictureBox5.Dpi = 96F;
-            this.xrPictureBox5.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource("img", resources.GetString("xrPictureBox5.ImageSource"));
-            this.xrPictureBox5.LocationFloat = new DevExpress.Utils.PointFloat(38.00305F, 332.2267F);
-            this.xrPictureBox5.Name = "xrPictureBox5";
-            this.xrPictureBox5.SizeF = new System.Drawing.SizeF(18F, 23F);
+            this.GREENTariff.BorderColor = System.Drawing.Color.Silver;
+            this.GREENTariff.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
+            this.GREENTariff.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.GREENTariff.Dpi = 96F;
+            this.GREENTariff.Font = new System.Drawing.Font("Arial", 8F);
+            this.GREENTariff.LocationFloat = new DevExpress.Utils.PointFloat(1.000008F, 160.1891F);
+            this.GREENTariff.Multiline = true;
+            this.GREENTariff.Name = "GREENTariff";
+            this.GREENTariff.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.GREENTariff.SizeF = new System.Drawing.SizeF(373F, 16.08F);
+            this.GREENTariff.StylePriority.UseBorderColor = false;
+            this.GREENTariff.StylePriority.UseBorderDashStyle = false;
+            this.GREENTariff.StylePriority.UseBorders = false;
+            this.GREENTariff.StylePriority.UseFont = false;
+            this.GREENTariff.Text = "Green Tariff";
             // 
-            // xrPictureBox4
+            // GREENTariffValue
             // 
-            this.xrPictureBox4.Dpi = 96F;
-            this.xrPictureBox4.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource("img", resources.GetString("xrPictureBox4.ImageSource"));
-            this.xrPictureBox4.LocationFloat = new DevExpress.Utils.PointFloat(467.9999F, 278F);
-            this.xrPictureBox4.Name = "xrPictureBox4";
-            this.xrPictureBox4.SizeF = new System.Drawing.SizeF(35.00012F, 27.58665F);
-            // 
-            // xrPictureBox3
-            // 
-            this.xrPictureBox3.Dpi = 96F;
-            this.xrPictureBox3.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource("img", resources.GetString("xrPictureBox3.ImageSource"));
-            this.xrPictureBox3.LocationFloat = new DevExpress.Utils.PointFloat(467.9999F, 227.76F);
-            this.xrPictureBox3.Name = "xrPictureBox3";
-            this.xrPictureBox3.SizeF = new System.Drawing.SizeF(20F, 27.58665F);
-            // 
-            // xrPictureBox2
-            // 
-            this.xrPictureBox2.Dpi = 96F;
-            this.xrPictureBox2.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource("img", resources.GetString("xrPictureBox2.ImageSource"));
-            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(47F, 151.5683F);
-            this.xrPictureBox2.Name = "xrPictureBox2";
-            this.xrPictureBox2.SizeF = new System.Drawing.SizeF(16F, 20F);
-            // 
-            // xrPictureBox1
-            // 
-            this.xrPictureBox1.Dpi = 96F;
-            this.xrPictureBox1.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource("img", resources.GetString("xrPictureBox1.ImageSource"));
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(0.599988F, 0F);
-            this.xrPictureBox1.Name = "xrPictureBox1";
-            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(18F, 22.69769F);
-            // 
-            // GreenTariffValue
-            // 
-           
+            this.GREENTariffValue.Dpi = 96F;
+            this.GREENTariffValue.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_GreenTariff_Charges]")});
+            this.GREENTariffValue.LocationFloat = new DevExpress.Utils.PointFloat(277F, 160F);
+            this.GREENTariffValue.Multiline = true;
+            this.GREENTariffValue.Name = "GREENTariffValue";
+            this.GREENTariffValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.GREENTariffValue.SizeF = new System.Drawing.SizeF(96F, 16F);
+            this.GREENTariffValue.StylePriority.UseTextAlignment = false;
+            this.GREENTariffValue.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // Rpt_HT_Solar_PDF
             // 
@@ -3558,8 +3548,8 @@
         private DevExpress.XtraReports.UI.XRLabel bd_Solar_Export_Value;
         private DevExpress.XtraReports.UI.XRLabel bd_SolarExportEnergy;
         private DevExpress.XtraReports.UI.XRPictureBox xrQRCODE;
-        private DevExpress.XtraReports.UI.XRLabel GreenTariffValue;
-        private DevExpress.XtraReports.UI.XRLabel GreenTariff;
+        private DevExpress.XtraReports.UI.XRLabel GREENTariffValue;
+        private DevExpress.XtraReports.UI.XRLabel GREENTariff;
         //private System.Windows.Forms.BindingSource bsrptData;
         //private System.Windows.Forms.BindingSource bindingSource1;
     }
