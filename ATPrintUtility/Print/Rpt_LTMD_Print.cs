@@ -548,20 +548,20 @@ namespace AT.Print
             if (bd_ExcessDemandCharges.Visible == true && bd_AcCharge.Visible == true && bd_AdjustmentMinimumCharges.Visible == true && bd_OtherCharges.Visible == true && bdPowerFactor.Visible == true && Subsidy.Visible == true && GreenTariff.Visible == true)
             {
                 xrLabel35.TopF = GreenTariff.BottomF;
-                xrLabel34.TopF = 199F;
-                xrLabel75.TopF = 198F;
+                xrLabel34.TopF = GreenTariff.BottomF;
+                xrLabel75.TopF = GreenTariff.BottomF;
             }
             else if (bd_ExcessDemandCharges.Visible == true && bd_AcCharge.Visible == true && bd_AdjustmentMinimumCharges.Visible == true && bd_OtherCharges.Visible == true && bdPowerFactor.Visible == true && Subsidy.Visible == true)
             {
                 xrLabel35.TopF = Subsidy.BottomF;
-                xrLabel34.TopF = 183F;
-                xrLabel75.TopF = 183F;
+                xrLabel34.TopF = Subsidy.BottomF;
+                xrLabel75.TopF = Subsidy.BottomF;
             }
             else if (bd_ExcessDemandCharges.Visible == true && bd_AcCharge.Visible == true && bd_AdjustmentMinimumCharges.Visible == true && bd_OtherCharges.Visible == true && bdPowerFactor.Visible == true && GreenTariff.Visible == true)
             {
                 xrLabel35.TopF = GreenTariff.BottomF;
-                xrLabel34.TopF = 183F;
-                xrLabel75.TopF = 183F;
+                xrLabel34.TopF = GreenTariff.BottomF;
+                xrLabel75.TopF = GreenTariff.BottomF;
 
             }
 
