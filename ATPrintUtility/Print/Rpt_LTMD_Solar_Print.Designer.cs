@@ -3407,10 +3407,10 @@
             // 
             this.xrPanel1.CanGrow = false;
             this.xrPanel1.Dpi = 96F;
-            this.xrPanel1.LocationFloat = new DevExpress.Utils.PointFloat(65F, 587.8262F);
+            this.xrPanel1.LocationFloat = new DevExpress.Utils.PointFloat(65F, 587.8268F);
             this.xrPanel1.LockedInUserDesigner = true;
             this.xrPanel1.Name = "xrPanel1";
-            this.xrPanel1.SizeF = new System.Drawing.SizeF(375.0001F, 153.5538F);
+            this.xrPanel1.SizeF = new System.Drawing.SizeF(375.0001F, 158.5545F);
             // 
             // objectDataSource1
             // 

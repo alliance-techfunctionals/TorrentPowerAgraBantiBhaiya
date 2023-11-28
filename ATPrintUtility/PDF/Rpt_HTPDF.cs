@@ -487,12 +487,7 @@ namespace AT.Print.PDF
                 SubsidyHindi.TopF = bd_OtherCharges.TopF;
                 SubsidyValue.TopF = bd_OtherCharges.TopF;
 
-                //Subsidy.TopF = bd_RlSC2.TopF;
-                //SubsidyHindi.TopF = bd_RlSC2.TopF;
-                //SubsidyValue.TopF = bd_RlSC2.TopF;
-                //GreenTariff.TopF = Subsidy.TopF;
-                //GreenTariffHindi.TopF = Subsidy.TopF;
-                //GreenTariffValue.TopF = Subsidy.TopF;
+                
             }
             GreenTariff.TopF = Subsidy.BottomF;
             GreenTariffHindi.TopF = Subsidy.BottomF;
@@ -505,10 +500,18 @@ namespace AT.Print.PDF
                 GreenTariffValue.Visible = false;
             }
 
+           
+            if (bd_ExcessDemandCharges.Visible == true && bd_AcCharge.Visible == true && bd_AdjustmentMinimumCharges.Visible == true && bd_OtherCharges.Visible == true &&  GreenTariff.Visible == true && Subsidy.Visible == true)
+            {
+                xrLabel35.TopF = GreenTariff.BottomF;
+                xrLabel34.TopF = GreenTariff.BottomF;
+                xrLabel75.TopF = GreenTariff.BottomF;
+
+            }
 
 
-                //Late Payment Surcharge
-                if (op[0].L9_Int_Tpl == "0.00" || string.IsNullOrEmpty(op[0].L9_Int_Tpl))
+            //Late Payment Surcharge
+            if (op[0].L9_Int_Tpl == "0.00" || string.IsNullOrEmpty(op[0].L9_Int_Tpl))
             {
                 LPSC.Visible = false;
                 LPSCHindi.Visible = false;

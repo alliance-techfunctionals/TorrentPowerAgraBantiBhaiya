@@ -503,6 +503,13 @@ namespace AT.Print
                 GreenTariffHindi.Visible = false;
                 GreenTariffValue.Visible = false;
             }
+            if (bd_ExcessDemandCharges.Visible == true && bd_AcCharge.Visible == true && bd_AdjustmentMinimumCharges.Visible == true && bd_OtherCharges.Visible == true && GreenTariff.Visible == true && Subsidy.Visible == true)
+            {
+                xrLabel35.TopF = GreenTariff.BottomF;
+                xrLabel34.TopF = GreenTariff.BottomF;
+                xrLabel75.TopF = GreenTariff.BottomF;
+
+            }
 
 
             //Late Payment Surcharge

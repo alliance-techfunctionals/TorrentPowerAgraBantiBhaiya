@@ -598,7 +598,10 @@ namespace AT.Print
             bd_TotalDues.TopF = bd_TotalDuesVALUE.TopF;
 
 
-
+            if (bd_TotalDues.LocationF.Y >= 211)
+            {
+                xrPanel1.TopF = bd_TotalDues.BottomF + 390;
+            }
 
 
 

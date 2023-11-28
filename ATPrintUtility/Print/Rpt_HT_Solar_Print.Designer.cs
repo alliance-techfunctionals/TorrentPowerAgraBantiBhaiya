@@ -226,7 +226,6 @@
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.objectDataSource1 = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
             this.objectDataSource2 = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
-            
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource2)).BeginInit();
@@ -247,7 +246,6 @@
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-          
             this.xrQRCODE,
             this.xrLabel5,
             this.xrLine12,
@@ -2592,7 +2590,7 @@
             this.xrPanel3.Dpi = 96F;
             this.xrPanel3.LocationFloat = new DevExpress.Utils.PointFloat(65.00006F, 372F);
             this.xrPanel3.Name = "xrPanel3";
-            this.xrPanel3.SizeF = new System.Drawing.SizeF(375F, 259.3263F);
+            this.xrPanel3.SizeF = new System.Drawing.SizeF(375F, 274.95F);
             this.xrPanel3.StylePriority.UseBorderColor = false;
             this.xrPanel3.StylePriority.UseBorderDashStyle = false;
             this.xrPanel3.StylePriority.UseBorders = false;
@@ -3312,10 +3310,10 @@
             // 
             this.xrPanel1.CanGrow = false;
             this.xrPanel1.Dpi = 96F;
-            this.xrPanel1.LocationFloat = new DevExpress.Utils.PointFloat(64.328F, 583.0439F);
+            this.xrPanel1.LocationFloat = new DevExpress.Utils.PointFloat(64.328F, 599.2039F);
             this.xrPanel1.LockedInUserDesigner = true;
             this.xrPanel1.Name = "xrPanel1";
-            this.xrPanel1.SizeF = new System.Drawing.SizeF(375.672F, 149.0975F);
+            this.xrPanel1.SizeF = new System.Drawing.SizeF(375.672F, 138.1774F);
             // 
             // objectDataSource1
             // 
@@ -3326,8 +3324,6 @@
             // 
             this.objectDataSource2.DataSourceType = null;
             this.objectDataSource2.Name = "objectDataSource2";
-            // 
-          
             // 
             // Rpt_HT_Solar_Print
             // 

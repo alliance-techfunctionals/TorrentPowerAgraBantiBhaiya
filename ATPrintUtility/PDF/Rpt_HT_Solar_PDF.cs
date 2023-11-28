@@ -603,11 +603,17 @@ namespace AT.Print.PDF
             bd_TotalDuesVALUE.TopF = bd_LatePaymentSurcharges.BottomF;
             bd_TotalDues.TopF = bd_TotalDuesVALUE.TopF;
 
+          //  if (bd_TotalDues.LocationF.Y >= 208.43)
+                if (bd_TotalDues.LocationF.Y >= 208)
+                {
+                xrPanel1.TopF = bd_TotalDues.BottomF + 370;
+                }
 
 
 
 
-          
+
+
 
             #endregion
 
