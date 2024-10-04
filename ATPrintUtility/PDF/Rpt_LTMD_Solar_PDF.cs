@@ -666,7 +666,7 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage2 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 9),
+                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L27_Message_2,
                     WordWrap = false,
@@ -684,7 +684,7 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage3 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 9),
+                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L28_Message_3,
                     WordWrap = false,
