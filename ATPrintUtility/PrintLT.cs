@@ -446,7 +446,14 @@ namespace AT.Print
                     slt.MVPicture = mVImagePath;
                     lstformattedbills.Add(slt);
 
-                    PrinterSettings ps = new PrinterSettings() { PrinterName = cbDefaultPrinter.Text };
+                    PrinterSettings ps = new PrinterSettings(){ PrinterName = cbDefaultPrinter.Text }; 
+                    PrinterResolution printerresolution = new PrinterResolution
+                    {
+                        Kind = PrinterResolutionKind.Custom, 
+                        X = 1200, 
+                        Y = 1200  
+                    };
+                    ps.DefaultPageSettings.PrinterResolution = printerresolution;
                     using (Graphics g = ps.CreateMeasurementGraphics(ps.DefaultPageSettings))
                     {
                         Margins MinMargins = DevExpress.XtraPrinting.Native.DeviceCaps.GetMinMargins(g);

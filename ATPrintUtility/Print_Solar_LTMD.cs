@@ -239,8 +239,15 @@ namespace AT.Print
                     }
                     else 
                      {
-                         PrinterSettings ps = new PrinterSettings() { PrinterName = cbDefaultPrinter.Text };
-                         using (Graphics g = ps.CreateMeasurementGraphics(ps.DefaultPageSettings))
+                        PrinterSettings ps = new PrinterSettings() { PrinterName = cbDefaultPrinter.Text };
+                        PrinterResolution printerresolution = new PrinterResolution
+                        {
+                            Kind = PrinterResolutionKind.Custom,
+                            X = 1200,
+                            Y = 1200
+                        };
+                        ps.DefaultPageSettings.PrinterResolution = printerresolution;
+                        using (Graphics g = ps.CreateMeasurementGraphics(ps.DefaultPageSettings))
                          {
                              Margins MinMargins = DevExpress.XtraPrinting.Native.DeviceCaps.GetMinMargins(g);
                              Console.WriteLine("Minimum Margins for " + ps.PrinterName + ": " + MinMargins.ToString());
