@@ -309,13 +309,13 @@ namespace AT.Print
                     else if (string.Equals(sht.L1_TODOrNon_TODFlag, "0"))
                     {
                         PrinterSettings ps = new PrinterSettings() { PrinterName = cbDefaultPrinter.Text };
-                        PrinterResolution printerresolution = new PrinterResolution
+                        PrinterResolution printerResolution = new PrinterResolution
                         {
                             Kind = PrinterResolutionKind.Custom,
                             X = 1200,
                             Y = 1200
                         };
-                        ps.DefaultPageSettings.PrinterResolution = printerresolution;
+                        ps.DefaultPageSettings.PrinterResolution = printerResolution;
                         using (Graphics g = ps.CreateMeasurementGraphics(ps.DefaultPageSettings))
                         {
                             Margins MinMargins = DevExpress.XtraPrinting.Native.DeviceCaps.GetMinMargins(g);

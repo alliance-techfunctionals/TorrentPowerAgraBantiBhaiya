@@ -411,7 +411,6 @@ namespace AT.Print
                         ms.Capacity = 0;
 
                         collectorReport.PrintProgress += new DevExpress.XtraPrinting.PrintProgressEventHandler(CR_PrintProgress);
-                        //collectorReport.BeforePrint += BeforePrint;
                         collectorReport.Print(cbDefaultPrinter.Text);
                         HavingSaperator = false;
                         collectorReport.Pages.Clear();
@@ -447,13 +446,13 @@ namespace AT.Print
                     lstformattedbills.Add(slt);
 
                     PrinterSettings ps = new PrinterSettings(){ PrinterName = cbDefaultPrinter.Text }; 
-                    PrinterResolution printerresolution = new PrinterResolution
+                    PrinterResolution printerResolution = new PrinterResolution
                     {
                         Kind = PrinterResolutionKind.Custom, 
                         X = 1200, 
                         Y = 1200  
                     };
-                    ps.DefaultPageSettings.PrinterResolution = printerresolution;
+                    ps.DefaultPageSettings.PrinterResolution = printerResolution;
                     using (Graphics g = ps.CreateMeasurementGraphics(ps.DefaultPageSettings))
                     {
                         Margins MinMargins = DevExpress.XtraPrinting.Native.DeviceCaps.GetMinMargins(g);
