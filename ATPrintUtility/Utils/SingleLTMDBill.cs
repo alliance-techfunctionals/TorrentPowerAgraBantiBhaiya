@@ -62,7 +62,6 @@ namespace AT.Print.Utils
         public string L8_Subsidy_Charges { get; set; }
         public string L8_Solar_Export_Energy { get; set; }
         public string L8_GreenTariff_Charges { get; set; }
-        //public string L8_Intrest_Amount { get; set; }
         public string L9_TotDbArr { get; set; }
         public string L9_CurrBillAmt { get; set; }
         public string L9_Int_Tpl { get; set; }
@@ -233,20 +232,5 @@ namespace AT.Print.Utils
         public decimal L8_ParkingAmountCeilied { get; internal set; }
         public decimal L8_AmountPayableBeforeDueDateCeilied { get; internal set; }
         public decimal L10_TotArrUPPCLIntUPPCLIntArrUPPCLCeilied { get; internal set; }
-
-        //public string BillType { get; set; }
-        //public string BillType { get; set; }
-        //public string BillType { get; set; }
-        //public string BillType { get; set; }
-        //public string BillType { get; set; }
-        //public string BillType { get; set; }
-        //public string BillType { get; set; }
-        //public string BillType { get; set; }
-        //public string BillType { get; set; }
-        //public string BillType { get; set; }
-        //public string BillType { get; set; }
-
-        //public string OwnerAddress_1 { get; set; }
-        //public string OwnerAddress_2 { get; set; }
     }
 }

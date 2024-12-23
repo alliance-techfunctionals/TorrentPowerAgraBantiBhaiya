@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.Drawing;
+using System;
 using System.Data;
 using System.Windows.Forms;
 using System.Xml.Linq;
@@ -50,9 +51,8 @@ namespace AT.Print.Messages
         private void gridControl1_DataSourceChanged(object sender, EventArgs e)
         {
             gridView1.BestFitColumns();
-            gridView1.Appearance.Row.Font = new System.Drawing.Font("DIN Pro Regular", 15);
-            //gridView1.Columns["ServiceNo"].Width = 9;
-            gridView1.Columns["HindiMessage"].AppearanceCell.Font = new System.Drawing.Font("Kruti Dev 010", 15);
+            gridView1.Appearance.Row.Font = new DXFont("DIN Pro Regular", 15);
+            gridView1.Columns["HindiMessage"].AppearanceCell.Font = new DXFont("Kruti Dev 010", 15);
         }
 
         private void btnSave_Click(object sender, EventArgs e)

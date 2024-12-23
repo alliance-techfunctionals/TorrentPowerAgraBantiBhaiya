@@ -19,7 +19,6 @@ namespace AT.Print.Utils
             {
                 StringReader sr = new StringReader(path);
                 int TotalLines = path.Split('\n').Length - 1;
-                //string ServiceNoLine = "";
                 if (!string.IsNullOrEmpty(path.Split('\n')[5].Split('|')[0].ToString()) && !string.IsNullOrWhiteSpace(path.Split('\n')[5].Split('|')[0].ToString()))
                 {
                     ServiceNoLine = path.Split('\n')[5].Split('|')[0].ToString();
@@ -477,7 +476,6 @@ namespace AT.Print.Utils
             {
                 StringReader sr = new StringReader(path);
                 int TotalLines = path.Split('\n').Length - 1;
-                //string ServiceNoLine = "";
                 if (!string.IsNullOrEmpty(path.Split('\n')[5].Split('|')[0].ToString()) && !string.IsNullOrWhiteSpace(path.Split('\n')[5].Split('|')[0].ToString()))
                 {
                     ServiceNoLine = path.Split('\n')[5].Split('|')[0].ToString();
@@ -947,7 +945,6 @@ namespace AT.Print.Utils
             {
                 StringReader sr = new StringReader(path);
                 int TotalLines = path.Split('\n').Length - 1;
-                //string ServiceNoLine = "";
                 if (!string.IsNullOrEmpty(path.Split('\n')[5].Split('|')[0].ToString()) && !string.IsNullOrWhiteSpace(path.Split('\n')[5].Split('|')[0].ToString()))
                 {
                     ServiceNoLine = path.Split('\n')[5].Split('|')[0].ToString();
@@ -1440,7 +1437,6 @@ namespace AT.Print.Utils
             int LineNo = 0;
             DataTable dt = new DataTable();
             int TotalLines = path.Split('\n').Length - 1;
-            //string ServiceNoLine = "";
             if (!string.IsNullOrEmpty(path.Split('\n')[5].Split('|')[0].ToString()) && !string.IsNullOrWhiteSpace(path.Split('\n')[5].Split('|')[0].ToString()))
             {
                 ServiceNoLine = path.Split('\n')[5].Split('|')[0].ToString();
@@ -1529,13 +1525,6 @@ namespace AT.Print.Utils
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 1 has " + fields.Length + " columns only.");
                                         return dt;
                                     }
-                                    //else if (BillType == "HT Solar" && fields.Length != 7)
-                                    //{
-                                    //    AppFunctions.CloseWaitForm();
-                                    //    XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 1 has " + fields.Length + " columns only.");
-                                    //    return dt;
-
-                                    //}
                                     else if(BillType == "HT Solar" && fields.Length != 7)
                                     {
                                         AppFunctions.CloseWaitForm();
@@ -1543,30 +1532,6 @@ namespace AT.Print.Utils
                                         return dt;
 
                                     }
-                                    //else if ((fields[10].ToString() == "" && BillType == "LTMD Solar") || (fields[10].ToString() != "0" && fields[10].ToString() != "1" && BillType == "LTMD Solar"))
-                                    //{
-                                    //    AppFunctions.CloseWaitForm();
-                                    //    XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 1 column 10th is either blank or value differ from 0 or 1");
-                                    //    return dt;
-                                    //}
-                                    //else if (fields[11].ToString() == "" && BillType == "LTMD Solar")
-                                    //{
-                                    //    AppFunctions.CloseWaitForm();
-                                    //    XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 1 column 11th is blank");
-                                    //    return dt;
-                                    //}
-                                    //else if ((fields[10].ToString() == "" && BillType == "HT Solar") || (fields[10].ToString() != "0" && fields[10].ToString() != "1" && BillType == "HT Solar"))
-                                    //{
-                                    //    AppFunctions.CloseWaitForm();
-                                    //    XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 1 column 10th is either blank or value differ from 0 or 1");
-                                    //    return dt;
-                                    //}
-                                    //else if (fields[11].ToString() == "" && BillType == "HT Solar")
-                                    //{
-                                    //    AppFunctions.CloseWaitForm();
-                                    //    XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 1 column 11th is blank");
-                                    //    return dt;
-                                    //}
                                 }
                                 break;
                             case 2:
@@ -2239,37 +2204,9 @@ namespace AT.Print.Utils
             return dt;
         }
 
-        //    public static DataTable LoadTemplateFiles(string filePath) {
-        //        try {
-        //            StringReader sr = new StringReader(filePath);
-        //            DataTable dt = new DataTable();
-        //            string[] fields;
-        //            while (sr.Peek() > 0)
-        //            {
-        //                var field = sr.ReadLine();
-        //                fields = field.Split('|');
-        //                DataRow dr = dt.NewRow();
-        //                if (fields != null)
-        //                {
-        //                    for (int i = 0; i < fields.Length; i++)
-        //                    {
-        //                        dr[i] = fields[i].ToString().Trim();
-        //                    }
-        //                    dt.Rows.Add(dr);
-        //                }
-        //            }
-        //        }
-        //        catch (Exception ex) {
-
-        //        }
-        //}
-
         public static DataTable TemplateConditionalWithSTHindi()
         {
-            //string contents = File.ReadAllText("C://26042021(New Vendor Exe)//EXE//Template//Template Conditional With ST Hindi.txt");
             string contents = File.ReadAllText(Application.StartupPath + "\\Contents\\CategorySlabImages\\Template Conditional With ST Hindi.txt");
-            //contents= contents.Split(new String[] { "LTMD|" }, StringSplitOptions.RemoveEmptyEntries);
-
             DataTable dt = new DataTable();
             try
             {
@@ -2308,9 +2245,7 @@ namespace AT.Print.Utils
 
         public static DataTable TemplateConditionalWithSTEnglish()
         {
-            //string contents = File.ReadAllText("C://26042021(New Vendor Exe)//EXE//Template//Template Conditional With ST English.txt");
             string contents = File.ReadAllText(Application.StartupPath + "\\Contents\\CategorySlabImages\\Template Conditional With ST English.txt");
-            //contents= contents.Split(new String[] { "LTMD|" }, StringSplitOptions.RemoveEmptyEntries);
 
             DataTable dt = new DataTable();
             try
@@ -2349,9 +2284,7 @@ namespace AT.Print.Utils
 
         public static DataTable TemplateConditionalWithServiceNoHindi()
         {
-            //string contents = File.ReadAllText("C://26042021(New Vendor Exe)//EXE//Template//Template Conditional With Service No Hindi.txt");
             string contents = File.ReadAllText(Application.StartupPath + "\\Contents\\CategorySlabImages\\Template Conditional With Service No Hindi.txt");
-            //contents= contents.Split(new String[] { "LTMD|" }, StringSplitOptions.RemoveEmptyEntries);
 
             DataTable dt = new DataTable();
             try
@@ -2388,9 +2321,7 @@ namespace AT.Print.Utils
 
         public static DataTable TemplateConditionalWithServiceNoEnglish()
         {
-            //string contents = File.ReadAllText("C://26042021(New Vendor Exe)//EXE//Template//Template Conditional With Service No English.txt");
             string contents = File.ReadAllText(Application.StartupPath + "\\Contents\\CategorySlabImages\\Template Conditional With Service No English.txt");
-            //contents= contents.Split(new String[] { "LTMD|" }, StringSplitOptions.RemoveEmptyEntries);
 
             DataTable dt = new DataTable();
             try

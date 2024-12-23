@@ -54,7 +54,6 @@ namespace AT.Print.Utils
         public string L8_Subsidy_Charges { get; set; }
         public string L8_Parking_Amount { get; set; }
         public string L8_GreenTariff_Charges { get; set; }
-        //public string L8_Intrest_Amount { get; set; }
         public string L8_Solar_Export_Energy { get; set; }
         public string L9_TOT_DB_ARR { get; set; }
         public string L9_CurrBillamt{ get; set; }
@@ -149,13 +148,6 @@ namespace AT.Print.Utils
         public string L35_MESSAGE9 { get; set; }
         public string L36_MESSAGE10 { get; set; }
         public string L32_Bar_Code { get; set; }
-    //public string L32_Arrrear_ind    { get; set; }
-    //    public string L32_service_no { get; set; }
-    //    public string L32_due_date { get; set; }
-    //    public string L32_disconnection_date    { get; set; }
-    //    public string L32_amount_payable        { get; set; }
-    //    public string L32_dishon_chq_ind { get; set; }
-    //    public string L32_Rebate_incurred_of_current_month { get; set; }
         public string L33_Exp_KWH_UNITS          { get; set; }
         public string L33_Exp_Past_KWH_UNITS     { get; set; }
         public string L33_Exp_Present_KWH_UNITS  { get; set; }
@@ -238,7 +230,6 @@ namespace AT.Print.Utils
         public string L46_Net_Billed_Units_MAIN_TOD3_KWH  { get; set; }
         public string L46_Net_Billed_Units_MAIN_TOD4_KWH  { get; set; }
         public string L46_Carry_Forward_Units_MAIN_KWH { get; set; }
-        //public string L46_SolarLoad {get; set;}
         public string L47_MonYear1        { get; set; }
         public string L47_Exp_KVAH_UNITS1 { get; set; }
         public string L47_MonYear2        { get; set; }
@@ -339,23 +330,6 @@ namespace AT.Print.Utils
         public string Sap_LotNo { get; set; }
         public string Sap_GrpNo { get; set; }
         public string lblSapratorNote { get; set; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
 }

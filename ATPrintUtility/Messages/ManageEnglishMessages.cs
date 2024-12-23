@@ -17,13 +17,8 @@ namespace AT.Print
             BindingManagerData();
 
         }
-
-
         void BindingManagerData()
         {
-
-
-
             try
             {
                 XDocument Messages = XDocument.Load(Application.StartupPath + "//DBEntity//xMessage.xml");
@@ -47,8 +42,6 @@ namespace AT.Print
             {
                 AT.Print.Utils.AppFunctions.LogError(ex.Message);
             }
-
-
         }
     }
 }

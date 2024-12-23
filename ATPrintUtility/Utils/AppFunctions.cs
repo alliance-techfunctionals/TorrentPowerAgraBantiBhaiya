@@ -85,7 +85,6 @@ namespace AT.Print.Utils
                 panel.DockedAsTabbedDocument = addAsATab;
 
                 var createEditControl = rootControl;
-                //createEditControl.Name = "";
                 panel.FloatSize = createEditControl.Size;
 
                 if (panel.FloatForm != null)

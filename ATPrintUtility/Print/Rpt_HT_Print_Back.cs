@@ -1,6 +1,5 @@
 ﻿using AT.Print.Utils;
 using DevExpress.XtraCharts;
-using System.Collections;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
@@ -15,7 +14,6 @@ namespace AT.Print
 
         private void Rpt_HT_Back_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            //xrPictureBox3.ImageSource = Properties.Resources.New;
             var Data = this.DataSource as List<SingleHTBill>;
             xrChart1.Series[0].DataSource = Data[0].KVAHgrph;
             xrChart1.Series[0].ArgumentScaleType = ScaleType.Qualitative;

@@ -488,7 +488,6 @@
             this.xrPanel1.LockedInUserDesigner = true;
             this.xrPanel1.Name = "xrPanel1";
             this.xrPanel1.SizeF = new System.Drawing.SizeF(692F, 164.76F);
-            this.xrPanel1.BeforePrint += new DevExpress.XtraReports.UI.BeforePrintEventHandler(this.xrPanel1_BeforePrint);
             // 
             // xrLabel18
             // 

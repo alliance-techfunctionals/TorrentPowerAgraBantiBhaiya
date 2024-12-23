@@ -14,7 +14,6 @@ namespace AT.Print.PDF
 
         private void rpt_LTMDwTod_Back_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            //xrPictureBox3.ImageSource = Properties.Resources.New;
             var Data = this.DataSource as List<SingleLTMDBill>;
             xrChart1.Series[0].DataSource = Data[0].KWHgrph;
             xrChart1.Series[0].ArgumentScaleType = ScaleType.Qualitative;
@@ -43,7 +42,6 @@ namespace AT.Print.PDF
             xrChart3.Series[0].ValueDataMembers.AddRange(new string[] { "Value" });
             xrChart3.WidthF = xrChart1.WidthF;
 
-            //Disconnection Message
             if (Data[0].L1_DisconnectionMSGPrintingIMMEDIATE == "1")
             {
                 xrlDueDtBottom.Text = "IMMEDIATE";

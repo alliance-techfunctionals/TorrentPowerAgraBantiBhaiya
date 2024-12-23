@@ -1,5 +1,5 @@
 ﻿using AT.Print.Utils;
-using DevExpress.XtraCharts;
+using DevExpress.Drawing;
 using DevExpress.XtraPrinting;
 using DevExpress.XtraReports.UI;
 using System;
@@ -8,9 +8,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 using System.Text;
-using System.Windows.Forms;
 using ZXing;
-using ZXing.Common;
 
 namespace AT.Print.PDF
 {
@@ -61,13 +59,7 @@ namespace AT.Print.PDF
             #endregion
 
 
-
-            //xrLabel86.Text = string.Format(" # {0}. ", op[0].L9_AmountPayable); 
-
-
-
             #region Disconnection Message
-            //Disconnection Messages Print
             if (op[0].L1_DisconnectionMSGPrintingIMMEDIATE == "1")
             {
                 xrDueDate.Text = "IMMEDIATE /";
@@ -87,7 +79,6 @@ namespace AT.Print.PDF
             }
             #endregion
 
-            //if (Convert.ToInt32(op[0].L8_AmountPayableBeforeDueDate.Contains('-')?("-" + op[0].L8_AmountPayableBeforeDueDate.Replace('-',' ')): op[0].L8_AmountPayableBeforeDueDate) >= 200000)
 
             if (!string.IsNullOrEmpty(op[0].L1_Customer_PAN))
             {
@@ -159,16 +150,12 @@ namespace AT.Print.PDF
                     }
                 }
             }
-
-            //op[0].L6_SERVDET_SANC_LOAD = op[0].L6_SERVDET_SANC_LOAD + "(" + op[0].L6_MeasureContractDemand + ")";
             op[0].L6_ACTUAL_DEMAND = op[0].L6_ACTUAL_DEMAND + "(" + unit + ")";
-            //op[0].L6_TARIFF_DESCR = op[0].L6_TARIFF_DESCR + "(" + unit + ")";
             op[0].L6_EXCESS_DEMAND = op[0].L6_EXCESS_DEMAND + "(" + unit + ")";
             op[0].L6_bill_demand = op[0].L6_bill_demand + "(" + unit + ")";
 
 
             #region Excess Demand Print
-            //Excess Demand Print
             if (op[0].L6_EXCESS_DEMAND != "0.00(KW)" || op[0].L6_EXCESS_DEMAND != "(KW)")
             {
                 xrlL6ExcessDemand.Text = op[0].L6_EXCESS_DEMAND;
@@ -176,7 +163,6 @@ namespace AT.Print.PDF
             #endregion
 
             #region Meter Change
-            //Meter Change Print
             if (op[0].L12_MTRSNO_METER_2_IF_AVAILABLE != "")
             {
                 met1_headingMDKW.Visible = true;
@@ -185,9 +171,9 @@ namespace AT.Print.PDF
                 xrLabel5.Text = op[0].L12_MTRSNO_METER_2_IF_AVAILABLE;//older
                 xrLabel19.Text = op[0].L12_MTRSNO_METER1;//Newer
                 //Meter Old
-                met1_11.Text = "____"; //op[0].L14_M1_KVA_PASTREAD == "0.00" ? "____" : op[0].L14_M1_KVA_PASTREAD == "" ? "____" : op[0].L14_M1_KVA_PASTREAD;
+                met1_11.Text = "____"; 
                 met1_12.Text = op[0].L14_M1_KWH_PASTREAD;
-                met1_21.Text = "____";//op[0].L13_M1_KVA_PRESREAD == "0.00" ? "____" : op[0].L13_M1_KVA_PRESREAD == "" ? "____" : op[0].L13_M1_KVA_PRESREAD;
+                met1_21.Text = "____";
                 met1_22.Text = op[0].L13_M1_KWH_PRESREAD;
                 met1_31.Text = op[0].L15_M1_MultiplyingFactor_2;
                 met1_32.Text = op[0].L15_M1_MultiplyingFactor_1;
@@ -196,9 +182,9 @@ namespace AT.Print.PDF
 
                 //Meter New
 
-                met2_11.Text = "____";//op[0].L18_M2_KVA_PASTREAD == "0.00" ? "____" : op[0].L18_M2_KVA_PASTREAD == "" ? "____" : op[0].L18_M2_KVA_PASTREAD;
+                met2_11.Text = "____";
                 met2_12.Text = op[0].L18_M2_KWH_PASTREAD;
-                met2_21.Text = "____";//op[0].L17_M2_KVA_PRESREAD == "0.00" ? "____" : op[0].L17_M2_KVA_PRESREAD == "" ? "____" : op[0].L17_M2_KVA_PRESREAD;
+                met2_21.Text = "____";
                 met2_22.Text = op[0].L17_M2_KWH_PRESREAD;
                 met2_31.Text = op[0].L19_M2_Multiplying_Factor_2;
                 met2_32.Text = op[0].L19_M2_Multiplying_Factor_1;
@@ -214,9 +200,9 @@ namespace AT.Print.PDF
                 met1_headingMDKW_1.Visible = false;
                 xrLabel5.Text = op[0].L12_MTRSNO_METER1;//Newer
                 //Meter Old
-                met2_11.Text = "____";//op[0].L14_M1_KVA_PASTREAD == "0.00" ? "____" : op[0].L14_M1_KVA_PASTREAD == "" ? "____" : op[0].L14_M1_KVA_PASTREAD;
+                met2_11.Text = "____";
                 met2_12.Text = op[0].L14_M1_KWH_PASTREAD;
-                met2_21.Text = "____";//op[0].L13_M1_KVA_PRESREAD == "0.00" ? "____" : op[0].L13_M1_KVA_PRESREAD == "" ? "____" : op[0].L13_M1_KVA_PRESREAD;
+                met2_21.Text = "____";
                 met2_22.Text = op[0].L13_M1_KWH_PRESREAD;
                 met2_31.Text = op[0].L15_M1_MultiplyingFactor_2;
                 met2_32.Text = op[0].L15_M1_MultiplyingFactor_1;
@@ -349,16 +335,8 @@ namespace AT.Print.PDF
                 bd_OtherCharges.TopF = bd_RlSC2.TopF;
                 bd_OtherChargesHindi.TopF = bd_RlSC2.TopF;
                 bd_OtherChargesValue.TopF = bd_RlSC2.TopF;
-
-
-                //Subsidy.TopF = bd_OtherCharges.TopF;
-                //SubsidyHindi.TopF = bd_OtherChargesHindi.TopF;
-                //SubsidyValue.TopF = bd_OtherChargesValue.TopF;
-
-
             }
-          //  else
-          //  {
+          
                 Subsidy.TopF = bd_OtherCharges.BottomF;
                 SubsidyHindi.TopF = bd_OtherChargesHindi.BottomF;
                 SubsidyValue.TopF = bd_OtherChargesValue.BottomF;
@@ -376,23 +354,10 @@ namespace AT.Print.PDF
                 SubsidyHindi.TopF = bd_OtherCharges.TopF;
                 SubsidyValue.TopF= bd_OtherCharges.TopF;
 
-               // GreenTariff.TopF = Subsidy.TopF;
-               // GreenTariffHindi.TopF = SubsidyHindi.TopF;
-               // GreenTariffValue.TopF = SubsidyValue.TopF;
-
-
             }
             GreenTariff.TopF = Subsidy.BottomF;
             GreenTariffHindi.TopF = Subsidy.BottomF;
             GreenTariffValue.TopF= Subsidy.BottomF;
-
-            // else
-            // {
-
-            //    Subsidy.Visible = true;
-            //    SubsidyHindi.Visible = true;
-            //   SubsidyValue.Visible = true;
-            //  }
 
             if ( op[0].L8_GreenTariff_Charges == "0.00" || string.IsNullOrEmpty(op[0].L8_GreenTariff_Charges))
             {
@@ -422,8 +387,6 @@ namespace AT.Print.PDF
             }
 
 
-
-
                 //Late Payment Surcharge
                 if (op[0].L9_Int_Tpl == "0.00" || string.IsNullOrEmpty(op[0].L9_Int_Tpl))
             {
@@ -443,7 +406,7 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage1 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                    Font = new DXFont("DIN Pro Regular", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L22_MESSAGE1,
                     WordWrap = false,
@@ -451,9 +414,6 @@ namespace AT.Print.PDF
                     KeepTogether = true,
                     HeightF = (float)0.01,
                     Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                    //BorderDashStyle = BorderDashStyle.Dot,
-                    //Borders = DevExpress.XtraPrinting.BorderSide.All,
-                    //BorderWidth = 1,
                 };
                 xrPanel1.Controls.Add(xrMessage1);
                 adjustMessages(xrMessage1);
@@ -464,7 +424,7 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage2 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                    Font = new DXFont("DIN Pro Regular", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L23_MESSAGE2,
                     WordWrap = false,
@@ -472,9 +432,6 @@ namespace AT.Print.PDF
                     KeepTogether = true,
                     HeightF = (float)0.01,
                     Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                    //BorderDashStyle = BorderDashStyle.Dot,
-                    //Borders = DevExpress.XtraPrinting.BorderSide.All,
-                    //BorderWidth = 1,
                 };
                 xrPanel1.Controls.Add(xrMessage2);
                 adjustMessages(xrMessage2);
@@ -485,7 +442,7 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage3 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                    Font = new DXFont("DIN Pro Regular", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L24_MESSAGE3,
                     WordWrap = false,
@@ -493,9 +450,6 @@ namespace AT.Print.PDF
                     KeepTogether = true,
                     HeightF = (float)0.01,
                     Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                    //BorderDashStyle = BorderDashStyle.Dot,
-                    //Borders = DevExpress.XtraPrinting.BorderSide.All,
-                    //BorderWidth = 1,
                 };
                 xrPanel1.Controls.Add(xrMessage3);
                 adjustMessages(xrMessage3);
@@ -506,7 +460,7 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage4 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                    Font = new DXFont("DIN Pro Regular", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L25_MESSAGE4,
                     WordWrap = false,
@@ -514,9 +468,6 @@ namespace AT.Print.PDF
                     KeepTogether = true,
                     HeightF = (float)0.01,
                     Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                    //BorderDashStyle = BorderDashStyle.Dot,
-                    //Borders = DevExpress.XtraPrinting.BorderSide.All,
-                    //BorderWidth = 1,
                 };
                 xrPanel1.Controls.Add(xrMessage4);
                 adjustMessages(xrMessage4);
@@ -527,7 +478,7 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage5 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                    Font = new DXFont("DIN Pro Regular", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L26_MESSAGE5,
                     WordWrap = false,
@@ -535,9 +486,6 @@ namespace AT.Print.PDF
                     KeepTogether = true,
                     HeightF = (float)0.01,
                     Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                    //BorderDashStyle = BorderDashStyle.Dot,
-                    //Borders = DevExpress.XtraPrinting.BorderSide.All,
-                    //BorderWidth = 1,
                 };
                 xrPanel1.Controls.Add(xrMessage5);
                 adjustMessages(xrMessage5);
@@ -548,7 +496,7 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage6 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                    Font = new DXFont("DIN Pro Regular", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L27_MESSAGE6,
                     WordWrap = false,
@@ -556,9 +504,6 @@ namespace AT.Print.PDF
                     KeepTogether = true,
                     HeightF = (float)0.01,
                     Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                    //BorderDashStyle = BorderDashStyle.Dot,
-                    //Borders = DevExpress.XtraPrinting.BorderSide.All,
-                    //BorderWidth = 1,
                 };
                 xrPanel1.Controls.Add(xrMessage6);
                 adjustMessages(xrMessage6);
@@ -569,7 +514,7 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage7 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                    Font = new DXFont("DIN Pro Regular", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L28_MESSAGE7,
                     WordWrap = false,
@@ -577,9 +522,6 @@ namespace AT.Print.PDF
                     KeepTogether = true,
                     HeightF = (float)0.01,
                     Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                    //BorderDashStyle = BorderDashStyle.Dot,
-                    //Borders = DevExpress.XtraPrinting.BorderSide.All,
-                    //BorderWidth = 1,
                 };
                 xrPanel1.Controls.Add(xrMessage7);
                 adjustMessages(xrMessage7);
@@ -590,7 +532,7 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage8 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                    Font = new DXFont("DIN Pro Regular", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L29_MESSAGE8,
                     WordWrap = false,
@@ -598,9 +540,6 @@ namespace AT.Print.PDF
                     KeepTogether = true,
                     HeightF = (float)0.01,
                     Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                    //BorderDashStyle = BorderDashStyle.Dot,
-                    //Borders = DevExpress.XtraPrinting.BorderSide.All,
-                    //BorderWidth = 1,
                 };
                 xrPanel1.Controls.Add(xrMessage8);
                 adjustMessages(xrMessage8);
@@ -613,7 +552,7 @@ namespace AT.Print.PDF
                     messageFromFile++;
                     XRLabel xrMessage9 = new XRLabel
                     {
-                        Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                        Font = new DXFont("DIN Pro Regular", 8),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = op[0].L30_MESSAGE9,
                         WordWrap = false,
@@ -621,9 +560,6 @@ namespace AT.Print.PDF
                         KeepTogether = true,
                         HeightF = (float)0.01,
                         Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                        //BorderDashStyle = BorderDashStyle.Dot,
-                        //Borders = DevExpress.XtraPrinting.BorderSide.All,
-                        //BorderWidth = 1,
                     };
                     xrPanel1.Controls.Add(xrMessage9);
                     adjustMessages(xrMessage9);
@@ -637,7 +573,7 @@ namespace AT.Print.PDF
                     messageFromFile++;
                     XRLabel xrMessage10 = new XRLabel
                     {
-                        Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                        Font = new DXFont("DIN Pro Regular", 8),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = op[0].L31_MESSAGE10,
                         WordWrap = false,
@@ -645,9 +581,6 @@ namespace AT.Print.PDF
                         KeepTogether = true,
                         HeightF = (float)0.01,
                         Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                        //BorderDashStyle = BorderDashStyle.Dot,
-                        //Borders = DevExpress.XtraPrinting.BorderSide.All,
-                        //BorderWidth = 1,
                     };
                     xrPanel1.Controls.Add(xrMessage10);
                     adjustMessages(xrMessage10);
@@ -667,7 +600,7 @@ namespace AT.Print.PDF
                     totalMessages++;
                     XRLabel xrMessageExcessDemand = new XRLabel
                     {
-                        Font = new System.Drawing.Font("Kruti Dev 010", 9),
+                        Font = new DXFont("Kruti Dev 010", 9),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = getMessage(LoadStaticData._HindiMessage, "EDC"),
                         WordWrap = false,
@@ -675,9 +608,6 @@ namespace AT.Print.PDF
                         KeepTogether = true,
                         HeightF = (float)0.01,
                         Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                        //BorderDashStyle = BorderDashStyle.Dot,
-                        //Borders = DevExpress.XtraPrinting.BorderSide.All,
-                        //BorderWidth = 1,
                     };
                     xrPanel1.Controls.Add(xrMessageExcessDemand);
                     adjustMessages(xrMessageExcessDemand);
@@ -692,18 +622,14 @@ namespace AT.Print.PDF
                     totalMessages++;
                     XRLabel xrMessageExcessDemand = new XRLabel
                     {
-                        Font = new System.Drawing.Font("Kruti Dev 010", 9),
+                        Font = new DXFont("Kruti Dev 010", 9),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                        //Text = string.Format(getMessage(LoadStaticData._HindiMessage, "PFM"), op[0].L8_PowerFactorAdj),
                         Text = string.Format(getMessage(LoadStaticData._HindiMessage, "PFM"), "0.90".ToString().Replace('.', '-')),
                         WordWrap = false,
                         AutoWidth = true,
                         KeepTogether = true,
                         HeightF = (float)0.01,
                         Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                        //BorderDashStyle = BorderDashStyle.Dot,
-                        //Borders = DevExpress.XtraPrinting.BorderSide.All,
-                        //BorderWidth = 1,
                     };
                     xrPanel1.Controls.Add(xrMessageExcessDemand);
                     adjustMessages(xrMessageExcessDemand);
@@ -717,7 +643,7 @@ namespace AT.Print.PDF
                     totalMessages++;
                     XRLabel xrMessageDisconnection = new XRLabel
                     {
-                        Font = new System.Drawing.Font("Kruti Dev 010", 9),
+                        Font = new DXFont("Kruti Dev 010", 9),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = getMessage(LoadStaticData._HindiMessage, "IDC"),
                         WordWrap = false,
@@ -725,9 +651,6 @@ namespace AT.Print.PDF
                         KeepTogether = true,
                         HeightF = (float)0.01,
                         Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                        //BorderDashStyle = BorderDashStyle.Dot,
-                        //Borders = DevExpress.XtraPrinting.BorderSide.All,
-                        //BorderWidth = 1,
                     };
                     xrPanel1.Controls.Add(xrMessageDisconnection);
                     adjustMessages(xrMessageDisconnection);
@@ -741,7 +664,7 @@ namespace AT.Print.PDF
                     totalMessages++;
                     XRLabel xrMessageTheftAmount = new XRLabel
                     {
-                        Font = new System.Drawing.Font("Kruti Dev 010", 10),
+                        Font = new DXFont("Kruti Dev 010", 10),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = string.Format(getMessage(LoadStaticData._HindiMessage, "TFA"), op[0].L10_TheftAmount.Replace('.', '-')),
                         WordWrap = false,
@@ -749,9 +672,6 @@ namespace AT.Print.PDF
                         KeepTogether = true,
                         HeightF = (float)0.01,
                         Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                        //BorderDashStyle = BorderDashStyle.Dot,
-                        //Borders = DevExpress.XtraPrinting.BorderSide.All,
-                        //BorderWidth = 1,
                     };
 
 
@@ -768,7 +688,7 @@ namespace AT.Print.PDF
                     totalMessages++;
                     XRLabel xrMessageTheftAmount = new XRLabel
                     {
-                        Font = new System.Drawing.Font("Kruti Dev 010", 9),
+                        Font = new DXFont("Kruti Dev 010", 9),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = string.Format(getMessage(LoadStaticData._HindiMessage, "DAD"), op[0].L10_TheftAmount),
                         WordWrap = false,
@@ -776,9 +696,6 @@ namespace AT.Print.PDF
                         KeepTogether = true,
                         HeightF = (float)0.01,
                         Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                        //BorderDashStyle = BorderDashStyle.Dot,
-                        //Borders = DevExpress.XtraPrinting.BorderSide.All,
-                        //BorderWidth = 1,
                     };
 
 
@@ -814,7 +731,7 @@ namespace AT.Print.PDF
 
                         XRLabel xrMessageTheftAmount = new XRLabel
                         {
-                            Font = new System.Drawing.Font("Kruti Dev 010", 9),
+                            Font = new DXFont("Kruti Dev 010", 9),
                             TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                             Text = string.Format(getMessage(LoadStaticData._HindiMessage, "AB1"), totalUnits.ToString().Replace(".", "-"), PrevReadDt.Replace("-", "&"), ReadDt.Replace("-", "&"), op[0].L10_Mode + " fnu"),
                             WordWrap = false,
@@ -822,9 +739,6 @@ namespace AT.Print.PDF
                             KeepTogether = true,
                             HeightF = (float)0.01,
                             Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                            //BorderDashStyle = BorderDashStyle.Dot,
-                            //Borders = DevExpress.XtraPrinting.BorderSide.All,
-                            //BorderWidth = 1,
                         };
 
 
@@ -833,7 +747,7 @@ namespace AT.Print.PDF
 
                         XRLabel xrAB2Msg = new XRLabel
                         {
-                            Font = new System.Drawing.Font("Kruti Dev 010", 9),
+                            Font = new DXFont("Kruti Dev 010", 9),
                             TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                             Text = string.Format(getMessage(LoadStaticData._HindiMessage, "AB2")),
                             WordWrap = false,
@@ -841,9 +755,6 @@ namespace AT.Print.PDF
                             KeepTogether = true,
                             HeightF = (float)0.01,
                             Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                            //BorderDashStyle = BorderDashStyle.Dot,
-                            //Borders = DevExpress.XtraPrinting.BorderSide.All,
-                            //BorderWidth = 1,
                         };
 
 
@@ -863,7 +774,7 @@ namespace AT.Print.PDF
                     totalMessages++;
                     XRLabel xrMessageExcessDemand = new XRLabel
                     {
-                        Font = new System.Drawing.Font("Kruti Dev 010", 9),
+                        Font = new DXFont("Kruti Dev 010", 9),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = getMessage(LoadStaticData._HindiMessage, "TPC"),
                         WordWrap = false,
@@ -871,39 +782,11 @@ namespace AT.Print.PDF
                         KeepTogether = true,
                         HeightF = (float)0.01,
                         Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                        //BorderDashStyle = BorderDashStyle.Dot,
-                        //Borders = DevExpress.XtraPrinting.BorderSide.All,
-                        //BorderWidth = 1,
                     };
                     xrPanel1.Controls.Add(xrMessageExcessDemand);
                     adjustMessages(xrMessageExcessDemand);
                 }
             }
-
-            //if (!string.IsNullOrEmpty(op[0].L8_Intrest_Amount) && Convert.ToDecimal(op[0].L8_Intrest_Amount) > 0)
-            //{
-            //    if (!IsMessageLimitExceeds(totalMessages))
-            //    {
-            //        totalMessages++;
-            //        XRLabel xrMessageExcessDemand = new XRLabel
-            //        {
-            //            Font = new System.Drawing.Font("Kruti Dev 010", 9),
-            //            TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-            //            Text = string.Format(getMessage(LoadStaticData._HindiMessage, "IAE"), op[0].L8_Intrest_Amount.ToString().Replace('.', '-')),
-            //            WordWrap = false,
-            //            AutoWidth = true,
-            //            KeepTogether = true,
-            //            HeightF = (float)0.01,
-            //            Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-            //            //BorderDashStyle = BorderDashStyle.Dot,
-            //            //Borders = DevExpress.XtraPrinting.BorderSide.All,
-            //            //BorderWidth = 1,
-            //        };
-            //        xrPanel1.Controls.Add(xrMessageExcessDemand);
-            //        adjustMessages(xrMessageExcessDemand);
-            //    }
-            //}
-
             #endregion
 
             #region Template Messages
@@ -912,7 +795,7 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage7 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("Kruti Dev 010", 9),
+                    Font = new DXFont("Kruti Dev 010", 9),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify,
                     Text = op[0].L33_MESSAGE7,
                     WordWrap = false,
@@ -934,7 +817,7 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage8 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                    Font = new DXFont("DIN Pro Regular", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify,
                     Text = op[0].L34_MESSAGE8,
                     WordWrap = false,
@@ -956,7 +839,7 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage9 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("Kruti Dev 010", 9),
+                    Font = new DXFont("Kruti Dev 010", 9),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify,
                     Text = op[0].L35_MESSAGE9,
                     WordWrap = false,
@@ -978,7 +861,7 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage10 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                    Font = new DXFont("DIN Pro Regular", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify,
                     Text = op[0].L36_MESSAGE10,
                     WordWrap = false,
@@ -1010,7 +893,7 @@ namespace AT.Print.PDF
                     {
 
 
-                        Font = brdcstMsg.MessageType.ToUpper() == "ENG" ? Font = new System.Drawing.Font("DIN Pro Regular", 8) : new System.Drawing.Font("Kruti Dev 010", 9),
+                        Font = brdcstMsg.MessageType.ToUpper() == "ENG" ? Font = new DXFont("DIN Pro Regular", 8) : new DXFont("Kruti Dev 010", 9),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = brdcstMsg.MessageType.ToUpper() == "ENG" ? brdcstMsg.EnglishMessageString : brdcstMsg.HindiMessageString,
                         WordWrap = false,
@@ -1018,9 +901,6 @@ namespace AT.Print.PDF
                         KeepTogether = true,
                         HeightF = (float)0.01,
                         Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                        //BorderDashStyle = BorderDashStyle.Dot,
-                        //Borders = DevExpress.XtraPrinting.BorderSide.All,
-                        //BorderWidth = 1,
                     };
 
                     xrPanel1.Controls.Add(xrMessageTheftAmount);
@@ -1035,7 +915,7 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage11 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("Kruti Dev 010", 9),
+                    Font = new DXFont("Kruti Dev 010", 9),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = "vfHkys[kksa ds vuqlkj vkids la;kstu ij tekur /kujkf'k 'kwU; vafdr gSaA ;fn vkids }kjk la;kstu jkf'k tek dh xbZ gS rks mDr tekur jkf'k dh ewy jlhn ds lkFk \r\ngekjs xzkgd lsok dsUnz  ij lEidZ djsaA ",
                     WordWrap = false,
@@ -1044,9 +924,6 @@ namespace AT.Print.PDF
                     KeepTogether = true,
                     HeightF = 0.1f,
                     Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                    //BorderDashStyle = BorderDashStyle.Dot,
-                    //Borders = DevExpress.XtraPrinting.BorderSide.All,
-                    //BorderWidth = 1,
                 };
                 xrPanel1.Controls.Add(xrMessage11);
                 adjustMessages(xrMessage11);
@@ -1142,11 +1019,6 @@ namespace AT.Print.PDF
 
         #endregion
 
-        private void xrPanel1_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-
-
-        }
     }
 
 }

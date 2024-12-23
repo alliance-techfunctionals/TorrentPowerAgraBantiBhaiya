@@ -17,9 +17,7 @@ namespace AT.Print.PDF
         #region Meter Print
         private void Rpt_LTMD_solar_Back_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            // var data = sender as Rpt_LTMD_Solar_PDF;
-            //var op = data.DataSource as List<SolarBill>;
-
+            
             var Data = this.DataSource as List<SolarBill>;
             xrPictureBox2.ImageUrl = Application.StartupPath + "\\Contents\\CategorySlabImages\\" + Data[0].L6_TARIFF_DESCR + ".png";
             xrPictureBox1.ImageUrl = Data[0].MVPicture;
@@ -68,7 +66,7 @@ namespace AT.Print.PDF
             }
 
 
-            //
+           
             if (Data[0].L12_MTRSNO_METER_2_IF_AVAILABLE != "")
             {
                 MTR_TOD1.Text = Data[0].L12_MTRSNO_METER1;
