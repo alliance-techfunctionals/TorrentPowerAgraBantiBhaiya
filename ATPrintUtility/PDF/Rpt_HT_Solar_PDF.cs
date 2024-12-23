@@ -48,7 +48,7 @@ namespace AT.Print.PDF
             }
         }
         #endregion
-        private void Rpt_solar_PDF_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        private void Rpt_solar_PDF_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
             var data = sender as Rpt_HT_Solar_PDF;
             var op = data.DataSource as List<Solar_Bill_HT>;

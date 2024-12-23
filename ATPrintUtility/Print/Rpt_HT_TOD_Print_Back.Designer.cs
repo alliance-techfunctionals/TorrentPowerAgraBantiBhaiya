@@ -131,7 +131,7 @@
             this.xrChart4.BorderColor = System.Drawing.Color.Black;
             this.xrChart4.Borders = DevExpress.XtraPrinting.BorderSide.None;
             xyDiagram1.AxisX.Label.Angle = 270;
-            xyDiagram1.AxisX.Label.Font = new System.Drawing.Font("DIN Pro Regular", 7F);
+            xyDiagram1.AxisX.Label.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 7F);
             xyDiagram1.AxisX.Label.ResolveOverlappingOptions.AllowHide = false;
             xyDiagram1.AxisX.Label.ResolveOverlappingOptions.MinIndent = 0;
             xyDiagram1.AxisX.NumericScaleOptions.AutoGrid = false;
@@ -142,10 +142,10 @@
             xyDiagram1.AxisX.Visibility = DevExpress.Utils.DefaultBoolean.True;
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
             xyDiagram1.AxisY.GridLines.LineStyle.DashStyle = DevExpress.XtraCharts.DashStyle.Dash;
-            xyDiagram1.AxisY.Label.Font = new System.Drawing.Font("DIN Pro Regular", 7F);
+            xyDiagram1.AxisY.Label.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 7F);
             xyDiagram1.AxisY.Thickness = 2;
             xyDiagram1.AxisY.Tickmarks.Thickness = 2;
-            xyDiagram1.AxisY.Title.Font = new System.Drawing.Font("DIN Pro Regular", 6F);
+            xyDiagram1.AxisY.Title.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 6F);
             xyDiagram1.AxisY.Title.Text = "Recorded Demand (KVA/KW)";
             xyDiagram1.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
@@ -164,7 +164,7 @@
             series1.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
             sideBySideBarSeriesLabel1.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
             sideBySideBarSeriesLabel1.FillStyle.FillMode = DevExpress.XtraCharts.FillMode.Empty;
-            sideBySideBarSeriesLabel1.Font = new System.Drawing.Font("Tahoma", 7F);
+            sideBySideBarSeriesLabel1.DXFont = new DevExpress.Drawing.DXFont("Tahoma", 7F);
             sideBySideBarSeriesLabel1.LineLength = 0;
             sideBySideBarSeriesLabel1.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
             sideBySideBarSeriesLabel1.ShowForZeroValues = true;
@@ -187,7 +187,7 @@
             this.xrChart3.BorderColor = System.Drawing.Color.Black;
             this.xrChart3.Borders = DevExpress.XtraPrinting.BorderSide.None;
             xyDiagram2.AxisX.Label.Angle = 270;
-            xyDiagram2.AxisX.Label.Font = new System.Drawing.Font("DIN Pro Regular", 7F);
+            xyDiagram2.AxisX.Label.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 7F);
             xyDiagram2.AxisX.Label.ResolveOverlappingOptions.AllowHide = false;
             xyDiagram2.AxisX.Label.ResolveOverlappingOptions.MinIndent = 0;
             xyDiagram2.AxisX.NumericScaleOptions.AutoGrid = false;
@@ -198,10 +198,10 @@
             xyDiagram2.AxisX.Visibility = DevExpress.Utils.DefaultBoolean.True;
             xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
             xyDiagram2.AxisY.GridLines.LineStyle.DashStyle = DevExpress.XtraCharts.DashStyle.Dash;
-            xyDiagram2.AxisY.Label.Font = new System.Drawing.Font("DIN Pro Regular", 7F);
+            xyDiagram2.AxisY.Label.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 7F);
             xyDiagram2.AxisY.Thickness = 2;
             xyDiagram2.AxisY.Tickmarks.Thickness = 2;
-            xyDiagram2.AxisY.Title.Font = new System.Drawing.Font("DIN Pro Regular", 6F);
+            xyDiagram2.AxisY.Title.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 6F);
             xyDiagram2.AxisY.Title.Text = "P.F.(%)";
             xyDiagram2.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
             xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
@@ -220,7 +220,7 @@
             series2.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
             sideBySideBarSeriesLabel2.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
             sideBySideBarSeriesLabel2.FillStyle.FillMode = DevExpress.XtraCharts.FillMode.Empty;
-            sideBySideBarSeriesLabel2.Font = new System.Drawing.Font("Tahoma", 7F);
+            sideBySideBarSeriesLabel2.DXFont = new DevExpress.Drawing.DXFont("Tahoma", 7F);
             sideBySideBarSeriesLabel2.LineLength = 0;
             sideBySideBarSeriesLabel2.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
             sideBySideBarSeriesLabel2.ShowForZeroValues = true;
@@ -243,7 +243,7 @@
             this.xrChart1.BorderColor = System.Drawing.Color.Black;
             this.xrChart1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             xyDiagram3.AxisX.Label.Angle = 270;
-            xyDiagram3.AxisX.Label.Font = new System.Drawing.Font("DIN Pro Regular", 7F);
+            xyDiagram3.AxisX.Label.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 7F);
             xyDiagram3.AxisX.Label.ResolveOverlappingOptions.AllowHide = false;
             xyDiagram3.AxisX.Label.ResolveOverlappingOptions.MinIndent = 0;
             xyDiagram3.AxisX.NumericScaleOptions.AutoGrid = false;
@@ -254,10 +254,10 @@
             xyDiagram3.AxisX.Visibility = DevExpress.Utils.DefaultBoolean.True;
             xyDiagram3.AxisX.VisibleInPanesSerializable = "-1";
             xyDiagram3.AxisY.GridLines.LineStyle.DashStyle = DevExpress.XtraCharts.DashStyle.Dash;
-            xyDiagram3.AxisY.Label.Font = new System.Drawing.Font("DIN Pro Regular", 7F);
+            xyDiagram3.AxisY.Label.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 7F);
             xyDiagram3.AxisY.Thickness = 2;
             xyDiagram3.AxisY.Tickmarks.Thickness = 2;
-            xyDiagram3.AxisY.Title.Font = new System.Drawing.Font("DIN Pro Regular", 6F);
+            xyDiagram3.AxisY.Title.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 6F);
             xyDiagram3.AxisY.Title.Text = "Units (Consumption)";
             xyDiagram3.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
             xyDiagram3.AxisY.VisibleInPanesSerializable = "-1";
@@ -276,7 +276,7 @@
             series3.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
             sideBySideBarSeriesLabel3.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
             sideBySideBarSeriesLabel3.FillStyle.FillMode = DevExpress.XtraCharts.FillMode.Empty;
-            sideBySideBarSeriesLabel3.Font = new System.Drawing.Font("Tahoma", 7F);
+            sideBySideBarSeriesLabel3.DXFont = new DevExpress.Drawing.DXFont("Tahoma", 7F);
             sideBySideBarSeriesLabel3.LineLength = 0;
             sideBySideBarSeriesLabel3.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
             sideBySideBarSeriesLabel3.ShowForZeroValues = true;
@@ -318,7 +318,7 @@
             // xrDueDate
             // 
             this.xrDueDate.CanGrow = false;
-            this.xrDueDate.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
+            this.xrDueDate.Font = new DevExpress.Drawing.DXFont("Calibri", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrDueDate.InteractiveSorting.FieldName = "OwnerName";
             this.xrDueDate.LocationFloat = new DevExpress.Utils.PointFloat(227.3751F, 0.1651611F);
             this.xrDueDate.Multiline = true;
@@ -334,7 +334,7 @@
             // 
             this.xrLabel63.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_ParkingAmount]")});
-            this.xrLabel63.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
+            this.xrLabel63.Font = new DevExpress.Drawing.DXFont("Calibri", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel63.LocationFloat = new DevExpress.Utils.PointFloat(709.3846F, 32.45837F);
             this.xrLabel63.Multiline = true;
             this.xrLabel63.Name = "xrLabel63";
@@ -348,7 +348,7 @@
             // 
             this.xrLabel61.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L10_TotArrUPPCLIntUPPCLIntArrUPPCL_Rounded]")});
-            this.xrLabel61.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
+            this.xrLabel61.Font = new DevExpress.Drawing.DXFont("Calibri", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel61.LocationFloat = new DevExpress.Utils.PointFloat(709.3846F, 15.70813F);
             this.xrLabel61.Multiline = true;
             this.xrLabel61.Name = "xrLabel61";
@@ -362,7 +362,7 @@
             // 
             this.xrLabel59.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_AmountPayableBeforeDueDate]\n")});
-            this.xrLabel59.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
+            this.xrLabel59.Font = new DevExpress.Drawing.DXFont("Calibri", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel59.LocationFloat = new DevExpress.Utils.PointFloat(707.8439F, 0F);
             this.xrLabel59.Multiline = true;
             this.xrLabel59.Name = "xrLabel59";
@@ -374,7 +374,7 @@
             // 
             // xrLabel62
             // 
-            this.xrLabel62.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
+            this.xrLabel62.Font = new DevExpress.Drawing.DXFont("Calibri", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel62.LocationFloat = new DevExpress.Utils.PointFloat(505.2084F, 32.45837F);
             this.xrLabel62.Multiline = true;
             this.xrLabel62.Name = "xrLabel62";
@@ -387,7 +387,7 @@
             // 
             // xrLabel60
             // 
-            this.xrLabel60.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
+            this.xrLabel60.Font = new DevExpress.Drawing.DXFont("Calibri", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel60.LocationFloat = new DevExpress.Utils.PointFloat(505.2084F, 15.70813F);
             this.xrLabel60.Multiline = true;
             this.xrLabel60.Name = "xrLabel60";
@@ -400,7 +400,7 @@
             // 
             // xrLabel58
             // 
-            this.xrLabel58.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
+            this.xrLabel58.Font = new DevExpress.Drawing.DXFont("Calibri", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel58.LocationFloat = new DevExpress.Utils.PointFloat(505.2084F, 0F);
             this.xrLabel58.Multiline = true;
             this.xrLabel58.Name = "xrLabel58";
@@ -427,7 +427,7 @@
             // 
             // xrLabel54
             // 
-            this.xrLabel54.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
+            this.xrLabel54.Font = new DevExpress.Drawing.DXFont("Calibri", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel54.LocationFloat = new DevExpress.Utils.PointFloat(153.4168F, 0F);
             this.xrLabel54.Multiline = true;
             this.xrLabel54.Name = "xrLabel54";
@@ -442,7 +442,7 @@
             // 
             this.xrLabel52.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L6_SERVDET_SERVNO]")});
-            this.xrLabel52.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
+            this.xrLabel52.Font = new DevExpress.Drawing.DXFont("Calibri", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel52.LocationFloat = new DevExpress.Utils.PointFloat(87.01266F, 0F);
             this.xrLabel52.Multiline = true;
             this.xrLabel52.Name = "xrLabel52";
@@ -455,7 +455,7 @@
             // 
             // xrLabel53
             // 
-            this.xrLabel53.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
+            this.xrLabel53.Font = new DevExpress.Drawing.DXFont("Calibri", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel53.LocationFloat = new DevExpress.Utils.PointFloat(26F, 6.357829E-05F);
             this.xrLabel53.Multiline = true;
             this.xrLabel53.Name = "xrLabel53";
@@ -468,7 +468,7 @@
             // 
             // xrLabel57
             // 
-            this.xrLabel57.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
+            this.xrLabel57.Font = new DevExpress.Drawing.DXFont("Calibri", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel57.LocationFloat = new DevExpress.Utils.PointFloat(301.3351F, 0F);
             this.xrLabel57.Multiline = true;
             this.xrLabel57.Name = "xrLabel57";
@@ -483,7 +483,7 @@
             // 
             this.xrLabel56.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L9_Amount_Payable]")});
-            this.xrLabel56.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
+            this.xrLabel56.Font = new DevExpress.Drawing.DXFont("Calibri", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel56.LocationFloat = new DevExpress.Utils.PointFloat(395.3351F, 0F);
             this.xrLabel56.Multiline = true;
             this.xrLabel56.Name = "xrLabel56";
@@ -547,14 +547,14 @@
             this.DataSource = this.objectDataSource1;
             this.DesignerOptions.ShowExportWarnings = false;
             this.DrawWatermark = true;
-            this.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.Margins = new System.Drawing.Printing.Margins(0, 2, 0, 0);
+            this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
+            this.Margins = new DevExpress.Drawing.DXMargins(0, 2, 0, 0);
             this.PageHeight = 1169;
             this.PageWidth = 827;
-            this.PaperKind = System.Drawing.Printing.PaperKind.A4;
+            this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.A4;
             this.ScriptsSource = "\r\n";
             this.Version = "21.2";
-            this.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.rpt_HT_Tod_Back_BeforePrint);
+            this.BeforePrint += new DevExpress.XtraReports.UI.BeforePrintEventHandler(this.rpt_HT_Tod_Back_BeforePrint);
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView1)).EndInit();

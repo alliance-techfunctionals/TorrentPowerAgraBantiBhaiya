@@ -278,7 +278,7 @@
             // 
             // xrLabel119
             // 
-            this.xrLabel119.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel119.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel119.LocationFloat = new DevExpress.Utils.PointFloat(478.835F, 96.36902F);
             this.xrLabel119.Multiline = true;
             this.xrLabel119.Name = "xrLabel119";
@@ -290,7 +290,7 @@
             // 
             // xrLabel120
             // 
-            this.xrLabel120.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel120.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel120.LocationFloat = new DevExpress.Utils.PointFloat(526.835F, 96.36902F);
             this.xrLabel120.Multiline = true;
             this.xrLabel120.Name = "xrLabel120";
@@ -302,7 +302,7 @@
             // 
             // xrLabel121
             // 
-            this.xrLabel121.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel121.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel121.LocationFloat = new DevExpress.Utils.PointFloat(574.835F, 96.36902F);
             this.xrLabel121.Multiline = true;
             this.xrLabel121.Name = "xrLabel121";
@@ -314,7 +314,7 @@
             // 
             // xrLabel122
             // 
-            this.xrLabel122.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel122.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel122.LocationFloat = new DevExpress.Utils.PointFloat(622.6326F, 96.36902F);
             this.xrLabel122.Multiline = true;
             this.xrLabel122.Name = "xrLabel122";
@@ -326,7 +326,7 @@
             // 
             // xrLabel123
             // 
-            this.xrLabel123.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel123.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel123.LocationFloat = new DevExpress.Utils.PointFloat(670.6326F, 96.36902F);
             this.xrLabel123.Multiline = true;
             this.xrLabel123.Name = "xrLabel123";
@@ -338,7 +338,7 @@
             // 
             // xrLabel124
             // 
-            this.xrLabel124.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel124.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel124.LocationFloat = new DevExpress.Utils.PointFloat(718.4881F, 96.36902F);
             this.xrLabel124.Multiline = true;
             this.xrLabel124.Name = "xrLabel124";
@@ -350,7 +350,7 @@
             // 
             // xrLabel113
             // 
-            this.xrLabel113.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel113.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel113.LocationFloat = new DevExpress.Utils.PointFloat(478.835F, 78.38095F);
             this.xrLabel113.Multiline = true;
             this.xrLabel113.Name = "xrLabel113";
@@ -362,7 +362,7 @@
             // 
             // xrLabel114
             // 
-            this.xrLabel114.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel114.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel114.LocationFloat = new DevExpress.Utils.PointFloat(526.835F, 78.38095F);
             this.xrLabel114.Multiline = true;
             this.xrLabel114.Name = "xrLabel114";
@@ -374,7 +374,7 @@
             // 
             // xrLabel115
             // 
-            this.xrLabel115.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel115.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel115.LocationFloat = new DevExpress.Utils.PointFloat(574.835F, 78.38095F);
             this.xrLabel115.Multiline = true;
             this.xrLabel115.Name = "xrLabel115";
@@ -386,7 +386,7 @@
             // 
             // xrLabel116
             // 
-            this.xrLabel116.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel116.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel116.LocationFloat = new DevExpress.Utils.PointFloat(622.6326F, 78.38095F);
             this.xrLabel116.Multiline = true;
             this.xrLabel116.Name = "xrLabel116";
@@ -398,7 +398,7 @@
             // 
             // xrLabel117
             // 
-            this.xrLabel117.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel117.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel117.LocationFloat = new DevExpress.Utils.PointFloat(670.6326F, 78.38095F);
             this.xrLabel117.Multiline = true;
             this.xrLabel117.Name = "xrLabel117";
@@ -410,7 +410,7 @@
             // 
             // xrLabel118
             // 
-            this.xrLabel118.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel118.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel118.LocationFloat = new DevExpress.Utils.PointFloat(718.4881F, 78.38095F);
             this.xrLabel118.Multiline = true;
             this.xrLabel118.Name = "xrLabel118";
@@ -422,7 +422,7 @@
             // 
             // xrLabel107
             // 
-            this.xrLabel107.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel107.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel107.LocationFloat = new DevExpress.Utils.PointFloat(478.835F, 57F);
             this.xrLabel107.Multiline = true;
             this.xrLabel107.Name = "xrLabel107";
@@ -434,7 +434,7 @@
             // 
             // xrLabel108
             // 
-            this.xrLabel108.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel108.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel108.LocationFloat = new DevExpress.Utils.PointFloat(526.835F, 57F);
             this.xrLabel108.Multiline = true;
             this.xrLabel108.Name = "xrLabel108";
@@ -446,7 +446,7 @@
             // 
             // xrLabel109
             // 
-            this.xrLabel109.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel109.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel109.LocationFloat = new DevExpress.Utils.PointFloat(574.835F, 57F);
             this.xrLabel109.Multiline = true;
             this.xrLabel109.Name = "xrLabel109";
@@ -458,7 +458,7 @@
             // 
             // xrLabel110
             // 
-            this.xrLabel110.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel110.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel110.LocationFloat = new DevExpress.Utils.PointFloat(622.6326F, 57F);
             this.xrLabel110.Multiline = true;
             this.xrLabel110.Name = "xrLabel110";
@@ -470,7 +470,7 @@
             // 
             // xrLabel111
             // 
-            this.xrLabel111.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel111.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel111.LocationFloat = new DevExpress.Utils.PointFloat(670.6326F, 57F);
             this.xrLabel111.Multiline = true;
             this.xrLabel111.Name = "xrLabel111";
@@ -482,7 +482,7 @@
             // 
             // xrLabel112
             // 
-            this.xrLabel112.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel112.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel112.LocationFloat = new DevExpress.Utils.PointFloat(718.4881F, 57F);
             this.xrLabel112.Multiline = true;
             this.xrLabel112.Name = "xrLabel112";
@@ -494,7 +494,7 @@
             // 
             // xrLabel101
             // 
-            this.xrLabel101.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel101.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel101.LocationFloat = new DevExpress.Utils.PointFloat(478.835F, 38F);
             this.xrLabel101.Multiline = true;
             this.xrLabel101.Name = "xrLabel101";
@@ -506,7 +506,7 @@
             // 
             // xrLabel102
             // 
-            this.xrLabel102.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel102.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel102.LocationFloat = new DevExpress.Utils.PointFloat(526.835F, 38F);
             this.xrLabel102.Multiline = true;
             this.xrLabel102.Name = "xrLabel102";
@@ -518,7 +518,7 @@
             // 
             // xrLabel103
             // 
-            this.xrLabel103.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel103.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel103.LocationFloat = new DevExpress.Utils.PointFloat(574.835F, 38F);
             this.xrLabel103.Multiline = true;
             this.xrLabel103.Name = "xrLabel103";
@@ -530,7 +530,7 @@
             // 
             // xrLabel104
             // 
-            this.xrLabel104.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel104.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel104.LocationFloat = new DevExpress.Utils.PointFloat(622.6326F, 38F);
             this.xrLabel104.Multiline = true;
             this.xrLabel104.Name = "xrLabel104";
@@ -542,7 +542,7 @@
             // 
             // xrLabel105
             // 
-            this.xrLabel105.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel105.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel105.LocationFloat = new DevExpress.Utils.PointFloat(670.6326F, 38F);
             this.xrLabel105.Multiline = true;
             this.xrLabel105.Name = "xrLabel105";
@@ -554,7 +554,7 @@
             // 
             // xrLabel106
             // 
-            this.xrLabel106.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel106.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel106.LocationFloat = new DevExpress.Utils.PointFloat(718.4881F, 38F);
             this.xrLabel106.Multiline = true;
             this.xrLabel106.Name = "xrLabel106";
@@ -566,7 +566,7 @@
             // 
             // xrLabel100
             // 
-            this.xrLabel100.Font = new System.Drawing.Font("Helvetica", 7F, System.Drawing.FontStyle.Bold);
+            this.xrLabel100.Font = new DevExpress.Drawing.DXFont("Helvetica", 7F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel100.LocationFloat = new DevExpress.Utils.PointFloat(718.4879F, 19F);
             this.xrLabel100.Multiline = true;
             this.xrLabel100.Name = "xrLabel100";
@@ -578,7 +578,7 @@
             // 
             // xrLabel99
             // 
-            this.xrLabel99.Font = new System.Drawing.Font("Helvetica", 7F, System.Drawing.FontStyle.Bold);
+            this.xrLabel99.Font = new DevExpress.Drawing.DXFont("Helvetica", 7F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel99.LocationFloat = new DevExpress.Utils.PointFloat(670.6324F, 19F);
             this.xrLabel99.Multiline = true;
             this.xrLabel99.Name = "xrLabel99";
@@ -590,7 +590,7 @@
             // 
             // xrLabel98
             // 
-            this.xrLabel98.Font = new System.Drawing.Font("Helvetica", 7F, System.Drawing.FontStyle.Bold);
+            this.xrLabel98.Font = new DevExpress.Drawing.DXFont("Helvetica", 7F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel98.LocationFloat = new DevExpress.Utils.PointFloat(622.6324F, 19F);
             this.xrLabel98.Multiline = true;
             this.xrLabel98.Name = "xrLabel98";
@@ -602,7 +602,7 @@
             // 
             // xrLabel97
             // 
-            this.xrLabel97.Font = new System.Drawing.Font("Helvetica", 7F, System.Drawing.FontStyle.Bold);
+            this.xrLabel97.Font = new DevExpress.Drawing.DXFont("Helvetica", 7F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel97.LocationFloat = new DevExpress.Utils.PointFloat(574.8348F, 19F);
             this.xrLabel97.Multiline = true;
             this.xrLabel97.Name = "xrLabel97";
@@ -614,7 +614,7 @@
             // 
             // xrLabel96
             // 
-            this.xrLabel96.Font = new System.Drawing.Font("Helvetica", 7F, System.Drawing.FontStyle.Bold);
+            this.xrLabel96.Font = new DevExpress.Drawing.DXFont("Helvetica", 7F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel96.LocationFloat = new DevExpress.Utils.PointFloat(526.8348F, 19F);
             this.xrLabel96.Multiline = true;
             this.xrLabel96.Name = "xrLabel96";
@@ -626,7 +626,7 @@
             // 
             // xrLabel95
             // 
-            this.xrLabel95.Font = new System.Drawing.Font("Helvetica", 7F, System.Drawing.FontStyle.Bold);
+            this.xrLabel95.Font = new DevExpress.Drawing.DXFont("Helvetica", 7F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel95.LocationFloat = new DevExpress.Utils.PointFloat(478.8348F, 19F);
             this.xrLabel95.Multiline = true;
             this.xrLabel95.Name = "xrLabel95";
@@ -638,7 +638,7 @@
             // 
             // xrLabel94
             // 
-            this.xrLabel94.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            this.xrLabel94.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel94.LocationFloat = new DevExpress.Utils.PointFloat(398.8351F, 95.61905F);
             this.xrLabel94.Multiline = true;
             this.xrLabel94.Name = "xrLabel94";
@@ -651,7 +651,7 @@
             // 
             // xrLabel93
             // 
-            this.xrLabel93.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            this.xrLabel93.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel93.LocationFloat = new DevExpress.Utils.PointFloat(398.8351F, 78F);
             this.xrLabel93.Multiline = true;
             this.xrLabel93.Name = "xrLabel93";
@@ -664,7 +664,7 @@
             // 
             // xrLabel92
             // 
-            this.xrLabel92.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            this.xrLabel92.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel92.LocationFloat = new DevExpress.Utils.PointFloat(398.8351F, 57F);
             this.xrLabel92.Multiline = true;
             this.xrLabel92.Name = "xrLabel92";
@@ -677,7 +677,7 @@
             // 
             // xrLabel91
             // 
-            this.xrLabel91.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            this.xrLabel91.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel91.LocationFloat = new DevExpress.Utils.PointFloat(398.835F, 38.75F);
             this.xrLabel91.Multiline = true;
             this.xrLabel91.Name = "xrLabel91";
@@ -690,7 +690,7 @@
             // 
             // xrLabel90
             // 
-            this.xrLabel90.Font = new System.Drawing.Font("Helvetica", 7F, System.Drawing.FontStyle.Bold);
+            this.xrLabel90.Font = new DevExpress.Drawing.DXFont("Helvetica", 7F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel90.LocationFloat = new DevExpress.Utils.PointFloat(537.4879F, 0F);
             this.xrLabel90.Multiline = true;
             this.xrLabel90.Name = "xrLabel90";
@@ -703,7 +703,7 @@
             // 
             // xrLabel89
             // 
-            this.xrLabel89.Font = new System.Drawing.Font("Helvetica", 7F, System.Drawing.FontStyle.Bold);
+            this.xrLabel89.Font = new DevExpress.Drawing.DXFont("Helvetica", 7F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel89.LocationFloat = new DevExpress.Utils.PointFloat(398.8351F, 19F);
             this.xrLabel89.Multiline = true;
             this.xrLabel89.Name = "xrLabel89";
@@ -716,7 +716,7 @@
             // 
             // xrLabel85
             // 
-            this.xrLabel85.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel85.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel85.LocationFloat = new DevExpress.Utils.PointFloat(174.337F, 37.75F);
             this.xrLabel85.Multiline = true;
             this.xrLabel85.Name = "xrLabel85";
@@ -728,7 +728,7 @@
             // 
             // xrLabel86
             // 
-            this.xrLabel86.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel86.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel86.LocationFloat = new DevExpress.Utils.PointFloat(174.337F, 56.75F);
             this.xrLabel86.Multiline = true;
             this.xrLabel86.Name = "xrLabel86";
@@ -740,7 +740,7 @@
             // 
             // xrLabel87
             // 
-            this.xrLabel87.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel87.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel87.LocationFloat = new DevExpress.Utils.PointFloat(174.337F, 77.75F);
             this.xrLabel87.Multiline = true;
             this.xrLabel87.Name = "xrLabel87";
@@ -752,7 +752,7 @@
             // 
             // xrLabel88
             // 
-            this.xrLabel88.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel88.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel88.LocationFloat = new DevExpress.Utils.PointFloat(174.337F, 97.36905F);
             this.xrLabel88.Multiline = true;
             this.xrLabel88.Name = "xrLabel88";
@@ -764,7 +764,7 @@
             // 
             // xrLabel84
             // 
-            this.xrLabel84.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel84.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel84.LocationFloat = new DevExpress.Utils.PointFloat(116.9296F, 96.61905F);
             this.xrLabel84.Multiline = true;
             this.xrLabel84.Name = "xrLabel84";
@@ -776,7 +776,7 @@
             // 
             // xrLabel83
             // 
-            this.xrLabel83.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel83.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel83.LocationFloat = new DevExpress.Utils.PointFloat(116.9296F, 77F);
             this.xrLabel83.Multiline = true;
             this.xrLabel83.Name = "xrLabel83";
@@ -788,7 +788,7 @@
             // 
             // xrLabel82
             // 
-            this.xrLabel82.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel82.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel82.LocationFloat = new DevExpress.Utils.PointFloat(116.9296F, 56F);
             this.xrLabel82.Multiline = true;
             this.xrLabel82.Name = "xrLabel82";
@@ -800,7 +800,7 @@
             // 
             // xrLabel81
             // 
-            this.xrLabel81.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel81.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel81.LocationFloat = new DevExpress.Utils.PointFloat(116.9296F, 37F);
             this.xrLabel81.Multiline = true;
             this.xrLabel81.Name = "xrLabel81";
@@ -814,7 +814,7 @@
             // 
             this.xrLabel80.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "FormatString(\'{0}{1}\',[unit1],\'H\')\n")});
-            this.xrLabel80.Font = new System.Drawing.Font("Helvetica", 7F, System.Drawing.FontStyle.Bold);
+            this.xrLabel80.Font = new DevExpress.Drawing.DXFont("Helvetica", 7F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel80.LocationFloat = new DevExpress.Utils.PointFloat(174.337F, 20F);
             this.xrLabel80.Multiline = true;
             this.xrLabel80.Name = "xrLabel80";
@@ -828,7 +828,7 @@
             // 
             this.xrLabel79.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "FormatString(\'{0}{1}\',[unit1],\'\')\n")});
-            this.xrLabel79.Font = new System.Drawing.Font("Helvetica", 7F, System.Drawing.FontStyle.Bold);
+            this.xrLabel79.Font = new DevExpress.Drawing.DXFont("Helvetica", 7F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel79.LocationFloat = new DevExpress.Utils.PointFloat(116.9444F, 18F);
             this.xrLabel79.Multiline = true;
             this.xrLabel79.Name = "xrLabel79";
@@ -840,7 +840,7 @@
             // 
             // xrLabel78
             // 
-            this.xrLabel78.Font = new System.Drawing.Font("Helvetica", 7F, System.Drawing.FontStyle.Bold);
+            this.xrLabel78.Font = new DevExpress.Drawing.DXFont("Helvetica", 7F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel78.LocationFloat = new DevExpress.Utils.PointFloat(134.8105F, 0F);
             this.xrLabel78.Multiline = true;
             this.xrLabel78.Name = "xrLabel78";
@@ -852,7 +852,7 @@
             // 
             // xrLabel77
             // 
-            this.xrLabel77.Font = new System.Drawing.Font("Helvetica", 7F, System.Drawing.FontStyle.Bold);
+            this.xrLabel77.Font = new DevExpress.Drawing.DXFont("Helvetica", 7F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel77.LocationFloat = new DevExpress.Utils.PointFloat(2.000017F, 6F);
             this.xrLabel77.Multiline = true;
             this.xrLabel77.Name = "xrLabel77";
@@ -869,7 +869,7 @@
             this.xrLabel76.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
             this.xrLabel76.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrLabel76.BorderWidth = 1F;
-            this.xrLabel76.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            this.xrLabel76.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel76.LocationFloat = new DevExpress.Utils.PointFloat(6.103516E-05F, 96.61905F);
             this.xrLabel76.Multiline = true;
             this.xrLabel76.Name = "xrLabel76";
@@ -890,7 +890,7 @@
             this.xrLabel75.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
             this.xrLabel75.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrLabel75.BorderWidth = 1F;
-            this.xrLabel75.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            this.xrLabel75.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel75.LocationFloat = new DevExpress.Utils.PointFloat(6.103516E-05F, 77.38095F);
             this.xrLabel75.Multiline = true;
             this.xrLabel75.Name = "xrLabel75";
@@ -911,7 +911,7 @@
             this.xrLabel74.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
             this.xrLabel74.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrLabel74.BorderWidth = 1F;
-            this.xrLabel74.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            this.xrLabel74.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel74.LocationFloat = new DevExpress.Utils.PointFloat(6.103516E-05F, 57F);
             this.xrLabel74.Multiline = true;
             this.xrLabel74.Name = "xrLabel74";
@@ -932,7 +932,7 @@
             this.xrLabel73.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
             this.xrLabel73.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel73.BorderWidth = 1F;
-            this.xrLabel73.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            this.xrLabel73.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel73.LocationFloat = new DevExpress.Utils.PointFloat(6.103516E-05F, 38F);
             this.xrLabel73.Multiline = true;
             this.xrLabel73.Name = "xrLabel73";
@@ -1069,7 +1069,7 @@
             // 
             // MTR_TOD2
             // 
-            this.MTR_TOD2.Font = new System.Drawing.Font("Helvetica", 7F, System.Drawing.FontStyle.Bold);
+            this.MTR_TOD2.Font = new DevExpress.Drawing.DXFont("Helvetica", 7F, DevExpress.Drawing.DXFontStyle.Bold);
             this.MTR_TOD2.LocationFloat = new DevExpress.Utils.PointFloat(552.119F, 19.62F);
             this.MTR_TOD2.Multiline = true;
             this.MTR_TOD2.Name = "MTR_TOD2";
@@ -1081,7 +1081,7 @@
             // 
             // MTR2_KWH4_ex
             // 
-            this.MTR2_KWH4_ex.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MTR2_KWH4_ex.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.MTR2_KWH4_ex.LocationFloat = new DevExpress.Utils.PointFloat(719.471F, 98.09995F);
             this.MTR2_KWH4_ex.Multiline = true;
             this.MTR2_KWH4_ex.Name = "MTR2_KWH4_ex";
@@ -1093,7 +1093,7 @@
             // 
             // MTR2_KWH3_ex
             // 
-            this.MTR2_KWH3_ex.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MTR2_KWH3_ex.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.MTR2_KWH3_ex.LocationFloat = new DevExpress.Utils.PointFloat(677.0203F, 98.09995F);
             this.MTR2_KWH3_ex.Multiline = true;
             this.MTR2_KWH3_ex.Name = "MTR2_KWH3_ex";
@@ -1105,7 +1105,7 @@
             // 
             // MTR2_KWH2_ex
             // 
-            this.MTR2_KWH2_ex.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MTR2_KWH2_ex.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.MTR2_KWH2_ex.LocationFloat = new DevExpress.Utils.PointFloat(635.5695F, 98.09995F);
             this.MTR2_KWH2_ex.Multiline = true;
             this.MTR2_KWH2_ex.Name = "MTR2_KWH2_ex";
@@ -1117,7 +1117,7 @@
             // 
             // MTR2_KWH1_ex
             // 
-            this.MTR2_KWH1_ex.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MTR2_KWH1_ex.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.MTR2_KWH1_ex.LocationFloat = new DevExpress.Utils.PointFloat(594.119F, 98.09995F);
             this.MTR2_KWH1_ex.Multiline = true;
             this.MTR2_KWH1_ex.Name = "MTR2_KWH1_ex";
@@ -1129,7 +1129,7 @@
             // 
             // MTR2_KW1_ex
             // 
-            this.MTR2_KW1_ex.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MTR2_KW1_ex.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.MTR2_KW1_ex.LocationFloat = new DevExpress.Utils.PointFloat(594.119F, 78.47998F);
             this.MTR2_KW1_ex.Multiline = true;
             this.MTR2_KW1_ex.Name = "MTR2_KW1_ex";
@@ -1141,7 +1141,7 @@
             // 
             // MTR2_KW2_ex
             // 
-            this.MTR2_KW2_ex.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MTR2_KW2_ex.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.MTR2_KW2_ex.LocationFloat = new DevExpress.Utils.PointFloat(635.5695F, 78.47998F);
             this.MTR2_KW2_ex.Multiline = true;
             this.MTR2_KW2_ex.Name = "MTR2_KW2_ex";
@@ -1153,7 +1153,7 @@
             // 
             // MTR2_KW3_ex
             // 
-            this.MTR2_KW3_ex.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MTR2_KW3_ex.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.MTR2_KW3_ex.LocationFloat = new DevExpress.Utils.PointFloat(677.0203F, 78.47998F);
             this.MTR2_KW3_ex.Multiline = true;
             this.MTR2_KW3_ex.Name = "MTR2_KW3_ex";
@@ -1165,7 +1165,7 @@
             // 
             // MTR2_KW4_ex
             // 
-            this.MTR2_KW4_ex.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MTR2_KW4_ex.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.MTR2_KW4_ex.LocationFloat = new DevExpress.Utils.PointFloat(719.471F, 78.47998F);
             this.MTR2_KW4_ex.Multiline = true;
             this.MTR2_KW4_ex.Name = "MTR2_KW4_ex";
@@ -1177,7 +1177,7 @@
             // 
             // MTR2_EXP4
             // 
-            this.MTR2_EXP4.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            this.MTR2_EXP4.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.MTR2_EXP4.LocationFloat = new DevExpress.Utils.PointFloat(719.471F, 58.86001F);
             this.MTR2_EXP4.Multiline = true;
             this.MTR2_EXP4.Name = "MTR2_EXP4";
@@ -1190,7 +1190,7 @@
             // 
             // MTR2_EXP3
             // 
-            this.MTR2_EXP3.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            this.MTR2_EXP3.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.MTR2_EXP3.LocationFloat = new DevExpress.Utils.PointFloat(677.0203F, 58.86001F);
             this.MTR2_EXP3.Multiline = true;
             this.MTR2_EXP3.Name = "MTR2_EXP3";
@@ -1203,7 +1203,7 @@
             // 
             // MTR2_EXP2
             // 
-            this.MTR2_EXP2.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            this.MTR2_EXP2.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.MTR2_EXP2.LocationFloat = new DevExpress.Utils.PointFloat(635.5695F, 58.86001F);
             this.MTR2_EXP2.Multiline = true;
             this.MTR2_EXP2.Name = "MTR2_EXP2";
@@ -1216,7 +1216,7 @@
             // 
             // MTR2_EXP1
             // 
-            this.MTR2_EXP1.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            this.MTR2_EXP1.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.MTR2_EXP1.LocationFloat = new DevExpress.Utils.PointFloat(594.119F, 58.86001F);
             this.MTR2_EXP1.Multiline = true;
             this.MTR2_EXP1.Name = "MTR2_EXP1";
@@ -1229,7 +1229,7 @@
             // 
             // mtr2_exp
             // 
-            this.mtr2_exp.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            this.mtr2_exp.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.mtr2_exp.LocationFloat = new DevExpress.Utils.PointFloat(652.7231F, 39.24001F);
             this.mtr2_exp.Multiline = true;
             this.mtr2_exp.Name = "mtr2_exp";
@@ -1242,7 +1242,7 @@
             // 
             // MTR2_TOD4
             // 
-            this.MTR2_TOD4.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            this.MTR2_TOD4.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.MTR2_TOD4.LocationFloat = new DevExpress.Utils.PointFloat(552.119F, 58.86001F);
             this.MTR2_TOD4.Multiline = true;
             this.MTR2_TOD4.Name = "MTR2_TOD4";
@@ -1255,7 +1255,7 @@
             // 
             // MTR2_KW4
             // 
-            this.MTR2_KW4.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MTR2_KW4.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.MTR2_KW4.LocationFloat = new DevExpress.Utils.PointFloat(552.119F, 78.47998F);
             this.MTR2_KW4.Multiline = true;
             this.MTR2_KW4.Name = "MTR2_KW4";
@@ -1267,7 +1267,7 @@
             // 
             // MTR2_KWH4
             // 
-            this.MTR2_KWH4.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MTR2_KWH4.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.MTR2_KWH4.LocationFloat = new DevExpress.Utils.PointFloat(552.119F, 97.09993F);
             this.MTR2_KWH4.Multiline = true;
             this.MTR2_KWH4.Name = "MTR2_KWH4";
@@ -1279,7 +1279,7 @@
             // 
             // MTR2_KWH3
             // 
-            this.MTR2_KWH3.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MTR2_KWH3.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.MTR2_KWH3.LocationFloat = new DevExpress.Utils.PointFloat(510.6683F, 97.09993F);
             this.MTR2_KWH3.Multiline = true;
             this.MTR2_KWH3.Name = "MTR2_KWH3";
@@ -1291,7 +1291,7 @@
             // 
             // MTR2_KW3
             // 
-            this.MTR2_KW3.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MTR2_KW3.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.MTR2_KW3.LocationFloat = new DevExpress.Utils.PointFloat(510.6683F, 78.47998F);
             this.MTR2_KW3.Multiline = true;
             this.MTR2_KW3.Name = "MTR2_KW3";
@@ -1303,7 +1303,7 @@
             // 
             // MTR2_TOD3
             // 
-            this.MTR2_TOD3.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            this.MTR2_TOD3.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.MTR2_TOD3.LocationFloat = new DevExpress.Utils.PointFloat(510.6683F, 58.86001F);
             this.MTR2_TOD3.Multiline = true;
             this.MTR2_TOD3.Name = "MTR2_TOD3";
@@ -1316,7 +1316,7 @@
             // 
             // MTR2_TOD1
             // 
-            this.MTR2_TOD1.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            this.MTR2_TOD1.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.MTR2_TOD1.LocationFloat = new DevExpress.Utils.PointFloat(426.2221F, 58.05978F);
             this.MTR2_TOD1.Multiline = true;
             this.MTR2_TOD1.Name = "MTR2_TOD1";
@@ -1329,7 +1329,7 @@
             // 
             // MTR2_TOD2
             // 
-            this.MTR2_TOD2.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            this.MTR2_TOD2.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.MTR2_TOD2.LocationFloat = new DevExpress.Utils.PointFloat(468.2608F, 57.86F);
             this.MTR2_TOD2.Multiline = true;
             this.MTR2_TOD2.Name = "MTR2_TOD2";
@@ -1342,7 +1342,7 @@
             // 
             // MTR2_KW2
             // 
-            this.MTR2_KW2.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MTR2_KW2.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.MTR2_KW2.LocationFloat = new DevExpress.Utils.PointFloat(468.2608F, 77.47998F);
             this.MTR2_KW2.Multiline = true;
             this.MTR2_KW2.Name = "MTR2_KW2";
@@ -1354,7 +1354,7 @@
             // 
             // MTR2_KWH2
             // 
-            this.MTR2_KWH2.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MTR2_KWH2.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.MTR2_KWH2.LocationFloat = new DevExpress.Utils.PointFloat(468.2608F, 97.09993F);
             this.MTR2_KWH2.Multiline = true;
             this.MTR2_KWH2.Name = "MTR2_KWH2";
@@ -1366,7 +1366,7 @@
             // 
             // MTR2_KWH1
             // 
-            this.MTR2_KWH1.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MTR2_KWH1.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.MTR2_KWH1.LocationFloat = new DevExpress.Utils.PointFloat(426.2221F, 97.29973F);
             this.MTR2_KWH1.Multiline = true;
             this.MTR2_KWH1.Name = "MTR2_KWH1";
@@ -1378,7 +1378,7 @@
             // 
             // MTR2_KW1
             // 
-            this.MTR2_KW1.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MTR2_KW1.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.MTR2_KW1.LocationFloat = new DevExpress.Utils.PointFloat(426.2221F, 77.67973F);
             this.MTR2_KW1.Multiline = true;
             this.MTR2_KW1.Name = "MTR2_KW1";
@@ -1390,7 +1390,7 @@
             // 
             // mtr2_IMP
             // 
-            this.mtr2_IMP.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            this.mtr2_IMP.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.mtr2_IMP.LocationFloat = new DevExpress.Utils.PointFloat(484.8348F, 38.23999F);
             this.mtr2_IMP.Multiline = true;
             this.mtr2_IMP.Name = "mtr2_IMP";
@@ -1403,7 +1403,7 @@
             // 
             // xrLabel64
             // 
-            this.xrLabel64.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            this.xrLabel64.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel64.LocationFloat = new DevExpress.Utils.PointFloat(376.1784F, 59.66025F);
             this.xrLabel64.Multiline = true;
             this.xrLabel64.Name = "xrLabel64";
@@ -1416,7 +1416,7 @@
             // 
             // xrLabel65
             // 
-            this.xrLabel65.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel65.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel65.LocationFloat = new DevExpress.Utils.PointFloat(376.1784F, 79.28022F);
             this.xrLabel65.Multiline = true;
             this.xrLabel65.Name = "xrLabel65";
@@ -1428,7 +1428,7 @@
             // 
             // xrLabel66
             // 
-            this.xrLabel66.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel66.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel66.LocationFloat = new DevExpress.Utils.PointFloat(376.1784F, 98.90018F);
             this.xrLabel66.Multiline = true;
             this.xrLabel66.Name = "xrLabel66";
@@ -1440,7 +1440,7 @@
             // 
             // xrLabel67
             // 
-            xrLabel67.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            xrLabel67.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             xrLabel67.LocationFloat = new DevExpress.Utils.PointFloat(209.3756F, 118.5201F);
             xrLabel67.Multiline = true;
             xrLabel67.Name = "xrLabel67";
@@ -1452,7 +1452,7 @@
             // 
             // xrLabel68
             // 
-           xrLabel68.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+           xrLabel68.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
            xrLabel68.LocationFloat = new DevExpress.Utils.PointFloat(209.3756F, 138.1401F);
            xrLabel68.Multiline = true;
            xrLabel68.Name = "xrLabel68";
@@ -1464,7 +1464,7 @@
             // 
             // xrLabel69
             // 
-           xrLabel69.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+           xrLabel69.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
            xrLabel69.LocationFloat = new DevExpress.Utils.PointFloat(209.3756F, 157.7601F);
            xrLabel69.Multiline = true;
            xrLabel69.Name = "xrLabel69";
@@ -1476,7 +1476,7 @@
             // 
             // xrLabel70
             // 
-           xrLabel70.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+           xrLabel70.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
            xrLabel70.LocationFloat = new DevExpress.Utils.PointFloat(209.3756F, 177.38F);
            xrLabel70.Multiline = true;
            xrLabel70.Name = "xrLabel70";
@@ -1488,7 +1488,7 @@
             // 
             // xrLabel57
             // 
-            this.xrLabel57.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            this.xrLabel57.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel57.LocationFloat = new DevExpress.Utils.PointFloat(334.7277F, 59.66025F);
             this.xrLabel57.Multiline = true;
             this.xrLabel57.Name = "xrLabel57";
@@ -1501,7 +1501,7 @@
             // 
             // xrLabel58
             // 
-            this.xrLabel58.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel58.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel58.LocationFloat = new DevExpress.Utils.PointFloat(334.7277F, 79.28022F);
             this.xrLabel58.Multiline = true;
             this.xrLabel58.Name = "xrLabel58";
@@ -1513,7 +1513,7 @@
             // 
             // xrLabel59
             // 
-            this.xrLabel59.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel59.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel59.LocationFloat = new DevExpress.Utils.PointFloat(334.7277F, 98.90018F);
             this.xrLabel59.Multiline = true;
             this.xrLabel59.Name = "xrLabel59";
@@ -1525,7 +1525,7 @@
             // 
             // xrLabel60
             // 
-           xrLabel60.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+           xrLabel60.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
            xrLabel60.LocationFloat = new DevExpress.Utils.PointFloat(167.9249F, 118.5201F);
            xrLabel60.Multiline = true;
            xrLabel60.Name = "xrLabel60";
@@ -1537,7 +1537,7 @@
             // 
             // xrLabel61
             // 
-          xrLabel61.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+          xrLabel61.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
           xrLabel61.LocationFloat = new DevExpress.Utils.PointFloat(167.9249F, 138.1401F);
           xrLabel61.Multiline = true;
           xrLabel61.Name = "xrLabel61";
@@ -1549,7 +1549,7 @@
             // 
             // xrLabel62
             // 
-          xrLabel62.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+          xrLabel62.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
           xrLabel62.LocationFloat = new DevExpress.Utils.PointFloat(167.9249F, 157.7601F);
           xrLabel62.Multiline = true;
           xrLabel62.Name = "xrLabel62";
@@ -1561,7 +1561,7 @@
             // 
             // xrLabel63
             // 
-            xrLabel63.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            xrLabel63.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             xrLabel63.LocationFloat = new DevExpress.Utils.PointFloat(167.9249F, 177.38F);
             xrLabel63.Multiline = true;
             xrLabel63.Name = "xrLabel63";
@@ -1573,7 +1573,7 @@
             // 
             // xrLabel50
             // 
-            this.xrLabel50.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            this.xrLabel50.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel50.LocationFloat = new DevExpress.Utils.PointFloat(293.277F, 59.66025F);
             this.xrLabel50.Multiline = true;
             this.xrLabel50.Name = "xrLabel50";
@@ -1586,7 +1586,7 @@
             // 
             // xrLabel51
             // 
-            this.xrLabel51.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel51.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel51.LocationFloat = new DevExpress.Utils.PointFloat(293.277F, 79.28022F);
             this.xrLabel51.Multiline = true;
             this.xrLabel51.Name = "xrLabel51";
@@ -1598,7 +1598,7 @@
             // 
             // xrLabel52
             // 
-            this.xrLabel52.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel52.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel52.LocationFloat = new DevExpress.Utils.PointFloat(293.277F, 98.90018F);
             this.xrLabel52.Multiline = true;
             this.xrLabel52.Name = "xrLabel52";
@@ -1610,7 +1610,7 @@
             // 
             // xrLabel53
             // 
-            xrLabel53.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            xrLabel53.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             xrLabel53.LocationFloat = new DevExpress.Utils.PointFloat(126.9683F, 117.72F);
             xrLabel53.Multiline = true;
             xrLabel53.Name = "xrLabel53";
@@ -1622,7 +1622,7 @@
             // 
             // xrLabel54
             // 
-           xrLabel54.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+           xrLabel54.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
            xrLabel54.LocationFloat = new DevExpress.Utils.PointFloat(126.4743F, 137.1401F);
            xrLabel54.Multiline = true;
            xrLabel54.Name = "xrLabel54";
@@ -1634,7 +1634,7 @@
             // 
             // xrLabel55
             // 
-            xrLabel55.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            xrLabel55.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             xrLabel55.LocationFloat = new DevExpress.Utils.PointFloat(126.4743F, 156.7601F);
             xrLabel55.Multiline = true;
             xrLabel55.Name = "xrLabel55";
@@ -1646,7 +1646,7 @@
             // 
             // xrLabel56
             // 
-            xrLabel56.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            xrLabel56.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             xrLabel56.LocationFloat = new DevExpress.Utils.PointFloat(126.4743F, 177.38F);
             xrLabel56.Multiline = true;
             xrLabel56.Name = "xrLabel56";
@@ -1658,7 +1658,7 @@
             // 
             // xrLabel43
             // 
-            this.xrLabel43.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            this.xrLabel43.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel43.LocationFloat = new DevExpress.Utils.PointFloat(168.3757F, 59.66025F);
             this.xrLabel43.Multiline = true;
             this.xrLabel43.Name = "xrLabel43";
@@ -1671,7 +1671,7 @@
             // 
             // xrLabel44
             // 
-            this.xrLabel44.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel44.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel44.LocationFloat = new DevExpress.Utils.PointFloat(168.3757F, 79.28022F);
             this.xrLabel44.Multiline = true;
             this.xrLabel44.Name = "xrLabel44";
@@ -1683,7 +1683,7 @@
             // 
             // xrLabel45
             // 
-            this.xrLabel45.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel45.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel45.LocationFloat = new DevExpress.Utils.PointFloat(168.3757F, 98.90018F);
             this.xrLabel45.Multiline = true;
             this.xrLabel45.Name = "xrLabel45";
@@ -1695,7 +1695,7 @@
             // 
             // xrLabel36
             // 
-            this.xrLabel36.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            this.xrLabel36.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel36.LocationFloat = new DevExpress.Utils.PointFloat(251.8264F, 59.66025F);
             this.xrLabel36.Multiline = true;
             this.xrLabel36.Name = "xrLabel36";
@@ -1708,7 +1708,7 @@
             // 
             // xrLabel37
             // 
-            this.xrLabel37.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel37.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel37.LocationFloat = new DevExpress.Utils.PointFloat(251.8264F, 79.28022F);
             this.xrLabel37.Multiline = true;
             this.xrLabel37.Name = "xrLabel37";
@@ -1720,7 +1720,7 @@
             // 
             // xrLabel38
             // 
-            this.xrLabel38.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel38.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel38.LocationFloat = new DevExpress.Utils.PointFloat(251.8264F, 98.90018F);
             this.xrLabel38.Multiline = true;
             this.xrLabel38.Name = "xrLabel38";
@@ -1732,7 +1732,7 @@
             // 
             // xrLabel39
             // 
-            xrLabel39.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            xrLabel39.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             xrLabel39.LocationFloat = new DevExpress.Utils.PointFloat(85.02361F, 117.5201F);
             xrLabel39.Multiline = true;
             xrLabel39.Name = "xrLabel39";
@@ -1744,7 +1744,7 @@
             // 
             // xrLabel40
             // 
-            xrLabel40.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            xrLabel40.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             xrLabel40.LocationFloat = new DevExpress.Utils.PointFloat(85.02361F, 137.1401F);
             xrLabel40.Multiline = true;
             xrLabel40.Name = "xrLabel40";
@@ -1756,7 +1756,7 @@
             // 
             // xrLabel41
             // 
-           xrLabel41.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+           xrLabel41.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
            xrLabel41.LocationFloat = new DevExpress.Utils.PointFloat(85.02361F, 156.7601F);
            xrLabel41.Multiline = true;
            xrLabel41.Name = "xrLabel41";
@@ -1768,7 +1768,7 @@
             // 
             // xrLabel42
             // 
-            xrLabel42.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            xrLabel42.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             xrLabel42.LocationFloat = new DevExpress.Utils.PointFloat(84.92961F, 177.38F);
             xrLabel42.Multiline = true;
             xrLabel42.Name = "xrLabel42";
@@ -1780,7 +1780,7 @@
             // 
             // xrLabel29
             // 
-            this.xrLabel29.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            this.xrLabel29.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel29.LocationFloat = new DevExpress.Utils.PointFloat(209.8263F, 59.66025F);
             this.xrLabel29.Multiline = true;
             this.xrLabel29.Name = "xrLabel29";
@@ -1793,7 +1793,7 @@
             // 
             // xrLabel30
             // 
-            this.xrLabel30.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel30.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel30.LocationFloat = new DevExpress.Utils.PointFloat(209.8264F, 79.28022F);
             this.xrLabel30.Multiline = true;
             this.xrLabel30.Name = "xrLabel30";
@@ -1805,7 +1805,7 @@
             // 
             // xrLabel31
             // 
-            this.xrLabel31.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel31.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel31.LocationFloat = new DevExpress.Utils.PointFloat(209.8264F, 98.90018F);
             this.xrLabel31.Multiline = true;
             this.xrLabel31.Name = "xrLabel31";
@@ -1817,7 +1817,7 @@
             // 
             // xrLabel22
             // 
-            this.xrLabel22.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            this.xrLabel22.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel22.LocationFloat = new DevExpress.Utils.PointFloat(126.9683F, 59.66025F);
             this.xrLabel22.Multiline = true;
             this.xrLabel22.Name = "xrLabel22";
@@ -1830,7 +1830,7 @@
             // 
             // xrLabel23
             // 
-            this.xrLabel23.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel23.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel23.LocationFloat = new DevExpress.Utils.PointFloat(126.9683F, 79.28022F);
             this.xrLabel23.Multiline = true;
             this.xrLabel23.Name = "xrLabel23";
@@ -1842,7 +1842,7 @@
             // 
             // xrLabel24
             // 
-            this.xrLabel24.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel24.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel24.LocationFloat = new DevExpress.Utils.PointFloat(126.9683F, 98.90018F);
             this.xrLabel24.Multiline = true;
             this.xrLabel24.Name = "xrLabel24";
@@ -1854,7 +1854,7 @@
             // 
             // xrLabel17
             // 
-            this.xrLabel17.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel17.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(84.92961F, 98.09995F);
             this.xrLabel17.Multiline = true;
             this.xrLabel17.Name = "xrLabel17";
@@ -1866,7 +1866,7 @@
             // 
             // xrLabel16
             // 
-            this.xrLabel16.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel16.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel16.LocationFloat = new DevExpress.Utils.PointFloat(84.92961F, 78.47998F);
             this.xrLabel16.Multiline = true;
             this.xrLabel16.Name = "xrLabel16";
@@ -1878,7 +1878,7 @@
             // 
             // xrLabel15
             // 
-            this.xrLabel15.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            this.xrLabel15.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(84.92961F, 58.86001F);
             this.xrLabel15.Multiline = true;
             this.xrLabel15.Name = "xrLabel15";
@@ -1891,7 +1891,7 @@
             // 
             // xrLabel14
             // 
-            this.xrLabel14.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            this.xrLabel14.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(311.8264F, 40.04025F);
             this.xrLabel14.Multiline = true;
             this.xrLabel14.Name = "xrLabel14";
@@ -1904,7 +1904,7 @@
             // 
             // xrLabel13
             // 
-            this.xrLabel13.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            this.xrLabel13.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(144.8105F, 39.23999F);
             this.xrLabel13.Multiline = true;
             this.xrLabel13.Name = "xrLabel13";
@@ -1917,7 +1917,7 @@
             // 
             // MTR_TOD1
             // 
-            this.MTR_TOD1.Font = new System.Drawing.Font("Helvetica", 7F, System.Drawing.FontStyle.Bold);
+            this.MTR_TOD1.Font = new DevExpress.Drawing.DXFont("Helvetica", 7F, DevExpress.Drawing.DXFontStyle.Bold);
             this.MTR_TOD1.LocationFloat = new DevExpress.Utils.PointFloat(209.8264F, 19.62F);
             this.MTR_TOD1.Multiline = true;
             this.MTR_TOD1.Name = "MTR_TOD1";
@@ -1931,7 +1931,7 @@
             // 
             this.xrLabel11.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
             this.xrLabel11.Borders = DevExpress.XtraPrinting.BorderSide.Top;
-            this.xrLabel11.Font = new System.Drawing.Font("Helvetica", 7F, System.Drawing.FontStyle.Bold);
+            this.xrLabel11.Font = new DevExpress.Drawing.DXFont("Helvetica", 7F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(3.242493E-05F, 3.433228E-05F);
             this.xrLabel11.Multiline = true;
             this.xrLabel11.Name = "xrLabel11";
@@ -1949,7 +1949,7 @@
             xrLabel10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             xrLabel10.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
             xrLabel10.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            xrLabel10.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            xrLabel10.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(0F, 176.58F);
             xrLabel10.Multiline = true;
             xrLabel10.Name = "xrLabel10";
@@ -1982,7 +1982,7 @@
             xrLabel9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             xrLabel9.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
             xrLabel9.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            xrLabel9.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            xrLabel9.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(0F, 156.96F);
             xrLabel9.Multiline = true;
             xrLabel9.Name = "xrLabel9";
@@ -2001,7 +2001,7 @@
            xrLabel8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
            xrLabel8.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
            xrLabel8.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-           xrLabel8.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+           xrLabel8.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
            xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(0F, 137.34F);
            xrLabel8.Multiline = true;
            xrLabel8.Name = "xrLabel8";
@@ -2020,7 +2020,7 @@
            xrLabel7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
            xrLabel7.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
            xrLabel7.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-           xrLabel7.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+           xrLabel7.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
            xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(0F, 117.72F);
            xrLabel7.Multiline = true;
            xrLabel7.Name = "xrLabel7";
@@ -2041,7 +2041,7 @@
             this.xrLabel6.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrLabel6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "FormatString(\'{0}{1}\',[unit1],\'H\')\n")});
-            this.xrLabel6.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            this.xrLabel6.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(0F, 98.1F);
             this.xrLabel6.Multiline = true;
             this.xrLabel6.Name = "xrLabel6";
@@ -2061,7 +2061,7 @@
             this.xrLabel5.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrLabel5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "FormatString(\'{0}{1}\',[unit1],\'\')\n")});
-            this.xrLabel5.Font = new System.Drawing.Font("Helvetica", 6F, System.Drawing.FontStyle.Bold);
+            this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(1.907349E-05F, 78.48F);
             this.xrLabel5.Multiline = true;
             this.xrLabel5.Name = "xrLabel5";
@@ -2111,7 +2111,7 @@
             this.xrLabel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.xrLabel2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
             this.xrLabel2.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.xrLabel2.Font = new System.Drawing.Font("Helvetica", 7F, System.Drawing.FontStyle.Bold);
+            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Helvetica", 7F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 19.62F);
             this.xrLabel2.Multiline = true;
             this.xrLabel2.Name = "xrLabel2";
@@ -2168,14 +2168,14 @@
             this.DrawGrid = false;
             this.DrawWatermark = true;
             this.ExportOptions.Pdf.ImageQuality = DevExpress.XtraPrinting.PdfJpegImageQuality.Low;
-            this.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.Margins = new System.Drawing.Printing.Margins(0, 0, 0, 0);
+            this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
+            this.Margins = new DevExpress.Drawing.DXMargins(0, 0, 0, 0);
             this.PageHeight = 1169;
             this.PageWidth = 827;
-            this.PaperKind = System.Drawing.Printing.PaperKind.A4;
+            this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.A4;
             this.ScriptsSource = "\r\n";
             this.Version = "21.2";
-            this.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.Rpt_LTMD_solar_Back_BeforePrint);
+            this.BeforePrint += new DevExpress.XtraReports.UI.BeforePrintEventHandler(this.Rpt_LTMD_solar_Back_BeforePrint);
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource6)).EndInit();

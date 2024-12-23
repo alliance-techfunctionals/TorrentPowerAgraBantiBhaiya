@@ -95,7 +95,7 @@
             this.xrChart1.BorderColor = System.Drawing.Color.Black;
             this.xrChart1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             xyDiagram1.AxisX.Label.Angle = 270;
-            xyDiagram1.AxisX.Label.Font = new System.Drawing.Font("DIN Pro Regular", 7F);
+            xyDiagram1.AxisX.Label.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 7F);
             xyDiagram1.AxisX.Label.ResolveOverlappingOptions.AllowHide = false;
             xyDiagram1.AxisX.Label.ResolveOverlappingOptions.MinIndent = 0;
             xyDiagram1.AxisX.NumericScaleOptions.AutoGrid = false;
@@ -108,7 +108,7 @@
             xyDiagram1.AxisY.GridLines.LineStyle.DashStyle = DevExpress.XtraCharts.DashStyle.Dash;
             xyDiagram1.AxisY.Thickness = 2;
             xyDiagram1.AxisY.Tickmarks.Thickness = 2;
-            xyDiagram1.AxisY.Title.Font = new System.Drawing.Font("DIN Pro Regular", 6F);
+            xyDiagram1.AxisY.Title.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 6F);
             xyDiagram1.AxisY.Title.Text = "Units (Consumption)";
             xyDiagram1.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
@@ -127,7 +127,7 @@
             series1.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
             sideBySideBarSeriesLabel1.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
             sideBySideBarSeriesLabel1.FillStyle.FillMode = DevExpress.XtraCharts.FillMode.Empty;
-            sideBySideBarSeriesLabel1.Font = new System.Drawing.Font("Tahoma", 7F);
+            sideBySideBarSeriesLabel1.DXFont = new DevExpress.Drawing.DXFont("Tahoma", 7F);
             sideBySideBarSeriesLabel1.LineLength = 0;
             sideBySideBarSeriesLabel1.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
             sideBySideBarSeriesLabel1.ShowForZeroValues = true;
@@ -154,7 +154,7 @@
             this.xrChart2.BorderWidth = 0F;
             xyDiagram2.AxisX.CrosshairAxisLabelOptions.BackColor = System.Drawing.Color.Transparent;
             xyDiagram2.AxisX.Label.Angle = 270;
-            xyDiagram2.AxisX.Label.Font = new System.Drawing.Font("DIN Pro Regular", 7F);
+            xyDiagram2.AxisX.Label.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 7F);
             xyDiagram2.AxisX.Label.ResolveOverlappingOptions.AllowHide = false;
             xyDiagram2.AxisX.Label.ResolveOverlappingOptions.MinIndent = 0;
             xyDiagram2.AxisX.NumericScaleOptions.AutoGrid = false;
@@ -166,10 +166,10 @@
             xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
             xyDiagram2.AxisY.CrosshairAxisLabelOptions.BackColor = System.Drawing.Color.Transparent;
             xyDiagram2.AxisY.GridLines.LineStyle.DashStyle = DevExpress.XtraCharts.DashStyle.Dash;
-            xyDiagram2.AxisY.Label.Font = new System.Drawing.Font("DIN Pro Regular", 7F);
+            xyDiagram2.AxisY.Label.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 7F);
             xyDiagram2.AxisY.Thickness = 2;
             xyDiagram2.AxisY.Tickmarks.Thickness = 2;
-            xyDiagram2.AxisY.Title.Font = new System.Drawing.Font("DIN Pro Regular", 6F);
+            xyDiagram2.AxisY.Title.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 6F);
             xyDiagram2.AxisY.Title.Text = "Recorded Demand (KVA/KW)";
             xyDiagram2.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
             xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
@@ -189,7 +189,7 @@
             series2.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
             sideBySideBarSeriesLabel2.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
             sideBySideBarSeriesLabel2.FillStyle.FillMode = DevExpress.XtraCharts.FillMode.Empty;
-            sideBySideBarSeriesLabel2.Font = new System.Drawing.Font("Tahoma", 7F);
+            sideBySideBarSeriesLabel2.DXFont = new DevExpress.Drawing.DXFont("Tahoma", 7F);
             sideBySideBarSeriesLabel2.LineLength = 0;
             sideBySideBarSeriesLabel2.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
             sideBySideBarSeriesLabel2.ShowForZeroValues = true;
@@ -262,16 +262,16 @@
             this.DataSource = this.bindingSource5;
             this.DrawWatermark = true;
             this.ExportOptions.Pdf.ImageQuality = DevExpress.XtraPrinting.PdfJpegImageQuality.Lowest;
-            this.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.Margins = new System.Drawing.Printing.Margins(0, 0, 0, 0);
+            this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
+            this.Margins = new DevExpress.Drawing.DXMargins(0, 0, 0, 0);
             this.PageHeight = 1169;
             this.PageWidth = 827;
-            this.PaperKind = System.Drawing.Printing.PaperKind.A4;
+            this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.A4;
             this.ScriptsSource = "\r\n";
             this.Version = "20.1";
             this.Watermark.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Zoom;
             this.Watermark.TextTransparency = 0;
-            this.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.Rpt_LT_Print_Back_BeforePrint);
+            this.BeforePrint += new DevExpress.XtraReports.UI.BeforePrintEventHandler(this.Rpt_LT_Print_Back_BeforePrint);
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView1)).EndInit();

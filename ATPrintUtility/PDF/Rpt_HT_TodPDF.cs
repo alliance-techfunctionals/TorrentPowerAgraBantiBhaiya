@@ -18,7 +18,7 @@ namespace AT.Print.PDF
             InitializeComponent();
         }
 
-        private void Rpt_HT_TodPDF_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        private void Rpt_HT_TodPDF_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
             var data = sender as Rpt_HT_TodPDF;
             var op = data.DataSource as List<SingleHTBill>;

@@ -7,7 +7,7 @@
             InitializeComponent();
         }
 
-        private void XtraReport1_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        private void XtraReport1_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
         }
     }

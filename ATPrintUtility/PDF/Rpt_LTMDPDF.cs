@@ -107,7 +107,7 @@ namespace AT.Print
 
         #endregion
 
-        private void Rpt_LTMDPDF_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        private void Rpt_LTMDPDF_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
             var data = sender as Rpt_LTMDPDF;
             var op = data.DataSource as List<SingleLTMDBill>;

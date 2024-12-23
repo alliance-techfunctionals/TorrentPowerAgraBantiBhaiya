@@ -18,7 +18,7 @@ namespace AT.Print
             InitializeComponent();
         }
 
-        private void Rpt_LTMD_TOD_Print_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        private void Rpt_LTMD_TOD_Print_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
             var data = sender as Rpt_LTMD_TOD_Print;
             var op = data.DataSource as List<SingleLTMDBill>;

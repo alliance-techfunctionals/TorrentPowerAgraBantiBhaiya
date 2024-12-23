@@ -18,7 +18,7 @@ namespace AT.Print
             InitializeComponent();
         }
 
-        private void Rpt_LT_Print_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        private void Rpt_LT_Print_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
             var data = sender as Rpt_LT_Print;
             var op = data.DataSource as List<SingleLTBill>;
@@ -919,6 +919,8 @@ namespace AT.Print
                 {
                     BroadcastMessage brdcstMsg = LoadStaticData._BroadcastMessage.FindAll(x => x.ServiceNo.ToUpper().Equals(op[0].L6_SERVDET_SERVNO)).FirstOrDefault();
                     totalMessages++;
+
+
                     XRLabel xrMessageTheftAmount = new XRLabel
                     {
 
@@ -1051,7 +1053,7 @@ namespace AT.Print
 
         #endregion
 
-        private void xrPanel1_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        private void xrPanel1_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
 
 

@@ -12,7 +12,7 @@ namespace AT.Print
             InitializeComponent();
         }
 
-        private void Rpt_LTMD_Back_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        private void Rpt_LTMD_Back_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
             //xrPictureBox3.ImageSource = Properties.Resources.New;
             var Data = this.DataSource as List<SingleLTMDBill>;

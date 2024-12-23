@@ -15,7 +15,7 @@ namespace AT.Print.PDF
 
 
         #region Meter Print
-        private void Rpt_LTMD_solar_Back_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        private void Rpt_LTMD_solar_Back_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
             // var data = sender as Rpt_LTMD_Solar_PDF;
             //var op = data.DataSource as List<SolarBill>;
