@@ -245,8 +245,7 @@ namespace AT.Print
                         pictureWatermarkBackNonTOD.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Clip;
                         pictureWatermarkBackNonTOD.ImageTransparency = 0;
                         pictureWatermarkBackNonTOD.ShowBehind = true;
-                        //pictureWatermark.PageRange = "2,4";
-                        rptsd.Watermark.CopyFrom(pictureWatermarkBackNonTOD);
+                        rpts.Watermark.CopyFrom(pictureWatermarkBackNonTOD);
                         #endregion
 
                         rpts.CreateDocument(false);
@@ -340,7 +339,7 @@ namespace AT.Print
                         pictureWatermarkBackTOD.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Clip;
                         pictureWatermarkBackTOD.ImageTransparency = 0;
                         pictureWatermarkBackTOD.ShowBehind = true;
-                        rptsd.Watermark.CopyFrom(pictureWatermarkBackTOD);
+                        rpts.Watermark.CopyFrom(pictureWatermarkBackTOD);
                         #endregion
 
                         rpts.ShowPrintMarginsWarning = false;
