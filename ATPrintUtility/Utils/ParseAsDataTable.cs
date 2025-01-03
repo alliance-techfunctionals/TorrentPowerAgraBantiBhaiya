@@ -1441,7 +1441,7 @@ namespace AT.Print.Utils
             {
                 ServiceNoLine = path.Split('\n')[5].Split('|')[0].ToString();
             }
-            if ((BillType == "LTMD Solar" || BillType == "HT Solar") && TotalLines != 56)
+            if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && TotalLines != 56)
             {
                 XtraMessageBox.Show("Bill No: " + BillNo + " and Service No: " + ServiceNoLine + " has not 56 rows.");
                 AppFunctions.CloseWaitForm();
@@ -1525,18 +1525,24 @@ namespace AT.Print.Utils
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 1 has " + fields.Length + " columns only.");
                                         return dt;
                                     }
-                                    else if(BillType == "HT Solar" && fields.Length != 7)
+                                    else if (BillType == "HT Solar" && fields.Length != 7)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 1 has " + fields.Length + " columns only.");
                                         return dt;
 
                                     }
+                                    else if (BillType == "LT Solar" && fields.Length != 9)
+                                    {
+                                        AppFunctions.CloseWaitForm();
+                                        XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 1 has " + fields.Length + " columns only.");
+                                        return dt;
+                                    }
                                 }
                                 break;
                             case 2:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 1)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 1)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 2 has " + fields.Length + " columns only.");
@@ -1546,7 +1552,7 @@ namespace AT.Print.Utils
                                 break;
                             case 3:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 1)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 1)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 3 has " + fields.Length + " columns only.");
@@ -1556,7 +1562,7 @@ namespace AT.Print.Utils
                                 break;
                             case 4:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 1)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 1)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 4 has " + fields.Length + " columns only.");
@@ -1566,7 +1572,7 @@ namespace AT.Print.Utils
                                 break;
                             case 5:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 1)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 1)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 5 has " + fields.Length + " columns only.");
@@ -1582,11 +1588,17 @@ namespace AT.Print.Utils
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 6 has " + fields.Length + " columns only.");
                                         return dt;
                                     }
+                                    else if ((BillType == "LT Solar") && fields.Length != 12)
+                                    {
+                                        AppFunctions.CloseWaitForm();
+                                        XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 6 has " + fields.Length + " columns only.");
+                                        return dt;
+                                    }
                                 }
                                 break;
                             case 7:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 6)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 6)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 7 has " + fields.Length + " columns only.");
@@ -1602,7 +1614,7 @@ namespace AT.Print.Utils
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 8 has " + fields.Length + " columns only.");
                                         return dt;
                                     }
-                                    else if (BillType == "HT Solar" && fields.Length != 16)
+                                    else if ((BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 16)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 8 has " + fields.Length + " columns only.");
@@ -1612,7 +1624,7 @@ namespace AT.Print.Utils
                                 break;
                             case 9:
                                 {
-                                    if (BillType == "LTMD Solar" && fields.Length != 8)
+                                    if ((BillType == "LTMD Solar" ||BillType == "LT Solar") && fields.Length != 8)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 9 has " + fields.Length + " columns only.");
@@ -1628,7 +1640,7 @@ namespace AT.Print.Utils
                                 break;
                             case 10:
                                 {
-                                    if (BillType == "LTMD Solar" && fields.Length != 9)
+                                    if ((BillType == "LTMD Solar" ||BillType == "LT Solar") && fields.Length != 9)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 10 has " + fields.Length + " columns only.");
@@ -1644,7 +1656,7 @@ namespace AT.Print.Utils
                                 break;
                             case 11:
                                 {
-                                    if (BillType == "LTMD Solar" && fields.Length != 14)
+                                    if ((BillType == "LTMD Solar" ||BillType == "LT Solar")&& fields.Length != 14)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 11 has " + fields.Length + " columns only.");
@@ -1660,7 +1672,7 @@ namespace AT.Print.Utils
                                 break;
                             case 12:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "LTMD") && fields.Length != 3)
+                                    if ((BillType == "LTMD Solar" || BillType == "LT Solar") && fields.Length != 3)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 12 has " + fields.Length + " columns only.");
@@ -1676,7 +1688,7 @@ namespace AT.Print.Utils
                                 break;
                             case 13:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "LTMD") && fields.Length != 3)
+                                    if ((BillType == "LTMD Solar" || BillType == "LT Solar") && fields.Length != 3)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 13 has " + fields.Length + " columns only.");
@@ -1692,7 +1704,7 @@ namespace AT.Print.Utils
                                 break;
                             case 14:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "LTMD") && fields.Length != 3)
+                                    if ((BillType == "LTMD Solar" || BillType == "LT Solar") && fields.Length != 3)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 14 has " + fields.Length + " columns only.");
@@ -1708,7 +1720,7 @@ namespace AT.Print.Utils
                                 break;
                             case 15:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 4)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 4)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 15 has " + fields.Length + " columns only.");
@@ -1718,7 +1730,7 @@ namespace AT.Print.Utils
                                 break;
                             case 16:
                                 {
-                                    if (BillType == "LTMD Solar" && fields.Length != 4)
+                                    if ((BillType == "LTMD Solar" || BillType == "LT Solar") && fields.Length != 4)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 16 has " + fields.Length + " columns only.");
@@ -1734,7 +1746,7 @@ namespace AT.Print.Utils
                                 break;
                             case 17:
                                 {
-                                    if (BillType == "LTMD Solar" && fields.Length != 3)
+                                    if ((BillType == "LTMD Solar" || BillType == "LT Solar") && fields.Length != 3)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 17 has " + fields.Length + " columns only.");
@@ -1750,7 +1762,7 @@ namespace AT.Print.Utils
                                 break;
                             case 18:
                                 {
-                                    if (BillType == "LTMD Solar" && fields.Length != 3)
+                                    if ((BillType == "LTMD Solar"  || BillType == "LT Solar") && fields.Length != 3)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 18 has " + fields.Length + " columns only.");
@@ -1766,7 +1778,7 @@ namespace AT.Print.Utils
                                 break;
                             case 19:
                                 {
-                                    if (BillType == "LTMD Solar" && fields.Length != 3)
+                                    if ((BillType == "LTMD Solar" || BillType == "LT Solar") && fields.Length != 3)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 19 has " + fields.Length + " columns only.");
@@ -1782,7 +1794,7 @@ namespace AT.Print.Utils
                                 break;
                             case 20:
                                 {
-                                    if (BillType == "LTMD Solar" && fields.Length != 3)
+                                    if ((BillType == "LTMD Solar" || BillType == "LT Solar") && fields.Length != 3)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 20 has " + fields.Length + " columns only.");
@@ -1798,7 +1810,7 @@ namespace AT.Print.Utils
                                 break;
                             case 21:
                                 {
-                                    if (BillType == "LTMD Solar" && fields.Length != 14)
+                                    if ((BillType == "LTMD Solar" || BillType == "LT Solar" )&& fields.Length != 14)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 21 has " + fields.Length + " columns only.");
@@ -1820,7 +1832,13 @@ namespace AT.Print.Utils
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 22 has " + fields.Length + " columns only.");
                                         return dt;
                                     }
-                                    if (BillType == "HT Solar" && fields.Length != 5)
+                                    else if (BillType == "HT Solar" && fields.Length != 5)
+                                    {
+                                        AppFunctions.CloseWaitForm();
+                                        XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 22 has " + fields.Length + " columns only.");
+                                        return dt;
+                                    }
+                                    else if (BillType == "LT Solar" && fields.Length != 1)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 22 has " + fields.Length + " columns only.");
@@ -1836,7 +1854,13 @@ namespace AT.Print.Utils
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 23 has " + fields.Length + " columns only.");
                                         return dt;
                                     }
-                                    if (BillType == "HT Solar" && fields.Length != 5)
+                                    else if (BillType == "HT Solar" && fields.Length != 5)
+                                    {
+                                        AppFunctions.CloseWaitForm();
+                                        XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 23 has " + fields.Length + " columns only.");
+                                        return dt;
+                                    }
+                                    else if (BillType == "LT Solar" && fields.Length != 1)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 23 has " + fields.Length + " columns only.");
@@ -1852,7 +1876,13 @@ namespace AT.Print.Utils
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 24 has " + fields.Length + " columns only.");
                                         return dt;
                                     }
-                                    if (BillType == "HT Solar" && fields.Length != 14)
+                                    else if (BillType == "HT Solar" && fields.Length != 14)
+                                    {
+                                        AppFunctions.CloseWaitForm();
+                                        XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 24 has " + fields.Length + " columns only.");
+                                        return dt;
+                                    }
+                                    else if (BillType == "LT Solar" && fields.Length != 1)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 24 has " + fields.Length + " columns only.");
@@ -1868,7 +1898,13 @@ namespace AT.Print.Utils
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 25 has " + fields.Length + " columns only.");
                                         return dt;
                                     }
-                                    if (BillType == "HT Solar" && fields.Length != 14)
+                                    else if (BillType == "HT Solar" && fields.Length != 14)
+                                    {
+                                        AppFunctions.CloseWaitForm();
+                                        XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 25 has " + fields.Length + " columns only.");
+                                        return dt;
+                                    }
+                                    else if (BillType == "LT Solar" && fields.Length != 1)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 25 has " + fields.Length + " columns only.");
@@ -1878,7 +1914,7 @@ namespace AT.Print.Utils
                                 break;
                             case 26:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 1)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 1)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 26 has " + fields.Length + " columns only.");
@@ -1888,7 +1924,7 @@ namespace AT.Print.Utils
                                 break;
                             case 27:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 1)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 1)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 27 has " + fields.Length + " columns only.");
@@ -1898,7 +1934,7 @@ namespace AT.Print.Utils
                                 break;
                             case 28:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 1)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 1)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 28 has " + fields.Length + " columns only.");
@@ -1908,7 +1944,7 @@ namespace AT.Print.Utils
                                 break;
                             case 29:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 1)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 1)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 29 has " + fields.Length + " columns only.");
@@ -1918,7 +1954,7 @@ namespace AT.Print.Utils
                                 break;
                             case 30:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 1)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 1)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 30 has " + fields.Length + " columns only.");
@@ -1928,7 +1964,7 @@ namespace AT.Print.Utils
                                 break;
                             case 31:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 1)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 1)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 31 has " + fields.Length + " columns only.");
@@ -1938,7 +1974,7 @@ namespace AT.Print.Utils
                                 break;
                             case 32:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 1)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 1)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 32 has " + fields.Length + " columns only.");
@@ -1948,7 +1984,7 @@ namespace AT.Print.Utils
                                 break;
                             case 33:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 16)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 16)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 33 has " + fields.Length + " columns only.");
@@ -1958,7 +1994,7 @@ namespace AT.Print.Utils
                                 break;
                             case 34:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 5)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 5)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 34 has " + fields.Length + " columns only.");
@@ -1968,7 +2004,7 @@ namespace AT.Print.Utils
                                 break;
                             case 35:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 5)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 5)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 35 has " + fields.Length + " columns only.");
@@ -1978,7 +2014,7 @@ namespace AT.Print.Utils
                                 break;
                             case 36:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 5)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 5)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 36 has " + fields.Length + " columns only.");
@@ -1988,7 +2024,7 @@ namespace AT.Print.Utils
                                 break;
                             case 37:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 1)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 1)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 37 has " + fields.Length + " columns only.");
@@ -1998,7 +2034,7 @@ namespace AT.Print.Utils
                                 break;
                             case 38:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 4)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 4)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 38 has " + fields.Length + " columns only.");
@@ -2008,7 +2044,7 @@ namespace AT.Print.Utils
                                 break;
                             case 39:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 4)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 4)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 39 has " + fields.Length + " columns only.");
@@ -2018,7 +2054,7 @@ namespace AT.Print.Utils
                                 break;
                             case 40:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 4)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 4)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 40 has " + fields.Length + " columns only.");
@@ -2028,7 +2064,7 @@ namespace AT.Print.Utils
                                 break;
                             case 41:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 4)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 4)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 41 has " + fields.Length + " columns only.");
@@ -2038,7 +2074,7 @@ namespace AT.Print.Utils
                                 break;
                             case 42:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 9)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 9)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 42 has " + fields.Length + " columns only.");
@@ -2048,7 +2084,7 @@ namespace AT.Print.Utils
                                 break;
                             case 43:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 9)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 9)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 43 has " + fields.Length + " columns only.");
@@ -2058,7 +2094,7 @@ namespace AT.Print.Utils
                                 break;
                             case 44:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 5)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 5)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 44 has " + fields.Length + " columns only.");
@@ -2068,7 +2104,7 @@ namespace AT.Print.Utils
                                 break;
                             case 45:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 5)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 5)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 45 has " + fields.Length + " columns only.");
@@ -2078,7 +2114,7 @@ namespace AT.Print.Utils
                                 break;
                             case 46:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 15)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 15)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 46 has " + fields.Length + " columns only.");
@@ -2088,7 +2124,7 @@ namespace AT.Print.Utils
                                 break;
                             case 47:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 15)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 15)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 47 has " + fields.Length + " columns only.");
@@ -2098,7 +2134,7 @@ namespace AT.Print.Utils
                                 break;
                             case 48:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 15)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 15)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 48 has " + fields.Length + " columns only.");
@@ -2108,7 +2144,7 @@ namespace AT.Print.Utils
                                 break;
                             case 49:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 17)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 17)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 49 has " + fields.Length + " columns only.");
@@ -2118,7 +2154,7 @@ namespace AT.Print.Utils
                                 break;
                             case 50:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 5)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 5)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 50 has " + fields.Length + " columns only.");
@@ -2128,7 +2164,7 @@ namespace AT.Print.Utils
                                 break;
                             case 51:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 5)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 5)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 51 has " + fields.Length + " columns only.");
@@ -2138,7 +2174,7 @@ namespace AT.Print.Utils
                                 break;
                             case 52:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 5)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 5)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 52 has " + fields.Length + " columns only.");
@@ -2148,7 +2184,7 @@ namespace AT.Print.Utils
                                 break;
                             case 53:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 5)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 5)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 53 has " + fields.Length + " columns only.");
@@ -2158,7 +2194,7 @@ namespace AT.Print.Utils
                                 break;
                             case 54:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 6)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 6)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 54 has " + fields.Length + " columns only.");
@@ -2168,7 +2204,7 @@ namespace AT.Print.Utils
                                 break;
                             case 55:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 15)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 15)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 55 has " + fields.Length + " columns only.");
@@ -2178,7 +2214,7 @@ namespace AT.Print.Utils
                                 break;
                             case 56:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar") && fields.Length != 15)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType =="LT Solar") && fields.Length != 15)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + "  and row 56 has " + fields.Length + " columns only.");

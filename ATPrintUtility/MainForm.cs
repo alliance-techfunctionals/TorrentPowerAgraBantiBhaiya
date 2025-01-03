@@ -57,6 +57,14 @@ namespace ATPrintUtility
             AppFunctions.CloseWaitForm();
 
         }
+        private void bbiLTSolar_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            AppFunctions.ShowWaitForm("Opening Print LT Solar Page");
+            var createEditControl = new Print_Solar_LT { Name = "Print_Solar_LT" };
+            AppFunctions.OpenNewPanel(createEditControl, DockingStyle.Float, "Print LT Solar", "Print LT Solar", true, true);
+            AppFunctions.CloseWaitForm();
+        }
+
 
 
         public DockManager GetDockManager()
@@ -102,6 +110,5 @@ namespace ATPrintUtility
             AppFunctions.CloseWaitForm();
         }
 
-        
     }
 }
