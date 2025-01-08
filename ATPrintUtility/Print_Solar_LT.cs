@@ -340,11 +340,9 @@ namespace AT.Print
             sht.L8_min_charge = dtSolarBill.Rows[7][4].ToString();
             sht.L8_SERVDET_TOTDB_BDT_OTHER = dtSolarBill.Rows[7][5].ToString();
             sht.L8_power_factor_adj = dtSolarBill.Rows[7][6].ToString();
-            sht.L8_TOD_Charges = dtSolarBill.Rows[7][7].ToString();
-            sht.L8_TOD_Charges = sht.L8_TOD_Charges.Contains("-") ? ("-" + sht.L8_TOD_Charges.Replace("-", "")) : sht.L8_TOD_Charges;
-            sht.L8_Regulatory_Charge1 = dtSolarBill.Rows[7][8].ToString();
-            sht.L8_Regulatory_Charge2 = dtSolarBill.Rows[7][9].ToString();
-            sht.L8_Rebate_incurred_of_current_month = dtSolarBill.Rows[7][10].ToString();
+            sht.L8_Regulatory_Charge1 = dtSolarBill.Rows[7][7].ToString();
+            sht.L8_Regulatory_Charge2 = dtSolarBill.Rows[7][8].ToString();
+            sht.L8_Rebate_incurred_of_current_month = dtSolarBill.Rows[7][9].ToString();
             sht.L8_amount_payable_before_due_date = dtSolarBill.Rows[7][10].ToString().Trim('�');
             sht.L8_amount_payable_before_due_date = string.IsNullOrEmpty(sht.L8_amount_payable_before_due_date) ? "0" : Math.Round(Convert.ToDecimal(sht.L8_amount_payable_before_due_date) + (decimal).49, 0, MidpointRounding.AwayFromZero).ToString();
             sht.L8_amount_payable_before_due_date = sht.L8_amount_payable_before_due_date.Contains("CR") ? ("-" + sht.L8_amount_payable_before_due_date.Replace("CR", "")) : (sht.L8_amount_payable_before_due_date.Contains("-") ? ("-" + sht.L8_amount_payable_before_due_date.Replace("-", "")) : sht.L8_amount_payable_before_due_date);

@@ -490,11 +490,8 @@ namespace AT.Print.PDF
             bd_EnergyCharge.TopF = bd_ExcessDemandCharges.BottomF;
             bd_EnergyChargeValues.TopF = bd_ExcessDemandCharges.BottomF;
 
-            bd_TODCharges.TopF = bd_EnergyCharge.BottomF;
-            bd_TODChargesValues.TopF = bd_EnergyCharge.BottomF;
-
-            bd_ElectricityDuty.TopF = bd_TODCharges.BottomF;
-            bd_ElectricityDutyValues.TopF = bd_TODCharges.BottomF;
+            bd_ElectricityDuty.TopF =  bd_EnergyCharge.BottomF;
+            bd_ElectricityDutyValues.TopF = bd_EnergyCharge.BottomF;
 
             bd_RlSC1.TopF = bd_ElectricityDuty.BottomF;
             bd_RlSC1Hindi.TopF = bd_ElectricityDuty.BottomF;
