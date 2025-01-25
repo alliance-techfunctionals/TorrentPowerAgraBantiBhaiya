@@ -273,17 +273,17 @@ namespace AT.Print.PDF
                 xrLabel2.Text = op[0].L12_MTRSNO_METER_2_IF_AVAILABLE;//older
                 xrLabel18.Text = op[0].L12_MTRSNO_METER1;
 
-                if (string.IsNullOrEmpty(op[0].L6_Kvah_indicator) || op[0].L6_Kvah_indicator == "0.00" )
-                {    //mtr1
+                //if (string.IsNullOrEmpty(op[0].L6_Kvah_indicator) || op[0].L6_Kvah_indicator == "0.00")
+                //{    //mtr1
                     imp11.Text = op[0].L14_KVA_PASTREAD;
-                    exp11.Text = op[0].L33_Exp_Past_KW_UNITS;
+                    exp11.Text = op[0].L33_Exp_Past_KW_UNITS; //l33 14 column
                     imp21.Text = op[0].L14_KWH_PASTREAD;
-                    exp21.Text = op[0].L33_Exp_Past_KWH_UNITS;
+                    exp21.Text = op[0].L33_Exp_Past_KWH_UNITS;  //l33 seciond olumn
 
                     imp12.Text = op[0].L13_KVA_PRESREAD;
-                    exp12.Text = op[0].L33_Exp_Present_KW_UNITS;
+                    exp12.Text = op[0].L33_Exp_Present_KW_UNITS;  //l33 15
                     imp22.Text = op[0].L13_KWH_PRESREAD;
-                    exp22.Text = op[0].L33_Exp_Present_KWH_UNITS;
+                    exp22.Text = op[0].L33_Exp_Present_KWH_UNITS;  //l33 3 column
 
                     imp13.Text = op[0].L15_Multiplying_factor_KVA;
                     exp13.Text = op[0].L15_Multiplying_factor_KVA;
@@ -291,14 +291,14 @@ namespace AT.Print.PDF
                     exp23.Text = op[0].L15_Multiplying_factor_KWH;
 
                     imp14.Text = op[0].L16_KVA_UNITS;
-                    exp14.Text = op[0].L33_Exp_KW_UNITS;
+                    exp14.Text = op[0].L33_Exp_KW_UNITS;  //l22 13 colmn
                     imp24.Text = op[0].L16_KWH_UNITS;
-                    exp24.Text = op[0].L33_Exp_KWH_UNITS;
+                    exp24.Text = op[0].L33_Exp_KWH_UNITS;  //l33 1 column
 
-                    kva11.Text = op[0].L33_Exp_CURRENT_NET_EXPORT_KWH_UNITS;
-                    kva12.Text = op[0].L46_Previous_CREDIT_Units_MAIN_KWH;
-                    kva13.Text = op[0].L46_Net_Billed_Units_MAIN_KWH;
-                    kva14.Text = op[0].L46_Carry_Forward_Units_MAIN_KWH;
+                    kva11.Text = op[0].L33_Exp_CURRENT_NET_EXPORT_KWH_UNITS;  //l33 12 column
+                    kva12.Text = op[0].L46_Previous_CREDIT_Units_MAIN_KWH;  // l46 8 column
+                    kva13.Text = op[0].L46_Net_Billed_Units_MAIN_KWH;   // net bill cons = l46 9 column
+                    kva14.Text = op[0].L46_Carry_Forward_Units_MAIN_KWH;    // l46 14 column
 
                     //mtr2
                     MTR2_PR1.Text = op[0].L18_KVA_PASTREAD;
@@ -323,65 +323,65 @@ namespace AT.Print.PDF
 
                     kvah21.Text = op[0].L49_Exp_CURRENT_NET_EXPORT_KWH_UNITS;
                    
-                }
+                //}
 
-                if (!string.IsNullOrEmpty(op[0].L6_Kvah_indicator) || op[0].L6_Kvah_indicator == "1")
-                {
-                    //MTR1
-                    imp11.Text = op[0].L14_KVA_PASTREAD;
-                    exp11.Text = op[0].L33_Exp_Past_KVA_UNITS;
-                    imp21.Text = op[0].L14_KWH_PASTREAD;
-                    exp21.Text = op[0].L33_Exp_Past_KVAH_UNITS;
+                //if (!string.IsNullOrEmpty(op[0].L6_Kvah_indicator) || op[0].L6_Kvah_indicator == "1")
+                //{
+                //    //MTR1
+                //    imp11.Text = op[0].L14_KVA_PASTREAD;
+                //    exp11.Text = op[0].L33_Exp_Past_KVA_UNITS;
+                //    imp21.Text = op[0].L14_KWH_PASTREAD;
+                //    exp21.Text = op[0].L33_Exp_Past_KVAH_UNITS;
 
-                    imp12.Text = op[0].L13_KVA_PRESREAD;
-                    exp12.Text = op[0].L33_Exp_Present_KVA_UNITS;
-                    imp22.Text = op[0].L13_KWH_PRESREAD;
-                    exp22.Text = op[0].L33_Exp_Present_KVAH_UNITS;
+                //    imp12.Text = op[0].L13_KVA_PRESREAD;
+                //    exp12.Text = op[0].L33_Exp_Present_KVA_UNITS;
+                //    imp22.Text = op[0].L13_KWH_PRESREAD;
+                //    exp22.Text = op[0].L33_Exp_Present_KVAH_UNITS;
 
-                    imp13.Text = op[0].L15_Multiplying_factor_KVA;
-                    exp13.Text = op[0].L15_Multiplying_factor_KVA;
-                    imp23.Text = op[0].L15_Multiplying_factor_KWH;
-                    exp23.Text = op[0].L15_Multiplying_factor_KWH;
+                //    imp13.Text = op[0].L15_Multiplying_factor_KVA;
+                //    exp13.Text = op[0].L15_Multiplying_factor_KVA;
+                //    imp23.Text = op[0].L15_Multiplying_factor_KWH;
+                //    exp23.Text = op[0].L15_Multiplying_factor_KWH;
 
-                    imp14.Text = op[0].L16_KVA_UNITS;
-                    exp14.Text = op[0].L33_Exp_KVA_UNITS;
-                    imp24.Text = op[0].L16_KWH_UNITS;
-                    exp24.Text = op[0].L33_Exp_KVAH_UNITS;
+                //    imp14.Text = op[0].L16_KVA_UNITS;
+                //    exp14.Text = op[0].L33_Exp_KVA_UNITS;
+                //    imp24.Text = op[0].L16_KWH_UNITS;
+                //    exp24.Text = op[0].L33_Exp_KVAH_UNITS;
 
-                    kva11.Text = op[0].L33_Exp_CURRENT_NET_EXPORT_KVAH_UNITS;
-                    kva12.Text = op[0].L46_Previous_CREDIT_Units_MAIN_KVAH;
-                    kva13.Text = op[0].L46_Net_Billed_Units_MAIN;
-                    kva14.Text = op[0].L46_Carry_Forward_Units_MAIN_KVAH;
+                //    kva11.Text = op[0].L33_Exp_CURRENT_NET_EXPORT_KVAH_UNITS;
+                //    kva12.Text = op[0].L46_Previous_CREDIT_Units_MAIN_KVAH; 
+                //    kva13.Text = op[0].L46_Net_Billed_Units_MAIN;
+                //    kva14.Text = op[0].L46_Carry_Forward_Units_MAIN_KVAH;
 
-                    //MTR2
-                    MTR2_PR1.Text = op[0].L18_KVA_PASTREAD;
-                    MTR2_PR2.Text = op[0].L49_Exp_Past_KVA_UNITS;
-                    MTR2_PR3.Text = op[0].L18_KWH_PASTREAD;
-                    MTR2_PR4.Text = op[0].L49_Exp_Past_KVAH_UNITS;
+                //    //MTR2
+                //    MTR2_PR1.Text = op[0].L18_KVA_PASTREAD;
+                //    MTR2_PR2.Text = op[0].L49_Exp_Past_KVA_UNITS;
+                //    MTR2_PR3.Text = op[0].L18_KWH_PASTREAD;
+                //    MTR2_PR4.Text = op[0].L49_Exp_Past_KVAH_UNITS;
 
-                    MTR2_CR1.Text = op[0].L17_KVA_PRESREAD;
-                    MTR2_CR2.Text = op[0].L49_Exp_Present_KVA_UNITS;
-                    MTR2_CR3.Text = op[0].L17_KWH_PRESREAD;
-                    MTR2_CR4.Text = op[0].L49_Exp_Present_KVAH_UNITS;
+                //    MTR2_CR1.Text = op[0].L17_KVA_PRESREAD;
+                //    MTR2_CR2.Text = op[0].L49_Exp_Present_KVA_UNITS;
+                //    MTR2_CR3.Text = op[0].L17_KWH_PRESREAD;
+                //    MTR2_CR4.Text = op[0].L49_Exp_Present_KVAH_UNITS;
 
-                    MTR2_MF1.Text = op[0].L19_Multiplying_factor_KW;
-                    MTR2_MF2.Text = op[0].L19_Multiplying_factor_KW;
-                    MTR2_MF3.Text = op[0].L19_Multiplying_factor_KWH;
-                    MTR2_MF4.Text = op[0].L19_Multiplying_factor_KWH;
+                //    MTR2_MF1.Text = op[0].L19_Multiplying_factor_KW;
+                //    MTR2_MF2.Text = op[0].L19_Multiplying_factor_KW;
+                //    MTR2_MF3.Text = op[0].L19_Multiplying_factor_KWH;
+                //    MTR2_MF4.Text = op[0].L19_Multiplying_factor_KWH;
 
-                    MTR2_CU1.Text = op[0].L20_KVA_UNITS;
-                    MTR2_CU2.Text = op[0].L49_Exp_KVA_UNITS;
-                    MTR2_CU3.Text = op[0].L20_KWH_UNITS;
-                    MTR2_CU4.Text = op[0].L49_Exp_KVAH_UNITS;
+                //    MTR2_CU1.Text = op[0].L20_KVA_UNITS;
+                //    MTR2_CU2.Text = op[0].L49_Exp_KVA_UNITS;
+                //    MTR2_CU3.Text = op[0].L20_KWH_UNITS;
+                //    MTR2_CU4.Text = op[0].L49_Exp_KVAH_UNITS;
 
-                    kvah21.Text = op[0].L49_Exp_CURRENT_NET_EXPORT_KVAH_UNITS;
-                }
+                //    kvah21.Text = op[0].L49_Exp_CURRENT_NET_EXPORT_KVAH_UNITS;
+                //}
 
 
             }
             else
             {
-                if (string.IsNullOrEmpty(op[0].L6_Kvah_indicator) || op[0].L6_Kvah_indicator == "0.00")
+                //if (string.IsNullOrEmpty(op[0].L6_Kvah_indicator) || op[0].L6_Kvah_indicator == "0.00")
                 {
                     xrLabel18.Text = op[0].L12_MTRSNO_METER1;
                     KW_HEAD2.Visible = false;
@@ -416,41 +416,41 @@ namespace AT.Print.PDF
                     kva13.Text = op[0].L46_Net_Billed_Units_MAIN_KWH;
                     kva14.Text = op[0].L46_Carry_Forward_Units_MAIN_KWH;
                 }
-                if (!string.IsNullOrEmpty(op[0].L6_Kvah_indicator) || op[0].L6_Kvah_indicator == "1")
-                {
-                    xrLabel18.Text = op[0].L12_MTRSNO_METER1;
-                    KW_HEAD2.Visible = false;
-                    KWH_HEAD2.Visible = false;
-                    MTR2_IMP1.Visible = false;
-                    MTR2_IMP2.Visible = false;
-                    MTR2_EXP1.Visible = false;
-                    MTR2_EXP2.Visible = false;
-                    //Newer
-                    imp11.Text = op[0].L14_KVA_PASTREAD;
-                    exp11.Text = op[0].L33_Exp_Past_KVA_UNITS;
-                    imp21.Text = op[0].L14_KWH_PASTREAD;
-                    exp21.Text = op[0].L33_Exp_Past_KVAH_UNITS;
+                //if (!string.IsNullOrEmpty(op[0].L6_Kvah_indicator) || op[0].L6_Kvah_indicator == "1")
+                //{
+                //    xrLabel18.Text = op[0].L12_MTRSNO_METER1;
+                //    KW_HEAD2.Visible = false;
+                //    KWH_HEAD2.Visible = false;
+                //    MTR2_IMP1.Visible = false;
+                //    MTR2_IMP2.Visible = false;
+                //    MTR2_EXP1.Visible = false;
+                //    MTR2_EXP2.Visible = false;
+                //    //Newer
+                //    imp11.Text = op[0].L14_KVA_PASTREAD;
+                //    exp11.Text = op[0].L33_Exp_Past_KVA_UNITS;
+                //    imp21.Text = op[0].L14_KWH_PASTREAD;
+                //    exp21.Text = op[0].L33_Exp_Past_KVAH_UNITS;
 
-                    imp12.Text = op[0].L13_KVA_PRESREAD;
-                    exp12.Text = op[0].L33_Exp_Present_KVA_UNITS;
-                    imp22.Text = op[0].L13_KWH_PRESREAD;
-                    exp22.Text = op[0].L33_Exp_Present_KVAH_UNITS;
+                //    imp12.Text = op[0].L13_KVA_PRESREAD;
+                //    exp12.Text = op[0].L33_Exp_Present_KVA_UNITS;
+                //    imp22.Text = op[0].L13_KWH_PRESREAD;
+                //    exp22.Text = op[0].L33_Exp_Present_KVAH_UNITS;
 
-                    imp13.Text = op[0].L15_Multiplying_factor_KVA;
-                    exp13.Text = op[0].L15_Multiplying_factor_KVA;
-                    imp23.Text = op[0].L15_Multiplying_factor_KWH;
-                    exp23.Text = op[0].L15_Multiplying_factor_KWH;
+                //    imp13.Text = op[0].L15_Multiplying_factor_KVA;
+                //    exp13.Text = op[0].L15_Multiplying_factor_KVA;
+                //    imp23.Text = op[0].L15_Multiplying_factor_KWH;
+                //    exp23.Text = op[0].L15_Multiplying_factor_KWH;
 
-                    imp14.Text = op[0].L16_KVA_UNITS;
-                    exp14.Text = op[0].L33_Exp_KVA_UNITS;
-                    imp24.Text = op[0].L16_KWH_UNITS;
-                    exp24.Text = op[0].L33_Exp_KVAH_UNITS;
+                //    imp14.Text = op[0].L16_KVA_UNITS;
+                //    exp14.Text = op[0].L33_Exp_KVA_UNITS;
+                //    imp24.Text = op[0].L16_KWH_UNITS;
+                //    exp24.Text = op[0].L33_Exp_KVAH_UNITS;
 
-                    kva11.Text = op[0].L33_Exp_CURRENT_NET_EXPORT_KVAH_UNITS;
-                    kva12.Text = op[0].L46_Previous_CREDIT_Units_MAIN_KVAH;
-                    kva13.Text = op[0].L46_Net_Billed_Units_MAIN;
-                    kva14.Text = op[0].L46_Carry_Forward_Units_MAIN_KVAH;
-                }
+                //    kva11.Text = op[0].L33_Exp_CURRENT_NET_EXPORT_KVAH_UNITS;
+                //    kva12.Text = op[0].L46_Previous_CREDIT_Units_MAIN_KVAH;
+                //    kva13.Text = op[0].L46_Net_Billed_Units_MAIN;
+                //    kva14.Text = op[0].L46_Carry_Forward_Units_MAIN_KVAH;
+                //}
 
             }
             #endregion
