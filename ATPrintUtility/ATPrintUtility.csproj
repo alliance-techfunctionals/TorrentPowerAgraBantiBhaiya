@@ -314,6 +314,18 @@
     <Compile Include="Print\Rpt_HT_TOD_Print.Designer.cs">
       <DependentUpon>Rpt_HT_TOD_Print.cs</DependentUpon>
     </Compile>
+    <Compile Include="Print\RptLTSolatPrint.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\RptLTSolatPrint.Designer.cs">
+      <DependentUpon>RptLTSolatPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print\RptLTSolarPrintBack.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Print\RptLTSolarPrintBack.Designer.cs">
+      <DependentUpon>RptLTSolarPrintBack.cs</DependentUpon>
+    </Compile>
     <Compile Include="Print\Rpt_LTMD_Solar_Print_Back.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -554,6 +566,13 @@
     <EmbeddedResource Include="Print\Rpt_HT_TOD_Print.resx">
       <DependentUpon>Rpt_HT_TOD_Print.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\RptLTSolatPrint.resx">
+      <DependentUpon>RptLTSolatPrint.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print\RptLTSolarPrintBack.resx">
+      <DependentUpon>RptLTSolarPrintBack.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Print\Rpt_LTMD_Solar_Print_Back.resx">
       <DependentUpon>Rpt_LTMD_Solar_Print_Back.cs</DependentUpon>

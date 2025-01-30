@@ -4,6 +4,7 @@ using DevExpress.XtraReports.UI;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
@@ -48,50 +49,41 @@ namespace AT.Print
 
         private void SbPrintBill_Click(object sender, EventArgs e)
         {
-            var sbs = sender as SimpleButton;
-            if (sbs.Name == "sbPrintBill")
+            using (OpenFileDialog ofd = new OpenFileDialog())
             {
-                XtraMessageBox.Show("We are Wokring on it: " ,Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            }
-            else
-            {
-                using (OpenFileDialog ofd = new OpenFileDialog())
+                ofd.Title = "Select bill text(*.txt) file ";
+                ofd.Multiselect = false;
+                ofd.Filter = "txt Files|*.txt";
+                if (ofd.ShowDialog() == DialogResult.OK)
                 {
+                    textFileName = ofd.SafeFileName.ToUpper().Replace(".TXT", "");
 
-                    ofd.Title = "Select bill text(*.txt) file ";
-                    ofd.Multiselect = false;
-                    ofd.Filter = "txt Files|*.txt";
-                    if (ofd.ShowDialog() == DialogResult.OK)
+                    string contents = File.ReadAllText(ofd.FileName);
+                    if (contents.StartsWith("LT"))
                     {
-                        textFileName = ofd.SafeFileName.ToUpper().Replace(".TXT", "");
-
-                        string contents = File.ReadAllText(ofd.FileName);
-                        if (contents.StartsWith("LT"))
+                        SolarBill = contents.Split(new String[] { "LT " }, StringSplitOptions.RemoveEmptyEntries);
+                        if (!select_mVImg())
                         {
-                            SolarBill = contents.Split(new String[] { "LT" }, StringSplitOptions.RemoveEmptyEntries);
-                            if (!select_mVImg())
-                            {
-                                AppFunctions.CloseWaitForm();
-                                return;
-                            }
-                            XtraMessageBox.Show("Total Bills in this file: " + SolarBill.Length.ToString(), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            var sb = sender as SimpleButton;
-                            if (ValidatetxtFile(SolarBill))
-                            {
-                                StartPrinting_LT_Solar_Bills(SolarBill, sb.Name);
-                            }
-                            else
-                            {
-                                AppFunctions.CloseWaitForm();
-                                return;
-                            }
+                            AppFunctions.CloseWaitForm();
+                            return;
+                        }
+                        XtraMessageBox.Show("Total Bills in this file: " + SolarBill.Length.ToString(), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        var sb = sender as SimpleButton;
+                        if (ValidatetxtFile(SolarBill))
+                        {
+                            StartPrinting_LT_Solar_Bills(SolarBill, sb.Name);
                         }
                         else
                         {
-                            XtraMessageBox.Show("It seeems that you have chosen a wrong file,\n try again and pick correct file!!", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            AppFunctions.CloseWaitForm();
                             return;
                         }
+                    }
+                    else
+                    {
+                        XtraMessageBox.Show("It seeems that you have chosen a wrong file,\n try again and pick correct file!!", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
                     }
                 }
             }
@@ -195,33 +187,33 @@ namespace AT.Print
                     }
                     else
                     {
-                        //PrinterSettings ps = new PrinterSettings() { PrinterName = cbDefaultPrinter.Text };
-                        //using (Graphics g = ps.CreateMeasurementGraphics(ps.DefaultPageSettings))
-                        //{
-                        //    Margins MinMargins = DevExpress.XtraPrinting.Native.DeviceCaps.GetMinMargins(g);
-                        //    Console.WriteLine("Minimum Margins for " + ps.PrinterName + ": " + MinMargins.ToString());
-                        //}
-                        //AT.Print.Rpt_LT_Solar_Print_Back rptb = new Rpt_LT_Solar_Print_Back
-                        //{
-                        //    DataSource = lstformattedbills,
-                        //};
-                        //AT.Print.Rpt_LT_Solar_Print rpta = new Rpt_LT_Solar_Print(rptb)
-                        //{
-                        //    DataSource = lstformattedbills,
-                        //    DisplayName = sht.L6_SERVDET_SERVNO,
-                        //};
-                        //rpta.Watermark.ImageTransparency = 255;
-                        //rpta.PrinterName = cbDefaultPrinter.SelectedItem.ToString();
-                        //rpta.PrintingSystem.Document.Name = sht.L6_SERVDET_SERVNO;
-                        //rpta.CreateDocument();
+                        PrinterSettings ps = new PrinterSettings() { PrinterName = cbDefaultPrinter.Text };
+                        using (Graphics g = ps.CreateMeasurementGraphics(ps.DefaultPageSettings))
+                        {
+                            Margins MinMargins = DevExpress.XtraPrinting.Native.DeviceCaps.GetMinMargins(g);
+                            Console.WriteLine("Minimum Margins for " + ps.PrinterName + ": " + MinMargins.ToString());
+                        }
+                        RptLTSolarPrintBack rptb = new RptLTSolarPrintBack
+                        {
+                            DataSource = lstformattedbills,
+                        };
+                        RptLTSolatPrint rpta = new RptLTSolatPrint(rptb)
+                        {
+                            DataSource = lstformattedbills,
+                            DisplayName = sht.L6_SERVDET_SERVNO,
+                        };
+                        rpta.Watermark.ImageTransparency = 255;
+                        rpta.PrinterName = cbDefaultPrinter.SelectedItem.ToString();
+                        rpta.PrintingSystem.Document.Name = sht.L6_SERVDET_SERVNO;
+                        rpta.CreateDocument();
 
-                        //rptb.CreateDocument();
-                        //rpta.ModifyDocument(x => { x.AddPages(rptb.Pages); });
-                        //rpta.PrintingSystem.StartPrint += NonTOD_StartPrint;
-                        //rpta.Print(cbDefaultPrinter.Text);
-                        //AppFunctions.CloseWaitForm();
+                        rptb.CreateDocument();
+                        rpta.ModifyDocument(x => { x.AddPages(rptb.Pages); });
+                        rpta.PrintingSystem.StartPrint += NonTOD_StartPrint;
+                        rpta.Print(cbDefaultPrinter.Text);
+                        AppFunctions.CloseWaitForm();
 
-                        //ParsedBills++;
+                        ParsedBills++;
                     }
 
                 }

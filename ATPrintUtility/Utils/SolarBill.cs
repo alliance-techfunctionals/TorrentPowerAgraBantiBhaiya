@@ -172,7 +172,7 @@ namespace AT.Print.Utils
         public string L35_Exp_TOD2_KVAH_Units { get; set; }
         public string L35_Exp_TOD3_KVAH_Units { get; set; }
         public string L35_Exp_TOD4_KVAH_Units { get; set; }
-        public string L36_Exp_TOD1_KVA_Units  { get; set; }   // will not pick this we will pick 54 second meter k liye 53 in place of 52 line
+        public string L36_Exp_TOD1_KVA_Units  { get; set; }   
         public string L36_Exp_TOD2_KVA_Units  { get; set; }
         public string L36_Exp_TOD3_KVA_Units  { get; set; }
         public string L36_Exp_TOD4_KVA_Units { get; set; }
