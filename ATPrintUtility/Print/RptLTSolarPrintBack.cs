@@ -69,16 +69,16 @@ namespace AT.Print
                 MTR_TOD2.Text = Data[0].L12_MTRSNO_METER_2_IF_AVAILABLE;
                 #region Meter(KW)
                 
-                    //imp
-                    xrLabel16.Text = Data[0].L23_TOD_1_KW;
-                    xrLabel23.Text = Data[0].L23_TOD_2_KW;
-                    xrLabel44.Text = Data[0].L23_TOD_3_KW;
-                    xrLabel30.Text = Data[0].L23_TOD_4_KW;
+                    ////imp
+                    //xrLabel16.Text = Data[0].L23_TOD_1_KW;
+                    //xrLabel23.Text = Data[0].L23_TOD_2_KW;
+                    //xrLabel44.Text = Data[0].L23_TOD_3_KW;
+                    //xrLabel30.Text = Data[0].L23_TOD_4_KW;
 
-                    xrLabel17.Text = Data[0].L22_TOD_1_KWH;
-                    xrLabel24.Text = Data[0].L22_TOD_2_KWH;
-                    xrLabel45.Text = Data[0].L22_TOD_3_KWH;
-                    xrLabel31.Text = Data[0].L22_TOD_4_KWH;
+                    //xrLabel17.Text = Data[0].L22_TOD_1_KWH;
+                    //xrLabel24.Text = Data[0].L22_TOD_2_KWH;
+                    //xrLabel45.Text = Data[0].L22_TOD_3_KWH;
+                    //xrLabel31.Text = Data[0].L22_TOD_4_KWH;
                     //EXP
                     
                     xrLabel37.Text = Data[0].L53_Exp_TOD1_KW_Units;
@@ -113,19 +113,19 @@ namespace AT.Print
                     xrLabel70.Text = Data[0].L45_Carry_Forward_Units_TOD4_KWH;
 
                     //mtr2
-                    MTR2_KW1.Text = Data[0].L25_TOD_1_KWH;
-                    MTR2_KW2.Text = Data[0].L25_TOD_2_KWH;
-                    MTR2_KW3.Text = Data[0].L25_TOD_3_KWH;
-                    MTR2_KW4.Text = Data[0].L25_TOD_4_KWH;
+                    //MTR2_KW1.Text = Data[0].L25_TOD_1_KWH;
+                    //MTR2_KW2.Text = Data[0].L25_TOD_2_KWH;
+                    //MTR2_KW3.Text = Data[0].L25_TOD_3_KWH;
+                    //MTR2_KW4.Text = Data[0].L25_TOD_4_KWH;
                     MTR2_KW1_ex.Text = Data[0].L54_Exp_TOD1_KW_Units;
                     MTR2_KW2_ex.Text = Data[0].L54_Exp_TOD2_KW_Units;
                     MTR2_KW3_ex.Text = Data[0].L54_Exp_TOD3_KW_Units;
                     MTR2_KW4_ex.Text = Data[0].L54_Exp_TOD4_KW_Units;
 
-                    MTR2_KWH1.Text = Data[0].L24_TOD_1_KWH;
-                    MTR2_KWH2.Text = Data[0].L24_TOD_2_KWH;
-                    MTR2_KWH3.Text = Data[0].L24_TOD_3_KWH;
-                    MTR2_KWH4.Text = Data[0].L24_TOD_4_KWH;
+                    //MTR2_KWH1.Text = Data[0].L24_TOD_1_KWH;
+                    //MTR2_KWH2.Text = Data[0].L24_TOD_2_KWH;
+                    //MTR2_KWH3.Text = Data[0].L24_TOD_3_KWH;
+                    //MTR2_KWH4.Text = Data[0].L24_TOD_4_KWH;
                     MTR2_KWH1_ex.Text = Data[0].L51_Exp_TOD1_KWH_Units;
                     MTR2_KWH2_ex.Text = Data[0].L51_Exp_TOD2_KWH_Units;
                     MTR2_KWH3_ex.Text = Data[0].L51_Exp_TOD3_KWH_Units;
@@ -149,14 +149,14 @@ namespace AT.Print
 
                     MTR_TOD1.Text = Data[0].L12_MTRSNO_METER1;
                     //MTR1
-                    xrLabel16.Text = Data[0].L23_TOD_1_KW;
-                    xrLabel17.Text = Data[0].L22_TOD_1_KWH;
-                    xrLabel23.Text = Data[0].L23_TOD_2_KW;
-                    xrLabel24.Text = Data[0].L22_TOD_2_KWH;
-                    xrLabel44.Text = Data[0].L23_TOD_3_KW;
-                    xrLabel45.Text = Data[0].L22_TOD_3_KWH;
-                    xrLabel30.Text = Data[0].L23_TOD_4_KW;
-                    xrLabel31.Text = Data[0].L22_TOD_4_KWH;
+                    //xrLabel16.Text = Data[0].L23_TOD_1_KW;
+                    //xrLabel17.Text = Data[0].L22_TOD_1_KWH;
+                    //xrLabel23.Text = Data[0].L23_TOD_2_KW;
+                    //xrLabel24.Text = Data[0].L22_TOD_2_KWH;
+                    //xrLabel44.Text = Data[0].L23_TOD_3_KW;
+                    //xrLabel45.Text = Data[0].L22_TOD_3_KWH;
+                    //xrLabel30.Text = Data[0].L23_TOD_4_KW;
+                    //xrLabel31.Text = Data[0].L22_TOD_4_KWH;
                     //EXP
                     xrLabel37.Text = Data[0].L53_Exp_TOD1_KW_Units;
                     xrLabel51.Text = Data[0].L53_Exp_TOD2_KW_Units;

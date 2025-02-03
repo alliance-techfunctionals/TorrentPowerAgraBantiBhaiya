@@ -609,6 +609,84 @@ namespace AT.Print
 
             #region File Messages
             var messageFromFile = 0;
+
+            if (!string.IsNullOrEmpty(op[0].L22_TOD_1_KWH))
+            {
+                messageFromFile++;
+                XRLabel xrMessage0 = new XRLabel
+                {
+                    Font = new DXFont("DIN Pro Regular", 8),
+                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+                    Text = op[0].L22_TOD_1_KWH,
+                    WordWrap = false,
+                    AutoWidth = true,
+                    KeepTogether = true,
+                    HeightF = 2,
+                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+                };
+                xrPanel1.Controls.Add(xrMessage0);
+                adjustMessages(xrMessage0);
+
+            }
+
+
+            if (!string.IsNullOrEmpty(op[0].L23_TOD_1_KW))
+            {
+                messageFromFile++;
+                XRLabel xrMessage0 = new XRLabel
+                {
+                    Font = new DXFont("DIN Pro Regular", 8),
+                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+                    Text = op[0].L23_TOD_1_KW,
+                    WordWrap = false,
+                    AutoWidth = true,
+                    KeepTogether = true,
+                    HeightF = 2,
+                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+                };
+                xrPanel1.Controls.Add(xrMessage0);
+                adjustMessages(xrMessage0);
+
+            }
+            if (!string.IsNullOrEmpty(op[0].L24_TOD_1_KWH))
+            {
+                messageFromFile++;
+                XRLabel xrMessage0 = new XRLabel
+                {
+                    Font = new DXFont("DIN Pro Regular", 8),
+                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+                    Text = op[0].L24_TOD_1_KWH,
+                    WordWrap = false,
+                    AutoWidth = true,
+                    KeepTogether = true,
+                    HeightF = 2,
+                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+                };
+                xrPanel1.Controls.Add(xrMessage0);
+                adjustMessages(xrMessage0);
+
+            }
+
+            if (!string.IsNullOrEmpty(op[0].L25_TOD_1_KWH))
+            {
+                messageFromFile++;
+                XRLabel xrMessage0 = new XRLabel
+                {
+                    Font = new DXFont("DIN Pro Regular", 8),
+                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+                    Text = op[0].L25_TOD_1_KWH,
+                    WordWrap = false,
+                    AutoWidth = true,
+                    KeepTogether = true,
+                    HeightF = 2,
+                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+                };
+                xrPanel1.Controls.Add(xrMessage0);
+                adjustMessages(xrMessage0);
+
+            }
+
+
             if (!string.IsNullOrEmpty(op[0].L26_Message_1))
             {
                 messageFromFile++;
