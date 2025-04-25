@@ -12,9 +12,8 @@ namespace AT.Print.PDF
             InitializeComponent();
         }
 
-        private void Rpt_LTMD_Back_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        private void Rpt_LTMD_Back_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            //xrPictureBox3.ImageSource = Properties.Resources.New;
             var Data = this.DataSource as List<SingleLTMDBill>;
             xrChart1.Series[0].DataSource = Data[0].KWHgrph;
             xrChart1.Series[0].ArgumentScaleType = ScaleType.Qualitative;
@@ -24,8 +23,6 @@ namespace AT.Print.PDF
             xrChart1.Series[0].ValueDataMembers.AddRange(new string[] { "Value" });
             xrPictureBox2.ImageUrl = Application.StartupPath + "\\Contents\\CategorySlabImages\\" + Data[0].L6_TARIFF_DESCR + ".png";
             xrPictureBox1.ImageUrl = Data[0].MVPicture;
-
-
             xrChart2.Series[0].DataSource = Data[0].KVAgrph;
             xrChart2.Series[0].ArgumentScaleType = ScaleType.Qualitative;
             xrChart2.Series[0].ArgumentDataMember = "MonthYear";
@@ -33,7 +30,6 @@ namespace AT.Print.PDF
             xrChart2.Series[0].ValueScaleType = ScaleType.Numerical;
             xrChart2.Series[0].ValueDataMembers.AddRange(new string[] { "Value" });
             xrChart2.WidthF = xrChart1.WidthF;
-
             xrChart3.Series[0].DataSource = Data[0].PFgrph;
             xrChart3.Series[0].ArgumentScaleType = ScaleType.Qualitative;
             xrChart3.Series[0].ArgumentDataMember = "MonthYear";

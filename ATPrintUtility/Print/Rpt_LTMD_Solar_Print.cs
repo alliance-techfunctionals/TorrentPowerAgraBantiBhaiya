@@ -1,6 +1,5 @@
-﻿using AT.Print.PDF;
-using AT.Print.Utils;
-using DevExpress.XtraPrinting;
+﻿using AT.Print.Utils;
+using DevExpress.Drawing;
 using DevExpress.XtraReports.UI;
 using System;
 using System.Collections;
@@ -50,7 +49,7 @@ namespace AT.Print
         }
         #endregion
 
-        private void Rpt_solar_Print_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        private void Rpt_solar_Print_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
             var data = sender as Rpt_LTMD_Solar_Print;
             var op = data.DataSource as List<SolarBill>;
@@ -154,13 +153,6 @@ namespace AT.Print
             }
 
             xrlContractDemand.Text = "Contract Demand(" + op[0].L6_MEASURE_OF_CONTRACT_Demand + ")";
-
-
-          
-            
-            
-            
-            
             
             if (op[0].L6_MEASURE_OF_CONTRACT_Demand == "HP")
             {
@@ -248,7 +240,6 @@ namespace AT.Print
             }
 
             #region Excess Demand Print
-            //Excess Demand Print
             if (op[0].L6_EXCESS_DEMAND == "0.00" || op[0].L6_EXCESS_DEMAND == " " || op[0].L6_EXCESS_DEMAND == "0")
             {
                 VlL6ExcessDemand.Visible = false;
@@ -277,15 +268,7 @@ namespace AT.Print
 
             #endregion
 
-            #region  LF Fector
-            //if (op[0].L6_MTRDET_LF_PERC == "0.00" || op[0].L6_MTRDET_LF_PERC == " " || op[0].L6_MTRDET_LF_PERC == "0")
-            //{
-            //    Load_Factor.Visible = false;
-            //}
-            #endregion
-
             #region Meter Change
-            //Meter Change Print
             if (op[0].L12_MTRSNO_METER_2_IF_AVAILABLE != "")
             {
                 xrLabel2.Text = op[0].L12_MTRSNO_METER_2_IF_AVAILABLE;//older
@@ -393,9 +376,6 @@ namespace AT.Print
                     MTR2_CU4.Text = op[0].L49_Exp_KVAH_UNITS;
 
                     kvah21.Text = op[0].L49_Exp_CURRENT_NET_EXPORT_KVAH_UNITS;
-
-
-
                 }
 
 
@@ -471,10 +451,6 @@ namespace AT.Print
                     kva12.Text = op[0].L46_Previous_CREDIT_Units_MAIN_KVAH;
                     kva13.Text = op[0].L46_Net_Billed_Units_MAIN;
                     kva14.Text = op[0].L46_Carry_Forward_Units_MAIN_KVAH;
-
-
-
-
                 }
 
             }
@@ -500,9 +476,6 @@ namespace AT.Print
                     }
                 }
             }
-
-            //op[0].L6_SERVDET_SANC_LOAD = op[0].L6_SERVDET_SANC_LOAD + "(" + op[0].L6_MEASURE_OF_CONTRACT_Demand + ")";
-
 
             #region Bill Details
             //Excess Demand Surcharge Print
@@ -643,7 +616,7 @@ namespace AT.Print
                 messageFromFile++;
                 XRLabel xrMessage1 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                    Font = new DXFont("DIN Pro Regular", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L26_Message_1,
                     WordWrap = false,
@@ -661,7 +634,7 @@ namespace AT.Print
                 messageFromFile++;
                 XRLabel xrMessage2 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                    Font = new DXFont("DIN Pro Regular", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L27_Message_2,
                     WordWrap = false,
@@ -679,7 +652,7 @@ namespace AT.Print
                 messageFromFile++;
                 XRLabel xrMessage3 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                    Font = new DXFont("DIN Pro Regular", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L28_Message_3,
                     WordWrap = false,
@@ -697,7 +670,7 @@ namespace AT.Print
                 messageFromFile++;
                 XRLabel xrMessage4 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                    Font = new DXFont("DIN Pro Regular", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L29_Message_4,
                     WordWrap = false,
@@ -715,7 +688,7 @@ namespace AT.Print
                 messageFromFile++;
                 XRLabel xrMessage5 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                    Font = new DXFont("DIN Pro Regular", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L30_Message_5,
                     WordWrap = false,
@@ -733,7 +706,7 @@ namespace AT.Print
                 messageFromFile++;
                 XRLabel xrMessage6 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                    Font = new DXFont("DIN Pro Regular", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L31_Message_6,
                     WordWrap = false,
@@ -751,7 +724,7 @@ namespace AT.Print
                 messageFromFile++;
                 XRLabel xrMessage6 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                    Font = new DXFont("DIN Pro Regular", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = "*" + getMessage(LoadStaticData._EnglishMessage, "BRDCST3"),
                     WordWrap = true,
@@ -772,12 +745,11 @@ namespace AT.Print
             }
             if (!string.IsNullOrEmpty(op[0].L9_MessageFlag))
             {
-                //if (!IsMessageLimitExceeds(totalMessages))
                 {
                     messageFromFile++;
                     XRLabel xrMessageExcessDemand = new XRLabel
                     {
-                        Font = new System.Drawing.Font("Kruti Dev 010", 9),
+                        Font = new DXFont("Kruti Dev 010", 9),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = getMessage(LoadStaticData._HindiMessage, "TPC"),
                         WordWrap = false,
@@ -785,9 +757,6 @@ namespace AT.Print
                         KeepTogether = true,
                         HeightF = (float)0.01,
                         Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                        //BorderDashStyle = BorderDashStyle.Dot,
-                        //Borders = DevExpress.XtraPrinting.BorderSide.All,
-                        //BorderWidth = 1,
                     };
                     xrPanel1.Controls.Add(xrMessageExcessDemand);
                     adjustMessages(xrMessageExcessDemand);
@@ -805,7 +774,7 @@ namespace AT.Print
                     totalMessages++;
                     XRLabel xrMessageExcessDemand = new XRLabel
                     {
-                        Font = new System.Drawing.Font("Kruti Dev 010", 9),
+                        Font = new DXFont("Kruti Dev 010", 9),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = getMessage(LoadStaticData._HindiMessage, "EDC"),
                         WordWrap = true,
@@ -826,7 +795,7 @@ namespace AT.Print
                     totalMessages++;
                     XRLabel xrMessageExcessDemand = new XRLabel
                     {
-                        Font = new System.Drawing.Font("Kruti Dev 010", 9),
+                        Font = new DXFont("Kruti Dev 010", 9),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = string.Format(getMessage(LoadStaticData._HindiMessage, "PFM"), "0.90".ToString().Replace(".", "-")),
                         WordWrap = true,
@@ -846,7 +815,7 @@ namespace AT.Print
                     totalMessages++;
                     XRLabel xrMessageTheftAmount = new XRLabel
                     {
-                        Font = new System.Drawing.Font("Kruti Dev 010", 10),
+                        Font = new DXFont("Kruti Dev 010", 10),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = string.Format(getMessage(LoadStaticData._HindiMessage, "TFA"), op[0].L10_Theft_Amount.Replace('.', '-')),
                         WordWrap = true,
@@ -870,7 +839,7 @@ namespace AT.Print
                     totalMessages++;
                     XRLabel xrMessageTheftAmount = new XRLabel
                     {
-                        Font = new System.Drawing.Font("Kruti Dev 010", 9),
+                        Font = new DXFont("Kruti Dev 010", 9),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = string.Format(getMessage(LoadStaticData._HindiMessage, "DAD"), op[0].L10_Theft_Amount),
                         WordWrap = true,
@@ -886,66 +855,6 @@ namespace AT.Print
                 }
             }
 
-            //if (!string.IsNullOrEmpty(op[0].L8_ParkingAmount) && op[0].L8_ParkingAmount != "0.00")
-            //{
-            //    xrLabel21.Visible = true;
-            //}
-
-            //if (!string.IsNullOrEmpty(op[0].L1_BillingCode))
-            //{
-            //    if (op[0].L1_BillingCode == "3000")
-            //    {
-            //        if (!IsMessageLimitExceeds(totalMessages))
-            //        {
-            //            totalMessages++;
-            //            decimal totalUnits = decimal.Zero;
-            //            //if (!string.IsNullOrEmpty(op[0].L16_M1_KWH_UNITS))
-            //            //{
-            //            //    totalUnits += Convert.ToDecimal(op[0].L16_M1_KWH_UNITS);
-            //            //}
-            //
-            //            //if (!string.IsNullOrEmpty(op[0].L20_M2_KWH_UNITS))
-            //            //{
-            //            //    totalUnits += Convert.ToDecimal(op[0].L20_M2_KWH_UNITS);
-            //            //}
-            //            var PrevReadDt = ChangeMonthToHindi(op[0].L7_PrevReadDt);
-            //            var ReadDt = ChangeMonthToHindi(op[0].L7_readt);
-            //
-            //            XRLabel xrMessageTheftAmount = new XRLabel
-            //            {
-            //                Font = new System.Drawing.Font("Kruti Dev 010", 9),
-            //                TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-            //                Text = string.Format(getMessage(LoadStaticData._HindiMessage, "AB1"), totalUnits.ToString().Replace(".", "-"), PrevReadDt.Replace("-", "&"), ReadDt.Replace("-", "&"), op[0].L10_Mode + " fnu"),
-            //                WordWrap = false,
-            //                AutoWidth = true,
-            //                KeepTogether = true,
-            //                HeightF = 2,
-            //            };
-            //
-            //
-            //            xrPanel1.Controls.Add(xrMessageTheftAmount);
-            //            adjustMessages(xrMessageTheftAmount);
-            //
-            //            XRLabel xrAB2Msg = new XRLabel
-            //            {
-            //                Font = new System.Drawing.Font("Kruti Dev 010", 9),
-            //                TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-            //                Text = string.Format(getMessage(LoadStaticData._HindiMessage, "AB2")),
-            //                WordWrap = false,
-            //                AutoWidth = true,
-            //                KeepTogether = true,
-            //                HeightF = 2,
-            //            };
-            //
-            //
-            //            xrPanel1.Controls.Add(xrAB2Msg);
-            //            adjustMessages(xrAB2Msg);
-            //
-            //
-            //        }
-            //    }
-            //}
-
             #endregion
 
             #region Template Messages
@@ -954,7 +863,7 @@ namespace AT.Print
                 messageFromFile++;
                 XRLabel xrMessage7 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("Kruti Dev 010", 9f),
+                    Font = new DXFont("Kruti Dev 010", 9f),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify,
                     Text = op[0].L33_MESSAGE7,
                     WordWrap = true,
@@ -974,7 +883,7 @@ namespace AT.Print
                 messageFromFile++;
                 XRLabel xrMessage8 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                    Font = new DXFont("DIN Pro Regular", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify,
                     Text = op[0].L34_MESSAGE8,
                     WordWrap = false,
@@ -993,7 +902,7 @@ namespace AT.Print
                 messageFromFile++;
                 XRLabel xrMessage9 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("Kruti Dev 010", 9),
+                    Font = new DXFont("Kruti Dev 010", 9),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify,
                     Text = op[0].L35_MESSAGE9,
                     WordWrap = false,
@@ -1012,7 +921,7 @@ namespace AT.Print
                 messageFromFile++;
                 XRLabel xrMessage10 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("DIN Pro Regular", 8),
+                    Font = new DXFont("DIN Pro Regular", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify,
                     Text = op[0].L36_MESSAGE10,
                     WordWrap = false,
@@ -1037,7 +946,7 @@ namespace AT.Print
                     totalMessages++;
                     XRLabel xrMessageTheftAmount = new XRLabel
                     {
-                        Font = brdcstMsg.MessageType.ToUpper() == "ENG" ? new System.Drawing.Font("DIN Pro Regular", 8) : new System.Drawing.Font("Kruti Dev 010", 9),
+                        Font = brdcstMsg.MessageType.ToUpper() == "ENG" ? new DXFont("DIN Pro Regular", 8) : new DXFont("Kruti Dev 010", 9),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = brdcstMsg.MessageType.ToUpper() == "ENG" ? brdcstMsg.EnglishMessageString : brdcstMsg.HindiMessageString,
                         WordWrap = true,
@@ -1059,7 +968,7 @@ namespace AT.Print
                 messageFromFile++;
                 XRLabel xrMessage11 = new XRLabel
                 {
-                    Font = new System.Drawing.Font("Kruti Dev 010", 9),
+                    Font = new DXFont("Kruti Dev 010", 9),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = "vfHkys[kksa ds vuqlkj vkids la;kstu ij tekur /kujkf'k 'kwU; vafdr gSaA \r\n;fn vkids }kjk la;kstu jkf'k tek dh xbZ gS rks mDr tekur jkf'k dh ewy jlhn ds lkFk \r\ngekjs xzkgd lsok dsUnz  ij lEidZ djsaA ",
                     WordWrap = false,
@@ -1068,45 +977,16 @@ namespace AT.Print
                     KeepTogether = true,
                     HeightF = 0.1f,
                     Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                    //BorderDashStyle = BorderDashStyle.Dot,
-                    //Borders = DevExpress.XtraPrinting.BorderSide.All,
-                    //BorderWidth = 1,
                 };
                 xrPanel1.Controls.Add(xrMessage11);
                 adjustMessages(xrMessage11);
 
             }
 
-            //if (!string.IsNullOrEmpty(op[0].L8_Intrest_Amount) && Convert.ToDecimal(op[0].L8_Intrest_Amount) > 0)
-            //{
-            //    if (!IsMessageLimitExceeds(totalMessages))
-            //    {
-            //        totalMessages++;
-            //        XRLabel xrMessageExcessDemand = new XRLabel
-            //        {
-            //            Font = new System.Drawing.Font("Kruti Dev 010", 6.5f),
-            //            TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-            //            Text = "     fiz; miHkksäk] ,d eq'r ;kstuk ds varxZr 100 izfr'kr C;kt ekQ+h dk ykHk mBkus ds fy,] d`Ik;k mijksDr orZeku fcy ds lkFk ekfld fdLr jkf'k : \r\n     " + op[0].L8_Intrest_Amount.ToString().Replace('.', '-') + " dk Hkqxrku djsaA",
-            //            WordWrap = false,
-            //            AutoWidth = true,
-            //            Multiline = true,
-            //            KeepTogether = true,
-            //            HeightF = (float)0.01,
-            //            Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-            //            //BorderDashStyle = BorderDashStyle.Dot,
-            //            //Borders = DevExpress.XtraPrinting.BorderSide.All,
-            //            //BorderWidth = 1,
-            //        };
-            //        xrPanel1.Controls.Add(xrMessageExcessDemand);
-            //        adjustMessages(xrMessageExcessDemand);
-            //    }
-            //}
-
             #endregion
 
 
             #region Solar Export Energy Adjustment
-            //Solar Export Energy Adjustment
 
             if (!(op[0].L8_Solar_Export_Energy == "0.00" || op[0].L8_Solar_Export_Energy == ""))
             {

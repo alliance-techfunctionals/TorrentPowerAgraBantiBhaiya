@@ -44,6 +44,7 @@
             this.bbiPrintLTMD = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.bbiLTSolar = new DevExpress.XtraBars.BarButtonItem();
             this.rpPrint = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -65,7 +66,6 @@
             this.rcRibbonControl.ExpandCollapseItem.Id = 0;
             this.rcRibbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.rcRibbonControl.ExpandCollapseItem,
-            this.rcRibbonControl.SearchEditItem,
             this.bbiPrintLT,
             this.bbiPrintHT,
             this.HomePage,
@@ -78,9 +78,10 @@
             this.barSubItem1,
             this.bbiPrintLTMD,
             this.barButtonItem2,
-            this.barButtonItem3});
+            this.barButtonItem3,
+            this.bbiLTSolar});
             this.rcRibbonControl.Location = new System.Drawing.Point(0, 0);
-            this.rcRibbonControl.MaxItemId = 17;
+            this.rcRibbonControl.MaxItemId = 18;
             this.rcRibbonControl.Name = "rcRibbonControl";
             this.rcRibbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.rpPrint,
@@ -199,6 +200,14 @@
             this.barButtonItem3.Name = "barButtonItem3";
             this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiPrint_HT_Solar_ItemClick);
             // 
+            // bbiLTSolar
+            // 
+            this.bbiLTSolar.Caption = "Print LT Solar";
+            this.bbiLTSolar.Id = 17;
+            this.bbiLTSolar.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
+            this.bbiLTSolar.Name = "bbiLTSolar";
+            this.bbiLTSolar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiLTSolar_ItemClick);
+            // 
             // rpPrint
             // 
             this.rpPrint.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -219,6 +228,7 @@
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem2);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem3);
+            this.ribbonPageGroup2.ItemLinks.Add(this.bbiLTSolar);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "Print Solar Bills";
             // 
@@ -324,6 +334,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.BarButtonItem bbiLTSolar;
     }
 }
 

@@ -267,7 +267,6 @@ namespace AT.Print.Utils
         public string L46_Net_Billed_Units_MAIN_TOD3_KWH  { get; set; }
         public string L46_Net_Billed_Units_MAIN_TOD4_KWH  { get; set; }
         public string L46_Carry_Forward_Units_MAIN_KWH { get; set; }
-        //public string L46_SolarLoad { get; set; }   
         public string L47_MonYear1        { get; set; }
         public string L47_Exp_KVAH_UNITS1 { get; set; }
         public string L47_MonYear2        { get; set; }
@@ -368,23 +367,6 @@ namespace AT.Print.Utils
         public string Sap_LotNo { get; set; }
         public string Sap_GrpNo { get; set; }
         public string lblSapratorNote { get; set; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
 }

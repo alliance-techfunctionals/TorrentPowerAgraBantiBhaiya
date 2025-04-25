@@ -12,9 +12,8 @@ namespace AT.Print
             InitializeComponent();
         }
 
-        private void rpt_HT_Tod_Back_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        private void rpt_HT_Tod_Back_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            //xrPictureBox3.ImageSource = Properties.Resources.New;
             var Data = this.DataSource as List<SingleHTBill>;
             xrChart1.Series[0].DataSource = Data[0].KVAHgrph;
             xrChart1.Series[0].ArgumentScaleType = ScaleType.Qualitative;
@@ -42,7 +41,6 @@ namespace AT.Print
             xrChart3.Series[0].ValueDataMembers.AddRange(new string[] { "Value" });
             xrChart3.WidthF = xrChart4.WidthF;
 
-            //Disconnection Message
             if (Data[0].L1_DisconnectionMSGPrintingIMMEDIATE == "1")
             {
                 xrDueDate.Text = "IMMEDIATE";

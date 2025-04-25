@@ -108,7 +108,7 @@
             xyDiagram1.AxisX.Alignment = DevExpress.XtraCharts.AxisAlignment.Zero;
             xyDiagram1.AxisX.Label.Alignment = DevExpress.XtraCharts.AxisLabelAlignment.Center;
             xyDiagram1.AxisX.Label.Angle = 270;
-            xyDiagram1.AxisX.Label.Font = new System.Drawing.Font("DIN Pro Regular", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            xyDiagram1.AxisX.Label.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 7F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             xyDiagram1.AxisX.MinorCount = 1;
             xyDiagram1.AxisX.NumericScaleOptions.AutoGrid = false;
             xyDiagram1.AxisX.NumericScaleOptions.MinGridSpacingLength = 1;
@@ -121,11 +121,11 @@
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
             xyDiagram1.AxisY.AutoScaleBreaks.MaxCount = 7;
             xyDiagram1.AxisY.GridLines.LineStyle.DashStyle = DevExpress.XtraCharts.DashStyle.Dash;
-            xyDiagram1.AxisY.Label.Font = new System.Drawing.Font("DIN Pro Regular", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            xyDiagram1.AxisY.Label.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 5F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             xyDiagram1.AxisY.MinorCount = 1;
             xyDiagram1.AxisY.Thickness = 2;
             xyDiagram1.AxisY.Tickmarks.Thickness = 2;
-            xyDiagram1.AxisY.Title.Font = new System.Drawing.Font("DIN Pro Regular", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            xyDiagram1.AxisY.Title.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 7F, DevExpress.Drawing.DXFontStyle.Bold, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             xyDiagram1.AxisY.Title.Text = "Units (Consumption)";
             xyDiagram1.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
@@ -134,7 +134,7 @@
             xyDiagram1.DefaultPane.EnableAxisXZooming = DevExpress.Utils.DefaultBoolean.False;
             xyDiagram1.DefaultPane.EnableAxisYScrolling = DevExpress.Utils.DefaultBoolean.False;
             xyDiagram1.DefaultPane.EnableAxisYZooming = DevExpress.Utils.DefaultBoolean.False;
-            xyDiagram1.DefaultPane.StackedBarTotalLabel.Font = new System.Drawing.Font("Tahoma", 4F);
+            xyDiagram1.DefaultPane.StackedBarTotalLabel.DXFont = new DevExpress.Drawing.DXFont("Tahoma", 4F);
             xyDiagram1.PaneDistance = 2;
             this.xrChart1.Diagram = xyDiagram1;
             this.xrChart1.ImageType = DevExpress.XtraReports.UI.ChartImageType.Bitmap;
@@ -148,7 +148,7 @@
             sideBySideBarSeriesLabel1.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
             sideBySideBarSeriesLabel1.EnableAntialiasing = DevExpress.Utils.DefaultBoolean.True;
             sideBySideBarSeriesLabel1.FillStyle.FillMode = DevExpress.XtraCharts.FillMode.Empty;
-            sideBySideBarSeriesLabel1.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            sideBySideBarSeriesLabel1.DXFont = new DevExpress.Drawing.DXFont("Tahoma", 7F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             sideBySideBarSeriesLabel1.Indent = 1;
             sideBySideBarSeriesLabel1.LineLength = 0;
             sideBySideBarSeriesLabel1.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
@@ -177,7 +177,7 @@
             xyDiagram2.AxisX.Alignment = DevExpress.XtraCharts.AxisAlignment.Zero;
             xyDiagram2.AxisX.Label.Alignment = DevExpress.XtraCharts.AxisLabelAlignment.Center;
             xyDiagram2.AxisX.Label.Angle = 270;
-            xyDiagram2.AxisX.Label.Font = new System.Drawing.Font("DIN Pro Regular", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            xyDiagram2.AxisX.Label.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 7F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             xyDiagram2.AxisX.MinorCount = 1;
             xyDiagram2.AxisX.NumericScaleOptions.AutoGrid = false;
             xyDiagram2.AxisX.NumericScaleOptions.MinGridSpacingLength = 1;
@@ -189,11 +189,11 @@
             xyDiagram2.AxisX.Visibility = DevExpress.Utils.DefaultBoolean.True;
             xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
             xyDiagram2.AxisY.GridLines.LineStyle.DashStyle = DevExpress.XtraCharts.DashStyle.Dash;
-            xyDiagram2.AxisY.Label.Font = new System.Drawing.Font("DIN Pro Regular", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            xyDiagram2.AxisY.Label.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 5F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             xyDiagram2.AxisY.MinorCount = 1;
             xyDiagram2.AxisY.Thickness = 2;
             xyDiagram2.AxisY.Tickmarks.Thickness = 2;
-            xyDiagram2.AxisY.Title.Font = new System.Drawing.Font("DIN Pro Regular", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            xyDiagram2.AxisY.Title.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 6F, DevExpress.Drawing.DXFontStyle.Bold, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             xyDiagram2.AxisY.Title.Text = "Recorded Demand (KVA/KW)";
             xyDiagram2.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
             xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
@@ -202,7 +202,7 @@
             xyDiagram2.DefaultPane.EnableAxisXZooming = DevExpress.Utils.DefaultBoolean.False;
             xyDiagram2.DefaultPane.EnableAxisYScrolling = DevExpress.Utils.DefaultBoolean.False;
             xyDiagram2.DefaultPane.EnableAxisYZooming = DevExpress.Utils.DefaultBoolean.False;
-            xyDiagram2.DefaultPane.StackedBarTotalLabel.Font = new System.Drawing.Font("Tahoma", 4F);
+            xyDiagram2.DefaultPane.StackedBarTotalLabel.DXFont = new DevExpress.Drawing.DXFont("Tahoma", 4F);
             xyDiagram2.PaneDistance = 2;
             this.xrChart2.Diagram = xyDiagram2;
             this.xrChart2.ImageType = DevExpress.XtraReports.UI.ChartImageType.Bitmap;
@@ -216,7 +216,7 @@
             sideBySideBarSeriesLabel2.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
             sideBySideBarSeriesLabel2.EnableAntialiasing = DevExpress.Utils.DefaultBoolean.True;
             sideBySideBarSeriesLabel2.FillStyle.FillMode = DevExpress.XtraCharts.FillMode.Empty;
-            sideBySideBarSeriesLabel2.Font = new System.Drawing.Font("Tahoma", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            sideBySideBarSeriesLabel2.DXFont = new DevExpress.Drawing.DXFont("Tahoma", 7F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             sideBySideBarSeriesLabel2.Indent = 1;
             sideBySideBarSeriesLabel2.LineLength = 0;
             sideBySideBarSeriesLabel2.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
@@ -245,7 +245,7 @@
             xyDiagram3.AxisX.Alignment = DevExpress.XtraCharts.AxisAlignment.Zero;
             xyDiagram3.AxisX.Label.Alignment = DevExpress.XtraCharts.AxisLabelAlignment.Center;
             xyDiagram3.AxisX.Label.Angle = 270;
-            xyDiagram3.AxisX.Label.Font = new System.Drawing.Font("DIN Pro Regular", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            xyDiagram3.AxisX.Label.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 7F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             xyDiagram3.AxisX.MinorCount = 1;
             xyDiagram3.AxisX.NumericScaleOptions.AutoGrid = false;
             xyDiagram3.AxisX.NumericScaleOptions.MinGridSpacingLength = 1;
@@ -257,11 +257,11 @@
             xyDiagram3.AxisX.Visibility = DevExpress.Utils.DefaultBoolean.True;
             xyDiagram3.AxisX.VisibleInPanesSerializable = "-1";
             xyDiagram3.AxisY.GridLines.LineStyle.DashStyle = DevExpress.XtraCharts.DashStyle.Dash;
-            xyDiagram3.AxisY.Label.Font = new System.Drawing.Font("DIN Pro Regular", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            xyDiagram3.AxisY.Label.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 5F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             xyDiagram3.AxisY.MinorCount = 1;
             xyDiagram3.AxisY.Thickness = 2;
             xyDiagram3.AxisY.Tickmarks.Thickness = 2;
-            xyDiagram3.AxisY.Title.Font = new System.Drawing.Font("DIN Pro Regular", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            xyDiagram3.AxisY.Title.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 8F, DevExpress.Drawing.DXFontStyle.Bold, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             xyDiagram3.AxisY.Title.MaxLineCount = 6;
             xyDiagram3.AxisY.Title.Text = "P.F.(%)";
             xyDiagram3.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
@@ -271,10 +271,10 @@
             xyDiagram3.DefaultPane.EnableAxisXZooming = DevExpress.Utils.DefaultBoolean.False;
             xyDiagram3.DefaultPane.EnableAxisYScrolling = DevExpress.Utils.DefaultBoolean.False;
             xyDiagram3.DefaultPane.EnableAxisYZooming = DevExpress.Utils.DefaultBoolean.False;
-            xyDiagram3.DefaultPane.StackedBarTotalLabel.Font = new System.Drawing.Font("Tahoma", 4F);
+            xyDiagram3.DefaultPane.StackedBarTotalLabel.DXFont = new DevExpress.Drawing.DXFont("Tahoma", 4F);
             xyDiagram3.PaneDistance = 2;
             this.xrChart3.Diagram = xyDiagram3;
-            this.xrChart3.EmptyChartText.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.xrChart3.EmptyChartText.DXFont = new DevExpress.Drawing.DXFont("Tahoma", 14F);
             this.xrChart3.ImageType = DevExpress.XtraReports.UI.ChartImageType.Bitmap;
             this.xrChart3.Legend.Name = "Default Legend";
             this.xrChart3.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
@@ -305,7 +305,7 @@
             this.xrChart3.SeriesTemplate.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.DateTime;
             this.xrChart3.SeriesTemplate.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
             this.xrChart3.SizeF = new System.Drawing.SizeF(487.58F, 142.7917F);
-            this.xrChart3.SmallChartText.Font = new System.Drawing.Font("Tahoma", 14F);
+            this.xrChart3.SmallChartText.DXFont = new DevExpress.Drawing.DXFont("Tahoma", 14F);
             // 
             // xrPictureBox2
             // 
@@ -346,14 +346,14 @@
             this.DrawWatermark = true;
             this.ExportOptions.Pdf.ImageQuality = DevExpress.XtraPrinting.PdfJpegImageQuality.Medium;
             this.ExportOptions.Pdf.RasterizationResolution = 60;
-            this.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.Margins = new System.Drawing.Printing.Margins(0, 0, 0, 0);
+            this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
+            this.Margins = new DevExpress.Drawing.DXMargins(0, 0, 0, 0);
             this.PageHeight = 1169;
             this.PageWidth = 827;
-            this.PaperKind = System.Drawing.Printing.PaperKind.A4;
+            this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.A4;
             this.ScriptsSource = "\r\n";
             this.Version = "20.1";
-            this.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.Rpt_LTMD_Back_BeforePrint);
+            this.BeforePrint += new DevExpress.XtraReports.UI.BeforePrintEventHandler(this.Rpt_LTMD_Back_BeforePrint);
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView1)).EndInit();

@@ -21,9 +21,6 @@ namespace AT.Print
 
         void BindingManagerData()
         {
-
-
-
             try
             {
                 XDocument Messages = XDocument.Load(Application.StartupPath + "//DBEntity//xMessage.xml");
@@ -43,15 +40,11 @@ namespace AT.Print
                 }
                 gridView1.PopulateColumns(_HindiMessage);
                 gridControl1.DataSource = _HindiMessage;
-
-
             }
             catch (Exception ex)
             {
-                AT.Print.Utils.AppFunctions.LogError(ex.Message);
+                Utils.AppFunctions.LogError(ex.Message);
             }
-
-
         }
 
         private void gridControl1_DataSourceChanged(object sender, EventArgs e)
@@ -59,8 +52,6 @@ namespace AT.Print
             gridView1.Columns["Description"].AppearanceCell.Font = new System.Drawing.Font("Sans Serif", 15);
             gridView1.Columns["Code"].Width = 5;
             gridView1.Columns["Description"].AppearanceCell.Font = new System.Drawing.Font("Kruti Dev 010", 15);
-
-
 
         }
     }
