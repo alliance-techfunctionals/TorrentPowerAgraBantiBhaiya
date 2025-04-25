@@ -506,9 +506,25 @@ namespace AT.Print.PDF
                 GreenTariff.Visible = false;
                 GreenTariffHindi.Visible = false;
                 GreenTariffValue.Visible = false;
+
+                GreenTariff.TopF = Subsidy.TopF;
+                GreenTariffHindi.TopF = Subsidy.TopF;
+                GreenTariffValue.TopF = Subsidy.TopF;
             }
 
-            if ((op[0].L8_ServdetTotbBdtOthr == "0.00" || string.IsNullOrEmpty(op[0].L8_ServdetTotbBdtOthr)) && (op[0].L1_PowerFactorMSGIndicator == "0.00" || string.IsNullOrEmpty(op[0].L1_PowerFactorMSGIndicator)))
+            lblFPPA.TopF = GreenTariff.BottomF;
+            lblFPPAHindi.TopF = GreenTariff.BottomF;
+            FPPASurchargeValue.TopF = GreenTariff.BottomF;
+
+            if (op[0].L10_FPPASurcharge == "0.00" || string.IsNullOrEmpty(op[0].L10_FPPASurcharge))
+            {
+                lblFPPA.Visible = false;
+                lblFPPAHindi.Visible = false;
+                FPPASurchargeValue.Visible = false;
+            }
+
+
+                if ((op[0].L8_ServdetTotbBdtOthr == "0.00" || string.IsNullOrEmpty(op[0].L8_ServdetTotbBdtOthr)) && (op[0].L1_PowerFactorMSGIndicator == "0.00" || string.IsNullOrEmpty(op[0].L1_PowerFactorMSGIndicator)))
             {
 
                 Subsidy.TopF = bd_RlSC2.BottomF;
