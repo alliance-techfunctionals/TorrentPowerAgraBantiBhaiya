@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraReports.UI.XRWatermark xrWatermark1 = new DevExpress.XtraReports.UI.XRWatermark();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
@@ -257,6 +258,9 @@
             this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
             this.MeterDetailTotLabel = new DevExpress.XtraReports.UI.XRLabel();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.lblFPPA = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblFPPAHindi = new DevExpress.XtraReports.UI.XRLabel();
+            this.FPPASurchargeValue = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -450,7 +454,8 @@
             this.xrLabel24.Dpi = 96F;
             this.xrLabel24.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "trim([L1_Customer_PAN])")});
-            this.xrLabel24.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 8.999999F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
+            this.xrLabel24.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 8.999999F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {
+            new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel24.LocationFloat = new DevExpress.Utils.PointFloat(61F, 231.586F);
             this.xrLabel24.Multiline = true;
             this.xrLabel24.Name = "xrLabel24";
@@ -1223,7 +1228,8 @@
             // 
             this.xrImmediatelbl.CanGrow = false;
             this.xrImmediatelbl.Dpi = 96F;
-            this.xrImmediatelbl.Font = new DevExpress.Drawing.DXFont("Kruti Dev 010", 11.25F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
+            this.xrImmediatelbl.Font = new DevExpress.Drawing.DXFont("Kruti Dev 010", 11.25F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {
+            new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrImmediatelbl.InteractiveSorting.FieldName = "OwnerName";
             this.xrImmediatelbl.LocationFloat = new DevExpress.Utils.PointFloat(734.0093F, 521.4053F);
             this.xrImmediatelbl.Multiline = true;
@@ -1839,6 +1845,9 @@
             // 
             this.xrPanel3.CanGrow = false;
             this.xrPanel3.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.lblFPPA,
+            this.lblFPPAHindi,
+            this.FPPASurchargeValue,
             this.GreenTariffHindi,
             this.GreenTariffValue,
             this.GreenTariff,
@@ -1883,7 +1892,7 @@
             this.xrPanel3.Dpi = 96F;
             this.xrPanel3.LocationFloat = new DevExpress.Utils.PointFloat(39.00002F, 370.3759F);
             this.xrPanel3.Name = "xrPanel3";
-            this.xrPanel3.SizeF = new System.Drawing.SizeF(387F, 210.44F);
+            this.xrPanel3.SizeF = new System.Drawing.SizeF(387F, 224.8557F);
             // 
             // GreenTariffHindi
             // 
@@ -2661,7 +2670,8 @@
             // 
             this.xrLabel20.CanGrow = false;
             this.xrLabel20.Dpi = 96F;
-            this.xrLabel20.Font = new DevExpress.Drawing.DXFont("Kruti Dev 010", 15.75F, DevExpress.Drawing.DXFontStyle.Bold, DevExpress.Drawing.DXGraphicsUnit.Pixel, new DevExpress.Drawing.DXFontAdditionalProperty[] {new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
+            this.xrLabel20.Font = new DevExpress.Drawing.DXFont("Kruti Dev 010", 15.75F, DevExpress.Drawing.DXFontStyle.Bold, DevExpress.Drawing.DXGraphicsUnit.Pixel, new DevExpress.Drawing.DXFontAdditionalProperty[] {
+            new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
             this.xrLabel20.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabel20.LocationFloat = new DevExpress.Utils.PointFloat(692.0092F, 248.84F);
             this.xrLabel20.Multiline = true;
@@ -4152,6 +4162,59 @@
             this.MeterDetailTotLabel.Text = "Total / ";
             this.MeterDetailTotLabel.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
+            // lblFPPA
+            // 
+            this.lblFPPA.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
+            this.lblFPPA.BorderColor = System.Drawing.Color.Silver;
+            this.lblFPPA.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
+            this.lblFPPA.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.lblFPPA.CanGrow = false;
+            this.lblFPPA.CanShrink = true;
+            this.lblFPPA.Dpi = 96F;
+            this.lblFPPA.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 8F);
+            this.lblFPPA.LocationFloat = new DevExpress.Utils.PointFloat(1F, 208.0294F);
+            this.lblFPPA.Name = "lblFPPA";
+            this.lblFPPA.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.lblFPPA.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;
+            this.lblFPPA.SizeF = new System.Drawing.SizeF(388F, 16.08F);
+            this.lblFPPA.StylePriority.UseBorderColor = false;
+            this.lblFPPA.StylePriority.UseBorderDashStyle = false;
+            this.lblFPPA.StylePriority.UseBorders = false;
+            this.lblFPPA.StylePriority.UseFont = false;
+            this.lblFPPA.StylePriority.UsePadding = false;
+            this.lblFPPA.Text = "FPPA Surcharge / ";
+            // 
+            // lblFPPAHindi
+            // 
+            this.lblFPPAHindi.CanGrow = false;
+            this.lblFPPAHindi.CanShrink = true;
+            this.lblFPPAHindi.Dpi = 96F;
+            this.lblFPPAHindi.Font = new DevExpress.Drawing.DXFont("Kruti Dev 010", 9F);
+            this.lblFPPAHindi.LocationFloat = new DevExpress.Utils.PointFloat(95.0639F, 209.6294F);
+            this.lblFPPAHindi.Name = "lblFPPAHindi";
+            this.lblFPPAHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.lblFPPAHindi.SizeF = new System.Drawing.SizeF(111.0401F, 11.97743F);
+            this.lblFPPAHindi.StylePriority.UseFont = false;
+            this.lblFPPAHindi.StylePriority.UsePadding = false;
+            this.lblFPPAHindi.Text = "bZa/ku vkSj fctyh vf|Hkkj";
+            // 
+            // FPPASurchargeValue
+            // 
+            this.FPPASurchargeValue.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
+            this.FPPASurchargeValue.CanGrow = false;
+            this.FPPASurchargeValue.Dpi = 96F;
+            this.FPPASurchargeValue.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L10_FPPASurcharge]")});
+            this.FPPASurchargeValue.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 8F);
+            this.FPPASurchargeValue.LocationFloat = new DevExpress.Utils.PointFloat(293F, 210.0294F);
+            this.FPPASurchargeValue.Name = "FPPASurchargeValue";
+            this.FPPASurchargeValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.FPPASurchargeValue.SizeF = new System.Drawing.SizeF(94F, 11.97742F);
+            this.FPPASurchargeValue.StylePriority.UseFont = false;
+            this.FPPASurchargeValue.StylePriority.UsePadding = false;
+            this.FPPASurchargeValue.StylePriority.UseTextAlignment = false;
+            this.FPPASurchargeValue.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
             // Rpt_LTMD_TOD_Print
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -4166,14 +4229,17 @@
             this.DrawGrid = false;
             this.DrawWatermark = true;
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-            this.Margins = new DevExpress.Drawing.DXMargins(10, 11, 0, 0);
+            this.Margins = new DevExpress.Drawing.DXMargins(10F, 11F, 0F, 0F);
             this.PageHeight = 1123;
             this.PageWidth = 794;
             this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.A4;
             this.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.Pixels;
             this.SnapGridSize = 12.5F;
-            this.Version = "21.2";
-            this.Watermark.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Zoom;
+            this.Version = "24.1";
+            xrWatermark1.Id = "Watermark1";
+            xrWatermark1.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Zoom;
+            this.Watermarks.AddRange(new DevExpress.XtraPrinting.Drawing.Watermark[] {
+            xrWatermark1});
             this.BeforePrint += new DevExpress.XtraReports.UI.BeforePrintEventHandler(this.Rpt_LTMD_TOD_Print_BeforePrint);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
@@ -4410,6 +4476,9 @@
         private DevExpress.XtraReports.UI.XRLabel GreenTariffValue;
         private DevExpress.XtraReports.UI.XRLabel GreenTariff;
         private DevExpress.XtraReports.UI.XRLabel GreenTariffHindi;
+        private DevExpress.XtraReports.UI.XRLabel lblFPPA;
+        private DevExpress.XtraReports.UI.XRLabel lblFPPAHindi;
+        private DevExpress.XtraReports.UI.XRLabel FPPASurchargeValue;
         //private System.Windows.Forms.BindingSource bsrptData;
         //private System.Windows.Forms.BindingSource bindingSource1;
     }

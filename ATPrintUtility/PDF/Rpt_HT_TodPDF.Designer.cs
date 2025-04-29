@@ -1909,7 +1909,7 @@
             this.lblFPPA.CanShrink = true;
             this.lblFPPA.Dpi = 96F;
             this.lblFPPA.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 8F);
-            this.lblFPPA.LocationFloat = new DevExpress.Utils.PointFloat(0F, 209.0294F);
+            this.lblFPPA.LocationFloat = new DevExpress.Utils.PointFloat(1F, 209.0294F);
             this.lblFPPA.Name = "lblFPPA";
             this.lblFPPA.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.lblFPPA.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;

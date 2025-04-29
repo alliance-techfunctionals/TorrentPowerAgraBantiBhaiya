@@ -48,6 +48,8 @@
             this.xrLine11 = new DevExpress.XtraReports.UI.XRLine();
             this.xrLine12 = new DevExpress.XtraReports.UI.XRLine();
             this.xrPanel3 = new DevExpress.XtraReports.UI.XRPanel();
+            this.lblFPPA = new DevExpress.XtraReports.UI.XRLabel();
+            this.FPPASurchargeValue = new DevExpress.XtraReports.UI.XRLabel();
             this.GreenTariffValue = new DevExpress.XtraReports.UI.XRLabel();
             this.GreenTariff = new DevExpress.XtraReports.UI.XRLabel();
             this.bd_Solar_Export_Value = new DevExpress.XtraReports.UI.XRLabel();
@@ -226,8 +228,6 @@
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.objectDataSource1 = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
             this.objectDataSource2 = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
-            this.lblFPPA = new DevExpress.XtraReports.UI.XRLabel();
-            this.FPPASurchargeValue = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource2)).BeginInit();
@@ -542,6 +542,37 @@
             this.xrPanel3.StylePriority.UseBorderColor = false;
             this.xrPanel3.StylePriority.UseBorderDashStyle = false;
             this.xrPanel3.StylePriority.UseBorders = false;
+            // 
+            // lblFPPA
+            // 
+            this.lblFPPA.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
+            this.lblFPPA.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.lblFPPA.Dpi = 96F;
+            this.lblFPPA.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.lblFPPA.LocationFloat = new DevExpress.Utils.PointFloat(0F, 176.8691F);
+            this.lblFPPA.Multiline = true;
+            this.lblFPPA.Name = "lblFPPA";
+            this.lblFPPA.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.lblFPPA.SizeF = new System.Drawing.SizeF(373F, 16.08F);
+            this.lblFPPA.StylePriority.UseBorderDashStyle = false;
+            this.lblFPPA.StylePriority.UseBorders = false;
+            this.lblFPPA.StylePriority.UseFont = false;
+            this.lblFPPA.Text = "FPPA Surcharge";
+            // 
+            // FPPASurchargeValue
+            // 
+            this.FPPASurchargeValue.Dpi = 96F;
+            this.FPPASurchargeValue.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L10_FPPASurcharge]")});
+            this.FPPASurchargeValue.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.FPPASurchargeValue.LocationFloat = new DevExpress.Utils.PointFloat(280F, 177.8692F);
+            this.FPPASurchargeValue.Multiline = true;
+            this.FPPASurchargeValue.Name = "FPPASurchargeValue";
+            this.FPPASurchargeValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.FPPASurchargeValue.SizeF = new System.Drawing.SizeF(95F, 15.08F);
+            this.FPPASurchargeValue.StylePriority.UseFont = false;
+            this.FPPASurchargeValue.StylePriority.UseTextAlignment = false;
+            this.FPPASurchargeValue.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // GreenTariffValue
             // 
@@ -3307,10 +3338,10 @@
             // 
             this.xrPanel1.CanGrow = false;
             this.xrPanel1.Dpi = 96F;
-            this.xrPanel1.LocationFloat = new DevExpress.Utils.PointFloat(64.328F, 591.5099F);
+            this.xrPanel1.LocationFloat = new DevExpress.Utils.PointFloat(64.328F, 576.5099F);
             this.xrPanel1.LockedInUserDesigner = true;
             this.xrPanel1.Name = "xrPanel1";
-            this.xrPanel1.SizeF = new System.Drawing.SizeF(375.672F, 141.8715F);
+            this.xrPanel1.SizeF = new System.Drawing.SizeF(375.672F, 156.8715F);
             // 
             // objectDataSource1
             // 
@@ -3321,37 +3352,6 @@
             // 
             this.objectDataSource2.DataSourceType = null;
             this.objectDataSource2.Name = "objectDataSource2";
-            // 
-            // lblFPPA
-            // 
-            this.lblFPPA.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
-            this.lblFPPA.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.lblFPPA.Dpi = 96F;
-            this.lblFPPA.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
-            this.lblFPPA.LocationFloat = new DevExpress.Utils.PointFloat(0F, 176.8691F);
-            this.lblFPPA.Multiline = true;
-            this.lblFPPA.Name = "lblFPPA";
-            this.lblFPPA.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.lblFPPA.SizeF = new System.Drawing.SizeF(373F, 16.08F);
-            this.lblFPPA.StylePriority.UseBorderDashStyle = false;
-            this.lblFPPA.StylePriority.UseBorders = false;
-            this.lblFPPA.StylePriority.UseFont = false;
-            this.lblFPPA.Text = "FPPA Surcharge";
-            // 
-            // FPPASurchargeValue
-            // 
-            this.FPPASurchargeValue.Dpi = 96F;
-            this.FPPASurchargeValue.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L10_FPPASurcharge]")});
-            this.FPPASurchargeValue.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
-            this.FPPASurchargeValue.LocationFloat = new DevExpress.Utils.PointFloat(280F, 177.8692F);
-            this.FPPASurchargeValue.Multiline = true;
-            this.FPPASurchargeValue.Name = "FPPASurchargeValue";
-            this.FPPASurchargeValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.FPPASurchargeValue.SizeF = new System.Drawing.SizeF(95F, 15.08F);
-            this.FPPASurchargeValue.StylePriority.UseFont = false;
-            this.FPPASurchargeValue.StylePriority.UseTextAlignment = false;
-            this.FPPASurchargeValue.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // Rpt_HT_Solar_PDF
             // 
