@@ -486,11 +486,8 @@ namespace AT.Print.PDF
                 FPPASurchargeValue.Visible = false;
             }
 
-            // Step 1: Find last visible control BottomF
             float lastBottomF = 0;
             int visibleCount = 0;
-
-            // Check each control in order
             if (bd_ExcessDemandCharges.Visible)
             {
                 lastBottomF = bd_ExcessDemandCharges.BottomF;

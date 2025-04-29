@@ -487,13 +487,61 @@ namespace AT.Print
                 lblFPPAHindi.Visible = false;
                 FPPASurchargeValue.Visible = false;
             }
-
-            if (bd_ExcessDemandCharges.Visible == true && bd_AcCharge.Visible == true && bd_AdjustmentMinimumCharges.Visible == true && bd_OtherCharges.Visible == true && GreenTariff.Visible == true && Subsidy.Visible == true && lblFPPA.Visible == true)
+            float lastBottomF = 0;
+            int visibleCount = 0;
+            if (bd_ExcessDemandCharges.Visible)
             {
-                xrLabel35.TopF = lblFPPA.BottomF;
-                xrLabel34.TopF = lblFPPA.BottomF;
-                xrLabel75.TopF = lblFPPA.BottomF;
+                lastBottomF = bd_ExcessDemandCharges.BottomF;
+                visibleCount++;
             }
+            if (bd_AcCharge.Visible)
+            {
+                lastBottomF = bd_AcCharge.BottomF;
+                visibleCount++;
+            }
+
+            if (bd_AdjustmentMinimumCharges.Visible)
+            {
+                lastBottomF = bd_AdjustmentMinimumCharges.BottomF;
+                visibleCount++;
+            }
+
+            if (bd_OtherCharges.Visible)
+            {
+                lastBottomF = bd_OtherCharges.BottomF;
+                visibleCount++;
+            }
+            if (Subsidy.Visible)
+            {
+                lastBottomF = Subsidy.BottomF;
+                visibleCount++;
+            }
+            if (GreenTariff.Visible)
+            {
+                lastBottomF = GreenTariff.BottomF;
+                visibleCount++;
+            }
+            if (lblFPPA.Visible)
+            {
+                lastBottomF = lblFPPA.BottomF;
+                visibleCount++;
+            }
+            if (visibleCount >= 6)
+            {
+                xrLabel35.TopF = lastBottomF;
+                xrLabel34.TopF = lastBottomF;
+                xrLabel75.TopF = lastBottomF;
+            }
+
+
+
+
+            //if (bd_ExcessDemandCharges.Visible == true && bd_AcCharge.Visible == true && bd_AdjustmentMinimumCharges.Visible == true && bd_OtherCharges.Visible == true && GreenTariff.Visible == true && Subsidy.Visible == true && lblFPPA.Visible == true)
+            //{
+            //    xrLabel35.TopF = lblFPPA.BottomF;
+            //    xrLabel34.TopF = lblFPPA.BottomF;
+            //    xrLabel75.TopF = lblFPPA.BottomF;
+            //}
 
 
             //Late Payment Surcharge

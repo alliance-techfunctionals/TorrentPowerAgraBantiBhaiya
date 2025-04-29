@@ -357,28 +357,76 @@ namespace AT.Print
                 GreenTariff.Visible = false;
                 GreenTariffHindi.Visible = false;
                 GreenTariffValue.Visible = false;
-            }
 
-            if (bd_ExcessDemandCharges.Visible == true && bd_AcCharge.Visible == true && bdPowerFactorCharges.Visible == true && bd_AdjustmentMinimumCharges.Visible == true && bd_OtherCharges.Visible == true && Subsidy.Visible == true && GreenTariff.Visible == true)
-            {
-                xrLabel35.TopF = GreenTariff.BottomF;
-                xrLabel34.TopF = GreenTariff.BottomF;
-                xrLabel75.TopF = GreenTariff.BottomF;
+                GreenTariff.TopF = Subsidy.TopF;
+                GreenTariffHindi.TopF = Subsidy.TopF;
+                GreenTariffValue.TopF = Subsidy.TopF;
+
             }
-            else if (bd_ExcessDemandCharges.Visible == true && bd_AcCharge.Visible == true && bdPowerFactorCharges.Visible == true && bd_AdjustmentMinimumCharges.Visible == true && bd_OtherCharges.Visible == true && Subsidy.Visible == true)
+            lblFPPA.TopF = GreenTariff.BottomF;
+            lblFPPAHindi.TopF = GreenTariff.BottomF;
+            FPPASurchargeValue.TopF = GreenTariff.BottomF;
+
+            if (op[0].L10_FPPASurcharge == "0.00" || string.IsNullOrEmpty(op[0].L10_FPPASurcharge))
             {
-                xrLabel35.TopF = Subsidy.BottomF;
-                xrLabel34.TopF = Subsidy.BottomF;
-                xrLabel75.TopF = Subsidy.BottomF;
-            }
-            else if (bd_ExcessDemandCharges.Visible == true && bd_AcCharge.Visible == true && bdPowerFactorCharges.Visible == true && bd_AdjustmentMinimumCharges.Visible == true && bd_OtherCharges.Visible == true && GreenTariff.Visible == true)
-            {
-                xrLabel35.TopF = GreenTariff.BottomF;
-                xrLabel34.TopF = GreenTariff.BottomF;
-                xrLabel75.TopF = GreenTariff.BottomF;
-            }
+                lblFPPA.Visible = false;
+                lblFPPAHindi.Visible = false;
+                FPPASurchargeValue.Visible = false;
 
 
+            }
+            float lastBottomF = 0;
+            int visibleCount = 0;
+            if (bd_ExcessDemandCharges.Visible)
+            {
+                lastBottomF = bd_ExcessDemandCharges.BottomF;
+                visibleCount++;
+            }
+            if (bd_AcCharge.Visible)
+            {
+                lastBottomF = bd_AcCharge.BottomF;
+                visibleCount++;
+            }
+            if (bdPowerFactorCharges.Visible)
+            {
+                lastBottomF = bdPowerFactorCharges.BottomF;
+                visibleCount++;
+            }
+
+            if (bd_AdjustmentMinimumCharges.Visible)
+            {
+                lastBottomF = bd_AdjustmentMinimumCharges.BottomF;
+                visibleCount++;
+            }
+
+            if (bd_OtherCharges.Visible)
+            {
+                lastBottomF = bd_OtherCharges.BottomF;
+                visibleCount++;
+            }
+            if (Subsidy.Visible)
+            {
+                lastBottomF = Subsidy.BottomF;
+                visibleCount++;
+            }
+            if (GreenTariff.Visible)
+            {
+                lastBottomF = GreenTariff.BottomF;
+                visibleCount++;
+            }
+            if (lblFPPA.Visible)
+            {
+                lastBottomF = lblFPPA.BottomF;
+                visibleCount++;
+            }
+            if (visibleCount >= 6)
+            {
+                xrLabel35.TopF = lastBottomF;
+                xrLabel34.TopF = lastBottomF;
+                xrLabel75.TopF = lastBottomF;
+            }
+
+            
 
             //Late Payment Surcharge
             if (op[0].L9_Int_Tpl == "0.00" || string.IsNullOrEmpty(op[0].L9_Int_Tpl))
