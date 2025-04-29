@@ -76,6 +76,8 @@ namespace AT.Print.Utils
         public string L10_UPPCL_Int_on_Arrear_Amount { get; set; }
         public string L10_Theft_Amount { get; set; }
         public string L10_Mode { get; set; }
+        public string L10_FPPASurcharge { get; set; }
+
 
         public string L11_MTRSNO_METER1 { get; set; }
         public string L11_MTRSNO_METER_2_IF_AVAILABLE { get; set; }

@@ -561,9 +561,19 @@ namespace AT.Print.PDF
                 GreenTariff.TopF = Subsidy.TopF;
                 GreenTariffValue.TopF = Subsidy.TopF;
             }
+            lblFPPA.TopF = GreenTariff.BottomF;
+            FPPASurchargeValue.TopF = GreenTariff.BottomF;
 
-            bd_TotalCurrentDues.TopF = GreenTariff.BottomF;
-            bd_TotalCurrentDuesValues.TopF = GreenTariff.BottomF;
+            if (op[0].L10_FPPASurcharge== "0.00" || string.IsNullOrEmpty(op[0].L10_FPPASurcharge))
+            {
+                lblFPPA.Visible = false;
+                FPPASurchargeValue.Visible = false;
+
+                lblFPPA.TopF = GreenTariff.TopF;
+                FPPASurchargeValue.TopF = GreenTariff.TopF;
+            }
+            bd_TotalCurrentDues.TopF = lblFPPA.BottomF;
+            bd_TotalCurrentDuesValues.TopF = FPPASurchargeValue.BottomF;
 
             bd_Arrears.TopF = bd_TotalCurrentDues.BottomF;
             bd_Arrears_values.TopF = bd_TotalCurrentDues.BottomF;
@@ -942,8 +952,8 @@ namespace AT.Print.PDF
                 Rpt_HT_Solar_PDF_visible.visibleon();
                 bd_SolarExportEnergy.Visible = false;
                 bd_Solar_Export_Value.Visible = false;
-                bd_SolarExportEnergy.TopF = GreenTariff.TopF;
-                bd_Solar_Export_Value.TopF = GreenTariffValue.TopF;
+                bd_SolarExportEnergy.TopF = lblFPPA.TopF;
+                bd_Solar_Export_Value.TopF = FPPASurchargeValue.TopF;
             }
             #endregion
         }
