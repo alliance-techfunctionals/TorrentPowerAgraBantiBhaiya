@@ -769,28 +769,28 @@ namespace AT.Print.PDF
                     adjustMessages(xrMessageExcessDemand);
                 }
             }
-            if (!string.IsNullOrEmpty(op[0].L10_Theft_Amount) && op[0].L10_Theft_Amount != "0.00")
-            {
-                if (!IsMessageLimitExceeds(totalMessages))
-                {
-                    totalMessages++;
-                    XRLabel xrMessageTheftAmount = new XRLabel
-                    {
-                        Font = new DXFont("Kruti Dev 010", 10),
-                        TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                        Text = string.Format(getMessage(LoadStaticData._HindiMessage, "TFA"), op[0].L10_Theft_Amount.Replace('.', '-')),
-                        WordWrap = true,
-                        WidthF = xrPanel1.WidthF,
-                        KeepTogether = true,
-                        HeightF = 1,
-                        Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                    };
+            //if (!string.IsNullOrEmpty(op[0].L10_Theft_Amount) && op[0].L10_Theft_Amount != "0.00")
+            //{
+            //    if (!IsMessageLimitExceeds(totalMessages))
+            //    {
+            //        totalMessages++;
+            //        XRLabel xrMessageTheftAmount = new XRLabel
+            //        {
+            //            Font = new DXFont("Kruti Dev 010", 10),
+            //            TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+            //            Text = string.Format(getMessage(LoadStaticData._HindiMessage, "TFA"), op[0].L10_Theft_Amount.Replace('.', '-')),
+            //            WordWrap = true,
+            //            WidthF = xrPanel1.WidthF,
+            //            KeepTogether = true,
+            //            HeightF = 1,
+            //            Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+            //        };
 
 
-                    xrPanel1.Controls.Add(xrMessageTheftAmount);
-                    adjustMessages(xrMessageTheftAmount);
-                }
-            }
+            //        xrPanel1.Controls.Add(xrMessageTheftAmount);
+            //        adjustMessages(xrMessageTheftAmount);
+            //    }
+            //}
             #endregion
 
             #region Template Messages

@@ -670,29 +670,29 @@ namespace AT.Print
             #region Custom Messages
             var totalMessages = messageFromFile;
 
-            if (!String.IsNullOrEmpty(op[0].L6_LT_Metering_Flag))
-            {
+            //if (!String.IsNullOrEmpty(op[0].L6_LT_Metering_Flag))
+            //{
 
-                if (!IsMessageLimitExceeds(totalMessages))
-                {
-                    totalMessages++;
-                    XRLabel xrMessageTheftAmount = new XRLabel
-                    {
-                        Font = new DXFont("DIN Pro Regular", 8),
-                        TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                        Text = string.Format("*" + getMessage(LoadStaticData._EnglishMessage, "BRDCST3"), "*" + op[0].L10_TheftAmount.Replace('.', '-')),
-                        WordWrap = false,
-                        AutoWidth = true,
-                        KeepTogether = true,
-                        HeightF = 2,
-                        Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                    };
+            //    if (!IsMessageLimitExceeds(totalMessages))
+            //    {
+            //        totalMessages++;
+            //        XRLabel xrMessageTheftAmount = new XRLabel
+            //        {
+            //            Font = new DXFont("DIN Pro Regular", 8),
+            //            TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+            //            Text = string.Format("*" + getMessage(LoadStaticData._EnglishMessage, "BRDCST3"), "*" + op[0].L10_TheftAmount.Replace('.', '-')),
+            //            WordWrap = false,
+            //            AutoWidth = true,
+            //            KeepTogether = true,
+            //            HeightF = 2,
+            //            Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+            //        };
 
 
-                    xrPanel1.Controls.Add(xrMessageTheftAmount);
-                    adjustMessages(xrMessageTheftAmount);
-                }
-            }
+            //        xrPanel1.Controls.Add(xrMessageTheftAmount);
+            //        adjustMessages(xrMessageTheftAmount);
+            //    }
+            //}
 
             if (!string.IsNullOrEmpty(op[0].L1_DisconnectionMSGPrintingIMMEDIATE) && op[0].L1_DisconnectionMSGPrintingIMMEDIATE != "0")
             {
@@ -715,28 +715,28 @@ namespace AT.Print
                 }
             }
 
-            if (!string.IsNullOrEmpty(op[0].L10_TheftAmount) && op[0].L10_TheftAmount != "0.00")
-            {
-                if (!IsMessageLimitExceeds(totalMessages))
-                {
-                    totalMessages++;
-                    XRLabel xrMessageTheftAmount = new XRLabel
-                    {
-                        Font = new DXFont("Kruti Dev 010", 10),
-                        TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                        Text = string.Format(getMessage(LoadStaticData._HindiMessage, "TFA"), op[0].L10_TheftAmount.Replace('.', '-')),
-                        WordWrap = false,
-                        AutoWidth = true,
-                        KeepTogether = true,
-                        HeightF = 2,
-                        Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                    };
+            //if (!string.IsNullOrEmpty(op[0].L10_TheftAmount) && op[0].L10_TheftAmount != "0.00")
+            //{
+            //    if (!IsMessageLimitExceeds(totalMessages))
+            //    {
+            //        totalMessages++;
+            //        XRLabel xrMessageTheftAmount = new XRLabel
+            //        {
+            //            Font = new DXFont("Kruti Dev 010", 10),
+            //            TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+            //            Text = string.Format(getMessage(LoadStaticData._HindiMessage, "TFA"), op[0].L10_TheftAmount.Replace('.', '-')),
+            //            WordWrap = false,
+            //            AutoWidth = true,
+            //            KeepTogether = true,
+            //            HeightF = 2,
+            //            Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+            //        };
 
 
-                    xrPanel1.Controls.Add(xrMessageTheftAmount);
-                    adjustMessages(xrMessageTheftAmount);
-                }
-            }
+            //        xrPanel1.Controls.Add(xrMessageTheftAmount);
+            //        adjustMessages(xrMessageTheftAmount);
+            //    }
+            //}
 
             if (!string.IsNullOrEmpty(op[0].L10_TotArrUPPCLIntUPPCLIntArrUPPCL) && !Convert.ToDecimal(op[0].L10_TotArrUPPCLIntUPPCLIntArrUPPCL).Equals(decimal.Zero))
             {
