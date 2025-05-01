@@ -670,29 +670,31 @@ namespace AT.Print
             #region Custom Messages
             var totalMessages = messageFromFile;
 
-            //if (!String.IsNullOrEmpty(op[0].L6_LT_Metering_Flag))
-            //{
+            if (!String.IsNullOrEmpty(op[0].L6_LT_Metering_Flag))
+            {
 
-            //    if (!IsMessageLimitExceeds(totalMessages))
-            //    {
-            //        totalMessages++;
-            //        XRLabel xrMessageTheftAmount = new XRLabel
-            //        {
-            //            Font = new DXFont("DIN Pro Regular", 8),
-            //            TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-            //            Text = string.Format("*" + getMessage(LoadStaticData._EnglishMessage, "BRDCST3"), "*" + op[0].L10_TheftAmount.Replace('.', '-')),
-            //            WordWrap = false,
-            //            AutoWidth = true,
-            //            KeepTogether = true,
-            //            HeightF = 2,
-            //            Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-            //        };
+                if (!IsMessageLimitExceeds(totalMessages))
+                {
+                    totalMessages++;
+                    XRLabel xrMessageTheftAmount = new XRLabel
+                    {
+                        Font = new DXFont("DIN Pro Regular", 8),
+                        TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+                        Text = "*" + getMessage(LoadStaticData._EnglishMessage, "BRDCST3"),
+
+                        //Text = string.Format("*" + getMessage(LoadStaticData._EnglishMessage, "BRDCST3"), "*" + op[0].L10_TheftAmount.Replace('.', '-')),
+                        WordWrap = false,
+                        AutoWidth = true,
+                        KeepTogether = true,
+                        HeightF = 2,
+                        Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+                    };
 
 
-            //        xrPanel1.Controls.Add(xrMessageTheftAmount);
-            //        adjustMessages(xrMessageTheftAmount);
-            //    }
-            //}
+                    xrPanel1.Controls.Add(xrMessageTheftAmount);
+                    adjustMessages(xrMessageTheftAmount);
+                }
+            }
 
             if (!string.IsNullOrEmpty(op[0].L1_DisconnectionMSGPrintingIMMEDIATE) && op[0].L1_DisconnectionMSGPrintingIMMEDIATE != "0")
             {
