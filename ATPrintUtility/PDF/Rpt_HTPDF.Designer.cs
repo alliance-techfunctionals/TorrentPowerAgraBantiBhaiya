@@ -2080,13 +2080,12 @@
             // 
             this.xrLabel116.CanGrow = false;
             this.xrLabel116.Dpi = 96F;
-            this.xrLabel116.Font = new DevExpress.Drawing.DXFont("Kruti Dev 010", 11.25F, DevExpress.Drawing.DXFontStyle.Bold, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {
-            new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
+            this.xrLabel116.Font = new DevExpress.Drawing.DXFont("Kruti Dev 010", 11F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel116.LocationFloat = new DevExpress.Utils.PointFloat(457F, 732.08F);
             this.xrLabel116.Multiline = true;
             this.xrLabel116.Name = "xrLabel116";
             this.xrLabel116.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel116.SizeF = new System.Drawing.SizeF(139.836F, 15F);
+            this.xrLabel116.SizeF = new System.Drawing.SizeF(164F, 15F);
             this.xrLabel116.StylePriority.UseFont = false;
             this.xrLabel116.Text = "vU; Vh-ih-,y vo\'ks\"k ns;";
             // 

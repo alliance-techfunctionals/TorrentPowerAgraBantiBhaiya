@@ -3124,7 +3124,7 @@
             this.xrLabel116.Multiline = true;
             this.xrLabel116.Name = "xrLabel116";
             this.xrLabel116.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel116.SizeF = new System.Drawing.SizeF(133.408F, 12.07996F);
+            this.xrLabel116.SizeF = new System.Drawing.SizeF(164F, 12.08F);
             this.xrLabel116.StylePriority.UseFont = false;
             this.xrLabel116.Text = "vU; Vh-ih-,y vo\'ks\"k ns;";
             // 

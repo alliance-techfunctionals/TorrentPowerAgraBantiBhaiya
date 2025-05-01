@@ -118,6 +118,9 @@
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPanel3 = new DevExpress.XtraReports.UI.XRPanel();
+            this.FPPASurchargeValue = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblFPPA = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblFPPAHindi = new DevExpress.XtraReports.UI.XRLabel();
             this.SubsidyValue = new DevExpress.XtraReports.UI.XRLabel();
             this.SubsidyHindi = new DevExpress.XtraReports.UI.XRLabel();
             this.Subsidy = new DevExpress.XtraReports.UI.XRLabel();
@@ -258,9 +261,6 @@
             this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
             this.MeterDetailTotLabel = new DevExpress.XtraReports.UI.XRLabel();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.lblFPPA = new DevExpress.XtraReports.UI.XRLabel();
-            this.lblFPPAHindi = new DevExpress.XtraReports.UI.XRLabel();
-            this.FPPASurchargeValue = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -1877,6 +1877,59 @@
             this.xrPanel3.Name = "xrPanel3";
             this.xrPanel3.SizeF = new System.Drawing.SizeF(387F, 226.44F);
             // 
+            // FPPASurchargeValue
+            // 
+            this.FPPASurchargeValue.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
+            this.FPPASurchargeValue.CanGrow = false;
+            this.FPPASurchargeValue.Dpi = 96F;
+            this.FPPASurchargeValue.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L10_FPPASurcharge]")});
+            this.FPPASurchargeValue.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 8F);
+            this.FPPASurchargeValue.LocationFloat = new DevExpress.Utils.PointFloat(293F, 210.0294F);
+            this.FPPASurchargeValue.Name = "FPPASurchargeValue";
+            this.FPPASurchargeValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.FPPASurchargeValue.SizeF = new System.Drawing.SizeF(94F, 11.97742F);
+            this.FPPASurchargeValue.StylePriority.UseFont = false;
+            this.FPPASurchargeValue.StylePriority.UsePadding = false;
+            this.FPPASurchargeValue.StylePriority.UseTextAlignment = false;
+            this.FPPASurchargeValue.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
+            // lblFPPA
+            // 
+            this.lblFPPA.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
+            this.lblFPPA.BorderColor = System.Drawing.Color.Silver;
+            this.lblFPPA.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
+            this.lblFPPA.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.lblFPPA.CanGrow = false;
+            this.lblFPPA.CanShrink = true;
+            this.lblFPPA.Dpi = 96F;
+            this.lblFPPA.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 8F);
+            this.lblFPPA.LocationFloat = new DevExpress.Utils.PointFloat(0F, 208.0294F);
+            this.lblFPPA.Name = "lblFPPA";
+            this.lblFPPA.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.lblFPPA.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;
+            this.lblFPPA.SizeF = new System.Drawing.SizeF(388F, 16.08F);
+            this.lblFPPA.StylePriority.UseBorderColor = false;
+            this.lblFPPA.StylePriority.UseBorderDashStyle = false;
+            this.lblFPPA.StylePriority.UseBorders = false;
+            this.lblFPPA.StylePriority.UseFont = false;
+            this.lblFPPA.StylePriority.UsePadding = false;
+            this.lblFPPA.Text = "FPPA Surcharge / ";
+            // 
+            // lblFPPAHindi
+            // 
+            this.lblFPPAHindi.CanGrow = false;
+            this.lblFPPAHindi.CanShrink = true;
+            this.lblFPPAHindi.Dpi = 96F;
+            this.lblFPPAHindi.Font = new DevExpress.Drawing.DXFont("Kruti Dev 010", 9F);
+            this.lblFPPAHindi.LocationFloat = new DevExpress.Utils.PointFloat(96.0639F, 209.6294F);
+            this.lblFPPAHindi.Name = "lblFPPAHindi";
+            this.lblFPPAHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.lblFPPAHindi.SizeF = new System.Drawing.SizeF(111.0401F, 11.97743F);
+            this.lblFPPAHindi.StylePriority.UseFont = false;
+            this.lblFPPAHindi.StylePriority.UsePadding = false;
+            this.lblFPPAHindi.Text = "bZa/ku vkSj fctyh vf|Hkkj";
+            // 
             // SubsidyValue
             // 
             this.SubsidyValue.Dpi = 96F;
@@ -3062,7 +3115,7 @@
             this.xrLabel116.Multiline = true;
             this.xrLabel116.Name = "xrLabel116";
             this.xrLabel116.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel116.SizeF = new System.Drawing.SizeF(139.2715F, 12.07996F);
+            this.xrLabel116.SizeF = new System.Drawing.SizeF(164F, 12.08F);
             this.xrLabel116.StylePriority.UseFont = false;
             this.xrLabel116.Text = "vU; Vh-ih-,y vo\'ks\"k ns;";
             // 
@@ -4094,59 +4147,6 @@
             this.MeterDetailTotLabel.StylePriority.UseTextAlignment = false;
             this.MeterDetailTotLabel.Text = "Total / ";
             this.MeterDetailTotLabel.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // lblFPPA
-            // 
-            this.lblFPPA.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
-            this.lblFPPA.BorderColor = System.Drawing.Color.Silver;
-            this.lblFPPA.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
-            this.lblFPPA.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.lblFPPA.CanGrow = false;
-            this.lblFPPA.CanShrink = true;
-            this.lblFPPA.Dpi = 96F;
-            this.lblFPPA.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 8F);
-            this.lblFPPA.LocationFloat = new DevExpress.Utils.PointFloat(0F, 208.0294F);
-            this.lblFPPA.Name = "lblFPPA";
-            this.lblFPPA.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.lblFPPA.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;
-            this.lblFPPA.SizeF = new System.Drawing.SizeF(388F, 16.08F);
-            this.lblFPPA.StylePriority.UseBorderColor = false;
-            this.lblFPPA.StylePriority.UseBorderDashStyle = false;
-            this.lblFPPA.StylePriority.UseBorders = false;
-            this.lblFPPA.StylePriority.UseFont = false;
-            this.lblFPPA.StylePriority.UsePadding = false;
-            this.lblFPPA.Text = "FPPA Surcharge / ";
-            // 
-            // lblFPPAHindi
-            // 
-            this.lblFPPAHindi.CanGrow = false;
-            this.lblFPPAHindi.CanShrink = true;
-            this.lblFPPAHindi.Dpi = 96F;
-            this.lblFPPAHindi.Font = new DevExpress.Drawing.DXFont("Kruti Dev 010", 9F);
-            this.lblFPPAHindi.LocationFloat = new DevExpress.Utils.PointFloat(96.0639F, 209.6294F);
-            this.lblFPPAHindi.Name = "lblFPPAHindi";
-            this.lblFPPAHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.lblFPPAHindi.SizeF = new System.Drawing.SizeF(111.0401F, 11.97743F);
-            this.lblFPPAHindi.StylePriority.UseFont = false;
-            this.lblFPPAHindi.StylePriority.UsePadding = false;
-            this.lblFPPAHindi.Text = "bZa/ku vkSj fctyh vf|Hkkj";
-            // 
-            // FPPASurchargeValue
-            // 
-            this.FPPASurchargeValue.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
-            this.FPPASurchargeValue.CanGrow = false;
-            this.FPPASurchargeValue.Dpi = 96F;
-            this.FPPASurchargeValue.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L10_FPPASurcharge]")});
-            this.FPPASurchargeValue.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 8F);
-            this.FPPASurchargeValue.LocationFloat = new DevExpress.Utils.PointFloat(293F, 210.0294F);
-            this.FPPASurchargeValue.Name = "FPPASurchargeValue";
-            this.FPPASurchargeValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.FPPASurchargeValue.SizeF = new System.Drawing.SizeF(94F, 11.97742F);
-            this.FPPASurchargeValue.StylePriority.UseFont = false;
-            this.FPPASurchargeValue.StylePriority.UsePadding = false;
-            this.FPPASurchargeValue.StylePriority.UseTextAlignment = false;
-            this.FPPASurchargeValue.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // Rpt_HT_TOD_Print
             // 
