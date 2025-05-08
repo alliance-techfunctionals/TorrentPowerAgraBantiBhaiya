@@ -226,6 +226,8 @@
             this.xrPanel1 = new DevExpress.XtraReports.UI.XRPanel();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.objectDataSource1 = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
+            this.FPPASurchargeValue = new DevExpress.XtraReports.UI.XRLabel();
+            this.lblFPPA = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -2590,6 +2592,8 @@
             this.xrPanel3.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrPanel3.CanGrow = false;
             this.xrPanel3.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.FPPASurchargeValue,
+            this.lblFPPA,
             this.bd_Solar_Export_Value,
             this.bd_SolarExportEnergy,
             this.SubsidyValue,
@@ -2631,7 +2635,7 @@
             this.xrPanel3.Dpi = 96F;
             this.xrPanel3.LocationFloat = new DevExpress.Utils.PointFloat(65F, 365F);
             this.xrPanel3.Name = "xrPanel3";
-            this.xrPanel3.SizeF = new System.Drawing.SizeF(375F, 253.9523F);
+            this.xrPanel3.SizeF = new System.Drawing.SizeF(375F, 273.95F);
             this.xrPanel3.StylePriority.UseBorderColor = false;
             this.xrPanel3.StylePriority.UseBorderDashStyle = false;
             this.xrPanel3.StylePriority.UseBorders = false;
@@ -3367,15 +3371,54 @@
             // 
             this.xrPanel1.CanGrow = false;
             this.xrPanel1.Dpi = 96F;
-            this.xrPanel1.LocationFloat = new DevExpress.Utils.PointFloat(65F, 571.8262F);
+            this.xrPanel1.LocationFloat = new DevExpress.Utils.PointFloat(65F, 587.9068F);
             this.xrPanel1.LockedInUserDesigner = true;
             this.xrPanel1.Name = "xrPanel1";
-            this.xrPanel1.SizeF = new System.Drawing.SizeF(375.0001F, 174.5551F);
+            this.xrPanel1.SizeF = new System.Drawing.SizeF(375.0001F, 158.4745F);
             // 
             // objectDataSource1
             // 
             this.objectDataSource1.DataSourceType = null;
             this.objectDataSource1.Name = "objectDataSource1";
+            // 
+            // FPPASurchargeValue
+            // 
+            this.FPPASurchargeValue.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
+            this.FPPASurchargeValue.CanGrow = false;
+            this.FPPASurchargeValue.Dpi = 96F;
+            this.FPPASurchargeValue.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L10_FPPASurcharge]")});
+            this.FPPASurchargeValue.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 8F);
+            this.FPPASurchargeValue.LocationFloat = new DevExpress.Utils.PointFloat(279F, 177.7347F);
+            this.FPPASurchargeValue.Name = "FPPASurchargeValue";
+            this.FPPASurchargeValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.FPPASurchargeValue.SizeF = new System.Drawing.SizeF(96F, 15.08F);
+            this.FPPASurchargeValue.StylePriority.UseFont = false;
+            this.FPPASurchargeValue.StylePriority.UsePadding = false;
+            this.FPPASurchargeValue.StylePriority.UseTextAlignment = false;
+            this.FPPASurchargeValue.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
+            // lblFPPA
+            // 
+            this.lblFPPA.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
+            this.lblFPPA.BorderColor = System.Drawing.Color.Silver;
+            this.lblFPPA.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
+            this.lblFPPA.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.lblFPPA.CanGrow = false;
+            this.lblFPPA.CanShrink = true;
+            this.lblFPPA.Dpi = 96F;
+            this.lblFPPA.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 8F);
+            this.lblFPPA.LocationFloat = new DevExpress.Utils.PointFloat(0F, 175.9718F);
+            this.lblFPPA.Name = "lblFPPA";
+            this.lblFPPA.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.lblFPPA.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;
+            this.lblFPPA.SizeF = new System.Drawing.SizeF(375F, 15F);
+            this.lblFPPA.StylePriority.UseBorderColor = false;
+            this.lblFPPA.StylePriority.UseBorderDashStyle = false;
+            this.lblFPPA.StylePriority.UseBorders = false;
+            this.lblFPPA.StylePriority.UseFont = false;
+            this.lblFPPA.StylePriority.UsePadding = false;
+            this.lblFPPA.Text = "FPPA Surcharge";
             // 
             // RptLTSolatPrint
             // 
@@ -3606,6 +3649,8 @@
         private DevExpress.XtraReports.UI.XRPictureBox xrQRCODE;
         private DevExpress.XtraReports.UI.XRLabel GreenTariffValue;
         private DevExpress.XtraReports.UI.XRLabel GreenTariff;
+        private DevExpress.XtraReports.UI.XRLabel FPPASurchargeValue;
+        private DevExpress.XtraReports.UI.XRLabel lblFPPA;
         //private System.Windows.Forms.BindingSource bsrptData;
         //private System.Windows.Forms.BindingSource bindingSource1;
     }

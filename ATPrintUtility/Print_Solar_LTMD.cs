@@ -385,6 +385,7 @@ namespace AT.Print
             sht.L10_UPPCL_Int_on_Arrear_Amount = dtSolarBill.Rows[9][6].ToString();
             sht.L10_Theft_Amount = dtSolarBill.Rows[9][7].ToString();
             sht.L10_Mode = dtSolarBill.Rows[9][8].ToString();
+            sht.L10_FPPASurcharge = dtSolarBill.Rows[9][9].ToString();
             //   Line 10 End
             #endregion
 

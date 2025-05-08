@@ -83,6 +83,7 @@ namespace AT.Print.Utils
         public string L10_UPPCLIntOnArrearAmount { get; set; }
         public string L10_TheftAmount { get; set; }
         public string L10_Mode { get; set; }
+        public string L10_FPPASurcharge { get; set; }
         public string L11_MonYear_1 { get; set; }
         public string L11_KWH_UNITS_1 { get; set; }
         public string L11_MonYear_2 { get; set; }

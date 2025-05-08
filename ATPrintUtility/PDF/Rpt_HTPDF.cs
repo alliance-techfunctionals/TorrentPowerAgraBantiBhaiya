@@ -464,22 +464,82 @@ namespace AT.Print.PDF
             GreenTariff.TopF = Subsidy.BottomF;
             GreenTariffHindi.TopF = Subsidy.BottomF;
             GreenTariffValue.TopF = Subsidy.BottomF;
-
             if (op[0].L8_GreenTariff_Charges == "0.00" || string.IsNullOrEmpty(op[0].L8_GreenTariff_Charges))
             {
                 GreenTariff.Visible = false;
                 GreenTariffHindi.Visible = false;
                 GreenTariffValue.Visible = false;
+
+                GreenTariff.TopF = Subsidy.TopF;
+                GreenTariffHindi.TopF = Subsidy.TopF;
+                GreenTariffValue.TopF = Subsidy.TopF;
             }
 
-           
-            if (bd_ExcessDemandCharges.Visible == true && bd_AcCharge.Visible == true && bd_AdjustmentMinimumCharges.Visible == true && bd_OtherCharges.Visible == true &&  GreenTariff.Visible == true && Subsidy.Visible == true)
+            lblFPPA.TopF = GreenTariff.BottomF;
+            lblFPPAHindi.TopF = GreenTariff.BottomF;
+            FPPASurchargeValue.TopF = GreenTariff.BottomF;
+
+            if (op[0].L10_FPPASurcharge == "0.00" || string.IsNullOrEmpty(op[0].L10_FPPASurcharge))
             {
-                xrLabel35.TopF = GreenTariff.BottomF;
-                xrLabel34.TopF = GreenTariff.BottomF;
-                xrLabel75.TopF = GreenTariff.BottomF;
-
+                lblFPPA.Visible = false;
+                lblFPPAHindi.Visible = false;
+                FPPASurchargeValue.Visible = false;
             }
+
+            float lastBottomF = 0;
+            int visibleCount = 0;
+            if (bd_ExcessDemandCharges.Visible)
+            {
+                lastBottomF = bd_ExcessDemandCharges.BottomF;
+                visibleCount++;
+            }
+            if (bd_AcCharge.Visible)
+            {
+                lastBottomF = bd_AcCharge.BottomF;
+                visibleCount++;
+            }
+
+            if (bd_AdjustmentMinimumCharges.Visible)
+            {
+                lastBottomF = bd_AdjustmentMinimumCharges.BottomF;
+                visibleCount++;
+            }
+
+            if (bd_OtherCharges.Visible)
+            {
+                lastBottomF = bd_OtherCharges.BottomF;
+                visibleCount++;
+            }
+            if (Subsidy.Visible)
+            {
+                lastBottomF = Subsidy.BottomF;
+                visibleCount++;
+            }
+            if (GreenTariff.Visible)
+            {
+                lastBottomF = GreenTariff.BottomF;
+                visibleCount++;
+            }
+            if (lblFPPA.Visible)
+            { lastBottomF = lblFPPA.BottomF;
+            visibleCount++;
+            }
+            if (visibleCount >= 6)
+            {
+                xrLabel35.TopF = lastBottomF;
+                xrLabel34.TopF = lastBottomF;
+                xrLabel75.TopF = lastBottomF;
+            }
+
+
+
+            //if (bd_ExcessDemandCharges.Visible == true && bd_AcCharge.Visible == true && bd_AdjustmentMinimumCharges.Visible == true && bd_OtherCharges.Visible == true &&  GreenTariff.Visible == true && Subsidy.Visible == true && lblFPPA.Visible == true)
+            //{
+            //    xrLabel35.TopF = lblFPPA.BottomF;
+            //    xrLabel34.TopF = lblFPPA.BottomF;
+            //    xrLabel75.TopF = lblFPPA.BottomF;
+
+            //}
 
 
             //Late Payment Surcharge
@@ -618,7 +678,9 @@ namespace AT.Print.PDF
                     {
                         Font = new DXFont("DIN Pro Regular", 8),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                        Text = string.Format("*" + getMessage(LoadStaticData._EnglishMessage, "BRDCST3"), "*" + op[0].L10_TheftAmount.Replace('.', '-')),
+                        Text = "*" + getMessage(LoadStaticData._EnglishMessage, "BRDCST3"),
+
+                        //Text = string.Format("*" + getMessage(LoadStaticData._EnglishMessage, "BRDCST3"), "*" + op[0].L10_TheftAmount.Replace('.', '-')),
                         WordWrap = false,
                         AutoWidth = true,
                         KeepTogether = true,
@@ -653,28 +715,28 @@ namespace AT.Print.PDF
                 }
             }
 
-            if (!string.IsNullOrEmpty(op[0].L10_TheftAmount) && op[0].L10_TheftAmount != "0.00")
-            {
-                if (!IsMessageLimitExceeds(totalMessages))
-                {
-                    totalMessages++;
-                    XRLabel xrMessageTheftAmount = new XRLabel
-                    {
-                        Font = new DXFont("Kruti Dev 010", 10),
-                        TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                        Text = string.Format(getMessage(LoadStaticData._HindiMessage, "TFA"), op[0].L10_TheftAmount.Replace('.', '-')),
-                        WordWrap = false,
-                        AutoWidth = true,
-                        KeepTogether = true,
-                        HeightF = 1,
-                        Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                    };
+            //if (!string.IsNullOrEmpty(op[0].L10_TheftAmount) && op[0].L10_TheftAmount != "0.00")
+            //{
+            //    if (!IsMessageLimitExceeds(totalMessages))
+            //    {
+            //        totalMessages++;
+            //        XRLabel xrMessageTheftAmount = new XRLabel
+            //        {
+            //            Font = new DXFont("Kruti Dev 010", 10),
+            //            TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+            //            Text = string.Format(getMessage(LoadStaticData._HindiMessage, "TFA"), op[0].L10_TheftAmount.Replace('.', '-')),
+            //            WordWrap = false,
+            //            AutoWidth = true,
+            //            KeepTogether = true,
+            //            HeightF = 1,
+            //            Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+            //        };
 
 
-                    xrPanel1.Controls.Add(xrMessageTheftAmount);
-                    adjustMessages(xrMessageTheftAmount);
-                }
-            }
+            //        xrPanel1.Controls.Add(xrMessageTheftAmount);
+            //        adjustMessages(xrMessageTheftAmount);
+            //    }
+            //}
 
             if (!string.IsNullOrEmpty(op[0].L10_TotArrUPPCLIntUPPCLIntArrUPPCL) && !Convert.ToDecimal(op[0].L10_TotArrUPPCLIntUPPCLIntArrUPPCL).Equals(decimal.Zero))
             {

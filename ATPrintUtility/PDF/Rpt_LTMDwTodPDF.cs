@@ -51,7 +51,7 @@ namespace AT.Print
                 var encodingOptions = new ZXing.Common.EncodingOptions
                 {
                     Margin = 0,
-              
+
                 };
                 barcodeWriter.Options = encodingOptions;
                 var qrCodeBitmap = barcodeWriter.Write(textToEncode);
@@ -460,6 +460,7 @@ namespace AT.Print
                 Subsidy.Visible = false;
                 SubsidyHindi.Visible = false;
                 SubsidyValue.Visible = false;
+
                 Subsidy.TopF = bd_OtherCharges.TopF;
                 SubsidyHindi.TopF = bd_OtherCharges.TopF;
                 SubsidyValue.TopF = bd_OtherCharges.TopF;
@@ -467,19 +468,31 @@ namespace AT.Print
 
             }
             GreenTariff.TopF = Subsidy.BottomF;
-            GreenTariffHindi.TopF= Subsidy.BottomF;
-            GreenTariffValue.TopF= Subsidy.BottomF;
-
-
+            GreenTariffHindi.TopF = Subsidy.BottomF;
+            GreenTariffValue.TopF = Subsidy.BottomF;
 
 
             if (op[0].L8_GreenTariff_Charges == "0.00" || string.IsNullOrEmpty(op[0].L8_GreenTariff_Charges))
             {
                 GreenTariff.Visible = false;
-                GreenTariffHindi.Visible= false;
+                GreenTariffHindi.Visible = false;
                 GreenTariffValue.Visible = false;
+
+                GreenTariff.TopF = Subsidy.TopF;
+                GreenTariffHindi.TopF = Subsidy.TopF;
+                GreenTariffValue.TopF = Subsidy.TopF;
             }
-            
+
+            lblFPPA.TopF = GreenTariff.BottomF;
+            lblFPPAHindi.TopF = GreenTariff.BottomF;
+            FPPASurchargeValue.TopF = GreenTariff.BottomF;
+
+            if (op[0].L10_FPPASurcharge == "0.00" || string.IsNullOrEmpty(op[0].L10_FPPASurcharge))
+            {
+                lblFPPA.Visible = false;
+                lblFPPAHindi.Visible = false;
+                FPPASurchargeValue.Visible = false;
+            }
 
             //Late Payment Surcharge
             if (op[0].L9_Int_Tpl == "0.00" || string.IsNullOrEmpty(op[0].L9_Int_Tpl))
@@ -491,7 +504,7 @@ namespace AT.Print
             #endregion
 
             var messageFromFile = 0;
-            
+
             #region File Messages
 
             if (!string.IsNullOrEmpty(op[0].L26_MESSAGE1))

@@ -524,34 +524,102 @@ namespace AT.Print
             GreenTariffHindi.TopF = Subsidy.BottomF;
             GreenTariffValue.TopF = Subsidy.BottomF;
 
-            
+
             if (op[0].L8_GreenTariff_Charges == "0.00" || string.IsNullOrEmpty(op[0].L8_GreenTariff_Charges))
             {
                 GreenTariff.Visible = false;
                 GreenTariffHindi.Visible = false;
                 GreenTariffValue.Visible = false;
+
+                GreenTariff.TopF = Subsidy.TopF;
+                GreenTariffHindi.TopF = Subsidy.TopF;
+                GreenTariffValue.TopF = Subsidy.TopF;
+            }
+
+            lblFPPA.TopF = GreenTariff.BottomF;
+            lblFPPAHindi.TopF = GreenTariff.BottomF;
+            FPPASurchargeValue.TopF = GreenTariff.BottomF;
+
+            if (op[0].L10_FPPASurcharge == "0.00" || string.IsNullOrEmpty(op[0].L10_FPPASurcharge))
+            {
+                lblFPPA.Visible = false;
+                lblFPPAHindi.Visible = false;
+                FPPASurchargeValue.Visible = false;
+            }
+
+            float lastBottomF = 0;
+            int visibleCount = 0;
+            if (bd_ExcessDemandCharges.Visible)
+            {
+                lastBottomF = bd_ExcessDemandCharges.BottomF;
+                visibleCount++;
+            }
+            if (bd_AcCharge.Visible)
+            {
+                lastBottomF = bd_AcCharge.BottomF;
+                visibleCount++;
+            }
+
+            if (bd_AdjustmentMinimumCharges.Visible)
+            {
+                lastBottomF = bd_AdjustmentMinimumCharges.BottomF;
+                visibleCount++;
+            }
+
+            if (bd_OtherCharges.Visible)
+            {
+                lastBottomF = bd_OtherCharges.BottomF;
+                visibleCount++;
+            }
+            if(bdPowerFactor.Visible)
+            {
+                lastBottomF = bdPowerFactor.BottomF;
+                visibleCount++;
+            }
+            if (Subsidy.Visible)
+            {
+                lastBottomF = Subsidy.BottomF;
+                visibleCount++;
+            }
+            if (GreenTariff.Visible)
+            {
+                lastBottomF = GreenTariff.BottomF;
+                visibleCount++;
+            }
+            if (lblFPPA.Visible)
+            {
+                lastBottomF = lblFPPA.BottomF;
+                visibleCount++;
+            }
+            if (visibleCount >= 6)
+            {
+                xrLabel35.TopF = lastBottomF;
+                xrLabel34.TopF = lastBottomF;
+                xrLabel75.TopF = lastBottomF;
             }
 
 
-            if (bd_ExcessDemandCharges.Visible == true && bd_AcCharge.Visible == true  && bd_AdjustmentMinimumCharges.Visible == true && bd_OtherCharges.Visible == true && bdPowerFactor.Visible == true && Subsidy.Visible == true && GreenTariff.Visible == true)
-            {
-                xrLabel35.TopF = GreenTariff.BottomF;
-                xrLabel34.TopF = GreenTariff.BottomF;
-                xrLabel75.TopF = GreenTariff.BottomF;
-            }
-            else if (bd_ExcessDemandCharges.Visible == true && bd_AcCharge.Visible == true &&  bd_AdjustmentMinimumCharges.Visible == true && bd_OtherCharges.Visible == true && bdPowerFactor.Visible == true && Subsidy.Visible == true)
-            {
-                xrLabel35.TopF = Subsidy.BottomF;
-                xrLabel34.TopF = Subsidy.BottomF; 
-                xrLabel75.TopF = Subsidy.BottomF; 
-            }
-            else if (bd_ExcessDemandCharges.Visible == true && bd_AcCharge.Visible == true  && bd_AdjustmentMinimumCharges.Visible == true && bd_OtherCharges.Visible == true && bdPowerFactor.Visible== true && GreenTariff.Visible == true)
-            {
-                xrLabel35.TopF = GreenTariff.BottomF;
-                xrLabel34.TopF = GreenTariff.BottomF;
-                xrLabel75.TopF = GreenTariff.BottomF;
 
-            }
+
+            //if (bd_ExcessDemandCharges.Visible == true && bd_AcCharge.Visible == true  && bd_AdjustmentMinimumCharges.Visible == true && bd_OtherCharges.Visible == true && bdPowerFactor.Visible == true && Subsidy.Visible == true && GreenTariff.Visible == true)
+            //{
+            //    xrLabel35.TopF = GreenTariff.BottomF;
+            //    xrLabel34.TopF = GreenTariff.BottomF;
+            //    xrLabel75.TopF = GreenTariff.BottomF;
+            //}
+            //else if (bd_ExcessDemandCharges.Visible == true && bd_AcCharge.Visible == true &&  bd_AdjustmentMinimumCharges.Visible == true && bd_OtherCharges.Visible == true && bdPowerFactor.Visible == true && Subsidy.Visible == true)
+            //{
+            //    xrLabel35.TopF = Subsidy.BottomF;
+            //    xrLabel34.TopF = Subsidy.BottomF; 
+            //    xrLabel75.TopF = Subsidy.BottomF; 
+            //}
+            //else if (bd_ExcessDemandCharges.Visible == true && bd_AcCharge.Visible == true  && bd_AdjustmentMinimumCharges.Visible == true && bd_OtherCharges.Visible == true && bdPowerFactor.Visible== true && GreenTariff.Visible == true)
+            //{
+            //    xrLabel35.TopF = GreenTariff.BottomF;
+            //    xrLabel34.TopF = GreenTariff.BottomF;
+            //    xrLabel75.TopF = GreenTariff.BottomF;
+
+            //}
 
             //Late Payment Surcharge
             if (op[0].L9_Int_Tpl == "0.00" || string.IsNullOrEmpty(op[0].L9_Int_Tpl))

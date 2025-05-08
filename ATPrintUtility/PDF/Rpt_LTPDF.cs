@@ -42,13 +42,13 @@ namespace AT.Print.PDF
                 string qrServiceno = "AGR@" + (op[0].L6_SERVDET_SERVNO);
                 byte[] bytesToEncode = Encoding.UTF8.GetBytes(qrServiceno);
                 string base64Encoded = Convert.ToBase64String(bytesToEncode);
-                string textToEncode = (ConfigurationManager.AppSettings["generateQRCodeURL"].ToString())+ base64Encoded;
+                string textToEncode = (ConfigurationManager.AppSettings["generateQRCodeURL"].ToString()) + base64Encoded;
                 BarcodeWriter barcodeWriter = new BarcodeWriter();
                 barcodeWriter.Format = BarcodeFormat.QR_CODE;
                 var encodingOptions = new ZXing.Common.EncodingOptions
                 {
                     Margin = 0,
-                   
+
                 };
                 barcodeWriter.Options = encodingOptions;
                 var qrCodeBitmap = barcodeWriter.Write(textToEncode);
@@ -171,7 +171,7 @@ namespace AT.Print.PDF
                 xrLabel5.Text = op[0].L12_MTRSNO_METER_2_IF_AVAILABLE;//older
                 xrLabel19.Text = op[0].L12_MTRSNO_METER1;//Newer
                 //Meter Old
-                met1_11.Text = "____"; 
+                met1_11.Text = "____";
                 met1_12.Text = op[0].L14_M1_KWH_PASTREAD;
                 met1_21.Text = "____";
                 met1_22.Text = op[0].L13_M1_KWH_PRESREAD;
@@ -336,12 +336,12 @@ namespace AT.Print.PDF
                 bd_OtherChargesHindi.TopF = bd_RlSC2.TopF;
                 bd_OtherChargesValue.TopF = bd_RlSC2.TopF;
             }
-          
-                Subsidy.TopF = bd_OtherCharges.BottomF;
-                SubsidyHindi.TopF = bd_OtherChargesHindi.BottomF;
-                SubsidyValue.TopF = bd_OtherChargesValue.BottomF;
 
-        
+            Subsidy.TopF = bd_OtherCharges.BottomF;
+            SubsidyHindi.TopF = bd_OtherChargesHindi.BottomF;
+            SubsidyValue.TopF = bd_OtherChargesValue.BottomF;
+
+
             if (op[0].L8_Subsidy_Charges == "0.00" || string.IsNullOrEmpty(op[0].L8_Subsidy_Charges))
             {
 
@@ -352,43 +352,89 @@ namespace AT.Print.PDF
 
                 Subsidy.TopF = bd_OtherCharges.TopF;
                 SubsidyHindi.TopF = bd_OtherCharges.TopF;
-                SubsidyValue.TopF= bd_OtherCharges.TopF;
+                SubsidyValue.TopF = bd_OtherCharges.TopF;
 
             }
             GreenTariff.TopF = Subsidy.BottomF;
             GreenTariffHindi.TopF = Subsidy.BottomF;
-            GreenTariffValue.TopF= Subsidy.BottomF;
+            GreenTariffValue.TopF = Subsidy.BottomF;
 
-            if ( op[0].L8_GreenTariff_Charges == "0.00" || string.IsNullOrEmpty(op[0].L8_GreenTariff_Charges))
+            if (op[0].L8_GreenTariff_Charges == "0.00" || string.IsNullOrEmpty(op[0].L8_GreenTariff_Charges))
             {
                 GreenTariff.Visible = false;
                 GreenTariffHindi.Visible = false;
                 GreenTariffValue.Visible = false;
+
+                GreenTariff.TopF = Subsidy.TopF;
+                GreenTariffHindi.TopF = Subsidy.TopF;
+                GreenTariffValue.TopF = Subsidy.TopF;
+
             }
+            lblFPPA.TopF = GreenTariff.BottomF;
+            lblFPPAHindi.TopF = GreenTariff.BottomF;
+            FPPASurchargeValue.TopF = GreenTariff.BottomF;
 
-
-            if (bd_ExcessDemandCharges.Visible == true && bd_AcCharge.Visible == true && bdPowerFactorCharges.Visible == true && bd_AdjustmentMinimumCharges.Visible == true && bd_OtherCharges.Visible == true && Subsidy.Visible == true && GreenTariff.Visible == true)
+            if (op[0].L10_FPPASurcharge == "0.00" || string.IsNullOrEmpty(op[0].L10_FPPASurcharge))
             {
-                xrLabel35.TopF = GreenTariff.BottomF;
-                xrLabel34.TopF = GreenTariff.BottomF;
-                xrLabel75.TopF = GreenTariff.BottomF;
+                lblFPPA.Visible = false;
+                lblFPPAHindi.Visible = false;
+                FPPASurchargeValue.Visible = false;
+
+               
             }
-            else if (bd_ExcessDemandCharges.Visible == true && bd_AcCharge.Visible == true && bdPowerFactorCharges.Visible == true && bd_AdjustmentMinimumCharges.Visible == true && bd_OtherCharges.Visible == true && Subsidy.Visible == true)
+            float lastBottomF = 0;
+            int visibleCount = 0;
+            if (bd_ExcessDemandCharges.Visible)
             {
-                xrLabel35.TopF = Subsidy.BottomF;
-                xrLabel34.TopF = Subsidy.BottomF;
-                xrLabel75.TopF = Subsidy.BottomF;
+                lastBottomF = bd_ExcessDemandCharges.BottomF;
+                visibleCount++;
             }
-            else if (bd_ExcessDemandCharges.Visible == true && bd_AcCharge.Visible == true && bdPowerFactorCharges.Visible == true && bd_AdjustmentMinimumCharges.Visible == true && bd_OtherCharges.Visible == true  && GreenTariff.Visible == true)
+            if (bd_AcCharge.Visible)
             {
-                xrLabel35.TopF = GreenTariff.BottomF;
-                xrLabel34.TopF = GreenTariff.BottomF;
-                xrLabel75.TopF = GreenTariff.BottomF;
+                lastBottomF = bd_AcCharge.BottomF;
+                visibleCount++;
+            }
+            if(bdPowerFactorCharges.Visible)
+            {
+                lastBottomF = bdPowerFactorCharges.BottomF;
+                visibleCount++;
             }
 
+            if (bd_AdjustmentMinimumCharges.Visible)
+            {
+                lastBottomF = bd_AdjustmentMinimumCharges.BottomF;
+                visibleCount++;
+            }
 
-                //Late Payment Surcharge
-                if (op[0].L9_Int_Tpl == "0.00" || string.IsNullOrEmpty(op[0].L9_Int_Tpl))
+            if (bd_OtherCharges.Visible)
+            {
+                lastBottomF = bd_OtherCharges.BottomF;
+                visibleCount++;
+            }
+            if (Subsidy.Visible)
+            {
+                lastBottomF = Subsidy.BottomF;
+                visibleCount++;
+            }
+            if (GreenTariff.Visible)
+            {
+                lastBottomF = GreenTariff.BottomF;
+                visibleCount++;
+            }
+            if (lblFPPA.Visible)
+            {
+                lastBottomF = lblFPPA.BottomF;
+                visibleCount++;
+            }
+            if (visibleCount >= 6)
+            {
+                xrLabel35.TopF = lastBottomF;
+                xrLabel34.TopF = lastBottomF;
+                xrLabel75.TopF = lastBottomF;
+            }
+
+            //Late Payment Surcharge
+            if (op[0].L9_Int_Tpl == "0.00" || string.IsNullOrEmpty(op[0].L9_Int_Tpl))
             {
                 LPSC.Visible = false;
                 LPSCHindi.Visible = false;

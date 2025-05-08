@@ -583,6 +583,7 @@ namespace AT.Print
 
             slt.L10_TheftAmount = dtSingleLTBill.Rows[9][7].ToString();
             slt.L10_Mode = dtSingleLTBill.Rows[9][8].ToString();
+            slt.L10_FPPASurcharge = dtSingleLTBill.Rows[9][9].ToString();
             //Line 10 End
             #endregion
 

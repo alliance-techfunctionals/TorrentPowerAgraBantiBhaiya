@@ -559,7 +559,8 @@ namespace AT.Print
             sht.L10_UPPCL_ArrearAmount = dtSingleHTBill.Rows[9][5].ToString();
             sht.L10_UPPCLIntOnArrearAmount = dtSingleHTBill.Rows[9][6].ToString();
             sht.L10_Mode = dtSingleHTBill.Rows[9][7].ToString();
-            sht.L10_TheftAmount= dtSingleHTBill.Rows[9][8].ToString();
+            //sht.L10_TheftAmount= dtSingleHTBill.Rows[9][8].ToString();
+            sht.L10_FPPASurcharge = dtSingleHTBill.Rows[9][8].ToString();
             #endregion
 
             #region Line-11

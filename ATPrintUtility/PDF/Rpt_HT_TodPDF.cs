@@ -506,9 +506,25 @@ namespace AT.Print.PDF
                 GreenTariff.Visible = false;
                 GreenTariffHindi.Visible = false;
                 GreenTariffValue.Visible = false;
+
+                GreenTariff.TopF = Subsidy.TopF;
+                GreenTariffHindi.TopF = Subsidy.TopF;
+                GreenTariffValue.TopF = Subsidy.TopF;
             }
 
-            if ((op[0].L8_ServdetTotbBdtOthr == "0.00" || string.IsNullOrEmpty(op[0].L8_ServdetTotbBdtOthr)) && (op[0].L1_PowerFactorMSGIndicator == "0.00" || string.IsNullOrEmpty(op[0].L1_PowerFactorMSGIndicator)))
+            lblFPPA.TopF = GreenTariff.BottomF;
+            lblFPPAHindi.TopF = GreenTariff.BottomF;
+            FPPASurchargeValue.TopF = GreenTariff.BottomF;
+
+            if (op[0].L10_FPPASurcharge == "0.00" || string.IsNullOrEmpty(op[0].L10_FPPASurcharge))
+            {
+                lblFPPA.Visible = false;
+                lblFPPAHindi.Visible = false;
+                FPPASurchargeValue.Visible = false;
+            }
+
+
+                if ((op[0].L8_ServdetTotbBdtOthr == "0.00" || string.IsNullOrEmpty(op[0].L8_ServdetTotbBdtOthr)) && (op[0].L1_PowerFactorMSGIndicator == "0.00" || string.IsNullOrEmpty(op[0].L1_PowerFactorMSGIndicator)))
             {
 
                 Subsidy.TopF = bd_RlSC2.BottomF;
@@ -651,7 +667,9 @@ namespace AT.Print.PDF
                     {
                         Font = new DXFont("DIN Pro Regular", 8),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                        Text = string.Format("*" + getMessage(LoadStaticData._EnglishMessage, "BRDCST3"), op[0].L10_TheftAmount.Replace('.', '-')),
+                        Text = "*" + getMessage(LoadStaticData._EnglishMessage, "BRDCST3"),
+
+                        //Text = string.Format("*" + getMessage(LoadStaticData._EnglishMessage, "BRDCST3"), op[0].L10_TheftAmount.Replace('.', '-')),
                         WordWrap = false,
                         AutoWidth = true,
                         KeepTogether = true,
@@ -687,28 +705,28 @@ namespace AT.Print.PDF
                 }
             }
 
-            if (!string.IsNullOrEmpty(op[0].L10_TheftAmount) && op[0].L10_TheftAmount != "0.00")
-            {
-                if (!IsMessageLimitExceeds(totalMessages))
-                {
-                    totalMessages++;
-                    XRLabel xrMessageTheftAmount = new XRLabel
-                    {
-                        Font = new DXFont("Kruti Dev 010", 10),
-                        TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                        Text = string.Format(getMessage(LoadStaticData._HindiMessage, "TFA"), op[0].L10_TheftAmount.Replace('.', '-')),
-                        WordWrap = false,
-                        AutoWidth = true,
-                        KeepTogether = true,
-                        HeightF = 1,
-                        Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                    };
+            //if (!string.IsNullOrEmpty(op[0].L10_TheftAmount) && op[0].L10_TheftAmount != "0.00")
+            //{
+            //    if (!IsMessageLimitExceeds(totalMessages))
+            //    {
+            //        totalMessages++;
+            //        XRLabel xrMessageTheftAmount = new XRLabel
+            //        {
+            //            Font = new DXFont("Kruti Dev 010", 10),
+            //            TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+            //            Text = string.Format(getMessage(LoadStaticData._HindiMessage, "TFA"), op[0].L10_TheftAmount.Replace('.', '-')),
+            //            WordWrap = false,
+            //            AutoWidth = true,
+            //            KeepTogether = true,
+            //            HeightF = 1,
+            //            Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+            //        };
 
 
-                    MessagesPanel.Controls.Add(xrMessageTheftAmount);
-                    adjustMessages(xrMessageTheftAmount);
-                }
-            }
+            //        MessagesPanel.Controls.Add(xrMessageTheftAmount);
+            //        adjustMessages(xrMessageTheftAmount);
+            //    }
+            //}
 
             if (!string.IsNullOrEmpty(op[0].L10_TotArrUPPCLIntUPPCLIntArrUPPCL) && !Convert.ToDecimal(op[0].L10_TotArrUPPCLIntUPPCLIntArrUPPCL).Equals(decimal.Zero))
             {
