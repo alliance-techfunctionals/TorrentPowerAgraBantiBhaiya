@@ -29,19 +29,30 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraPrinting.BarCode.EAN128Generator eaN128Generator1 = new DevExpress.XtraPrinting.BarCode.EAN128Generator();
-            DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
-            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
-            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel2 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
-            DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView2 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
             DevExpress.XtraCharts.XYDiagram xyDiagram1 = new DevExpress.XtraCharts.XYDiagram();
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel1 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
             DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView1 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
+            DevExpress.XtraCharts.XYDiagram xyDiagram2 = new DevExpress.XtraCharts.XYDiagram();
+            DevExpress.XtraCharts.Series series2 = new DevExpress.XtraCharts.Series();
+            DevExpress.XtraCharts.SideBySideBarSeriesLabel sideBySideBarSeriesLabel2 = new DevExpress.XtraCharts.SideBySideBarSeriesLabel();
+            DevExpress.XtraCharts.SideBySideBarSeriesView sideBySideBarSeriesView2 = new DevExpress.XtraCharts.SideBySideBarSeriesView();
+            DevExpress.XtraPrinting.BarCode.EAN128Generator eaN128Generator1 = new DevExpress.XtraPrinting.BarCode.EAN128Generator();
             DevExpress.XtraReports.UI.XRWatermark xrWatermark1 = new DevExpress.XtraReports.UI.XRWatermark();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.xrLabelTotalAmt = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrChartPie = new DevExpress.XtraReports.UI.XRChart();
+            this.xrLabel12 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel82 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrChart2 = new DevExpress.XtraReports.UI.XRChart();
+            this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrChart1 = new DevExpress.XtraReports.UI.XRChart();
+            this.xrLabel24 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrQRCODE = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrLabel23 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel22 = new DevExpress.XtraReports.UI.XRLabel();
@@ -136,27 +147,19 @@
             this.xrLabel56 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrImmediatedissconnectiondate = new DevExpress.XtraReports.UI.XRLabel();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.xrLabel24 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrChart1 = new DevExpress.XtraReports.UI.XRChart();
-            this.xrChart2 = new DevExpress.XtraReports.UI.XRChart();
-            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel82 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel12 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrPanel1 = new DevExpress.XtraReports.UI.XRPanel();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xrChart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView2)).BeginInit();
+            this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.xrChartPie)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrChart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrChart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // TopMargin
@@ -174,7 +177,9 @@
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrPanel1,
+            this.xrLabel15,
+            this.xrLabelTotalAmt,
+            this.xrChartPie,
             this.xrLabel12,
             this.xrLabel82,
             this.xrLabel11,
@@ -269,6 +274,266 @@
             this.Detail.HeightF = 1088.48F;
             this.Detail.Name = "Detail";
             this.Detail.StylePriority.UseFont = false;
+            // 
+            // xrLabelTotalAmt
+            // 
+            this.xrLabelTotalAmt.CanGrow = false;
+            this.xrLabelTotalAmt.Dpi = 96F;
+            this.xrLabelTotalAmt.Font = new DevExpress.Drawing.DXFont("Manrope", 10F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabelTotalAmt.InteractiveSorting.FieldName = "OwnerName";
+            this.xrLabelTotalAmt.LocationFloat = new DevExpress.Utils.PointFloat(125.672F, 554.7263F);
+            this.xrLabelTotalAmt.Multiline = true;
+            this.xrLabelTotalAmt.Name = "xrLabelTotalAmt";
+            this.xrLabelTotalAmt.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabelTotalAmt.SizeF = new System.Drawing.SizeF(100.9999F, 22.07999F);
+            this.xrLabelTotalAmt.StylePriority.UseFont = false;
+            this.xrLabelTotalAmt.StylePriority.UseTextAlignment = false;
+            this.xrLabelTotalAmt.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
+            // xrChartPie
+            // 
+            this.xrChartPie.BorderColor = System.Drawing.Color.Black;
+            this.xrChartPie.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrChartPie.Dpi = 96F;
+            this.xrChartPie.LocationFloat = new DevExpress.Utils.PointFloat(33.00003F, 479.8063F);
+            this.xrChartPie.Name = "xrChartPie";
+            this.xrChartPie.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
+            this.xrChartPie.SizeF = new System.Drawing.SizeF(288F, 173F);
+            // 
+            // xrLabel12
+            // 
+            this.xrLabel12.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrLabel12.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.xrLabel12.CanGrow = false;
+            this.xrLabel12.Dpi = 96F;
+            this.xrLabel12.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
+            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(31.26453F, 727.8403F);
+            this.xrLabel12.Multiline = true;
+            this.xrLabel12.Name = "xrLabel12";
+            this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel12.SizeF = new System.Drawing.SizeF(335F, 22.07996F);
+            this.xrLabel12.StylePriority.UseBorderDashStyle = false;
+            this.xrLabel12.StylePriority.UseBorders = false;
+            this.xrLabel12.StylePriority.UseFont = false;
+            this.xrLabel12.StylePriority.UseTextAlignment = false;
+            this.xrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // xrLabel82
+            // 
+            this.xrLabel82.CanGrow = false;
+            this.xrLabel82.Dpi = 96F;
+            this.xrLabel82.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Upper([L1_MonthYear])")});
+            this.xrLabel82.Font = new DevExpress.Drawing.DXFont("Manrope", 10F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel82.InteractiveSorting.FieldName = "OwnerName";
+            this.xrLabel82.LocationFloat = new DevExpress.Utils.PointFloat(614.9536F, 130.68F);
+            this.xrLabel82.Multiline = true;
+            this.xrLabel82.Name = "xrLabel82";
+            this.xrLabel82.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel82.SizeF = new System.Drawing.SizeF(97.04639F, 22.08F);
+            this.xrLabel82.StylePriority.UseFont = false;
+            this.xrLabel82.StylePriority.UseTextAlignment = false;
+            this.xrLabel82.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // xrLabel11
+            // 
+            this.xrLabel11.CanGrow = false;
+            this.xrLabel11.Dpi = 96F;
+            this.xrLabel11.Font = new DevExpress.Drawing.DXFont("Manrope", 10F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(496.8181F, 130.68F);
+            this.xrLabel11.Multiline = true;
+            this.xrLabel11.Name = "xrLabel11";
+            this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel11.SizeF = new System.Drawing.SizeF(126.1355F, 22.07999F);
+            this.xrLabel11.StylePriority.UseFont = false;
+            this.xrLabel11.StylePriority.UseTextAlignment = false;
+            this.xrLabel11.Text = "BILL CUM NOTICE:";
+            this.xrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // xrChart2
+            // 
+            this.xrChart2.AutoLayout = true;
+            this.xrChart2.BackColor = System.Drawing.Color.Transparent;
+            this.xrChart2.BorderColor = System.Drawing.Color.Black;
+            this.xrChart2.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrChart2.BorderWidth = 0F;
+            xyDiagram1.AxisX.CrosshairAxisLabelOptions.BackColor = System.Drawing.Color.Transparent;
+            xyDiagram1.AxisX.Label.Angle = 270;
+            xyDiagram1.AxisX.Label.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 7F);
+            xyDiagram1.AxisX.Label.ResolveOverlappingOptions.AllowHide = false;
+            xyDiagram1.AxisX.Label.ResolveOverlappingOptions.MinIndent = 0;
+            xyDiagram1.AxisX.NumericScaleOptions.AutoGrid = false;
+            xyDiagram1.AxisX.NumericScaleOptions.GridOffset = 1D;
+            xyDiagram1.AxisX.QualitativeScaleOptions.AutoGrid = false;
+            xyDiagram1.AxisX.Thickness = 2;
+            xyDiagram1.AxisX.Tickmarks.Thickness = 2;
+            xyDiagram1.AxisX.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram1.AxisY.CrosshairAxisLabelOptions.BackColor = System.Drawing.Color.Transparent;
+            xyDiagram1.AxisY.GridLines.LineStyle.DashStyle = DevExpress.XtraCharts.DashStyle.Dash;
+            xyDiagram1.AxisY.Label.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 7F);
+            xyDiagram1.AxisY.Thickness = 2;
+            xyDiagram1.AxisY.Tickmarks.Thickness = 2;
+            xyDiagram1.AxisY.Title.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 6F);
+            xyDiagram1.AxisY.Title.Text = "";
+            xyDiagram1.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
+            xyDiagram1.DefaultPane.BackColor = System.Drawing.Color.Transparent;
+            xyDiagram1.DefaultPane.BorderColor = System.Drawing.Color.White;
+            xyDiagram1.DefaultPane.EnableAxisXScrolling = DevExpress.Utils.DefaultBoolean.False;
+            xyDiagram1.DefaultPane.EnableAxisXZooming = DevExpress.Utils.DefaultBoolean.False;
+            xyDiagram1.DefaultPane.EnableAxisYScrolling = DevExpress.Utils.DefaultBoolean.False;
+            xyDiagram1.DefaultPane.EnableAxisYZooming = DevExpress.Utils.DefaultBoolean.False;
+            this.xrChart2.Diagram = xyDiagram1;
+            this.xrChart2.Dpi = 96F;
+            this.xrChart2.Legend.Name = "Default Legend";
+            this.xrChart2.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            this.xrChart2.LocationFloat = new DevExpress.Utils.PointFloat(344F, 727.8401F);
+            this.xrChart2.Name = "xrChart2";
+            this.xrChart2.PaletteBaseColorNumber = 2;
+            this.xrChart2.PaletteName = "Grayscale";
+            series1.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
+            sideBySideBarSeriesLabel1.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            sideBySideBarSeriesLabel1.DXFont = new DevExpress.Drawing.DXFont("Tahoma", 7F);
+            sideBySideBarSeriesLabel1.FillStyle.FillMode = DevExpress.XtraCharts.FillMode.Empty;
+            sideBySideBarSeriesLabel1.LineLength = 0;
+            sideBySideBarSeriesLabel1.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
+            sideBySideBarSeriesLabel1.ShowForZeroValues = true;
+            sideBySideBarSeriesLabel1.TextColor = System.Drawing.Color.Black;
+            sideBySideBarSeriesLabel1.TextOrientation = DevExpress.XtraCharts.TextOrientation.BottomToTop;
+            series1.Label = sideBySideBarSeriesLabel1;
+            series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series1.Name = "Series 1";
+            series1.SeriesID = 0;
+            sideBySideBarSeriesView1.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            sideBySideBarSeriesView1.Border.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            sideBySideBarSeriesView1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            series1.View = sideBySideBarSeriesView1;
+            this.xrChart2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series1};
+            this.xrChart2.SizeF = new System.Drawing.SizeF(429.8369F, 179.52F);
+            this.xrChart2.StylePriority.UseBackColor = false;
+            this.xrChart2.StylePriority.UseBorderWidth = false;
+            // 
+            // xrLabel9
+            // 
+            this.xrLabel9.CanGrow = false;
+            this.xrLabel9.Dpi = 96F;
+            this.xrLabel9.Font = new DevExpress.Drawing.DXFont("Manrope", 10F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(31.26453F, 452.5199F);
+            this.xrLabel9.Multiline = true;
+            this.xrLabel9.Name = "xrLabel9";
+            this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel9.SizeF = new System.Drawing.SizeF(264.1355F, 22.07999F);
+            this.xrLabel9.StylePriority.UseFont = false;
+            this.xrLabel9.StylePriority.UseTextAlignment = false;
+            this.xrLabel9.Text = "MAJOR BILL COMPONENTS";
+            this.xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
+            // xrLabel4
+            // 
+            this.xrLabel4.CanGrow = false;
+            this.xrLabel4.Dpi = 96F;
+            this.xrLabel4.Font = new DevExpress.Drawing.DXFont("Manrope", 10F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(445.6365F, 682.76F);
+            this.xrLabel4.Multiline = true;
+            this.xrLabel4.Name = "xrLabel4";
+            this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel4.SizeF = new System.Drawing.SizeF(212.7355F, 22.07999F);
+            this.xrLabel4.StylePriority.UseFont = false;
+            this.xrLabel4.StylePriority.UseTextAlignment = false;
+            this.xrLabel4.Text = "DEMAND PATTERN";
+            this.xrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
+            // xrLabel2
+            // 
+            this.xrLabel2.CanGrow = false;
+            this.xrLabel2.Dpi = 96F;
+            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Manrope", 10F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(454.6365F, 452.5199F);
+            this.xrLabel2.Multiline = true;
+            this.xrLabel2.Name = "xrLabel2";
+            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel2.SizeF = new System.Drawing.SizeF(221.7355F, 22.07999F);
+            this.xrLabel2.StylePriority.UseFont = false;
+            this.xrLabel2.StylePriority.UseTextAlignment = false;
+            this.xrLabel2.Text = "CONSUMPTION PATTERN";
+            this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
+            // xrChart1
+            // 
+            this.xrChart1.AutoLayout = true;
+            this.xrChart1.BackColor = System.Drawing.Color.Transparent;
+            this.xrChart1.BorderColor = System.Drawing.Color.Black;
+            this.xrChart1.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            xyDiagram2.AxisX.Label.Angle = 270;
+            xyDiagram2.AxisX.Label.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 7F);
+            xyDiagram2.AxisX.Label.ResolveOverlappingOptions.AllowHide = false;
+            xyDiagram2.AxisX.Label.ResolveOverlappingOptions.MinIndent = 0;
+            xyDiagram2.AxisX.NumericScaleOptions.AutoGrid = false;
+            xyDiagram2.AxisX.NumericScaleOptions.GridOffset = 1D;
+            xyDiagram2.AxisX.QualitativeScaleOptions.AutoGrid = false;
+            xyDiagram2.AxisX.Thickness = 2;
+            xyDiagram2.AxisX.Tickmarks.Thickness = 2;
+            xyDiagram2.AxisX.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
+            xyDiagram2.AxisY.GridLines.LineStyle.DashStyle = DevExpress.XtraCharts.DashStyle.Dash;
+            xyDiagram2.AxisY.Thickness = 2;
+            xyDiagram2.AxisY.Tickmarks.Thickness = 2;
+            xyDiagram2.AxisY.Title.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 6F);
+            xyDiagram2.AxisY.Title.Text = "";
+            xyDiagram2.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
+            xyDiagram2.DefaultPane.BorderColor = System.Drawing.Color.White;
+            xyDiagram2.DefaultPane.EnableAxisXScrolling = DevExpress.Utils.DefaultBoolean.False;
+            xyDiagram2.DefaultPane.EnableAxisXZooming = DevExpress.Utils.DefaultBoolean.False;
+            xyDiagram2.DefaultPane.EnableAxisYScrolling = DevExpress.Utils.DefaultBoolean.False;
+            xyDiagram2.DefaultPane.EnableAxisYZooming = DevExpress.Utils.DefaultBoolean.False;
+            this.xrChart1.Diagram = xyDiagram2;
+            this.xrChart1.Dpi = 96F;
+            this.xrChart1.Legend.Name = "Default Legend";
+            this.xrChart1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            this.xrChart1.LocationFloat = new DevExpress.Utils.PointFloat(344F, 502.7599F);
+            this.xrChart1.Name = "xrChart1";
+            this.xrChart1.PaletteBaseColorNumber = 2;
+            this.xrChart1.PaletteName = "Grayscale";
+            series2.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
+            sideBySideBarSeriesLabel2.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
+            sideBySideBarSeriesLabel2.DXFont = new DevExpress.Drawing.DXFont("Tahoma", 7F);
+            sideBySideBarSeriesLabel2.FillStyle.FillMode = DevExpress.XtraCharts.FillMode.Empty;
+            sideBySideBarSeriesLabel2.LineLength = 0;
+            sideBySideBarSeriesLabel2.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
+            sideBySideBarSeriesLabel2.ShowForZeroValues = true;
+            sideBySideBarSeriesLabel2.TextColor = System.Drawing.Color.Black;
+            sideBySideBarSeriesLabel2.TextOrientation = DevExpress.XtraCharts.TextOrientation.BottomToTop;
+            series2.Label = sideBySideBarSeriesLabel2;
+            series2.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
+            series2.Name = "Series 1";
+            series2.SeriesID = 0;
+            sideBySideBarSeriesView2.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            sideBySideBarSeriesView2.Border.Visibility = DevExpress.Utils.DefaultBoolean.True;
+            sideBySideBarSeriesView2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            series2.View = sideBySideBarSeriesView2;
+            this.xrChart1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
+        series2};
+            this.xrChart1.SizeF = new System.Drawing.SizeF(429.8369F, 169.0464F);
+            this.xrChart1.StylePriority.UseBackColor = false;
+            // 
+            // xrLabel24
+            // 
+            this.xrLabel24.CanGrow = false;
+            this.xrLabel24.Dpi = 96F;
+            this.xrLabel24.Font = new DevExpress.Drawing.DXFont("Manrope", 8F);
+            this.xrLabel24.InteractiveSorting.FieldName = "OwnerName";
+            this.xrLabel24.LocationFloat = new DevExpress.Utils.PointFloat(346.7647F, 109.1013F);
+            this.xrLabel24.Multiline = true;
+            this.xrLabel24.Name = "xrLabel24";
+            this.xrLabel24.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel24.SizeF = new System.Drawing.SizeF(32.99991F, 22.08F);
+            this.xrLabel24.StylePriority.UseFont = false;
+            this.xrLabel24.StylePriority.UseTextAlignment = false;
+            this.xrLabel24.Text = "Days";
+            this.xrLabel24.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrQRCODE
             // 
@@ -926,7 +1191,7 @@
             this.xrLabel94.Multiline = true;
             this.xrLabel94.Name = "xrLabel94";
             this.xrLabel94.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel94.SizeF = new System.Drawing.SizeF(71F, 22.08F);
+            this.xrLabel94.SizeF = new System.Drawing.SizeF(100.9999F, 22.08F);
             this.xrLabel94.StylePriority.UseFont = false;
             this.xrLabel94.Text = "TARIFF CATEGORY";
             // 
@@ -1671,250 +1936,20 @@
             this.xrImmediatedissconnectiondate.Text = "IMMEDIATE /";
             this.xrImmediatedissconnectiondate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
-            // xrLabel24
+            // xrLabel15
             // 
-            this.xrLabel24.CanGrow = false;
-            this.xrLabel24.Dpi = 96F;
-            this.xrLabel24.Font = new DevExpress.Drawing.DXFont("Manrope", 8F);
-            this.xrLabel24.InteractiveSorting.FieldName = "OwnerName";
-            this.xrLabel24.LocationFloat = new DevExpress.Utils.PointFloat(346.7647F, 109.1013F);
-            this.xrLabel24.Multiline = true;
-            this.xrLabel24.Name = "xrLabel24";
-            this.xrLabel24.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel24.SizeF = new System.Drawing.SizeF(32.99991F, 22.08F);
-            this.xrLabel24.StylePriority.UseFont = false;
-            this.xrLabel24.StylePriority.UseTextAlignment = false;
-            this.xrLabel24.Text = "Days";
-            this.xrLabel24.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrChart1
-            // 
-            this.xrChart1.AutoLayout = true;
-            this.xrChart1.BackColor = System.Drawing.Color.Transparent;
-            this.xrChart1.BorderColor = System.Drawing.Color.Black;
-            this.xrChart1.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            xyDiagram2.AxisX.Label.Angle = 270;
-            xyDiagram2.AxisX.Label.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 7F);
-            xyDiagram2.AxisX.Label.ResolveOverlappingOptions.AllowHide = false;
-            xyDiagram2.AxisX.Label.ResolveOverlappingOptions.MinIndent = 0;
-            xyDiagram2.AxisX.NumericScaleOptions.AutoGrid = false;
-            xyDiagram2.AxisX.NumericScaleOptions.GridOffset = 1D;
-            xyDiagram2.AxisX.QualitativeScaleOptions.AutoGrid = false;
-            xyDiagram2.AxisX.Thickness = 2;
-            xyDiagram2.AxisX.Tickmarks.Thickness = 2;
-            xyDiagram2.AxisX.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram2.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram2.AxisY.GridLines.LineStyle.DashStyle = DevExpress.XtraCharts.DashStyle.Dash;
-            xyDiagram2.AxisY.Thickness = 2;
-            xyDiagram2.AxisY.Tickmarks.Thickness = 2;
-            xyDiagram2.AxisY.Title.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 6F);
-            xyDiagram2.AxisY.Title.Text = "";
-            xyDiagram2.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram2.AxisY.VisibleInPanesSerializable = "-1";
-            xyDiagram2.DefaultPane.BorderColor = System.Drawing.Color.White;
-            xyDiagram2.DefaultPane.EnableAxisXScrolling = DevExpress.Utils.DefaultBoolean.False;
-            xyDiagram2.DefaultPane.EnableAxisXZooming = DevExpress.Utils.DefaultBoolean.False;
-            xyDiagram2.DefaultPane.EnableAxisYScrolling = DevExpress.Utils.DefaultBoolean.False;
-            xyDiagram2.DefaultPane.EnableAxisYZooming = DevExpress.Utils.DefaultBoolean.False;
-            this.xrChart1.Diagram = xyDiagram2;
-            this.xrChart1.Dpi = 96F;
-            this.xrChart1.Legend.Name = "Default Legend";
-            this.xrChart1.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.xrChart1.LocationFloat = new DevExpress.Utils.PointFloat(344F, 502.7599F);
-            this.xrChart1.Name = "xrChart1";
-            this.xrChart1.PaletteBaseColorNumber = 2;
-            this.xrChart1.PaletteName = "Grayscale";
-            series2.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
-            sideBySideBarSeriesLabel2.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            sideBySideBarSeriesLabel2.DXFont = new DevExpress.Drawing.DXFont("Tahoma", 7F);
-            sideBySideBarSeriesLabel2.FillStyle.FillMode = DevExpress.XtraCharts.FillMode.Empty;
-            sideBySideBarSeriesLabel2.LineLength = 0;
-            sideBySideBarSeriesLabel2.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
-            sideBySideBarSeriesLabel2.ShowForZeroValues = true;
-            sideBySideBarSeriesLabel2.TextColor = System.Drawing.Color.Black;
-            sideBySideBarSeriesLabel2.TextOrientation = DevExpress.XtraCharts.TextOrientation.BottomToTop;
-            series2.Label = sideBySideBarSeriesLabel2;
-            series2.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series2.Name = "Series 1";
-            series2.SeriesID = 0;
-            sideBySideBarSeriesView2.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            sideBySideBarSeriesView2.Border.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            sideBySideBarSeriesView2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            series2.View = sideBySideBarSeriesView2;
-            this.xrChart1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series2};
-            this.xrChart1.SizeF = new System.Drawing.SizeF(429.8369F, 169.0464F);
-            this.xrChart1.StylePriority.UseBackColor = false;
-            // 
-            // xrChart2
-            // 
-            this.xrChart2.AutoLayout = true;
-            this.xrChart2.BackColor = System.Drawing.Color.Transparent;
-            this.xrChart2.BorderColor = System.Drawing.Color.Black;
-            this.xrChart2.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrChart2.BorderWidth = 0F;
-            xyDiagram1.AxisX.CrosshairAxisLabelOptions.BackColor = System.Drawing.Color.Transparent;
-            xyDiagram1.AxisX.Label.Angle = 270;
-            xyDiagram1.AxisX.Label.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 7F);
-            xyDiagram1.AxisX.Label.ResolveOverlappingOptions.AllowHide = false;
-            xyDiagram1.AxisX.Label.ResolveOverlappingOptions.MinIndent = 0;
-            xyDiagram1.AxisX.NumericScaleOptions.AutoGrid = false;
-            xyDiagram1.AxisX.NumericScaleOptions.GridOffset = 1D;
-            xyDiagram1.AxisX.QualitativeScaleOptions.AutoGrid = false;
-            xyDiagram1.AxisX.Thickness = 2;
-            xyDiagram1.AxisX.Tickmarks.Thickness = 2;
-            xyDiagram1.AxisX.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram1.AxisY.CrosshairAxisLabelOptions.BackColor = System.Drawing.Color.Transparent;
-            xyDiagram1.AxisY.GridLines.LineStyle.DashStyle = DevExpress.XtraCharts.DashStyle.Dash;
-            xyDiagram1.AxisY.Label.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 7F);
-            xyDiagram1.AxisY.Thickness = 2;
-            xyDiagram1.AxisY.Tickmarks.Thickness = 2;
-            xyDiagram1.AxisY.Title.DXFont = new DevExpress.Drawing.DXFont("DIN Pro Regular", 6F);
-            xyDiagram1.AxisY.Title.Text = "";
-            xyDiagram1.AxisY.Title.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
-            xyDiagram1.DefaultPane.BackColor = System.Drawing.Color.Transparent;
-            xyDiagram1.DefaultPane.BorderColor = System.Drawing.Color.White;
-            xyDiagram1.DefaultPane.EnableAxisXScrolling = DevExpress.Utils.DefaultBoolean.False;
-            xyDiagram1.DefaultPane.EnableAxisXZooming = DevExpress.Utils.DefaultBoolean.False;
-            xyDiagram1.DefaultPane.EnableAxisYScrolling = DevExpress.Utils.DefaultBoolean.False;
-            xyDiagram1.DefaultPane.EnableAxisYZooming = DevExpress.Utils.DefaultBoolean.False;
-            this.xrChart2.Diagram = xyDiagram1;
-            this.xrChart2.Dpi = 96F;
-            this.xrChart2.Legend.Name = "Default Legend";
-            this.xrChart2.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            this.xrChart2.LocationFloat = new DevExpress.Utils.PointFloat(344F, 727.8401F);
-            this.xrChart2.Name = "xrChart2";
-            this.xrChart2.PaletteBaseColorNumber = 2;
-            this.xrChart2.PaletteName = "Grayscale";
-            series1.ArgumentScaleType = DevExpress.XtraCharts.ScaleType.Qualitative;
-            sideBySideBarSeriesLabel1.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
-            sideBySideBarSeriesLabel1.DXFont = new DevExpress.Drawing.DXFont("Tahoma", 7F);
-            sideBySideBarSeriesLabel1.FillStyle.FillMode = DevExpress.XtraCharts.FillMode.Empty;
-            sideBySideBarSeriesLabel1.LineLength = 0;
-            sideBySideBarSeriesLabel1.Position = DevExpress.XtraCharts.BarSeriesLabelPosition.Top;
-            sideBySideBarSeriesLabel1.ShowForZeroValues = true;
-            sideBySideBarSeriesLabel1.TextColor = System.Drawing.Color.Black;
-            sideBySideBarSeriesLabel1.TextOrientation = DevExpress.XtraCharts.TextOrientation.BottomToTop;
-            series1.Label = sideBySideBarSeriesLabel1;
-            series1.LabelsVisibility = DevExpress.Utils.DefaultBoolean.True;
-            series1.Name = "Series 1";
-            series1.SeriesID = 0;
-            sideBySideBarSeriesView1.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            sideBySideBarSeriesView1.Border.Visibility = DevExpress.Utils.DefaultBoolean.True;
-            sideBySideBarSeriesView1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            series1.View = sideBySideBarSeriesView1;
-            this.xrChart2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
-        series1};
-            this.xrChart2.SizeF = new System.Drawing.SizeF(429.8369F, 179.52F);
-            this.xrChart2.StylePriority.UseBackColor = false;
-            this.xrChart2.StylePriority.UseBorderWidth = false;
-            // 
-            // xrLabel2
-            // 
-            this.xrLabel2.CanGrow = false;
-            this.xrLabel2.Dpi = 96F;
-            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Manrope", 10F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(454.6365F, 452.5199F);
-            this.xrLabel2.Multiline = true;
-            this.xrLabel2.Name = "xrLabel2";
-            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel2.SizeF = new System.Drawing.SizeF(221.7355F, 22.07999F);
-            this.xrLabel2.StylePriority.UseFont = false;
-            this.xrLabel2.StylePriority.UseTextAlignment = false;
-            this.xrLabel2.Text = "CONSUMPTION PATTERN";
-            this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            // 
-            // xrLabel4
-            // 
-            this.xrLabel4.CanGrow = false;
-            this.xrLabel4.Dpi = 96F;
-            this.xrLabel4.Font = new DevExpress.Drawing.DXFont("Manrope", 10F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(445.6365F, 682.76F);
-            this.xrLabel4.Multiline = true;
-            this.xrLabel4.Name = "xrLabel4";
-            this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel4.SizeF = new System.Drawing.SizeF(212.7355F, 22.07999F);
-            this.xrLabel4.StylePriority.UseFont = false;
-            this.xrLabel4.StylePriority.UseTextAlignment = false;
-            this.xrLabel4.Text = "DEMAND PATTERN";
-            this.xrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            // 
-            // xrLabel9
-            // 
-            this.xrLabel9.CanGrow = false;
-            this.xrLabel9.Dpi = 96F;
-            this.xrLabel9.Font = new DevExpress.Drawing.DXFont("Manrope", 10F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(31.26453F, 452.5199F);
-            this.xrLabel9.Multiline = true;
-            this.xrLabel9.Name = "xrLabel9";
-            this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel9.SizeF = new System.Drawing.SizeF(264.1355F, 22.07999F);
-            this.xrLabel9.StylePriority.UseFont = false;
-            this.xrLabel9.StylePriority.UseTextAlignment = false;
-            this.xrLabel9.Text = "MAJOR BILL COMPONENTS";
-            this.xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            // 
-            // xrLabel11
-            // 
-            this.xrLabel11.CanGrow = false;
-            this.xrLabel11.Dpi = 96F;
-            this.xrLabel11.Font = new DevExpress.Drawing.DXFont("Manrope", 10F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(496.8181F, 130.68F);
-            this.xrLabel11.Multiline = true;
-            this.xrLabel11.Name = "xrLabel11";
-            this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel11.SizeF = new System.Drawing.SizeF(126.1355F, 22.07999F);
-            this.xrLabel11.StylePriority.UseFont = false;
-            this.xrLabel11.StylePriority.UseTextAlignment = false;
-            this.xrLabel11.Text = "BILL CUM NOTICE:";
-            this.xrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrLabel82
-            // 
-            this.xrLabel82.CanGrow = false;
-            this.xrLabel82.Dpi = 96F;
-            this.xrLabel82.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Upper([L1_MonthYear])")});
-            this.xrLabel82.Font = new DevExpress.Drawing.DXFont("Manrope", 10F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.xrLabel82.InteractiveSorting.FieldName = "OwnerName";
-            this.xrLabel82.LocationFloat = new DevExpress.Utils.PointFloat(614.9536F, 130.68F);
-            this.xrLabel82.Multiline = true;
-            this.xrLabel82.Name = "xrLabel82";
-            this.xrLabel82.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel82.SizeF = new System.Drawing.SizeF(97.04639F, 22.08F);
-            this.xrLabel82.StylePriority.UseFont = false;
-            this.xrLabel82.StylePriority.UseTextAlignment = false;
-            this.xrLabel82.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrLabel12
-            // 
-            this.xrLabel12.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel12.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.xrLabel12.CanGrow = false;
-            this.xrLabel12.Dpi = 96F;
-            this.xrLabel12.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
-            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(31.26453F, 727.8403F);
-            this.xrLabel12.Multiline = true;
-            this.xrLabel12.Name = "xrLabel12";
-            this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel12.SizeF = new System.Drawing.SizeF(335F, 22.07996F);
-            this.xrLabel12.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel12.StylePriority.UseBorders = false;
-            this.xrLabel12.StylePriority.UseFont = false;
-            this.xrLabel12.StylePriority.UseTextAlignment = false;
-            this.xrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // xrPanel1
-            // 
-            this.xrPanel1.CanGrow = false;
-            this.xrPanel1.Dpi = 96F;
-            this.xrPanel1.LocationFloat = new DevExpress.Utils.PointFloat(59.59998F, 860.0265F);
-            this.xrPanel1.LockedInUserDesigner = true;
-            this.xrPanel1.Name = "xrPanel1";
-            this.xrPanel1.SizeF = new System.Drawing.SizeF(132.072F, 47.33362F);
-            this.xrPanel1.Visible = false;
+            this.xrLabel15.CanGrow = false;
+            this.xrLabel15.Dpi = 96F;
+            this.xrLabel15.Font = new DevExpress.Drawing.DXFont("Manrope", 10F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(40.86453F, 848.28F);
+            this.xrLabel15.Multiline = true;
+            this.xrLabel15.Name = "xrLabel15";
+            this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel15.SizeF = new System.Drawing.SizeF(264.1355F, 22.07999F);
+            this.xrLabel15.StylePriority.UseFont = false;
+            this.xrLabel15.StylePriority.UseTextAlignment = false;
+            this.xrLabel15.Text = "TOD DETAILS";
+            this.xrLabel15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // Rpt_LT_Print
             // 
@@ -1943,17 +1978,18 @@
             this.Watermarks.AddRange(new DevExpress.XtraPrinting.Drawing.Watermark[] {
             xrWatermark1});
             this.BeforePrint += new DevExpress.XtraReports.UI.BeforePrintEventHandler(this.Rpt_LT_Print_BeforePrint);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xrChart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrChartPie)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrChart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(xyDiagram2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesLabel2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(sideBySideBarSeriesView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(series2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrChart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -2066,7 +2102,9 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel82;
         private DevExpress.XtraReports.UI.XRLabel xrLabel11;
         private DevExpress.XtraReports.UI.XRLabel xrLabel12;
-        private DevExpress.XtraReports.UI.XRPanel xrPanel1;
+        private DevExpress.XtraReports.UI.XRChart xrChartPie;
+        private DevExpress.XtraReports.UI.XRLabel xrLabelTotalAmt;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel15;
         //private System.Windows.Forms.BindingSource bsrptData;
         //private System.Windows.Forms.BindingSource bindingSource1;
     }

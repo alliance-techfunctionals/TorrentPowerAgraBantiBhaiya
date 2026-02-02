@@ -745,7 +745,8 @@ namespace AT.Print
                 {
                     Font = new DXFont("Kruti Dev 010", 9),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                    Text = "vfHkys[kksa ds vuqlkj vkids la;kstu ij tekur /kujkf'k 'kwU; vafdr gSaA ;fn vkids }kjk la;kstu jkf'k tek dh xbZ gS rks mDr tekur jkf'k dh ewy jlhn ds lkFk \r\ngekjs xzkgd lsok dsUnz  ij lEidZ djsaA ",
+                   Text =  "विभागीय अभिलेखों के अनुसार आपके संयोजन पर जमानत / धनराशि शून्य अंकित है। यदि आपके द्वारा संयोजन राशि जमा की गई है तो उक्त जमानत राशि की मूल रसीद के साथ हमारे ग्राहक सेवा केंद्र पर संपर्क करें।",
+                   // Text = "vfHkys[kksa ds vuqlkj vkids la;kstu ij tekur /kujkf'k 'kwU; vafdr gSaA ;fn vkids }kjk la;kstu jkf'k tek dh xbZ gS rks mDr tekur jkf'k dh ewy jlhn ds lkFk \r\ngekjs xzkgd lsok dsUnz  ij lEidZ djsaA ",
                     WordWrap = false,
                     AutoWidth = true,
                     Multiline = true,

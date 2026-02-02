@@ -30,7 +30,7 @@
   </English>
   <BROADCAST>
     <BCAST SRVNO="BRDCST1" ENGMESSAGE="DUMMY MSG" HINMESSAGE=""  MSGTYP="ENG"></BCAST>
-    <BCAST SRVNO="670240416" HINMESSAGE="Mhohoh,u,y '" ENGMESSAGE="" MSGTYP="HIN"></BCAST>
+    <BCAST SRVNO="670240416" HINMESSAGE="डीवीवीएनएल '" ENGMESSAGE="" MSGTYP="HIN"></BCAST>
   </BROADCAST>
   <EBill>
     <OutputLocation DestinationPath="C:\Bills"></OutputLocation>
