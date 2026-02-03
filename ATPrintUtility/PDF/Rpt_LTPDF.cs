@@ -71,14 +71,16 @@ namespace AT.Print.PDF
                 // xrImmediatelbl.Visible = true;
                 //xrLabel20.Visible = true;
                 xrImmediatedissconnectiondate.Visible = true;
+                xrLabel40.Text = "IMMEDIATE";
             }
             else
             {
                 xrDueDate.Text = op[0].L7_Due_Date;
                 bd_Bottom_BillDueDate.Text = op[0].L7_Due_Date;
                 xrImmediatedissconnectiondate.Text = op[0].L10_DisconnDate;
-                xrDueDate.TextAlignment = TextAlignment.MiddleLeft;
+                //xrDueDate.TextAlignment = TextAlignment.MiddleLeft;
                 xrImmediatedissconnectiondate.TextAlignment = TextAlignment.MiddleRight;
+                xrLabel40.Text = op[0].L7_Due_Date;
             }
             #endregion
 
@@ -93,6 +95,8 @@ namespace AT.Print.PDF
             //    xrLabel23.Visible = false;
             //}
 
+
+            xrLabel23.Text = op[0].L1_Customer_PAN;
             // To keep Address and PAN together            
             if (op[0].L2_Name.ToString() == "")
             {
@@ -170,7 +174,7 @@ namespace AT.Print.PDF
                 met1_headingMDKW.Visible = true;
                 met1_headingMDKW_1.Visible = true;
                 //Old Meter Setting
-                xrLabel14.Text = op[0].L12_MTRSNO_METER_2_IF_AVAILABLE;//older
+                xrLabel5.Text = op[0].L12_MTRSNO_METER_2_IF_AVAILABLE;//older
                 xrLabel19.Text = op[0].L12_MTRSNO_METER1;//Newer
                                                          //Meter Old
                 met1_11.Text = "____";
@@ -233,15 +237,25 @@ namespace AT.Print.PDF
             }
 
             op[0].L6_SERVDET_SANC_LOAD = op[0].L6_SERVDET_SANC_LOAD + "(" + op[0].L6_MeasureContractDemand + ")";
+            xrLblAmount.Text = "₹" + ToDecimal(op[0].L8_AmountPayableBeforeDueDate).ToString("G");
+            xrLabelTotalAmt.BringToFront();
+
+            xrLabelTotalAmt.Text = "₹" + ToDecimal(op[0].L8_AmountPayableBeforeDueDate).ToString("G");
 
 
-            //PieChart//
+            ////PieChart//
             decimal energyCharge = ToDecimal(op[0].L8_EnergyCharge);
             decimal fixedCharge = ToDecimal(op[0].L8_FixedCharge);
             decimal electricityDuty = ToDecimal(op[0].L8_GovTax);
             decimal excessDemandCharge = ToDecimal(op[0].L10_DmdChgPenalty);
 
             xrChartPie.Series.Clear();
+           // xrChartPie.SizeF = new SizeF(260f, 200f);
+            xrChartPie.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
+          //  xrChartPie.Padding = new DevExpress.XtraPrinting.PaddingInfo(20, 20, 20, 20);
+
+
+
 
             Series pieSeries = new Series("Major Bill Components", ViewType.Doughnut);
 
@@ -253,16 +267,22 @@ namespace AT.Print.PDF
 
             DoughnutSeriesLabel label = (DoughnutSeriesLabel)pieSeries.Label;
             label.Position = PieSeriesLabelPosition.TwoColumns;
+            //label.Position = PieSeriesLabelPosition.Outside;
+
             // label.ResolveOverlappingMode = ResolveOverlappingMode.Shift;
             //label.TextPattern = "{A}\n₹{V:n0}";
             label.TextPattern = "{A}\n₹{V:G}";
 
-            label.Font = new Font("Arial", 6);
+            label.Font = new Font("Manrope", 7);
             label.BackColor = Color.Transparent;
             label.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
 
             DoughnutSeriesView view = (DoughnutSeriesView)pieSeries.View;
-            view.HoleRadiusPercent = 75;
+            view.HoleRadiusPercent = 80;
+            view.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
+
+
+
 
             // ----- MANUAL COLORS (NO RANDOMNESS) -----
             pieSeries.Points[0].Color = Color.FromArgb(208, 208, 207);  // Duty
@@ -270,7 +290,8 @@ namespace AT.Print.PDF
             pieSeries.Points[2].Color = Color.FromArgb(151, 151, 151);   // Energy
             pieSeries.Points[3].Color = Color.FromArgb(125, 125, 124);  // Fixed
             xrChartPie.Series.Add(pieSeries);
-            xrLabelTotalAmt.Text = "₹" + ToDecimal(op[0].L8_AmountPayableBeforeDueDate).ToString("G");
+
+            //xrLabelTotalAmt.Text = "₹" + ToDecimal(op[0].L8_AmountPayableBeforeDueDate).ToString("G");
 
             xrChart1.Series[0].DataSource = op[0].KWHgrph;
             xrChart1.Series[0].ArgumentScaleType = ScaleType.Qualitative;
@@ -285,6 +306,9 @@ namespace AT.Print.PDF
             xrChart2.Series[0].ValueScaleType = ScaleType.Numerical;
             xrChart2.Series[0].ValueDataMembers.AddRange(new string[] { "Value" });
             xrChart2.WidthF = xrChart1.WidthF;
+
+            xrLabel14.Text = "Thank you for previous payment of ₹" + op[0].L7_LastPayementAmount + " on " + op[0].L7_LastPymtDate;
+
         }
 
         private decimal ToDecimal(string value)
