@@ -57,7 +57,7 @@ namespace AT.Print.PDF
                 barcodeWriter.Options = encodingOptions;
                 var qrCodeBitmap = barcodeWriter.Write(textToEncode);
                 xrQRCODE.Image = qrCodeBitmap;
-                xrQRCODE.SizeF = new System.Drawing.SizeF(60, 60);
+                //xrQRCODE.SizeF = new System.Drawing.SizeF(55, 55);
             }
 
             #endregion
@@ -71,7 +71,7 @@ namespace AT.Print.PDF
                 // xrImmediatelbl.Visible = true;
                 //xrLabel20.Visible = true;
                 xrImmediatedissconnectiondate.Visible = true;
-                xrLabel40.Text = "IMMEDIATE";
+               // xrLabel40.Text = "IMMEDIATE";
             }
             else
             {
@@ -80,20 +80,20 @@ namespace AT.Print.PDF
                 xrImmediatedissconnectiondate.Text = op[0].L10_DisconnDate;
                 //xrDueDate.TextAlignment = TextAlignment.MiddleLeft;
                 xrImmediatedissconnectiondate.TextAlignment = TextAlignment.MiddleRight;
-                xrLabel40.Text = op[0].L7_Due_Date;
+                //xrLabel40.Text = op[0].L7_Due_Date;
             }
             #endregion
 
-            //if (!string.IsNullOrEmpty(op[0].L1_Customer_PAN))
-            //{
-            //    xrLabel31.Visible = true;
-            //    xrLabel23.Visible = true;
-            //}
-            //else
-            //{
-            //    xrLabel31.Visible = false;
-            //    xrLabel23.Visible = false;
-            //}
+            if (!string.IsNullOrEmpty(op[0].L1_Customer_PAN))
+            {
+               // xrLabel31.Visible = true;
+                xrLabel23.Visible = true;
+            }
+            else
+            {
+               // xrLabel31.Visible = false;
+                xrLabel23.Visible = false;
+            }
 
 
             xrLabel23.Text = op[0].L1_Customer_PAN;
@@ -116,7 +116,9 @@ namespace AT.Print.PDF
             if (op[0].L5_Addr3.ToString() == "")
             {
                 xrLabel142.Visible = false;
-                xrLabel23.TopF = xrLabel142.TopF;
+                xrLabel31.TopF = xrLabel142.TopF;
+                xrLabel40.TopF = xrLabel31.BottomF;
+                xrLabel23.TopF = xrLabel40.TopF;
             }
 
 
@@ -241,6 +243,9 @@ namespace AT.Print.PDF
             xrLabelTotalAmt.BringToFront();
 
             xrLabelTotalAmt.Text = "₹" + ToDecimal(op[0].L8_AmountPayableBeforeDueDate).ToString("G");
+            xrLabel13.BringToFront();
+            xrLabel5.BringToFront();
+            xrLabel19.BringToFront();
 
 
             ////PieChart//
@@ -250,9 +255,7 @@ namespace AT.Print.PDF
             decimal excessDemandCharge = ToDecimal(op[0].L10_DmdChgPenalty);
 
             xrChartPie.Series.Clear();
-           // xrChartPie.SizeF = new SizeF(260f, 200f);
             xrChartPie.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
-          //  xrChartPie.Padding = new DevExpress.XtraPrinting.PaddingInfo(20, 20, 20, 20);
 
 
 
@@ -267,12 +270,9 @@ namespace AT.Print.PDF
 
             DoughnutSeriesLabel label = (DoughnutSeriesLabel)pieSeries.Label;
             label.Position = PieSeriesLabelPosition.TwoColumns;
-            //label.Position = PieSeriesLabelPosition.Outside;
 
-            // label.ResolveOverlappingMode = ResolveOverlappingMode.Shift;
-            //label.TextPattern = "{A}\n₹{V:n0}";
             label.TextPattern = "{A}\n₹{V:G}";
-
+            label.TextColor = Color.Black;
             label.Font = new Font("Manrope", 7);
             label.BackColor = Color.Transparent;
             label.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
@@ -307,7 +307,7 @@ namespace AT.Print.PDF
             xrChart2.Series[0].ValueDataMembers.AddRange(new string[] { "Value" });
             xrChart2.WidthF = xrChart1.WidthF;
 
-            xrLabel14.Text = "Thank you for previous payment of ₹" + op[0].L7_LastPayementAmount + " on " + op[0].L7_LastPymtDate;
+            xrLabel14.Text = "Thank you for your previous payment of ₹" + op[0].L7_LastPayementAmount + " on " + op[0].L7_LastPymtDate;
 
         }
 
