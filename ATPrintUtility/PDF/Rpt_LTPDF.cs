@@ -1,14 +1,10 @@
 ﻿using AT.Print.Utils;
-using DevExpress.Drawing;
 using DevExpress.XtraCharts;
 using DevExpress.XtraPrinting;
-using DevExpress.XtraReports.UI;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Drawing;
-using System.Linq;
 using System.Text;
 using ZXing;
 
@@ -248,7 +244,7 @@ namespace AT.Print.PDF
             xrLabel19.BringToFront();
 
 
-            ////PieChart//
+            //PieChart//
             decimal energyCharge = ToDecimal(op[0].L8_EnergyCharge);
             decimal fixedCharge = ToDecimal(op[0].L8_FixedCharge);
             decimal electricityDuty = ToDecimal(op[0].L8_GovTax);
@@ -278,9 +274,8 @@ namespace AT.Print.PDF
             label.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
 
             DoughnutSeriesView view = (DoughnutSeriesView)pieSeries.View;
-            view.HoleRadiusPercent = 80;
+            view.HoleRadiusPercent = 75;
             view.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
-
 
 
 
@@ -291,7 +286,6 @@ namespace AT.Print.PDF
             pieSeries.Points[3].Color = Color.FromArgb(125, 125, 124);  // Fixed
             xrChartPie.Series.Add(pieSeries);
 
-            //xrLabelTotalAmt.Text = "₹" + ToDecimal(op[0].L8_AmountPayableBeforeDueDate).ToString("G");
 
             xrChart1.Series[0].DataSource = op[0].KWHgrph;
             xrChart1.Series[0].ArgumentScaleType = ScaleType.Qualitative;

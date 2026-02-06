@@ -74,11 +74,11 @@ namespace AT.Print
                     if (String.Equals(this.Name, "PrintLT") && contents.StartsWith("LT|"))
                     {
                         singleLTBills = contents.Split(new String[] { "LT|" }, StringSplitOptions.RemoveEmptyEntries);
-                        if (!select_mVImg())
-                        {
-                            AppFunctions.CloseWaitForm();
-                            return;
-                        }
+                        //if (!select_mVImg())
+                        //{
+                        //    AppFunctions.CloseWaitForm();
+                        //    return;
+                        //}
                         XtraMessageBox.Show("Total Bill in this file " + singleLTBills.Length.ToString(), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         AppFunctions.ShowWaitForm("Generating LT Bills Now..!!");
                         var sb = sender as SimpleButton;
@@ -200,8 +200,8 @@ namespace AT.Print
                         Margins MinMargins = DevExpress.XtraPrinting.Native.DeviceCaps.GetMinMargins(g);
                         Console.WriteLine("Minimum Margins for " + ps.PrinterName + ": " + MinMargins.ToString());
                     }
-
-                    AT.Print.Rpt_LT_Print rpta = new AT.Print.Rpt_LT_Print
+                    AT.Print.PDF.Rpt_LTPDF rpta = new AT.Print.PDF.Rpt_LTPDF
+                    //AT.Print.Rpt_LT_Print rpta = new AT.Print.Rpt_LT_Print
                     {
                         DataSource = lstformattedbills,
                         ShowPrintStatusDialog = false,
@@ -213,7 +213,8 @@ namespace AT.Print
                     rpta.DesignerOptions.ShowPrintingWarnings = false;
                     rpta.DesignerOptions.ShowExportWarnings = false;
                     rpta.ShowPrintMarginsWarning = false;
-                    AT.Print.Rpt_LT_Print_Back rptb = new AT.Print.Rpt_LT_Print_Back
+                    AT.Print.PDF.rpt_LT_Back rptb = new AT.Print.PDF.rpt_LT_Back
+                    //AT.Print.Rpt_LT_Print_Back rptb = new AT.Print.Rpt_LT_Print_Back
                     {
                         DataSource = lstformattedbills,
                         ShowPrintStatusDialog = false,
@@ -1243,11 +1244,11 @@ namespace AT.Print
                     if (String.Equals(this.Name, "PrintLT") && contents.StartsWith("LT|"))
                     {
                         singleLTBills = contents.Split(new String[] { "LT|" }, StringSplitOptions.RemoveEmptyEntries);
-                        if (!select_mVImg())
-                        {
-                            AppFunctions.CloseWaitForm();
-                            return;
-                        }
+                        //if (!select_mVImg())
+                        //{
+                        //    AppFunctions.CloseWaitForm();
+                        //    return;
+                        //}
 
                         XtraMessageBox.Show("Total Bill in this file " + singleLTBills.Length.ToString(), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         AppFunctions.ShowWaitForm("Validating LT Bills Now before I generate the PDF files !!");

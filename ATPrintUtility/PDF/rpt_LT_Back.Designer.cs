@@ -33,6 +33,8 @@
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel116 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel118 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel137 = new DevExpress.XtraReports.UI.XRLabel();
@@ -106,8 +108,6 @@
             this.bindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource5 = new System.Windows.Forms.BindingSource(this.components);
-            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource3)).BeginInit();
@@ -156,6 +156,49 @@
             this.xrPictureBox3});
             this.Detail.HeightF = 1151.058F;
             this.Detail.Name = "Detail";
+            // 
+            // xrLabel2
+            // 
+            this.xrLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.xrLabel2.BorderColor = System.Drawing.Color.Silver;
+            this.xrLabel2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
+            this.xrLabel2.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.xrLabel2.CanGrow = false;
+            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Manrope", 8F);
+            this.xrLabel2.ForeColor = System.Drawing.Color.Black;
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(17F, 346.0666F);
+            this.xrLabel2.LockedInUserDesigner = true;
+            this.xrLabel2.Name = "xrLabel2";
+            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel2.SizeF = new System.Drawing.SizeF(415.1667F, 22F);
+            this.xrLabel2.StylePriority.UseBackColor = false;
+            this.xrLabel2.StylePriority.UseBorderColor = false;
+            this.xrLabel2.StylePriority.UseBorderDashStyle = false;
+            this.xrLabel2.StylePriority.UseBorders = false;
+            this.xrLabel2.StylePriority.UseFont = false;
+            this.xrLabel2.StylePriority.UseForeColor = false;
+            this.xrLabel2.Visible = false;
+            // 
+            // xrLabel1
+            // 
+            this.xrLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.xrLabel1.BorderColor = System.Drawing.Color.Silver;
+            this.xrLabel1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
+            this.xrLabel1.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.xrLabel1.CanGrow = false;
+            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Manrope", 8F);
+            this.xrLabel1.ForeColor = System.Drawing.Color.Black;
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(17F, 320.3459F);
+            this.xrLabel1.LockedInUserDesigner = true;
+            this.xrLabel1.Name = "xrLabel1";
+            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(415.1667F, 22F);
+            this.xrLabel1.StylePriority.UseBackColor = false;
+            this.xrLabel1.StylePriority.UseBorderColor = false;
+            this.xrLabel1.StylePriority.UseBorderDashStyle = false;
+            this.xrLabel1.StylePriority.UseBorders = false;
+            this.xrLabel1.StylePriority.UseFont = false;
+            this.xrLabel1.StylePriority.UseForeColor = false;
             // 
             // xrLabel116
             // 
@@ -881,7 +924,7 @@
             this.bd_ElectricityDutyHindi.SizeF = new System.Drawing.SizeF(49.65818F, 15.19583F);
             this.bd_ElectricityDutyHindi.StylePriority.UseFont = false;
             this.bd_ElectricityDutyHindi.StylePriority.UsePadding = false;
-            this.bd_ElectricityDutyHindi.Text = "विधयुत कर";
+            this.bd_ElectricityDutyHindi.Text = "विद्युत कर";
             // 
             // bd_AdjustmentMinimumChargesHindi
             // 
@@ -1253,49 +1296,6 @@
             this.xrPictureBox3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrPictureBox3.Name = "xrPictureBox3";
             this.xrPictureBox3.SizeF = new System.Drawing.SizeF(804.0002F, 1151.058F);
-            // 
-            // xrLabel1
-            // 
-            this.xrLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.xrLabel1.BorderColor = System.Drawing.Color.Silver;
-            this.xrLabel1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
-            this.xrLabel1.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.xrLabel1.CanGrow = false;
-            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Manrope", 8F);
-            this.xrLabel1.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(17F, 320.3459F);
-            this.xrLabel1.LockedInUserDesigner = true;
-            this.xrLabel1.Name = "xrLabel1";
-            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(415.1667F, 22F);
-            this.xrLabel1.StylePriority.UseBackColor = false;
-            this.xrLabel1.StylePriority.UseBorderColor = false;
-            this.xrLabel1.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel1.StylePriority.UseBorders = false;
-            this.xrLabel1.StylePriority.UseFont = false;
-            this.xrLabel1.StylePriority.UseForeColor = false;
-            // 
-            // xrLabel2
-            // 
-            this.xrLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.xrLabel2.BorderColor = System.Drawing.Color.Silver;
-            this.xrLabel2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
-            this.xrLabel2.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.xrLabel2.CanGrow = false;
-            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Manrope", 8F);
-            this.xrLabel2.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(17F, 346.0666F);
-            this.xrLabel2.LockedInUserDesigner = true;
-            this.xrLabel2.Name = "xrLabel2";
-            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel2.SizeF = new System.Drawing.SizeF(415.1667F, 22F);
-            this.xrLabel2.StylePriority.UseBackColor = false;
-            this.xrLabel2.StylePriority.UseBorderColor = false;
-            this.xrLabel2.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel2.StylePriority.UseBorders = false;
-            this.xrLabel2.StylePriority.UseFont = false;
-            this.xrLabel2.StylePriority.UseForeColor = false;
-            this.xrLabel2.Visible = false;
             // 
             // rpt_LT_Back
             // 

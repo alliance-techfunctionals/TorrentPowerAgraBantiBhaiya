@@ -1807,7 +1807,7 @@
             this.xrlTopPanelRow_5.LocationFloat = new DevExpress.Utils.PointFloat(268F, 86.0213F);
             this.xrlTopPanelRow_5.Name = "xrlTopPanelRow_5";
             this.xrlTopPanelRow_5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrlTopPanelRow_5.SizeF = new System.Drawing.SizeF(226F, 17.08F);
+            this.xrlTopPanelRow_5.SizeF = new System.Drawing.SizeF(260.9299F, 17.08F);
             this.xrlTopPanelRow_5.StylePriority.UseFont = false;
             // 
             // xrLabel24

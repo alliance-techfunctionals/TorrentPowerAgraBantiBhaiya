@@ -776,7 +776,9 @@ namespace AT.Print.PDF
 
 
             xrPictureBox2.ImageUrl = Application.StartupPath + "\\Contents\\CategorySlabImages\\" + Data[0].L6_TARIFF_DESCR + ".png";
-            xrPictureBox1.ImageUrl = Data[0].MVPicture;
+            //xrPictureBox1.ImageUrl = Data[0].MVPicture;
+            xrPictureBox1.ImageUrl = Application.StartupPath + "\\Contents\\CategorySlabImages\\PromotionImage.png";
+
         }
 
         #region Helper Functions
