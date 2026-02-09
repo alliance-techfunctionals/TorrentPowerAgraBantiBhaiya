@@ -1,4 +1,5 @@
 ﻿using AT.Print.Utils;
+using DevExpress.Charts.Native;
 using DevExpress.XtraCharts;
 using DevExpress.XtraPrinting;
 using System;
@@ -253,9 +254,6 @@ namespace AT.Print.PDF
             xrChartPie.Series.Clear();
             xrChartPie.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
 
-
-
-
             Series pieSeries = new Series("Major Bill Components", ViewType.Doughnut);
 
             pieSeries.Points.Add(new SeriesPoint("Electricity Duty", electricityDuty));
@@ -266,10 +264,10 @@ namespace AT.Print.PDF
 
             DoughnutSeriesLabel label = (DoughnutSeriesLabel)pieSeries.Label;
             label.Position = PieSeriesLabelPosition.TwoColumns;
-
+           
             label.TextPattern = "{A}\n₹{V:G}";
             label.TextColor = Color.Black;
-            label.Font = new Font("Manrope", 7);
+            label.Font = new Font("Manrope", 5);
             label.BackColor = Color.Transparent;
             label.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
 
@@ -286,6 +284,7 @@ namespace AT.Print.PDF
             pieSeries.Points[3].Color = Color.FromArgb(125, 125, 124);  // Fixed
             xrChartPie.Series.Add(pieSeries);
 
+            
 
             xrChart1.Series[0].DataSource = op[0].KWHgrph;
             xrChart1.Series[0].ArgumentScaleType = ScaleType.Qualitative;
