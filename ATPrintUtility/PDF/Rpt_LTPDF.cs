@@ -76,7 +76,7 @@ namespace AT.Print.PDF
                 bd_Bottom_BillDueDate.Text = op[0].L7_Due_Date;
                 xrImmediatedissconnectiondate.Text = op[0].L10_DisconnDate;
                 //xrDueDate.TextAlignment = TextAlignment.MiddleLeft;
-                xrImmediatedissconnectiondate.TextAlignment = TextAlignment.MiddleRight;
+                //xrImmediatedissconnectiondate.TextAlignment = TextAlignment.MiddleRight;
                 //xrLabel40.Text = op[0].L7_Due_Date;
             }
             #endregion
