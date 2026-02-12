@@ -228,7 +228,7 @@
             this.lblFPPAHindi.CanGrow = false;
             this.lblFPPAHindi.CanShrink = true;
             this.lblFPPAHindi.Font = new DevExpress.Drawing.DXFont("Noto Sans Devanagari", 8F);
-            this.lblFPPAHindi.LocationFloat = new DevExpress.Utils.PointFloat(105.0625F, 185.9271F);
+            this.lblFPPAHindi.LocationFloat = new DevExpress.Utils.PointFloat(95.0625F, 185.9271F);
             this.lblFPPAHindi.Name = "lblFPPAHindi";
             this.lblFPPAHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblFPPAHindi.SizeF = new System.Drawing.SizeF(115.6668F, 12.47649F);
@@ -800,7 +800,7 @@
             this.GreenTariffHindi.CanGrow = false;
             this.GreenTariffHindi.CanShrink = true;
             this.GreenTariffHindi.Font = new DevExpress.Drawing.DXFont("Manrope", 8F);
-            this.GreenTariffHindi.LocationFloat = new DevExpress.Utils.PointFloat(81.80009F, 167.2085F);
+            this.GreenTariffHindi.LocationFloat = new DevExpress.Utils.PointFloat(79.80009F, 167.2085F);
             this.GreenTariffHindi.Name = "GreenTariffHindi";
             this.GreenTariffHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.GreenTariffHindi.SizeF = new System.Drawing.SizeF(58.62898F, 14.89011F);
@@ -830,7 +830,7 @@
             // 
             this.xrLabel34.CanGrow = false;
             this.xrLabel34.Font = new DevExpress.Drawing.DXFont("Noto Sans Devanagari", 8F);
-            this.xrLabel34.LocationFloat = new DevExpress.Utils.PointFloat(107.4792F, 179.5625F);
+            this.xrLabel34.LocationFloat = new DevExpress.Utils.PointFloat(101.4792F, 179.5625F);
             this.xrLabel34.LockedInUserDesigner = true;
             this.xrLabel34.Name = "xrLabel34";
             this.xrLabel34.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -1150,7 +1150,7 @@
             // 
             this.xrLabel37.CanGrow = false;
             this.xrLabel37.Font = new DevExpress.Drawing.DXFont("Noto Sans Devanagari", 8F);
-            this.xrLabel37.LocationFloat = new DevExpress.Utils.PointFloat(81.06667F, 282.0666F);
+            this.xrLabel37.LocationFloat = new DevExpress.Utils.PointFloat(78.06667F, 282.0666F);
             this.xrLabel37.LockedInUserDesigner = true;
             this.xrLabel37.Name = "xrLabel37";
             this.xrLabel37.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);

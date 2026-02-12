@@ -278,7 +278,10 @@ namespace AT.Print
                             Margins MinMargins = DevExpress.XtraPrinting.Native.DeviceCaps.GetMinMargins(g);
                             Console.WriteLine("Minimum Margins for " + ps.PrinterName + ": " + MinMargins.ToString());
                         }
-                        AT.Print.Rpt_LTMD_Print rpta = new Rpt_LTMD_Print
+                        
+                        AT.Print.Rpt_LTMDPDF rpta = new Rpt_LTMDPDF
+
+                        //AT.Print.Rpt_LTMD_Print rpta = new Rpt_LTMD_Print
                         {
                             DataSource = lstformattedbills,
                             DisplayName = slt.L6_SERVDET_SERVNO,
@@ -287,9 +290,11 @@ namespace AT.Print
                         rpta.PrinterName = cbDefaultPrinter.SelectedItem.ToString();    
                         rpta.PrintingSystem.Document.Name = slt.L6_SERVDET_SERVNO;
                         rpta.CreateDocument();
-                        Rpt_LTMD_Print_Back rptb = new Rpt_LTMD_Print_Back
+                        //Rpt_LTMD_Print_Back rptb = new Rpt_LTMD_Print_Back
+                        AT.Print.PDF.rpt_LTMD_Back rptb = new AT.Print.PDF.rpt_LTMD_Back
+
                         {
-                            DataSource = lstformattedbills,
+                              DataSource = lstformattedbills,
                         };
                         rptb.CreateDocument();
                         rpta.ModifyDocument(x => { x.AddPages(rptb.Pages); });
@@ -309,14 +314,16 @@ namespace AT.Print
 
                     else if (Name == "sbSavePDF" && String.Equals(slt.L1_TODOrNon_TODFlag, "1"))
                     {
-                        AT.Print.Rpt_LTMDwTodPDF rptsd = new Rpt_LTMDwTodPDF
+                        AT.Print.Rpt_LTMDPDF rptsd = new Rpt_LTMDPDF
+
+                        //AT.Print.Rpt_LTMDwTodPDF rptsd = new Rpt_LTMDwTodPDF
                         {
                             DataSource = lstformattedbills,
                         };
 
                         #region WaterMark Picture Front Page PDF TOD
                         DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkFrontTOD = new DevExpress.XtraPrinting.Drawing.Watermark();
-                        pictureWatermarkFrontTOD.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_TOD_Front_Page.png");
+                        pictureWatermarkFrontTOD.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_Non_TOD_Front_Page.png");
                         pictureWatermarkFrontTOD.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
                         pictureWatermarkFrontTOD.ImageTiling = false;
                         pictureWatermarkFrontTOD.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Clip;
@@ -326,14 +333,16 @@ namespace AT.Print
                         #endregion
 
                         rptsd.CreateDocument(false);
-                        AT.Print.PDF.rpt_LTMDwT_BackPDF rpts = new AT.Print.PDF.rpt_LTMDwT_BackPDF
+                        AT.Print.PDF.rpt_LTMD_Back rpts = new AT.Print.PDF.rpt_LTMD_Back
+
+                        //AT.Print.PDF.rpt_LTMDwT_BackPDF rpts = new AT.Print.PDF.rpt_LTMDwT_BackPDF
                         {
                             DataSource = lstformattedbills,
                         };
 
                         #region WaterMark Picture Back Page PDF TOD
                         DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkBackTOD = new DevExpress.XtraPrinting.Drawing.Watermark();
-                        pictureWatermarkBackTOD.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_TOD_Back_Page.png");
+                        pictureWatermarkBackTOD.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_Non_TOD_Back_Page.png");
                         pictureWatermarkBackTOD.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
                         pictureWatermarkBackTOD.ImageTiling = false;
                         pictureWatermarkBackTOD.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Clip;
@@ -367,7 +376,9 @@ namespace AT.Print
 
                     else if (String.Equals(slt.L1_TODOrNon_TODFlag, "1"))
                     {
-                        AT.Print.Rpt_LTMD_TOD_Print rpta = new Rpt_LTMD_TOD_Print
+                        AT.Print.Rpt_LTMDPDF rpta = new Rpt_LTMDPDF
+
+                        //AT.Print.Rpt_LTMD_TOD_Print rpta = new Rpt_LTMD_TOD_Print
                         {
                             DataSource = lstformattedbills,
                         };
@@ -375,7 +386,9 @@ namespace AT.Print
                         rpta.PrinterName = cbDefaultPrinter.SelectedItem.ToString();    
                         rpta.PrintingSystem.Document.Name = slt.L6_SERVDET_SERVNO;
                         rpta.CreateDocument();
-                        AT.Print.Rpt_LTMD_TOD_Print_Back rptb = new AT.Print.Rpt_LTMD_TOD_Print_Back
+                        AT.Print.PDF.rpt_LTMD_Back rptb = new AT.Print.PDF.rpt_LTMD_Back
+
+                        //AT.Print.Rpt_LTMD_TOD_Print_Back rptb = new AT.Print.Rpt_LTMD_TOD_Print_Back
                         {
                             DataSource = lstformattedbills,
                         };
