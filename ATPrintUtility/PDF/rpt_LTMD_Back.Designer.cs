@@ -494,6 +494,7 @@
             this.bd_TODChargesHindi.StylePriority.UsePadding = false;
             this.bd_TODChargesHindi.StylePriority.UseTextAlignment = false;
             this.bd_TODChargesHindi.Text = "टी ओ डी चार्ज";
+            this.bd_TODChargesHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // bd_TODCharges
             // 
@@ -587,14 +588,15 @@
             this.bd_OtherChargesHindi.CanGrow = false;
             this.bd_OtherChargesHindi.CanShrink = true;
             this.bd_OtherChargesHindi.Font = new DevExpress.Drawing.DXFont("Noto Sans Devanagari", 8F);
-            this.bd_OtherChargesHindi.LocationFloat = new DevExpress.Utils.PointFloat(88.5416F, 174.0988F);
+            this.bd_OtherChargesHindi.LocationFloat = new DevExpress.Utils.PointFloat(88.5416F, 173.0988F);
             this.bd_OtherChargesHindi.Name = "bd_OtherChargesHindi";
             this.bd_OtherChargesHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.bd_OtherChargesHindi.SizeF = new System.Drawing.SizeF(76.5125F, 15.19583F);
+            this.bd_OtherChargesHindi.SizeF = new System.Drawing.SizeF(76.5125F, 16.19583F);
             this.bd_OtherChargesHindi.StylePriority.UseFont = false;
             this.bd_OtherChargesHindi.StylePriority.UsePadding = false;
             this.bd_OtherChargesHindi.StylePriority.UseTextAlignment = false;
             this.bd_OtherChargesHindi.Text = "अन्य चार्ज";
+            this.bd_OtherChargesHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // bd_OtherChargesValue
             // 
@@ -668,7 +670,7 @@
             this.bd_ElectricityDutyHindi.CanGrow = false;
             this.bd_ElectricityDutyHindi.CanShrink = true;
             this.bd_ElectricityDutyHindi.Font = new DevExpress.Drawing.DXFont("Noto Sans Devanagari", 8F);
-            this.bd_ElectricityDutyHindi.LocationFloat = new DevExpress.Utils.PointFloat(91.66664F, 87.62605F);
+            this.bd_ElectricityDutyHindi.LocationFloat = new DevExpress.Utils.PointFloat(91.66664F, 89.62605F);
             this.bd_ElectricityDutyHindi.Name = "bd_ElectricityDutyHindi";
             this.bd_ElectricityDutyHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.bd_ElectricityDutyHindi.SizeF = new System.Drawing.SizeF(51.04166F, 15.19585F);
@@ -676,6 +678,7 @@
             this.bd_ElectricityDutyHindi.StylePriority.UsePadding = false;
             this.bd_ElectricityDutyHindi.StylePriority.UseTextAlignment = false;
             this.bd_ElectricityDutyHindi.Text = "विद्युत कर";
+            this.bd_ElectricityDutyHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // bd_AdjustmentMinimumChargesHindi
             // 
@@ -691,6 +694,7 @@
             this.bd_AdjustmentMinimumChargesHindi.StylePriority.UsePadding = false;
             this.bd_AdjustmentMinimumChargesHindi.StylePriority.UseTextAlignment = false;
             this.bd_AdjustmentMinimumChargesHindi.Text = "समायोजन (कम से कम) राशि";
+            this.bd_AdjustmentMinimumChargesHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // bd_OtherCharges
             // 
@@ -772,16 +776,16 @@
             this.bd_AcChargeHindi.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
             this.bd_AcChargeHindi.CanGrow = false;
             this.bd_AcChargeHindi.Font = new DevExpress.Drawing.DXFont("Noto Sans Devanagari", 8F);
-            this.bd_AcChargeHindi.LocationFloat = new DevExpress.Utils.PointFloat(79.24989F, 157.903F);
+            this.bd_AcChargeHindi.LocationFloat = new DevExpress.Utils.PointFloat(77.24989F, 151.6543F);
             this.bd_AcChargeHindi.Name = "bd_AcChargeHindi";
             this.bd_AcChargeHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.bd_AcChargeHindi.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;
-            this.bd_AcChargeHindi.SizeF = new System.Drawing.SizeF(69.03345F, 15.19582F);
+            this.bd_AcChargeHindi.SizeF = new System.Drawing.SizeF(69.03345F, 21.44449F);
             this.bd_AcChargeHindi.StylePriority.UseFont = false;
             this.bd_AcChargeHindi.StylePriority.UsePadding = false;
             this.bd_AcChargeHindi.StylePriority.UseTextAlignment = false;
-            this.bd_AcChargeHindi.Text = "ए सी अधिभार";
-            this.bd_AcChargeHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.bd_AcChargeHindi.Text = "ए सी चार्ज";
+            this.bd_AcChargeHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // bd_AcChargeValue
             // 

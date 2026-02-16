@@ -1026,7 +1026,7 @@
             this.bd_AcChargeHindi.StylePriority.UseFont = false;
             this.bd_AcChargeHindi.StylePriority.UsePadding = false;
             this.bd_AcChargeHindi.StylePriority.UseTextAlignment = false;
-            this.bd_AcChargeHindi.Text = "ए सी अधिभार";
+            this.bd_AcChargeHindi.Text = "ए सी चार्ज";
             this.bd_AcChargeHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // bd_AcChargeValue

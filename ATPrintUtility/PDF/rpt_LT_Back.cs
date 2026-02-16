@@ -454,7 +454,7 @@ namespace AT.Print.PDF
                     totalMessages++;
                     XRLabel xrMessageExcessDemand = new XRLabel
                     {
-                        Font = new DXFont("Kruti Dev 010", 9),
+                        Font = new DXFont("Noto Sans Devanagari", 8),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = getMessage(LoadStaticData._HindiMessage, "EDC"),
                         WordWrap = false,
@@ -476,7 +476,7 @@ namespace AT.Print.PDF
                     totalMessages++;
                     XRLabel xrMessageExcessDemand = new XRLabel
                     {
-                        Font = new DXFont("Kruti Dev 010", 9),
+                        Font = new DXFont("Noto Sans Devanagari", 8),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = string.Format(getMessage(LoadStaticData._HindiMessage, "PFM"), "0.90".ToString().Replace('.', '-')),
                         WordWrap = false,
@@ -497,7 +497,7 @@ namespace AT.Print.PDF
                     totalMessages++;
                     XRLabel xrMessageDisconnection = new XRLabel
                     {
-                        Font = new DXFont("Kruti Dev 010", 9),
+                        Font = new DXFont("Noto Sans Devanagari", 8),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = getMessage(LoadStaticData._HindiMessage, "IDC"),
                         WordWrap = false,
@@ -518,7 +518,7 @@ namespace AT.Print.PDF
                     totalMessages++;
                     XRLabel xrMessageTheftAmount = new XRLabel
                     {
-                        Font = new DXFont("Kruti Dev 010", 9),
+                        Font = new DXFont("Noto Sans Devanagari", 8),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = string.Format(getMessage(LoadStaticData._HindiMessage, "TFA"), Data[0].L10_TheftAmount.Replace('.', '-')),
                         WordWrap = false,
@@ -542,7 +542,7 @@ namespace AT.Print.PDF
                     totalMessages++;
                     XRLabel xrMessageTheftAmount = new XRLabel
                     {
-                        Font = new DXFont("Kruti Dev 010", 9),
+                        Font = new DXFont("Noto Sans Devanagari", 8),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = string.Format(getMessage(LoadStaticData._HindiMessage, "DAD"), Data[0].L10_TheftAmount),
                         WordWrap = false,
@@ -585,7 +585,7 @@ namespace AT.Print.PDF
 
                         XRLabel xrMessageTheftAmount = new XRLabel
                         {
-                            Font = new DXFont("Kruti Dev 010", 9),
+                            Font = new DXFont("Noto Sans Devanagari", 8),
                             TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                             Text = string.Format(getMessage(LoadStaticData._HindiMessage, "AB1"), totalUnits.ToString().Replace(".", "-"), PrevReadDt.Replace("-", "&"), ReadDt.Replace("-", "&"), Data[0].L10_Mode + " fnu"),
                             WordWrap = false,
@@ -601,7 +601,7 @@ namespace AT.Print.PDF
 
                         XRLabel xrAB2Msg = new XRLabel
                         {
-                            Font = new DXFont("Kruti Dev 010", 9),
+                            Font = new DXFont("Noto Sans Devanagari", 8),
                             TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                             Text = string.Format(getMessage(LoadStaticData._HindiMessage, "AB2")),
                             WordWrap = false,
@@ -627,7 +627,7 @@ namespace AT.Print.PDF
                     totalMessages++;
                     XRLabel xrMessageExcessDemand = new XRLabel
                     {
-                        Font = new DXFont("Kruti Dev 010", 9),
+                        Font = new DXFont("Noto Sans Devanagari", 8),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = getMessage(LoadStaticData._HindiMessage, "TPC"),
                         WordWrap = false,
@@ -648,7 +648,7 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage7 = new XRLabel
                 {
-                    Font = new DXFont("Kruti Dev 010", 9),
+                    Font = new DXFont("Noto Sans Devanagari", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify,
                     Text = Data[0].L33_MESSAGE7,
                     WordWrap = false,
@@ -686,7 +686,7 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage9 = new XRLabel
                 {
-                    Font = new DXFont("Kruti Dev 010", 9),
+                    Font = new DXFont("Noto Sans Devanagari", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify,
                     Text = Data[0].L35_MESSAGE9,
                     WordWrap = false,
@@ -734,7 +734,7 @@ namespace AT.Print.PDF
                     {
 
 
-                        Font = brdcstMsg.MessageType.ToUpper() == "ENG" ? new DXFont("Manrope", 8) : new DXFont("Kruti Dev 010", 9),
+                        Font = brdcstMsg.MessageType.ToUpper() == "ENG" ? new DXFont("Manrope", 8) : new DXFont("Noto Sans Devanagari", 8),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = brdcstMsg.MessageType.ToUpper() == "ENG" ? brdcstMsg.EnglishMessageString : brdcstMsg.HindiMessageString,
                         WordWrap = false,
@@ -756,10 +756,11 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage11 = new XRLabel
                 {
-                    Font = new DXFont("Kruti Dev 010", 9),
+                    Font = new DXFont("Noto Sans Devanagari", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                    //Text = "विभागीय अभिलेखों के अनुसार आपके संयोजन पर जमानत / धनराशि शून्य अंकित है। यदि आपके द्वारा संयोजन राशि जमा की गई है तो उक्त जमानत राशि की मूल रसीद के साथ हमारे ग्राहक सेवा केंद्र पर संपर्क करें।",
-                     Text = "vfHkys[kksa ds vuqlkj vkids la;kstu ij tekur /kujkf'k 'kwU; vafdr gSaA ;fn vkids }kjk la;kstu jkf'k tek dh xbZ gS rks mDr tekur jkf'k dh ewy jlhn ds lkFk \r\ngekjs xzkgd lsok dsUnz  ij lEidZ djsaA ",
+                    Text = "अभिलेखों के अनुसार आपके संयोजन पर जमानत धनराशि शून्य अंकित है। यदि आपके द्वारा संयोजन \n" +
+                    "राशि जमा की गई है तो उक्त जमानत राशि की मूल रसीद के साथ हमारे ग्राहक सेवा केंद्र पर संपर्क करें।",
+                    //Text = "vfHkys[kksa ds vuqlkj vkids la;kstu ij tekur /kujkf'k 'kwU; vafdr gSaA ;fn vkids }kjk la;kstu jkf'k tek dh xbZ gS rks mDr tekur jkf'k dh ewy jlhn ds lkFk \r\ngekjs xzkgd lsok dsUnz  ij lEidZ djsaA ",
                     WordWrap = false,
                     AutoWidth = true,
                     Multiline = true,
