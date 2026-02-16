@@ -274,7 +274,7 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage1 = new XRLabel
                 {
-                    Font = new DXFont("DIN Pro Regular", 8),
+                    Font = new DXFont("Manrope", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L26_MESSAGE1,
                     WordWrap = false,
@@ -292,7 +292,7 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage2 = new XRLabel
                 {
-                    Font = new DXFont("DIN Pro Regular", 8),
+                    Font = new DXFont("Manrope", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L27_MESSAGE2,
                     WordWrap = false,
@@ -310,7 +310,7 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage3 = new XRLabel
                 {
-                    Font = new DXFont("DIN Pro Regular", 8),
+                    Font = new DXFont("Manrope", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L28_MESSAGE3,
                     WordWrap = false,
@@ -328,7 +328,7 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage4 = new XRLabel
                 {
-                    Font = new DXFont("DIN Pro Regular", 8),
+                    Font = new DXFont("Manrope", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L29_MESSAGE4,
                     WordWrap = false,
@@ -346,7 +346,7 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage5 = new XRLabel
                 {
-                    Font = new DXFont("DIN Pro Regular", 8),
+                    Font = new DXFont("Manrope", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L30_MESSAGE5,
                     WordWrap = false,
@@ -364,7 +364,7 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage6 = new XRLabel
                 {
-                    Font = new DXFont("DIN Pro Regular", 8),
+                    Font = new DXFont("Manrope", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L31_MESSAGE6,
                     WordWrap = false,
@@ -456,7 +456,7 @@ namespace AT.Print.PDF
                     totalMessages++;
                     XRLabel xrMessageTheftAmount = new XRLabel
                     {
-                        Font = new DXFont("DIN Pro Regular", 8),
+                        Font = new DXFont("Manrope", 8),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = string.Format("*" + getMessage(LoadStaticData._EnglishMessage, "BRDCST3"), op[0].L10_TheftAmount.Replace('.', '-')),
                         WordWrap = false,
@@ -630,7 +630,7 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage8 = new XRLabel
                 {
-                    Font = new DXFont("DIN Pro Regular", 8),
+                    Font = new DXFont("Manrope", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify,
                     Text = op[0].L34_MESSAGE8,
                     WordWrap = false,
@@ -668,7 +668,7 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage10 = new XRLabel
                 {
-                    Font = new DXFont("DIN Pro Regular", 8),
+                    Font = new DXFont("Manrope", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify,
                     Text = op[0].L36_MESSAGE10,
                     WordWrap = false,
@@ -693,7 +693,7 @@ namespace AT.Print.PDF
                     totalMessages++;
                     XRLabel xrMessageTheftAmount = new XRLabel
                     {
-                        Font = brdcstMsg.MessageType.ToUpper() == "ENG" ? new DXFont("DIN Pro Regular", 8) : new DXFont("Kruti Dev 010", 9),
+                        Font = brdcstMsg.MessageType.ToUpper() == "ENG" ? new DXFont("Manrope", 8) : new DXFont("Kruti Dev 010", 9),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = brdcstMsg.MessageType.ToUpper() == "ENG" ? brdcstMsg.EnglishMessageString : brdcstMsg.HindiMessageString,
                         WordWrap = false,

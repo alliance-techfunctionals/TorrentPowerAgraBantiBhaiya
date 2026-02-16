@@ -31,10 +31,10 @@ namespace AT.Print
 
 
 
-            var data = sender as Rpt_LTMDPDF;
-            var op = data.DataSource as List<SingleLTMDBill>;
+            var dataView = sender as Rpt_LTMDPDF;
+            var op = dataView.DataSource as List<SingleLTMDBill>;
 
-           
+
             #region QRCODE
 
             if (ConfigurationManager.AppSettings["generateQRCodeinLTMDBills"].ToString() == "True")
@@ -117,6 +117,14 @@ namespace AT.Print
                 xrLabel23.TopF = xrLabel40.TopF;
             }
 
+            #region Excess Demand Print
+            //Excess Demand Print
+            if (op[0].L6_EXCESS_DEMAND.Substring(0, 4) != "0.00")
+            {
+                xrlL6ExcessDemand.Text = op[0].L6_EXCESS_DEMAND;
+            }
+
+            #endregion
 
             string unit = "KW";
             if (!string.IsNullOrEmpty(op[0].L6_Kvah_Indicator) && op[0].L6_Kvah_Indicator == "1")
@@ -249,137 +257,102 @@ namespace AT.Print
                     met2_headingMDKW_2.Text = unit1 + "H";
                 }
             }
-            #region Excess Demand Print
-            //Excess Demand Print
-            if (op[0].L6_EXCESS_DEMAND.Substring(0, 4) != "0.00")
-            {
-                xrlL6ExcessDemand.Text = op[0].L6_EXCESS_DEMAND;
-            }
-            #endregion
+           
 
-            if (op[0].L1_TODOrNon_TODFlag == "0")
-            {
+            //var data = op[0];
+            //bool isTOD = data.L1_TODOrNon_TODFlag != "0";
+            //bool hasMeterChange = !string.IsNullOrEmpty(data.L12_MTRSNO_METER_2_IF_AVAILABLE);
 
-                #region NON -TOD Meter Change
-                //Meter Change Print
-                if (op[0].L12_MTRSNO_METER_2_IF_AVAILABLE != "")
-                {
-                    met1_headingMDKW.Visible = true;
-                    met1_headingMDKW_1.Visible = true;
-                    //Old Meter Setting
-                    xrLabel5.Text = op[0].L12_MTRSNO_METER_2_IF_AVAILABLE;//older
-                    xrLabel19.Text = op[0].L12_MTRSNO_METER1;//Newer
-                                                             //Meter Old
-                    met1_11.Text = "____";
-                    met1_12.Text = op[0].L14_M1_KWH_PASTREAD;
-                    met1_21.Text = "____";
-                    met1_22.Text = op[0].L13_M1_KWH_PRESREAD;
-                    met1_31.Text = op[0].L15_M1_MultiplyingFactor_2;
-                    met1_32.Text = op[0].L15_M1_MultiplyingFactor_1;
-                    met1_41.Text = op[0].L16_M1_KVA_UNITS;
-                    met1_42.Text = op[0].L16_M1_KWH_UNITS;
+            //if (hasMeterChange)
+            //{
+            //    met1_headingMDKW.Visible = true;
+            //    met1_headingMDKW_1.Visible = true;
 
-                    //Meter New
+            //    xrLabel5.Text = data.L12_MTRSNO_METER_2_IF_AVAILABLE; // Old
+            //    xrLabel19.Text = data.L12_MTRSNO_METER1;               // New
+            //}
+            //else
+            //{
+            //    xrLabel5.Text = data.L12_MTRSNO_METER1;
+            //}
 
-                    met2_11.Text = "____";
-                    met2_12.Text = op[0].L18_M2_KWH_PASTREAD;
-                    met2_21.Text = "____";
-                    met2_22.Text = op[0].L17_M2_KWH_PRESREAD;
-                    met2_31.Text = op[0].L19_M2_Multiplying_Factor_2;
-                    met2_32.Text = op[0].L19_M2_Multiplying_Factor_1;
-                    met2_41.Text = op[0].L20_M2_KVA_UNITS;
-                    met2_42.Text = op[0].L20_M2_KWH_UNITS;
+            //#region METER 1 DATA
+
+            //met1_31.Text = data.L15_M1_MultiplyingFactor_2;
+            //met1_32.Text = data.L15_M1_MultiplyingFactor_1;
+            //met1_41.Text = data.L16_M1_KVA_UNITS;
+            //met1_42.Text = data.L16_M1_KWH_UNITS;
+
+            //#endregion
+
+            //#region METER 2 DATA
+
+            //met2_31.Text = data.L19_M2_Multiplying_Factor_2;
+            //met2_32.Text = data.L19_M2_Multiplying_Factor_1;
+            //met2_41.Text = data.L20_M2_KVA_UNITS;
+            //met2_42.Text = data.L20_M2_KWH_UNITS;
+
+            //#endregion
+
+            //// =======================
+            //// NON TOD
+            //// =======================
+            //if (!isTOD)
+            //{
+            //    met1_11.Text = "____";
+            //    met1_12.Text = data.L14_M1_KWH_PASTREAD;
+            //    met1_21.Text = "____";
+            //    met1_22.Text = data.L13_M1_KWH_PRESREAD;
+
+            //    if (hasMeterChange)
+            //    {
+            //        met2_11.Text = "____";
+            //        met2_12.Text = data.L18_M2_KWH_PASTREAD;
+            //        met2_21.Text = "____";
+            //        met2_22.Text = data.L17_M2_KWH_PRESREAD;
+            //    }
+            //}
+            //else
+            //{
+            //    // =======================
+            //    // TOD
+            //    // =======================
+
+            //    xrLabel35.Visible = xrLabel36.Visible =
+            //    xrLabel44.Visible = xrLabel45.Visible =
+            //    xrLabel46.Visible = true;
+
+            //    MeterSerial1.Visible = MeterSerial2.Visible = true;
+
+            //    // Meter 1
+            //    MeterSerial2.Text = op[0].L12_MTRSNO_METER1;
+            //    met1_11.Text = data.L14_M1_KVA_PASTREAD;
+            //    met1_12.Text = data.L14_M1_KWH_PASTREAD;
+            //    met1_21.Text = data.L13_M1_KVA_PRESREAD;
+            //    met1_22.Text = data.L13_M1_KWH_PRESREAD;
+
+            //    Tod1Label.Text = data.L22_TOD1_KWH;
+            //    Tod2Label.Text = data.L22_TOD2_KWH;
+            //    Tod3Label.Text = data.L22_TOD3_KWH;
+            //    Tod4Label.Text = data.L22_TOD4_KWH;
+
+            //    if (hasMeterChange)
+            //    {
+            //        // Meter 2
+            //        MeterSerial1.Text = op[0].L12_MTRSNO_METER_2_IF_AVAILABLE;
+            //        met2_11.Text = data.L18_M2_KVA_PASTREAD;
+            //        met2_12.Text = data.L18_M2_KWH_PASTREAD;
+            //        met2_21.Text = data.L17_M2_KVA_PRESREAD;
+            //        met2_22.Text = data.L17_M2_KWH_PRESREAD;
+
+            //        Tod1Label2.Text = data.L24_TOD1_KWH;
+            //        Tod2Label2.Text = data.L24_TOD2_KWH;
+            //        Tod3Label2.Text = data.L24_TOD3_KWH;
+            //        Tod4Label2.Text = data.L24_TOD4_KWH;
+            //    }
+            //}
 
 
-
-                }
-                else
-                {
-                    xrLabel5.Text = op[0].L12_MTRSNO_METER1;//Newer
-                                                            //Meter Old
-                    met2_11.Text = "____";
-                    met2_12.Text = op[0].L14_M1_KWH_PASTREAD;
-                    met2_21.Text = "____";
-                    met2_22.Text = op[0].L13_M1_KWH_PRESREAD;
-                    met2_31.Text = op[0].L15_M1_MultiplyingFactor_2;
-                    met2_32.Text = op[0].L15_M1_MultiplyingFactor_1;
-                    met2_41.Text = op[0].L16_M1_KVA_UNITS;
-                    met2_42.Text = op[0].L16_M1_KWH_UNITS;
-                }
-                #endregion
-            }
-            else
-            {
-                #region TOD Meter Change
-
-
-                if (op[0].L12_MTRSNO_METER_2_IF_AVAILABLE != "")
-                {
-                    met1_headingMDKW.Visible = true;
-                    met1_headingMDKW_1.Visible = true;
-                    //Old Meter Setting
-                    xrLabel5.Text = op[0].L12_MTRSNO_METER_2_IF_AVAILABLE;//older
-                    xrLabel19.Text = op[0].L12_MTRSNO_METER1;//Newer
-                    xrLabel35.Visible = true;
-                    xrLabel36.Visible = true;
-                    xrLabel44.Visible = true;
-                    xrLabel45.Visible = true;
-                    xrLabel46.Visible = true;
-                    MeterSerial1.Visible = true;
-                    MeterSerial2.Visible = true;
-
-                    #region Meter 1 (below)
-
-                    MeterSerial2.Text = op[0].L12_MTRSNO_METER1;
-                    met1_11.Text = op[0].L14_M1_KVA_PASTREAD;
-                    met1_12.Text = op[0].L14_M1_KWH_PASTREAD;
-                    met1_21.Text = op[0].L13_M1_KVA_PRESREAD;
-                    met1_22.Text = op[0].L13_M1_KWH_PRESREAD;
-                    met1_31.Text = op[0].L15_M1_MultiplyingFactor_2;
-                    met1_32.Text = op[0].L15_M1_MultiplyingFactor_1;
-                    met1_41.Text = op[0].L16_M1_KVA_UNITS;
-                    met1_42.Text = op[0].L16_M1_KWH_UNITS;
-                    Tod1Label2.Text = op[0].L22_TOD1_KWH;
-                    Tod2Label2.Text = op[0].L22_TOD2_KWH;
-                    Tod3Label2.Text = op[0].L22_TOD3_KWH;
-                    Tod4Label2.Text = op[0].L22_TOD4_KWH;
-                    #endregion
-
-                    #region Meter 2 (above)
-
-                    MeterSerial1.Text = op[0].L12_MTRSNO_METER_2_IF_AVAILABLE;
-                    met2_11.Text = op[0].L18_M2_KVA_PASTREAD;
-                    met2_12.Text = op[0].L18_M2_KWH_PASTREAD;
-                    met2_21.Text = op[0].L17_M2_KVA_PRESREAD;
-                    met2_22.Text = op[0].L17_M2_KWH_PRESREAD;
-                    met2_31.Text = op[0].L19_M2_Multiplying_Factor_2;
-                    met2_32.Text = op[0].L19_M2_Multiplying_Factor_1;
-                    met2_41.Text = op[0].L20_M2_KVA_UNITS;
-                    met2_42.Text = op[0].L20_M2_KWH_UNITS;
-                    Tod1Label.Text = op[0].L24_TOD1_KWH;
-                    Tod2Label.Text = op[0].L24_TOD2_KWH;
-                    Tod3Label.Text = op[0].L24_TOD3_KWH;
-                    Tod4Label.Text = op[0].L24_TOD4_KWH;
-                    #endregion
-                }
-                else
-                {
-                    MeterSerial1.Text = op[0].L12_MTRSNO_METER1;
-                    met2_11.Text = op[0].L14_M1_KVA_PASTREAD;
-                    met2_12.Text = op[0].L14_M1_KWH_PASTREAD;
-                    met2_21.Text = op[0].L13_M1_KVA_PRESREAD;
-                    met2_22.Text = op[0].L13_M1_KWH_PRESREAD;
-                    met2_31.Text = op[0].L15_M1_MultiplyingFactor_2;
-                    met2_32.Text = op[0].L15_M1_MultiplyingFactor_1;
-                    met2_41.Text = op[0].L16_M1_KVA_UNITS;
-                    met2_42.Text = op[0].L16_M1_KWH_UNITS;
-                    Tod1Label.Text = op[0].L22_TOD1_KWH;
-                    Tod2Label.Text = op[0].L22_TOD2_KWH;
-                    Tod3Label.Text = op[0].L22_TOD3_KWH;
-                    Tod4Label.Text = op[0].L22_TOD4_KWH;
-                }
-                #endregion
-            }
 
             if (!string.IsNullOrEmpty(op[0].L6_Kvah_Indicator) && op[0].L6_Kvah_Indicator == "1")
             {
@@ -472,8 +445,142 @@ namespace AT.Print
                 xrlBillDemand.Text = "*" + xrlBillDemand.Text;
             }
 
-        }
 
+
+
+
+
+
+
+
+
+            if (op[0].L1_TODOrNon_TODFlag == "0")
+            {
+
+                #region NON -TOD Meter Change
+                //Meter Change Print
+                if (op[0].L12_MTRSNO_METER_2_IF_AVAILABLE != "")
+                {
+                    met1_headingMDKW.Visible = true;
+                    met1_headingMDKW_1.Visible = true;
+                    //Old Meter Setting
+                    xrLabel5.Text = op[0].L12_MTRSNO_METER_2_IF_AVAILABLE;//older
+                    xrLabel19.Text = op[0].L12_MTRSNO_METER1;//Newer
+                                                             //Meter Old
+                    met1_11.Text = "____";
+                    met1_12.Text = op[0].L14_M1_KWH_PASTREAD;
+                    met1_21.Text = "____";
+                    met1_22.Text = op[0].L13_M1_KWH_PRESREAD;
+                    met1_31.Text = op[0].L15_M1_MultiplyingFactor_2;
+                    met1_32.Text = op[0].L15_M1_MultiplyingFactor_1;
+                    met1_41.Text = op[0].L16_M1_KVA_UNITS;
+                    met1_42.Text = op[0].L16_M1_KWH_UNITS;
+
+                    //Meter New
+
+                    met2_11.Text = "____";
+                    met2_12.Text = op[0].L18_M2_KWH_PASTREAD;
+                    met2_21.Text = "____";
+                    met2_22.Text = op[0].L17_M2_KWH_PRESREAD;
+                    met2_31.Text = op[0].L19_M2_Multiplying_Factor_2;
+                    met2_32.Text = op[0].L19_M2_Multiplying_Factor_1;
+                    met2_41.Text = op[0].L20_M2_KVA_UNITS;
+                    met2_42.Text = op[0].L20_M2_KWH_UNITS;
+
+
+
+                }
+                else
+                {
+                    xrLabel5.Text = op[0].L12_MTRSNO_METER1;//Newer
+                                                            //Meter Old
+                    met2_11.Text = "____";
+                    met2_12.Text = op[0].L14_M1_KWH_PASTREAD;
+                    met2_21.Text = "____";
+                    met2_22.Text = op[0].L13_M1_KWH_PRESREAD;
+                    met2_31.Text = op[0].L15_M1_MultiplyingFactor_2;
+                    met2_32.Text = op[0].L15_M1_MultiplyingFactor_1;
+                    met2_41.Text = op[0].L16_M1_KVA_UNITS;
+                    met2_42.Text = op[0].L16_M1_KWH_UNITS;
+                }
+                #endregion
+            }
+            else
+            {
+                #region TOD Meter Change
+
+                xrLabel35.Visible = true;
+                xrLabel36.Visible = true;
+                xrLabel44.Visible = true;
+                xrLabel45.Visible = true;
+                xrLabel46.Visible = true;
+                MeterSerial1.Visible = true;
+                MeterSerial2.Visible = true;
+
+
+                if (op[0].L12_MTRSNO_METER_2_IF_AVAILABLE != "")
+                {
+                    met1_headingMDKW.Visible = true;
+                    met1_headingMDKW_1.Visible = true;
+                    //Old Meter Setting
+                    xrLabel5.Text = op[0].L12_MTRSNO_METER_2_IF_AVAILABLE;//older
+                    xrLabel19.Text = op[0].L12_MTRSNO_METER1;//Newer
+
+
+                    #region Meter 1 (below)
+
+                    MeterSerial2.Text = op[0].L12_MTRSNO_METER1;
+                    met1_11.Text = op[0].L14_M1_KVA_PASTREAD;
+                    met1_12.Text = op[0].L14_M1_KWH_PASTREAD;
+                    met1_21.Text = op[0].L13_M1_KVA_PRESREAD;
+                    met1_22.Text = op[0].L13_M1_KWH_PRESREAD;
+                    met1_31.Text = op[0].L15_M1_MultiplyingFactor_2;
+                    met1_32.Text = op[0].L15_M1_MultiplyingFactor_1;
+                    met1_41.Text = op[0].L16_M1_KVA_UNITS;
+                    met1_42.Text = op[0].L16_M1_KWH_UNITS;
+                    Tod1Label2.Text = op[0].L22_TOD1_KWH;
+                    Tod2Label2.Text = op[0].L22_TOD2_KWH;
+                    Tod3Label2.Text = op[0].L22_TOD3_KWH;
+                    Tod4Label2.Text = op[0].L22_TOD4_KWH;
+                    #endregion
+
+                    #region Meter 2 (above)
+
+                    MeterSerial1.Text = op[0].L12_MTRSNO_METER_2_IF_AVAILABLE;
+                    met2_11.Text = op[0].L18_M2_KVA_PASTREAD;
+                    met2_12.Text = op[0].L18_M2_KWH_PASTREAD;
+                    met2_21.Text = op[0].L17_M2_KVA_PRESREAD;
+                    met2_22.Text = op[0].L17_M2_KWH_PRESREAD;
+                    met2_31.Text = op[0].L19_M2_Multiplying_Factor_2;
+                    met2_32.Text = op[0].L19_M2_Multiplying_Factor_1;
+                    met2_41.Text = op[0].L20_M2_KVA_UNITS;
+                    met2_42.Text = op[0].L20_M2_KWH_UNITS;
+                    Tod1Label.Text = op[0].L24_TOD1_KWH;
+                    Tod2Label.Text = op[0].L24_TOD2_KWH;
+                    Tod3Label.Text = op[0].L24_TOD3_KWH;
+                    Tod4Label.Text = op[0].L24_TOD4_KWH;
+                    #endregion
+                }
+                else
+                {
+                    MeterSerial1.Text = op[0].L12_MTRSNO_METER1;
+                    xrLabel5.Text = op[0].L12_MTRSNO_METER1;//Newer
+                    met2_11.Text = op[0].L14_M1_KVA_PASTREAD;
+                    met2_12.Text = op[0].L14_M1_KWH_PASTREAD;
+                    met2_21.Text = op[0].L13_M1_KVA_PRESREAD;
+                    met2_22.Text = op[0].L13_M1_KWH_PRESREAD;
+                    met2_31.Text = op[0].L15_M1_MultiplyingFactor_2;
+                    met2_32.Text = op[0].L15_M1_MultiplyingFactor_1;
+                    met2_41.Text = op[0].L16_M1_KVA_UNITS;
+                    met2_42.Text = op[0].L16_M1_KWH_UNITS;
+                    Tod1Label.Text = op[0].L22_TOD1_KWH;
+                    Tod2Label.Text = op[0].L22_TOD2_KWH;
+                    Tod3Label.Text = op[0].L22_TOD3_KWH;
+                    Tod4Label.Text = op[0].L22_TOD4_KWH;
+                }
+                #endregion
+            }
+        }
 
 
         private decimal ToDecimal(string value)
@@ -484,6 +591,7 @@ namespace AT.Print
 
     }
 }
+
 
 
 

@@ -42,6 +42,16 @@
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.MeterSerial2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.Tod1Label2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.Tod2Label2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.Tod3Label2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.Tod4Label2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.MeterSerial1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.Tod1Label = new DevExpress.XtraReports.UI.XRLabel();
+            this.Tod2Label = new DevExpress.XtraReports.UI.XRLabel();
+            this.Tod3Label = new DevExpress.XtraReports.UI.XRLabel();
+            this.Tod4Label = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel36 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel44 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel45 = new DevExpress.XtraReports.UI.XRLabel();
@@ -160,16 +170,6 @@
             this.xrLabel62 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrBarCode1 = new DevExpress.XtraReports.UI.XRBarCode();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.MeterSerial1 = new DevExpress.XtraReports.UI.XRLabel();
-            this.Tod1Label = new DevExpress.XtraReports.UI.XRLabel();
-            this.Tod2Label = new DevExpress.XtraReports.UI.XRLabel();
-            this.Tod3Label = new DevExpress.XtraReports.UI.XRLabel();
-            this.Tod4Label = new DevExpress.XtraReports.UI.XRLabel();
-            this.MeterSerial2 = new DevExpress.XtraReports.UI.XRLabel();
-            this.Tod1Label2 = new DevExpress.XtraReports.UI.XRLabel();
-            this.Tod2Label2 = new DevExpress.XtraReports.UI.XRLabel();
-            this.Tod3Label2 = new DevExpress.XtraReports.UI.XRLabel();
-            this.Tod4Label2 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrChartPie)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrChart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
@@ -321,14 +321,194 @@
             this.Detail.StylePriority.UseBorderDashStyle = false;
             this.Detail.StylePriority.UseFont = false;
             // 
+            // MeterSerial2
+            // 
+            this.MeterSerial2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
+            this.MeterSerial2.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.MeterSerial2.CanGrow = false;
+            this.MeterSerial2.Dpi = 96F;
+            this.MeterSerial2.Font = new DevExpress.Drawing.DXFont("Manrope", 7F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.MeterSerial2.LocationFloat = new DevExpress.Utils.PointFloat(23.83496F, 878.0302F);
+            this.MeterSerial2.Name = "MeterSerial2";
+            this.MeterSerial2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.MeterSerial2.SizeF = new System.Drawing.SizeF(67.83704F, 17.59F);
+            this.MeterSerial2.StylePriority.UseBorderDashStyle = false;
+            this.MeterSerial2.StylePriority.UseBorders = false;
+            this.MeterSerial2.StylePriority.UseFont = false;
+            this.MeterSerial2.StylePriority.UseTextAlignment = false;
+            this.MeterSerial2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.MeterSerial2.Visible = false;
+            // 
+            // Tod1Label2
+            // 
+            this.Tod1Label2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
+            this.Tod1Label2.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.Tod1Label2.CanGrow = false;
+            this.Tod1Label2.Dpi = 96F;
+            this.Tod1Label2.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
+            this.Tod1Label2.LocationFloat = new DevExpress.Utils.PointFloat(91.672F, 878.0321F);
+            this.Tod1Label2.Multiline = true;
+            this.Tod1Label2.Name = "Tod1Label2";
+            this.Tod1Label2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.Tod1Label2.SizeF = new System.Drawing.SizeF(57.01F, 17.59F);
+            this.Tod1Label2.StylePriority.UseBorderDashStyle = false;
+            this.Tod1Label2.StylePriority.UseBorders = false;
+            this.Tod1Label2.StylePriority.UseFont = false;
+            this.Tod1Label2.StylePriority.UseTextAlignment = false;
+            this.Tod1Label2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            // 
+            // Tod2Label2
+            // 
+            this.Tod2Label2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
+            this.Tod2Label2.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.Tod2Label2.CanGrow = false;
+            this.Tod2Label2.Dpi = 96F;
+            this.Tod2Label2.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
+            this.Tod2Label2.LocationFloat = new DevExpress.Utils.PointFloat(152.9391F, 878.0321F);
+            this.Tod2Label2.Multiline = true;
+            this.Tod2Label2.Name = "Tod2Label2";
+            this.Tod2Label2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.Tod2Label2.SizeF = new System.Drawing.SizeF(57.01F, 17.59F);
+            this.Tod2Label2.StylePriority.UseBorderDashStyle = false;
+            this.Tod2Label2.StylePriority.UseBorders = false;
+            this.Tod2Label2.StylePriority.UseFont = false;
+            this.Tod2Label2.StylePriority.UseTextAlignment = false;
+            this.Tod2Label2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            // 
+            // Tod3Label2
+            // 
+            this.Tod3Label2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
+            this.Tod3Label2.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.Tod3Label2.CanGrow = false;
+            this.Tod3Label2.Dpi = 96F;
+            this.Tod3Label2.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
+            this.Tod3Label2.LocationFloat = new DevExpress.Utils.PointFloat(213.9501F, 878.03F);
+            this.Tod3Label2.Multiline = true;
+            this.Tod3Label2.Name = "Tod3Label2";
+            this.Tod3Label2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.Tod3Label2.SizeF = new System.Drawing.SizeF(57.01F, 17.59F);
+            this.Tod3Label2.StylePriority.UseBorderDashStyle = false;
+            this.Tod3Label2.StylePriority.UseBorders = false;
+            this.Tod3Label2.StylePriority.UseFont = false;
+            this.Tod3Label2.StylePriority.UseTextAlignment = false;
+            this.Tod3Label2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            // 
+            // Tod4Label2
+            // 
+            this.Tod4Label2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
+            this.Tod4Label2.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.Tod4Label2.CanGrow = false;
+            this.Tod4Label2.Dpi = 96F;
+            this.Tod4Label2.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
+            this.Tod4Label2.LocationFloat = new DevExpress.Utils.PointFloat(274.4022F, 878.0302F);
+            this.Tod4Label2.Multiline = true;
+            this.Tod4Label2.Name = "Tod4Label2";
+            this.Tod4Label2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.Tod4Label2.SizeF = new System.Drawing.SizeF(57.01F, 17.59F);
+            this.Tod4Label2.StylePriority.UseBorderDashStyle = false;
+            this.Tod4Label2.StylePriority.UseBorders = false;
+            this.Tod4Label2.StylePriority.UseFont = false;
+            this.Tod4Label2.StylePriority.UseTextAlignment = false;
+            this.Tod4Label2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            // 
+            // MeterSerial1
+            // 
+            this.MeterSerial1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
+            this.MeterSerial1.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.MeterSerial1.CanGrow = false;
+            this.MeterSerial1.Dpi = 96F;
+            this.MeterSerial1.Font = new DevExpress.Drawing.DXFont("Manrope", 7F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.MeterSerial1.LocationFloat = new DevExpress.Utils.PointFloat(23.83496F, 860.44F);
+            this.MeterSerial1.Name = "MeterSerial1";
+            this.MeterSerial1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.MeterSerial1.SizeF = new System.Drawing.SizeF(67.83704F, 17.59F);
+            this.MeterSerial1.StylePriority.UseBorderDashStyle = false;
+            this.MeterSerial1.StylePriority.UseBorders = false;
+            this.MeterSerial1.StylePriority.UseFont = false;
+            this.MeterSerial1.StylePriority.UseTextAlignment = false;
+            this.MeterSerial1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.MeterSerial1.Visible = false;
+            // 
+            // Tod1Label
+            // 
+            this.Tod1Label.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
+            this.Tod1Label.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.Tod1Label.CanGrow = false;
+            this.Tod1Label.Dpi = 96F;
+            this.Tod1Label.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
+            this.Tod1Label.LocationFloat = new DevExpress.Utils.PointFloat(91.672F, 860.442F);
+            this.Tod1Label.Multiline = true;
+            this.Tod1Label.Name = "Tod1Label";
+            this.Tod1Label.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.Tod1Label.SizeF = new System.Drawing.SizeF(57.01F, 17.59F);
+            this.Tod1Label.StylePriority.UseBorderDashStyle = false;
+            this.Tod1Label.StylePriority.UseBorders = false;
+            this.Tod1Label.StylePriority.UseFont = false;
+            this.Tod1Label.StylePriority.UseTextAlignment = false;
+            this.Tod1Label.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            // 
+            // Tod2Label
+            // 
+            this.Tod2Label.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
+            this.Tod2Label.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.Tod2Label.CanGrow = false;
+            this.Tod2Label.Dpi = 96F;
+            this.Tod2Label.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
+            this.Tod2Label.LocationFloat = new DevExpress.Utils.PointFloat(152.939F, 860.442F);
+            this.Tod2Label.Multiline = true;
+            this.Tod2Label.Name = "Tod2Label";
+            this.Tod2Label.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.Tod2Label.SizeF = new System.Drawing.SizeF(57.01F, 17.59F);
+            this.Tod2Label.StylePriority.UseBorderDashStyle = false;
+            this.Tod2Label.StylePriority.UseBorders = false;
+            this.Tod2Label.StylePriority.UseFont = false;
+            this.Tod2Label.StylePriority.UseTextAlignment = false;
+            this.Tod2Label.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            // 
+            // Tod3Label
+            // 
+            this.Tod3Label.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
+            this.Tod3Label.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.Tod3Label.CanGrow = false;
+            this.Tod3Label.Dpi = 96F;
+            this.Tod3Label.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
+            this.Tod3Label.LocationFloat = new DevExpress.Utils.PointFloat(213.9501F, 860.44F);
+            this.Tod3Label.Multiline = true;
+            this.Tod3Label.Name = "Tod3Label";
+            this.Tod3Label.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.Tod3Label.SizeF = new System.Drawing.SizeF(57.01F, 17.59F);
+            this.Tod3Label.StylePriority.UseBorderDashStyle = false;
+            this.Tod3Label.StylePriority.UseBorders = false;
+            this.Tod3Label.StylePriority.UseFont = false;
+            this.Tod3Label.StylePriority.UseTextAlignment = false;
+            this.Tod3Label.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            // 
+            // Tod4Label
+            // 
+            this.Tod4Label.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
+            this.Tod4Label.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.Tod4Label.CanGrow = false;
+            this.Tod4Label.Dpi = 96F;
+            this.Tod4Label.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
+            this.Tod4Label.LocationFloat = new DevExpress.Utils.PointFloat(274.402F, 860.4401F);
+            this.Tod4Label.Multiline = true;
+            this.Tod4Label.Name = "Tod4Label";
+            this.Tod4Label.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.Tod4Label.SizeF = new System.Drawing.SizeF(57.01F, 17.59F);
+            this.Tod4Label.StylePriority.UseBorderDashStyle = false;
+            this.Tod4Label.StylePriority.UseBorders = false;
+            this.Tod4Label.StylePriority.UseFont = false;
+            this.Tod4Label.StylePriority.UseTextAlignment = false;
+            this.Tod4Label.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            // 
             // xrLabel36
             // 
             this.xrLabel36.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
             this.xrLabel36.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel36.CanGrow = false;
             this.xrLabel36.Dpi = 96F;
-            this.xrLabel36.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 8F);
-            this.xrLabel36.LocationFloat = new DevExpress.Utils.PointFloat(84.66003F, 841.36F);
+            this.xrLabel36.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
+            this.xrLabel36.LocationFloat = new DevExpress.Utils.PointFloat(91.66003F, 841.36F);
             this.xrLabel36.Name = "xrLabel36";
             this.xrLabel36.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrLabel36.SizeF = new System.Drawing.SizeF(57.01F, 17.59F);
@@ -346,8 +526,8 @@
             this.xrLabel44.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel44.CanGrow = false;
             this.xrLabel44.Dpi = 96F;
-            this.xrLabel44.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 8F);
-            this.xrLabel44.LocationFloat = new DevExpress.Utils.PointFloat(145.9271F, 841.36F);
+            this.xrLabel44.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
+            this.xrLabel44.LocationFloat = new DevExpress.Utils.PointFloat(152.9271F, 841.36F);
             this.xrLabel44.Name = "xrLabel44";
             this.xrLabel44.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrLabel44.SizeF = new System.Drawing.SizeF(57.01F, 17.59F);
@@ -365,7 +545,7 @@
             this.xrLabel45.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel45.CanGrow = false;
             this.xrLabel45.Dpi = 96F;
-            this.xrLabel45.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 8F);
+            this.xrLabel45.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
             this.xrLabel45.LocationFloat = new DevExpress.Utils.PointFloat(213.9381F, 841.36F);
             this.xrLabel45.Name = "xrLabel45";
             this.xrLabel45.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -384,8 +564,8 @@
             this.xrLabel46.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel46.CanGrow = false;
             this.xrLabel46.Dpi = 96F;
-            this.xrLabel46.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 8F);
-            this.xrLabel46.LocationFloat = new DevExpress.Utils.PointFloat(278.3901F, 841.36F);
+            this.xrLabel46.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
+            this.xrLabel46.LocationFloat = new DevExpress.Utils.PointFloat(274.3901F, 841.36F);
             this.xrLabel46.Name = "xrLabel46";
             this.xrLabel46.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrLabel46.SizeF = new System.Drawing.SizeF(57.01F, 17.59F);
@@ -404,7 +584,7 @@
             this.xrLabel35.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrLabel35.CanGrow = false;
             this.xrLabel35.Dpi = 96F;
-            this.xrLabel35.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 8F);
+            this.xrLabel35.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
             this.xrLabel35.ForeColor = System.Drawing.Color.Black;
             this.xrLabel35.LocationFloat = new DevExpress.Utils.PointFloat(24.99998F, 841.36F);
             this.xrLabel35.Multiline = true;
@@ -616,224 +796,224 @@
             this.met1_11.CanGrow = false;
             this.met1_11.Dpi = 96F;
             this.met1_11.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
-            this.met1_11.LocationFloat = new DevExpress.Utils.PointFloat(97F, 727.3601F);
+            this.met1_11.LocationFloat = new DevExpress.Utils.PointFloat(97F, 728.36F);
             this.met1_11.Multiline = true;
             this.met1_11.Name = "met1_11";
             this.met1_11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.met1_11.SizeF = new System.Drawing.SizeF(45F, 22.08F);
             this.met1_11.StylePriority.UseFont = false;
             this.met1_11.StylePriority.UseTextAlignment = false;
-            this.met1_11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.met1_11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // met1_21
             // 
             this.met1_21.CanGrow = false;
             this.met1_21.Dpi = 96F;
             this.met1_21.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
-            this.met1_21.LocationFloat = new DevExpress.Utils.PointFloat(97F, 749.4401F);
+            this.met1_21.LocationFloat = new DevExpress.Utils.PointFloat(97F, 750.44F);
             this.met1_21.Multiline = true;
             this.met1_21.Name = "met1_21";
             this.met1_21.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.met1_21.SizeF = new System.Drawing.SizeF(45F, 22.15997F);
             this.met1_21.StylePriority.UseFont = false;
             this.met1_21.StylePriority.UseTextAlignment = false;
-            this.met1_21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.met1_21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // met1_31
             // 
             this.met1_31.CanGrow = false;
             this.met1_31.Dpi = 96F;
             this.met1_31.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
-            this.met1_31.LocationFloat = new DevExpress.Utils.PointFloat(97F, 771.5201F);
+            this.met1_31.LocationFloat = new DevExpress.Utils.PointFloat(97F, 772.52F);
             this.met1_31.Multiline = true;
             this.met1_31.Name = "met1_31";
             this.met1_31.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.met1_31.SizeF = new System.Drawing.SizeF(45F, 22.08F);
             this.met1_31.StylePriority.UseFont = false;
             this.met1_31.StylePriority.UseTextAlignment = false;
-            this.met1_31.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.met1_31.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // met1_41
             // 
             this.met1_41.CanGrow = false;
             this.met1_41.Dpi = 96F;
             this.met1_41.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
-            this.met1_41.LocationFloat = new DevExpress.Utils.PointFloat(97F, 793.6001F);
+            this.met1_41.LocationFloat = new DevExpress.Utils.PointFloat(97F, 794.6F);
             this.met1_41.Multiline = true;
             this.met1_41.Name = "met1_41";
             this.met1_41.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.met1_41.SizeF = new System.Drawing.SizeF(45F, 22.08F);
             this.met1_41.StylePriority.UseFont = false;
             this.met1_41.StylePriority.UseTextAlignment = false;
-            this.met1_41.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.met1_41.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // met1_12
             // 
             this.met1_12.CanGrow = false;
             this.met1_12.Dpi = 96F;
             this.met1_12.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
-            this.met1_12.LocationFloat = new DevExpress.Utils.PointFloat(142F, 727.3601F);
+            this.met1_12.LocationFloat = new DevExpress.Utils.PointFloat(142F, 728.36F);
             this.met1_12.Multiline = true;
             this.met1_12.Name = "met1_12";
             this.met1_12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.met1_12.SizeF = new System.Drawing.SizeF(68F, 22.08002F);
             this.met1_12.StylePriority.UseFont = false;
             this.met1_12.StylePriority.UseTextAlignment = false;
-            this.met1_12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.met1_12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // met1_22
             // 
             this.met1_22.CanGrow = false;
             this.met1_22.Dpi = 96F;
             this.met1_22.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
-            this.met1_22.LocationFloat = new DevExpress.Utils.PointFloat(142F, 749.4401F);
+            this.met1_22.LocationFloat = new DevExpress.Utils.PointFloat(142F, 750.44F);
             this.met1_22.Multiline = true;
             this.met1_22.Name = "met1_22";
             this.met1_22.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.met1_22.SizeF = new System.Drawing.SizeF(68F, 22.07999F);
             this.met1_22.StylePriority.UseFont = false;
             this.met1_22.StylePriority.UseTextAlignment = false;
-            this.met1_22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.met1_22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // met1_32
             // 
             this.met1_32.CanGrow = false;
             this.met1_32.Dpi = 96F;
             this.met1_32.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
-            this.met1_32.LocationFloat = new DevExpress.Utils.PointFloat(142F, 771.5201F);
+            this.met1_32.LocationFloat = new DevExpress.Utils.PointFloat(142F, 772.52F);
             this.met1_32.Multiline = true;
             this.met1_32.Name = "met1_32";
             this.met1_32.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.met1_32.SizeF = new System.Drawing.SizeF(68F, 22.07999F);
             this.met1_32.StylePriority.UseFont = false;
             this.met1_32.StylePriority.UseTextAlignment = false;
-            this.met1_32.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.met1_32.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // met1_42
             // 
             this.met1_42.CanGrow = false;
             this.met1_42.Dpi = 96F;
             this.met1_42.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
-            this.met1_42.LocationFloat = new DevExpress.Utils.PointFloat(142F, 793.6001F);
+            this.met1_42.LocationFloat = new DevExpress.Utils.PointFloat(142F, 794.6F);
             this.met1_42.Multiline = true;
             this.met1_42.Name = "met1_42";
             this.met1_42.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.met1_42.SizeF = new System.Drawing.SizeF(68F, 22.07999F);
             this.met1_42.StylePriority.UseFont = false;
             this.met1_42.StylePriority.UseTextAlignment = false;
-            this.met1_42.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.met1_42.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // met2_11
             // 
             this.met2_11.CanGrow = false;
             this.met2_11.Dpi = 96F;
             this.met2_11.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
-            this.met2_11.LocationFloat = new DevExpress.Utils.PointFloat(213.7647F, 727.3601F);
+            this.met2_11.LocationFloat = new DevExpress.Utils.PointFloat(213.76F, 728.36F);
             this.met2_11.Multiline = true;
             this.met2_11.Name = "met2_11";
             this.met2_11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.met2_11.SizeF = new System.Drawing.SizeF(45F, 22.08F);
             this.met2_11.StylePriority.UseFont = false;
             this.met2_11.StylePriority.UseTextAlignment = false;
-            this.met2_11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.met2_11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // met2_21
             // 
             this.met2_21.CanGrow = false;
             this.met2_21.Dpi = 96F;
             this.met2_21.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
-            this.met2_21.LocationFloat = new DevExpress.Utils.PointFloat(213.7647F, 749.4401F);
+            this.met2_21.LocationFloat = new DevExpress.Utils.PointFloat(213.76F, 750.44F);
             this.met2_21.Multiline = true;
             this.met2_21.Name = "met2_21";
             this.met2_21.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.met2_21.SizeF = new System.Drawing.SizeF(45F, 22.08F);
             this.met2_21.StylePriority.UseFont = false;
             this.met2_21.StylePriority.UseTextAlignment = false;
-            this.met2_21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.met2_21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // met2_31
             // 
             this.met2_31.CanGrow = false;
             this.met2_31.Dpi = 96F;
             this.met2_31.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
-            this.met2_31.LocationFloat = new DevExpress.Utils.PointFloat(213.7647F, 771.5201F);
+            this.met2_31.LocationFloat = new DevExpress.Utils.PointFloat(213.76F, 772.52F);
             this.met2_31.Multiline = true;
             this.met2_31.Name = "met2_31";
             this.met2_31.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.met2_31.SizeF = new System.Drawing.SizeF(45F, 22.08F);
             this.met2_31.StylePriority.UseFont = false;
             this.met2_31.StylePriority.UseTextAlignment = false;
-            this.met2_31.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.met2_31.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // met2_41
             // 
             this.met2_41.CanGrow = false;
             this.met2_41.Dpi = 96F;
             this.met2_41.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
-            this.met2_41.LocationFloat = new DevExpress.Utils.PointFloat(213.7647F, 793.6001F);
+            this.met2_41.LocationFloat = new DevExpress.Utils.PointFloat(213.76F, 794.6F);
             this.met2_41.Multiline = true;
             this.met2_41.Name = "met2_41";
             this.met2_41.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.met2_41.SizeF = new System.Drawing.SizeF(45F, 22.08F);
             this.met2_41.StylePriority.UseFont = false;
             this.met2_41.StylePriority.UseTextAlignment = false;
-            this.met2_41.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.met2_41.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // met2_12
             // 
             this.met2_12.CanGrow = false;
             this.met2_12.Dpi = 96F;
             this.met2_12.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
-            this.met2_12.LocationFloat = new DevExpress.Utils.PointFloat(258.7647F, 727.3601F);
+            this.met2_12.LocationFloat = new DevExpress.Utils.PointFloat(258.76F, 728.36F);
             this.met2_12.Multiline = true;
             this.met2_12.Name = "met2_12";
             this.met2_12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.met2_12.SizeF = new System.Drawing.SizeF(71.23526F, 22.07999F);
             this.met2_12.StylePriority.UseFont = false;
             this.met2_12.StylePriority.UseTextAlignment = false;
-            this.met2_12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.met2_12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // met2_22
             // 
             this.met2_22.CanGrow = false;
             this.met2_22.Dpi = 96F;
             this.met2_22.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
-            this.met2_22.LocationFloat = new DevExpress.Utils.PointFloat(258.7647F, 749.4401F);
+            this.met2_22.LocationFloat = new DevExpress.Utils.PointFloat(258.76F, 750.44F);
             this.met2_22.Multiline = true;
             this.met2_22.Name = "met2_22";
             this.met2_22.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.met2_22.SizeF = new System.Drawing.SizeF(71.23526F, 22.07999F);
             this.met2_22.StylePriority.UseFont = false;
             this.met2_22.StylePriority.UseTextAlignment = false;
-            this.met2_22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.met2_22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // met2_32
             // 
             this.met2_32.CanGrow = false;
             this.met2_32.Dpi = 96F;
             this.met2_32.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
-            this.met2_32.LocationFloat = new DevExpress.Utils.PointFloat(258.7647F, 771.5201F);
+            this.met2_32.LocationFloat = new DevExpress.Utils.PointFloat(258.76F, 772.52F);
             this.met2_32.Multiline = true;
             this.met2_32.Name = "met2_32";
             this.met2_32.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.met2_32.SizeF = new System.Drawing.SizeF(71.23526F, 22.07999F);
             this.met2_32.StylePriority.UseFont = false;
             this.met2_32.StylePriority.UseTextAlignment = false;
-            this.met2_32.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.met2_32.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // met2_42
             // 
             this.met2_42.CanGrow = false;
             this.met2_42.Dpi = 96F;
             this.met2_42.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
-            this.met2_42.LocationFloat = new DevExpress.Utils.PointFloat(258.7647F, 793.6001F);
+            this.met2_42.LocationFloat = new DevExpress.Utils.PointFloat(258.76F, 794.6F);
             this.met2_42.Multiline = true;
             this.met2_42.Name = "met2_42";
             this.met2_42.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.met2_42.SizeF = new System.Drawing.SizeF(71.23526F, 22.07999F);
             this.met2_42.StylePriority.UseFont = false;
             this.met2_42.StylePriority.UseTextAlignment = false;
-            this.met2_42.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.met2_42.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // xrLabel13
             // 
@@ -874,7 +1054,7 @@
             this.xrLabel5.CanGrow = false;
             this.xrLabel5.Dpi = 96F;
             this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Manrope", 8F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(213.7647F, 676.36F);
+            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(213.76F, 676.44F);
             this.xrLabel5.Multiline = true;
             this.xrLabel5.Name = "xrLabel5";
             this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2221,186 +2401,6 @@
             this.xrBarCode1.SizeF = new System.Drawing.SizeF(235F, 26.16F);
             eaN128Generator1.CharacterSet = DevExpress.XtraPrinting.BarCode.Code128Charset.CharsetAuto;
             this.xrBarCode1.Symbology = eaN128Generator1;
-            // 
-            // MeterSerial1
-            // 
-            this.MeterSerial1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
-            this.MeterSerial1.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.MeterSerial1.CanGrow = false;
-            this.MeterSerial1.Dpi = 96F;
-            this.MeterSerial1.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 8F);
-            this.MeterSerial1.LocationFloat = new DevExpress.Utils.PointFloat(23.83496F, 860.44F);
-            this.MeterSerial1.Name = "MeterSerial1";
-            this.MeterSerial1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.MeterSerial1.SizeF = new System.Drawing.SizeF(60.83704F, 17.59F);
-            this.MeterSerial1.StylePriority.UseBorderDashStyle = false;
-            this.MeterSerial1.StylePriority.UseBorders = false;
-            this.MeterSerial1.StylePriority.UseFont = false;
-            this.MeterSerial1.StylePriority.UseTextAlignment = false;
-            this.MeterSerial1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.MeterSerial1.Visible = false;
-            // 
-            // Tod1Label
-            // 
-            this.Tod1Label.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
-            this.Tod1Label.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Tod1Label.CanGrow = false;
-            this.Tod1Label.Dpi = 96F;
-            this.Tod1Label.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 8F);
-            this.Tod1Label.LocationFloat = new DevExpress.Utils.PointFloat(84.672F, 860.442F);
-            this.Tod1Label.Multiline = true;
-            this.Tod1Label.Name = "Tod1Label";
-            this.Tod1Label.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.Tod1Label.SizeF = new System.Drawing.SizeF(57.01F, 17.59F);
-            this.Tod1Label.StylePriority.UseBorderDashStyle = false;
-            this.Tod1Label.StylePriority.UseBorders = false;
-            this.Tod1Label.StylePriority.UseFont = false;
-            this.Tod1Label.StylePriority.UseTextAlignment = false;
-            this.Tod1Label.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            // 
-            // Tod2Label
-            // 
-            this.Tod2Label.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
-            this.Tod2Label.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Tod2Label.CanGrow = false;
-            this.Tod2Label.Dpi = 96F;
-            this.Tod2Label.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 8F);
-            this.Tod2Label.LocationFloat = new DevExpress.Utils.PointFloat(145.939F, 860.442F);
-            this.Tod2Label.Multiline = true;
-            this.Tod2Label.Name = "Tod2Label";
-            this.Tod2Label.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.Tod2Label.SizeF = new System.Drawing.SizeF(57.01F, 17.59F);
-            this.Tod2Label.StylePriority.UseBorderDashStyle = false;
-            this.Tod2Label.StylePriority.UseBorders = false;
-            this.Tod2Label.StylePriority.UseFont = false;
-            this.Tod2Label.StylePriority.UseTextAlignment = false;
-            this.Tod2Label.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            // 
-            // Tod3Label
-            // 
-            this.Tod3Label.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
-            this.Tod3Label.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Tod3Label.CanGrow = false;
-            this.Tod3Label.Dpi = 96F;
-            this.Tod3Label.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 8F);
-            this.Tod3Label.LocationFloat = new DevExpress.Utils.PointFloat(213.9501F, 860.44F);
-            this.Tod3Label.Multiline = true;
-            this.Tod3Label.Name = "Tod3Label";
-            this.Tod3Label.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.Tod3Label.SizeF = new System.Drawing.SizeF(57.01F, 17.59F);
-            this.Tod3Label.StylePriority.UseBorderDashStyle = false;
-            this.Tod3Label.StylePriority.UseBorders = false;
-            this.Tod3Label.StylePriority.UseFont = false;
-            this.Tod3Label.StylePriority.UseTextAlignment = false;
-            this.Tod3Label.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            // 
-            // Tod4Label
-            // 
-            this.Tod4Label.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
-            this.Tod4Label.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Tod4Label.CanGrow = false;
-            this.Tod4Label.Dpi = 96F;
-            this.Tod4Label.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 8F);
-            this.Tod4Label.LocationFloat = new DevExpress.Utils.PointFloat(278.402F, 860.4401F);
-            this.Tod4Label.Multiline = true;
-            this.Tod4Label.Name = "Tod4Label";
-            this.Tod4Label.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.Tod4Label.SizeF = new System.Drawing.SizeF(57.01F, 17.59F);
-            this.Tod4Label.StylePriority.UseBorderDashStyle = false;
-            this.Tod4Label.StylePriority.UseBorders = false;
-            this.Tod4Label.StylePriority.UseFont = false;
-            this.Tod4Label.StylePriority.UseTextAlignment = false;
-            this.Tod4Label.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            // 
-            // MeterSerial2
-            // 
-            this.MeterSerial2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
-            this.MeterSerial2.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.MeterSerial2.CanGrow = false;
-            this.MeterSerial2.Dpi = 96F;
-            this.MeterSerial2.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 8F);
-            this.MeterSerial2.LocationFloat = new DevExpress.Utils.PointFloat(23.83496F, 878.0302F);
-            this.MeterSerial2.Name = "MeterSerial2";
-            this.MeterSerial2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.MeterSerial2.SizeF = new System.Drawing.SizeF(60.83704F, 17.59F);
-            this.MeterSerial2.StylePriority.UseBorderDashStyle = false;
-            this.MeterSerial2.StylePriority.UseBorders = false;
-            this.MeterSerial2.StylePriority.UseFont = false;
-            this.MeterSerial2.StylePriority.UseTextAlignment = false;
-            this.MeterSerial2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.MeterSerial2.Visible = false;
-            // 
-            // Tod1Label2
-            // 
-            this.Tod1Label2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
-            this.Tod1Label2.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Tod1Label2.CanGrow = false;
-            this.Tod1Label2.Dpi = 96F;
-            this.Tod1Label2.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 8F);
-            this.Tod1Label2.LocationFloat = new DevExpress.Utils.PointFloat(84.672F, 878.0321F);
-            this.Tod1Label2.Multiline = true;
-            this.Tod1Label2.Name = "Tod1Label2";
-            this.Tod1Label2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.Tod1Label2.SizeF = new System.Drawing.SizeF(57.01F, 17.59F);
-            this.Tod1Label2.StylePriority.UseBorderDashStyle = false;
-            this.Tod1Label2.StylePriority.UseBorders = false;
-            this.Tod1Label2.StylePriority.UseFont = false;
-            this.Tod1Label2.StylePriority.UseTextAlignment = false;
-            this.Tod1Label2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            // 
-            // Tod2Label2
-            // 
-            this.Tod2Label2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
-            this.Tod2Label2.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Tod2Label2.CanGrow = false;
-            this.Tod2Label2.Dpi = 96F;
-            this.Tod2Label2.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 8F);
-            this.Tod2Label2.LocationFloat = new DevExpress.Utils.PointFloat(145.9391F, 878.0321F);
-            this.Tod2Label2.Multiline = true;
-            this.Tod2Label2.Name = "Tod2Label2";
-            this.Tod2Label2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.Tod2Label2.SizeF = new System.Drawing.SizeF(57.01F, 17.59F);
-            this.Tod2Label2.StylePriority.UseBorderDashStyle = false;
-            this.Tod2Label2.StylePriority.UseBorders = false;
-            this.Tod2Label2.StylePriority.UseFont = false;
-            this.Tod2Label2.StylePriority.UseTextAlignment = false;
-            this.Tod2Label2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            // 
-            // Tod3Label2
-            // 
-            this.Tod3Label2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
-            this.Tod3Label2.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Tod3Label2.CanGrow = false;
-            this.Tod3Label2.Dpi = 96F;
-            this.Tod3Label2.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 8F);
-            this.Tod3Label2.LocationFloat = new DevExpress.Utils.PointFloat(213.9501F, 878.03F);
-            this.Tod3Label2.Multiline = true;
-            this.Tod3Label2.Name = "Tod3Label2";
-            this.Tod3Label2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.Tod3Label2.SizeF = new System.Drawing.SizeF(57.01F, 17.59F);
-            this.Tod3Label2.StylePriority.UseBorderDashStyle = false;
-            this.Tod3Label2.StylePriority.UseBorders = false;
-            this.Tod3Label2.StylePriority.UseFont = false;
-            this.Tod3Label2.StylePriority.UseTextAlignment = false;
-            this.Tod3Label2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            // 
-            // Tod4Label2
-            // 
-            this.Tod4Label2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
-            this.Tod4Label2.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Tod4Label2.CanGrow = false;
-            this.Tod4Label2.Dpi = 96F;
-            this.Tod4Label2.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 8F);
-            this.Tod4Label2.LocationFloat = new DevExpress.Utils.PointFloat(278.4022F, 878.0302F);
-            this.Tod4Label2.Multiline = true;
-            this.Tod4Label2.Name = "Tod4Label2";
-            this.Tod4Label2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.Tod4Label2.SizeF = new System.Drawing.SizeF(57.01F, 17.59F);
-            this.Tod4Label2.StylePriority.UseBorderDashStyle = false;
-            this.Tod4Label2.StylePriority.UseBorders = false;
-            this.Tod4Label2.StylePriority.UseFont = false;
-            this.Tod4Label2.StylePriority.UseTextAlignment = false;
-            this.Tod4Label2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // Rpt_LTMDPDF
             // 
