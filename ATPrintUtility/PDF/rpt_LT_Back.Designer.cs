@@ -680,7 +680,7 @@
             this.GreenTariffHindi.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
             this.GreenTariffHindi.CanGrow = false;
             this.GreenTariffHindi.CanShrink = true;
-            this.GreenTariffHindi.Font = new DevExpress.Drawing.DXFont("Manrope", 8F);
+            this.GreenTariffHindi.Font = new DevExpress.Drawing.DXFont("Noto Sans Devanagari", 8F);
             this.GreenTariffHindi.LocationFloat = new DevExpress.Utils.PointFloat(75.80009F, 167.2085F);
             this.GreenTariffHindi.Name = "GreenTariffHindi";
             this.GreenTariffHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
