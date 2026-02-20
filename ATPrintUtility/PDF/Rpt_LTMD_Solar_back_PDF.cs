@@ -309,7 +309,7 @@ namespace AT.Print.PDF
                 adjustMessages(xrMessage6);
 
             }
-            
+
             #endregion
 
             #region Custom Messages
@@ -553,8 +553,61 @@ namespace AT.Print.PDF
 
             }
             #endregion
+
+            if (op[0].L9_INT_TPL == "0.00" || op[0].L9_INT_TPL == " ")
+            {
+                bd_LatePaymentSurcharges.Visible = false;
+                bd_LatePaymentSurchargesVALUE.Visible = false;
+                bd_LatePaymentSurcharges.TopF = bd_LatePaymentSurcharges.TopF;
+                bd_LatePaymentSurchargesVALUE.TopF = bd_LatePaymentSurchargesVALUE.TopF;
+                bd_TotalDues.TopF = bd_TotalDues.TopF;
+                bd_TotalDuesVALUE.TopF = bd_TotalDuesVALUE.TopF;
+            }
+
+            #region Solar Export Energy Adjustment
+            //Solar Export Energy Adjustment
+
+            if (!(op[0].L8_Solar_Export_Energy == "0.00" || op[0].L8_Solar_Export_Energy == ""))
+            {
+                //xrLabel34.Visible = false;
+                //xrLabel33.Visible = false;
+                //xrLabel35.Visible = false;
+                //xrLabel36.Visible = false;
+                //kvah21.Visible = false;
+                //kva11.Visible = false;
+                //kva12.Visible = false;
+                //kva13.Visible = false;
+                //kva14.Visible = false;
+                //Rpt_LTMD_Solar_back_visible?.visible();
+
+                bd_SolarExportEnergy.TopF = bd_TotalCurrentDues.TopF;
+                bd_Solar_Export_Value.TopF = bd_TotalCurrentDuesValues.TopF;
+                bd_TotalCurrentDues.TopF = bd_Arrears.TopF;
+                bd_TotalCurrentDuesValues.TopF = bd_Arrears_values.TopF;
+                bd_Arrears.TopF = bd_TotalDues.TopF;
+                bd_Arrears_values.TopF = bd_TotalDuesVALUE.TopF;
+                bd_TotalDues.TopF = bd_TotalDues.BottomF;
+                bd_TotalDuesVALUE.TopF = bd_TotalDuesVALUE.BottomF;
+
+            }
+            else
+            {
+                //Rpt_LTMD_Solar_back_visible?.visibleon();
+                bd_SolarExportEnergy.Visible = false;
+                bd_Solar_Export_Value.Visible = false;
+                bd_SolarExportEnergy.TopF = lblFPPA.TopF;
+                bd_Solar_Export_Value.TopF = FPPASurchargeValue.TopF;
+            }
+            #endregion
+
+
+
+
         }
+
+
         #endregion
+
 
 
         #region Helper Functions
