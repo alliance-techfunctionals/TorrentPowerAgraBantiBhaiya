@@ -88,9 +88,9 @@ namespace AT.Print.PDF
             xrLabelTotalAmt.BringToFront();
 
             xrLabelTotalAmt.Text = "₹" + ToDecimal(op[0].L8_amount_payable_before_due_date).ToString("G");
-            xrLabel14.Text = "Thank you for your previous payment of ₹" + op[0].L7_Last_Payement_amount + " on " + op[0].L7_LastpymtDate;
+            xrLabelAfterData.Text = "Thank you for your previous payment of ₹" + op[0].L7_Last_Payement_amount + " on " + op[0].L7_LastpymtDate;
             xrLabel13.BringToFront();
-            xrLabel5.BringToFront();
+            xrLabelday.BringToFront();
             xrLabel19.BringToFront();
 
 
@@ -106,23 +106,23 @@ namespace AT.Print.PDF
             // To keep Address and PAN together             
             if (op[0].L2_NAME.ToString() == "")
             {
-                xrLabel139.Visible = false;
-                xrLabel140.TopF = xrLabel139.TopF;
+                xrLabelName.Visible = false;
+                xrLabeladd1.TopF = xrLabelName.TopF;
             }
             if (op[0].L3_ADDR1.ToString() == "")
             {
-                xrLabel140.Visible = false;
-                xrLabel141.TopF = xrLabel140.TopF;
+                xrLabeladd1.Visible = false;
+                xrLabeladd2.TopF = xrLabeladd1.TopF;
             }
             if (op[0].L4_ADDR2.ToString() == "")
             {
-                xrLabel141.Visible = false;
-                xrLabel142.TopF = xrLabel141.TopF;
+                xrLabeladd2.Visible = false;
+                xrLabelAdd3.TopF = xrLabeladd2.TopF;
             }
             if (op[0].L5_ADDR3.ToString() == "")
             {
-                xrLabel142.Visible = false;
-                xrLabelRegMobile.TopF = xrLabel142.TopF;
+                xrLabelAdd3.Visible = false;
+                xrLabelRegMobile.TopF = xrLabelAdd3.TopF;
                 xrLabelRedEmail.TopF = xrLabelRegMobile.BottomF;
                 xrLabelPanNo.TopF = xrLabelRedEmail.TopF;
             }
@@ -331,10 +331,10 @@ namespace AT.Print.PDF
                 {
 
                     //imp
-                    xrLabel16.Text = op[0].L23_TOD_1_KW;
-                    xrLabel23.Text = op[0].L23_TOD_2_KW;
-                    xrLabel44.Text = op[0].L23_TOD_3_KW;
-                    xrLabel30.Text = op[0].L23_TOD_4_KW;
+                    //xrLabel16.Text = op[0].L23_TOD_1_KW;
+                    //xrLabel23.Text = op[0].L23_TOD_2_KW;
+                    //xrLabel44.Text = op[0].L23_TOD_3_KW;
+                    //xrLabel30.Text = op[0].L23_TOD_4_KW;
 
                     xrLabel17.Text = op[0].L22_TOD_1_KWH;
                     xrLabel24.Text = op[0].L22_TOD_2_KWH;
@@ -342,10 +342,10 @@ namespace AT.Print.PDF
                     xrLabel31.Text = op[0].L22_TOD_4_KWH;
                     //EXP
 
-                    xrLabel37.Text = op[0].L53_Exp_TOD1_KW_Units;
-                    xrLabel51.Text = op[0].L53_Exp_TOD2_KW_Units;
-                    xrLabel58.Text = op[0].L53_Exp_TOD3_KW_Units;
-                    xrLabel65.Text = op[0].L53_Exp_TOD4_KW_Units;
+                    //xrLabel37.Text = op[0].L53_Exp_TOD1_KW_Units;
+                    //xrLabel51.Text = op[0].L53_Exp_TOD2_KW_Units;
+                    //xrLabel58.Text = op[0].L53_Exp_TOD3_KW_Units;
+                    //xrLabelSerNumberData.Text = op[0].L53_Exp_TOD4_KW_Units; //xrlabel65
 
                     xrLabel38.Text = op[0].L34_Exp_TOD1_KWH_Units;
                     xrLabel52.Text = op[0].L34_Exp_TOD2_KWH_Units;
@@ -376,14 +376,14 @@ namespace AT.Print.PDF
                     xrLabel70.Text = op[0].L45_Carry_Forward_Units_TOD4_KWH;
 
                     //mtr2
-                    MTR2_KW1.Text = op[0].L25_TOD_1_KWH;
-                    MTR2_KW2.Text = op[0].L25_TOD_2_KWH;
-                    MTR2_KW3.Text = op[0].L25_TOD_3_KWH;
-                    MTR2_KW4.Text = op[0].L25_TOD_4_KWH;
-                    MTR2_KW1_ex.Text = op[0].L54_Exp_TOD1_KW_Units;
-                    MTR2_KW2_ex.Text = op[0].L54_Exp_TOD2_KW_Units;
-                    MTR2_KW3_ex.Text = op[0].L54_Exp_TOD3_KW_Units;
-                    MTR2_KW4_ex.Text = op[0].L54_Exp_TOD4_KW_Units;
+                    //MTR2_KW1.Text = op[0].L25_TOD_1_KWH;
+                    //MTR2_KW2.Text = op[0].L25_TOD_2_KWH;
+                    //MTR2_KW3.Text = op[0].L25_TOD_3_KWH;
+                    //MTR2_KW4.Text = op[0].L25_TOD_4_KWH;
+                    //MTR2_KW1_ex.Text = op[0].L54_Exp_TOD1_KW_Units;
+                    //MTR2_KW2_ex.Text = op[0].L54_Exp_TOD2_KW_Units;
+                    //MTR2_KW3_ex.Text = op[0].L54_Exp_TOD3_KW_Units;
+                    //MTR2_KW4_ex.Text = op[0].L54_Exp_TOD4_KW_Units;
 
                     MTR2_KWH1.Text = op[0].L24_TOD_1_KWH;
                     MTR2_KWH2.Text = op[0].L24_TOD_2_KWH;
@@ -402,20 +402,20 @@ namespace AT.Print.PDF
                 if (!string.IsNullOrEmpty(op[0].L6_Kvah_indicator) || op[0].L6_Kvah_indicator == "1")
                 {
 
-                    xrLabel16.Text = op[0].L23_TOD_1_KW;
-                    xrLabel23.Text = op[0].L23_TOD_2_KW;
-                    xrLabel44.Text = op[0].L23_TOD_3_KW;
-                    xrLabel30.Text = op[0].L23_TOD_4_KW;
+                    //xrLabel16.Text = op[0].L23_TOD_1_KW;
+                    //xrLabel23.Text = op[0].L23_TOD_2_KW;
+                    //xrLabel44.Text = op[0].L23_TOD_3_KW;
+                    //xrLabel30.Text = op[0].L23_TOD_4_KW;
 
                     xrLabel17.Text = op[0].L22_TOD_1_KWH;
                     xrLabel24.Text = op[0].L22_TOD_2_KWH;
                     xrLabel45.Text = op[0].L22_TOD_3_KWH;
                     xrLabel31.Text = op[0].L22_TOD_4_KWH;
                     //EXP
-                    xrLabel37.Text = op[0].L36_Exp_TOD1_KVA_Units;
-                    xrLabel51.Text = op[0].L36_Exp_TOD2_KVA_Units;
-                    xrLabel58.Text = op[0].L36_Exp_TOD3_KVA_Units;
-                    xrLabel65.Text = op[0].L36_Exp_TOD4_KVA_Units;
+                    //xrLabel37.Text = op[0].L36_Exp_TOD1_KVA_Units;
+                    //xrLabel51.Text = op[0].L36_Exp_TOD2_KVA_Units;
+                    //xrLabel58.Text = op[0].L36_Exp_TOD3_KVA_Units;
+                    //xrLabelSerNumberData.Text = op[0].L36_Exp_TOD4_KVA_Units;
 
 
                     xrLabel38.Text = op[0].L35_Exp_TOD1_KVAH_Units;
@@ -446,14 +446,14 @@ namespace AT.Print.PDF
                     xrLabel70.Text = op[0].L44_Carry_Forward_Units_TOD4_KVAH;
 
                     //mtr2
-                    MTR2_KW1.Text = op[0].L25_TOD_1_KWH;
-                    MTR2_KW2.Text = op[0].L25_TOD_2_KWH;
-                    MTR2_KW3.Text = op[0].L25_TOD_3_KWH;
-                    MTR2_KW4.Text = op[0].L25_TOD_4_KWH;
-                    MTR2_KW1_ex.Text = op[0].L52_Exp_TOD1_KVA_Units;
-                    MTR2_KW2_ex.Text = op[0].L52_Exp_TOD2_KVA_Units;
-                    MTR2_KW3_ex.Text = op[0].L52_Exp_TOD3_KVA_Units;
-                    MTR2_KW4_ex.Text = op[0].L52_Exp_TOD4_KVA_Units;
+                    //MTR2_KW1.Text = op[0].L25_TOD_1_KWH;
+                    //MTR2_KW2.Text = op[0].L25_TOD_2_KWH;
+                    //MTR2_KW3.Text = op[0].L25_TOD_3_KWH;
+                    //MTR2_KW4.Text = op[0].L25_TOD_4_KWH;
+                    //MTR2_KW1_ex.Text = op[0].L52_Exp_TOD1_KVA_Units;
+                    //MTR2_KW2_ex.Text = op[0].L52_Exp_TOD2_KVA_Units;
+                    //MTR2_KW3_ex.Text = op[0].L52_Exp_TOD3_KVA_Units;
+                    //MTR2_KW4_ex.Text = op[0].L52_Exp_TOD4_KVA_Units;
 
                     MTR2_KWH1.Text = op[0].L24_TOD_1_KWH;
                     MTR2_KWH2.Text = op[0].L24_TOD_2_KWH;
@@ -470,34 +470,34 @@ namespace AT.Print.PDF
             }
             else
             {
-                mtr2_IMP.Visible = false;
-                mtr2_exp.Visible = false;
+                //mtr2_IMP.Visible = false;
+                //mtr2_exp.Visible = false;
                 MTR2_TOD1.Visible = false;
                 MTR2_TOD2.Visible = false;
                 MTR2_TOD3.Visible = false;
                 MTR2_TOD4.Visible = false;
-                MTR2_EXP1.Visible = false;
-                MTR2_EXP2.Visible = false;
-                MTR2_EXP3.Visible = false;
-                MTR2_EXP4.Visible = false;
+                //MTR2_EXP1.Visible = false;
+                //MTR2_EXP2.Visible = false;
+                //MTR2_EXP3.Visible = false;
+                //MTR2_EXP4.Visible = false;
 
                 if (string.IsNullOrEmpty(op[0].L6_Kvah_indicator) || op[0].L6_Kvah_indicator == "0.00")
                 {
                     MTR_TOD1.Text = op[0].L12_MTRSNO_METER1;
                     //MTR1
-                    xrLabel16.Text = op[0].L23_TOD_1_KW;
+                   // xrLabel16.Text = op[0].L23_TOD_1_KW;
                     xrLabel17.Text = op[0].L22_TOD_1_KWH;
-                    xrLabel23.Text = op[0].L23_TOD_2_KW;
+                   // xrLabel23.Text = op[0].L23_TOD_2_KW;
                     xrLabel24.Text = op[0].L22_TOD_2_KWH;
-                    xrLabel44.Text = op[0].L23_TOD_3_KW;
+                   // xrLabel44.Text = op[0].L23_TOD_3_KW;
                     xrLabel45.Text = op[0].L22_TOD_3_KWH;
-                    xrLabel30.Text = op[0].L23_TOD_4_KW;
+                   // xrLabel30.Text = op[0].L23_TOD_4_KW;
                     xrLabel31.Text = op[0].L22_TOD_4_KWH;
                     //EXP
-                    xrLabel37.Text = op[0].L53_Exp_TOD1_KW_Units;
-                    xrLabel51.Text = op[0].L53_Exp_TOD2_KW_Units;
-                    xrLabel58.Text = op[0].L53_Exp_TOD3_KW_Units;
-                    xrLabel65.Text = op[0].L53_Exp_TOD4_KW_Units;
+                    //xrLabel37.Text = op[0].L53_Exp_TOD1_KW_Units;
+                    //xrLabel51.Text = op[0].L53_Exp_TOD2_KW_Units;
+                    //xrLabel58.Text = op[0].L53_Exp_TOD3_KW_Units;
+                    //xrLabelSerNumberData.Text = op[0].L53_Exp_TOD4_KW_Units;
 
                     xrLabel38.Text = op[0].L34_Exp_TOD1_KWH_Units;
                     xrLabel52.Text = op[0].L34_Exp_TOD2_KWH_Units;
@@ -530,20 +530,20 @@ namespace AT.Print.PDF
                 {
                     MTR_TOD1.Text = op[0].L12_MTRSNO_METER1;
 
-                    xrLabel16.Text = op[0].L23_TOD_1_KW;
-                    xrLabel23.Text = op[0].L23_TOD_2_KW;
-                    xrLabel44.Text = op[0].L23_TOD_3_KW;
-                    xrLabel30.Text = op[0].L23_TOD_4_KW;
+                    //xrLabel16.Text = op[0].L23_TOD_1_KW;
+                    //xrLabel23.Text = op[0].L23_TOD_2_KW;
+                    //xrLabel44.Text = op[0].L23_TOD_3_KW;
+                    //xrLabel30.Text = op[0].L23_TOD_4_KW;
 
                     xrLabel17.Text = op[0].L22_TOD_1_KWH;
                     xrLabel24.Text = op[0].L22_TOD_2_KWH;
                     xrLabel45.Text = op[0].L22_TOD_3_KWH;
                     xrLabel31.Text = op[0].L22_TOD_4_KWH;
                     //EXP
-                    xrLabel37.Text = op[0].L36_Exp_TOD1_KVA_Units;
-                    xrLabel51.Text = op[0].L36_Exp_TOD2_KVA_Units;
-                    xrLabel58.Text = op[0].L36_Exp_TOD3_KVA_Units;
-                    xrLabel65.Text = op[0].L36_Exp_TOD4_KVA_Units;
+                    //xrLabel37.Text = op[0].L36_Exp_TOD1_KVA_Units;
+                    //xrLabel51.Text = op[0].L36_Exp_TOD2_KVA_Units;
+                    //xrLabel58.Text = op[0].L36_Exp_TOD3_KVA_Units;
+                    //xrLabelSerNumberData.Text = op[0].L36_Exp_TOD4_KVA_Units;
 
 
                     xrLabel38.Text = op[0].L35_Exp_TOD1_KVAH_Units;
@@ -584,10 +584,10 @@ namespace AT.Print.PDF
                 {
                     xrLabel78.Text = op[0].L37_Gen_Meter_Serial_Number;
 
-                    xrLabel81.Text = op[0].L39_Gen_KVA_PASTREAD;
-                    xrLabel82.Text = op[0].L38_Gen_KVA_PRESREAD;
-                    xrLabel83.Text = op[0].L40_Gen_MF3;
-                    xrLabel84.Text = op[0].L41_Gen_KVA_NET_UNITS;
+                    //xrLabel81.Text = op[0].L39_Gen_KVA_PASTREAD;
+                    //xrLabel82.Text = op[0].L38_Gen_KVA_PRESREAD;
+                    //xrLabel83.Text = op[0].L40_Gen_MF3;
+                    //xrLabel84.Text = op[0].L41_Gen_KVA_NET_UNITS;
                     xrLabel85.Text = op[0].L39_Gen_KWH_PASTREAD;
                     xrLabel86.Text = op[0].L38_Gen_KWH_PRESREAD;
                     xrLabel87.Text = op[0].L40_Gen_MF1;
@@ -637,10 +637,10 @@ namespace AT.Print.PDF
                 {
                     xrLabel78.Text = op[0].L37_Gen_Meter_Serial_Number;
 
-                    xrLabel81.Text = op[0].L39_Gen_KVA_PASTREAD;
-                    xrLabel82.Text = op[0].L38_Gen_KVA_PRESREAD;
-                    xrLabel83.Text = op[0].L40_Gen_MF3;
-                    xrLabel84.Text = op[0].L41_Gen_KVA_NET_UNITS;
+                    //xrLabel81.Text = op[0].L39_Gen_KVA_PASTREAD;
+                    //xrLabel82.Text = op[0].L38_Gen_KVA_PRESREAD;
+                    //xrLabel83.Text = op[0].L40_Gen_MF3;
+                    //xrLabel84.Text = op[0].L41_Gen_KVA_NET_UNITS;
                     xrLabel85.Text = op[0].L39_Gen_KVAH_PASTREAD;
                     xrLabel86.Text = op[0].L38_Gen_KVAH_PRESREAD;
                     xrLabel87.Text = op[0].L40_Gen_MF2;
