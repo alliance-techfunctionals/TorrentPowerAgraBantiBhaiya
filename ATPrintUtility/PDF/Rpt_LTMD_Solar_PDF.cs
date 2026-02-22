@@ -96,11 +96,11 @@ namespace AT.Print.PDF
 
             if (!string.IsNullOrEmpty(op[0].L1_Customer_PAN))
             {
-                xrLabelRegMobile.Visible = true;
+                xrLabelPanNo.Visible = true;
             }
             else
             {
-                xrLabelRegMobile.Visible = false;
+                xrLabelPanNo.Visible = false;
             }
 
             // To keep Address and PAN together             
@@ -124,11 +124,17 @@ namespace AT.Print.PDF
                 xrLabelAdd3.Visible = false;
                 xrLabelRegMobile.TopF = xrLabelAdd3.TopF;
                 xrLabelRedEmail.TopF = xrLabelRegMobile.BottomF;
-                xrLabelPanNo.TopF = xrLabelRedEmail.TopF;
+                xrLabelPanNo.TopF = xrLabelRedEmail.BottomF;
+            }
+            else
+            {
+                xrLabelRegMobile.TopF = xrLabelAdd3.BottomF;
+                xrLabelRedEmail.TopF = xrLabelRegMobile.BottomF;
+                xrLabelPanNo.TopF = xrLabelRedEmail.BottomF;
             }
 
 
-            string unit = "KW";
+                string unit = "KW";
             if (!string.IsNullOrEmpty(op[0].L6_Kvah_indicator) && op[0].L6_Kvah_indicator == "1")
             {
                 op[0].unit = op[0].L6_MEASURE_OF_CONTRACT_Demand;

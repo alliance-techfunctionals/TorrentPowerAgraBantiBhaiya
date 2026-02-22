@@ -170,6 +170,8 @@
             this.xrLabel62 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrBarCode1 = new DevExpress.XtraReports.UI.XRBarCode();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.xrLabel47 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel48 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrChartPie)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrChart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
@@ -200,6 +202,8 @@
             // 
             this.Detail.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel48,
+            this.xrLabel47,
             this.MeterSerial2,
             this.Tod1Label2,
             this.Tod2Label2,
@@ -1449,7 +1453,7 @@
             this.xrLabel98.CanGrow = false;
             this.xrLabel98.Dpi = 96F;
             this.xrLabel98.Font = new DevExpress.Drawing.DXFont("Manrope", 9F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.xrLabel98.LocationFloat = new DevExpress.Utils.PointFloat(238.4F, 397.36F);
+            this.xrLabel98.LocationFloat = new DevExpress.Utils.PointFloat(238.4F, 400F);
             this.xrLabel98.Multiline = true;
             this.xrLabel98.Name = "xrLabel98";
             this.xrLabel98.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1465,7 +1469,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L6_BILL_TYPE]")});
             this.xrLabel124.Font = new DevExpress.Drawing.DXFont("Manrope", 9F);
             this.xrLabel124.InteractiveSorting.FieldName = "OwnerName";
-            this.xrLabel124.LocationFloat = new DevExpress.Utils.PointFloat(238.4F, 419.44F);
+            this.xrLabel124.LocationFloat = new DevExpress.Utils.PointFloat(238.4F, 422F);
             this.xrLabel124.Multiline = true;
             this.xrLabel124.Name = "xrLabel124";
             this.xrLabel124.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1497,7 +1501,7 @@
             this.xrLabel1.CanGrow = false;
             this.xrLabel1.Dpi = 96F;
             this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Manrope", 9F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(362F, 400.36F);
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(362F, 400F);
             this.xrLabel1.Multiline = true;
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1513,7 +1517,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L7_LastPymtDate]")});
             this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Manrope", 9F);
             this.xrLabel2.InteractiveSorting.FieldName = "OwnerName";
-            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(362F, 422.4399F);
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(362F, 422F);
             this.xrLabel2.Multiline = true;
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1543,7 +1547,7 @@
             this.xrLabel3.CanGrow = false;
             this.xrLabel3.Dpi = 96F;
             this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Manrope", 9F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(496F, 402.36F);
+            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(496F, 400F);
             this.xrLabel3.Multiline = true;
             this.xrLabel3.Name = "xrLabel3";
             this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1559,7 +1563,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L7_LastPayementMode]")});
             this.xrLabel4.Font = new DevExpress.Drawing.DXFont("Manrope", 9F);
             this.xrLabel4.InteractiveSorting.FieldName = "OwnerName";
-            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(496F, 424.44F);
+            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(496F, 422F);
             this.xrLabel4.Multiline = true;
             this.xrLabel4.Name = "xrLabel4";
             this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1586,7 +1590,7 @@
             this.xrLabel6.CanGrow = false;
             this.xrLabel6.Dpi = 96F;
             this.xrLabel6.Font = new DevExpress.Drawing.DXFont("Manrope", 9F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(621.62F, 402.16F);
+            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(621.62F, 400F);
             this.xrLabel6.Multiline = true;
             this.xrLabel6.Name = "xrLabel6";
             this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1602,7 +1606,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L7_LastPayementAmount]")});
             this.xrLabel7.Font = new DevExpress.Drawing.DXFont("Manrope", 9F);
             this.xrLabel7.InteractiveSorting.FieldName = "OwnerName";
-            this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(621.62F, 424.24F);
+            this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(621.62F, 422F);
             this.xrLabel7.Multiline = true;
             this.xrLabel7.Name = "xrLabel7";
             this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2061,7 +2065,9 @@
             this.xrLabel23.SizeF = new System.Drawing.SizeF(183F, 22.08F);
             this.xrLabel23.StylePriority.UseBackColor = false;
             this.xrLabel23.StylePriority.UseFont = false;
+            this.xrLabel23.StylePriority.UseTextAlignment = false;
             this.xrLabel23.Text = "xrLabel23";
+            this.xrLabel23.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.xrLabel23.Visible = false;
             // 
             // xrLabel26
@@ -2400,6 +2406,40 @@
             eaN128Generator1.CharacterSet = DevExpress.XtraPrinting.BarCode.Code128Charset.CharsetAuto;
             this.xrBarCode1.Symbology = eaN128Generator1;
             // 
+            // xrLabel47
+            // 
+            this.xrLabel47.CanGrow = false;
+            this.xrLabel47.Dpi = 96F;
+            this.xrLabel47.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L6_Avg_Power_Factor]")});
+            this.xrLabel47.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
+            this.xrLabel47.InteractiveSorting.FieldName = "OwnerName";
+            this.xrLabel47.LocationFloat = new DevExpress.Utils.PointFloat(667F, 273.09F);
+            this.xrLabel47.Multiline = true;
+            this.xrLabel47.Name = "xrLabel47";
+            this.xrLabel47.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel47.SizeF = new System.Drawing.SizeF(107F, 22.08F);
+            this.xrLabel47.StylePriority.UseFont = false;
+            this.xrLabel47.StylePriority.UseTextAlignment = false;
+            this.xrLabel47.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // xrLabel48
+            // 
+            this.xrLabel48.CanGrow = false;
+            this.xrLabel48.Dpi = 96F;
+            this.xrLabel48.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L6_SUPPLY_VOLTAGE]")});
+            this.xrLabel48.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
+            this.xrLabel48.InteractiveSorting.FieldName = "OwnerName";
+            this.xrLabel48.LocationFloat = new DevExpress.Utils.PointFloat(667.18F, 236.76F);
+            this.xrLabel48.Multiline = true;
+            this.xrLabel48.Name = "xrLabel48";
+            this.xrLabel48.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel48.SizeF = new System.Drawing.SizeF(86F, 20.08F);
+            this.xrLabel48.StylePriority.UseFont = false;
+            this.xrLabel48.StylePriority.UseTextAlignment = false;
+            this.xrLabel48.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
             // Rpt_LTMDPDF
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -2576,6 +2616,8 @@
         private DevExpress.XtraReports.UI.XRLabel Tod2Label2;
         private DevExpress.XtraReports.UI.XRLabel Tod3Label2;
         private DevExpress.XtraReports.UI.XRLabel Tod4Label2;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel47;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel48;
         //private System.Windows.Forms.BindingSource bsrptData;
         //private System.Windows.Forms.BindingSource bindingSource1;
     }

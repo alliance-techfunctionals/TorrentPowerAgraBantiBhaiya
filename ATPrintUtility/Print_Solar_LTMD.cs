@@ -266,7 +266,7 @@ namespace AT.Print
             }
             else
             {
-                sht.L1_Customer_PAN = "PAN: " + dtSolarBill.Rows[0][9].ToString();
+                sht.L1_Customer_PAN = "PAN No: " + dtSolarBill.Rows[0][9].ToString();
             }
             #endregion
 

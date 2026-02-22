@@ -322,7 +322,7 @@ namespace AT.Print
             }
             else
             {
-                slt.L1_Customer_PAN = "PAN: " + dtSingleLTBill.Rows[0][13].ToString();
+                slt.L1_Customer_PAN = "PAN No: " + dtSingleLTBill.Rows[0][13].ToString();
             }
 
             #endregion

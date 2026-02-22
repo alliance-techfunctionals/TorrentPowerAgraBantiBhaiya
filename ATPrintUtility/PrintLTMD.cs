@@ -593,7 +593,7 @@ namespace AT.Print
             }
             else
             {
-                slt.L1_Customer_PAN = "PAN: " + dtSingleLTBill.Rows[0][14].ToString();
+                slt.L1_Customer_PAN = "PAN No: " + dtSingleLTBill.Rows[0][14].ToString();
             }
             //Line 1 End
             #endregion
@@ -1143,13 +1143,15 @@ namespace AT.Print
             slt.TopPanel_Row_2 = "Meter No. : " + meter;
             slt.TopPanel_Row_3 = "T No. : " + slt.L8_TNo;
             slt.TopPanel_Row_4 = "Bill Date : " + slt.L7_BillDt;
-            if (String.Equals(slt.L1_TODOrNon_TODFlag, "1"))
-            {
-                slt.TopPanel_Row_5 = "Bill Days : " + slt.L10_Mode;
-                slt.TopPanel_Row_6 = "11 KV FEEDER : " + slt.L1_FeederName;
-            }
-            else
-                slt.TopPanel_Row_5 = "11 KV FEEDER : " + slt.L1_FeederName;
+            slt.TopPanel_Row_5 = "11 KV FEEDER : " + slt.L1_FeederName;
+
+            //if (String.Equals(slt.L1_TODOrNon_TODFlag, "1"))
+            //{
+            //    slt.TopPanel_Row_5 = "Bill Days : " + slt.L10_Mode;
+            //    slt.TopPanel_Row_6 = "11 KV FEEDER : " + slt.L1_FeederName;
+            //}
+            //else
+            //    slt.TopPanel_Row_5 = "11 KV FEEDER : " + slt.L1_FeederName;
             Console.WriteLine("Custom Fields calculated");
             #endregion
 

@@ -114,7 +114,13 @@ namespace AT.Print
                 xrLabel142.Visible = false;
                 xrLabel31.TopF = xrLabel142.TopF;
                 xrLabel40.TopF = xrLabel31.BottomF;
-                xrLabel23.TopF = xrLabel40.TopF;
+                xrLabel23.TopF = xrLabel40.BottomF;
+            }
+            else
+            {
+                xrLabel31.TopF = xrLabel142.BottomF;
+                xrLabel40.TopF = xrLabel31.BottomF;
+                xrLabel23.TopF = xrLabel40.BottomF;
             }
 
             #region Excess Demand Print
