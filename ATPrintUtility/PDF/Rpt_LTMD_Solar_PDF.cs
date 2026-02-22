@@ -21,34 +21,7 @@ namespace AT.Print.PDF
             Rpt_LTMD_Solar_back_visible =d;
         }
 
-      #region Helper Functions
-
-        //bool IsMessageLimitExceeds(int messagesCount)
-        //{
-        //    if (messagesCount >= 8)
-        //    {
-        //        return true;
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
-        //}
-        //public void adjustMessages(XRLabel lbl)
-        //{
-        //    if (xrPanel1.Controls.Count != 0)
-        //    {
-        //        foreach (XRLabel plbl in xrPanel1.Controls)
-        //        {
-        //            lbl.TopF = plbl.BottomF;
-        //        }
-        //    }
-        //    else
-        //    {
-        //        lbl.TopF = xrPanel1.TopF;
-        //    }
-        //}
-        #endregion
+      
 
         private void Rpt_solar_PDF_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
@@ -183,9 +156,11 @@ namespace AT.Print.PDF
                     //xrlL6Servdet_Sanc_load.Text = "Bill Demand(" + op[0].unit1 + ")";
                     //xrlL6ExcessDemand.Text = "Excess Demand(" + op[0].unit1 + ")";
                     KW_HEAD1.Text = op[0].unit1;
-                    KWH_HEAD1.Text = op[0].unit1 + "H";
+                    KWH_HEAD1.Text = op[0].unit1 + "H(I)";
                     KW_HEAD2.Text = op[0].unit1;
-                    KWH_HEAD2.Text = op[0].unit1 + "H";
+                    KWH_HEAD2.Text = op[0].unit1 + "H(I)";
+                    KWHE_HEAD1.Text = op[0].unit1 + "H(E)";
+                    KWHE_HEAD2.Text = op[0].unit1 + "H(E)";
                 }
                 else
                 {
@@ -195,9 +170,11 @@ namespace AT.Print.PDF
                     //xrlL6ExcessDemand.Text = "Excess Demand(" + op[0].unit1 + ")";
                     //xrlL6Servdet_Sanc_load.Text = "Bill Demand(" + op[0].unit1 + ")";
                     KW_HEAD1.Text = op[0].unit1;
-                    KWH_HEAD1.Text = op[0].unit1 + "H";
+                    KWH_HEAD1.Text = op[0].unit1 + "H(I)";
                     KW_HEAD2.Text = op[0].unit1;
-                    KWH_HEAD2.Text = op[0].unit1 + "H";
+                    KWH_HEAD2.Text = op[0].unit1 + "H(I)";
+                    KWHE_HEAD1.Text = op[0].unit1 + "H(E)";
+                    KWHE_HEAD2.Text = op[0].unit1 + "H(E)";
                 }
             }
             else if (op[0].L6_MEASURE_OF_CONTRACT_Demand == "KW")
@@ -210,9 +187,11 @@ namespace AT.Print.PDF
                     //xrlL6ExcessDemand.Text = "Excess Demand(" + op[0].unit1 + ")";
                     //xrlL6Servdet_Sanc_load.Text = "Bill Demand(" + op[0].unit1 + ")";
                     KW_HEAD1.Text = op[0].unit1;
-                    KWH_HEAD1.Text = op[0].unit1 + "H";
+                    KWH_HEAD1.Text = op[0].unit1 + "H(I)";
                     KW_HEAD2.Text = op[0].unit1;
-                    KWH_HEAD2.Text = op[0].unit1 + "H";
+                    KWH_HEAD2.Text = op[0].unit1 + "H(I)";
+                    KWHE_HEAD1.Text = op[0].unit1 + "H(E)";
+                    KWHE_HEAD2.Text = op[0].unit1 + "H(E)";
                 }
                 else
                 {
@@ -222,9 +201,11 @@ namespace AT.Print.PDF
                     //xrlL6ExcessDemand.Text = "Excess Demand(" + op[0].unit1 + ")";
                     //xrlL6Servdet_Sanc_load.Text = "Bill Demand(" + op[0].unit1 + ")";
                     KW_HEAD1.Text  = op[0].unit1;
-                    KWH_HEAD1.Text = op[0].unit1 + "H";
+                    KWH_HEAD1.Text = op[0].unit1 + "H(I)";
                     KW_HEAD2.Text  = op[0].unit1;
-                    KWH_HEAD2.Text = op[0].unit1 + "H";
+                    KWH_HEAD2.Text = op[0].unit1 + "H(I)";
+                    KWHE_HEAD1.Text = op[0].unit1 + "H(E)";
+                    KWHE_HEAD2.Text = op[0].unit1 + "H(E)";
                 }
             }
             else if (op[0].L6_MEASURE_OF_CONTRACT_Demand == "KVA")
@@ -237,9 +218,11 @@ namespace AT.Print.PDF
                     //xrlL6ExcessDemand.Text = "Excess Demand(" + op[0].unit1 + ")";
                     //xrlL6Servdet_Sanc_load.Text = "Bill Demand(" + op[0].unit1 + ")";
                     KW_HEAD1.Text = op[0].unit1;
-                    KWH_HEAD1.Text = op[0].unit1 + "H";
+                    KWH_HEAD1.Text = op[0].unit1 + "H(I)";
                     KW_HEAD2.Text = op[0].unit1;
-                    KWH_HEAD2.Text = op[0].unit1 + "H";
+                    KWH_HEAD2.Text = op[0].unit1 + "H(I)";
+                    KWHE_HEAD1.Text = op[0].unit1 + "H(E)";
+                    KWHE_HEAD2.Text = op[0].unit1 + "H(E)";
                 }
                 else
                 {
@@ -249,9 +232,11 @@ namespace AT.Print.PDF
                     //xrlL6ExcessDemand.Text = "Excess Demand(" + op[0].unit1 + ")";
                     //xrlL6Servdet_Sanc_load.Text = "Bill Demand(" + op[0].unit1 + ")";
                     KW_HEAD1.Text = op[0].unit1;
-                    KWH_HEAD1.Text = op[0].unit1 + "H";
+                    KWH_HEAD1.Text = op[0].unit1 + "H(I)";
                     KW_HEAD2.Text = op[0].unit1;
-                    KWH_HEAD2.Text = op[0].unit1 + "H";
+                    KWH_HEAD2.Text = op[0].unit1 + "H(I)";
+                    KWHE_HEAD1.Text = op[0].unit1 + "H(E)";
+                    KWHE_HEAD2.Text = op[0].unit1 + "H(E)";
 
                 }
             }
@@ -267,10 +252,10 @@ namespace AT.Print.PDF
 
             #region pieChart
             //PieChart//
-            decimal energyCharge = 1212.43; // ToDecimal(op[0].L8_EnergyCharge);
+            decimal energyCharge =  ToDecimal(op[0].L8_EnergyCharge);
             decimal fixedCharge = ToDecimal(op[0].L8_FixedCharge);
             decimal electricityDuty = ToDecimal(op[0].L8_GovTax);
-            decimal excessDemandCharge = 200.00; // ToDecimal(op[0].L10_DMDCHG_PENALTY);
+            decimal excessDemandCharge =  ToDecimal(op[0].L10_DMDCHG_PENALTY);
 
             xrChartPie.Series.Clear();
             xrChartPie.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
@@ -327,7 +312,205 @@ namespace AT.Print.PDF
                     }
                 }
             }
+            xrLabel2.BringToFront();
+            xrLabel18.BringToFront();
+            #region front page details
+            #region Meter Change
+            //Meter Change Print
+            if (op[0].L12_MTRSNO_METER_2_IF_AVAILABLE != "")
+            {
+                xrLabel2.Text = op[0].L12_MTRSNO_METER_2_IF_AVAILABLE;//older
+                xrLabel18.Text = op[0].L12_MTRSNO_METER1;
 
+                if (string.IsNullOrEmpty(op[0].L6_Kvah_indicator) || op[0].L6_Kvah_indicator == "0.00")
+                {    //mtr1
+                    imp11.Text = op[0].L14_KVA_PASTREAD;
+                    //exp11.Text = op[0].L33_Exp_Past_KW_UNITS;
+                    imp21.Text = op[0].L14_KWH_PASTREAD;
+                    exp21.Text = op[0].L33_Exp_Past_KWH_UNITS;
+
+                    imp12.Text = op[0].L13_KVA_PRESREAD;
+                    //exp12.Text = op[0].L33_Exp_Present_KW_UNITS;
+                    imp22.Text = op[0].L13_KWH_PRESREAD;
+                    exp22.Text = op[0].L33_Exp_Present_KWH_UNITS;
+
+                    imp13.Text = op[0].L15_Multiplying_factor_KVA;
+                   // exp13.Text = op[0].L15_Multiplying_factor_KVA;
+                    imp23.Text = op[0].L15_Multiplying_factor_KWH;
+                    exp23.Text = op[0].L15_Multiplying_factor_KWH;
+
+                    imp14.Text = op[0].L16_KVA_UNITS;
+                   // exp14.Text = op[0].L33_Exp_KW_UNITS;
+                    imp24.Text = op[0].L16_KWH_UNITS;
+                    exp24.Text = op[0].L33_Exp_KWH_UNITS;
+
+                    kva11.Text = op[0].L33_Exp_CURRENT_NET_EXPORT_KWH_UNITS;
+                    kva12.Text = op[0].L46_Previous_CREDIT_Units_MAIN_KWH;
+                    kva13.Text = op[0].L46_Net_Billed_Units_MAIN_KWH;
+                    kva14.Text = op[0].L46_Carry_Forward_Units_MAIN_KWH;
+
+                    //mtr2
+                    MTR2_PR1.Text = op[0].L18_KVA_PASTREAD;
+                   // MTR2_PR2.Text = op[0].L49_Exp_Past_KVA_UNITS;
+                    MTR2_PR3.Text = op[0].L18_KWH_PASTREAD;
+                    MTR2_PR4.Text = op[0].L49_Exp_Past_KWH_UNITS;
+
+                    MTR2_CR1.Text = op[0].L17_KVA_PRESREAD;
+                  //  MTR2_CR2.Text = op[0].L49_Exp_Present_KVA_UNITS;
+                    MTR2_CR3.Text = op[0].L17_KWH_PRESREAD;
+                    MTR2_CR4.Text = op[0].L49_Exp_Present_KWH_UNITS;
+
+                    MTR2_MF1.Text = op[0].L19_Multiplying_factor_KW;
+                  //  MTR2_MF2.Text = op[0].L19_Multiplying_factor_KW;
+                    MTR2_MF3.Text = op[0].L19_Multiplying_factor_KWH;
+                    MTR2_MF4.Text = op[0].L19_Multiplying_factor_KWH;
+
+                    MTR2_CU1.Text = op[0].L20_KVA_UNITS;
+                  //  MTR2_CU2.Text = op[0].L49_Exp_KVA_UNITS;
+                    MTR2_CU3.Text = op[0].L20_KWH_UNITS;
+                    MTR2_CU4.Text = op[0].L49_Exp_KWH_UNITS;
+
+                   // kvah21.Text = op[0].L49_Exp_CURRENT_NET_EXPORT_KWH_UNITS;
+
+                }
+
+                if (!string.IsNullOrEmpty(op[0].L6_Kvah_indicator) || op[0].L6_Kvah_indicator == "1")
+                {
+                    //MTR1
+                    imp11.Text = op[0].L14_KVA_PASTREAD;
+                   // exp11.Text = op[0].L33_Exp_Past_KVA_UNITS;
+                    imp21.Text = op[0].L14_KWH_PASTREAD;
+                    exp21.Text = op[0].L33_Exp_Past_KVAH_UNITS;
+
+                    imp12.Text = op[0].L13_KVA_PRESREAD;
+                   // exp12.Text = op[0].L33_Exp_Present_KVA_UNITS;
+                    imp22.Text = op[0].L13_KWH_PRESREAD;
+                    exp22.Text = op[0].L33_Exp_Present_KVAH_UNITS;
+
+                    imp13.Text = op[0].L15_Multiplying_factor_KVA;
+                   // exp13.Text = op[0].L15_Multiplying_factor_KVA;
+                    imp23.Text = op[0].L15_Multiplying_factor_KWH;
+                    exp23.Text = op[0].L15_Multiplying_factor_KWH;
+
+                    imp14.Text = op[0].L16_KVA_UNITS;
+                   // exp14.Text = op[0].L33_Exp_KVA_UNITS;
+                    imp24.Text = op[0].L16_KWH_UNITS;
+                    exp24.Text = op[0].L33_Exp_KVAH_UNITS;
+
+                    kva11.Text = op[0].L33_Exp_CURRENT_NET_EXPORT_KVAH_UNITS;
+                    kva12.Text = op[0].L46_Previous_CREDIT_Units_MAIN_KVAH;
+                    kva13.Text = op[0].L46_Net_Billed_Units_MAIN;
+                    kva14.Text = op[0].L46_Carry_Forward_Units_MAIN_KVAH;
+
+                    //MTR2
+                    MTR2_PR1.Text = op[0].L18_KVA_PASTREAD;
+                   // MTR2_PR2.Text = op[0].L49_Exp_Past_KVA_UNITS;
+                    MTR2_PR3.Text = op[0].L18_KWH_PASTREAD;
+                    MTR2_PR4.Text = op[0].L49_Exp_Past_KVAH_UNITS;
+
+                    MTR2_CR1.Text = op[0].L17_KVA_PRESREAD;
+                   // MTR2_CR2.Text = op[0].L49_Exp_Present_KVA_UNITS;
+                    MTR2_CR3.Text = op[0].L17_KWH_PRESREAD;
+                    MTR2_CR4.Text = op[0].L49_Exp_Present_KVAH_UNITS;
+
+                    MTR2_MF1.Text = op[0].L19_Multiplying_factor_KW;
+                  //  MTR2_MF2.Text = op[0].L19_Multiplying_factor_KW;
+                    MTR2_MF3.Text = op[0].L19_Multiplying_factor_KWH;
+                    MTR2_MF4.Text = op[0].L19_Multiplying_factor_KWH;
+
+                    MTR2_CU1.Text = op[0].L20_KVA_UNITS;
+                  //  MTR2_CU2.Text = op[0].L49_Exp_KVA_UNITS;
+                    MTR2_CU3.Text = op[0].L20_KWH_UNITS;
+                    MTR2_CU4.Text = op[0].L49_Exp_KVAH_UNITS;
+
+                  //  kvah21.Text = op[0].L49_Exp_CURRENT_NET_EXPORT_KVAH_UNITS;
+                }
+
+
+            }
+            else
+            {
+                if (string.IsNullOrEmpty(op[0].L6_Kvah_indicator) || op[0].L6_Kvah_indicator == "0.00")
+                {
+                    xrLabel18.Text = op[0].L12_MTRSNO_METER1;
+                    KW_HEAD2.Visible = false;
+                    KWH_HEAD2.Visible = false;
+                    KWHE_HEAD2.Visible = false;
+
+                    //MTR2_IMP1.Visible = false;
+                    //MTR2_IMP2.Visible = false;
+                    //MTR2_EXP1.Visible = false;
+                    //MTR2_EXP2.Visible = false;
+                    //Newer                                                   
+                    imp11.Text = op[0].L14_KVA_PASTREAD;
+                    //exp11.Text = op[0].L33_Exp_Past_KW_UNITS;
+                    imp21.Text = op[0].L14_KWH_PASTREAD;
+                    exp21.Text = op[0].L33_Exp_Past_KWH_UNITS;
+
+                    imp12.Text = op[0].L13_KVA_PRESREAD;
+                   // exp12.Text = op[0].L33_Exp_Present_KW_UNITS;
+                    imp22.Text = op[0].L13_KWH_PRESREAD;
+                    exp22.Text = op[0].L33_Exp_Present_KWH_UNITS;
+
+                    imp13.Text = op[0].L15_Multiplying_factor_KVA;
+                   // exp13.Text = op[0].L15_Multiplying_factor_KVA;
+                    imp23.Text = op[0].L15_Multiplying_factor_KWH;
+                    exp23.Text = op[0].L15_Multiplying_factor_KWH;
+
+                    imp14.Text = op[0].L16_KVA_UNITS;
+                   // exp14.Text = op[0].L33_Exp_KW_UNITS;
+                    imp24.Text = op[0].L16_KWH_UNITS;
+                    exp24.Text = op[0].L33_Exp_KWH_UNITS;
+
+                    kva11.Text = op[0].L33_Exp_CURRENT_NET_EXPORT_KWH_UNITS;
+                    kva12.Text = op[0].L46_Previous_CREDIT_Units_MAIN_KWH;
+                    kva13.Text = op[0].L46_Net_Billed_Units_MAIN_KWH;
+                    kva14.Text = op[0].L46_Carry_Forward_Units_MAIN_KWH;
+                }
+                if (!string.IsNullOrEmpty(op[0].L6_Kvah_indicator) || op[0].L6_Kvah_indicator == "1")
+                {
+                    xrLabel18.Text = op[0].L12_MTRSNO_METER1;
+                    KW_HEAD2.Visible = false;
+                    KWH_HEAD2.Visible = false;
+                    KWHE_HEAD2.Visible = false;
+                    //MTR2_IMP1.Visible = false;
+                    //MTR2_IMP2.Visible = false;
+                    //MTR2_EXP1.Visible = false;
+                    //MTR2_EXP2.Visible = false;
+                    //Newer
+                    imp11.Text = op[0].L14_KVA_PASTREAD;
+                    //exp11.Text = op[0].L33_Exp_Past_KVA_UNITS;
+                    imp21.Text = op[0].L14_KWH_PASTREAD;
+                    exp21.Text = op[0].L33_Exp_Past_KVAH_UNITS;
+
+                    imp12.Text = op[0].L13_KVA_PRESREAD;
+                    //exp12.Text = op[0].L33_Exp_Present_KVA_UNITS;
+                    imp22.Text = op[0].L13_KWH_PRESREAD;
+                    exp22.Text = op[0].L33_Exp_Present_KVAH_UNITS;
+
+                    imp13.Text = op[0].L15_Multiplying_factor_KVA;
+                   // exp13.Text = op[0].L15_Multiplying_factor_KVA;
+                    imp23.Text = op[0].L15_Multiplying_factor_KWH;
+                    exp23.Text = op[0].L15_Multiplying_factor_KWH;
+
+                    imp14.Text = op[0].L16_KVA_UNITS;
+                   // exp14.Text = op[0].L33_Exp_KVA_UNITS;
+                    imp24.Text = op[0].L16_KWH_UNITS;
+                    exp24.Text = op[0].L33_Exp_KVAH_UNITS;
+
+                    kva11.Text = op[0].L33_Exp_CURRENT_NET_EXPORT_KVAH_UNITS;
+                    kva12.Text = op[0].L46_Previous_CREDIT_Units_MAIN_KVAH;
+                    kva13.Text = op[0].L46_Net_Billed_Units_MAIN;
+                    kva14.Text = op[0].L46_Carry_Forward_Units_MAIN_KVAH;
+                }
+
+            }
+            #endregion
+
+            #endregion
+
+
+            #region back page details
             if (op[0].L12_MTRSNO_METER_2_IF_AVAILABLE != "")
             {
                 MTR_TOD1.Text = op[0].L12_MTRSNO_METER1;
@@ -692,6 +875,7 @@ namespace AT.Print.PDF
 
                 }
             }
+            #endregion
             #endregion
 
 
