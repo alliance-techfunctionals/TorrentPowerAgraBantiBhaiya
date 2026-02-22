@@ -2730,7 +2730,7 @@
             this.xrLabelBillTypeData.CanGrow = false;
             this.xrLabelBillTypeData.Dpi = 96F;
             this.xrLabelBillTypeData.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L6_BILL_TYPE]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L6_Bill_Type_Assess_OR_normal]")});
             this.xrLabelBillTypeData.Font = new DevExpress.Drawing.DXFont("Manrope", 9F);
             this.xrLabelBillTypeData.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabelBillTypeData.LocationFloat = new DevExpress.Utils.PointFloat(238.4F, 422F);
@@ -2763,7 +2763,7 @@
             this.xrLabelPayByDueData.CanGrow = false;
             this.xrLabelPayByDueData.Dpi = 96F;
             this.xrLabelPayByDueData.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_AmountPayableBeforeDueDate]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_amount_payable_before_due_date]")});
             this.xrLabelPayByDueData.Font = new DevExpress.Drawing.DXFont("Manrope", 9F);
             this.xrLabelPayByDueData.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabelPayByDueData.LocationFloat = new DevExpress.Utils.PointFloat(362F, 370.16F);
@@ -2826,7 +2826,7 @@
             // 
             this.xrLabelAfterData.Dpi = 96F;
             this.xrLabelAfterData.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L9_AmountPayable]\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L9_Total_Bill_payable_rounded]")});
             this.xrLabelAfterData.Font = new DevExpress.Drawing.DXFont("Manrope", 9F);
             this.xrLabelAfterData.LocationFloat = new DevExpress.Utils.PointFloat(496F, 370.16F);
             this.xrLabelAfterData.Multiline = true;
@@ -2854,14 +2854,14 @@
             this.xrLabelPayModeData.CanGrow = false;
             this.xrLabelPayModeData.Dpi = 96F;
             this.xrLabelPayModeData.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L7_LastPayementMode]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L10_Mode]")});
             this.xrLabelPayModeData.Font = new DevExpress.Drawing.DXFont("Manrope", 9F);
             this.xrLabelPayModeData.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabelPayModeData.LocationFloat = new DevExpress.Utils.PointFloat(496F, 422F);
             this.xrLabelPayModeData.Multiline = true;
             this.xrLabelPayModeData.Name = "xrLabelPayModeData";
             this.xrLabelPayModeData.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabelPayModeData.SizeF = new System.Drawing.SizeF(67F, 22.08F);
+            this.xrLabelPayModeData.SizeF = new System.Drawing.SizeF(99.92999F, 22.08F);
             this.xrLabelPayModeData.StylePriority.UseFont = false;
             this.xrLabelPayModeData.StylePriority.UseTextAlignment = false;
             this.xrLabelPayModeData.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -2913,14 +2913,14 @@
             this.xrLabelLastPaymentData.CanGrow = false;
             this.xrLabelLastPaymentData.Dpi = 96F;
             this.xrLabelLastPaymentData.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L7_LastPayementAmount]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L7_Last_Payement_amount]")});
             this.xrLabelLastPaymentData.Font = new DevExpress.Drawing.DXFont("Manrope", 9F);
             this.xrLabelLastPaymentData.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabelLastPaymentData.LocationFloat = new DevExpress.Utils.PointFloat(621.62F, 422F);
             this.xrLabelLastPaymentData.Multiline = true;
             this.xrLabelLastPaymentData.Name = "xrLabelLastPaymentData";
             this.xrLabelLastPaymentData.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabelLastPaymentData.SizeF = new System.Drawing.SizeF(67F, 22.08F);
+            this.xrLabelLastPaymentData.SizeF = new System.Drawing.SizeF(108.1344F, 22.08F);
             this.xrLabelLastPaymentData.StylePriority.UseFont = false;
             this.xrLabelLastPaymentData.StylePriority.UseTextAlignment = false;
             this.xrLabelLastPaymentData.Text = "₹";

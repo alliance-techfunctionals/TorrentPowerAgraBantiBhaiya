@@ -267,10 +267,10 @@ namespace AT.Print.PDF
 
             #region pieChart
             //PieChart//
-            decimal energyCharge = ToDecimal(op[0].L8_EnergyCharge);
+            decimal energyCharge = 1212.43; // ToDecimal(op[0].L8_EnergyCharge);
             decimal fixedCharge = ToDecimal(op[0].L8_FixedCharge);
             decimal electricityDuty = ToDecimal(op[0].L8_GovTax);
-            decimal excessDemandCharge = ToDecimal(op[0].L10_DMDCHG_PENALTY);
+            decimal excessDemandCharge = 200.00; // ToDecimal(op[0].L10_DMDCHG_PENALTY);
 
             xrChartPie.Series.Clear();
             xrChartPie.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
