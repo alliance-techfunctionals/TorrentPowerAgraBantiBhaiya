@@ -21,14 +21,14 @@ namespace AT.Print.PDF
             Rpt_LTMD_Solar_back_visible =d;
         }
 
-      
+
 
         private void Rpt_solar_PDF_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
             var data = sender as Rpt_LTMD_Solar_PDF;
             var op = data.DataSource as List<SolarBill>;
 
-          
+
 
             if (!String.IsNullOrEmpty(op[0].L6_LT_Metering_Flag))
             {
@@ -107,7 +107,7 @@ namespace AT.Print.PDF
             }
 
 
-                string unit = "KW";
+            string unit = "KW";
             if (!string.IsNullOrEmpty(op[0].L6_Kvah_indicator) && op[0].L6_Kvah_indicator == "1")
             {
                 op[0].unit = op[0].L6_MEASURE_OF_CONTRACT_Demand;
@@ -143,13 +143,13 @@ namespace AT.Print.PDF
                 }
             }
 
-            
+
             if (op[0].L6_MEASURE_OF_CONTRACT_Demand == "HP")
             {
 
                 if (op[0].L6_Kvah_indicator == "1")
                 {
-                    
+
                     op[0].unit1 = "KVA";
 
                     //xrlRecordedDemand.Text = "Recorded Demand(" + op[0].unit1 + ")";
@@ -200,9 +200,9 @@ namespace AT.Print.PDF
                     //xrlRecordedDemand.Text = "Recorded Demand(" + op[0].unit1 + ")";
                     //xrlL6ExcessDemand.Text = "Excess Demand(" + op[0].unit1 + ")";
                     //xrlL6Servdet_Sanc_load.Text = "Bill Demand(" + op[0].unit1 + ")";
-                    KW_HEAD1.Text  = op[0].unit1;
+                    KW_HEAD1.Text = op[0].unit1;
                     KWH_HEAD1.Text = op[0].unit1 + "H(I)";
-                    KW_HEAD2.Text  = op[0].unit1;
+                    KW_HEAD2.Text = op[0].unit1;
                     KWH_HEAD2.Text = op[0].unit1 + "H(I)";
                     KWHE_HEAD1.Text = op[0].unit1 + "H(E)";
                     KWHE_HEAD2.Text = op[0].unit1 + "H(E)";
@@ -252,10 +252,10 @@ namespace AT.Print.PDF
 
             #region pieChart
             //PieChart//
-            decimal energyCharge =  ToDecimal(op[0].L8_EnergyCharge);
+            decimal energyCharge = ToDecimal(op[0].L8_EnergyCharge);
             decimal fixedCharge = ToDecimal(op[0].L8_FixedCharge);
             decimal electricityDuty = ToDecimal(op[0].L8_GovTax);
-            decimal excessDemandCharge =  ToDecimal(op[0].L10_DMDCHG_PENALTY);
+            decimal excessDemandCharge = ToDecimal(op[0].L10_DMDCHG_PENALTY);
 
             xrChartPie.Series.Clear();
             xrChartPie.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
@@ -335,12 +335,12 @@ namespace AT.Print.PDF
                     exp22.Text = op[0].L33_Exp_Present_KWH_UNITS;
 
                     imp13.Text = op[0].L15_Multiplying_factor_KVA;
-                   // exp13.Text = op[0].L15_Multiplying_factor_KVA;
+                    // exp13.Text = op[0].L15_Multiplying_factor_KVA;
                     imp23.Text = op[0].L15_Multiplying_factor_KWH;
                     exp23.Text = op[0].L15_Multiplying_factor_KWH;
 
                     imp14.Text = op[0].L16_KVA_UNITS;
-                   // exp14.Text = op[0].L33_Exp_KW_UNITS;
+                    // exp14.Text = op[0].L33_Exp_KW_UNITS;
                     imp24.Text = op[0].L16_KWH_UNITS;
                     exp24.Text = op[0].L33_Exp_KWH_UNITS;
 
@@ -351,26 +351,26 @@ namespace AT.Print.PDF
 
                     //mtr2
                     MTR2_PR1.Text = op[0].L18_KVA_PASTREAD;
-                   // MTR2_PR2.Text = op[0].L49_Exp_Past_KVA_UNITS;
+                    // MTR2_PR2.Text = op[0].L49_Exp_Past_KVA_UNITS;
                     MTR2_PR3.Text = op[0].L18_KWH_PASTREAD;
                     MTR2_PR4.Text = op[0].L49_Exp_Past_KWH_UNITS;
 
                     MTR2_CR1.Text = op[0].L17_KVA_PRESREAD;
-                  //  MTR2_CR2.Text = op[0].L49_Exp_Present_KVA_UNITS;
+                    //  MTR2_CR2.Text = op[0].L49_Exp_Present_KVA_UNITS;
                     MTR2_CR3.Text = op[0].L17_KWH_PRESREAD;
                     MTR2_CR4.Text = op[0].L49_Exp_Present_KWH_UNITS;
 
                     MTR2_MF1.Text = op[0].L19_Multiplying_factor_KW;
-                  //  MTR2_MF2.Text = op[0].L19_Multiplying_factor_KW;
+                    //  MTR2_MF2.Text = op[0].L19_Multiplying_factor_KW;
                     MTR2_MF3.Text = op[0].L19_Multiplying_factor_KWH;
                     MTR2_MF4.Text = op[0].L19_Multiplying_factor_KWH;
 
                     MTR2_CU1.Text = op[0].L20_KVA_UNITS;
-                  //  MTR2_CU2.Text = op[0].L49_Exp_KVA_UNITS;
+                    //  MTR2_CU2.Text = op[0].L49_Exp_KVA_UNITS;
                     MTR2_CU3.Text = op[0].L20_KWH_UNITS;
                     MTR2_CU4.Text = op[0].L49_Exp_KWH_UNITS;
 
-                   // kvah21.Text = op[0].L49_Exp_CURRENT_NET_EXPORT_KWH_UNITS;
+                    // kvah21.Text = op[0].L49_Exp_CURRENT_NET_EXPORT_KWH_UNITS;
 
                 }
 
@@ -378,22 +378,22 @@ namespace AT.Print.PDF
                 {
                     //MTR1
                     imp11.Text = op[0].L14_KVA_PASTREAD;
-                   // exp11.Text = op[0].L33_Exp_Past_KVA_UNITS;
+                    // exp11.Text = op[0].L33_Exp_Past_KVA_UNITS;
                     imp21.Text = op[0].L14_KWH_PASTREAD;
                     exp21.Text = op[0].L33_Exp_Past_KVAH_UNITS;
 
                     imp12.Text = op[0].L13_KVA_PRESREAD;
-                   // exp12.Text = op[0].L33_Exp_Present_KVA_UNITS;
+                    // exp12.Text = op[0].L33_Exp_Present_KVA_UNITS;
                     imp22.Text = op[0].L13_KWH_PRESREAD;
                     exp22.Text = op[0].L33_Exp_Present_KVAH_UNITS;
 
                     imp13.Text = op[0].L15_Multiplying_factor_KVA;
-                   // exp13.Text = op[0].L15_Multiplying_factor_KVA;
+                    // exp13.Text = op[0].L15_Multiplying_factor_KVA;
                     imp23.Text = op[0].L15_Multiplying_factor_KWH;
                     exp23.Text = op[0].L15_Multiplying_factor_KWH;
 
                     imp14.Text = op[0].L16_KVA_UNITS;
-                   // exp14.Text = op[0].L33_Exp_KVA_UNITS;
+                    // exp14.Text = op[0].L33_Exp_KVA_UNITS;
                     imp24.Text = op[0].L16_KWH_UNITS;
                     exp24.Text = op[0].L33_Exp_KVAH_UNITS;
 
@@ -404,26 +404,26 @@ namespace AT.Print.PDF
 
                     //MTR2
                     MTR2_PR1.Text = op[0].L18_KVA_PASTREAD;
-                   // MTR2_PR2.Text = op[0].L49_Exp_Past_KVA_UNITS;
+                    // MTR2_PR2.Text = op[0].L49_Exp_Past_KVA_UNITS;
                     MTR2_PR3.Text = op[0].L18_KWH_PASTREAD;
                     MTR2_PR4.Text = op[0].L49_Exp_Past_KVAH_UNITS;
 
                     MTR2_CR1.Text = op[0].L17_KVA_PRESREAD;
-                   // MTR2_CR2.Text = op[0].L49_Exp_Present_KVA_UNITS;
+                    // MTR2_CR2.Text = op[0].L49_Exp_Present_KVA_UNITS;
                     MTR2_CR3.Text = op[0].L17_KWH_PRESREAD;
                     MTR2_CR4.Text = op[0].L49_Exp_Present_KVAH_UNITS;
 
                     MTR2_MF1.Text = op[0].L19_Multiplying_factor_KW;
-                  //  MTR2_MF2.Text = op[0].L19_Multiplying_factor_KW;
+                    //  MTR2_MF2.Text = op[0].L19_Multiplying_factor_KW;
                     MTR2_MF3.Text = op[0].L19_Multiplying_factor_KWH;
                     MTR2_MF4.Text = op[0].L19_Multiplying_factor_KWH;
 
                     MTR2_CU1.Text = op[0].L20_KVA_UNITS;
-                  //  MTR2_CU2.Text = op[0].L49_Exp_KVA_UNITS;
+                    //  MTR2_CU2.Text = op[0].L49_Exp_KVA_UNITS;
                     MTR2_CU3.Text = op[0].L20_KWH_UNITS;
                     MTR2_CU4.Text = op[0].L49_Exp_KVAH_UNITS;
 
-                  //  kvah21.Text = op[0].L49_Exp_CURRENT_NET_EXPORT_KVAH_UNITS;
+                    //  kvah21.Text = op[0].L49_Exp_CURRENT_NET_EXPORT_KVAH_UNITS;
                 }
 
 
@@ -448,17 +448,17 @@ namespace AT.Print.PDF
                     exp21.Text = op[0].L33_Exp_Past_KWH_UNITS;
 
                     imp12.Text = op[0].L13_KVA_PRESREAD;
-                   // exp12.Text = op[0].L33_Exp_Present_KW_UNITS;
+                    // exp12.Text = op[0].L33_Exp_Present_KW_UNITS;
                     imp22.Text = op[0].L13_KWH_PRESREAD;
                     exp22.Text = op[0].L33_Exp_Present_KWH_UNITS;
 
                     imp13.Text = op[0].L15_Multiplying_factor_KVA;
-                   // exp13.Text = op[0].L15_Multiplying_factor_KVA;
+                    // exp13.Text = op[0].L15_Multiplying_factor_KVA;
                     imp23.Text = op[0].L15_Multiplying_factor_KWH;
                     exp23.Text = op[0].L15_Multiplying_factor_KWH;
 
                     imp14.Text = op[0].L16_KVA_UNITS;
-                   // exp14.Text = op[0].L33_Exp_KW_UNITS;
+                    // exp14.Text = op[0].L33_Exp_KW_UNITS;
                     imp24.Text = op[0].L16_KWH_UNITS;
                     exp24.Text = op[0].L33_Exp_KWH_UNITS;
 
@@ -489,12 +489,12 @@ namespace AT.Print.PDF
                     exp22.Text = op[0].L33_Exp_Present_KVAH_UNITS;
 
                     imp13.Text = op[0].L15_Multiplying_factor_KVA;
-                   // exp13.Text = op[0].L15_Multiplying_factor_KVA;
+                    // exp13.Text = op[0].L15_Multiplying_factor_KVA;
                     imp23.Text = op[0].L15_Multiplying_factor_KWH;
                     exp23.Text = op[0].L15_Multiplying_factor_KWH;
 
                     imp14.Text = op[0].L16_KVA_UNITS;
-                   // exp14.Text = op[0].L33_Exp_KVA_UNITS;
+                    // exp14.Text = op[0].L33_Exp_KVA_UNITS;
                     imp24.Text = op[0].L16_KWH_UNITS;
                     exp24.Text = op[0].L33_Exp_KVAH_UNITS;
 
@@ -674,13 +674,13 @@ namespace AT.Print.PDF
                 {
                     MTR_TOD1.Text = op[0].L12_MTRSNO_METER1;
                     //MTR1
-                   // xrLabel16.Text = op[0].L23_TOD_1_KW;
+                    // xrLabel16.Text = op[0].L23_TOD_1_KW;
                     xrLabel17.Text = op[0].L22_TOD_1_KWH;
-                   // xrLabel23.Text = op[0].L23_TOD_2_KW;
+                    // xrLabel23.Text = op[0].L23_TOD_2_KW;
                     xrLabel24.Text = op[0].L22_TOD_2_KWH;
-                   // xrLabel44.Text = op[0].L23_TOD_3_KW;
+                    // xrLabel44.Text = op[0].L23_TOD_3_KW;
                     xrLabel45.Text = op[0].L22_TOD_3_KWH;
-                   // xrLabel30.Text = op[0].L23_TOD_4_KW;
+                    // xrLabel30.Text = op[0].L23_TOD_4_KW;
                     xrLabel31.Text = op[0].L22_TOD_4_KWH;
                     //EXP
                     //xrLabel37.Text = op[0].L53_Exp_TOD1_KW_Units;
@@ -879,6 +879,46 @@ namespace AT.Print.PDF
             #endregion
 
 
+            #region Solar Export Energy Adjustment
+            //Solar Export Energy Adjustment
+
+            if (!(op[0].L8_Solar_Export_Energy == "0.00" || op[0].L8_Solar_Export_Energy == ""))
+            {
+                xrLabel34.Visible = false;
+                xrLabel33.Visible = false;
+                xrLabel35.Visible = false;
+                xrLabel36.Visible = false;
+               // kvah21.Visible = false;
+                kva11.Visible = false;
+                kva12.Visible = false;
+                kva13.Visible = false;
+                kva14.Visible = false;
+               visible();
+
+
+            }
+            else
+            {
+                visibleon();
+            }
+            #endregion
+
+            #region Disconnection Message
+            //if (op[0].L1_DisconnectionMSGPrintingIMMEDIATE == "1")
+            //{
+            //    xrDueDate.Text = "IMMEDIATE";
+            //    bd_Bottom_BillDueDate.Text = "IMMEDIATE";
+            //    xrImmediatedissconnectiondate.Text = "IMMEDIATE";
+            //    xrImmediatedissconnectiondate.Visible = true;
+            //}
+            //else
+            //{
+                xrDueDate.Text = op[0].L7_due_date;
+                bd_Bottom_BillDueDate.Text = op[0].L7_due_date;
+                xrImmediatedissconnectiondate.Text = op[0].L10_DISCONN_DATE_date;
+           // }
+            #endregion
+
 
         }
         private decimal ToDecimal(string value)
@@ -887,372 +927,59 @@ namespace AT.Print.PDF
             return result;
         }
 
+        public void visible()
+        {
+            xrLabel39.Visible = false;
+            xrLabel7.Visible = false;
+            xrLabel8.Visible = false;
+            xrLabel9.Visible = false;
+            xrLabel10.Visible = false;
+            xrLabel40.Visible = false;
+            xrLabel41.Visible = false;
+            xrLabel42.Visible = false;
+            xrLabel53.Visible = false;
+            xrLabel54.Visible = false;
+            xrLabel55.Visible = false;
+            xrLabel56.Visible = false;
+            xrLabel60.Visible = false;
+            xrLabel61.Visible = false;
+            xrLabel62.Visible = false;
+            xrLabel63.Visible = false;
+            xrLabel67.Visible = false;
+            xrLabel68.Visible = false;
+            xrLabel69.Visible = false;
+            xrLabel70.Visible = false;
+            xrLine1.Visible = false;
+
+        }
+        public void visibleon()
+        {
+            xrLabel39.Visible = true;
+            xrLabel7.Visible = true;
+            xrLabel8.Visible = true;
+            xrLabel9.Visible = true;
+            xrLabel10.Visible = true;
+            xrLabel40.Visible = true;
+            xrLabel41.Visible = true;
+            xrLabel42.Visible = true;
+            xrLabel53.Visible = true;
+            xrLabel54.Visible = true;
+            xrLabel55.Visible = true;
+            xrLabel56.Visible = true;
+            xrLabel60.Visible = true;
+            xrLabel61.Visible = true;
+            xrLabel62.Visible = true;
+            xrLabel63.Visible = true;
+            xrLabel67.Visible = true;
+            xrLabel68.Visible = true;
+            xrLabel69.Visible = true;
+            xrLabel70.Visible = true;
+            xrLine1.Visible = true;
+        }
+
+
     }
 
 }
 
-//if (op[0].L12_MTRSNO_METER_2_IF_AVAILABLE != "")
-//{
-//    MTR_TOD1.Text = op[0].L12_MTRSNO_METER1;
-//    MTR_TOD2.Text = op[0].L12_MTRSNO_METER_2_IF_AVAILABLE;
-//    #region Meter(KW)
-//    if (string.IsNullOrEmpty(op[0].L6_Kvah_indicator) || op[0].L6_Kvah_indicator == "0.00")
-//    {
 
-//        //imp
-//        xrLabel16.Text = op[0].L23_TOD_1_KW;
-//        xrLabelLastPayAmount.Text = op[0].L23_TOD_2_KW;
-//        xrLabelcload.Text = op[0].L23_TOD_3_KW;
-//        xrLabel30.Text = op[0].L23_TOD_4_KW;
-
-//        xrLabeltariff.Text = op[0].L22_TOD_1_KWH;
-//        xrLabel24.Text = op[0].L22_TOD_2_KWH;
-//        xrLabelpurpose.Text = op[0].L22_TOD_3_KWH;
-//        xrLabel31.Text = op[0].L22_TOD_4_KWH;
-//        //EXP
-
-//        xrLabel37.Text = op[0].L53_Exp_TOD1_KW_Units;
-//        xrLabelsupvoltage.Text = op[0].L53_Exp_TOD2_KW_Units;
-//        xrLabel58.Text = op[0].L53_Exp_TOD3_KW_Units;
-//        xrLabel65.Text = op[0].L53_Exp_TOD4_KW_Units;
-
-//        xrLabel38.Text = op[0].L34_Exp_TOD1_KWH_Units;
-//        xrLabelpfactor.Text = op[0].L34_Exp_TOD2_KWH_Units;
-//        xrLabel59.Text = op[0].L34_Exp_TOD3_KWH_Units;
-//        xrLabel66.Text = op[0].L34_Exp_TOD4_KWH_Units;
-
-
-
-//        //Current Net Unit
-//        xrLabelprevreaddate.Text = op[0].L43_Exp_CURRENT_NET_EXPORT_TOD1_KWH_UNITS;
-//        xrLabeltodParams.Text = op[0].L43_Exp_CURRENT_NET_EXPORT_TOD2_KWH_UNITS;
-//        xrLabelTOD.Text = op[0].L43_Exp_CURRENT_NET_EXPORT_TOD3_KWH_UNITS;
-//        xrLabel67.Text = op[0].L43_Exp_CURRENT_NET_EXPORT_TOD4_KWH_UNITS;
-//        //Previous net Unit
-//        xrLabelRedEmail.Text = op[0].L43_Previous_CREDIT_Units_TOD1_KWH;
-//        xrLabel54.Text = op[0].L43_Previous_CREDIT_Units_TOD2_KWH;
-//        xrLabel61.Text = op[0].L43_Previous_CREDIT_Units_TOD3_KWH;
-//        xrLabel68.Text = op[0].L43_Previous_CREDIT_Units_TOD4_KWH;
-//        //net bill unit
-//        xrLabel41.Text = op[0].L46_Net_Billed_Units_MAIN_TOD1_KWH;
-//        xrLabel55.Text = op[0].L46_Net_Billed_Units_MAIN_TOD2_KWH;
-//        xrLabel62.Text = op[0].L46_Net_Billed_Units_MAIN_TOD3_KWH;
-//        xrLabel69.Text = op[0].L46_Net_Billed_Units_MAIN_TOD4_KWH;
-//        //carry forword unit
-//        xrLabel42.Text = op[0].L45_Carry_Forward_Units_TOD1_KWH;
-//        xrLabel56.Text = op[0].L45_Carry_Forward_Units_TOD2_KWH;
-//        xrLabelBillDays.Text = op[0].L45_Carry_Forward_Units_TOD3_KWH;
-//        xrLabel70.Text = op[0].L45_Carry_Forward_Units_TOD4_KWH;
-
-//        //mtr2
-//        //MTR2_KW1.Text = op[0].L25_TOD_1_KWH;
-//        //MTR2_KW2.Text = op[0].L25_TOD_2_KWH;
-//        //MTR2_KW3.Text = op[0].L25_TOD_3_KWH;
-//        //MTR2_KW4.Text = op[0].L25_TOD_4_KWH;
-//        //MTR2_KW1_ex.Text = op[0].L54_Exp_TOD1_KW_Units;
-//        //MTR2_KW2_ex.Text = op[0].L54_Exp_TOD2_KW_Units;
-//        //MTR2_KW3_ex.Text = op[0].L54_Exp_TOD3_KW_Units;
-//        //MTR2_KW4_ex.Text = op[0].L54_Exp_TOD4_KW_Units;
-
-//        MTR2_KWH1.Text = op[0].L24_TOD_1_KWH;
-//        MTR2_KWH2.Text = op[0].L24_TOD_2_KWH;
-//        MTR2_KWH3.Text = op[0].L24_TOD_3_KWH;
-//        MTR2_KWH4.Text = op[0].L24_TOD_4_KWH;
-//        MTR2_KWH1_ex.Text = op[0].L51_Exp_TOD1_KWH_Units;
-//        MTR2_KWH2_ex.Text = op[0].L51_Exp_TOD2_KWH_Units;
-//        MTR2_KWH3_ex.Text = op[0].L51_Exp_TOD3_KWH_Units;
-//        MTR2_KWH4_ex.Text = op[0].L51_Exp_TOD4_KWH_Units;
-
-
-
-//    }
-//    #endregion
-//    #region Meter(KVA)
-//    if (!string.IsNullOrEmpty(op[0].L6_Kvah_indicator) || op[0].L6_Kvah_indicator == "1")
-//    {
-
-//        xrLabel16.Text = op[0].L23_TOD_1_KW;
-//        xrLabelLastPayAmount.Text = op[0].L23_TOD_2_KW;
-//        xrLabelcload.Text = op[0].L23_TOD_3_KW;
-//        xrLabel30.Text = op[0].L23_TOD_4_KW;
-
-//        xrLabeltariff.Text = op[0].L22_TOD_1_KWH;
-//        xrLabel24.Text = op[0].L22_TOD_2_KWH;
-//        xrLabelpurpose.Text = op[0].L22_TOD_3_KWH;
-//        xrLabel31.Text = op[0].L22_TOD_4_KWH;
-//        //EXP
-//        xrLabel37.Text = op[0].L36_Exp_TOD1_KVA_Units;
-//        xrLabelsupvoltage.Text = op[0].L36_Exp_TOD2_KVA_Units;
-//        xrLabel58.Text = op[0].L36_Exp_TOD3_KVA_Units;
-//        xrLabel65.Text = op[0].L36_Exp_TOD4_KVA_Units;
-
-
-//        xrLabel38.Text = op[0].L35_Exp_TOD1_KVAH_Units;
-//        xrLabelpfactor.Text = op[0].L35_Exp_TOD2_KVAH_Units;
-//        xrLabel59.Text = op[0].L35_Exp_TOD3_KVAH_Units;
-//        xrLabel66.Text = op[0].L35_Exp_TOD4_KVAH_Units;
-
-//        xrLabelprevreaddate.Text = op[0].L42_Exp_CURRENT_NET_EXPORT_TOD1_KVAH_UNITS;
-//        xrLabeltodParams.Text = op[0].L42_Exp_CURRENT_NET_EXPORT_TOD2_KVAH_UNITS;
-//        xrLabelTOD.Text = op[0].L42_Exp_CURRENT_NET_EXPORT_TOD3_KVAH_UNITS;
-//        xrLabel67.Text = op[0].L42_Exp_CURRENT_NET_EXPORT_TOD4_KVAH_UNITS;
-
-
-//        xrLabelRedEmail.Text = op[0].L42_Previous_CREDIT_Units_TOD1_KVAH;
-//        xrLabel54.Text = op[0].L42_Previous_CREDIT_Units_TOD2_KVAH;
-//        xrLabel61.Text = op[0].L42_Previous_CREDIT_Units_TOD3_KVAH;
-//        xrLabel68.Text = op[0].L42_Previous_CREDIT_Units_TOD4_KVAH;
-
-//        xrLabel41.Text = op[0].L46_Net_Billed_Units_MAIN_TOD1_KVAH;
-//        xrLabel55.Text = op[0].L46_Net_Billed_Units_MAIN_TOD2_KVAH;
-//        xrLabel62.Text = op[0].L46_Net_Billed_Units_MAIN_TOD3_KVAH;
-//        xrLabel69.Text = op[0].L46_Net_Billed_Units_MAIN_TOD4_KVAH;
-
-
-//        xrLabel42.Text = op[0].L44_Carry_Forward_Units_TOD1_KVAH;
-//        xrLabel56.Text = op[0].L44_Carry_Forward_Units_TOD2_KVAH;
-//        xrLabelBillDays.Text = op[0].L44_Carry_Forward_Units_TOD3_KVAH;
-//        xrLabel70.Text = op[0].L44_Carry_Forward_Units_TOD4_KVAH;
-
-//        //mtr2
-//        //MTR2_KW1.Text = op[0].L25_TOD_1_KWH;
-//        //MTR2_KW2.Text = op[0].L25_TOD_2_KWH;
-//        //MTR2_KW3.Text = op[0].L25_TOD_3_KWH;
-//        //MTR2_KW4.Text = op[0].L25_TOD_4_KWH;
-//        //MTR2_KW1_ex.Text = op[0].L52_Exp_TOD1_KVA_Units;
-//        //MTR2_KW2_ex.Text = op[0].L52_Exp_TOD2_KVA_Units;
-//        //MTR2_KW3_ex.Text = op[0].L52_Exp_TOD3_KVA_Units;
-//        //MTR2_KW4_ex.Text = op[0].L52_Exp_TOD4_KVA_Units;
-
-//        MTR2_KWH1.Text = op[0].L24_TOD_1_KWH;
-//        MTR2_KWH2.Text = op[0].L24_TOD_2_KWH;
-//        MTR2_KWH3.Text = op[0].L24_TOD_3_KWH;
-//        MTR2_KWH4.Text = op[0].L24_TOD_4_KWH;
-//        MTR2_KWH1_ex.Text = op[0].L50_Exp_TOD1_KVAH_Units;
-//        MTR2_KWH2_ex.Text = op[0].L50_Exp_TOD2_KVAH_Units;
-//        MTR2_KWH3_ex.Text = op[0].L50_Exp_TOD3_KVAH_Units;
-//        MTR2_KWH4_ex.Text = op[0].L50_Exp_TOD4_KVAH_Units;
-
-
-//    }
-//    #endregion
-//}
-//else
-//{
-//    //mtr2_IMP.Visible = false;
-//    //mtr2_exp.Visible = false;
-//    //MTR2_TOD1.Visible = false;
-//    //MTR2_TOD2.Visible = false;
-//    //MTR2_TOD3.Visible = false;
-//    //MTR2_TOD4.Visible = false;
-//    //MTR2_EXP1.Visible = false;
-//    //MTR2_EXP2.Visible = false;
-//    //MTR2_EXP3.Visible = false;
-//    //MTR2_EXP4.Visible = false;
-
-//    if (string.IsNullOrEmpty(op[0].L6_Kvah_indicator) || op[0].L6_Kvah_indicator == "0.00")
-//    {
-//        MTR_TOD1.Text = op[0].L12_MTRSNO_METER1;
-//        //MTR1
-//        xrLabel16.Text = op[0].L23_TOD_1_KW;
-//        xrLabeltariff.Text = op[0].L22_TOD_1_KWH;
-//        xrLabelLastPayAmount.Text = op[0].L23_TOD_2_KW;
-//        xrLabel24.Text = op[0].L22_TOD_2_KWH;
-//        xrLabelcload.Text = op[0].L23_TOD_3_KW;
-//        xrLabelpurpose.Text = op[0].L22_TOD_3_KWH;
-//        xrLabel30.Text = op[0].L23_TOD_4_KW;
-//        xrLabel31.Text = op[0].L22_TOD_4_KWH;
-//        //EXP
-//        xrLabel37.Text = op[0].L53_Exp_TOD1_KW_Units;
-//        xrLabelsupvoltage.Text = op[0].L53_Exp_TOD2_KW_Units;
-//        xrLabel58.Text = op[0].L53_Exp_TOD3_KW_Units;
-//        xrLabel65.Text = op[0].L53_Exp_TOD4_KW_Units;
-
-//        xrLabel38.Text = op[0].L34_Exp_TOD1_KWH_Units;
-//        xrLabelpfactor.Text = op[0].L34_Exp_TOD2_KWH_Units;
-//        xrLabel59.Text = op[0].L34_Exp_TOD3_KWH_Units;
-//        xrLabel66.Text = op[0].L34_Exp_TOD4_KWH_Units;
-
-
-
-
-//        xrLabelprevreaddate.Text = op[0].L43_Exp_CURRENT_NET_EXPORT_TOD1_KWH_UNITS;
-//        xrLabelRedEmail.Text = op[0].L43_Previous_CREDIT_Units_TOD1_KWH;
-//        xrLabel41.Text = op[0].L46_Net_Billed_Units_MAIN_TOD1_KWH;
-//        xrLabel42.Text = op[0].L45_Carry_Forward_Units_TOD1_KWH;
-//        //other
-//        xrLabeltodParams.Text = op[0].L43_Exp_CURRENT_NET_EXPORT_TOD2_KWH_UNITS;
-//        xrLabel54.Text = op[0].L43_Previous_CREDIT_Units_TOD2_KWH;
-//        xrLabel55.Text = op[0].L46_Net_Billed_Units_MAIN_TOD2_KWH;
-//        xrLabel56.Text = op[0].L45_Carry_Forward_Units_TOD2_KWH;
-//        xrLabelTOD.Text = op[0].L43_Exp_CURRENT_NET_EXPORT_TOD3_KWH_UNITS;
-//        xrLabel61.Text = op[0].L43_Previous_CREDIT_Units_TOD3_KWH;
-//        xrLabel62.Text = op[0].L46_Net_Billed_Units_MAIN_TOD3_KWH;
-//        xrLabelBillDays.Text = op[0].L45_Carry_Forward_Units_TOD3_KWH;
-//        xrLabel67.Text = op[0].L43_Exp_CURRENT_NET_EXPORT_TOD4_KWH_UNITS;
-//        xrLabel68.Text = op[0].L43_Previous_CREDIT_Units_TOD4_KWH;
-//        xrLabel69.Text = op[0].L46_Net_Billed_Units_MAIN_TOD4_KWH;
-//        xrLabel70.Text = op[0].L45_Carry_Forward_Units_TOD4_KWH;
-
-//    }
-//    if (!string.IsNullOrEmpty(op[0].L6_Kvah_indicator) || op[0].L6_Kvah_indicator == "1")
-//    {
-//        MTR_TOD1.Text = op[0].L12_MTRSNO_METER1;
-
-//        xrLabel16.Text = op[0].L23_TOD_1_KW;
-//        xrLabelLastPayAmount.Text = op[0].L23_TOD_2_KW;
-//        xrLabelcload.Text = op[0].L23_TOD_3_KW;
-//        xrLabel30.Text = op[0].L23_TOD_4_KW;
-
-//        xrLabeltariff.Text = op[0].L22_TOD_1_KWH;
-//        xrLabel24.Text = op[0].L22_TOD_2_KWH;
-//        xrLabelpurpose.Text = op[0].L22_TOD_3_KWH;
-//        xrLabel31.Text = op[0].L22_TOD_4_KWH;
-//        //EXP
-//        xrLabel37.Text = op[0].L36_Exp_TOD1_KVA_Units;
-//        xrLabelsupvoltage.Text = op[0].L36_Exp_TOD2_KVA_Units;
-//        xrLabel58.Text = op[0].L36_Exp_TOD3_KVA_Units;
-//        xrLabel65.Text = op[0].L36_Exp_TOD4_KVA_Units;
-
-
-//        xrLabel38.Text = op[0].L35_Exp_TOD1_KVAH_Units;
-//        xrLabelpfactor.Text = op[0].L35_Exp_TOD2_KVAH_Units;
-//        xrLabel59.Text = op[0].L35_Exp_TOD3_KVAH_Units;
-//        xrLabel66.Text = op[0].L35_Exp_TOD4_KVAH_Units;
-
-//        xrLabelprevreaddate.Text = op[0].L42_Exp_CURRENT_NET_EXPORT_TOD1_KVAH_UNITS;
-//        xrLabeltodParams.Text = op[0].L42_Exp_CURRENT_NET_EXPORT_TOD2_KVAH_UNITS;
-//        xrLabelTOD.Text = op[0].L42_Exp_CURRENT_NET_EXPORT_TOD3_KVAH_UNITS;
-//        xrLabel67.Text = op[0].L42_Exp_CURRENT_NET_EXPORT_TOD4_KVAH_UNITS;
-
-
-//        xrLabelRedEmail.Text = op[0].L42_Previous_CREDIT_Units_TOD1_KVAH;
-//        xrLabel54.Text = op[0].L42_Previous_CREDIT_Units_TOD2_KVAH;
-//        xrLabel61.Text = op[0].L42_Previous_CREDIT_Units_TOD3_KVAH;
-//        xrLabel68.Text = op[0].L42_Previous_CREDIT_Units_TOD4_KVAH;
-
-//        xrLabel41.Text = op[0].L46_Net_Billed_Units_MAIN_TOD1_KVAH;
-//        xrLabel55.Text = op[0].L46_Net_Billed_Units_MAIN_TOD2_KVAH;
-//        xrLabel62.Text = op[0].L46_Net_Billed_Units_MAIN_TOD3_KVAH;
-//        xrLabel69.Text = op[0].L46_Net_Billed_Units_MAIN_TOD4_KVAH;
-
-
-//        xrLabel42.Text = op[0].L44_Carry_Forward_Units_TOD1_KVAH;
-//        xrLabel56.Text = op[0].L44_Carry_Forward_Units_TOD2_KVAH;
-//        xrLabelBillDays.Text = op[0].L44_Carry_Forward_Units_TOD3_KVAH;
-//        xrLabel70.Text = op[0].L44_Carry_Forward_Units_TOD4_KVAH;
-
-//    }
-
-//}
-
-//#region Meter Print2
-//if (op[0].L37_Gen_Meter_Serial_Number != "")
-//{
-//    if (string.IsNullOrEmpty(op[0].L6_Kvah_indicator) || op[0].L6_Kvah_indicator == "0.00")
-//    {
-//        xrLabel78.Text = op[0].L37_Gen_Meter_Serial_Number;
-
-//        xrLabel81.Text = op[0].L39_Gen_KVA_PASTREAD;
-//        xrLabelNet.Text = op[0].L38_Gen_KVA_PRESREAD;
-//        xrLabelPrevCRUnit.Text = op[0].L40_Gen_MF3;
-//        xrLabelDueDate.Text = op[0].L41_Gen_KVA_NET_UNITS;
-//        xrLabelAfterDueDate.Text = op[0].L39_Gen_KWH_PASTREAD;
-//        xrLabel86.Text = op[0].L38_Gen_KWH_PRESREAD;
-//        xrLabel87.Text = op[0].L40_Gen_MF1;
-//        xrLabel88.Text = op[0].L41_Gen_KWH_NET_UNITS;
-
-
-//        #region Consumption Information
-//        //Months
-//        xrLabel95.Text = op[0].L21_MonYear1;
-//        xrLabel96.Text = op[0].L21_MonYear2;
-//        xrLabel97.Text = op[0].L21_MonYear3;
-//        xrLabelBillType.Text = op[0].L21_MonYear4;
-//        xrLabel99.Text = op[0].L21_MonYear5;
-//        xrLabel100.Text = op[0].L21_MonYear6;
-//        //Billed KVA/KW
-//        xrLabel101.Text = op[0].L21_KVA_UNITS1;
-//        xrLabel102.Text = op[0].L21_KVA_UNITS2;
-//        xrLabel103.Text = op[0].L21_KVA_UNITS3;
-//        xrLabel104.Text = op[0].L21_KVA_UNITS4;
-//        xrLabel105.Text = op[0].L21_KVA_UNITS5;
-//        xrLabel106.Text = op[0].L21_KVA_UNITS6;
-//        //Billed KVAH/KWH
-//        xrLabel107.Text = op[0].L11_KWH_UNITS1;
-//        xrLabel108.Text = op[0].L11_KWH_UNITS2;
-//        xrLabel109.Text = op[0].L11_KWH_UNITS3;
-//        xrLabel110.Text = op[0].L11_KWH_UNITS4;
-//        xrLabel111.Text = op[0].L11_KWH_UNITS5;
-//        xrLabel112.Text = op[0].L11_KWH_UNITS6;
-//        //Export KVAH/KWH
-//        xrLabel113.Text = op[0].L47_Exp_KVAH_UNITS1;
-//        xrLabel114.Text = op[0].L47_Exp_KVAH_UNITS2;
-//        xrLabel115.Text = op[0].L47_Exp_KVAH_UNITS3;
-//        xrLabel116.Text = op[0].L47_Exp_KVAH_UNITS4;
-//        xrLabel117.Text = op[0].L47_Exp_KVAH_UNITS5;
-//        xrLabel118.Text = op[0].L47_Exp_KVAH_UNITS6;
-//        //Gen. KVAH/KWH
-//        xrLabel119.Text = op[0].L48_Gen_KVAH_UNITS1;
-//        xrLabel120.Text = op[0].L48_Gen_KVAH_UNITS2;
-//        xrLabel121.Text = op[0].L48_Gen_KVAH_UNITS3;
-//        xrLabel122.Text = op[0].L48_Gen_KVAH_UNITS4;
-//        xrLabel123.Text = op[0].L48_Gen_KVAH_UNITS5;
-//        xrLabel124.Text = op[0].L48_Gen_KVAH_UNITS6;
-//        #endregion
-
-//    }
-//    if (!string.IsNullOrEmpty(op[0].L6_Kvah_indicator) || op[0].L6_Kvah_indicator == "1")
-//    {
-//        xrLabel78.Text = op[0].L37_Gen_Meter_Serial_Number;
-
-//        xrLabel81.Text = op[0].L39_Gen_KVA_PASTREAD;
-//        xrLabelNet.Text = op[0].L38_Gen_KVA_PRESREAD;
-//        xrLabelPrevCRUnit.Text = op[0].L40_Gen_MF3;
-//        xrLabelDueDate.Text = op[0].L41_Gen_KVA_NET_UNITS;
-//        xrLabelAfterDueDate.Text = op[0].L39_Gen_KVAH_PASTREAD;
-//        xrLabel86.Text = op[0].L38_Gen_KVAH_PRESREAD;
-//        xrLabel87.Text = op[0].L40_Gen_MF2;
-//        xrLabel88.Text = op[0].L41_Gen_KVAH_NET_UNITS;
-
-//        #region Consumption Information
-//        //Months
-//        xrLabel95.Text = op[0].L21_MonYear1;
-//        xrLabel96.Text = op[0].L21_MonYear2;
-//        xrLabel97.Text = op[0].L21_MonYear3;
-//        xrLabelBillType.Text = op[0].L21_MonYear4;
-//        xrLabel99.Text = op[0].L21_MonYear5;
-//        xrLabel100.Text = op[0].L21_MonYear6;
-//        //Billed KVA/KW
-//        xrLabel101.Text = op[0].L21_KVA_UNITS1;
-//        xrLabel102.Text = op[0].L21_KVA_UNITS2;
-//        xrLabel103.Text = op[0].L21_KVA_UNITS3;
-//        xrLabel104.Text = op[0].L21_KVA_UNITS4;
-//        xrLabel105.Text = op[0].L21_KVA_UNITS5;
-//        xrLabel106.Text = op[0].L21_KVA_UNITS6;
-//        //Billed KVAH/KWH
-//        xrLabel107.Text = op[0].L11_KWH_UNITS1;
-//        xrLabel108.Text = op[0].L11_KWH_UNITS2;
-//        xrLabel109.Text = op[0].L11_KWH_UNITS3;
-//        xrLabel110.Text = op[0].L11_KWH_UNITS4;
-//        xrLabel111.Text = op[0].L11_KWH_UNITS5;
-//        xrLabel112.Text = op[0].L11_KWH_UNITS6;
-//        //Export KVAH/KWH
-//        xrLabel113.Text = op[0].L47_Exp_KVAH_UNITS1;
-//        xrLabel114.Text = op[0].L47_Exp_KVAH_UNITS2;
-//        xrLabel115.Text = op[0].L47_Exp_KVAH_UNITS3;
-//        xrLabel116.Text = op[0].L47_Exp_KVAH_UNITS4;
-//        xrLabel117.Text = op[0].L47_Exp_KVAH_UNITS5;
-//        xrLabel118.Text = op[0].L47_Exp_KVAH_UNITS6;
-//        //Gen. KVAH/KWH
-//        xrLabel119.Text = op[0].L48_Gen_KVAH_UNITS1;
-//        xrLabel120.Text = op[0].L48_Gen_KVAH_UNITS2;
-//        xrLabel121.Text = op[0].L48_Gen_KVAH_UNITS3;
-//        xrLabel122.Text = op[0].L48_Gen_KVAH_UNITS4;
-//        xrLabel123.Text = op[0].L48_Gen_KVAH_UNITS5;
-//        xrLabel124.Text = op[0].L48_Gen_KVAH_UNITS6;
-//        #endregion
-
-//    }
-//}
-//#endregion
