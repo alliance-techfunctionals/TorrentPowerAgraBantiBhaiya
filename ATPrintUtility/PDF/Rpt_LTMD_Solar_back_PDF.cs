@@ -25,7 +25,7 @@ namespace AT.Print.PDF
             var op = this.DataSource as List<SolarBill>;
             xrPictureBox2.ImageUrl = Application.StartupPath + "\\Contents\\CategorySlabImages\\" + op[0].L6_TARIFF_DESCR + ".png";
             xrPictureBox1.ImageUrl = Application.StartupPath + "\\Contents\\CategorySlabImages\\PromotionImage.png";
-
+            xrLabel2.SendToBack();
             //xrPictureBox1.ImageUrl = op[0].MVPicture;
 
             #region RISC1 Change
@@ -41,19 +41,24 @@ namespace AT.Print.PDF
             if (op[0].L10_DMDCHG_PENALTY == "0.00" || string.IsNullOrEmpty(op[0].L10_DMDCHG_PENALTY))
             {
                 bd_ExcessDemandCharges.Visible = false;
+                bd_ExcessDemandChargesHindi.Visible = false;
                 bd_ExcessDemandChargesValue.Visible = false;
 
                 bd_ExcessDemandCharges.TopF = bd_Demand_charges.TopF;
+                bd_ExcessDemandChargesHindi.TopF = bd_Demand_charges.TopF;
                 bd_ExcessDemandChargesValue.TopF = bd_Demand_chargesValue.TopF;
 
             }
             bd_EnergyCharge.TopF = bd_ExcessDemandCharges.BottomF;
+            bd_EnergyChargeHindi.TopF = bd_ExcessDemandChargesValue.BottomF;
             bd_EnergyChargeValues.TopF = bd_ExcessDemandCharges.BottomF;
 
             bd_TODCharges.TopF = bd_EnergyCharge.BottomF;
+            bd_TODChargesHindi.TopF = bd_EnergyCharge.BottomF;
             bd_TODChargesValues.TopF = bd_EnergyCharge.BottomF;
 
             bd_ElectricityDuty.TopF = bd_TODCharges.BottomF;
+            bd_ElectricityDutyHindi.TopF = bd_TODCharges.BottomF;
             bd_ElectricityDutyValues.TopF = bd_TODCharges.BottomF;
 
             bd_RlSC1.TopF = bd_ElectricityDuty.BottomF;
@@ -68,113 +73,141 @@ namespace AT.Print.PDF
 
             bd_AcCharges.TopF = bd_RlSC2.BottomF;
             bd_AcChargesValues.TopF = bd_RlSC2.BottomF;
+            bd_AcChargeHindi.TopF = bd_RlSC2.BottomF;
 
             if (op[0].L8_AC_Charges == "0.00" || string.IsNullOrEmpty(op[0].L8_AC_Charges))
             {
                 bd_AcCharges.Visible = false;
                 bd_AcChargesValues.Visible = false;
+                bd_AcChargeHindi.Visible = false;
 
                 bd_AcCharges.TopF = bd_RlSC2.TopF;
+                bd_AcChargeHindi.TopF = bd_RlSC2.TopF;
                 bd_AcChargesValues.TopF = bd_RlSC2.TopF;
 
             }
 
             bd_Power_Fector_Charges.TopF = bd_AcCharges.BottomF;
+            bd_powerFactorHindi.TopF = bd_AcCharges.BottomF;
             bd_Power_Fector_ChargesValues.TopF = bd_AcChargesValues.BottomF;
             if (op[0].L8_power_factor_adj == "0.00" || string.IsNullOrEmpty(op[0].L8_power_factor_adj))
             {
                 bd_Power_Fector_Charges.Visible = false;
                 bd_Power_Fector_ChargesValues.Visible = false;
+                bd_powerFactorHindi.Visible = false;
 
                 bd_Power_Fector_Charges.TopF = bd_AcCharges.TopF;
                 bd_Power_Fector_ChargesValues.TopF = bd_AcChargesValues.TopF;
+                bd_powerFactorHindi.TopF = bd_AcCharges.TopF;
 
             }
 
             bd_AdjustmentCharges.TopF = bd_Power_Fector_Charges.BottomF;
             bd_AdjustmentChargesValues.TopF = bd_Power_Fector_ChargesValues.BottomF;
+            bd_AdjustmentMinimumChargesHindi.TopF = bd_Power_Fector_Charges.BottomF;
 
             if (op[0].L8_min_charge == "0.00" || string.IsNullOrEmpty(op[0].L8_min_charge))
             {
                 bd_AdjustmentCharges.Visible = false;
                 bd_AdjustmentChargesValues.Visible = false;
+                bd_AdjustmentMinimumChargesHindi.Visible = false;
 
                 bd_AdjustmentCharges.TopF = bd_Power_Fector_Charges.TopF;
                 bd_AdjustmentChargesValues.TopF = bd_Power_Fector_ChargesValues.TopF;
+                bd_AdjustmentMinimumChargesHindi.TopF = bd_Power_Fector_Charges.TopF;
 
             }
             bd_Other.TopF = bd_AdjustmentCharges.BottomF;
             bd_OtherValues.TopF = bd_AdjustmentChargesValues.BottomF;
+            bd_OtherChargesHindi.TopF = bd_AdjustmentCharges.BottomF;
             if (op[0].L8_SERVDET_TOTDB_BDT_OTHER == "0.00" || string.IsNullOrEmpty(op[0].L8_SERVDET_TOTDB_BDT_OTHER))
             {
                 bd_Other.Visible = false;
                 bd_OtherValues.Visible = false;
+                bd_OtherChargesHindi.Visible = false;
 
                 bd_Other.TopF = bd_AdjustmentCharges.TopF;
                 bd_OtherValues.TopF = bd_AdjustmentChargesValues.TopF;
+                bd_OtherChargesHindi.TopF = bd_AdjustmentCharges.TopF;
             }
 
 
 
             Subsidy.TopF = bd_Other.BottomF;
             SubsidyValue.TopF = bd_OtherValues.BottomF;
+            SubsidyHindi.TopF = bd_Other.BottomF;
             if (op[0].L8_Subsidy_Charges == "" || op[0].L8_Subsidy_Charges == "0.00")
             {
                 Subsidy.Visible = false;
                 SubsidyValue.Visible = false;
+                SubsidyHindi.Visible = false;
 
                 Subsidy.TopF = bd_Other.TopF;
                 SubsidyValue.TopF = bd_OtherValues.TopF;
+                SubsidyHindi.TopF = bd_Other.TopF;
 
             }
 
             GreenTariff.TopF = Subsidy.BottomF;
             GreenTariffValue.TopF = SubsidyValue.BottomF;
+            GreenTariffHindi.TopF = Subsidy.BottomF;
 
             if (op[0].L8_GreenTariff_Charges == "0.00" || string.IsNullOrEmpty(op[0].L8_GreenTariff_Charges))
             {
                 GreenTariff.Visible = false;
                 GreenTariffValue.Visible = false;
+                GreenTariffHindi.Visible = false;
 
                 GreenTariff.TopF = Subsidy.TopF;
                 GreenTariffValue.TopF = Subsidy.TopF;
+                GreenTariffHindi.TopF = Subsidy.TopF;
             }
             lblFPPA.TopF = GreenTariff.BottomF;
             FPPASurchargeValue.TopF = GreenTariff.BottomF;
+            lblFPPAHindi.TopF = GreenTariff.BottomF;    
 
             if (op[0].L10_FPPASurcharge == "0.00" || string.IsNullOrEmpty(op[0].L10_FPPASurcharge))
             {
                 lblFPPA.Visible = false;
                 FPPASurchargeValue.Visible = false;
+                lblFPPAHindi.Visible = false;
 
                 lblFPPA.TopF = GreenTariff.TopF;
                 FPPASurchargeValue.TopF = GreenTariff.TopF;
+                lblFPPAHindi.TopF = GreenTariff.TopF;
             }
-            bd_TotalCurrentDues.TopF = lblFPPA.BottomF;
-            bd_TotalCurrentDuesValues.TopF = FPPASurchargeValue.BottomF;
-            bd_Arrears.TopF = bd_TotalCurrentDues.BottomF;
-            bd_Arrears_values.TopF = bd_TotalCurrentDues.BottomF;
+            //bd_TotalCurrentDues.TopF = lblFPPA.BottomF;
+            //bd_TotalCurrentDuesValues.TopF = FPPASurchargeValue.BottomF;
+            //xrLabel34.TopF = lblFPPA.BottomF;
 
-            bd_LatePaymentSurcharges.TopF = bd_Arrears.BottomF;
-            bd_LatePaymentSurchargesVALUE.TopF = bd_Arrears.BottomF;
+            //bd_Arrears.TopF = bd_TotalCurrentDues.BottomF;
+            //bd_Arrears_values.TopF = bd_TotalCurrentDues.BottomF;
+            //xrLabel37.TopF = bd_TotalCurrentDues.BottomF;
+
+            //bd_LatePaymentSurcharges.TopF = bd_Arrears.BottomF;
+            //bd_LatePaymentSurchargesVALUE.TopF = bd_Arrears.BottomF;
+            //LPSCHindi.TopF = bd_Arrears.BottomF;
 
 
             if (op[0].L9_INT_TPL == "0.00" || string.IsNullOrEmpty(op[0].L9_INT_TPL))
             {
                 bd_LatePaymentSurcharges.Visible = false;
                 bd_LatePaymentSurchargesVALUE.Visible = false;
+                LPSCHindi.Visible = false;
 
-                bd_LatePaymentSurcharges.TopF = bd_Arrears.TopF;
-                bd_LatePaymentSurchargesVALUE.TopF = bd_Arrears_values.TopF;
+                //bd_LatePaymentSurcharges.TopF = bd_Arrears.TopF;
+                //bd_LatePaymentSurchargesVALUE.TopF = bd_Arrears_values.TopF;
+                //LPSCHindi.TopF = bd_Arrears.TopF;
             }
 
-            bd_TotalDuesVALUE.TopF = bd_LatePaymentSurcharges.BottomF;
-            bd_TotalDues.TopF = bd_TotalDuesVALUE.TopF;
+            //bd_TotalDuesVALUE.TopF = bd_LatePaymentSurcharges.BottomF;
+            //bd_TotalDues.TopF = bd_LatePaymentSurcharges.BottomF;
+            //xrLabel41.TopF = bd_LatePaymentSurcharges.BottomF;
 
-            if (bd_TotalDues.LocationF.Y >= 206)
-            {
-                xrPanel1.TopF = bd_TotalDues.BottomF + 370;
-            }
+            //if (bd_TotalDues.LocationF.Y >= 206)
+            //{
+            //    xrPanel1.TopF = bd_TotalDues.BottomF + 370;
+            //}
 
 
 
@@ -560,10 +593,12 @@ namespace AT.Print.PDF
             {
                 bd_LatePaymentSurcharges.Visible = false;
                 bd_LatePaymentSurchargesVALUE.Visible = false;
-                bd_LatePaymentSurcharges.TopF = bd_LatePaymentSurcharges.TopF;
-                bd_LatePaymentSurchargesVALUE.TopF = bd_LatePaymentSurchargesVALUE.TopF;
-                bd_TotalDues.TopF = bd_TotalDues.TopF;
-                bd_TotalDuesVALUE.TopF = bd_TotalDuesVALUE.TopF;
+                LPSCHindi.Visible = false;
+                //bd_LatePaymentSurcharges.TopF = bd_LatePaymentSurcharges.TopF;
+                //bd_LatePaymentSurchargesVALUE.TopF = bd_LatePaymentSurchargesVALUE.TopF;
+                //bd_TotalDues.TopF = bd_TotalDues.TopF;
+                //bd_TotalDuesVALUE.TopF = bd_TotalDuesVALUE.TopF;
+                //xrLabel41.TopF  = xrLabel41.TopF;   
             }
 
             #region Solar Export Energy Adjustment
@@ -582,14 +617,18 @@ namespace AT.Print.PDF
                 //kva14.Visible = false;
                 //Rpt_LTMD_Solar_back_visible?.visible();
 
-                bd_SolarExportEnergy.TopF = bd_TotalCurrentDues.TopF;
-                bd_Solar_Export_Value.TopF = bd_TotalCurrentDuesValues.TopF;
-                bd_TotalCurrentDues.TopF = bd_Arrears.TopF;
-                bd_TotalCurrentDuesValues.TopF = bd_Arrears_values.TopF;
-                bd_Arrears.TopF = bd_TotalDues.TopF;
-                bd_Arrears_values.TopF = bd_TotalDuesVALUE.TopF;
-                bd_TotalDues.TopF = bd_TotalDues.BottomF;
-                bd_TotalDuesVALUE.TopF = bd_TotalDuesVALUE.BottomF;
+
+              
+                bd_SolarExportEnergy.TopF = lblFPPA.BottomF;
+                bd_Solar_Export_Value.TopF = lblFPPA.BottomF;
+                lblSolarExportHindi.TopF = lblFPPA.BottomF;
+                //bd_TotalCurrentDues.TopF = bd_Arrears.TopF;
+                //bd_TotalCurrentDuesValues.TopF = bd_Arrears_values.TopF;
+                //xrLabel34.TopF = bd_Arrears.TopF;
+                //bd_Arrears.TopF = bd_TotalDues.TopF;
+                //bd_Arrears_values.TopF = bd_TotalDuesVALUE.TopF;
+                //bd_TotalDues.TopF = bd_TotalDues.BottomF;
+                //bd_TotalDuesVALUE.TopF = bd_TotalDuesVALUE.BottomF;
 
             }
             else
@@ -597,13 +636,14 @@ namespace AT.Print.PDF
                 //Rpt_LTMD_Solar_back_visible?.visibleon();
                 bd_SolarExportEnergy.Visible = false;
                 bd_Solar_Export_Value.Visible = false;
+                lblSolarExportHindi.Visible = false;
                 bd_SolarExportEnergy.TopF = lblFPPA.TopF;
-                bd_Solar_Export_Value.TopF = FPPASurchargeValue.TopF;
+                bd_Solar_Export_Value.TopF = FPPASurchargeValue.TopF; 
+                lblSolarExportHindi.TopF = lblFPPA.TopF;
             }
             #endregion
 
-
-
+            
 
         }
 
