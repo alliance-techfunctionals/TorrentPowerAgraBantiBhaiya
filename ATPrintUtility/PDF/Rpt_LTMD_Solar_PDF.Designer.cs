@@ -752,7 +752,7 @@
             // 
             this.MTR2_KWH1_ex.Dpi = 96F;
             this.MTR2_KWH1_ex.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
-            this.MTR2_KWH1_ex.LocationFloat = new DevExpress.Utils.PointFloat(492F, 626.9248F);
+            this.MTR2_KWH1_ex.LocationFloat = new DevExpress.Utils.PointFloat(492F, 625.9248F);
             this.MTR2_KWH1_ex.Multiline = true;
             this.MTR2_KWH1_ex.Name = "MTR2_KWH1_ex";
             this.MTR2_KWH1_ex.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -765,7 +765,7 @@
             // 
             this.MTR2_KWH2_ex.Dpi = 96F;
             this.MTR2_KWH2_ex.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
-            this.MTR2_KWH2_ex.LocationFloat = new DevExpress.Utils.PointFloat(491.7643F, 645.76F);
+            this.MTR2_KWH2_ex.LocationFloat = new DevExpress.Utils.PointFloat(491.7643F, 644.76F);
             this.MTR2_KWH2_ex.Multiline = true;
             this.MTR2_KWH2_ex.Name = "MTR2_KWH2_ex";
             this.MTR2_KWH2_ex.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -779,7 +779,7 @@
             this.MTR2_KWH3_ex.Dpi = 96F;
             this.MTR2_KWH3_ex.Font = new DevExpress.Drawing.DXFont("Helvetica", 6F, DevExpress.Drawing.DXFontStyle.Regular, DevExpress.Drawing.DXGraphicsUnit.Point, new DevExpress.Drawing.DXFontAdditionalProperty[] {
             new DevExpress.Drawing.DXFontAdditionalProperty("GdiCharSet", ((byte)(0)))});
-            this.MTR2_KWH3_ex.LocationFloat = new DevExpress.Utils.PointFloat(492F, 664.5952F);
+            this.MTR2_KWH3_ex.LocationFloat = new DevExpress.Utils.PointFloat(492F, 663.5952F);
             this.MTR2_KWH3_ex.Multiline = true;
             this.MTR2_KWH3_ex.Name = "MTR2_KWH3_ex";
             this.MTR2_KWH3_ex.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -805,7 +805,7 @@
             // 
             this.MTR2_KWH1.Dpi = 96F;
             this.MTR2_KWH1.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
-            this.MTR2_KWH1.LocationFloat = new DevExpress.Utils.PointFloat(452.5304F, 626.9781F);
+            this.MTR2_KWH1.LocationFloat = new DevExpress.Utils.PointFloat(452.5304F, 625.9781F);
             this.MTR2_KWH1.Multiline = true;
             this.MTR2_KWH1.Name = "MTR2_KWH1";
             this.MTR2_KWH1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -818,7 +818,7 @@
             // 
             this.MTR2_KWH2.Dpi = 96F;
             this.MTR2_KWH2.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
-            this.MTR2_KWH2.LocationFloat = new DevExpress.Utils.PointFloat(452.5304F, 645.8133F);
+            this.MTR2_KWH2.LocationFloat = new DevExpress.Utils.PointFloat(452.5304F, 644.8133F);
             this.MTR2_KWH2.Multiline = true;
             this.MTR2_KWH2.Name = "MTR2_KWH2";
             this.MTR2_KWH2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -831,7 +831,7 @@
             // 
             this.MTR2_KWH3.Dpi = 96F;
             this.MTR2_KWH3.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
-            this.MTR2_KWH3.LocationFloat = new DevExpress.Utils.PointFloat(452.68F, 664.6485F);
+            this.MTR2_KWH3.LocationFloat = new DevExpress.Utils.PointFloat(452.68F, 663.6485F);
             this.MTR2_KWH3.Multiline = true;
             this.MTR2_KWH3.Name = "MTR2_KWH3";
             this.MTR2_KWH3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -2930,8 +2930,6 @@
             // 
             this.xrLabelPayModeData.CanGrow = false;
             this.xrLabelPayModeData.Dpi = 96F;
-            this.xrLabelPayModeData.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L10_Mode]")});
             this.xrLabelPayModeData.Font = new DevExpress.Drawing.DXFont("Manrope", 9F);
             this.xrLabelPayModeData.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabelPayModeData.LocationFloat = new DevExpress.Utils.PointFloat(496F, 422F);

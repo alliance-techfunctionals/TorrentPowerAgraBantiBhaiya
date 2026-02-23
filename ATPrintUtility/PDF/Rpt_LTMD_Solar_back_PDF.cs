@@ -24,7 +24,9 @@ namespace AT.Print.PDF
 
             var op = this.DataSource as List<SolarBill>;
             xrPictureBox2.ImageUrl = Application.StartupPath + "\\Contents\\CategorySlabImages\\" + op[0].L6_TARIFF_DESCR + ".png";
-            xrPictureBox1.ImageUrl = op[0].MVPicture;
+            xrPictureBox1.ImageUrl = Application.StartupPath + "\\Contents\\CategorySlabImages\\PromotionImage.png";
+
+            //xrPictureBox1.ImageUrl = op[0].MVPicture;
 
             #region RISC1 Change
             if (op[0].L6_TARIFF_DESCR.ToUpper().Equals("LMV 5A") || op[0].L6_TARIFF_DESCR.ToUpper().Equals("LMV 5B") || op[0].L6_TARIFF_DESCR.ToUpper().Equals("LMV 1B") || op[0].L6_TARIFF_DESCR.ToUpper().Equals("LMV 1C"))

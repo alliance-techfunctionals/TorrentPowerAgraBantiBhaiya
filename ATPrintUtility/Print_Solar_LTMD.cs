@@ -65,11 +65,11 @@ namespace AT.Print
                     if (contents.StartsWith("LTMD")) 
                     {
                         SolarBill = contents.Split(new String[] { "LTMD" }, StringSplitOptions.RemoveEmptyEntries);
-                        if (!select_mVImg())
-                        {
-                            AppFunctions.CloseWaitForm();
-                            return;
-                        }
+                        //if (!select_mVImg())
+                        //{
+                        //    AppFunctions.CloseWaitForm();
+                        //    return;
+                        //}
                         XtraMessageBox.Show("Total Bills in this file: " + SolarBill.Length.ToString(), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         var sb = sender as SimpleButton;
                         if (ValidatetxtFile(SolarBill))
@@ -91,26 +91,26 @@ namespace AT.Print
             }
         }
 
-        private bool select_mVImg()
-        {
-            using (OpenFileDialog ofdMv = new OpenFileDialog())
-            {
-                ofdMv.Title = "Select Mobile Van Image ";
-                ofdMv.Multiselect = false;
-                ofdMv.Filter = "All Image Files|*.png;*.jpg;*.jpeg;*.bmp;*.gif";
-                if (ofdMv.ShowDialog() == DialogResult.OK)
-                { 
-                    mVImagePath = ofdMv.FileName;
-                    return true;
-                }
-                else
-                {
-                    XtraMessageBox.Show("Canceled the selection.");
-                    AppFunctions.CloseWaitForm();
-                    return false;
-                }
-            }
-        }
+        //private bool select_mVImg()
+        //{
+        //    using (OpenFileDialog ofdMv = new OpenFileDialog())
+        //    {
+        //        ofdMv.Title = "Select Mobile Van Image ";
+        //        ofdMv.Multiselect = false;
+        //        ofdMv.Filter = "All Image Files|*.png;*.jpg;*.jpeg;*.bmp;*.gif";
+        //        if (ofdMv.ShowDialog() == DialogResult.OK)
+        //        { 
+        //            mVImagePath = ofdMv.FileName;
+        //            return true;
+        //        }
+        //        else
+        //        {
+        //            XtraMessageBox.Show("Canceled the selection.");
+        //            AppFunctions.CloseWaitForm();
+        //            return false;
+        //        }
+        //    }
+        //}
 
         private void StartPrinting_LTMD_Solar_Bills(string[] Bills, string Name)
         {
@@ -198,11 +198,15 @@ namespace AT.Print
                              Margins MinMargins = DevExpress.XtraPrinting.Native.DeviceCaps.GetMinMargins(g);
                              Console.WriteLine("Minimum Margins for " + ps.PrinterName + ": " + MinMargins.ToString());
                          }
-                        AT.Print.Rpt_LTMD_Solar_Print_Back rptb = new Rpt_LTMD_Solar_Print_Back
+                        AT.Print.PDF.Rpt_LTMD_Solar_back_PDF rptb = new AT.Print.PDF.Rpt_LTMD_Solar_back_PDF
+
+                        //AT.Print.Rpt_LTMD_Solar_Print_Back rptb = new Rpt_LTMD_Solar_Print_Back
                         {
                             DataSource = lstformattedbills,
                         };
-                        AT.Print.Rpt_LTMD_Solar_Print rpta = new Rpt_LTMD_Solar_Print(rptb)
+                        AT.Print.PDF.Rpt_LTMD_Solar_PDF rpta = new AT.Print.PDF.Rpt_LTMD_Solar_PDF(rptb)
+
+                       // AT.Print.Rpt_LTMD_Solar_Print rpta = new Rpt_LTMD_Solar_Print(rptb)
                          {
                              DataSource = lstformattedbills,
                              DisplayName = sht.L6_SERVDET_SERVNO,
