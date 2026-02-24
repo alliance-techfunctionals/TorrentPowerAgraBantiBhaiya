@@ -61,7 +61,7 @@ namespace AT.Print.PDF
             xrLabelTotalAmt.BringToFront();
 
             xrLabelTotalAmt.Text = "₹" + ToDecimal(op[0].L8_amount_payable_before_due_date).ToString("G");
-            xrLabelAfterData.Text = "Thank you for your previous payment of ₹" + op[0].L7_Last_Payement_amount + " on " + op[0].L7_LastpymtDate;
+            xrLabelTotal.Text = "Thank you for your previous payment of ₹" + op[0].L7_Last_Payement_amount + " on " + op[0].L7_LastpymtDate;
             xrLabel13.BringToFront();
             xrLabelday.BringToFront();
             xrLabel19.BringToFront();
