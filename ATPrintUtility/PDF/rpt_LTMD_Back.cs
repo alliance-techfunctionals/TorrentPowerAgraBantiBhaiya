@@ -430,7 +430,7 @@ namespace AT.Print.PDF
                     {
                         Font = new DXFont("Noto Sans Devanagari", 9),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                        Text = string.Format(getMessage(LoadStaticData._HindiMessage, "TFA"), op[0].L10_TheftAmount.Replace('.', '-')),
+                        Text = string.Format(getMessage(LoadStaticData._HindiMessage, "TFA"), op[0].L10_TheftAmount),
                         WordWrap = false,
                         AutoWidth = true,
                         KeepTogether = true,

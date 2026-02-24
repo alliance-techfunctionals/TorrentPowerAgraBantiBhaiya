@@ -380,7 +380,7 @@ namespace AT.Print.PDF
                     {
                         Font = new DXFont("Noto Sans Devanagari", 8),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                        Text = string.Format(getMessage(LoadStaticData._HindiMessage, "PFM"), "0.90".ToString().Replace(".", "-")),
+                        Text = string.Format(getMessage(LoadStaticData._HindiMessage, "PFM"), "0.90".ToString()),
                         WordWrap = true,
                         WidthF = xrPanel1.WidthF,
                         KeepTogether = true,
@@ -398,9 +398,9 @@ namespace AT.Print.PDF
                     totalMessages++;
                     XRLabel xrMessageTheftAmount = new XRLabel
                     {
-                        Font = new DXFont("Kruti Dev 010", 10),
+                        Font = new DXFont("Noto Sans Devanagari", 8),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                        Text = string.Format(getMessage(LoadStaticData._HindiMessage, "TFA"), op[0].L10_Theft_Amount.Replace('.', '-')),
+                        Text = string.Format(getMessage(LoadStaticData._HindiMessage, "TFA"), op[0].L10_Theft_Amount),
                         WordWrap = true,
                         WidthF = xrPanel1.WidthF,
                         KeepTogether = true,
@@ -468,7 +468,7 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage7 = new XRLabel
                 {
-                    Font = new DXFont("Kruti Dev 010", 9f),
+                    Font = new DXFont("Noto Sans Devanagari", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify,
                     Text = op[0].L33_MESSAGE7,
                     WordWrap = true,

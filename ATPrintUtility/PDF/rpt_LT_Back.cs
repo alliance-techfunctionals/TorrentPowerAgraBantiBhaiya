@@ -478,7 +478,7 @@ namespace AT.Print.PDF
                     {
                         Font = new DXFont("Noto Sans Devanagari", 8),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                        Text = string.Format(getMessage(LoadStaticData._HindiMessage, "PFM"), "0.90".ToString().Replace('.', '-')),
+                        Text = string.Format(getMessage(LoadStaticData._HindiMessage, "PFM"), "0.90".ToString()),
                         WordWrap = false,
                         AutoWidth = true,
                         KeepTogether = true,
@@ -520,7 +520,7 @@ namespace AT.Print.PDF
                     {
                         Font = new DXFont("Noto Sans Devanagari", 8),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                        Text = string.Format(getMessage(LoadStaticData._HindiMessage, "TFA"), Data[0].L10_TheftAmount.Replace('.', '-')),
+                        Text = string.Format(getMessage(LoadStaticData._HindiMessage, "TFA"), Data[0].L10_TheftAmount),
                         WordWrap = false,
                         AutoWidth = true,
                         KeepTogether = true,
