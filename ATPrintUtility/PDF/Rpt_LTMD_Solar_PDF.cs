@@ -152,9 +152,7 @@ namespace AT.Print.PDF
 
                     op[0].unit1 = "KVA";
 
-                    //xrlRecordedDemand.Text = "Recorded Demand(" + op[0].unit1 + ")";
-                    //xrlL6Servdet_Sanc_load.Text = "Bill Demand(" + op[0].unit1 + ")";
-                    //xrlL6ExcessDemand.Text = "Excess Demand(" + op[0].unit1 + ")";
+                    
                     KW_HEAD1.Text = op[0].unit1;
                     KWH_HEAD1.Text = op[0].unit1 + "H(I)";
                     KW_HEAD2.Text = op[0].unit1;
@@ -165,10 +163,6 @@ namespace AT.Print.PDF
                 else
                 {
                     op[0].unit1 = "KW";
-
-                    //xrlRecordedDemand.Text = "Recorded Demand(" + op[0].unit1 + ")";
-                    //xrlL6ExcessDemand.Text = "Excess Demand(" + op[0].unit1 + ")";
-                    //xrlL6Servdet_Sanc_load.Text = "Bill Demand(" + op[0].unit1 + ")";
                     KW_HEAD1.Text = op[0].unit1;
                     KWH_HEAD1.Text = op[0].unit1 + "H(I)";
                     KW_HEAD2.Text = op[0].unit1;
@@ -214,9 +208,6 @@ namespace AT.Print.PDF
                 {
                     op[0].unit1 = "KVA";
 
-                    //xrlRecordedDemand.Text = "Recorded Demand(" + op[0].unit1 + ")";
-                    //xrlL6ExcessDemand.Text = "Excess Demand(" + op[0].unit1 + ")";
-                    //xrlL6Servdet_Sanc_load.Text = "Bill Demand(" + op[0].unit1 + ")";
                     KW_HEAD1.Text = op[0].unit1;
                     KWH_HEAD1.Text = op[0].unit1 + "H(I)";
                     KW_HEAD2.Text = op[0].unit1;
@@ -508,7 +499,104 @@ namespace AT.Print.PDF
             #endregion
 
             #endregion
+            #region Total 
+            //tod details total meter 1
+            decimal v1 = ToDecimal(op[0].L22_TOD_1_KWH);
+            decimal v2 = ToDecimal(op[0].L22_TOD_2_KWH);
+            decimal v3 = ToDecimal(op[0].L22_TOD_3_KWH);
+            decimal v4 = ToDecimal(op[0].L22_TOD_4_KWH);
+            decimal total = v1 + v2 + v3 + v4;
 
+
+            decimal v11 = ToDecimal(op[0].L34_Exp_TOD1_KWH_Units);
+            decimal v21 = ToDecimal(op[0].L34_Exp_TOD2_KWH_Units);
+            decimal v31 = ToDecimal(op[0].L34_Exp_TOD3_KWH_Units);
+            decimal v41 = ToDecimal(op[0].L34_Exp_TOD4_KWH_Units);
+            decimal total2 = v11 + v21 + v31 + v41;
+            decimal v51 = ToDecimal(op[0].L35_Exp_TOD1_KVAH_Units);
+            decimal v61 = ToDecimal(op[0].L35_Exp_TOD2_KVAH_Units);
+            decimal v71 = ToDecimal(op[0].L35_Exp_TOD3_KVAH_Units);
+            decimal v81 = ToDecimal(op[0].L35_Exp_TOD4_KVAH_Units);
+            decimal total3 = v51 + v61 + v71 + v81;
+
+            //tod details total meter 2
+            decimal a11 = ToDecimal(op[0].L24_TOD_1_KWH);
+            decimal a21 = ToDecimal(op[0].L24_TOD_2_KWH);
+            decimal a31 = ToDecimal(op[0].L24_TOD_3_KWH);
+            decimal a41 = ToDecimal(op[0].L24_TOD_4_KWH);
+            decimal totalA1 = a11 + a21 + a31 + a41;
+
+            decimal a12 = ToDecimal(op[0].L51_Exp_TOD1_KWH_Units);
+            decimal a22 = ToDecimal(op[0].L51_Exp_TOD2_KWH_Units);
+            decimal a32 = ToDecimal(op[0].L51_Exp_TOD3_KWH_Units);
+            decimal a42 = ToDecimal(op[0].L51_Exp_TOD4_KWH_Units);
+            decimal totalA2 = a12 + a22 + a32 + a42;
+
+            decimal a13 = ToDecimal(op[0].L50_Exp_TOD1_KVAH_Units);
+            decimal a23 = ToDecimal(op[0].L50_Exp_TOD2_KVAH_Units);
+            decimal a33 = ToDecimal(op[0].L50_Exp_TOD3_KVAH_Units);
+            decimal a43 = ToDecimal(op[0].L50_Exp_TOD4_KVAH_Units);
+            decimal totalA3 = a13 + a23 + a33 + a43;
+
+            //Current Net Unit total
+            decimal i11 = ToDecimal(op[0].L43_Exp_CURRENT_NET_EXPORT_TOD1_KWH_UNITS);
+            decimal i21 = ToDecimal(op[0].L43_Exp_CURRENT_NET_EXPORT_TOD2_KWH_UNITS);
+            decimal i31 = ToDecimal(op[0].L43_Exp_CURRENT_NET_EXPORT_TOD3_KWH_UNITS);
+            decimal i41 = ToDecimal(op[0].L43_Exp_CURRENT_NET_EXPORT_TOD4_KWH_UNITS);
+            decimal totalI1 = i11 + i21 + i31 + i41;
+
+            decimal i12 = ToDecimal(op[0].L42_Exp_CURRENT_NET_EXPORT_TOD1_KVAH_UNITS);
+            decimal i22 = ToDecimal(op[0].L42_Exp_CURRENT_NET_EXPORT_TOD2_KVAH_UNITS);
+            decimal i32 = ToDecimal(op[0].L42_Exp_CURRENT_NET_EXPORT_TOD3_KVAH_UNITS);
+            decimal i42 = ToDecimal(op[0].L42_Exp_CURRENT_NET_EXPORT_TOD4_KVAH_UNITS);
+            decimal totalI2 = i12 + i22 + i32 + i42;
+
+
+            //Previous net Unit
+            decimal j11 = ToDecimal(op[0].L43_Previous_CREDIT_Units_TOD1_KWH);
+            decimal j21 = ToDecimal(op[0].L43_Previous_CREDIT_Units_TOD2_KWH);
+            decimal j31 = ToDecimal(op[0].L43_Previous_CREDIT_Units_TOD3_KWH);
+            decimal j41 = ToDecimal(op[0].L43_Previous_CREDIT_Units_TOD4_KWH);
+            decimal totalJ1 = j11 + j21 + j31 + j41;
+
+
+            decimal j12 = ToDecimal(op[0].L42_Previous_CREDIT_Units_TOD1_KVAH);
+            decimal j22 = ToDecimal(op[0].L42_Previous_CREDIT_Units_TOD2_KVAH);
+            decimal j32 = ToDecimal(op[0].L42_Previous_CREDIT_Units_TOD3_KVAH);
+            decimal j42 = ToDecimal(op[0].L42_Previous_CREDIT_Units_TOD4_KVAH);
+            decimal totalJ2 = j12 + j22 + j32 + j42;
+
+            //
+            decimal k11 = ToDecimal(op[0].L46_Net_Billed_Units_MAIN_TOD1_KWH);
+            decimal k21 = ToDecimal(op[0].L46_Net_Billed_Units_MAIN_TOD2_KWH);
+            decimal k31 = ToDecimal(op[0].L46_Net_Billed_Units_MAIN_TOD3_KWH);
+            decimal k41 = ToDecimal(op[0].L46_Net_Billed_Units_MAIN_TOD4_KWH);
+            decimal totalK1 = k11 + k21 + k31 + k41;
+
+
+            decimal k12 = ToDecimal(op[0].L46_Net_Billed_Units_MAIN_TOD1_KVAH);
+            decimal k22 = ToDecimal(op[0].L46_Net_Billed_Units_MAIN_TOD2_KVAH);
+            decimal k32 = ToDecimal(op[0].L46_Net_Billed_Units_MAIN_TOD3_KVAH);
+            decimal k42 = ToDecimal(op[0].L46_Net_Billed_Units_MAIN_TOD4_KVAH);
+            decimal totalK2 = k12 + k22 + k32 + k42;
+
+            //
+
+            decimal l11 = ToDecimal(op[0].L45_Carry_Forward_Units_TOD1_KWH);
+            decimal l21 = ToDecimal(op[0].L45_Carry_Forward_Units_TOD2_KWH);
+            decimal l31 = ToDecimal(op[0].L45_Carry_Forward_Units_TOD3_KWH);
+            decimal l41 = ToDecimal(op[0].L45_Carry_Forward_Units_TOD4_KWH);
+            decimal totalL1 = l11 + l21 + l31 + l41;
+
+
+            decimal l12 = ToDecimal(op[0].L44_Carry_Forward_Units_TOD1_KVAH);
+            decimal l22 = ToDecimal(op[0].L44_Carry_Forward_Units_TOD2_KVAH);
+            decimal l32 = ToDecimal(op[0].L44_Carry_Forward_Units_TOD3_KVAH);
+            decimal l42 = ToDecimal(op[0].L44_Carry_Forward_Units_TOD4_KVAH);
+            decimal totall2 = l12 + l22 + l32 + l42;
+
+
+            #endregion
 
             #region back page details
             if (op[0].L12_MTRSNO_METER_2_IF_AVAILABLE != "")
@@ -518,29 +606,20 @@ namespace AT.Print.PDF
                 #region Meter(KW)
                 if (string.IsNullOrEmpty(op[0].L6_Kvah_indicator) || op[0].L6_Kvah_indicator == "0.00")
                 {
-
-                    //imp
-                    //xrLabel16.Text = op[0].L23_TOD_1_KW;
-                    //xrLabel23.Text = op[0].L23_TOD_2_KW;
-                    //xrLabel44.Text = op[0].L23_TOD_3_KW;
-                    //xrLabel30.Text = op[0].L23_TOD_4_KW;
-
                     xrLabel17.Text = op[0].L22_TOD_1_KWH;
                     xrLabel24.Text = op[0].L22_TOD_2_KWH;
                     xrLabel45.Text = op[0].L22_TOD_3_KWH;
                     xrLabel31.Text = op[0].L22_TOD_4_KWH;
-                    //EXP
 
-                    //xrLabel37.Text = op[0].L53_Exp_TOD1_KW_Units;
-                    //xrLabel51.Text = op[0].L53_Exp_TOD2_KW_Units;
-                    //xrLabel58.Text = op[0].L53_Exp_TOD3_KW_Units;
-                    //xrLabelSerNumberData.Text = op[0].L53_Exp_TOD4_KW_Units; //xrlabel65
+                    xrLabelab.Text = total.ToString("0.00");
+                   
+
 
                     xrLabel38.Text = op[0].L34_Exp_TOD1_KWH_Units;
                     xrLabel52.Text = op[0].L34_Exp_TOD2_KWH_Units;
                     xrLabel59.Text = op[0].L34_Exp_TOD3_KWH_Units;
                     xrLabel66.Text = op[0].L34_Exp_TOD4_KWH_Units;
-
+                    xrLabelcd.Text  = total2.ToString("0.00");
 
 
                     //Current Net Unit
@@ -548,40 +627,39 @@ namespace AT.Print.PDF
                     xrLabel53.Text = op[0].L43_Exp_CURRENT_NET_EXPORT_TOD2_KWH_UNITS;
                     xrLabel60.Text = op[0].L43_Exp_CURRENT_NET_EXPORT_TOD3_KWH_UNITS;
                     xrLabel67.Text = op[0].L43_Exp_CURRENT_NET_EXPORT_TOD4_KWH_UNITS;
+                    xrLabel16.Text = totalI1.ToString("0.00");
                     //Previous net Unit
                     xrLabel40.Text = op[0].L43_Previous_CREDIT_Units_TOD1_KWH;
                     xrLabel54.Text = op[0].L43_Previous_CREDIT_Units_TOD2_KWH;
                     xrLabel61.Text = op[0].L43_Previous_CREDIT_Units_TOD3_KWH;
                     xrLabel68.Text = op[0].L43_Previous_CREDIT_Units_TOD4_KWH;
+                    xrLabel25.Text = totalJ1.ToString("0.00");
                     //net bill unit
                     xrLabel41.Text = op[0].L46_Net_Billed_Units_MAIN_TOD1_KWH;
                     xrLabel55.Text = op[0].L46_Net_Billed_Units_MAIN_TOD2_KWH;
                     xrLabel62.Text = op[0].L46_Net_Billed_Units_MAIN_TOD3_KWH;
                     xrLabel69.Text = op[0].L46_Net_Billed_Units_MAIN_TOD4_KWH;
+                    xrLabel23.Text = totalK1.ToString("0.00");
                     //carry forword unit
                     xrLabel42.Text = op[0].L45_Carry_Forward_Units_TOD1_KWH;
                     xrLabel56.Text = op[0].L45_Carry_Forward_Units_TOD2_KWH;
                     xrLabel63.Text = op[0].L45_Carry_Forward_Units_TOD3_KWH;
                     xrLabel70.Text = op[0].L45_Carry_Forward_Units_TOD4_KWH;
+                    xrLabel20.Text = totalL1.ToString("0.00");
 
-                    //mtr2
-                    //MTR2_KW1.Text = op[0].L25_TOD_1_KWH;
-                    //MTR2_KW2.Text = op[0].L25_TOD_2_KWH;
-                    //MTR2_KW3.Text = op[0].L25_TOD_3_KWH;
-                    //MTR2_KW4.Text = op[0].L25_TOD_4_KWH;
-                    //MTR2_KW1_ex.Text = op[0].L54_Exp_TOD1_KW_Units;
-                    //MTR2_KW2_ex.Text = op[0].L54_Exp_TOD2_KW_Units;
-                    //MTR2_KW3_ex.Text = op[0].L54_Exp_TOD3_KW_Units;
-                    //MTR2_KW4_ex.Text = op[0].L54_Exp_TOD4_KW_Units;
+
 
                     MTR2_KWH1.Text = op[0].L24_TOD_1_KWH;
                     MTR2_KWH2.Text = op[0].L24_TOD_2_KWH;
                     MTR2_KWH3.Text = op[0].L24_TOD_3_KWH;
                     MTR2_KWH4.Text = op[0].L24_TOD_4_KWH;
+                    xrLabel11.Text = totalA1.ToString("0.00");
+
                     MTR2_KWH1_ex.Text = op[0].L51_Exp_TOD1_KWH_Units;
                     MTR2_KWH2_ex.Text = op[0].L51_Exp_TOD2_KWH_Units;
                     MTR2_KWH3_ex.Text = op[0].L51_Exp_TOD3_KWH_Units;
                     MTR2_KWH4_ex.Text = op[0].L51_Exp_TOD4_KWH_Units;
+                    xrLabel12.Text= totalA2.ToString("0.00");
 
 
 
@@ -591,48 +669,44 @@ namespace AT.Print.PDF
                 if (!string.IsNullOrEmpty(op[0].L6_Kvah_indicator) || op[0].L6_Kvah_indicator == "1")
                 {
 
-                    //xrLabel16.Text = op[0].L23_TOD_1_KW;
-                    //xrLabel23.Text = op[0].L23_TOD_2_KW;
-                    //xrLabel44.Text = op[0].L23_TOD_3_KW;
-                    //xrLabel30.Text = op[0].L23_TOD_4_KW;
 
                     xrLabel17.Text = op[0].L22_TOD_1_KWH;
                     xrLabel24.Text = op[0].L22_TOD_2_KWH;
                     xrLabel45.Text = op[0].L22_TOD_3_KWH;
                     xrLabel31.Text = op[0].L22_TOD_4_KWH;
-                    //EXP
-                    //xrLabel37.Text = op[0].L36_Exp_TOD1_KVA_Units;
-                    //xrLabel51.Text = op[0].L36_Exp_TOD2_KVA_Units;
-                    //xrLabel58.Text = op[0].L36_Exp_TOD3_KVA_Units;
-                    //xrLabelSerNumberData.Text = op[0].L36_Exp_TOD4_KVA_Units;
-
+                    xrLabelab.Text = total.ToString("0.00");
 
                     xrLabel38.Text = op[0].L35_Exp_TOD1_KVAH_Units;
                     xrLabel52.Text = op[0].L35_Exp_TOD2_KVAH_Units;
                     xrLabel59.Text = op[0].L35_Exp_TOD3_KVAH_Units;
                     xrLabel66.Text = op[0].L35_Exp_TOD4_KVAH_Units;
+                    xrLabelcd.Text = total3.ToString("0.00");
+
 
                     xrLabel39.Text = op[0].L42_Exp_CURRENT_NET_EXPORT_TOD1_KVAH_UNITS;
                     xrLabel53.Text = op[0].L42_Exp_CURRENT_NET_EXPORT_TOD2_KVAH_UNITS;
                     xrLabel60.Text = op[0].L42_Exp_CURRENT_NET_EXPORT_TOD3_KVAH_UNITS;
                     xrLabel67.Text = op[0].L42_Exp_CURRENT_NET_EXPORT_TOD4_KVAH_UNITS;
+                    xrLabel16.Text = totalI2.ToString("0.00");
 
 
                     xrLabel40.Text = op[0].L42_Previous_CREDIT_Units_TOD1_KVAH;
                     xrLabel54.Text = op[0].L42_Previous_CREDIT_Units_TOD2_KVAH;
                     xrLabel61.Text = op[0].L42_Previous_CREDIT_Units_TOD3_KVAH;
                     xrLabel68.Text = op[0].L42_Previous_CREDIT_Units_TOD4_KVAH;
+                    xrLabel25.Text = totalJ2.ToString("0.00");
 
                     xrLabel41.Text = op[0].L46_Net_Billed_Units_MAIN_TOD1_KVAH;
                     xrLabel55.Text = op[0].L46_Net_Billed_Units_MAIN_TOD2_KVAH;
                     xrLabel62.Text = op[0].L46_Net_Billed_Units_MAIN_TOD3_KVAH;
                     xrLabel69.Text = op[0].L46_Net_Billed_Units_MAIN_TOD4_KVAH;
-
+                    xrLabel23.Text = totalK2.ToString("0.00");
 
                     xrLabel42.Text = op[0].L44_Carry_Forward_Units_TOD1_KVAH;
                     xrLabel56.Text = op[0].L44_Carry_Forward_Units_TOD2_KVAH;
                     xrLabel63.Text = op[0].L44_Carry_Forward_Units_TOD3_KVAH;
                     xrLabel70.Text = op[0].L44_Carry_Forward_Units_TOD4_KVAH;
+                    xrLabel20.Text = totall2.ToString("0.00");
 
                     //mtr2
                     //MTR2_KW1.Text = op[0].L25_TOD_1_KWH;
@@ -648,10 +722,12 @@ namespace AT.Print.PDF
                     MTR2_KWH2.Text = op[0].L24_TOD_2_KWH;
                     MTR2_KWH3.Text = op[0].L24_TOD_3_KWH;
                     MTR2_KWH4.Text = op[0].L24_TOD_4_KWH;
+                    xrLabel11.Text = totalA1.ToString("0.00");
                     MTR2_KWH1_ex.Text = op[0].L50_Exp_TOD1_KVAH_Units;
                     MTR2_KWH2_ex.Text = op[0].L50_Exp_TOD2_KVAH_Units;
                     MTR2_KWH3_ex.Text = op[0].L50_Exp_TOD3_KVAH_Units;
                     MTR2_KWH4_ex.Text = op[0].L50_Exp_TOD4_KVAH_Units;
+                    xrLabel12.Text = totalA3.ToString("0.00");
 
 
                 }
@@ -665,6 +741,9 @@ namespace AT.Print.PDF
                 MTR2_TOD2.Visible = false;
                 MTR2_TOD3.Visible = false;
                 MTR2_TOD4.Visible = false;
+                xrLabelef.Visible = false;
+                xrLabel11.Visible = false;
+                xrLabel12.Visible = false;
                 //MTR2_EXP1.Visible = false;
                 //MTR2_EXP2.Visible = false;
                 //MTR2_EXP3.Visible = false;
@@ -682,16 +761,20 @@ namespace AT.Print.PDF
                     xrLabel45.Text = op[0].L22_TOD_3_KWH;
                     // xrLabel30.Text = op[0].L23_TOD_4_KW;
                     xrLabel31.Text = op[0].L22_TOD_4_KWH;
+                    xrLabelab.Text = total.ToString("0.00");
+
                     //EXP
                     //xrLabel37.Text = op[0].L53_Exp_TOD1_KW_Units;
                     //xrLabel51.Text = op[0].L53_Exp_TOD2_KW_Units;
                     //xrLabel58.Text = op[0].L53_Exp_TOD3_KW_Units;
                     //xrLabelSerNumberData.Text = op[0].L53_Exp_TOD4_KW_Units;
 
+
                     xrLabel38.Text = op[0].L34_Exp_TOD1_KWH_Units;
                     xrLabel52.Text = op[0].L34_Exp_TOD2_KWH_Units;
                     xrLabel59.Text = op[0].L34_Exp_TOD3_KWH_Units;
                     xrLabel66.Text = op[0].L34_Exp_TOD4_KWH_Units;
+                    xrLabelcd.Text = total2.ToString("0.00");
 
 
 
@@ -700,6 +783,10 @@ namespace AT.Print.PDF
                     xrLabel40.Text = op[0].L43_Previous_CREDIT_Units_TOD1_KWH;
                     xrLabel41.Text = op[0].L46_Net_Billed_Units_MAIN_TOD1_KWH;
                     xrLabel42.Text = op[0].L45_Carry_Forward_Units_TOD1_KWH;
+                    xrLabel16.Text = totalI1.ToString("0.00");
+                    xrLabel25.Text = totalJ1.ToString("0.00");
+                    xrLabel23.Text = totalK1.ToString("0.00");
+                    xrLabel20.Text = totalL1.ToString("0.00");
                     //other
                     xrLabel53.Text = op[0].L43_Exp_CURRENT_NET_EXPORT_TOD2_KWH_UNITS;
                     xrLabel54.Text = op[0].L43_Previous_CREDIT_Units_TOD2_KWH;
@@ -728,6 +815,8 @@ namespace AT.Print.PDF
                     xrLabel24.Text = op[0].L22_TOD_2_KWH;
                     xrLabel45.Text = op[0].L22_TOD_3_KWH;
                     xrLabel31.Text = op[0].L22_TOD_4_KWH;
+                    xrLabelab.Text = total.ToString("0.00");
+
                     //EXP
                     //xrLabel37.Text = op[0].L36_Exp_TOD1_KVA_Units;
                     //xrLabel51.Text = op[0].L36_Exp_TOD2_KVA_Units;
@@ -739,29 +828,31 @@ namespace AT.Print.PDF
                     xrLabel52.Text = op[0].L35_Exp_TOD2_KVAH_Units;
                     xrLabel59.Text = op[0].L35_Exp_TOD3_KVAH_Units;
                     xrLabel66.Text = op[0].L35_Exp_TOD4_KVAH_Units;
+                    xrLabelcd.Text = total3.ToString("0.00");
 
                     xrLabel39.Text = op[0].L42_Exp_CURRENT_NET_EXPORT_TOD1_KVAH_UNITS;
                     xrLabel53.Text = op[0].L42_Exp_CURRENT_NET_EXPORT_TOD2_KVAH_UNITS;
                     xrLabel60.Text = op[0].L42_Exp_CURRENT_NET_EXPORT_TOD3_KVAH_UNITS;
                     xrLabel67.Text = op[0].L42_Exp_CURRENT_NET_EXPORT_TOD4_KVAH_UNITS;
-
+                    xrLabel16.Text = totalI2.ToString("0.00");
 
                     xrLabel40.Text = op[0].L42_Previous_CREDIT_Units_TOD1_KVAH;
                     xrLabel54.Text = op[0].L42_Previous_CREDIT_Units_TOD2_KVAH;
                     xrLabel61.Text = op[0].L42_Previous_CREDIT_Units_TOD3_KVAH;
                     xrLabel68.Text = op[0].L42_Previous_CREDIT_Units_TOD4_KVAH;
-
+                    xrLabel25.Text = totalJ2.ToString("0.00");
                     xrLabel41.Text = op[0].L46_Net_Billed_Units_MAIN_TOD1_KVAH;
                     xrLabel55.Text = op[0].L46_Net_Billed_Units_MAIN_TOD2_KVAH;
                     xrLabel62.Text = op[0].L46_Net_Billed_Units_MAIN_TOD3_KVAH;
                     xrLabel69.Text = op[0].L46_Net_Billed_Units_MAIN_TOD4_KVAH;
+                    xrLabel23.Text = totalK1.ToString("0.00");
 
 
                     xrLabel42.Text = op[0].L44_Carry_Forward_Units_TOD1_KVAH;
                     xrLabel56.Text = op[0].L44_Carry_Forward_Units_TOD2_KVAH;
                     xrLabel63.Text = op[0].L44_Carry_Forward_Units_TOD3_KVAH;
                     xrLabel70.Text = op[0].L44_Carry_Forward_Units_TOD4_KVAH;
-
+                    xrLabel20.Text = totall2.ToString("0.00");
                 }
 
             }
@@ -916,8 +1007,9 @@ namespace AT.Print.PDF
                 xrDueDate.Text = op[0].L7_due_date;
                 bd_Bottom_BillDueDate.Text = op[0].L7_due_date;
                 xrImmediatedissconnectiondate.Text = op[0].L10_DISCONN_DATE_date;
-           // }
+            // }
             #endregion
+
 
 
         }
@@ -950,6 +1042,11 @@ namespace AT.Print.PDF
             xrLabel69.Visible = false;
             xrLabel70.Visible = false;
             xrLine1.Visible = false;
+            xrLabel14.Visible = false;
+            xrLabel16.Visible = false;
+            xrLabel25.Visible = false;
+            xrLabel23.Visible = false;
+            xrLabel20.Visible = false;
 
         }
         public void visibleon()
@@ -975,6 +1072,12 @@ namespace AT.Print.PDF
             xrLabel69.Visible = true;
             xrLabel70.Visible = true;
             xrLine1.Visible = true;
+            xrLabel14.Visible = true;
+            xrLabel16.Visible = true;
+            xrLabel25.Visible = true;
+            xrLabel23.Visible = true;
+            xrLabel20.Visible = true;
+
         }
 
 
