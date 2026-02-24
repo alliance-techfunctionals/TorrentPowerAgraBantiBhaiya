@@ -42,6 +42,8 @@
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.xrLabel48 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel47 = new DevExpress.XtraReports.UI.XRLabel();
             this.MeterSerial2 = new DevExpress.XtraReports.UI.XRLabel();
             this.Tod1Label2 = new DevExpress.XtraReports.UI.XRLabel();
             this.Tod2Label2 = new DevExpress.XtraReports.UI.XRLabel();
@@ -170,8 +172,6 @@
             this.xrLabel62 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrBarCode1 = new DevExpress.XtraReports.UI.XRBarCode();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.xrLabel47 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel48 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrChartPie)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrChart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
@@ -324,6 +324,40 @@
             this.Detail.Name = "Detail";
             this.Detail.StylePriority.UseBorderDashStyle = false;
             this.Detail.StylePriority.UseFont = false;
+            // 
+            // xrLabel48
+            // 
+            this.xrLabel48.CanGrow = false;
+            this.xrLabel48.Dpi = 96F;
+            this.xrLabel48.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L6_SUPPLY_VOLTAGE]")});
+            this.xrLabel48.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
+            this.xrLabel48.InteractiveSorting.FieldName = "OwnerName";
+            this.xrLabel48.LocationFloat = new DevExpress.Utils.PointFloat(667.18F, 236.76F);
+            this.xrLabel48.Multiline = true;
+            this.xrLabel48.Name = "xrLabel48";
+            this.xrLabel48.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel48.SizeF = new System.Drawing.SizeF(86F, 20.08F);
+            this.xrLabel48.StylePriority.UseFont = false;
+            this.xrLabel48.StylePriority.UseTextAlignment = false;
+            this.xrLabel48.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // xrLabel47
+            // 
+            this.xrLabel47.CanGrow = false;
+            this.xrLabel47.Dpi = 96F;
+            this.xrLabel47.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L6_Avg_Power_Factor]")});
+            this.xrLabel47.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
+            this.xrLabel47.InteractiveSorting.FieldName = "OwnerName";
+            this.xrLabel47.LocationFloat = new DevExpress.Utils.PointFloat(667F, 273.09F);
+            this.xrLabel47.Multiline = true;
+            this.xrLabel47.Name = "xrLabel47";
+            this.xrLabel47.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel47.SizeF = new System.Drawing.SizeF(94F, 22.08F);
+            this.xrLabel47.StylePriority.UseFont = false;
+            this.xrLabel47.StylePriority.UseTextAlignment = false;
+            this.xrLabel47.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // MeterSerial2
             // 
@@ -2405,40 +2439,6 @@
             this.xrBarCode1.SizeF = new System.Drawing.SizeF(235F, 26.16F);
             eaN128Generator1.CharacterSet = DevExpress.XtraPrinting.BarCode.Code128Charset.CharsetAuto;
             this.xrBarCode1.Symbology = eaN128Generator1;
-            // 
-            // xrLabel47
-            // 
-            this.xrLabel47.CanGrow = false;
-            this.xrLabel47.Dpi = 96F;
-            this.xrLabel47.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L6_Avg_Power_Factor]")});
-            this.xrLabel47.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
-            this.xrLabel47.InteractiveSorting.FieldName = "OwnerName";
-            this.xrLabel47.LocationFloat = new DevExpress.Utils.PointFloat(667F, 273.09F);
-            this.xrLabel47.Multiline = true;
-            this.xrLabel47.Name = "xrLabel47";
-            this.xrLabel47.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel47.SizeF = new System.Drawing.SizeF(107F, 22.08F);
-            this.xrLabel47.StylePriority.UseFont = false;
-            this.xrLabel47.StylePriority.UseTextAlignment = false;
-            this.xrLabel47.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrLabel48
-            // 
-            this.xrLabel48.CanGrow = false;
-            this.xrLabel48.Dpi = 96F;
-            this.xrLabel48.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L6_SUPPLY_VOLTAGE]")});
-            this.xrLabel48.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
-            this.xrLabel48.InteractiveSorting.FieldName = "OwnerName";
-            this.xrLabel48.LocationFloat = new DevExpress.Utils.PointFloat(667.18F, 236.76F);
-            this.xrLabel48.Multiline = true;
-            this.xrLabel48.Name = "xrLabel48";
-            this.xrLabel48.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel48.SizeF = new System.Drawing.SizeF(86F, 20.08F);
-            this.xrLabel48.StylePriority.UseFont = false;
-            this.xrLabel48.StylePriority.UseTextAlignment = false;
-            this.xrLabel48.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // Rpt_LTMDPDF
             // 
