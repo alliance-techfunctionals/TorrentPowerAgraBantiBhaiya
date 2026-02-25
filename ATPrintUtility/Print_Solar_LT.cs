@@ -63,11 +63,11 @@ namespace AT.Print
                     if (contents.StartsWith("LT"))
                     {
                         SolarBill = contents.Split(new String[] { "LT " }, StringSplitOptions.RemoveEmptyEntries);
-                        if (!select_mVImg())
-                        {
-                            AppFunctions.CloseWaitForm();
-                            return;
-                        }
+                        //if (!select_mVImg())
+                        //{
+                        //    AppFunctions.CloseWaitForm();
+                        //    return;
+                        //}
                         XtraMessageBox.Show("Total Bills in this file: " + SolarBill.Length.ToString(), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         var sb = sender as SimpleButton;
                         if (ValidatetxtFile(SolarBill))
@@ -144,7 +144,7 @@ namespace AT.Print
 
                         #region WaterMark Picture Front Page PDF Solar
                         DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkFrontSolar = new DevExpress.XtraPrinting.Drawing.Watermark();
-                        pictureWatermarkFrontSolar.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_Solar_Front_Page.jpg");
+                        pictureWatermarkFrontSolar.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_Non_TOD_Front_Page.png");
                         pictureWatermarkFrontSolar.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
                         pictureWatermarkFrontSolar.ImageTiling = false;
                         pictureWatermarkFrontSolar.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Stretch;
@@ -157,7 +157,7 @@ namespace AT.Print
 
                         #region WaterMark Picture Back Page PDF Solar
                         DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkBackSolar = new DevExpress.XtraPrinting.Drawing.Watermark();
-                        pictureWatermarkBackSolar.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_Solar_Back_Page.jpg");
+                        pictureWatermarkBackSolar.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_Non_TOD_Back_Page.png");
                         pictureWatermarkBackSolar.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
                         pictureWatermarkBackSolar.ImageTiling = false;
                         pictureWatermarkBackSolar.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Zoom;
@@ -193,11 +193,15 @@ namespace AT.Print
                             Margins MinMargins = DevExpress.XtraPrinting.Native.DeviceCaps.GetMinMargins(g);
                             Console.WriteLine("Minimum Margins for " + ps.PrinterName + ": " + MinMargins.ToString());
                         }
-                        RptLTSolarPrintBack rptb = new RptLTSolarPrintBack
+                        PDF.Rpt_LT_Solar_back_PDF rptb = new PDF.Rpt_LT_Solar_back_PDF
+
+                       // RptLTSolarPrintBack rptb = new RptLTSolarPrintBack
                         {
                             DataSource = lstformattedbills,
                         };
-                        RptLTSolatPrint rpta = new RptLTSolatPrint(rptb)
+                        PDF.Rpt_LT_Solar_PDF rpta = new PDF.Rpt_LT_Solar_PDF(rptb)
+
+                       // RptLTSolatPrint rpta = new RptLTSolatPrint(rptb)
                         {
                             DataSource = lstformattedbills,
                             DisplayName = sht.L6_SERVDET_SERVNO,
@@ -996,9 +1000,11 @@ namespace AT.Print
 
             var meter = sht.L12_MTRSNO_METER_2_IF_AVAILABLE.Trim() != "" ? sht.L12_MTRSNO_METER_2_IF_AVAILABLE : sht.L12_MTRSNO_METER1;
             sht.TopPanel_Row_1 = sht.L1_MONTH_YEAR + " / " + sht.L1_ZONE + " / " + sht.L1_BU + " / " + sht.L1_route + " / " + sht.L1_Bill_seq_no;
+            sht.TopPanel_Row_2 = "Meter No. : " + meter;
             sht.TopPanel_Row_3 = "T No.  " + sht.L8_T_No.Trim('�');
             sht.TopPanel_Row_4 = "Bill Date  " + sht.L7_Billdt;
-
+            // sht.TopPanel_Row_5 = "Bill Days : " + sht.L10_Mode;
+            // sht.TopPanel_Row_6 = "11 KV FEEDER : " + sht.L1_FeederName;
 
             dtSolarBill.Rows[9][2].ToString();
             Console.WriteLine("Custom Fields calculated");

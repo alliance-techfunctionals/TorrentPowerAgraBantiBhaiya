@@ -2,273 +2,852 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using DevExpress.XtraReports.UI;
+using DevExpress.Drawing;
+using System.Collections;
+using System.Linq;
+using System;
 
 namespace AT.Print.PDF
 {
-    public partial class Rpt_LT_Solar_back_PDF :XtraReport
+    public partial class Rpt_LT_Solar_back_PDF : XtraReport
     {
         public Rpt_LT_Solar_back_PDF()
         {
             InitializeComponent();
         }
-
-
-
         #region Meter Print
         private void Rpt_LT_solar_Back_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            
-            var Data = this.DataSource as List<SolarBill>;
-            xrPictureBox2.ImageUrl = Application.StartupPath + "\\Contents\\CategorySlabImages\\" + Data[0].L6_TARIFF_DESCR + ".png";
-            xrPictureBox1.ImageUrl = Data[0].MVPicture;
 
-           
+            var op = this.DataSource as List<SolarBill>;
+            xrPictureBox2.ImageUrl = Application.StartupPath + "\\Contents\\CategorySlabImages\\" + op[0].L6_TARIFF_DESCR + ".png";
+            xrPictureBox1.ImageUrl = Application.StartupPath + "\\Contents\\CategorySlabImages\\PromotionImage.png";
+            xrLabel2.SendToBack();
+            //xrPictureBox1.ImageUrl = op[0].MVPicture;
 
-            if (Data[0].L6_MEASURE_OF_CONTRACT_Demand == "HP")
+            #region RISC1 Change
+            if (op[0].L6_TARIFF_DESCR.ToUpper().Equals("LMV 5A") || op[0].L6_TARIFF_DESCR.ToUpper().Equals("LMV 5B") || op[0].L6_TARIFF_DESCR.ToUpper().Equals("LMV 1B") || op[0].L6_TARIFF_DESCR.ToUpper().Equals("LMV 1C"))
+            {
+                bd_RlSC1Rate.Text = "@ 1.14%";
+
+            }
+            #endregion
+
+            #region Bill Details
+            //Excess Demand Surcharge Print
+            if (op[0].L10_DMDCHG_PENALTY == "0.00" || string.IsNullOrEmpty(op[0].L10_DMDCHG_PENALTY))
+            {
+                bd_ExcessDemandCharges.Visible = false;
+                bd_ExcessDemandChargesHindi.Visible = false;
+                bd_ExcessDemandChargesValue.Visible = false;
+
+                bd_ExcessDemandCharges.TopF = bd_Demand_charges.TopF;
+                bd_ExcessDemandChargesHindi.TopF = bd_Demand_charges.TopF;
+                bd_ExcessDemandChargesValue.TopF = bd_Demand_chargesValue.TopF;
+
+            }
+            bd_EnergyCharge.TopF = bd_ExcessDemandCharges.BottomF;
+            bd_EnergyChargeHindi.TopF = bd_ExcessDemandChargesValue.BottomF;
+            bd_EnergyChargeValues.TopF = bd_ExcessDemandCharges.BottomF;
+
+            //bd_TODCharges.TopF = bd_EnergyCharge.BottomF;
+            //bd_TODChargesHindi.TopF = bd_EnergyCharge.BottomF;
+            //bd_TODChargesValues.TopF = bd_EnergyCharge.BottomF;
+
+            bd_ElectricityDuty.TopF = bd_EnergyCharge.BottomF;
+            bd_ElectricityDutyHindi.TopF = bd_EnergyCharge.BottomF;
+            bd_ElectricityDutyValues.TopF = bd_EnergyCharge.BottomF;
+
+            bd_RlSC1.TopF = bd_ElectricityDuty.BottomF;
+            bd_RlSC1Hindi.TopF = bd_ElectricityDuty.BottomF;
+            bd_RlSC1Value.TopF = bd_ElectricityDuty.BottomF;
+            bd_RlSC1Rate.TopF = bd_ElectricityDuty.BottomF;
+
+            bd_RlSC2.TopF = bd_RlSC1.BottomF;
+            bd_RlSC2Hindi.TopF = bd_RlSC1.BottomF;
+            bd_RlSC2Value.TopF = bd_RlSC1.BottomF;
+            bd_RlSC2Rate.TopF = bd_RlSC1.BottomF;
+
+            bd_AcCharges.TopF = bd_RlSC2.BottomF;
+            bd_AcChargesValues.TopF = bd_RlSC2.BottomF;
+            bd_AcChargeHindi.TopF = bd_RlSC2.BottomF;
+
+            if (op[0].L8_AC_Charges == "0.00" || string.IsNullOrEmpty(op[0].L8_AC_Charges))
+            {
+                bd_AcCharges.Visible = false;
+                bd_AcChargesValues.Visible = false;
+                bd_AcChargeHindi.Visible = false;
+
+                bd_AcCharges.TopF = bd_RlSC2.TopF;
+                bd_AcChargeHindi.TopF = bd_RlSC2.TopF;
+                bd_AcChargesValues.TopF = bd_RlSC2.TopF;
+
+            }
+
+            bd_Power_Fector_Charges.TopF = bd_AcCharges.BottomF;
+            bd_powerFactorHindi.TopF = bd_AcCharges.BottomF;
+            bd_Power_Fector_ChargesValues.TopF = bd_AcChargesValues.BottomF;
+            if (op[0].L8_power_factor_adj == "0.00" || string.IsNullOrEmpty(op[0].L8_power_factor_adj))
+            {
+                bd_Power_Fector_Charges.Visible = false;
+                bd_Power_Fector_ChargesValues.Visible = false;
+                bd_powerFactorHindi.Visible = false;
+
+                bd_Power_Fector_Charges.TopF = bd_AcCharges.TopF;
+                bd_Power_Fector_ChargesValues.TopF = bd_AcChargesValues.TopF;
+                bd_powerFactorHindi.TopF = bd_AcCharges.TopF;
+
+            }
+
+            bd_AdjustmentCharges.TopF = bd_Power_Fector_Charges.BottomF;
+            bd_AdjustmentChargesValues.TopF = bd_Power_Fector_ChargesValues.BottomF;
+            bd_AdjustmentMinimumChargesHindi.TopF = bd_Power_Fector_Charges.BottomF;
+
+            if (op[0].L8_min_charge == "0.00" || string.IsNullOrEmpty(op[0].L8_min_charge))
+            {
+                bd_AdjustmentCharges.Visible = false;
+                bd_AdjustmentChargesValues.Visible = false;
+                bd_AdjustmentMinimumChargesHindi.Visible = false;
+
+                bd_AdjustmentCharges.TopF = bd_Power_Fector_Charges.TopF;
+                bd_AdjustmentChargesValues.TopF = bd_Power_Fector_ChargesValues.TopF;
+                bd_AdjustmentMinimumChargesHindi.TopF = bd_Power_Fector_Charges.TopF;
+
+            }
+            bd_Other.TopF = bd_AdjustmentCharges.BottomF;
+            bd_OtherValues.TopF = bd_AdjustmentChargesValues.BottomF;
+            bd_OtherChargesHindi.TopF = bd_AdjustmentCharges.BottomF;
+            if (op[0].L8_SERVDET_TOTDB_BDT_OTHER == "0.00" || string.IsNullOrEmpty(op[0].L8_SERVDET_TOTDB_BDT_OTHER))
+            {
+                bd_Other.Visible = false;
+                bd_OtherValues.Visible = false;
+                bd_OtherChargesHindi.Visible = false;
+
+                bd_Other.TopF = bd_AdjustmentCharges.TopF;
+                bd_OtherValues.TopF = bd_AdjustmentChargesValues.TopF;
+                bd_OtherChargesHindi.TopF = bd_AdjustmentCharges.TopF;
+            }
+
+
+
+            Subsidy.TopF = bd_Other.BottomF;
+            SubsidyValue.TopF = bd_OtherValues.BottomF;
+            SubsidyHindi.TopF = bd_Other.BottomF;
+            if (op[0].L8_Subsidy_Charges == "" || op[0].L8_Subsidy_Charges == "0.00")
+            {
+                Subsidy.Visible = false;
+                SubsidyValue.Visible = false;
+                SubsidyHindi.Visible = false;
+
+                Subsidy.TopF = bd_Other.TopF;
+                SubsidyValue.TopF = bd_OtherValues.TopF;
+                SubsidyHindi.TopF = bd_Other.TopF;
+
+            }
+
+            GreenTariff.TopF = Subsidy.BottomF;
+            GreenTariffValue.TopF = SubsidyValue.BottomF;
+            GreenTariffHindi.TopF = Subsidy.BottomF;
+
+            if (op[0].L8_GreenTariff_Charges == "0.00" || string.IsNullOrEmpty(op[0].L8_GreenTariff_Charges))
+            {
+                GreenTariff.Visible = false;
+                GreenTariffValue.Visible = false;
+                GreenTariffHindi.Visible = false;
+
+                GreenTariff.TopF = Subsidy.TopF;
+                GreenTariffValue.TopF = Subsidy.TopF;
+                GreenTariffHindi.TopF = Subsidy.TopF;
+            }
+            lblFPPA.TopF = GreenTariff.BottomF;
+            FPPASurchargeValue.TopF = GreenTariff.BottomF;
+            lblFPPAHindi.TopF = GreenTariff.BottomF;
+
+            if (op[0].L10_FPPASurcharge == "0.00" || string.IsNullOrEmpty(op[0].L10_FPPASurcharge))
+            {
+                lblFPPA.Visible = false;
+                FPPASurchargeValue.Visible = false;
+                lblFPPAHindi.Visible = false;
+
+                lblFPPA.TopF = GreenTariff.TopF;
+                FPPASurchargeValue.TopF = GreenTariff.TopF;
+                lblFPPAHindi.TopF = GreenTariff.TopF;
+            }
+            //bd_TotalCurrentDues.TopF = lblFPPA.BottomF;
+            //bd_TotalCurrentDuesValues.TopF = FPPASurchargeValue.BottomF;
+            //xrLabel34.TopF = lblFPPA.BottomF;
+
+            //bd_Arrears.TopF = bd_TotalCurrentDues.BottomF;
+            //bd_Arrears_values.TopF = bd_TotalCurrentDues.BottomF;
+            //xrLabel37.TopF = bd_TotalCurrentDues.BottomF;
+
+            //bd_LatePaymentSurcharges.TopF = bd_Arrears.BottomF;
+            //bd_LatePaymentSurchargesVALUE.TopF = bd_Arrears.BottomF;
+            //LPSCHindi.TopF = bd_Arrears.BottomF;
+
+
+            if (op[0].L9_INT_TPL == "0.00" || string.IsNullOrEmpty(op[0].L9_INT_TPL))
+            {
+                bd_LatePaymentSurcharges.Visible = false;
+                bd_LatePaymentSurchargesVALUE.Visible = false;
+                LPSCHindi.Visible = false;
+
+                //bd_LatePaymentSurcharges.TopF = bd_Arrears.TopF;
+                //bd_LatePaymentSurchargesVALUE.TopF = bd_Arrears_values.TopF;
+                //LPSCHindi.TopF = bd_Arrears.TopF;
+            }
+
+            //bd_TotalDuesVALUE.TopF = bd_LatePaymentSurcharges.BottomF;
+            //bd_TotalDues.TopF = bd_LatePaymentSurcharges.BottomF;
+            //xrLabel41.TopF = bd_LatePaymentSurcharges.BottomF;
+
+            //if (bd_TotalDues.LocationF.Y >= 206)
+            //{
+            //    xrPanel1.TopF = bd_TotalDues.BottomF + 370;
+            //}
+
+
+
+            #endregion
+
+            var messageFromFile = 0;
+
+            #region File Messages
+
+            if (!string.IsNullOrEmpty(op[0].L22_TOD_1_KWH))
+
             {
 
-                if (Data[0].L6_Kvah_indicator == "1")
+                messageFromFile++;
+
+                XRLabel xrMessage0 = new XRLabel
+
                 {
 
-                    Data[0].unit1 = "KVA";
-                 }
-                else
-                {
-                    Data[0].unit1 = "KW";
+                    Font = new DXFont("DIN Pro Regular", 8),
 
+                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+
+                    Text = op[0].L22_TOD_1_KWH,
+
+                    WordWrap = false,
+
+                    AutoWidth = true,
+
+                    KeepTogether = true,
+
+                    HeightF = 2,
+
+                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+
+                };
+
+                xrPanel1.Controls.Add(xrMessage0);
+
+                adjustMessages(xrMessage0);
+
+
+
+            }
+
+
+
+
+
+            if (!string.IsNullOrEmpty(op[0].L23_TOD_1_KW))
+
+            {
+
+                messageFromFile++;
+
+                XRLabel xrMessage0 = new XRLabel
+
+                {
+
+                    Font = new DXFont("DIN Pro Regular", 8),
+
+                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+
+                    Text = op[0].L23_TOD_1_KW,
+
+                    WordWrap = false,
+
+                    AutoWidth = true,
+
+                    KeepTogether = true,
+
+                    HeightF = 2,
+
+                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+
+                };
+
+                xrPanel1.Controls.Add(xrMessage0);
+
+                adjustMessages(xrMessage0);
+
+
+
+            }
+
+            if (!string.IsNullOrEmpty(op[0].L24_TOD_1_KWH))
+
+            {
+
+                messageFromFile++;
+
+                XRLabel xrMessage0 = new XRLabel
+
+                {
+
+                    Font = new DXFont("DIN Pro Regular", 8),
+
+                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+
+                    Text = op[0].L24_TOD_1_KWH,
+
+                    WordWrap = false,
+
+                    AutoWidth = true,
+
+                    KeepTogether = true,
+
+                    HeightF = 2,
+
+                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+
+                };
+
+                xrPanel1.Controls.Add(xrMessage0);
+
+                adjustMessages(xrMessage0);
+
+
+
+            }
+
+
+
+            if (!string.IsNullOrEmpty(op[0].L25_TOD_1_KWH))
+
+            {
+
+                messageFromFile++;
+
+                XRLabel xrMessage0 = new XRLabel
+
+                {
+
+                    Font = new DXFont("DIN Pro Regular", 8),
+
+                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+
+                    Text = op[0].L25_TOD_1_KWH,
+
+                    WordWrap = false,
+
+                    AutoWidth = true,
+
+                    KeepTogether = true,
+
+                    HeightF = 2,
+
+                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+
+                };
+
+                xrPanel1.Controls.Add(xrMessage0);
+
+                adjustMessages(xrMessage0);
+
+
+
+            }
+
+
+
+
+            if (!string.IsNullOrEmpty(op[0].L26_Message_1))
+            {
+                messageFromFile++;
+                XRLabel xrMessage1 = new XRLabel
+                {
+                    Font = new DXFont("Manrope", 8),
+                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+                    Text = op[0].L26_Message_1,
+                    WordWrap = false,
+                    AutoWidth = true,
+                    KeepTogether = true,
+                    HeightF = 2,
+                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+                };
+                xrPanel1.Controls.Add(xrMessage1);
+                adjustMessages(xrMessage1);
+
+            }
+            if (!string.IsNullOrEmpty(op[0].L27_Message_2))
+            {
+                messageFromFile++;
+                XRLabel xrMessage2 = new XRLabel
+                {
+                    Font = new DXFont("Manrope", 8),
+                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+                    Text = op[0].L27_Message_2,
+                    WordWrap = false,
+                    AutoWidth = true,
+                    KeepTogether = true,
+                    HeightF = 2,
+                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+                };
+                xrPanel1.Controls.Add(xrMessage2);
+                adjustMessages(xrMessage2);
+
+            }
+            if (!string.IsNullOrEmpty(op[0].L28_Message_3))
+            {
+                messageFromFile++;
+                XRLabel xrMessage3 = new XRLabel
+                {
+                    Font = new DXFont("Manrope", 8),
+                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+                    Text = op[0].L28_Message_3,
+                    WordWrap = false,
+                    AutoWidth = true,
+                    KeepTogether = true,
+                    HeightF = 2,
+                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+                };
+                xrPanel1.Controls.Add(xrMessage3);
+                adjustMessages(xrMessage3);
+
+            }
+            if (!string.IsNullOrEmpty(op[0].L29_Message_4))
+            {
+                messageFromFile++;
+                XRLabel xrMessage4 = new XRLabel
+                {
+                    Font = new DXFont("Manrope", 8),
+                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+                    Text = op[0].L29_Message_4,
+                    WordWrap = false,
+                    AutoWidth = true,
+                    KeepTogether = true,
+                    HeightF = 2,
+                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+                };
+                xrPanel1.Controls.Add(xrMessage4);
+                adjustMessages(xrMessage4);
+
+            }
+            if (!string.IsNullOrEmpty(op[0].L30_Message_5))
+            {
+                messageFromFile++;
+                XRLabel xrMessage5 = new XRLabel
+                {
+                    Font = new DXFont("Manrope", 8),
+                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+                    Text = op[0].L30_Message_5,
+                    WordWrap = false,
+                    AutoWidth = true,
+                    KeepTogether = true,
+                    HeightF = 2,
+                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+                };
+                xrPanel1.Controls.Add(xrMessage5);
+                adjustMessages(xrMessage5);
+
+            }
+            if (!string.IsNullOrEmpty(op[0].L31_Message_6))
+            {
+                messageFromFile++;
+                XRLabel xrMessage6 = new XRLabel
+                {
+                    Font = new DXFont("Manrope", 8),
+                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+                    Text = op[0].L31_Message_6,
+                    WordWrap = false,
+                    AutoWidth = true,
+                    KeepTogether = true,
+                    HeightF = 2,
+                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+                };
+                xrPanel1.Controls.Add(xrMessage6);
+                adjustMessages(xrMessage6);
+
+            }
+            if (!string.IsNullOrEmpty(op[0].L6_LT_Metering_Flag))
+            {
+                messageFromFile++;
+                XRLabel xrMessage6 = new XRLabel
+                {
+                    Font = new DXFont("Manrope", 8),
+                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+                    Text = "*" + getMessage(LoadStaticData._EnglishMessage, "BRDCST3"),
+                    WordWrap = true,
+                    WidthF = xrPanel1.WidthF,
+                    KeepTogether = true,
+                    HeightF = 2,
+                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+                };
+
+                xrPanel1.Controls.Add(xrMessage6);
+                adjustMessages(xrMessage6);
+
+            }
+
+            #endregion
+
+            #region Custom Messages
+            var totalMessages = messageFromFile;
+
+            if ((!string.IsNullOrEmpty(op[0].L6_EXCESS_DEMAND) && op[0].L6_EXCESS_DEMAND != "0.00") || ((!string.IsNullOrEmpty(op[0].L9_MessageIndication) && (op[0].L9_MessageIndication == "2"))))
+            {
+                if (!IsMessageLimitExceeds(totalMessages))
+                {
+                    totalMessages++;
+                    XRLabel xrMessageExcessDemand = new XRLabel
+                    {
+                        Font = new DXFont("Noto Sans Devanagari", 8),
+                        TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+                        Text = getMessage(LoadStaticData._HindiMessage, "EDC"),
+                        WordWrap = true,
+                        WidthF = xrPanel1.WidthF,
+                        KeepTogether = true,
+                        HeightF = 1,
+                        Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+                    };
+                    xrPanel1.Controls.Add(xrMessageExcessDemand);
+                    adjustMessages(xrMessageExcessDemand);
                 }
             }
-            else if (Data[0].L6_MEASURE_OF_CONTRACT_Demand == "KW")
+
+            if (!string.IsNullOrEmpty(op[0].L8_power_factor_adj) && op[0].L8_power_factor_adj != "0.00")
             {
-                if (!string.IsNullOrEmpty(Data[0].L6_Kvah_indicator) && Data[0].L6_Kvah_indicator == "1")
+                if (!IsMessageLimitExceeds(totalMessages))
                 {
-                    Data[0].unit1 = "KVA";
-
-                }
-                else
-                {
-                    Data[0].unit1 = "KW";
-
+                    totalMessages++;
+                    XRLabel xrMessageExcessDemand = new XRLabel
+                    {
+                        Font = new DXFont("Noto Sans Devanagari", 8),
+                        TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+                        Text = string.Format(getMessage(LoadStaticData._HindiMessage, "PFM"), "0.90".ToString()),
+                        WordWrap = true,
+                        WidthF = xrPanel1.WidthF,
+                        KeepTogether = true,
+                        HeightF = 1,
+                        Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+                    };
+                    xrPanel1.Controls.Add(xrMessageExcessDemand);
+                    adjustMessages(xrMessageExcessDemand);
                 }
             }
-            else if (Data[0].L6_MEASURE_OF_CONTRACT_Demand == "KVA")
+            if (!string.IsNullOrEmpty(op[0].L10_Theft_Amount) && op[0].L10_Theft_Amount != "0.00")
             {
-                if (Data[0].L6_Kvah_indicator == "1")
+                if (!IsMessageLimitExceeds(totalMessages))
                 {
-                    Data[0].unit1 = "KVA";
+                    totalMessages++;
+                    XRLabel xrMessageTheftAmount = new XRLabel
+                    {
+                        Font = new DXFont("Noto Sans Devanagari", 8),
+                        TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+                        Text = string.Format(getMessage(LoadStaticData._HindiMessage, "TFA"), op[0].L10_Theft_Amount),
+                        WordWrap = true,
+                        WidthF = xrPanel1.WidthF,
+                        KeepTogether = true,
+                        HeightF = 1,
+                        Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+                    };
 
-                   
+
+                    xrPanel1.Controls.Add(xrMessageTheftAmount);
+                    adjustMessages(xrMessageTheftAmount);
                 }
-                else
+            }
+
+            if (!string.IsNullOrEmpty(op[0].L10_TOTARR_UPPCL_INT_UPPCL_INTARR_UPPCL) && !Convert.ToDecimal(op[0].L10_TOTARR_UPPCL_INT_UPPCL_INTARR_UPPCL).Equals(decimal.Zero))
+            {
+
+                if (!IsMessageLimitExceeds(totalMessages))
                 {
-                    Data[0].unit1 = "KW";
+                    totalMessages++;
+                    XRLabel xrMessageTheftAmount = new XRLabel
+                    {
+                        Font = new DXFont("Noto Sans Devanagari", 8),
+                        TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+                        Text = string.Format(getMessage(LoadStaticData._HindiMessage, "DAD"), op[0].L10_Theft_Amount),
+                        WordWrap = true,
+                        WidthF = xrPanel1.WidthF,
+                        KeepTogether = true,
+                        HeightF = 1,
+                        Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+                    };
+
+
+                    xrPanel1.Controls.Add(xrMessageTheftAmount);
+                    adjustMessages(xrMessageTheftAmount);
                 }
             }
 
 
-           
-            if (Data[0].L12_MTRSNO_METER_2_IF_AVAILABLE != "")
+            if (!string.IsNullOrEmpty(op[0].L9_MessageFlag))
             {
-                MTR_TOD1.Text = Data[0].L12_MTRSNO_METER1;
-                MTR_TOD2.Text = Data[0].L12_MTRSNO_METER_2_IF_AVAILABLE;
-                #region Meter(KW)
-                    xrLabel37.Text = Data[0].L53_Exp_TOD1_KW_Units;
-                    xrLabel51.Text = Data[0].L53_Exp_TOD2_KW_Units;
-                    xrLabel58.Text = Data[0].L53_Exp_TOD3_KW_Units;
-                    xrLabel65.Text = Data[0].L53_Exp_TOD4_KW_Units;
+                if (!IsMessageLimitExceeds(totalMessages))
+                {
+                    totalMessages++;
+                    XRLabel xrMessageExcessDemand = new XRLabel
+                    {
+                        Font = new DXFont("Noto Sans Devanagari", 8),
+                        TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+                        Text = getMessage(LoadStaticData._HindiMessage, "TPC"),
+                        WordWrap = false,
+                        AutoWidth = true,
+                        KeepTogether = true,
+                        HeightF = (float)0.01,
+                        Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+                    };
+                    xrPanel1.Controls.Add(xrMessageExcessDemand);
+                    adjustMessages(xrMessageExcessDemand);
+                }
+            }
 
-                    xrLabel38.Text = Data[0].L34_Exp_TOD1_KWH_Units;
-                    xrLabel52.Text = Data[0].L34_Exp_TOD2_KWH_Units;
-                    xrLabel59.Text = Data[0].L34_Exp_TOD3_KWH_Units;
-                    xrLabel66.Text = Data[0].L34_Exp_TOD4_KWH_Units;
+            #endregion
+
+            #region Template Messages
+            if (!string.IsNullOrEmpty(op[0].L33_MESSAGE7))
+            {
+                messageFromFile++;
+                XRLabel xrMessage7 = new XRLabel
+                {
+                    Font = new DXFont("Noto Sans Devanagari", 8),
+                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify,
+                    Text = op[0].L33_MESSAGE7,
+                    WordWrap = true,
+                    AutoWidth = true,
+                    WidthF = 410f,
+                    Multiline = true,
+                    KeepTogether = true,
+                    HeightF = 0.1f,
+                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+                };
+                xrPanel1.Controls.Add(xrMessage7);
+                adjustMessages(xrMessage7);
+
+            }
+            if (!string.IsNullOrEmpty(op[0].L34_MESSAGE8))
+            {
+                messageFromFile++;
+                XRLabel xrMessage8 = new XRLabel
+                {
+                    Font = new DXFont("Manrope", 8),
+                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify,
+                    Text = op[0].L34_MESSAGE8,
+                    WordWrap = false,
+                    CanShrink = true,
+                    Multiline = true,
+                    AutoWidth = true,
+                    KeepTogether = true,
+                    HeightF = 0.1f,
+                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+                };
+                xrPanel1.Controls.Add(xrMessage8);
+                adjustMessages(xrMessage8);
+            }
+            if (!string.IsNullOrEmpty(op[0].L35_MESSAGE9))
+            {
+                messageFromFile++;
+                XRLabel xrMessage9 = new XRLabel
+                {
+                    Font = new DXFont("Noto Sans Devanagari", 8),
+                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify,
+                    Text = op[0].L35_MESSAGE9,
+                    WordWrap = false,
+                    CanShrink = true,
+                    Multiline = true,
+                    AutoWidth = true,
+                    KeepTogether = true,
+                    HeightF = 0.1f,
+                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+                };
+                xrPanel1.Controls.Add(xrMessage9);
+                adjustMessages(xrMessage9);
+            }
+            if (!string.IsNullOrEmpty(op[0].L36_MESSAGE10))
+            {
+                messageFromFile++;
+                XRLabel xrMessage10 = new XRLabel
+                {
+                    Font = new DXFont("Manrope", 8),
+                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify,
+                    Text = op[0].L36_MESSAGE10,
+                    WordWrap = false,
+                    CanShrink = true,
+                    Multiline = true,
+                    AutoWidth = true,
+                    KeepTogether = true,
+                    HeightF = 0.1f,
+                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+                };
+                xrPanel1.Controls.Add(xrMessage10);
+                adjustMessages(xrMessage10);
+            }
+            #endregion
+
+            #region BroadCast Messages             
+            if (!IsMessageLimitExceeds(totalMessages))
+            {
+                if (LoadStaticData._BroadcastMessage.FindAll(x => x.ServiceNo.ToUpper().Equals(op[0].L6_SERVDET_SERVNO)).FirstOrDefault() != null)
+                {
+                    BroadcastMessage brdcstMsg = LoadStaticData._BroadcastMessage.FindAll(x => x.ServiceNo.ToUpper().Equals(op[0].L6_SERVDET_SERVNO)).FirstOrDefault();
+                    totalMessages++;
+                    XRLabel xrMessageTheftAmount = new XRLabel
+                    {
+                        Font = brdcstMsg.MessageType.ToUpper() == "ENG" ? new DXFont("Manrope", 8) : new DXFont("Noto Sans Devanagari", 8),
+                        TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+                        Text = brdcstMsg.MessageType.ToUpper() == "ENG" ? brdcstMsg.EnglishMessageString : brdcstMsg.HindiMessageString,
+                        WordWrap = true,
+                        WidthF = xrPanel1.WidthF,
+                        KeepTogether = true,
+                        HeightF = 1,
+                        Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+                    };
+
+                    xrPanel1.Controls.Add(xrMessageTheftAmount);
+                    adjustMessages(xrMessageTheftAmount);
+                }
+            }
+            #endregion
+
+            #region Security Deposit Message   
+            if ((string.IsNullOrEmpty(op[0].L10_SECDEPT_BDT) || Convert.ToDouble(op[0].L10_SECDEPT_BDT) == 0) && Convert.ToDouble(op[0].L6_SERVDET_SERVNO) < 674199999)
+            {
+                messageFromFile++;
+                XRLabel xrMessage11 = new XRLabel
+                {
+                    Font = new DXFont("Noto Sans Devanagari", 8),
+                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+                    //Text = "vfHkys[kksa ds vuqlkj vkids la;kstu ij tekur /kujkf'k 'kwU; vafdr gSaA \r\n;fn vkids }kjk la;kstu jkf'k tek dh xbZ gS rks mDr tekur jkf'k dh ewy jlhn ds lkFk \r\ngekjs xzkgd lsok dsUnz  ij lEidZ djsaA ",
+                    Text = "अभिलेखों के अनुसार आपके संयोजन पर जमानत धनराशि शून्य अंकित है। यदि आपके द्वारा संयोजन \n" +
+                    "राशि जमा की गई है तो उक्त जमानत राशि की मूल रसीद के साथ हमारे ग्राहक सेवा केंद्र पर संपर्क करें।",
+                    WordWrap = false,
+                    AutoWidth = true,
+                    Multiline = true,
+                    KeepTogether = true,
+                    HeightF = 0.1f,
+                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+                };
+                xrPanel1.Controls.Add(xrMessage11);
+                adjustMessages(xrMessage11);
+
+            }
+            #endregion
+
+            if (op[0].L9_INT_TPL == "0.00" || op[0].L9_INT_TPL == " ")
+            {
+                bd_LatePaymentSurcharges.Visible = false;
+                bd_LatePaymentSurchargesVALUE.Visible = false;
+                LPSCHindi.Visible = false;
+                //bd_LatePaymentSurcharges.TopF = bd_LatePaymentSurcharges.TopF;
+                //bd_LatePaymentSurchargesVALUE.TopF = bd_LatePaymentSurchargesVALUE.TopF;
+                //bd_TotalDues.TopF = bd_TotalDues.TopF;
+                //bd_TotalDuesVALUE.TopF = bd_TotalDuesVALUE.TopF;
+                //xrLabel41.TopF  = xrLabel41.TopF;   
+            }
+
+            #region Solar Export Energy Adjustment
+            //Solar Export Energy Adjustment
+
+            if (!(op[0].L8_Solar_Export_Energy == "0.00" || op[0].L8_Solar_Export_Energy == ""))
+            {
+                //xrLabel34.Visible = false;
+                //xrLabel33.Visible = false;
+                //xrLabel35.Visible = false;
+                //xrLabel36.Visible = false;
+                //kvah21.Visible = false;
+                //kva11.Visible = false;
+                //kva12.Visible = false;
+                //kva13.Visible = false;
+                //kva14.Visible = false;
+                //Rpt_LTMD_Solar_back_visible?.visible();
 
 
 
-                    //Current Net Unit
-                    xrLabel39.Text = Data[0].L43_Exp_CURRENT_NET_EXPORT_TOD1_KWH_UNITS;
-                    xrLabel53.Text = Data[0].L43_Exp_CURRENT_NET_EXPORT_TOD2_KWH_UNITS;
-                    xrLabel60.Text = Data[0].L43_Exp_CURRENT_NET_EXPORT_TOD3_KWH_UNITS;
-                    xrLabel67.Text = Data[0].L43_Exp_CURRENT_NET_EXPORT_TOD4_KWH_UNITS;
-                    //Previous net Unit
-                    xrLabel40.Text = Data[0].L43_Previous_CREDIT_Units_TOD1_KWH;
-                    xrLabel54.Text = Data[0].L43_Previous_CREDIT_Units_TOD2_KWH;
-                    xrLabel61.Text = Data[0].L43_Previous_CREDIT_Units_TOD3_KWH;
-                    xrLabel68.Text = Data[0].L43_Previous_CREDIT_Units_TOD4_KWH;
-                    //net bill unit
-                    xrLabel41.Text = Data[0].L46_Net_Billed_Units_MAIN_TOD1_KWH;
-                    xrLabel55.Text = Data[0].L46_Net_Billed_Units_MAIN_TOD2_KWH;
-                    xrLabel62.Text = Data[0].L46_Net_Billed_Units_MAIN_TOD3_KWH;
-                    xrLabel69.Text = Data[0].L46_Net_Billed_Units_MAIN_TOD4_KWH;
-                    //carry forword unit
-                    xrLabel42.Text = Data[0].L45_Carry_Forward_Units_TOD1_KWH;
-                    xrLabel56.Text = Data[0].L45_Carry_Forward_Units_TOD2_KWH;
-                    xrLabel63.Text = Data[0].L45_Carry_Forward_Units_TOD3_KWH;
-                    xrLabel70.Text = Data[0].L45_Carry_Forward_Units_TOD4_KWH;
+                bd_SolarExportEnergy.TopF = lblFPPA.BottomF;
+                bd_Solar_Export_Value.TopF = lblFPPA.BottomF;
+                lblSolarExportHindi.TopF = lblFPPA.BottomF;
+                //bd_TotalCurrentDues.TopF = bd_Arrears.TopF;
+                //bd_TotalCurrentDuesValues.TopF = bd_Arrears_values.TopF;
+                //xrLabel34.TopF = bd_Arrears.TopF;
+                //bd_Arrears.TopF = bd_TotalDues.TopF;
+                //bd_Arrears_values.TopF = bd_TotalDuesVALUE.TopF;
+                //bd_TotalDues.TopF = bd_TotalDues.BottomF;
+                //bd_TotalDuesVALUE.TopF = bd_TotalDuesVALUE.BottomF;
 
-                    //mtr2
-                    MTR2_KW1_ex.Text = Data[0].L54_Exp_TOD1_KW_Units;
-                    MTR2_KW2_ex.Text = Data[0].L54_Exp_TOD2_KW_Units;
-                    MTR2_KW3_ex.Text = Data[0].L54_Exp_TOD3_KW_Units;
-                    MTR2_KW4_ex.Text = Data[0].L54_Exp_TOD4_KW_Units;
-
-                    MTR2_KWH1_ex.Text = Data[0].L51_Exp_TOD1_KWH_Units;
-                    MTR2_KWH2_ex.Text = Data[0].L51_Exp_TOD2_KWH_Units;
-                    MTR2_KWH3_ex.Text = Data[0].L51_Exp_TOD3_KWH_Units;
-                    MTR2_KWH4_ex.Text = Data[0].L51_Exp_TOD4_KWH_Units;
-
-                #endregion
             }
             else
             {
-                mtr2_IMP.Visible = false;
-                mtr2_exp.Visible = false;
-                MTR2_TOD1.Visible = false;
-                MTR2_TOD2.Visible = false;
-                MTR2_TOD3.Visible = false;
-                MTR2_TOD4.Visible = false;
-                MTR2_EXP1.Visible = false;
-                MTR2_EXP2.Visible = false;
-                MTR2_EXP3.Visible = false;
-                MTR2_EXP4.Visible = false;
-
-                    MTR_TOD1.Text = Data[0].L12_MTRSNO_METER1;
-                    xrLabel37.Text = Data[0].L53_Exp_TOD1_KW_Units;
-                    xrLabel51.Text = Data[0].L53_Exp_TOD2_KW_Units;
-                    xrLabel58.Text = Data[0].L53_Exp_TOD3_KW_Units;
-                    xrLabel65.Text = Data[0].L53_Exp_TOD4_KW_Units;
-
-                    xrLabel38.Text = Data[0].L34_Exp_TOD1_KWH_Units;
-                    xrLabel52.Text = Data[0].L34_Exp_TOD2_KWH_Units;
-                    xrLabel59.Text = Data[0].L34_Exp_TOD3_KWH_Units;
-                    xrLabel66.Text = Data[0].L34_Exp_TOD4_KWH_Units;
-
-
-
-
-                    xrLabel39.Text = Data[0].L43_Exp_CURRENT_NET_EXPORT_TOD1_KWH_UNITS;
-                    xrLabel40.Text = Data[0].L43_Previous_CREDIT_Units_TOD1_KWH;
-                    xrLabel41.Text = Data[0].L46_Net_Billed_Units_MAIN_TOD1_KWH;
-                    xrLabel42.Text = Data[0].L45_Carry_Forward_Units_TOD1_KWH;
-                    //other
-                    xrLabel53.Text = Data[0].L43_Exp_CURRENT_NET_EXPORT_TOD2_KWH_UNITS;
-                    xrLabel54.Text = Data[0].L43_Previous_CREDIT_Units_TOD2_KWH;
-                    xrLabel55.Text = Data[0].L46_Net_Billed_Units_MAIN_TOD2_KWH;
-                    xrLabel56.Text = Data[0].L45_Carry_Forward_Units_TOD2_KWH;
-                    xrLabel60.Text = Data[0].L43_Exp_CURRENT_NET_EXPORT_TOD3_KWH_UNITS;
-                    xrLabel61.Text = Data[0].L43_Previous_CREDIT_Units_TOD3_KWH;
-                    xrLabel62.Text = Data[0].L46_Net_Billed_Units_MAIN_TOD3_KWH;
-                    xrLabel63.Text = Data[0].L45_Carry_Forward_Units_TOD3_KWH;
-                    xrLabel67.Text = Data[0].L43_Exp_CURRENT_NET_EXPORT_TOD4_KWH_UNITS;
-                    xrLabel68.Text = Data[0].L43_Previous_CREDIT_Units_TOD4_KWH;
-                    xrLabel69.Text = Data[0].L46_Net_Billed_Units_MAIN_TOD4_KWH;
-                    xrLabel70.Text = Data[0].L45_Carry_Forward_Units_TOD4_KWH;
-
-            }
-
-            #region Meter Print2
-            if (Data[0].L37_Gen_Meter_Serial_Number != "")
-            {
-                
-                xrLabel78.Text = Data[0].L37_Gen_Meter_Serial_Number;
-
-                    xrLabel81.Text = Data[0].L39_Gen_KVA_PASTREAD;
-                    xrLabel82.Text = Data[0].L38_Gen_KVA_PRESREAD;
-                    xrLabel83.Text = Data[0].L40_Gen_MF3;
-                    xrLabel84.Text = Data[0].L41_Gen_KVA_NET_UNITS;
-                    xrLabel85.Text = Data[0].L39_Gen_KWH_PASTREAD;
-                    xrLabel86.Text = Data[0].L38_Gen_KWH_PRESREAD;
-                    xrLabel87.Text = Data[0].L40_Gen_MF1;
-                    xrLabel88.Text = Data[0].L41_Gen_KWH_NET_UNITS;
-
-
-                    #region Consumption Information
-                    //Months
-                    xrLabel95.Text = Data[0].L21_MonYear1;
-                    xrLabel96.Text = Data[0].L21_MonYear2;
-                    xrLabel97.Text = Data[0].L21_MonYear3;
-                    xrLabel98.Text = Data[0].L21_MonYear4;
-                    xrLabel99.Text = Data[0].L21_MonYear5;
-                    xrLabel100.Text = Data[0].L21_MonYear6;
-                    //Billed KVA/KW
-                    xrLabel101.Text = Data[0].L21_KVA_UNITS1;
-                    xrLabel102.Text = Data[0].L21_KVA_UNITS2;
-                    xrLabel103.Text = Data[0].L21_KVA_UNITS3;
-                    xrLabel104.Text = Data[0].L21_KVA_UNITS4;
-                    xrLabel105.Text = Data[0].L21_KVA_UNITS5;
-                    xrLabel106.Text = Data[0].L21_KVA_UNITS6;
-                    //Billed KVAH/KWH
-                    xrLabel107.Text = Data[0].L11_KWH_UNITS1;
-                    xrLabel108.Text = Data[0].L11_KWH_UNITS2;
-                    xrLabel109.Text = Data[0].L11_KWH_UNITS3;
-                    xrLabel110.Text = Data[0].L11_KWH_UNITS4;
-                    xrLabel111.Text = Data[0].L11_KWH_UNITS5;
-                    xrLabel112.Text = Data[0].L11_KWH_UNITS6;
-                    //Export KVAH/KWH
-                    xrLabel113.Text = Data[0].L47_Exp_KVAH_UNITS1;
-                    xrLabel114.Text = Data[0].L47_Exp_KVAH_UNITS2;
-                    xrLabel115.Text = Data[0].L47_Exp_KVAH_UNITS3;
-                    xrLabel116.Text = Data[0].L47_Exp_KVAH_UNITS4;
-                    xrLabel117.Text = Data[0].L47_Exp_KVAH_UNITS5;
-                    xrLabel118.Text = Data[0].L47_Exp_KVAH_UNITS6;
-                    //Gen. KVAH/KWH
-                    xrLabel119.Text = Data[0].L48_Gen_KVAH_UNITS1;
-                    xrLabel120.Text = Data[0].L48_Gen_KVAH_UNITS2;
-                    xrLabel121.Text = Data[0].L48_Gen_KVAH_UNITS3;
-                    xrLabel122.Text = Data[0].L48_Gen_KVAH_UNITS4;
-                    xrLabel123.Text = Data[0].L48_Gen_KVAH_UNITS5;
-                    xrLabel124.Text = Data[0].L48_Gen_KVAH_UNITS6;
-                    #endregion
+                //Rpt_LTMD_Solar_back_visible?.visibleon();
+                bd_SolarExportEnergy.Visible = false;
+                bd_Solar_Export_Value.Visible = false;
+                lblSolarExportHindi.Visible = false;
+                bd_SolarExportEnergy.TopF = lblFPPA.TopF;
+                bd_Solar_Export_Value.TopF = FPPASurchargeValue.TopF;
+                lblSolarExportHindi.TopF = lblFPPA.TopF;
             }
             #endregion
 
 
+
+        }
+
+
+        #endregion
+
+
+
+        #region Helper Functions
+
+        bool IsMessageLimitExceeds(int messagesCount)
+        {
+            if (messagesCount >= 8)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public void adjustMessages(XRLabel lbl)
+        {
+            if (xrPanel1.Controls.Count != 0)
+            {
+                foreach (XRLabel plbl in xrPanel1.Controls)
+                {
+                    lbl.TopF = plbl.BottomF;
+                }
+            }
+            else
+            {
+                lbl.TopF = xrPanel1.TopF;
+            }
+        }
+
+        public string getMessage(Hashtable _tbl, string Code)
+        {
+            string message = string.Empty;
+            foreach (DictionaryEntry element in _tbl)
+            {
+                message = element.Key.ToString() == Code ? element.Value.ToString() : "";
+                if (!string.IsNullOrEmpty(message))
+                {
+                    return message;
+                }
+            }
+
+            return message;
+
         }
         #endregion
-        public void visible()
-        {
-            xrLabel39.Visible = false;
-            xrLabel7.Visible = false;
-            xrLabel8.Visible = false;
-            xrLabel9.Visible = false;
-            xrLabel10.Visible = false;
-            xrLabel40.Visible = false;
-            xrLabel41.Visible = false;
-            xrLabel42.Visible = false;
-            xrLabel53.Visible = false;
-            xrLabel54.Visible = false;
-            xrLabel55.Visible = false;
-            xrLabel56.Visible = false;
-            xrLabel60.Visible = false;
-            xrLabel61.Visible = false;
-            xrLabel62.Visible = false;
-            xrLabel63.Visible = false;
-            xrLabel67.Visible = false;
-            xrLabel68.Visible = false;
-            xrLabel69.Visible = false;
-            xrLabel70.Visible = false;
-        }
-        public void visibleon()
-        {
-            xrLabel39.Visible = true;
-            xrLabel7.Visible = true;
-            xrLabel8.Visible = true;
-            xrLabel9.Visible = true;
-            xrLabel10.Visible = true;
-            xrLabel40.Visible = true;
-            xrLabel41.Visible = true;
-            xrLabel42.Visible = true;
-            xrLabel53.Visible = true;
-            xrLabel54.Visible = true;
-            xrLabel55.Visible = true;
-            xrLabel56.Visible = true;
-            xrLabel60.Visible = true;
-            xrLabel61.Visible = true;
-            xrLabel62.Visible = true;
-            xrLabel63.Visible = true;
-            xrLabel67.Visible = true;
-            xrLabel68.Visible = true;
-            xrLabel69.Visible = true;
-            xrLabel70.Visible = true;
-        }
     }
+
 }
