@@ -5,6 +5,7 @@ using DevExpress.XtraReports.UI;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -340,11 +341,12 @@ namespace AT.Print.PDF
                         Font = new DXFont("Noto Sans Devanagari", 8),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = getMessage(LoadStaticData._HindiMessage, "EDC"),
-                        WordWrap = false,
+                        WordWrap = true,
                         AutoWidth = true,
                         KeepTogether = true,
                         HeightF = 0.1f,
                         CanPublish = true,
+                        WidthF = xrPanel1.WidthF,
                         Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
                     };
                     xrPanel1.Controls.Add(xrMessageExcessDemand);
@@ -360,11 +362,12 @@ namespace AT.Print.PDF
                     {
                         Font = new DXFont("Noto Sans Devanagari", 8),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                        Text = string.Format(getMessage(LoadStaticData._HindiMessage, "PFM"), "0.90".ToString().Replace(".", "-")),
-                        WordWrap = false,
+                        Text = string.Format(getMessage(LoadStaticData._HindiMessage, "PFM"),"0.90".ToString()),
+                        WordWrap = true,
                         AutoWidth = true,
                         KeepTogether = true,
                         HeightF = 0.1f,
+                        WidthF = xrPanel1.WidthF,
                         Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
 
                     };
@@ -384,10 +387,11 @@ namespace AT.Print.PDF
                         Font = new DXFont("Noto Sans Devanagari", 8),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = getMessage(LoadStaticData._HindiMessage, "IDC"),
-                        WordWrap = false,
+                        WordWrap = true,
                         AutoWidth = true,
                         KeepTogether = true,
                         HeightF = 0.1f,
+                        WidthF = xrPanel1.WidthF,
                         Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
 
                     };
@@ -428,14 +432,16 @@ namespace AT.Print.PDF
                     totalMessages++;
                     XRLabel xrMessageTheftAmount = new XRLabel
                     {
-                        Font = new DXFont("Noto Sans Devanagari", 9),
+                        Font = new DXFont("Noto Sans Devanagari", 8),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = string.Format(getMessage(LoadStaticData._HindiMessage, "TFA"), op[0].L10_TheftAmount),
-                        WordWrap = false,
+                        WordWrap = true,
                         AutoWidth = true,
                         KeepTogether = true,
                         HeightF = 0.1f,
+                        WidthF = xrPanel1.WidthF,
                         Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+
                     };
 
 
@@ -455,11 +461,13 @@ namespace AT.Print.PDF
                         Font = new DXFont("Noto Sans Devanagari", 8),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = string.Format(getMessage(LoadStaticData._HindiMessage, "DAD"), op[0].L10_TheftAmount),
-                        WordWrap = false,
+                        WordWrap = true,
                         AutoWidth = true,
                         KeepTogether = true,
                         HeightF = 0.1f,
+                        WidthF = xrPanel1.WidthF,
                         Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+
                     };
 
 
@@ -490,19 +498,21 @@ namespace AT.Print.PDF
                         {
                             totalUnits += Convert.ToDecimal(op[0].L20_M2_KWH_UNITS);
                         }
-                        var PrevReadDt = ChangeMonthToHindi(op[0].L7_PrevReadDt);
-                        var ReadDt = ChangeMonthToHindi(op[0].L7_ReaDt);
+                        var PrevReadDt = ParseAsDataTable.ChangeMonthToHindi(op[0].L7_PrevReadDt);
+                        var ReadDt = ParseAsDataTable.ChangeMonthToHindi(op[0].L7_ReaDt);
 
                         XRLabel xrMessageTheftAmount = new XRLabel
                         {
                             Font = new DXFont("Noto Sans Devanagari", 8),
                             TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                            Text = string.Format(getMessage(LoadStaticData._HindiMessage, "AB1"), totalUnits.ToString().Replace(".", "-"), PrevReadDt.Replace("-", "&"), ReadDt.Replace("-", "&"), op[0].L10_Mode + " fnu"),
-                            WordWrap = false,
+                            Text = string.Format(getMessage(LoadStaticData._HindiMessage, "AB1"), totalUnits.ToString(), PrevReadDt, ReadDt, op[0].L10_Mode + " दिन"),
+                            WordWrap = true,
                             AutoWidth = true,
                             KeepTogether = true,
                             HeightF = 0.1f,
+                            WidthF = xrPanel1.WidthF,
                             Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+
                         };
 
 
@@ -514,11 +524,13 @@ namespace AT.Print.PDF
                             Font = new DXFont("Noto Sans Devanagari", 8),
                             TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                             Text = string.Format(getMessage(LoadStaticData._HindiMessage, "AB2")),
-                            WordWrap = false,
+                            WordWrap = true,
                             AutoWidth = true,
                             KeepTogether = true,
                             HeightF = 0.1f,
+                            WidthF = xrPanel1.WidthF,
                             Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+
                         };
 
 
@@ -540,11 +552,13 @@ namespace AT.Print.PDF
                         Font = new DXFont("Noto Sans Devanagari", 8),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                         Text = getMessage(LoadStaticData._HindiMessage, "TPC"),
-                        WordWrap = false,
+                        WordWrap = true,
                         AutoWidth = true,
                         KeepTogether = true,
-                        HeightF = (float)0.01,
+                        HeightF = 0.1f,
+                        WidthF = xrPanel1.WidthF,
                         Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+
 
                     };
                     xrPanel1.Controls.Add(xrMessageExcessDemand);
@@ -668,7 +682,6 @@ namespace AT.Print.PDF
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = "अभिलेखों के अनुसार आपके संयोजन पर जमानत धनराशि शून्य अंकित है। यदि आपके द्वारा संयोजन \n" +
                     "राशि जमा की गई है तो उक्त जमानत राशि की मूल रसीद के साथ हमारे ग्राहक सेवा केंद्र पर संपर्क करें।",
-                   // Text = "vfHkys[kksa ds vuqlkj vkids la;kstu ij tekur /kujkf'k 'kwU; vafdr gSaA ;fn vkids }kjk la;kstu jkf'k tek dh xbZ gS rks mDr tekur jkf'k dh ewy jlhn ds lkFk \r\ngekjs xzkgd lsok dsUnz  ij lEidZ djsaA ",
                     WordWrap = false,
                     AutoWidth = true,
                     Multiline = true,
@@ -684,7 +697,6 @@ namespace AT.Print.PDF
             #endregion
 
             xrPictureBox2.ImageUrl = Application.StartupPath + "\\Contents\\CategorySlabImages\\" + op[0].L6_TARIFF_DESCR + ".png";
-            //xrPictureBox1.ImageUrl = Data[0].MVPicture;
             xrPictureBox1.ImageUrl = Application.StartupPath + "\\Contents\\CategorySlabImages\\PromotionImage.png";
 
         }
@@ -732,44 +744,6 @@ namespace AT.Print.PDF
             }
 
             return message;
-
-        }
-        public string ChangeMonthToHindi(string Date)
-        {
-            if (!string.IsNullOrEmpty(Date))
-            {
-                var month = Date.Split('-')[1];
-                switch (month)
-                {
-
-                    case "01":
-                        return Date.Replace("01", "tuojh");
-                    case "02":
-                        return Date.Replace("02", "Qjojh");
-                    case "03":
-                        return Date.Replace("03", "ekpZ");
-                    case "04":
-                        return Date.Replace("04", "vizSy");
-                    case "05":
-                        return Date.Replace("05", "ebZ");
-                    case "06":
-                        return Date.Replace("06", "twu");
-                    case "07":
-                        return Date.Replace("07", "tqykbZ");
-                    case "08":
-                        return Date.Replace("08", "vxLr");
-                    case "09":
-                        return Date.Replace("09", "flrEcj");
-                    case "10":
-                        return Date.Replace("10", "vDVwcj");
-                    case "11":
-                        return Date.Replace("11", "ucEcj");
-                    case "12":
-                        return Date.Replace("12", "fnlacj");
-
-                }
-            }
-            return "";
 
         }
         #endregion

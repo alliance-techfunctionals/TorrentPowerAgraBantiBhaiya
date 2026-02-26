@@ -23,7 +23,6 @@ namespace AT.Print.PDF
             xrPictureBox2.ImageUrl = Application.StartupPath + "\\Contents\\CategorySlabImages\\" + op[0].L6_TARIFF_DESCR + ".png";
             xrPictureBox1.ImageUrl = Application.StartupPath + "\\Contents\\CategorySlabImages\\PromotionImage.png";
             xrLabel2.SendToBack();
-            //xrPictureBox1.ImageUrl = op[0].MVPicture;
 
             #region RISC1 Change
             if (op[0].L6_TARIFF_DESCR.ToUpper().Equals("LMV 5A") || op[0].L6_TARIFF_DESCR.ToUpper().Equals("LMV 5B") || op[0].L6_TARIFF_DESCR.ToUpper().Equals("LMV 1B") || op[0].L6_TARIFF_DESCR.ToUpper().Equals("LMV 1C"))
@@ -49,10 +48,6 @@ namespace AT.Print.PDF
             bd_EnergyCharge.TopF = bd_ExcessDemandCharges.BottomF;
             bd_EnergyChargeHindi.TopF = bd_ExcessDemandChargesValue.BottomF;
             bd_EnergyChargeValues.TopF = bd_ExcessDemandCharges.BottomF;
-
-            //bd_TODCharges.TopF = bd_EnergyCharge.BottomF;
-            //bd_TODChargesHindi.TopF = bd_EnergyCharge.BottomF;
-            //bd_TODChargesValues.TopF = bd_EnergyCharge.BottomF;
 
             bd_ElectricityDuty.TopF = bd_EnergyCharge.BottomF;
             bd_ElectricityDutyHindi.TopF = bd_EnergyCharge.BottomF;
@@ -173,18 +168,6 @@ namespace AT.Print.PDF
                 FPPASurchargeValue.TopF = GreenTariff.TopF;
                 lblFPPAHindi.TopF = GreenTariff.TopF;
             }
-            //bd_TotalCurrentDues.TopF = lblFPPA.BottomF;
-            //bd_TotalCurrentDuesValues.TopF = FPPASurchargeValue.BottomF;
-            //xrLabel34.TopF = lblFPPA.BottomF;
-
-            //bd_Arrears.TopF = bd_TotalCurrentDues.BottomF;
-            //bd_Arrears_values.TopF = bd_TotalCurrentDues.BottomF;
-            //xrLabel37.TopF = bd_TotalCurrentDues.BottomF;
-
-            //bd_LatePaymentSurcharges.TopF = bd_Arrears.BottomF;
-            //bd_LatePaymentSurchargesVALUE.TopF = bd_Arrears.BottomF;
-            //LPSCHindi.TopF = bd_Arrears.BottomF;
-
 
             if (op[0].L9_INT_TPL == "0.00" || string.IsNullOrEmpty(op[0].L9_INT_TPL))
             {
@@ -192,20 +175,8 @@ namespace AT.Print.PDF
                 bd_LatePaymentSurchargesVALUE.Visible = false;
                 LPSCHindi.Visible = false;
 
-                //bd_LatePaymentSurcharges.TopF = bd_Arrears.TopF;
-                //bd_LatePaymentSurchargesVALUE.TopF = bd_Arrears_values.TopF;
-                //LPSCHindi.TopF = bd_Arrears.TopF;
+
             }
-
-            //bd_TotalDuesVALUE.TopF = bd_LatePaymentSurcharges.BottomF;
-            //bd_TotalDues.TopF = bd_LatePaymentSurcharges.BottomF;
-            //xrLabel41.TopF = bd_LatePaymentSurcharges.BottomF;
-
-            //if (bd_TotalDues.LocationF.Y >= 206)
-            //{
-            //    xrPanel1.TopF = bd_TotalDues.BottomF + 370;
-            //}
-
 
 
             #endregion
@@ -224,7 +195,7 @@ namespace AT.Print.PDF
 
                 {
 
-                    Font = new DXFont("DIN Pro Regular", 8),
+                    Font = new DXFont("Manrope", 8),
 
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
 
@@ -245,9 +216,6 @@ namespace AT.Print.PDF
                 xrPanel1.Controls.Add(xrMessage0);
 
                 adjustMessages(xrMessage0);
-
-
-
             }
 
 
@@ -264,7 +232,7 @@ namespace AT.Print.PDF
 
                 {
 
-                    Font = new DXFont("DIN Pro Regular", 8),
+                    Font = new DXFont("Manrope", 8),
 
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
 
@@ -279,28 +247,21 @@ namespace AT.Print.PDF
                     HeightF = 2,
 
                     Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-
                 };
 
                 xrPanel1.Controls.Add(xrMessage0);
 
                 adjustMessages(xrMessage0);
-
-
-
             }
 
             if (!string.IsNullOrEmpty(op[0].L24_TOD_1_KWH))
-
             {
-
                 messageFromFile++;
 
                 XRLabel xrMessage0 = new XRLabel
-
                 {
 
-                    Font = new DXFont("DIN Pro Regular", 8),
+                    Font = new DXFont("Manrope", 8),
 
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
 
@@ -322,8 +283,6 @@ namespace AT.Print.PDF
 
                 adjustMessages(xrMessage0);
 
-
-
             }
 
 
@@ -338,7 +297,7 @@ namespace AT.Print.PDF
 
                 {
 
-                    Font = new DXFont("DIN Pro Regular", 8),
+                    Font = new DXFont("Manrope", 8),
 
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
 
@@ -359,14 +318,7 @@ namespace AT.Print.PDF
                 xrPanel1.Controls.Add(xrMessage0);
 
                 adjustMessages(xrMessage0);
-
-
-
             }
-
-
-
-
             if (!string.IsNullOrEmpty(op[0].L26_Message_1))
             {
                 messageFromFile++;
@@ -725,7 +677,6 @@ namespace AT.Print.PDF
                 {
                     Font = new DXFont("Noto Sans Devanagari", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                    //Text = "vfHkys[kksa ds vuqlkj vkids la;kstu ij tekur /kujkf'k 'kwU; vafdr gSaA \r\n;fn vkids }kjk la;kstu jkf'k tek dh xbZ gS rks mDr tekur jkf'k dh ewy jlhn ds lkFk \r\ngekjs xzkgd lsok dsUnz  ij lEidZ djsaA ",
                     Text = "अभिलेखों के अनुसार आपके संयोजन पर जमानत धनराशि शून्य अंकित है। यदि आपके द्वारा संयोजन \n" +
                     "राशि जमा की गई है तो उक्त जमानत राशि की मूल रसीद के साथ हमारे ग्राहक सेवा केंद्र पर संपर्क करें।",
                     WordWrap = false,
@@ -745,12 +696,7 @@ namespace AT.Print.PDF
             {
                 bd_LatePaymentSurcharges.Visible = false;
                 bd_LatePaymentSurchargesVALUE.Visible = false;
-                LPSCHindi.Visible = false;
-                //bd_LatePaymentSurcharges.TopF = bd_LatePaymentSurcharges.TopF;
-                //bd_LatePaymentSurchargesVALUE.TopF = bd_LatePaymentSurchargesVALUE.TopF;
-                //bd_TotalDues.TopF = bd_TotalDues.TopF;
-                //bd_TotalDuesVALUE.TopF = bd_TotalDuesVALUE.TopF;
-                //xrLabel41.TopF  = xrLabel41.TopF;   
+                LPSCHindi.Visible = false; 
             }
 
             #region Solar Export Energy Adjustment
@@ -758,34 +704,13 @@ namespace AT.Print.PDF
 
             if (!(op[0].L8_Solar_Export_Energy == "0.00" || op[0].L8_Solar_Export_Energy == ""))
             {
-                //xrLabel34.Visible = false;
-                //xrLabel33.Visible = false;
-                //xrLabel35.Visible = false;
-                //xrLabel36.Visible = false;
-                //kvah21.Visible = false;
-                //kva11.Visible = false;
-                //kva12.Visible = false;
-                //kva13.Visible = false;
-                //kva14.Visible = false;
-                //Rpt_LTMD_Solar_back_visible?.visible();
-
-
-
                 bd_SolarExportEnergy.TopF = lblFPPA.BottomF;
                 bd_Solar_Export_Value.TopF = lblFPPA.BottomF;
                 lblSolarExportHindi.TopF = lblFPPA.BottomF;
-                //bd_TotalCurrentDues.TopF = bd_Arrears.TopF;
-                //bd_TotalCurrentDuesValues.TopF = bd_Arrears_values.TopF;
-                //xrLabel34.TopF = bd_Arrears.TopF;
-                //bd_Arrears.TopF = bd_TotalDues.TopF;
-                //bd_Arrears_values.TopF = bd_TotalDuesVALUE.TopF;
-                //bd_TotalDues.TopF = bd_TotalDues.BottomF;
-                //bd_TotalDuesVALUE.TopF = bd_TotalDuesVALUE.BottomF;
 
             }
             else
             {
-                //Rpt_LTMD_Solar_back_visible?.visibleon();
                 bd_SolarExportEnergy.Visible = false;
                 bd_Solar_Export_Value.Visible = false;
                 lblSolarExportHindi.Visible = false;

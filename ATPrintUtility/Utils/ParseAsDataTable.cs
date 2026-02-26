@@ -1,6 +1,7 @@
 ﻿using DevExpress.XtraEditors;
 using System;
 using System.Data;
+using System.Globalization;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
@@ -2356,6 +2357,20 @@ namespace AT.Print.Utils
 
         }
 
+        public static string ChangeMonthToHindi(string Date)
+        {
+
+            if (string.IsNullOrEmpty(Date))
+                return "";
+
+            DateTime dt;
+            if (DateTime.TryParse(Date, out dt))
+            {
+                return dt.ToString("dd-MMMM-yy", new CultureInfo("hi-IN"));
+            }
+
+            return Date;
+        }
 
     }
 }
