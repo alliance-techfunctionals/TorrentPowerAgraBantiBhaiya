@@ -2214,7 +2214,7 @@
             // 
             // xrLabelMeterNo
             // 
-            this.xrLabelMeterNo.BorderColor = System.Drawing.Color.Black;
+            this.xrLabelMeterNo.BorderColor = System.Drawing.Color.DimGray;
             this.xrLabelMeterNo.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabelMeterNo.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrLabelMeterNo.Dpi = 96F;
@@ -4040,7 +4040,7 @@
             this.xrLabel18.Dpi = 96F;
             this.xrLabel18.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L12_MTRSNO_METER1]")});
-            this.xrLabel18.Font = new DevExpress.Drawing.DXFont("Manrope", 8F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel18.Font = new DevExpress.Drawing.DXFont("Manrope", 7F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel18.ForeColor = System.Drawing.Color.Black;
             this.xrLabel18.LocationFloat = new DevExpress.Utils.PointFloat(232.4F, 671.44F);
             this.xrLabel18.Name = "xrLabel18";
