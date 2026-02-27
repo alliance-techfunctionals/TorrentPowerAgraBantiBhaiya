@@ -709,7 +709,7 @@
             this.xrLabel13.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel13.CanGrow = false;
             this.xrLabel13.Dpi = 96F;
-            this.xrLabel13.Font = new DevExpress.Drawing.DXFont("Manrope", 8F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel13.Font = new DevExpress.Drawing.DXFont("Manrope", 7F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(25F, 676.4401F);
             this.xrLabel13.Multiline = true;
             this.xrLabel13.Name = "xrLabel13";
@@ -726,7 +726,7 @@
             this.xrLabel19.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel19.CanGrow = false;
             this.xrLabel19.Dpi = 96F;
-            this.xrLabel19.Font = new DevExpress.Drawing.DXFont("Manrope", 8F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel19.Font = new DevExpress.Drawing.DXFont("Manrope", 7F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel19.LocationFloat = new DevExpress.Utils.PointFloat(104.835F, 676.4401F);
             this.xrLabel19.Multiline = true;
             this.xrLabel19.Name = "xrLabel19";
@@ -742,7 +742,7 @@
             this.xrLabel5.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel5.CanGrow = false;
             this.xrLabel5.Dpi = 96F;
-            this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Manrope", 8F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Manrope", 7F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(213.7647F, 676.36F);
             this.xrLabel5.Multiline = true;
             this.xrLabel5.Name = "xrLabel5";
