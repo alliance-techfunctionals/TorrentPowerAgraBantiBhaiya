@@ -709,7 +709,7 @@
             this.xrLabel13.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel13.CanGrow = false;
             this.xrLabel13.Dpi = 96F;
-            this.xrLabel13.Font = new DevExpress.Drawing.DXFont("Manrope", 8F);
+            this.xrLabel13.Font = new DevExpress.Drawing.DXFont("Manrope", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(25F, 676.4401F);
             this.xrLabel13.Multiline = true;
             this.xrLabel13.Name = "xrLabel13";
