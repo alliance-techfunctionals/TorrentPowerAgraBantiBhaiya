@@ -17,10 +17,7 @@ namespace AT.Print.PDF
         {
             InitializeComponent();
         }
-        private void Rpt_LT_Back_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-
-        }
+      
         private void Rpt_LTPDF_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
 
@@ -29,13 +26,6 @@ namespace AT.Print.PDF
             var data = sender as Rpt_LTPDF;
             var op = data.DataSource as List<SingleLTBill>;
 
-            //#region RISC1 Change
-            //if (op[0].L6_TARIFF_DESCR.ToUpper().Equals("LMV 5A") || op[0].L6_TARIFF_DESCR.ToUpper().Equals("LMV 5B") || op[0].L6_TARIFF_DESCR.ToUpper().Equals("LMV 1B") || op[0].L6_TARIFF_DESCR.ToUpper().Equals("LMV 1C"))
-            //{
-            //    bd_RlSC1Rate.Text = "@ 1.14%";
-
-            //}
-            //#endregion
             #region QRCODE
 
             if (ConfigurationManager.AppSettings["generateQRCodeinLTBills"].ToString() == "True")
@@ -54,7 +44,6 @@ namespace AT.Print.PDF
                 barcodeWriter.Options = encodingOptions;
                 var qrCodeBitmap = barcodeWriter.Write(textToEncode);
                 xrQRCODE.Image = qrCodeBitmap;
-                //xrQRCODE.SizeF = new System.Drawing.SizeF(55, 55);
             }
 
             #endregion
@@ -65,30 +54,22 @@ namespace AT.Print.PDF
                 xrDueDate.Text = "IMMEDIATE";
                 bd_Bottom_BillDueDate.Text = "IMMEDIATE";
                 xrImmediatedissconnectiondate.Text = "IMMEDIATE";
-                // xrImmediatelbl.Visible = true;
-                //xrLabel20.Visible = true;
                 xrImmediatedissconnectiondate.Visible = true;
-               // xrLabel40.Text = "IMMEDIATE";
             }
             else
             {
                 xrDueDate.Text = op[0].L7_Due_Date;
                 bd_Bottom_BillDueDate.Text = op[0].L7_Due_Date;
                 xrImmediatedissconnectiondate.Text = op[0].L10_DisconnDate;
-                //xrDueDate.TextAlignment = TextAlignment.MiddleLeft;
-                //xrImmediatedissconnectiondate.TextAlignment = TextAlignment.MiddleRight;
-                //xrLabel40.Text = op[0].L7_Due_Date;
             }
             #endregion
 
             if (!string.IsNullOrEmpty(op[0].L1_Customer_PAN))
             {
-               // xrLabel31.Visible = true;
                 xrLabel23.Visible = true;
             }
             else
             {
-               // xrLabel31.Visible = false;
                 xrLabel23.Visible = false;
             }
 
@@ -283,7 +264,6 @@ namespace AT.Print.PDF
 
 
 
-            // ----- MANUAL COLORS (NO RANDOMNESS) -----
             pieSeries.Points[0].Color = Color.FromArgb(208, 208, 207);  // Duty
             pieSeries.Points[1].Color = Color.FromArgb(179, 180, 180); // Excess
             pieSeries.Points[2].Color = Color.FromArgb(151, 151, 151);   // Energy

@@ -16,7 +16,7 @@ using ZXing.QrCode.Internal;
 
 namespace AT.Print
 {
-    public partial class Rpt_LTMDPDF : DevExpress.XtraReports.UI.XtraReport
+    public partial class Rpt_LTMDPDF : XtraReport
     {
         public Rpt_LTMDPDF()
         {
@@ -28,9 +28,6 @@ namespace AT.Print
 
         private void Rpt_LTMDPDF_BeforePrint(object sender, System.ComponentModel.CancelEventArgs e)
         {
-
-
-
             var dataView = sender as Rpt_LTMDPDF;
             var op = dataView.DataSource as List<SingleLTMDBill>;
 
@@ -53,7 +50,6 @@ namespace AT.Print
                 barcodeWriter.Options = encodingOptions;
                 var qrCodeBitmap = barcodeWriter.Write(textToEncode);
                 xrQRCODE.Image = qrCodeBitmap;
-                //xrQRCODE.SizeF = new System.Drawing.SizeF(55, 55);
             }
 
             #endregion
@@ -64,30 +60,22 @@ namespace AT.Print
                 xrDueDate.Text = "IMMEDIATE";
                 bd_Bottom_BillDueDate.Text = "IMMEDIATE";
                 xrImmediatedissconnectiondate.Text = "IMMEDIATE";
-                // xrImmediatelbl.Visible = true;
-                //xrLabel20.Visible = true;
                 xrImmediatedissconnectiondate.Visible = true;
-                // xrLabel40.Text = "IMMEDIATE";
             }
             else
             {
                 xrDueDate.Text = op[0].L7_Due_Date;
                 bd_Bottom_BillDueDate.Text = op[0].L7_Due_Date;
                 xrImmediatedissconnectiondate.Text = op[0].L10_DisconnDate;
-                //xrDueDate.TextAlignment = TextAlignment.MiddleLeft;
-                //xrImmediatedissconnectiondate.TextAlignment = TextAlignment.MiddleRight;
-                //xrLabel40.Text = op[0].L7_Due_Date;
             }
             #endregion
 
             if (!string.IsNullOrEmpty(op[0].L1_Customer_PAN))
             {
-                // xrLabel31.Visible = true;
                 xrLabel23.Visible = true;
             }
             else
             {
-                // xrLabel31.Visible = false;
                 xrLabel23.Visible = false;
             }
 
@@ -328,7 +316,6 @@ namespace AT.Print
 
 
 
-            // ----- MANUAL COLORS (NO RANDOMNESS) -----
             pieSeries.Points[0].Color = Color.FromArgb(208, 208, 207);  // Duty
             pieSeries.Points[1].Color = Color.FromArgb(179, 180, 180); // Excess
             pieSeries.Points[2].Color = Color.FromArgb(151, 151, 151);   // Energy
@@ -357,14 +344,6 @@ namespace AT.Print
             {
                 xrlBillDemand.Text = "*" + xrlBillDemand.Text;
             }
-
-
-
-
-
-
-
-
 
 
             if (op[0].L1_TODOrNon_TODFlag == "0")
