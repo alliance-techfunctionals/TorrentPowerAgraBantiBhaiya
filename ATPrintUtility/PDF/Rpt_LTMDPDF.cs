@@ -278,7 +278,7 @@ namespace AT.Print
             xrLblAmount.Text = "₹" + ToDecimal(op[0].L8_AmountPayableBeforeDueDate).ToString("G");
             xrLabelTotalAmt.BringToFront();
 
-            xrLabelTotalAmt.Text = "₹" + ToDecimal(op[0].L8_AmountPayableBeforeDueDate).ToString("G");
+            //xrLabelTotalAmt.Text = "₹" + ToDecimal(op[0].L8_AmountPayableBeforeDueDate).ToString("G");
             xrLabel13.BringToFront();
             xrLabel5.BringToFront();
             xrLabel19.BringToFront();
@@ -322,6 +322,8 @@ namespace AT.Print
             pieSeries.Points[3].Color = Color.FromArgb(125, 125, 124);  // Fixed
             xrChartPie.Series.Add(pieSeries);
 
+            decimal tValue = energyCharge + fixedCharge + electricityDuty + excessDemandCharge;
+            xrLabelTotalAmt.Text = "₹" + tValue.ToString();
             #endregion
 
             xrChart1.Series[0].DataSource = op[0].KWHgrph;

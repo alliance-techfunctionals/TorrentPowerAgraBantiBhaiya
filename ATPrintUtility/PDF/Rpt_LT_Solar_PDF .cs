@@ -60,7 +60,7 @@ namespace AT.Print.PDF
             xrLblAmount.Text = "₹" + ToDecimal(op[0].L8_amount_payable_before_due_date).ToString("G");
             xrLabelTotalAmt.BringToFront();
 
-            xrLabelTotalAmt.Text = "₹" + ToDecimal(op[0].L8_amount_payable_before_due_date).ToString("G");
+            //xrLabelTotalAmt.Text = "₹" + ToDecimal(op[0].L8_amount_payable_before_due_date).ToString("G");
             xrLabelTotal.Text = "Thank you for your previous payment of ₹" + op[0].L7_Last_Payement_amount + " on " + op[0].L7_LastpymtDate;
             xrLabel13.BringToFront();
             xrLabelday.BringToFront();
@@ -268,6 +268,11 @@ namespace AT.Print.PDF
             pieSeries.Points[2].Color = Color.FromArgb(151, 151, 151);   // Energy
             pieSeries.Points[3].Color = Color.FromArgb(125, 125, 124);  // Fixed
             xrChartPie.Series.Add(pieSeries);
+
+            decimal tValue = energyCharge + fixedCharge + electricityDuty + excessDemandCharge;
+            xrLabelTotalAmt.Text = "₹" + tValue.ToString();
+
+            
 
             #endregion
 
