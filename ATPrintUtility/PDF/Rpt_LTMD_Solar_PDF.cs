@@ -65,6 +65,7 @@ namespace AT.Print.PDF
             xrLabel13.BringToFront();
             xrLabelday.BringToFront();
             xrLabel19.BringToFront();
+            xrLine1.SendToBack();
 
 
             if (!string.IsNullOrEmpty(op[0].L1_Customer_PAN))
@@ -872,8 +873,12 @@ namespace AT.Print.PDF
 
             if (!(op[0].L8_Solar_Export_Energy == "0.00" || op[0].L8_Solar_Export_Energy == ""))
             {
-                xrLabel34.Visible = false;
+                xrLabel51.Text = "(Net Billing)"; // New Solar Req
+                xrLabelTotalAmt.LocationF = new DevExpress.Utils.PointFloat(104.83F, 562F);
+
+
                 xrLabel33.Visible = false;
+                xrLabel34.Visible = false;
                 xrLabel35.Visible = false;
                 xrLabel36.Visible = false;
                // kvah21.Visible = false;
@@ -881,6 +886,7 @@ namespace AT.Print.PDF
                 kva12.Visible = false;
                 kva13.Visible = false;
                 kva14.Visible = false;
+                
                visible();
 
 

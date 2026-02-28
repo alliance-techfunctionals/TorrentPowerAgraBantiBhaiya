@@ -29,7 +29,6 @@ namespace AT.Print.PDF
             var op = data.DataSource as List<SolarBill>;
 
 
-
             if (!String.IsNullOrEmpty(op[0].L6_LT_Metering_Flag))
             {
                 xrlL6Servdet_Sanc_load.Text = "*" + xrlL6Servdet_Sanc_load.Text;
@@ -632,7 +631,11 @@ namespace AT.Print.PDF
 
             if (!(op[0].L8_Solar_Export_Energy == "0.00" || op[0].L8_Solar_Export_Energy == ""))
             {
-                xrLabel34.Visible = false;
+                xrLabel51.Text = "(Net Billing)"; // New Solar Req
+                xrLabelTotalAmt.LocationF = new DevExpress.Utils.PointFloat(104.83F, 562F);
+
+
+                xrLabel34.Visible = false; 
                 xrLabel33.Visible = false;
                 xrLabel35.Visible = false;
                 xrLabel36.Visible = false;

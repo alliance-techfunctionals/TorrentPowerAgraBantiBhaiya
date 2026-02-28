@@ -259,6 +259,7 @@ namespace AT.Print
             sht.L1_PC = dtSolarBill.Rows[0][3].ToString();
             sht.L1_route = dtSolarBill.Rows[0][4].ToString();
             sht.L1_Bill_seq_no = dtSolarBill.Rows[0][5].ToString();
+            sht.L1_subroute = dtSolarBill.Rows[0][6].ToString();
             if (dtSolarBill.Rows[0][8].ToString() == "")
             {
                 sht.L1_Customer_PAN = dtSolarBill.Rows[0][8].ToString();
@@ -999,7 +1000,7 @@ namespace AT.Print
             #region Custom Fields
 
             var meter = sht.L12_MTRSNO_METER_2_IF_AVAILABLE.Trim() != "" ? sht.L12_MTRSNO_METER_2_IF_AVAILABLE : sht.L12_MTRSNO_METER1;
-            sht.TopPanel_Row_1 = sht.L1_MONTH_YEAR + " / " + sht.L1_ZONE + " / " + sht.L1_BU + " / " + sht.L1_route + " / " + sht.L1_Bill_seq_no;
+            sht.TopPanel_Row_1 = sht.L1_MONTH_YEAR + " / " + sht.L1_ZONE + " / " + sht.L1_BU + " / " + sht.L1_route + " / " + sht.L1_subroute + " / " + sht.L1_Bill_seq_no;
             sht.TopPanel_Row_2 = "Meter No. : " + meter;
             sht.TopPanel_Row_3 = "T No.  " + sht.L8_T_No.Trim('�');
             sht.TopPanel_Row_4 = "Bill Date  " + sht.L7_Billdt;
