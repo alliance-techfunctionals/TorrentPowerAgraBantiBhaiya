@@ -40,8 +40,8 @@
             this.bd_LatePaymentSurcharges = new DevExpress.XtraReports.UI.XRLabel();
             this.bd_TotalDuesVALUE = new DevExpress.XtraReports.UI.XRLabel();
             this.bd_TotalDues = new DevExpress.XtraReports.UI.XRLabel();
-            this.bd_AdjustmentMinimumChargesHindi = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPanel3 = new DevExpress.XtraReports.UI.XRPanel();
+            this.bd_AdjustmentMinimumChargesHindi = new DevExpress.XtraReports.UI.XRLabel();
             this.lblSolarExportHindi = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel34 = new DevExpress.XtraReports.UI.XRLabel();
             this.bd_powerFactorHindi = new DevExpress.XtraReports.UI.XRLabel();
@@ -162,13 +162,15 @@
             // 
             this.LPSCHindi.CanGrow = false;
             this.LPSCHindi.Font = new DevExpress.Drawing.DXFont("Noto Sans Devanagari", 8F);
-            this.LPSCHindi.LocationFloat = new DevExpress.Utils.PointFloat(165.4434F, 310.2811F);
+            this.LPSCHindi.LocationFloat = new DevExpress.Utils.PointFloat(165.44F, 309.68F);
             this.LPSCHindi.LockedInUserDesigner = true;
             this.LPSCHindi.Name = "LPSCHindi";
             this.LPSCHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.LPSCHindi.SizeF = new System.Drawing.SizeF(94.94997F, 15.19586F);
+            this.LPSCHindi.SizeF = new System.Drawing.SizeF(94.95F, 16.75F);
             this.LPSCHindi.StylePriority.UseFont = false;
+            this.LPSCHindi.StylePriority.UseTextAlignment = false;
             this.LPSCHindi.Text = "विलम्बित देय अधिभार";
+            this.LPSCHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel2
             // 
@@ -213,10 +215,10 @@
             this.bd_LatePaymentSurchargesVALUE.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L9_INT_TPL]")});
             this.bd_LatePaymentSurchargesVALUE.Font = new DevExpress.Drawing.DXFont("Manrope", 8F);
-            this.bd_LatePaymentSurchargesVALUE.LocationFloat = new DevExpress.Utils.PointFloat(329.9791F, 311.2812F);
+            this.bd_LatePaymentSurchargesVALUE.LocationFloat = new DevExpress.Utils.PointFloat(329.98F, 309.68F);
             this.bd_LatePaymentSurchargesVALUE.Name = "bd_LatePaymentSurchargesVALUE";
             this.bd_LatePaymentSurchargesVALUE.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.bd_LatePaymentSurchargesVALUE.SizeF = new System.Drawing.SizeF(100F, 15.625F);
+            this.bd_LatePaymentSurchargesVALUE.SizeF = new System.Drawing.SizeF(100F, 16.75F);
             this.bd_LatePaymentSurchargesVALUE.StylePriority.UseBorders = false;
             this.bd_LatePaymentSurchargesVALUE.StylePriority.UseFont = false;
             this.bd_LatePaymentSurchargesVALUE.StylePriority.UsePadding = false;
@@ -235,7 +237,7 @@
             this.bd_LatePaymentSurcharges.Name = "bd_LatePaymentSurcharges";
             this.bd_LatePaymentSurcharges.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.bd_LatePaymentSurcharges.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;
-            this.bd_LatePaymentSurcharges.SizeF = new System.Drawing.SizeF(401.0833F, 16.66666F);
+            this.bd_LatePaymentSurcharges.SizeF = new System.Drawing.SizeF(401.08F, 16.75F);
             this.bd_LatePaymentSurcharges.StylePriority.UseBorderDashStyle = false;
             this.bd_LatePaymentSurcharges.StylePriority.UseBorders = false;
             this.bd_LatePaymentSurcharges.StylePriority.UseFont = false;
@@ -278,22 +280,6 @@
             this.bd_TotalDues.StylePriority.UseFont = false;
             this.bd_TotalDues.StylePriority.UsePadding = false;
             this.bd_TotalDues.Text = "Total Dues /";
-            // 
-            // bd_AdjustmentMinimumChargesHindi
-            // 
-            this.bd_AdjustmentMinimumChargesHindi.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
-            this.bd_AdjustmentMinimumChargesHindi.CanGrow = false;
-            this.bd_AdjustmentMinimumChargesHindi.Font = new DevExpress.Drawing.DXFont("Noto Sans Devanagari", 8F);
-            this.bd_AdjustmentMinimumChargesHindi.LocationFloat = new DevExpress.Utils.PointFloat(177.7666F, 150.0302F);
-            this.bd_AdjustmentMinimumChargesHindi.Name = "bd_AdjustmentMinimumChargesHindi";
-            this.bd_AdjustmentMinimumChargesHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.bd_AdjustmentMinimumChargesHindi.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;
-            this.bd_AdjustmentMinimumChargesHindi.SizeF = new System.Drawing.SizeF(121.8584F, 15.19617F);
-            this.bd_AdjustmentMinimumChargesHindi.StylePriority.UseFont = false;
-            this.bd_AdjustmentMinimumChargesHindi.StylePriority.UsePadding = false;
-            this.bd_AdjustmentMinimumChargesHindi.StylePriority.UseTextAlignment = false;
-            this.bd_AdjustmentMinimumChargesHindi.Text = "समायोजन (कम से कम) राशि";
-            this.bd_AdjustmentMinimumChargesHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrPanel3
             // 
@@ -362,32 +348,50 @@
             this.xrPanel3.StylePriority.UseBorderDashStyle = false;
             this.xrPanel3.StylePriority.UseBorders = false;
             // 
+            // bd_AdjustmentMinimumChargesHindi
+            // 
+            this.bd_AdjustmentMinimumChargesHindi.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.Top;
+            this.bd_AdjustmentMinimumChargesHindi.CanGrow = false;
+            this.bd_AdjustmentMinimumChargesHindi.Font = new DevExpress.Drawing.DXFont("Noto Sans Devanagari", 8F);
+            this.bd_AdjustmentMinimumChargesHindi.LocationFloat = new DevExpress.Utils.PointFloat(177.7666F, 150.0302F);
+            this.bd_AdjustmentMinimumChargesHindi.Name = "bd_AdjustmentMinimumChargesHindi";
+            this.bd_AdjustmentMinimumChargesHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.bd_AdjustmentMinimumChargesHindi.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;
+            this.bd_AdjustmentMinimumChargesHindi.SizeF = new System.Drawing.SizeF(121.86F, 16.75F);
+            this.bd_AdjustmentMinimumChargesHindi.StylePriority.UseFont = false;
+            this.bd_AdjustmentMinimumChargesHindi.StylePriority.UsePadding = false;
+            this.bd_AdjustmentMinimumChargesHindi.StylePriority.UseTextAlignment = false;
+            this.bd_AdjustmentMinimumChargesHindi.Text = "समायोजन (कम से कम) राशि";
+            this.bd_AdjustmentMinimumChargesHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
+            // 
             // lblSolarExportHindi
             // 
             this.lblSolarExportHindi.CanGrow = false;
             this.lblSolarExportHindi.CanShrink = true;
             this.lblSolarExportHindi.Font = new DevExpress.Drawing.DXFont("Noto Sans Devanagari", 8F);
-            this.lblSolarExportHindi.LocationFloat = new DevExpress.Utils.PointFloat(116.0666F, 201.364F);
+            this.lblSolarExportHindi.LocationFloat = new DevExpress.Utils.PointFloat(110.07F, 199.16F);
             this.lblSolarExportHindi.Name = "lblSolarExportHindi";
             this.lblSolarExportHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblSolarExportHindi.SizeF = new System.Drawing.SizeF(115.6668F, 12.47649F);
+            this.lblSolarExportHindi.SizeF = new System.Drawing.SizeF(115.67F, 16.75F);
             this.lblSolarExportHindi.StylePriority.UseFont = false;
             this.lblSolarExportHindi.StylePriority.UsePadding = false;
+            this.lblSolarExportHindi.StylePriority.UseTextAlignment = false;
             this.lblSolarExportHindi.Text = "सौर ऊर्जा निर्यात";
+            this.lblSolarExportHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel34
             // 
             this.xrLabel34.CanGrow = false;
             this.xrLabel34.Font = new DevExpress.Drawing.DXFont("Noto Sans Devanagari", 8F);
-            this.xrLabel34.LocationFloat = new DevExpress.Utils.PointFloat(111.0666F, 216.335F);
+            this.xrLabel34.LocationFloat = new DevExpress.Utils.PointFloat(111.07F, 214.78F);
             this.xrLabel34.LockedInUserDesigner = true;
             this.xrLabel34.Name = "xrLabel34";
             this.xrLabel34.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel34.SizeF = new System.Drawing.SizeF(131.5376F, 15.19586F);
+            this.xrLabel34.SizeF = new System.Drawing.SizeF(131.54F, 16.75F);
             this.xrLabel34.StylePriority.UseFont = false;
             this.xrLabel34.StylePriority.UseTextAlignment = false;
             this.xrLabel34.Text = "कुल वर्तमान देय राशि";
-            this.xrLabel34.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrLabel34.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // bd_powerFactorHindi
             // 
@@ -395,39 +399,44 @@
             this.bd_powerFactorHindi.CanGrow = false;
             this.bd_powerFactorHindi.CanShrink = true;
             this.bd_powerFactorHindi.Font = new DevExpress.Drawing.DXFont("Noto Sans Devanagari", 8F);
-            this.bd_powerFactorHindi.LocationFloat = new DevExpress.Utils.PointFloat(131.25F, 133.2798F);
+            this.bd_powerFactorHindi.LocationFloat = new DevExpress.Utils.PointFloat(128.25F, 133.2798F);
             this.bd_powerFactorHindi.Name = "bd_powerFactorHindi";
             this.bd_powerFactorHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.bd_powerFactorHindi.SizeF = new System.Drawing.SizeF(93.4458F, 14.95596F);
+            this.bd_powerFactorHindi.SizeF = new System.Drawing.SizeF(93.45F, 16.75F);
             this.bd_powerFactorHindi.StylePriority.UseFont = false;
             this.bd_powerFactorHindi.StylePriority.UsePadding = false;
             this.bd_powerFactorHindi.StylePriority.UseTextAlignment = false;
             this.bd_powerFactorHindi.Text = "पावर फैक्टर अधिभार";
+            this.bd_powerFactorHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel37
             // 
             this.xrLabel37.CanGrow = false;
             this.xrLabel37.Font = new DevExpress.Drawing.DXFont("Noto Sans Devanagari", 8F);
-            this.xrLabel37.LocationFloat = new DevExpress.Utils.PointFloat(52.4185F, 232.1277F);
+            this.xrLabel37.LocationFloat = new DevExpress.Utils.PointFloat(52.42F, 231.53F);
             this.xrLabel37.LockedInUserDesigner = true;
             this.xrLabel37.Name = "xrLabel37";
             this.xrLabel37.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel37.SizeF = new System.Drawing.SizeF(38.33825F, 15.19586F);
+            this.xrLabel37.SizeF = new System.Drawing.SizeF(38.34F, 16.75F);
             this.xrLabel37.StylePriority.UseFont = false;
+            this.xrLabel37.StylePriority.UseTextAlignment = false;
             this.xrLabel37.Text = "अवशेष";
+            this.xrLabel37.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // lblFPPAHindi
             // 
             this.lblFPPAHindi.CanGrow = false;
             this.lblFPPAHindi.CanShrink = true;
             this.lblFPPAHindi.Font = new DevExpress.Drawing.DXFont("Noto Sans Devanagari", 8F);
-            this.lblFPPAHindi.LocationFloat = new DevExpress.Utils.PointFloat(111.0666F, 201.364F);
+            this.lblFPPAHindi.LocationFloat = new DevExpress.Utils.PointFloat(97.07F, 199.16F);
             this.lblFPPAHindi.Name = "lblFPPAHindi";
             this.lblFPPAHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblFPPAHindi.SizeF = new System.Drawing.SizeF(115.6668F, 12.47649F);
+            this.lblFPPAHindi.SizeF = new System.Drawing.SizeF(115.67F, 16.75F);
             this.lblFPPAHindi.StylePriority.UseFont = false;
             this.lblFPPAHindi.StylePriority.UsePadding = false;
+            this.lblFPPAHindi.StylePriority.UseTextAlignment = false;
             this.lblFPPAHindi.Text = "ईंधन और बिजली अधिभार";
+            this.lblFPPAHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // SubsidyHindi
             // 
@@ -435,7 +444,7 @@
             this.SubsidyHindi.CanGrow = false;
             this.SubsidyHindi.CanShrink = true;
             this.SubsidyHindi.Font = new DevExpress.Drawing.DXFont("Noto Sans Devanagari", 8F);
-            this.SubsidyHindi.LocationFloat = new DevExpress.Utils.PointFloat(52.4185F, 183.9599F);
+            this.SubsidyHindi.LocationFloat = new DevExpress.Utils.PointFloat(52.42F, 183.53F);
             this.SubsidyHindi.Name = "SubsidyHindi";
             this.SubsidyHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.SubsidyHindi.SizeF = new System.Drawing.SizeF(63.6875F, 16.75F);
@@ -443,6 +452,7 @@
             this.SubsidyHindi.StylePriority.UsePadding = false;
             this.SubsidyHindi.StylePriority.UseTextAlignment = false;
             this.SubsidyHindi.Text = "सब्सिडी";
+            this.SubsidyHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // GreenTariffHindi
             // 
@@ -450,7 +460,7 @@
             this.GreenTariffHindi.CanGrow = false;
             this.GreenTariffHindi.CanShrink = true;
             this.GreenTariffHindi.Font = new DevExpress.Drawing.DXFont("Noto Sans Devanagari", 8F);
-            this.GreenTariffHindi.LocationFloat = new DevExpress.Utils.PointFloat(70.83322F, 183.5016F);
+            this.GreenTariffHindi.LocationFloat = new DevExpress.Utils.PointFloat(70.83F, 183.53F);
             this.GreenTariffHindi.Name = "GreenTariffHindi";
             this.GreenTariffHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.GreenTariffHindi.SizeF = new System.Drawing.SizeF(77.36459F, 16.75002F);
@@ -458,6 +468,7 @@
             this.GreenTariffHindi.StylePriority.UsePadding = false;
             this.GreenTariffHindi.StylePriority.UseTextAlignment = false;
             this.GreenTariffHindi.Text = "ग्रीन टैरिफ";
+            this.GreenTariffHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // bd_OtherChargesHindi
             // 
@@ -465,15 +476,15 @@
             this.bd_OtherChargesHindi.CanGrow = false;
             this.bd_OtherChargesHindi.CanShrink = true;
             this.bd_OtherChargesHindi.Font = new DevExpress.Drawing.DXFont("Noto Sans Devanagari", 8F);
-            this.bd_OtherChargesHindi.LocationFloat = new DevExpress.Utils.PointFloat(88.5416F, 167.3347F);
+            this.bd_OtherChargesHindi.LocationFloat = new DevExpress.Utils.PointFloat(88.54F, 166.78F);
             this.bd_OtherChargesHindi.Name = "bd_OtherChargesHindi";
             this.bd_OtherChargesHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.bd_OtherChargesHindi.SizeF = new System.Drawing.SizeF(76.5125F, 16.19583F);
+            this.bd_OtherChargesHindi.SizeF = new System.Drawing.SizeF(76.51F, 16.75F);
             this.bd_OtherChargesHindi.StylePriority.UseFont = false;
             this.bd_OtherChargesHindi.StylePriority.UsePadding = false;
             this.bd_OtherChargesHindi.StylePriority.UseTextAlignment = false;
             this.bd_OtherChargesHindi.Text = "अन्य चार्ज";
-            this.bd_OtherChargesHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.bd_OtherChargesHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // bd_AcChargeHindi
             // 
@@ -484,12 +495,12 @@
             this.bd_AcChargeHindi.Name = "bd_AcChargeHindi";
             this.bd_AcChargeHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.bd_AcChargeHindi.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;
-            this.bd_AcChargeHindi.SizeF = new System.Drawing.SizeF(69.03345F, 21.44449F);
+            this.bd_AcChargeHindi.SizeF = new System.Drawing.SizeF(69.03F, 16.75F);
             this.bd_AcChargeHindi.StylePriority.UseFont = false;
             this.bd_AcChargeHindi.StylePriority.UsePadding = false;
             this.bd_AcChargeHindi.StylePriority.UseTextAlignment = false;
             this.bd_AcChargeHindi.Text = "ए सी चार्ज";
-            this.bd_AcChargeHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.bd_AcChargeHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // bd_ElectricityDutyHindi
             // 
@@ -497,15 +508,15 @@
             this.bd_ElectricityDutyHindi.CanGrow = false;
             this.bd_ElectricityDutyHindi.CanShrink = true;
             this.bd_ElectricityDutyHindi.Font = new DevExpress.Drawing.DXFont("Noto Sans Devanagari", 8F);
-            this.bd_ElectricityDutyHindi.LocationFloat = new DevExpress.Utils.PointFloat(85.42F, 67.51387F);
+            this.bd_ElectricityDutyHindi.LocationFloat = new DevExpress.Utils.PointFloat(85.42F, 65.96F);
             this.bd_ElectricityDutyHindi.Name = "bd_ElectricityDutyHindi";
             this.bd_ElectricityDutyHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.bd_ElectricityDutyHindi.SizeF = new System.Drawing.SizeF(51.04166F, 15.19585F);
+            this.bd_ElectricityDutyHindi.SizeF = new System.Drawing.SizeF(51.04F, 16.75F);
             this.bd_ElectricityDutyHindi.StylePriority.UseFont = false;
             this.bd_ElectricityDutyHindi.StylePriority.UsePadding = false;
             this.bd_ElectricityDutyHindi.StylePriority.UseTextAlignment = false;
             this.bd_ElectricityDutyHindi.Text = "विद्युत कर";
-            this.bd_ElectricityDutyHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.bd_ElectricityDutyHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // bd_TODChargesHindi
             // 
@@ -513,15 +524,15 @@
             this.bd_TODChargesHindi.CanGrow = false;
             this.bd_TODChargesHindi.CanShrink = true;
             this.bd_TODChargesHindi.Font = new DevExpress.Drawing.DXFont("Noto Sans Devanagari", 8F);
-            this.bd_TODChargesHindi.LocationFloat = new DevExpress.Utils.PointFloat(81.24989F, 53.7491F);
+            this.bd_TODChargesHindi.LocationFloat = new DevExpress.Utils.PointFloat(81.25F, 49.21F);
             this.bd_TODChargesHindi.Name = "bd_TODChargesHindi";
             this.bd_TODChargesHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.bd_TODChargesHindi.SizeF = new System.Drawing.SizeF(69.03345F, 15.19584F);
+            this.bd_TODChargesHindi.SizeF = new System.Drawing.SizeF(69.03F, 16.75F);
             this.bd_TODChargesHindi.StylePriority.UseFont = false;
             this.bd_TODChargesHindi.StylePriority.UsePadding = false;
             this.bd_TODChargesHindi.StylePriority.UseTextAlignment = false;
             this.bd_TODChargesHindi.Text = "टी ओ डी चार्ज";
-            this.bd_TODChargesHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.bd_TODChargesHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // bd_EnergyChargeHindi
             // 
@@ -529,15 +540,15 @@
             this.bd_EnergyChargeHindi.CanGrow = false;
             this.bd_EnergyChargeHindi.CanShrink = true;
             this.bd_EnergyChargeHindi.Font = new DevExpress.Drawing.DXFont("Noto Sans Devanagari", 8F);
-            this.bd_EnergyChargeHindi.LocationFloat = new DevExpress.Utils.PointFloat(94.79F, 38.18F);
+            this.bd_EnergyChargeHindi.LocationFloat = new DevExpress.Utils.PointFloat(94.79F, 32.46F);
             this.bd_EnergyChargeHindi.Name = "bd_EnergyChargeHindi";
             this.bd_EnergyChargeHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.bd_EnergyChargeHindi.SizeF = new System.Drawing.SizeF(45.49166F, 15.19584F);
+            this.bd_EnergyChargeHindi.SizeF = new System.Drawing.SizeF(45.49F, 16.75F);
             this.bd_EnergyChargeHindi.StylePriority.UseFont = false;
             this.bd_EnergyChargeHindi.StylePriority.UsePadding = false;
             this.bd_EnergyChargeHindi.StylePriority.UseTextAlignment = false;
             this.bd_EnergyChargeHindi.Text = "ऊर्जा चार्ज";
-            this.bd_EnergyChargeHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.bd_EnergyChargeHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // bd_ExcessDemandChargesHindi
             // 
@@ -545,16 +556,16 @@
             this.bd_ExcessDemandChargesHindi.CanGrow = false;
             this.bd_ExcessDemandChargesHindi.CanShrink = true;
             this.bd_ExcessDemandChargesHindi.Font = new DevExpress.Drawing.DXFont("Noto Sans Devanagari", 8F);
-            this.bd_ExcessDemandChargesHindi.LocationFloat = new DevExpress.Utils.PointFloat(136.46F, 19.35F);
+            this.bd_ExcessDemandChargesHindi.LocationFloat = new DevExpress.Utils.PointFloat(136.46F, 15.62F);
             this.bd_ExcessDemandChargesHindi.Name = "bd_ExcessDemandChargesHindi";
             this.bd_ExcessDemandChargesHindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.bd_ExcessDemandChargesHindi.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;
-            this.bd_ExcessDemandChargesHindi.SizeF = new System.Drawing.SizeF(95.93335F, 15.19617F);
+            this.bd_ExcessDemandChargesHindi.SizeF = new System.Drawing.SizeF(95.93F, 16.75F);
             this.bd_ExcessDemandChargesHindi.StylePriority.UseFont = false;
             this.bd_ExcessDemandChargesHindi.StylePriority.UsePadding = false;
             this.bd_ExcessDemandChargesHindi.StylePriority.UseTextAlignment = false;
             this.bd_ExcessDemandChargesHindi.Text = "अतिरिक्त डिमांड चार्ज";
-            this.bd_ExcessDemandChargesHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.bd_ExcessDemandChargesHindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // bd_FixedCharge_Hindi
             // 
@@ -562,15 +573,15 @@
             this.bd_FixedCharge_Hindi.CanGrow = false;
             this.bd_FixedCharge_Hindi.CanShrink = true;
             this.bd_FixedCharge_Hindi.Font = new DevExpress.Drawing.DXFont("Noto Sans Devanagari", 8F);
-            this.bd_FixedCharge_Hindi.LocationFloat = new DevExpress.Utils.PointFloat(85.42F, 2.6F);
+            this.bd_FixedCharge_Hindi.LocationFloat = new DevExpress.Utils.PointFloat(85.42F, 1.04F);
             this.bd_FixedCharge_Hindi.Name = "bd_FixedCharge_Hindi";
             this.bd_FixedCharge_Hindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.bd_FixedCharge_Hindi.SizeF = new System.Drawing.SizeF(64.86674F, 15.19583F);
+            this.bd_FixedCharge_Hindi.SizeF = new System.Drawing.SizeF(64.87F, 16.75F);
             this.bd_FixedCharge_Hindi.StylePriority.UseFont = false;
             this.bd_FixedCharge_Hindi.StylePriority.UsePadding = false;
             this.bd_FixedCharge_Hindi.StylePriority.UseTextAlignment = false;
             this.bd_FixedCharge_Hindi.Text = "फिक्स चार्ज";
-            this.bd_FixedCharge_Hindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.bd_FixedCharge_Hindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // FPPASurchargeValue
             // 
@@ -579,7 +590,7 @@
             this.FPPASurchargeValue.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L10_FPPASurcharge]")});
             this.FPPASurchargeValue.Font = new DevExpress.Drawing.DXFont("Microsoft Sans Serif", 8F);
-            this.FPPASurchargeValue.LocationFloat = new DevExpress.Utils.PointFloat(302.625F, 202.114F);
+            this.FPPASurchargeValue.LocationFloat = new DevExpress.Utils.PointFloat(302.62F, 199.16F);
             this.FPPASurchargeValue.Name = "FPPASurchargeValue";
             this.FPPASurchargeValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.FPPASurchargeValue.SizeF = new System.Drawing.SizeF(100F, 16.75F);
@@ -597,11 +608,11 @@
             this.lblFPPA.CanGrow = false;
             this.lblFPPA.CanShrink = true;
             this.lblFPPA.Font = new DevExpress.Drawing.DXFont("Manrope", 8F);
-            this.lblFPPA.LocationFloat = new DevExpress.Utils.PointFloat(0F, 200.0306F);
+            this.lblFPPA.LocationFloat = new DevExpress.Utils.PointFloat(0.4F, 199.16F);
             this.lblFPPA.Name = "lblFPPA";
             this.lblFPPA.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblFPPA.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;
-            this.lblFPPA.SizeF = new System.Drawing.SizeF(389.5833F, 15.625F);
+            this.lblFPPA.SizeF = new System.Drawing.SizeF(389.58F, 16.75F);
             this.lblFPPA.StylePriority.UseBorderColor = false;
             this.lblFPPA.StylePriority.UseBorderDashStyle = false;
             this.lblFPPA.StylePriority.UseBorders = false;
@@ -621,7 +632,7 @@
             this.bd_SolarExportEnergy.Name = "bd_SolarExportEnergy";
             this.bd_SolarExportEnergy.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.bd_SolarExportEnergy.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;
-            this.bd_SolarExportEnergy.SizeF = new System.Drawing.SizeF(389.5834F, 15.625F);
+            this.bd_SolarExportEnergy.SizeF = new System.Drawing.SizeF(389.58F, 16.75F);
             this.bd_SolarExportEnergy.StylePriority.UseBorderDashStyle = false;
             this.bd_SolarExportEnergy.StylePriority.UseBorders = false;
             this.bd_SolarExportEnergy.StylePriority.UseFont = false;
@@ -638,7 +649,7 @@
             this.bd_Solar_Export_Value.Multiline = true;
             this.bd_Solar_Export_Value.Name = "bd_Solar_Export_Value";
             this.bd_Solar_Export_Value.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.bd_Solar_Export_Value.SizeF = new System.Drawing.SizeF(99.01257F, 15.625F);
+            this.bd_Solar_Export_Value.SizeF = new System.Drawing.SizeF(99.01F, 16.75F);
             this.bd_Solar_Export_Value.StylePriority.UseFont = false;
             this.bd_Solar_Export_Value.StylePriority.UseTextAlignment = false;
             this.bd_Solar_Export_Value.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
@@ -652,7 +663,7 @@
             this.SubsidyValue.Multiline = true;
             this.SubsidyValue.Name = "SubsidyValue";
             this.SubsidyValue.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.SubsidyValue.SizeF = new System.Drawing.SizeF(99.01257F, 15.625F);
+            this.SubsidyValue.SizeF = new System.Drawing.SizeF(99.01F, 16.75F);
             this.SubsidyValue.StylePriority.UseFont = false;
             this.SubsidyValue.StylePriority.UseTextAlignment = false;
             this.SubsidyValue.Text = "Subsidy";
@@ -667,7 +678,7 @@
             this.Subsidy.Multiline = true;
             this.Subsidy.Name = "Subsidy";
             this.Subsidy.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.Subsidy.SizeF = new System.Drawing.SizeF(387.8959F, 15.625F);
+            this.Subsidy.SizeF = new System.Drawing.SizeF(387.9F, 16.75F);
             this.Subsidy.StylePriority.UseBorderDashStyle = false;
             this.Subsidy.StylePriority.UseBorders = false;
             this.Subsidy.StylePriority.UseFont = false;
@@ -879,7 +890,7 @@
             this.bd_Arrears.CanGrow = false;
             this.bd_Arrears.CanShrink = true;
             this.bd_Arrears.Font = new DevExpress.Drawing.DXFont("Manrope", 8F);
-            this.bd_Arrears.LocationFloat = new DevExpress.Utils.PointFloat(0F, 231.5308F);
+            this.bd_Arrears.LocationFloat = new DevExpress.Utils.PointFloat(0.4F, 231.53F);
             this.bd_Arrears.Name = "bd_Arrears";
             this.bd_Arrears.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.bd_Arrears.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;
@@ -967,7 +978,7 @@
             this.bd_TotalCurrentDues.CanGrow = false;
             this.bd_TotalCurrentDues.CanShrink = true;
             this.bd_TotalCurrentDues.Font = new DevExpress.Drawing.DXFont("Manrope", 8F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.bd_TotalCurrentDues.LocationFloat = new DevExpress.Utils.PointFloat(0F, 214.7805F);
+            this.bd_TotalCurrentDues.LocationFloat = new DevExpress.Utils.PointFloat(0.4F, 214.78F);
             this.bd_TotalCurrentDues.Name = "bd_TotalCurrentDues";
             this.bd_TotalCurrentDues.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.bd_TotalCurrentDues.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;
@@ -1094,10 +1105,12 @@
             this.bd_RlSC1Hindi.LocationFloat = new DevExpress.Utils.PointFloat(131.25F, 82.70972F);
             this.bd_RlSC1Hindi.Name = "bd_RlSC1Hindi";
             this.bd_RlSC1Hindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.bd_RlSC1Hindi.SizeF = new System.Drawing.SizeF(81.35834F, 15.19617F);
+            this.bd_RlSC1Hindi.SizeF = new System.Drawing.SizeF(81.36F, 16.75F);
             this.bd_RlSC1Hindi.StylePriority.UseFont = false;
             this.bd_RlSC1Hindi.StylePriority.UsePadding = false;
+            this.bd_RlSC1Hindi.StylePriority.UseTextAlignment = false;
             this.bd_RlSC1Hindi.Text = "jsxqysVjh ljpktZ 1";
+            this.bd_RlSC1Hindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // bd_ElectricityDuty
             // 
@@ -1128,10 +1141,12 @@
             this.bd_RlSC2Hindi.LocationFloat = new DevExpress.Utils.PointFloat(131.25F, 99.46004F);
             this.bd_RlSC2Hindi.Name = "bd_RlSC2Hindi";
             this.bd_RlSC2Hindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.bd_RlSC2Hindi.SizeF = new System.Drawing.SizeF(81.35834F, 15.19617F);
+            this.bd_RlSC2Hindi.SizeF = new System.Drawing.SizeF(81.36F, 16.75F);
             this.bd_RlSC2Hindi.StylePriority.UseFont = false;
             this.bd_RlSC2Hindi.StylePriority.UsePadding = false;
+            this.bd_RlSC2Hindi.StylePriority.UseTextAlignment = false;
             this.bd_RlSC2Hindi.Text = "jsxqysVjh ljpktZ 2";
+            this.bd_RlSC2Hindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // bd_EnergyCharge
             // 
@@ -1198,7 +1213,7 @@
             this.bd_Demand_charges.CanGrow = false;
             this.bd_Demand_charges.CanShrink = true;
             this.bd_Demand_charges.Font = new DevExpress.Drawing.DXFont("Manrope", 8F);
-            this.bd_Demand_charges.LocationFloat = new DevExpress.Utils.PointFloat(1.041675F, 0F);
+            this.bd_Demand_charges.LocationFloat = new DevExpress.Utils.PointFloat(1.04F, 1.04F);
             this.bd_Demand_charges.Name = "bd_Demand_charges";
             this.bd_Demand_charges.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.bd_Demand_charges.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;
