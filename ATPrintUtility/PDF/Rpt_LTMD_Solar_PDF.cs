@@ -243,8 +243,8 @@ namespace AT.Print.PDF
             Series pieSeries = new Series("Major Bill Components", ViewType.Doughnut);
 
             pieSeries.Points.Add(new SeriesPoint("Electricity Duty", electricityDuty));
-            pieSeries.Points.Add(new SeriesPoint("Excess Demand Charge", excessDemandCharge));
             pieSeries.Points.Add(new SeriesPoint("Energy Charges", energyCharge));
+            pieSeries.Points.Add(new SeriesPoint("Excess Demand Charge", excessDemandCharge));
             pieSeries.Points.Add(new SeriesPoint("Fixed Charges", fixedCharge));
 
 
@@ -262,8 +262,8 @@ namespace AT.Print.PDF
             view.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
 
             pieSeries.Points[0].Color = Color.FromArgb(208, 208, 207);  // Duty
-            pieSeries.Points[1].Color = Color.FromArgb(179, 180, 180); // Excess
-            pieSeries.Points[2].Color = Color.FromArgb(151, 151, 151);   // Energy
+            pieSeries.Points[1].Color = Color.FromArgb(151, 151, 151);   // Energy
+            pieSeries.Points[2].Color = Color.FromArgb(179, 180, 180); // Excess
             pieSeries.Points[3].Color = Color.FromArgb(125, 125, 124);  // Fixed
             xrChartPie.Series.Add(pieSeries);
 
