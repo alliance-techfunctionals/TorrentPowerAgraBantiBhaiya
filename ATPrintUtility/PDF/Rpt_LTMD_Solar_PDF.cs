@@ -29,13 +29,6 @@ namespace AT.Print.PDF
             var op = data.DataSource as List<SolarBill>;
 
 
-
-            if (!String.IsNullOrEmpty(op[0].L6_LT_Metering_Flag))
-            {
-                xrlL6Servdet_Sanc_load.Text = "*" + xrlL6Servdet_Sanc_load.Text;
-
-            }
-
             #region QRCODE
 
             if (ConfigurationManager.AppSettings["generateQRCodeinSolarLTMDBills"].ToString() == "True")
@@ -914,7 +907,11 @@ namespace AT.Print.PDF
             #endregion
 
 
+            if (!String.IsNullOrEmpty(op[0].L6_LT_Metering_Flag))
+            {
+                xrlBillDemand.Text = "*" + xrlBillDemand.Text;
 
+            }
         }
         private decimal ToDecimal(string value)
         {
