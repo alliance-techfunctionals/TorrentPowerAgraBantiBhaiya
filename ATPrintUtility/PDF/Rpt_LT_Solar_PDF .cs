@@ -249,6 +249,8 @@ namespace AT.Print.PDF
 
             DoughnutSeriesLabel label = (DoughnutSeriesLabel)pieSeries.Label;
             label.Position = PieSeriesLabelPosition.TwoColumns;
+            label.ResolveOverlappingMode = ResolveOverlappingMode.Default;
+            label.ResolveOverlappingMinIndent = 15;
 
             label.TextPattern = "{A}\n₹{V:G}";
             label.TextColor = Color.Black;

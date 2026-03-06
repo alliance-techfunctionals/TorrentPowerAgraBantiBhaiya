@@ -285,7 +285,7 @@ namespace AT.Print
 
             #region pieChart
             //PieChart//
-            decimal energyCharge = ToDecimal(op[0].L8_EnergyCharge);
+            decimal energyCharge =ToDecimal(op[0].L8_EnergyCharge);
             decimal fixedCharge = ToDecimal(op[0].L8_FixedCharge);
             decimal electricityDuty = ToDecimal(op[0].L8_GovTax);
             decimal excessDemandCharge = ToDecimal(op[0].L10_DmdChgPenalty);
@@ -300,9 +300,11 @@ namespace AT.Print
             pieSeries.Points.Add(new SeriesPoint("Excess Demand Charge", excessDemandCharge));
             pieSeries.Points.Add(new SeriesPoint("Fixed Charges", fixedCharge));
 
-
             DoughnutSeriesLabel label = (DoughnutSeriesLabel)pieSeries.Label;
             label.Position = PieSeriesLabelPosition.TwoColumns;
+
+            label.ResolveOverlappingMode = ResolveOverlappingMode.Default;
+            label.ResolveOverlappingMinIndent = 15;
 
             label.TextPattern = "{A}\n₹{V:G}";
             label.TextColor = Color.Black;

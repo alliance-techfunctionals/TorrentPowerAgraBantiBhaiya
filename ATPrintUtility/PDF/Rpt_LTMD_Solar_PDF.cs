@@ -243,6 +243,8 @@ namespace AT.Print.PDF
 
             DoughnutSeriesLabel label = (DoughnutSeriesLabel)pieSeries.Label;
             label.Position = PieSeriesLabelPosition.TwoColumns;
+            label.ResolveOverlappingMode = ResolveOverlappingMode.Default;
+            label.ResolveOverlappingMinIndent = 15;
 
             label.TextPattern = "{A}\n₹{V:G}";
             label.TextColor = Color.Black;
@@ -746,7 +748,7 @@ namespace AT.Print.PDF
                     xrLabel55.Text = op[0].L46_Net_Billed_Units_MAIN_TOD2_KVAH;
                     xrLabel62.Text = op[0].L46_Net_Billed_Units_MAIN_TOD3_KVAH;
                     xrLabel69.Text = op[0].L46_Net_Billed_Units_MAIN_TOD4_KVAH;
-                    xrLabel23.Text = totalK1.ToString("0.00");
+                    xrLabel23.Text = totalK2.ToString("0.00");
 
 
                     xrLabel42.Text = op[0].L44_Carry_Forward_Units_TOD1_KVAH;

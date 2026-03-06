@@ -1,6 +1,7 @@
 ﻿using AT.Print.Utils;
 using DevExpress.Charts.Native;
 using DevExpress.XtraCharts;
+using DevExpress.XtraGauges.Core.Model;
 using DevExpress.XtraPrinting;
 using System;
 using System.Collections.Generic;
@@ -233,7 +234,7 @@ namespace AT.Print.PDF
 
             #region PieChart
             //PieChart//
-            decimal energyCharge = ToDecimal(op[0].L8_EnergyCharge);
+            decimal energyCharge =  ToDecimal(op[0].L8_EnergyCharge);
             decimal fixedCharge = ToDecimal(op[0].L8_FixedCharge);
             decimal electricityDuty = ToDecimal(op[0].L8_GovTax);
             decimal excessDemandCharge = ToDecimal(op[0].L10_DmdChgPenalty);
@@ -251,8 +252,14 @@ namespace AT.Print.PDF
 
 
             DoughnutSeriesLabel label = (DoughnutSeriesLabel)pieSeries.Label;
-            label.Position = PieSeriesLabelPosition.TwoColumns;
+
            
+
+            label.Position = PieSeriesLabelPosition.TwoColumns;
+
+            label.ResolveOverlappingMode = ResolveOverlappingMode.Default;
+            label.ResolveOverlappingMinIndent = 15;
+
             label.TextPattern = "{A}\n₹{V:G}";
             label.TextColor = Color.Black;
             label.Font = new Font("Manrope", 5);

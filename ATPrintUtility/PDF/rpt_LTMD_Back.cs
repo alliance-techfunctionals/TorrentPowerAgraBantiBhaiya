@@ -410,9 +410,11 @@ namespace AT.Print.PDF
                     {
                         Font = new DXFont("Manrope", 8),
                         TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                        Text = string.Format("*" + getMessage(LoadStaticData._EnglishMessage, "BRDCST3"), op[0].L10_TheftAmount.Replace('.', '-')),
-                        WordWrap = false,
-                        AutoWidth = true,
+                        Text = "*" + getMessage(LoadStaticData._EnglishMessage, "BRDCST3"),
+                        WordWrap = true,
+                        WidthF = xrPanel1.WidthF,
+
+                        //AutoWidth = true,
                         KeepTogether = true,
                         HeightF = 0.1f,
                         Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
