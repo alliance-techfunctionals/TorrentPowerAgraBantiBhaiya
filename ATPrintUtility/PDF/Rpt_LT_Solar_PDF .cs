@@ -106,6 +106,14 @@ namespace AT.Print.PDF
             }
 
 
+            #region Excess Demand Print
+            //Excess Demand Print
+            if (op[0].L6_EXCESS_DEMAND == "0.00" || op[0].L6_EXCESS_DEMAND == " " || op[0].L6_EXCESS_DEMAND == "0")
+            {
+                VlL6ExcessDemand.Visible = false;
+            }
+            #endregion
+
             string unit = "KW";
             if (!string.IsNullOrEmpty(op[0].L6_Kvah_indicator) && op[0].L6_Kvah_indicator == "1")
             {
@@ -149,66 +157,96 @@ namespace AT.Print.PDF
                 if (op[0].L6_Kvah_indicator == "1")
                 {
 
-                    op[0].unit1 = "KVA";
+                    string unit1 = "KVA";
+
+                    op[0].L6_ACTUAL_DEMAND = op[0].L6_ACTUAL_DEMAND + "(" + unit1 + ")";
+                    op[0].L6_EXCESS_DEMAND = op[0].L6_EXCESS_DEMAND + "(" + unit1 + ")";
+                    op[0].L6_Bill_Demand = op[0].L6_Bill_Demand + "(" + unit1 + ")";
 
 
-                    KW_HEAD1.Text = op[0].unit1;
-                    KWH_HEAD1.Text = op[0].unit1 + "H(I)";
-                    KW_HEAD2.Text = op[0].unit1;
-                    KWH_HEAD2.Text = op[0].unit1 + "H(I)";
-                    KWHE_HEAD1.Text = op[0].unit1 + "H(E)";
-                    KWHE_HEAD2.Text = op[0].unit1 + "H(E)";
+                    KW_HEAD1.Text = unit1;
+                    KWH_HEAD1.Text = unit1 + "H(I)";
+                    KW_HEAD2.Text = unit1;
+                    KWH_HEAD2.Text = unit1 + "H(I)";
+                    KWHE_HEAD1.Text = unit1 + "H(E)";
+                    KWHE_HEAD2.Text = unit1 + "H(E)";
                 }
                 else
                 {
-                    op[0].unit1 = "KW";
-                    KW_HEAD1.Text = op[0].unit1;
-                    KWH_HEAD1.Text = op[0].unit1 + "H(I)";
-                    KW_HEAD2.Text = op[0].unit1;
-                    KWH_HEAD2.Text = op[0].unit1 + "H(I)";
-                    KWHE_HEAD1.Text = op[0].unit1 + "H(E)";
-                    KWHE_HEAD2.Text = op[0].unit1 + "H(E)";
+                    string unit1 = "KW";
+
+                    op[0].L6_ACTUAL_DEMAND = op[0].L6_ACTUAL_DEMAND + "(" + unit1 + ")";
+                    op[0].L6_EXCESS_DEMAND = op[0].L6_EXCESS_DEMAND + "(" + unit1 + ")";
+                    op[0].L6_Bill_Demand = op[0].L6_Bill_Demand + "(" + unit1 + ")";
+
+                    KW_HEAD1.Text = unit1;
+                    KWH_HEAD1.Text = unit1 + "H(I)";
+                    KW_HEAD2.Text = unit1;
+                    KWH_HEAD2.Text = unit1 + "H(I)";
+                    KWHE_HEAD1.Text = unit1 + "H(E)";
+                    KWHE_HEAD2.Text = unit1 + "H(E)";
                 }
             }
             else if (op[0].L6_MEASURE_OF_CONTRACT_Demand == "KW")
             {
                 if (!string.IsNullOrEmpty(op[0].L6_Kvah_indicator) && op[0].L6_Kvah_indicator == "1")
                 {
-                    op[0].unit1 = "KVA";
-                    KW_HEAD1.Text = op[0].unit1;
-                    KWH_HEAD1.Text = op[0].unit1 + "H(I)";
-                    KW_HEAD2.Text = op[0].unit1;
-                    KWH_HEAD2.Text = op[0].unit1 + "H(I)";
-                    KWHE_HEAD1.Text = op[0].unit1 + "H(E)";
-                    KWHE_HEAD2.Text = op[0].unit1 + "H(E)";
+                    string unit1 = "KVA";
+
+                    op[0].L6_ACTUAL_DEMAND = op[0].L6_ACTUAL_DEMAND + "(" + unit1 + ")";
+                    op[0].L6_EXCESS_DEMAND = op[0].L6_EXCESS_DEMAND + "(" + unit1 + ")";
+                    op[0].L6_Bill_Demand = op[0].L6_Bill_Demand + "(" + unit1 + ")";
+
+                    KW_HEAD1.Text = unit1;
+                    KWH_HEAD1.Text = unit1 + "H(I)";
+                    KW_HEAD2.Text = unit1;
+                    KWH_HEAD2.Text = unit1 + "H(I)";
+                    KWHE_HEAD1.Text = unit1 + "H(E)";
+                    KWHE_HEAD2.Text = unit1 + "H(E)";
                 }
                 else
                 {
-                    op[0].unit1 = "KW";
-                    KW_HEAD1.Text = op[0].unit1;
-                    KWH_HEAD1.Text = op[0].unit1 + "H(I)";
-                    KW_HEAD2.Text = op[0].unit1;
-                    KWH_HEAD2.Text = op[0].unit1 + "H(I)";
-                    KWHE_HEAD1.Text = op[0].unit1 + "H(E)";
-                    KWHE_HEAD2.Text = op[0].unit1 + "H(E)";
+                    string unit1 = "KW";
+
+                    op[0].L6_ACTUAL_DEMAND = op[0].L6_ACTUAL_DEMAND + "(" + unit1 + ")";
+                    op[0].L6_EXCESS_DEMAND = op[0].L6_EXCESS_DEMAND + "(" + unit1 + ")";
+                    op[0].L6_Bill_Demand = op[0].L6_Bill_Demand + "(" + unit1 + ")";
+
+                    KW_HEAD1.Text = unit1;
+                    KWH_HEAD1.Text = unit1 + "H(I)";
+                    KW_HEAD2.Text = unit1;
+                    KWH_HEAD2.Text = unit1 + "H(I)";
+                    KWHE_HEAD1.Text = unit1 + "H(E)";
+                    KWHE_HEAD2.Text = unit1 + "H(E)";
                 }
             }
             else if (op[0].L6_MEASURE_OF_CONTRACT_Demand == "KVA")
             {
                 if (op[0].L6_Kvah_indicator == "1")
                 {
-                    op[0].unit1 = "KVA";
+                    string unit1 = "KVA";
 
-                    KW_HEAD1.Text = op[0].unit1;
-                    KWH_HEAD1.Text = op[0].unit1 + "H(I)";
-                    KW_HEAD2.Text = op[0].unit1;
-                    KWH_HEAD2.Text = op[0].unit1 + "H(I)";
-                    KWHE_HEAD1.Text = op[0].unit1 + "H(E)";
-                    KWHE_HEAD2.Text = op[0].unit1 + "H(E)";
+                    op[0].L6_ACTUAL_DEMAND = op[0].L6_ACTUAL_DEMAND + "(" + unit1 + ")";
+                    op[0].L6_EXCESS_DEMAND = op[0].L6_EXCESS_DEMAND + "(" + unit1 + ")";
+                    op[0].L6_Bill_Demand = op[0].L6_Bill_Demand + "(" + unit1 + ")";
+
+
+                    KW_HEAD1.Text = unit1;
+                    KWH_HEAD1.Text = unit1 + "H(I)";
+                    KW_HEAD2.Text = unit1;
+                    KWH_HEAD2.Text = unit1 + "H(I)";
+                    KWHE_HEAD1.Text = unit1 + "H(E)";
+                    KWHE_HEAD2.Text = unit1 + "H(E)";
                 }
                 else
                 {
                     op[0].unit1 = "KW";
+                    string unit1 = "KW";
+
+                    op[0].L6_ACTUAL_DEMAND = op[0].L6_ACTUAL_DEMAND + "(" + unit1 + ")";
+                    op[0].L6_EXCESS_DEMAND = op[0].L6_EXCESS_DEMAND + "(" + unit1 + ")";
+                    op[0].L6_Bill_Demand = op[0].L6_Bill_Demand + "(" + unit1 + ")";
+
                     KW_HEAD1.Text = op[0].unit1;
                     KWH_HEAD1.Text = op[0].unit1 + "H(I)";
                     KW_HEAD2.Text = op[0].unit1;
@@ -219,13 +257,8 @@ namespace AT.Print.PDF
                 }
             }
 
-            #region Excess Demand Print
-            //Excess Demand Print
-            if (op[0].L6_EXCESS_DEMAND == "0.00" || op[0].L6_EXCESS_DEMAND == " " || op[0].L6_EXCESS_DEMAND == "0")
-            {
-                VlL6ExcessDemand.Visible = false;
-            }
-            #endregion
+            op[0].L6_SERVDET_SANC_LOAD = op[0].L6_SERVDET_SANC_LOAD + "(" + op[0].L6_MEASURE_OF_CONTRACT_Demand + ")";
+
 
 
             #region pieChart
