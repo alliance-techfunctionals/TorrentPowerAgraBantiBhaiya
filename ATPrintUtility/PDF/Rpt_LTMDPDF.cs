@@ -111,13 +111,21 @@ namespace AT.Print
                 xrLabel23.TopF = xrLabel40.BottomF;
             }
 
+            //#region Excess Demand Print
+            ////Excess Demand Print
+            //if (op[0].L6_EXCESS_DEMAND.Substring(0, 4) != "0.00")
+            //{
+            //    xrlL6ExcessDemand.Text = op[0].L6_EXCESS_DEMAND;
+            //}
+
+            // #endregion
+
             #region Excess Demand Print
             //Excess Demand Print
-            if (op[0].L6_EXCESS_DEMAND.Substring(0, 4) != "0.00")
+            if (op[0].L6_EXCESS_DEMAND == "0.00" || op[0].L6_EXCESS_DEMAND == " " || op[0].L6_EXCESS_DEMAND == "0")
             {
-                xrlL6ExcessDemand.Text = op[0].L6_EXCESS_DEMAND;
+                xrlL6ExcessDemand.Visible = false;
             }
-
             #endregion
 
             string unit = "KW";

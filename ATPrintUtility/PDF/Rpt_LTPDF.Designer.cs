@@ -1647,7 +1647,7 @@
             // 
             this.xrlL6ExcessDemand.Dpi = 96F;
             this.xrlL6ExcessDemand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([L6_EXCESS_DEMAND]==\'0.00(KW)\',\'\' ,[L6_EXCESS_DEMAND] )")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L6_EXCESS_DEMAND]")});
             this.xrlL6ExcessDemand.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
             this.xrlL6ExcessDemand.InteractiveSorting.FieldName = "OwnerName";
             this.xrlL6ExcessDemand.LocationFloat = new DevExpress.Utils.PointFloat(667.18F, 308.92F);

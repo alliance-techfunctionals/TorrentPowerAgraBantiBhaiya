@@ -143,17 +143,28 @@ namespace AT.Print.PDF
                 }
             }
 
+            #region Excess Demand Print
+            //Excess Demand Print
+            if (op[0].L6_EXCESS_DEMAND == "0.00" || op[0].L6_EXCESS_DEMAND == " " || op[0].L6_EXCESS_DEMAND == "0")
+            {
+                xrlL6ExcessDemand.Visible = false;
+            }
+            #endregion
+
+
             op[0].L6_ACTUAL_DEMAND = op[0].L6_ACTUAL_DEMAND + "(" + unit + ")";
             op[0].L6_EXCESS_DEMAND = op[0].L6_EXCESS_DEMAND + "(" + unit + ")";
             op[0].L6_bill_demand = op[0].L6_bill_demand + "(" + unit + ")";
 
 
-            #region Excess Demand Print
-            if (op[0].L6_EXCESS_DEMAND != "0.00(KW)" || op[0].L6_EXCESS_DEMAND != "(KW)")
-            {
-                xrlL6ExcessDemand.Text = op[0].L6_EXCESS_DEMAND;
-            }
-            #endregion
+            //#region Excess Demand Print
+            //if (op[0].L6_EXCESS_DEMAND != "0.00(KW)" || op[0].L6_EXCESS_DEMAND != "(KW)")
+            //{
+            //    xrlL6ExcessDemand.Text = op[0].L6_EXCESS_DEMAND;
+            //}
+            //#endregion
+
+           
 
             #region Meter Change
             if (op[0].L12_MTRSNO_METER_2_IF_AVAILABLE != "")
