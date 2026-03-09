@@ -873,6 +873,7 @@
     <Content Include="Resources\New folder\Duplex_Tod_Back_Page.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\NewLogo.png" />
     <Content Include="Resources\ONLY For TOD NON TOD\Duplex_Non_Tod_Back_Page.png" />
     <Content Include="Resources\ONLY For TOD NON TOD\Duplex_Non_TOD_Front_Page.png" />
     <Content Include="Resources\ONLY For TOD NON TOD\Duplex_Tod_Back_Page.png" />
