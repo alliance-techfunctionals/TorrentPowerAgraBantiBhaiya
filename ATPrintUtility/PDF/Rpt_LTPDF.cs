@@ -151,8 +151,12 @@ namespace AT.Print.PDF
             }
             #endregion
 
+            if (op[0].L6_Avg_Power_Factor == "0.00" || op[0].L6_Avg_Power_Factor == " " || op[0].L6_Avg_Power_Factor == "0")
+            {
+                xrLabel45.Visible = false;
+            }
 
-            op[0].L6_ACTUAL_DEMAND = op[0].L6_ACTUAL_DEMAND + "(" + unit + ")";
+                op[0].L6_ACTUAL_DEMAND = op[0].L6_ACTUAL_DEMAND + "(" + unit + ")";
             op[0].L6_EXCESS_DEMAND = op[0].L6_EXCESS_DEMAND + "(" + unit + ")";
             op[0].L6_bill_demand = op[0].L6_bill_demand + "(" + unit + ")";
 

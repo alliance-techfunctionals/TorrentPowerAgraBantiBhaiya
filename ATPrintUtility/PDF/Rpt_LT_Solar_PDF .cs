@@ -113,6 +113,10 @@ namespace AT.Print.PDF
                 VlL6ExcessDemand.Visible = false;
             }
             #endregion
+            if (op[0].L6_Avg_Power_Factor == "0.00" || op[0].L6_Avg_Power_Factor == " " || op[0].L6_Avg_Power_Factor == "0")
+            {
+                xrLabel4.Visible = false;
+            }
 
             string unit = "KW";
             if (!string.IsNullOrEmpty(op[0].L6_Kvah_indicator) && op[0].L6_Kvah_indicator == "1")
