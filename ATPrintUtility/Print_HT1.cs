@@ -215,7 +215,7 @@ namespace AT.Print
                     if (Name == "sbSavePDF" && String.Equals(sht.L1_TODOrNon_TODFlag, "0"))
                     {
 
-                        AT.Print.PDF.Rpt_HTPDF rptsd1 = new AT.Print.PDF.Rpt_HTPDF
+                        AT.Print.PDF.Rpt_HT_TodPDF rptsd1 = new AT.Print.PDF.Rpt_HT_TodPDF
                         {
                             DataSource = lstformattedbills,
                         };
@@ -485,7 +485,7 @@ namespace AT.Print
             sht.L6_TARIFF_DESCR = string.IsNullOrEmpty(dtSingleHTBill.Rows[5][4].ToString()) ? "" : dtSingleHTBill.Rows[5][4].ToString();
             sht.L6_EXCESS_DEMAND = string.IsNullOrEmpty(dtSingleHTBill.Rows[5][5].ToString()) ? "" : dtSingleHTBill.Rows[5][5].ToString();
             sht.L6_SUPPLY_VOLTAGE = dtSingleHTBill.Rows[5][6].ToString();
-            sht.L6_BILL_PF = dtSingleHTBill.Rows[5][7].ToString();
+            sht.L6_Avg_Power_Factor = dtSingleHTBill.Rows[5][7].ToString();
             sht.L6_MTRDET_LF_PERC = dtSingleHTBill.Rows[5][8].ToString();
             sht.L6_BILL_TYPE = dtSingleHTBill.Rows[5][9].ToString();
             sht.L6_MeasureContractDemand = dtSingleHTBill.Rows[5][10].ToString();

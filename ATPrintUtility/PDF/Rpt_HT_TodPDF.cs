@@ -1,11 +1,13 @@
 ﻿using AT.Print.Utils;
 using DevExpress.Drawing;
+using DevExpress.XtraCharts;
 using DevExpress.XtraPrinting;
 using DevExpress.XtraReports.UI;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using ZXing;
@@ -24,20 +26,8 @@ namespace AT.Print.PDF
             var data = sender as Rpt_HT_TodPDF;
             var op = data.DataSource as List<SingleHTBill>;
 
-            #region TopPanel Row
-            if (String.Equals(op[0].L1_TODOrNon_TODFlag, "0"))
-            {
-                xrlTopPanelRow_6.Visible = false;
-            }
-            #endregion
 
-            #region RISC1 Change
-            if (op[0].L6_TARIFF_DESCR.ToUpper().Equals("LMV 5A") || op[0].L6_TARIFF_DESCR.ToUpper().Equals("LMV 5B") || op[0].L6_TARIFF_DESCR.ToUpper().Equals("LMV 1B") || op[0].L6_TARIFF_DESCR.ToUpper().Equals("LMV 1C"))
-            {
-                bd_RlSC1Rate.Text = "@ 1.14%";
-
-            }
-            #endregion
+           
             #region QRCODE
 
             if (ConfigurationManager.AppSettings["generateQRCodeinSolarHTTODBills"].ToString() == "True")
@@ -56,21 +46,36 @@ namespace AT.Print.PDF
                 barcodeWriter.Options = encodingOptions;
                 var qrCodeBitmap = barcodeWriter.Write(textToEncode);
                 xrQRCODE.Image = qrCodeBitmap;
-                xrQRCODE.SizeF = new System.Drawing.SizeF(60, 60);
             }
             #endregion
-            if (!string.IsNullOrEmpty(op[0].L1_Customer_PAN))
+
+
+            #region Disconnection Message
+            if (op[0].L1_DisconnectionMSGPrintingIMMEDIATE == "1")
             {
-                xrLabel31.Visible = true;
-                xrLabel24.Visible = true;
+                xrDueDate.Text = "IMMEDIATE";
+                bd_Bottom_BillDueDate.Text = "IMMEDIATE";
+                xrImmediatedissconnectiondate.Text = "IMMEDIATE";
+                xrImmediatedissconnectiondate.Visible = true;
             }
             else
             {
-                xrLabel31.Visible = false;
-                xrLabel24.Visible = false;
+                xrDueDate.Text = op[0].L7_Due_Date;
+                bd_Bottom_BillDueDate.Text = op[0].L7_Due_Date;
+                xrImmediatedissconnectiondate.Text = op[0].L10_DisconnDate;
             }
+            #endregion
 
-            // To keep Address and PAN together             
+
+            if (!string.IsNullOrEmpty(op[0].L1_Customer_PAN))
+            {
+                xrLabel23.Visible = true;
+            }
+            else
+            {
+                xrLabel23.Visible = false;
+            }
+            // To keep Address and PAN together            
             if (op[0].L2_Name.ToString() == "")
             {
                 xrLabel139.Visible = false;
@@ -89,26 +94,34 @@ namespace AT.Print.PDF
             if (op[0].L5_Addr3.ToString() == "")
             {
                 xrLabel142.Visible = false;
-                xrLabel24.TopF = xrLabel142.TopF;
-            }
-
-            #region Disconnection Message
-            //Disconnection Messages Print
-            if (op[0].L1_DisconnectionMSGPrintingIMMEDIATE == "1")
-            {
-                xrDueDate.Text = "IMMEDIATE/";
-                xrDisconnectionDate.Text = "IMMEDIATE/";
-                xrImmediatelbl.Visible = true;
-                xrLabel20.Visible = true;
+                xrLabel31.TopF = xrLabel142.TopF;
+                xrLabel40.TopF = xrLabel31.BottomF;
+                xrLabel23.TopF = xrLabel40.BottomF;
             }
             else
             {
-                xrDueDate.Text = op[0].L7_Due_Date;
-                xrDisconnectionDate.Text = op[0].L10_DisconnDate;
-                xrDueDate.TextAlignment = TextAlignment.MiddleLeft;
-                xrDisconnectionDate.TextAlignment = TextAlignment.MiddleRight;
+                xrLabel31.TopF = xrLabel142.BottomF;
+                xrLabel40.TopF = xrLabel31.BottomF;
+                xrLabel23.TopF = xrLabel40.BottomF;
+            }
+
+            #region Excess Demand Print
+            //Excess Demand Print
+            if (op[0].L6_EXCESS_DEMAND == "0.00" || op[0].L6_EXCESS_DEMAND == " " || op[0].L6_EXCESS_DEMAND == "0")
+            {
+                xrlL6ExcessDemand.Visible = false;
             }
             #endregion
+
+
+
+
+
+
+
+
+
+
 
             string unit = "KW";
             if (!string.IsNullOrEmpty(op[0].L6_Kvah_Indicator) && op[0].L6_Kvah_Indicator == "1")
@@ -127,9 +140,9 @@ namespace AT.Print.PDF
                     {
                         if ((contractdemand * (decimal)0.746) >= (decimal)10)
                         {
-                            if (Convert.ToDecimal(op[0].L6_BILL_PF) >= (decimal)95)
+                            if (Convert.ToDecimal(op[0].L6_Avg_Power_Factor) >= (decimal)95)
                             {
-                                op[0].L6_BILL_PF = op[0].L6_BILL_PF + "(Lead)";
+                                op[0].L6_Avg_Power_Factor = op[0].L6_Avg_Power_Factor + "(Lead)";
                             }
                         }
                     }
@@ -137,9 +150,9 @@ namespace AT.Print.PDF
                     {
                         if (Math.Ceiling(contractdemand) >= (decimal)10.0)
                         {
-                            if (Convert.ToDecimal(op[0].L6_BILL_PF) >= (decimal)95)
+                            if (Convert.ToDecimal(op[0].L6_Avg_Power_Factor) >= (decimal)95)
                             {
-                                op[0].L6_BILL_PF = op[0].L6_BILL_PF + "(Lead)";
+                                op[0].L6_Avg_Power_Factor = op[0].L6_Avg_Power_Factor + "(Lead)";
                             }
                         }
                     }
@@ -156,10 +169,10 @@ namespace AT.Print.PDF
                     op[0].L6_EXCESS_DEMAND = op[0].L6_EXCESS_DEMAND + "(" + unit1 + ")";
                     op[0].L6_bill_demand = op[0].L6_bill_demand + "(" + unit1 + ")";
 
-                    xrLabel25.Text = "MD" + unit1;
-                    xrLabel26.Text = unit1 + "H";
-                    xrLabel67.Text = "MD" + unit1;
-                    xrLabel68.Text = unit1 + "H";
+                    met1_headingMDKW.Text = "MD" + unit1;
+                    met1_headingMDKW_1.Text = unit1 + "H";
+                    met2_headingMDKW.Text = "MD" + unit1;
+                    met2_headingMDKW_2.Text = unit1 + "H";
                 }
                 else
                 {
@@ -169,10 +182,10 @@ namespace AT.Print.PDF
                     op[0].L6_EXCESS_DEMAND = op[0].L6_EXCESS_DEMAND + "(" + unit1 + ")";
                     op[0].L6_bill_demand = op[0].L6_bill_demand + "(" + unit1 + ")";
 
-                    xrLabel25.Text = "MD" + unit1;
-                    xrLabel26.Text = unit1 + "H";
-                    xrLabel67.Text = "MD" + unit1;
-                    xrLabel68.Text = unit1 + "H";
+                    met1_headingMDKW.Text = "MD" + unit1;
+                    met1_headingMDKW_1.Text = unit1 + "H";
+                    met2_headingMDKW.Text = "MD" + unit1;
+                    met2_headingMDKW_2.Text = unit1 + "H";
                 }
             }
             else if (op[0].L6_MeasureContractDemand == "KW")
@@ -186,10 +199,10 @@ namespace AT.Print.PDF
                     op[0].L6_bill_demand = op[0].L6_bill_demand + "(" + unit1 + ")";
 
 
-                    xrLabel25.Text = "MD" + unit1;
-                    xrLabel26.Text = unit1 + "H";
-                    xrLabel67.Text = "MD" + unit1;
-                    xrLabel68.Text = unit1 + "H";
+                    met1_headingMDKW.Text = "MD" + unit1;
+                    met1_headingMDKW_1.Text = unit1 + "H";
+                    met2_headingMDKW.Text = "MD" + unit1;
+                    met2_headingMDKW_2.Text = unit1 + "H";
                 }
                 else
                 {
@@ -200,10 +213,10 @@ namespace AT.Print.PDF
                     op[0].L6_bill_demand = op[0].L6_bill_demand + "(" + unit1 + ")";
 
 
-                    xrLabel25.Text = "MD" + unit1;
-                    xrLabel26.Text = unit1 + "H";
-                    xrLabel67.Text = "MD" + unit1;
-                    xrLabel68.Text = unit1 + "H";
+                    met1_headingMDKW.Text = "MD" + unit1;
+                    met1_headingMDKW_1.Text = unit1 + "H";
+                    met2_headingMDKW.Text = "MD" + unit1;
+                    met2_headingMDKW_2.Text = unit1 + "H";
                 }
             }
             else if (op[0].L6_MeasureContractDemand == "KVA")
@@ -217,10 +230,10 @@ namespace AT.Print.PDF
                     op[0].L6_bill_demand = op[0].L6_bill_demand + "(" + unit1 + ")";
 
 
-                    xrLabel25.Text = "MD" + unit1;
-                    xrLabel26.Text = unit1 + "H";
-                    xrLabel67.Text = "MD" + unit1;
-                    xrLabel68.Text = unit1 + "H";
+                    met1_headingMDKW.Text = "MD" + unit1;
+                    met1_headingMDKW_1.Text = unit1 + "H";
+                    met2_headingMDKW.Text = "MD" + unit1;
+                    met2_headingMDKW_2.Text = unit1 + "H";
                 }
                 else
                 {
@@ -231,22 +244,13 @@ namespace AT.Print.PDF
                     op[0].L6_bill_demand = op[0].L6_bill_demand + "(" + unit1 + ")";
 
 
-                    xrLabel25.Text = "MD" + unit1;
-                    xrLabel26.Text = unit1 + "H";
-                    xrLabel67.Text = "MD" + unit1;
-                    xrLabel68.Text = unit1 + "H";
+                    met1_headingMDKW.Text = "MD" + unit1;
+                    met1_headingMDKW_1.Text = unit1 + "H";
+                    met2_headingMDKW.Text = "MD" + unit1;
+                    met2_headingMDKW_2.Text = unit1 + "H";
                 }
             }
 
-
-            #region Excess Demand Print
-            //Excess Demand Print
-            if (op[0].L6_EXCESS_DEMAND.Substring(0, 4) != "0.00")
-            {
-                xrlL6ExcessDemand.Text = op[0].L6_EXCESS_DEMAND;
-                xrlL6ExcessDemand.Visible = true;
-            }
-            #endregion
 
             #region Meter Change
 
@@ -255,10 +259,10 @@ namespace AT.Print.PDF
                 #region Meter 1 (below)
 
                 MeterSerial2.Text = op[0].L11_MTRSNO_1;
-                MdkvaPastLabel2.Text = op[0].L13_KVA_PASTREAD == "0.00" ? "0.00" : op[0].L13_KVA_PASTREAD == "" ? "" : op[0].L13_KVA_PASTREAD;
-                MdkvaPresLabel2.Text = op[0].L12_KVA_PRESREAD == "0.00" ? "0.00" : op[0].L12_KVA_PRESREAD == "" ? "" : op[0].L12_KVA_PRESREAD;
-                MdkvaMfLabel2.Text = op[0].L14_Multiplying_factor_KVA == "0.00" ? "0.00" : op[0].L14_Multiplying_factor_KVA == "" ? "" : op[0].L14_Multiplying_factor_KVA;
-                MdkvaTotalLabel2.Text = op[0].L15_KVA_UNITS == "0.00" ? "0.00" : op[0].L15_KVA_UNITS == "" ? "" : op[0].L15_KVA_UNITS;
+                met1_11.Text = op[0].L13_KVA_PASTREAD == "0.00" ? "0.00" : op[0].L13_KVA_PASTREAD == "" ? "" : op[0].L13_KVA_PASTREAD;
+                met1_21.Text = op[0].L12_KVA_PRESREAD == "0.00" ? "0.00" : op[0].L12_KVA_PRESREAD == "" ? "" : op[0].L12_KVA_PRESREAD;
+                met1_31.Text = op[0].L14_Multiplying_factor_KVA == "0.00" ? "0.00" : op[0].L14_Multiplying_factor_KVA == "" ? "" : op[0].L14_Multiplying_factor_KVA;
+                met1_41.Text = op[0].L15_KVA_UNITS == "0.00" ? "0.00" : op[0].L15_KVA_UNITS == "" ? "" : op[0].L15_KVA_UNITS;
 
                 Tod1Label2.Text = op[0].L16_TOD1_KVAH_Units;
                 Tod2Label2.Text = op[0].L16_TOD2_KVAH_Units;
@@ -268,17 +272,17 @@ namespace AT.Print.PDF
                 if (!string.IsNullOrEmpty(op[0].L6_Kvah_Indicator) && op[0].L6_Kvah_Indicator == "1")
                 {
 
-                    KvahPastLabel2.Text = op[0].L13_KVAH_PASTREAD == "0.00" ? "0.00" : op[0].L13_KVAH_PASTREAD == "" ? "" : op[0].L13_KVAH_PASTREAD;
-                    KvahPresLabel2.Text = op[0].L12_KVAH_PRESREAD == "0.00" ? "0.00" : op[0].L12_KVAH_PRESREAD == "" ? "" : op[0].L12_KVAH_PRESREAD;
-                    KvahMfLabel2.Text = op[0].L14_Multiplying_factor_KVAH == "0.00" ? "0.00" : op[0].L14_Multiplying_factor_KVAH == "" ? "" : op[0].L14_Multiplying_factor_KVAH;
-                    KvahTotalLabel2.Text = op[0].L15_KVAH_UNITS == "0.00" ? "0.00" : op[0].L15_KVAH_UNITS == "" ? "" : op[0].L15_KVAH_UNITS;
+                    met1_12.Text = op[0].L13_KVAH_PASTREAD == "0.00" ? "0.00" : op[0].L13_KVAH_PASTREAD == "" ? "" : op[0].L13_KVAH_PASTREAD;
+                    met1_22.Text = op[0].L12_KVAH_PRESREAD == "0.00" ? "0.00" : op[0].L12_KVAH_PRESREAD == "" ? "" : op[0].L12_KVAH_PRESREAD;
+                    met1_32.Text = op[0].L14_Multiplying_factor_KVAH == "0.00" ? "0.00" : op[0].L14_Multiplying_factor_KVAH == "" ? "" : op[0].L14_Multiplying_factor_KVAH;
+                    met1_42.Text = op[0].L15_KVAH_UNITS == "0.00" ? "0.00" : op[0].L15_KVAH_UNITS == "" ? "" : op[0].L15_KVAH_UNITS;
                 }
                 else
                 {
-                    KvahPastLabel2.Text = op[0].L13_KWH_PASTREAD == "0.00" ? "0.00" : op[0].L13_KWH_PASTREAD == "" ? "" : op[0].L13_KWH_PASTREAD;
-                    KvahPresLabel2.Text = op[0].L12_KWH_PRESREAD == "0.00" ? "0.00" : op[0].L12_KWH_PRESREAD == "" ? "" : op[0].L12_KWH_PRESREAD;
-                    KvahMfLabel2.Text = op[0].L14_Multiplying_factor_KWH == "0.00" ? "0.00" : op[0].L14_Multiplying_factor_KWH == "" ? "" : op[0].L14_Multiplying_factor_KWH;
-                    KvahTotalLabel2.Text = op[0].L15_KWH_UNITS == "0.00" ? "0.00" : op[0].L15_KWH_UNITS == "" ? "" : op[0].L15_KWH_UNITS;
+                    met1_12.Text = op[0].L13_KWH_PASTREAD == "0.00" ? "0.00" : op[0].L13_KWH_PASTREAD == "" ? "" : op[0].L13_KWH_PASTREAD;
+                    met1_22.Text = op[0].L12_KWH_PRESREAD == "0.00" ? "0.00" : op[0].L12_KWH_PRESREAD == "" ? "" : op[0].L12_KWH_PRESREAD;
+                    met1_32.Text = op[0].L14_Multiplying_factor_KWH == "0.00" ? "0.00" : op[0].L14_Multiplying_factor_KWH == "" ? "" : op[0].L14_Multiplying_factor_KWH;
+                    met1_42.Text = op[0].L15_KWH_UNITS == "0.00" ? "0.00" : op[0].L15_KWH_UNITS == "" ? "" : op[0].L15_KWH_UNITS;
 
                 }
 
@@ -289,10 +293,10 @@ namespace AT.Print.PDF
                 #region Meter 2 (above)
 
                 MeterSerial1.Text = op[0].L11_MTRSNO_2_IF_AVAILABLE;
-                MdkvaPastLabel.Text = op[0].L19_KVA_PASTREAD == "0.00" ? "0.00" : op[0].L19_KVA_PASTREAD == "" ? "" : op[0].L19_KVA_PASTREAD;
-                MdkvaPresLabel.Text = op[0].L18_KVA_PRESREAD == "0.00" ? "0.00" : op[0].L18_KVA_PRESREAD == "" ? "" : op[0].L18_KVA_PRESREAD;
-                MdkvaMfLabel.Text = op[0].L20_Multiplying_Factor_KVA == "0.00" ? "0.00" : op[0].L20_Multiplying_Factor_KVA == "" ? "" : op[0].L20_Multiplying_Factor_KVA;
-                MdkvaTotalLabel.Text = op[0].L21_KVA_UNITS == "0.00" ? "0.00" : op[0].L21_KVA_UNITS == "" ? "" : op[0].L21_KVA_UNITS;
+                met2_11.Text = op[0].L19_KVA_PASTREAD == "0.00" ? "0.00" : op[0].L19_KVA_PASTREAD == "" ? "" : op[0].L19_KVA_PASTREAD;
+                met2_21.Text = op[0].L18_KVA_PRESREAD == "0.00" ? "0.00" : op[0].L18_KVA_PRESREAD == "" ? "" : op[0].L18_KVA_PRESREAD;
+                met2_31.Text = op[0].L20_Multiplying_Factor_KVA == "0.00" ? "0.00" : op[0].L20_Multiplying_Factor_KVA == "" ? "" : op[0].L20_Multiplying_Factor_KVA;
+                met2_41.Text = op[0].L21_KVA_UNITS == "0.00" ? "0.00" : op[0].L21_KVA_UNITS == "" ? "" : op[0].L21_KVA_UNITS;
 
                 Tod1Label.Text = op[0].L22_TOD1_KVAH_Units;
                 Tod2Label.Text = op[0].L22_TOD2_KVAH_Units;
@@ -304,32 +308,32 @@ namespace AT.Print.PDF
                 if (!string.IsNullOrEmpty(op[0].L6_Kvah_Indicator) && op[0].L6_Kvah_Indicator == "1")
                 {
 
-                    KvahPastLabel.Text = op[0].L19_KVAH_PASTREAD == "0.00" ? "0.00" : op[0].L19_KVAH_PASTREAD == "" ? "" : op[0].L19_KVAH_PASTREAD;
-                    KvahPresLabel.Text = op[0].L18_KVAH_PRESREAD == "0.00" ? "0.00" : op[0].L18_KVAH_PRESREAD == "" ? "" : op[0].L18_KVAH_PRESREAD;
-                    KvahMfLabel.Text = op[0].L20_Multiplying_Factor_KVAH == "0.00" ? "0.00" : op[0].L20_Multiplying_Factor_KVAH == "" ? "" : op[0].L20_Multiplying_Factor_KVAH;
-                    KvahTotalLabel.Text = op[0].L21_KVAH_UNITS == "0.00" ? "0.00" : op[0].L21_KVAH_UNITS == "" ? "" : op[0].L21_KVAH_UNITS;
+                    met2_12.Text = op[0].L19_KVAH_PASTREAD == "0.00" ? "0.00" : op[0].L19_KVAH_PASTREAD == "" ? "" : op[0].L19_KVAH_PASTREAD;
+                    met2_22.Text = op[0].L18_KVAH_PRESREAD == "0.00" ? "0.00" : op[0].L18_KVAH_PRESREAD == "" ? "" : op[0].L18_KVAH_PRESREAD;
+                    met2_32.Text = op[0].L20_Multiplying_Factor_KVAH == "0.00" ? "0.00" : op[0].L20_Multiplying_Factor_KVAH == "" ? "" : op[0].L20_Multiplying_Factor_KVAH;
+                    met2_42.Text = op[0].L21_KVAH_UNITS == "0.00" ? "0.00" : op[0].L21_KVAH_UNITS == "" ? "" : op[0].L21_KVAH_UNITS;
                 }
                 else
                 {
-                    KvahPastLabel.Text = op[0].L19_KWH_PASTREAD == "0.00" ? "0.00" : op[0].L19_KWH_PASTREAD == "" ? "" : op[0].L19_KWH_PASTREAD;
-                    KvahPresLabel.Text = op[0].L18_KWH_PRESREAD == "0.00" ? "0.00" : op[0].L18_KWH_PRESREAD == "" ? "" : op[0].L18_KWH_PRESREAD;
-                    KvahMfLabel.Text = op[0].L20_Multiplying_Factor_KWH == "0.00" ? "0.00" : op[0].L20_Multiplying_Factor_KWH == "" ? "" : op[0].L20_Multiplying_Factor_KWH;
-                    KvahTotalLabel.Text = op[0].L21_KWH_UNITS == "0.00" ? "0.00" : op[0].L21_KWH_UNITS == "" ? "" : op[0].L21_KWH_UNITS;
+                    met2_12.Text = op[0].L19_KWH_PASTREAD == "0.00" ? "0.00" : op[0].L19_KWH_PASTREAD == "" ? "" : op[0].L19_KWH_PASTREAD;
+                    met2_22.Text = op[0].L18_KWH_PRESREAD == "0.00" ? "0.00" : op[0].L18_KWH_PRESREAD == "" ? "" : op[0].L18_KWH_PRESREAD;
+                    met2_32.Text = op[0].L20_Multiplying_Factor_KWH == "0.00" ? "0.00" : op[0].L20_Multiplying_Factor_KWH == "" ? "" : op[0].L20_Multiplying_Factor_KWH;
+                    met2_42.Text = op[0].L21_KWH_UNITS == "0.00" ? "0.00" : op[0].L21_KWH_UNITS == "" ? "" : op[0].L21_KWH_UNITS;
                 }
                 #endregion
 
             }
             else
             {
-                MeterXRPanel2.Visible = false;
-                DebitNoteLabel.TopF = MeterDetailTotLabel.BottomF;
-                MessagesPanel.TopF = DebitNoteLabel.BottomF;
+              //  MeterXRPanel2.Visible = false;
+                //DebitNoteLabel.TopF = MeterDetailTotLabel.BottomF;
+               // MessagesPanel.TopF = DebitNoteLabel.BottomF;
 
                 MeterSerial1.Text = op[0].L11_MTRSNO_1;
-                MdkvaPastLabel.Text = op[0].L13_KVA_PASTREAD == "0.00" ? "0.00" : op[0].L13_KVA_PASTREAD == "" ? "" : op[0].L13_KVA_PASTREAD;
-                MdkvaPresLabel.Text = op[0].L12_KVA_PRESREAD == "0.00" ? "0.00" : op[0].L12_KVA_PRESREAD == "" ? "" : op[0].L12_KVA_PRESREAD;
-                MdkvaMfLabel.Text = op[0].L14_Multiplying_factor_KVA == "0.00" ? "0.00" : op[0].L14_Multiplying_factor_KVA == "" ? "" : op[0].L14_Multiplying_factor_KVA;
-                MdkvaTotalLabel.Text = op[0].L15_KVA_UNITS == "0.00" ? "0.00" : op[0].L15_KVA_UNITS == "" ? "" : op[0].L15_KVA_UNITS;
+                met2_11.Text = op[0].L13_KVA_PASTREAD == "0.00" ? "0.00" : op[0].L13_KVA_PASTREAD == "" ? "" : op[0].L13_KVA_PASTREAD;
+                met2_21.Text = op[0].L12_KVA_PRESREAD == "0.00" ? "0.00" : op[0].L12_KVA_PRESREAD == "" ? "" : op[0].L12_KVA_PRESREAD;
+                met2_31.Text = op[0].L14_Multiplying_factor_KVA == "0.00" ? "0.00" : op[0].L14_Multiplying_factor_KVA == "" ? "" : op[0].L14_Multiplying_factor_KVA;
+                met2_41.Text = op[0].L15_KVA_UNITS == "0.00" ? "0.00" : op[0].L15_KVA_UNITS == "" ? "" : op[0].L15_KVA_UNITS;
 
                 Tod1Label.Text = op[0].L16_TOD1_KVAH_Units;
                 Tod2Label.Text = op[0].L16_TOD2_KVAH_Units;
@@ -338,17 +342,17 @@ namespace AT.Print.PDF
 
                 if (!string.IsNullOrEmpty(op[0].L6_Kvah_Indicator) && op[0].L6_Kvah_Indicator == "1")
                 {
-                    KvahPastLabel.Text = op[0].L13_KVAH_PASTREAD == "0.00" ? "0.00" : op[0].L13_KVAH_PASTREAD == "" ? "" : op[0].L13_KVAH_PASTREAD;
-                    KvahPresLabel.Text = op[0].L12_KVAH_PRESREAD == "0.00" ? "0.00" : op[0].L12_KVAH_PRESREAD == "" ? "" : op[0].L12_KVAH_PRESREAD;
-                    KvahMfLabel.Text = op[0].L14_Multiplying_factor_KVAH == "0.00" ? "0.00" : op[0].L14_Multiplying_factor_KVAH == "" ? "" : op[0].L14_Multiplying_factor_KVAH;
-                    KvahTotalLabel.Text = op[0].L15_KVAH_UNITS == "0.00" ? "0.00" : op[0].L15_KVAH_UNITS == "" ? "" : op[0].L15_KVAH_UNITS;
+                    met2_12.Text = op[0].L13_KVAH_PASTREAD == "0.00" ? "0.00" : op[0].L13_KVAH_PASTREAD == "" ? "" : op[0].L13_KVAH_PASTREAD;
+                    met2_22.Text = op[0].L12_KVAH_PRESREAD == "0.00" ? "0.00" : op[0].L12_KVAH_PRESREAD == "" ? "" : op[0].L12_KVAH_PRESREAD;
+                    met2_32.Text = op[0].L14_Multiplying_factor_KVAH == "0.00" ? "0.00" : op[0].L14_Multiplying_factor_KVAH == "" ? "" : op[0].L14_Multiplying_factor_KVAH;
+                    met2_42.Text = op[0].L15_KVAH_UNITS == "0.00" ? "0.00" : op[0].L15_KVAH_UNITS == "" ? "" : op[0].L15_KVAH_UNITS;
                 }
                 else
                 {
-                    KvahPastLabel.Text = op[0].L13_KWH_PASTREAD == "0.00" ? "0.00" : op[0].L13_KWH_PASTREAD == "" ? "" : op[0].L13_KWH_PASTREAD;
-                    KvahPresLabel.Text = op[0].L12_KWH_PRESREAD == "0.00" ? "0.00" : op[0].L12_KWH_PRESREAD == "" ? "" : op[0].L12_KWH_PRESREAD;
-                    KvahMfLabel.Text = op[0].L14_Multiplying_factor_KWH == "0.00" ? "0.00" : op[0].L14_Multiplying_factor_KWH == "" ? "" : op[0].L14_Multiplying_factor_KWH;
-                    KvahTotalLabel.Text = op[0].L15_KWH_UNITS == "0.00" ? "0.00" : op[0].L15_KWH_UNITS == "" ? "" : op[0].L15_KWH_UNITS;
+                    met2_12.Text = op[0].L13_KWH_PASTREAD == "0.00" ? "0.00" : op[0].L13_KWH_PASTREAD == "" ? "" : op[0].L13_KWH_PASTREAD;
+                    met2_22.Text = op[0].L12_KWH_PRESREAD == "0.00" ? "0.00" : op[0].L12_KWH_PRESREAD == "" ? "" : op[0].L12_KWH_PRESREAD;
+                    met2_32.Text = op[0].L14_Multiplying_factor_KWH == "0.00" ? "0.00" : op[0].L14_Multiplying_factor_KWH == "" ? "" : op[0].L14_Multiplying_factor_KWH;
+                    met2_42.Text = op[0].L15_KWH_UNITS == "0.00" ? "0.00" : op[0].L15_KWH_UNITS == "" ? "" : op[0].L15_KWH_UNITS;
 
                 }
 
@@ -376,686 +380,91 @@ namespace AT.Print.PDF
             }
 
             op[0].L6_SERVDET_SANC_LOAD = op[0].L6_SERVDET_SANC_LOAD + "(" + op[0].L6_MeasureContractDemand + ")";
+            xrLblAmount.Text = "₹" + ToDecimal(op[0].L8_AmountPayableBeforeDueDate).ToString("G");
+            xrLabelTotalAmt.BringToFront();
+
+            xrLabel13.BringToFront();
+            xrLabel5.BringToFront();
+            xrLabel19.BringToFront();
 
 
-            #region Bill Details
+            #region pieChart
+            //PieChart//
+            decimal energyCharge = ToDecimal(op[0].L8_EnergyCharge);
+            decimal fixedCharge = ToDecimal(op[0].L8_FixedCharge);
+            decimal electricityDuty = ToDecimal(op[0].L8_GovTax);
+            decimal excessDemandCharge = ToDecimal(op[0].L10_DmdChgPenalty);
 
-            //Excess Demand Surcharge Print
-            if (op[0].L10_DmdChgPenalty == "0.00" || string.IsNullOrEmpty(op[0].L10_DmdChgPenalty))
-            {
-                bd_ExcessDemandCharges.Visible = false;
-                bd_ExcessDemandChargesHindi.Visible = false;
-                bd_ExcessDemandChargesValue.Visible = false;
+            xrChartPie.Series.Clear();
+            xrChartPie.Legend.Visibility = DevExpress.Utils.DefaultBoolean.False;
 
-                bd_ExcessDemandCharges.TopF = bd_DemandCharge.TopF;
-                bd_ExcessDemandChargesHindi.TopF = bd_DemandCharge.TopF;
-                bd_ExcessDemandChargesValue.TopF = bd_DemandCharge.TopF;
-            }
+            Series pieSeries = new Series("Major Bill Components", ViewType.Doughnut);
 
+            pieSeries.Points.Add(new SeriesPoint("Electricity Duty", electricityDuty));
+            pieSeries.Points.Add(new SeriesPoint("Energy Charges", energyCharge));
+            pieSeries.Points.Add(new SeriesPoint("Excess Demand Charge", excessDemandCharge));
+            pieSeries.Points.Add(new SeriesPoint("Fixed Charges", fixedCharge));
 
-            bd_EnergyCharge.TopF = bd_ExcessDemandChargesValue.BottomF;
-            bd_EnergyChargeHindi.TopF = bd_ExcessDemandChargesValue.BottomF;
-            bd_EnergyChargeValues.TopF = bd_ExcessDemandChargesValue.BottomF;
+            DoughnutSeriesLabel label = (DoughnutSeriesLabel)pieSeries.Label;
+            label.Position = PieSeriesLabelPosition.TwoColumns;
 
-            bd_TODCharges.TopF = bd_EnergyCharge.BottomF;
-            bd_TODChargesHindi.TopF = bd_EnergyChargeHindi.BottomF;
-            bd_TODChargesValue.TopF = bd_EnergyChargeValues.BottomF;
+            label.ResolveOverlappingMode = ResolveOverlappingMode.Default;
+            label.ResolveOverlappingMinIndent = 15;
 
-            bd_AcCharge.TopF = bd_TODCharges.BottomF;
-            bd_AcChargeHindi.TopF = bd_TODChargesHindi.BottomF;
-            bd_AcChargeValue.TopF = bd_TODChargesValue.BottomF;
+            label.TextPattern = "{A}\n₹{V:G}";
+            label.TextColor = Color.Black;
+            label.Font = new Font("Manrope", 5);
+            label.BackColor = Color.Transparent;
+            label.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
 
-            //AC Charge Print
-            if (op[0].L8_ACCharge == "0.00" || string.IsNullOrEmpty(op[0].L8_ACCharge))
-            {
-                bd_AcCharge.Visible = false;
-                bd_AcChargeHindi.Visible = false;
-                bd_AcChargeValue.Visible = false;
-
-                bd_AcCharge.TopF = bd_TODCharges.TopF;
-                bd_AcChargeHindi.TopF = bd_TODCharges.TopF;
-                bd_AcChargeValue.TopF = bd_TODCharges.TopF;
+            DoughnutSeriesView view = (DoughnutSeriesView)pieSeries.View;
+            view.HoleRadiusPercent = 75;
+            view.Border.Visibility = DevExpress.Utils.DefaultBoolean.False;
 
 
-            }
 
-            bd_AdjustmentMinimumCharges.TopF = bd_AcCharge.BottomF;
-            bd_AdjustmentMinimumChargesHindi.TopF = bd_AcCharge.BottomF;
-            bd_AdjustmentMinimumChargesValue.TopF = bd_AcCharge.BottomF;
+            pieSeries.Points[0].Color = Color.FromArgb(208, 208, 207);  // Duty
+            pieSeries.Points[1].Color = Color.FromArgb(151, 151, 151);   // Energy
+            pieSeries.Points[2].Color = Color.FromArgb(179, 180, 180); // Excess
+            pieSeries.Points[3].Color = Color.FromArgb(125, 125, 124);  // Fixed
+            xrChartPie.Series.Add(pieSeries);
 
-            //AdjustmentMinimumCharges Print
-            if (op[0].L8_MinCharge == "0.00" || string.IsNullOrEmpty(op[0].L8_MinCharge))
-            {
-                bd_AdjustmentMinimumCharges.Visible = false;
-                bd_AdjustmentMinimumChargesHindi.Visible = false;
-                bd_AdjustmentMinimumChargesValue.Visible = false;
-
-                bd_AdjustmentMinimumCharges.TopF = bd_AcCharge.TopF;
-                bd_AdjustmentMinimumChargesHindi.TopF = bd_AcCharge.TopF;
-                bd_AdjustmentMinimumChargesValue.TopF = bd_AcCharge.TopF;
-            }
-
-            bd_ElectricityDuty.TopF = bd_AdjustmentMinimumCharges.BottomF;
-            bd_ElectricityDutyHindi.TopF = bd_AdjustmentMinimumCharges.BottomF;
-            bd_ElectricityDutyValues.TopF = bd_AdjustmentMinimumCharges.BottomF;
-
-
-            bd_RlSC1.TopF = bd_ElectricityDuty.BottomF;
-            bd_RlSC1Hindi.TopF = bd_ElectricityDuty.BottomF;
-            bd_RlSC1Value.TopF = bd_ElectricityDuty.BottomF;
-            bd_RlSC1Rate.TopF = bd_ElectricityDuty.BottomF;
-
-            bd_RlSC2.TopF = bd_RlSC1.BottomF;
-            bd_RlSC2Hindi.TopF = bd_RlSC1.BottomF;
-            bd_RlSC2Value.TopF = bd_RlSC1.BottomF;
-            bd_RlSC2Rate.TopF = bd_RlSC1.BottomF;
-
-            bd_PowerFectorCharges.TopF = bd_RlSC2.BottomF;
-            bd_PowerFectorChargesHindi.TopF = bd_RlSC2.BottomF;
-            bd_PowerFectorChargesValues.TopF = bd_RlSC2.BottomF;
-
-            //Power Factor Charges
-            if (op[0].L1_PowerFactorMSGIndicator == "0.00" || string.IsNullOrEmpty(op[0].L1_PowerFactorMSGIndicator))
-            {
-                bd_PowerFectorCharges.Visible = false;
-                bd_PowerFectorChargesHindi.Visible = false;
-                bd_PowerFectorChargesValues.Visible = false;
-
-                bd_PowerFectorCharges.TopF = bd_RlSC2.TopF;
-                bd_PowerFectorChargesHindi.TopF = bd_RlSC2Hindi.TopF;
-                bd_PowerFectorChargesValues.TopF = bd_RlSC2Value.TopF;
-            }
-            bd_OtherCharges.TopF = bd_PowerFectorCharges.BottomF;
-            bd_OtherChargesValue.TopF = bd_PowerFectorCharges.BottomF;
-            bd_OtherChargesHindi.TopF = bd_PowerFectorCharges.BottomF;
-
-            //Other Charges Print
-            if (op[0].L8_ServdetTotbBdtOthr == "0.00" || string.IsNullOrEmpty(op[0].L8_ServdetTotbBdtOthr))
-            {
-                bd_OtherCharges.Visible = false;
-                bd_OtherChargesHindi.Visible = false;
-                bd_OtherChargesValue.Visible = false;
-
-                bd_OtherCharges.TopF = bd_PowerFectorCharges.TopF;
-                bd_OtherChargesValue.TopF = bd_PowerFectorCharges.TopF;
-                bd_OtherChargesHindi.TopF = bd_PowerFectorCharges.TopF;
-            }
-            Subsidy.TopF = bd_OtherCharges.BottomF;
-            SubsidyHindi.TopF = bd_OtherCharges.BottomF;
-            SubsidyValue.TopF = bd_OtherCharges.BottomF;
-
-
-            if (string.IsNullOrEmpty(op[0].L8_Subsidy_Charges) || op[0].L8_Subsidy_Charges == "0.00")
-            {
-                Subsidy.Visible = false;
-                SubsidyHindi.Visible = false;
-                SubsidyValue.Visible = false;
-
-                Subsidy.TopF = bd_OtherCharges.TopF;
-                SubsidyHindi.TopF = bd_OtherCharges.TopF;
-                SubsidyValue.TopF = bd_OtherCharges.TopF;
-
-
-            }
-            GreenTariff.TopF = Subsidy.BottomF;
-            GreenTariffHindi.TopF = Subsidy.BottomF;
-            GreenTariffValue.TopF = Subsidy.BottomF;
-
-            if (op[0].L8_GreenTariff_Charges == "0.00" || string.IsNullOrEmpty(op[0].L8_GreenTariff_Charges))
-            {
-                GreenTariff.Visible = false;
-                GreenTariffHindi.Visible = false;
-                GreenTariffValue.Visible = false;
-
-                GreenTariff.TopF = Subsidy.TopF;
-                GreenTariffHindi.TopF = Subsidy.TopF;
-                GreenTariffValue.TopF = Subsidy.TopF;
-            }
-
-            lblFPPA.TopF = GreenTariff.BottomF;
-            lblFPPAHindi.TopF = GreenTariff.BottomF;
-            FPPASurchargeValue.TopF = GreenTariff.BottomF;
-
-            if (op[0].L10_FPPASurcharge == "0.00" || string.IsNullOrEmpty(op[0].L10_FPPASurcharge))
-            {
-                lblFPPA.Visible = false;
-                lblFPPAHindi.Visible = false;
-                FPPASurchargeValue.Visible = false;
-            }
-
-
-                if ((op[0].L8_ServdetTotbBdtOthr == "0.00" || string.IsNullOrEmpty(op[0].L8_ServdetTotbBdtOthr)) && (op[0].L1_PowerFactorMSGIndicator == "0.00" || string.IsNullOrEmpty(op[0].L1_PowerFactorMSGIndicator)))
-            {
-
-                Subsidy.TopF = bd_RlSC2.BottomF;
-                SubsidyHindi.TopF = bd_RlSC2.BottomF;
-                SubsidyValue.TopF = bd_RlSC2.BottomF;
-            }
-
-            //Late Payment Surcharge
-            if (op[0].L9_Int_Tpl == "0.00" || string.IsNullOrEmpty(op[0].L9_Int_Tpl))
-            {
-                LPSC.Visible = false;
-                LPSCHindi.Visible = false;
-                LPSCValue.Visible = false;
-            }
+            decimal tValue = energyCharge + fixedCharge + electricityDuty + excessDemandCharge;
+            xrLabelTotalAmt.Text = "₹" + tValue.ToString();
             #endregion
 
-            var messageFromFile = 0;
+            xrChart1.Series[0].DataSource = op[0].KVAHgrph;
+            xrChart1.Series[0].ArgumentScaleType = ScaleType.Qualitative;
+            xrChart1.Series[0].ArgumentDataMember = "MonthYear";
+            xrChart1.Series[0].Label.TextOrientation = TextOrientation.BottomToTop;
+            xrChart1.Series[0].ValueScaleType = ScaleType.Numerical;
+            xrChart1.Series[0].ValueDataMembers.AddRange(new string[] { "Value" });
+            xrChart2.Series[0].DataSource = op[0].KVAgrph;
+            xrChart2.Series[0].ArgumentScaleType = ScaleType.Qualitative;
+            xrChart2.Series[0].ArgumentDataMember = "MonthYear";
+            xrChart2.Series[0].Label.TextOrientation = TextOrientation.BottomToTop;
+            xrChart2.Series[0].ValueScaleType = ScaleType.Numerical;
+            xrChart2.Series[0].ValueDataMembers.AddRange(new string[] { "Value" });
+            xrChart2.WidthF = xrChart1.WidthF;
 
-            #region File Messages
-
-            if (!string.IsNullOrEmpty(op[0].L26_MESSAGE1))
-            {
-                messageFromFile++;
-                XRLabel xrMessage1 = new XRLabel
-                {
-                    Font = new DXFont("DIN Pro Regular", 8),
-                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                    Text = op[0].L26_MESSAGE1,
-                    WordWrap = false,
-                    AutoWidth = true,
-                    KeepTogether = true,
-                    HeightF = 2,
-                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                };
-                MessagesPanel.Controls.Add(xrMessage1);
-                adjustMessages(xrMessage1);
-
-            }
-            if (!string.IsNullOrEmpty(op[0].L27_MESSAGE2))
-            {
-                messageFromFile++;
-                XRLabel xrMessage2 = new XRLabel
-                {
-                    Font = new DXFont("DIN Pro Regular", 8),
-                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                    Text = op[0].L27_MESSAGE2,
-                    WordWrap = false,
-                    AutoWidth = true,
-                    KeepTogether = true,
-                    HeightF = 2,
-                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                };
-                MessagesPanel.Controls.Add(xrMessage2);
-                adjustMessages(xrMessage2);
-
-            }
-            if (!string.IsNullOrEmpty(op[0].L28_MESSAGE3))
-            {
-                messageFromFile++;
-                XRLabel xrMessage3 = new XRLabel
-                {
-                    Font = new DXFont("DIN Pro Regular", 8),
-                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                    Text = op[0].L28_MESSAGE3,
-                    WordWrap = false,
-                    AutoWidth = true,
-                    KeepTogether = true,
-                    HeightF = 2,
-                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                };
-                MessagesPanel.Controls.Add(xrMessage3);
-                adjustMessages(xrMessage3);
-
-            }
-            if (!string.IsNullOrEmpty(op[0].L29_MESSAGE4))
-            {
-                messageFromFile++;
-                XRLabel xrMessage4 = new XRLabel
-                {
-                    Font = new DXFont("DIN Pro Regular", 8),
-                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                    Text = op[0].L29_MESSAGE4,
-                    WordWrap = false,
-                    AutoWidth = true,
-                    KeepTogether = true,
-                    HeightF = 2,
-                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                };
-                MessagesPanel.Controls.Add(xrMessage4);
-                adjustMessages(xrMessage4);
-
-            }
-            if (!string.IsNullOrEmpty(op[0].L30_MESSAGE5))
-            {
-                messageFromFile++;
-                XRLabel xrMessage5 = new XRLabel
-                {
-                    Font = new DXFont("DIN Pro Regular", 8),
-                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                    Text = op[0].L30_MESSAGE5,
-                    WordWrap = false,
-                    AutoWidth = true,
-                    KeepTogether = true,
-                    HeightF = 2,
-                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                };
-                MessagesPanel.Controls.Add(xrMessage5);
-                adjustMessages(xrMessage5);
-
-            }
-            if (!string.IsNullOrEmpty(op[0].L31_MESSAGE6))
-            {
-                messageFromFile++;
-                XRLabel xrMessage6 = new XRLabel
-                {
-                    Font = new DXFont("DIN Pro Regular", 8),
-                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                    Text = op[0].L31_MESSAGE6,
-                    WordWrap = false,
-                    AutoWidth = true,
-                    KeepTogether = true,
-                    HeightF = 2,
-                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                };
-                MessagesPanel.Controls.Add(xrMessage6);
-                adjustMessages(xrMessage6);
-
-            }
-            #endregion
-
-            #region Custom Messages
-            var totalMessages = messageFromFile;
-            if (!String.IsNullOrEmpty(op[0].L6_LT_Metering_Flag))
-            {
-
-                if (!IsMessageLimitExceeds(totalMessages))
-                {
-                    totalMessages++;
-                    XRLabel xrMessageTheftAmount = new XRLabel
-                    {
-                        Font = new DXFont("DIN Pro Regular", 8),
-                        TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                        Text = "*" + getMessage(LoadStaticData._EnglishMessage, "BRDCST3"),
-
-                        //Text = string.Format("*" + getMessage(LoadStaticData._EnglishMessage, "BRDCST3"), op[0].L10_TheftAmount.Replace('.', '-')),
-                        WordWrap = false,
-                        AutoWidth = true,
-                        KeepTogether = true,
-                        HeightF = 1,
-                        Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                    };
-
-
-                    MessagesPanel.Controls.Add(xrMessageTheftAmount);
-                    adjustMessages(xrMessageTheftAmount);
-                }
-            }
-
-
-            if (!string.IsNullOrEmpty(op[0].L1_DisconnectionMSGPrintingIMMEDIATE) && op[0].L1_DisconnectionMSGPrintingIMMEDIATE != "0")
-            {
-                if (!IsMessageLimitExceeds(totalMessages))
-                {
-                    totalMessages++;
-                    XRLabel xrMessageDisconnection = new XRLabel
-                    {
-                        Font = new DXFont("Kruti Dev 010", 9),
-                        TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                        Text = getMessage(LoadStaticData._HindiMessage, "IDC"),
-                        WordWrap = false,
-                        AutoWidth = true,
-                        KeepTogether = true,
-                        HeightF = 1,
-                        Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                    };
-                    MessagesPanel.Controls.Add(xrMessageDisconnection);
-                    adjustMessages(xrMessageDisconnection);
-                }
-            }
-
-            //if (!string.IsNullOrEmpty(op[0].L10_TheftAmount) && op[0].L10_TheftAmount != "0.00")
-            //{
-            //    if (!IsMessageLimitExceeds(totalMessages))
-            //    {
-            //        totalMessages++;
-            //        XRLabel xrMessageTheftAmount = new XRLabel
-            //        {
-            //            Font = new DXFont("Kruti Dev 010", 10),
-            //            TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-            //            Text = string.Format(getMessage(LoadStaticData._HindiMessage, "TFA"), op[0].L10_TheftAmount.Replace('.', '-')),
-            //            WordWrap = false,
-            //            AutoWidth = true,
-            //            KeepTogether = true,
-            //            HeightF = 1,
-            //            Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-            //        };
-
-
-            //        MessagesPanel.Controls.Add(xrMessageTheftAmount);
-            //        adjustMessages(xrMessageTheftAmount);
-            //    }
-            //}
-
-            if (!string.IsNullOrEmpty(op[0].L10_TotArrUPPCLIntUPPCLIntArrUPPCL) && !Convert.ToDecimal(op[0].L10_TotArrUPPCLIntUPPCLIntArrUPPCL).Equals(decimal.Zero))
-            {
-
-                if (!IsMessageLimitExceeds(totalMessages))
-                {
-                    totalMessages++;
-                    XRLabel xrMessageTheftAmount = new XRLabel
-                    {
-                        Font = new DXFont("Kruti Dev 010", 9),
-                        TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                        Text = string.Format(getMessage(LoadStaticData._HindiMessage, "DAD"), op[0].L10_TheftAmount),
-                        WordWrap = false,
-                        AutoWidth = true,
-                        KeepTogether = true,
-                        HeightF = 1,
-                        Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                    };
-
-
-                    MessagesPanel.Controls.Add(xrMessageTheftAmount);
-                    adjustMessages(xrMessageTheftAmount);
-                }
-            }
-
-            if (!string.IsNullOrEmpty(op[0].L8_ParkingAmount) && !Convert.ToDecimal(op[0].L8_ParkingAmount).Equals(decimal.Zero))
-            {
-                xrLabel21.Visible = true;
-            }
-
-            if (!string.IsNullOrEmpty(op[0].L1_BillingCode))
-            {
-                if (op[0].L1_BillingCode == "3000")
-                {
-                    if (!IsMessageLimitExceeds(totalMessages))
-                    {
-                        totalMessages++;
-                        decimal totalUnits = decimal.Zero;
-                        if (!string.IsNullOrEmpty(op[0].L6_Kvah_Indicator) && op[0].L6_Kvah_Indicator == "1")
-                        {
-                            if (!string.IsNullOrEmpty(op[0].L15_KVAH_UNITS))
-                            {
-                                totalUnits += Convert.ToDecimal(op[0].L15_KVAH_UNITS);
-                            }
-
-
-                            if (!string.IsNullOrEmpty(op[0].L21_KVAH_UNITS))
-                            {
-                                totalUnits += Convert.ToDecimal(op[0].L21_KVAH_UNITS);
-                            }
-
-                        }
-                        else
-                        {
-
-                            if (!string.IsNullOrEmpty(op[0].L15_KWH_UNITS))
-                            {
-                                totalUnits += Convert.ToDecimal(op[0].L15_KWH_UNITS);
-                            }
-
-
-                            if (!string.IsNullOrEmpty(op[0].L21_KWH_UNITS))
-                            {
-                                totalUnits += Convert.ToDecimal(op[0].L21_KWH_UNITS);
-                            }
-
-
-                        }
-
-
-
-
-                        var PrevReadDt = ChangeMonthToHindi(op[0].L7_PrevReadDt);
-                        var ReadDt = ChangeMonthToHindi(op[0].L7_ReaDt);
-
-                        XRLabel xrMessageTheftAmount = new XRLabel
-                        {
-                            Font = new DXFont("Kruti Dev 010", 9),
-                            TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                            Text = string.Format(getMessage(LoadStaticData._HindiMessage, "AB1"), totalUnits.ToString().Replace(".", "-"), PrevReadDt.Replace("-", "&"), ReadDt.Replace("-", "&"), op[0].L10_Mode + " fnu"),
-                            WordWrap = false,
-                            AutoWidth = true,
-                            KeepTogether = true,
-                            HeightF = 1,
-                            Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                        };
-
-
-                        MessagesPanel.Controls.Add(xrMessageTheftAmount);
-                        adjustMessages(xrMessageTheftAmount);
-
-                        XRLabel xrAB2Msg = new XRLabel
-                        {
-                            Font = new DXFont("Kruti Dev 010", 9),
-                            TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                            Text = string.Format(getMessage(LoadStaticData._HindiMessage, "AB2")),
-                            WordWrap = false,
-                            AutoWidth = true,
-                            KeepTogether = true,
-                            HeightF = 1,
-                            Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                        };
-
-
-                        MessagesPanel.Controls.Add(xrAB2Msg);
-                        adjustMessages(xrAB2Msg);
-
-
-                    }
-                }
-            }
-
-            #endregion
-
-            #region Template Messages
-            if (!string.IsNullOrEmpty(op[0].L33_MESSAGE7))
-            {
-                messageFromFile++;
-                XRLabel xrMessage7 = new XRLabel
-                {
-                    Font = new DXFont("Kruti Dev 010", 9),
-                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify,
-                    Text = op[0].L33_MESSAGE7,
-                    WordWrap = false,
-                    AutoWidth = true,
-                    Multiline = true,
-                    KeepTogether = true,
-                    HeightF = 0.1f,
-                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                };
-                MessagesPanel.Controls.Add(xrMessage7);
-                adjustMessages(xrMessage7);
-
-            }
-            if (!string.IsNullOrEmpty(op[0].L34_MESSAGE8))
-            {
-                messageFromFile++;
-                XRLabel xrMessage8 = new XRLabel
-                {
-                    Font = new DXFont("DIN Pro Regular", 8),
-                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify,
-                    Text = op[0].L34_MESSAGE8,
-                    WordWrap = false,
-                    CanShrink = true,
-                    Multiline = true,
-                    AutoWidth = true,
-                    KeepTogether = true,
-                    HeightF = 0.1f,
-                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                };
-                MessagesPanel.Controls.Add(xrMessage8);
-                adjustMessages(xrMessage8);
-            }
-            if (!string.IsNullOrEmpty(op[0].L35_MESSAGE9))
-            {
-                messageFromFile++;
-                XRLabel xrMessage9 = new XRLabel
-                {
-                    Font = new DXFont("Kruti Dev 010", 9),
-                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify,
-                    Text = op[0].L35_MESSAGE9,
-                    WordWrap = false,
-                    CanShrink = true,
-                    Multiline = true,
-                    AutoWidth = true,
-                    KeepTogether = true,
-                    HeightF = 0.1f,
-                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                };
-                MessagesPanel.Controls.Add(xrMessage9);
-                adjustMessages(xrMessage9);
-            }
-            if (!string.IsNullOrEmpty(op[0].L36_MESSAGE10))
-            {
-                messageFromFile++;
-                XRLabel xrMessage10 = new XRLabel
-                {
-                    Font = new DXFont("DIN Pro Regular", 8),
-                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopJustify,
-                    Text = op[0].L36_MESSAGE10,
-                    WordWrap = false,
-                    CanShrink = true,
-                    Multiline = true,
-                    AutoWidth = true,
-                    KeepTogether = true,
-                    HeightF = 0.1f,
-                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                };
-                MessagesPanel.Controls.Add(xrMessage10);
-                adjustMessages(xrMessage10);
-            }
-            #endregion
-
-            #region BroadCast Messages             
-            if (!IsMessageLimitExceeds(totalMessages))
-            {
-                if (LoadStaticData._BroadcastMessage.FindAll(x => x.ServiceNo.ToUpper().Equals(op[0].L6_SERVDET_SERVNO)).FirstOrDefault() != null)
-                {
-                    BroadcastMessage brdcstMsg = LoadStaticData._BroadcastMessage.FindAll(x => x.ServiceNo.ToUpper().Equals(op[0].L6_SERVDET_SERVNO)).FirstOrDefault();
-                    totalMessages++;
-                    XRLabel xrMessageTheftAmount = new XRLabel
-                    {
-                        Font = brdcstMsg.MessageType.ToUpper() == "ENG" ? new DXFont("DIN Pro Regular", 8) : new DXFont("Kruti Dev 010", 9),
-                        TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                        Text = brdcstMsg.MessageType.ToUpper() == "ENG" ? brdcstMsg.EnglishMessageString : brdcstMsg.HindiMessageString,
-                        WordWrap = false,
-                        AutoWidth = true,
-                        KeepTogether = true,
-                        HeightF = 1,
-                        Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                    };
-
-                    MessagesPanel.Controls.Add(xrMessageTheftAmount);
-                    adjustMessages(xrMessageTheftAmount);
-                }
-            }
-            #endregion
-
-            #region Security Deposit Message   
-            if ((string.IsNullOrEmpty(op[0].L10_SecDeptBdt) || Convert.ToDouble(op[0].L10_SecDeptBdt) == 0) && Convert.ToDouble(op[0].L6_SERVDET_SERVNO) < 674199999)
-            {
-                messageFromFile++;
-                XRLabel xrMessage11 = new XRLabel
-                {
-                    Font = new DXFont("Kruti Dev 010", 9),
-                    TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
-                    Text = "vfHkys[kksa ds vuqlkj vkids la;kstu ij tekur /kujkf'k 'kwU; vafdr gSaA ;fn vkids }kjk la;kstu jkf'k tek dh xbZ gS rks mDr tekur jkf'k dh ewy jlhn ds lkFk \r\ngekjs xzkgd lsok dsUnz  ij lEidZ djsaA ",
-                    WordWrap = false,
-                    AutoWidth = true,
-                    Multiline = true,
-                    KeepTogether = true,
-                    HeightF = 0.1f,
-                    Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
-                };
-                MessagesPanel.Controls.Add(xrMessage11);
-                adjustMessages(xrMessage11);
-
-            }
-            #endregion
+            xrLabel14.Text = "Thank you for your previous payment of ₹" + op[0].L7_LastPayementAmount + " on " + op[0].L7_LastPymtDate;
 
             if (!String.IsNullOrEmpty(op[0].L6_LT_Metering_Flag))
             {
                 xrlBillDemand.Text = "*" + xrlBillDemand.Text;
             }
+
+
         }
 
-        #region Helper Functions
-        bool IsMessageLimitExceeds(int messagesCount)
+       
+
+        private decimal ToDecimal(string value)
         {
-            if (messagesCount >= 8)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            decimal.TryParse(value, out decimal result);
+            return result;
         }
 
-        public void adjustMessages(XRLabel lbl)
-        {
-            if (MessagesPanel.Controls.Count != 0)
-            {
-                foreach (XRLabel plbl in MessagesPanel.Controls)
-                {
-                    lbl.TopF = plbl.BottomF;
-                }
-            }
-            else
-            {
-                lbl.TopF = MessagesPanel.TopF;
-            }
-        }
-
-        public string getMessage(Hashtable _tbl, string Code)
-        {
-            string message = string.Empty;
-            foreach (DictionaryEntry element in _tbl)
-            {
-                message = element.Key.ToString() == Code ? element.Value.ToString() : "";
-                if (!string.IsNullOrEmpty(message))
-                {
-                    return message;
-                }
-            }
-
-            return message;
-
-        }
-        public string ChangeMonthToHindi(string Date)
-        {
-            if (!string.IsNullOrEmpty(Date))
-            {
-                var month = Date.Split('-')[1];
-                switch (month)
-                {
-
-                    case "01":
-                        return Date.Replace("01", "tuojh");
-                    case "02":
-                        return Date.Replace("02", "Qjojh");
-                    case "03":
-                        return Date.Replace("03", "ekpZ");
-                    case "04":
-                        return Date.Replace("04", "vizSy");
-                    case "05":
-                        return Date.Replace("05", "ebZ");
-                    case "06":
-                        return Date.Replace("06", "twu");
-                    case "07":
-                        return Date.Replace("07", "tqykbZ");
-                    case "08":
-                        return Date.Replace("08", "vxLr");
-                    case "09":
-                        return Date.Replace("09", "flrEcj");
-                    case "10":
-                        return Date.Replace("10", "vDVwcj");
-                    case "11":
-                        return Date.Replace("11", "ucEcj");
-                    case "12":
-                        return Date.Replace("12", "fnlacj");
-
-                }
-            }
-            return "";
-
-        }
-
-        #endregion
     }
 }
 

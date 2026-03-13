@@ -34,7 +34,7 @@ namespace AT.Print.Utils
         public string L6_TARIFF_DESCR { get; set; }
         public string L6_EXCESS_DEMAND { get; set; }
         public string L6_SUPPLY_VOLTAGE { get; set; }
-        public string L6_BILL_PF { get; set; }
+        public string L6_Avg_Power_Factor { get; set; } //changed from L6_BILL_PF
         public string L6_MTRDET_LF_PERC { get; set; }
         public string L6_BILL_TYPE { get; set; }
         public string L6_MeasureContractDemand { get; set; }

@@ -130,20 +130,20 @@ namespace AT.Print.PDF
                     {
                         if ((contractdemand * (decimal)0.746) >= (decimal)10)
                         {
-                            if (Convert.ToDecimal(op[0].L6_BILL_PF) >= (decimal)95)
-                            {
-                                op[0].L6_BILL_PF = op[0].L6_BILL_PF + "(Lead)";
-                            }
+                            //if (Convert.ToDecimal(op[0].L6_BILL_PF) >= (decimal)95)
+                            //{
+                            //    op[0].L6_BILL_PF = op[0].L6_BILL_PF + "(Lead)";
+                            //}
                         }
                     }
                     if (op[0].L6_MeasureContractDemand.ToUpper() == "KW")
                     {
                         if (Math.Ceiling(contractdemand) >= (decimal)10.0)
                         {
-                            if (Convert.ToDecimal(op[0].L6_BILL_PF) >= (decimal)95)
-                            {
-                                op[0].L6_BILL_PF = op[0].L6_BILL_PF + "(Lead)";
-                            }
+                            //if (Convert.ToDecimal(op[0].L6_BILL_PF) >= (decimal)95)
+                            //{
+                            //    op[0].L6_BILL_PF = op[0].L6_BILL_PF + "(Lead)";
+                            //}
                         }
                     }
                 }

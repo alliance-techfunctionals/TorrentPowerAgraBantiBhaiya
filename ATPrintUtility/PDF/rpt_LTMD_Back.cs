@@ -223,7 +223,7 @@ namespace AT.Print.PDF
                 messageFromFile++;
                 XRLabel xrMessage1 = new XRLabel
                 {
-                    Font = new DXFont("Manrope", 8),
+                    Font = new DXFont("DIN Pro Regular", 8),
                     TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
                     Text = op[0].L26_MESSAGE1,
                     WordWrap = false,
