@@ -1,4 +1,5 @@
-﻿using AT.Print.Utils;
+﻿using AT.Print.PDF;
+using AT.Print.Utils;
 using DevExpress.XtraEditors;
 using DevExpress.XtraReports.UI;
 using System;
@@ -74,7 +75,7 @@ namespace AT.Print
                 ofd.Multiselect = false;
                 ofd.Filter = "txt Files|*.txt";
                 if (ofd.ShowDialog() == DialogResult.OK)
-               {
+                {
                     textFileName = ofd.SafeFileName.ToUpper().Replace(".TXT", "");
 
                     string contents = File.ReadAllText(ofd.FileName);
@@ -91,9 +92,10 @@ namespace AT.Print
                         if (ValidatetxtFile(singleHTBills))
                         {
                             {
-                                Thread myNewThread1 = new Thread(() => StartPrinting_HTBills(singleHTBills, sb.Name, 0, singleHTBills.Count() - 1, "1"));
-                                myNewThread1.Start();
-                            }                            
+                                StartPrinting_HTBills(singleHTBills, sb.Name);
+                                //Thread myNewThread1 = new Thread(() => StartPrinting_HTBills(singleHTBills, sb.Name, 0, singleHTBills.Count() - 1, "1"));
+                                //myNewThread1.Start();
+                            }
                         }
                         else
                         {
@@ -134,13 +136,304 @@ namespace AT.Print
             }
         }
 
-        void StartPrinting_HTBills(string[] Bills, string Name, int Initial, int Final, string FolderName)
+        //void StartPrinting_HTBills(string[] Bills, string Name, int Initial, int Final, string FolderName)
+        //{
+        //    string LotNo = "InitialLot";
+        //    string LotNoCopy = "InitialLot";
+        //    string TOD_NonTODFlag = "";
+        //    int BillNo = 1, Counter = 1, ParsedBills = 0;
+        //    DataTable dtSingleHTBill=new DataTable();
+        //    XtraReport NonTODReport = new XtraReport();
+        //    XtraReport TODReport = new XtraReport();
+        //    NonTODReport.PrinterName = cbDefaultPrinter.Text;
+        //    TODReport.PrinterName = cbDefaultPrinter.Text;
+        //    NonTODReport.CreateDocument();
+        //    TODReport.CreateDocument();
+        //    string FileName = AppFunctions.ProcessedBillData();
+        //    XtraReport collectorReport = new XtraReport
+        //    {
+        //        DisplayName = "HT Print",
+        //    };
+
+        //    int z = Initial - 1;
+        //    while (z < Final)
+        //    {
+        //        z++;
+        //        dtSingleHTBill = DSBill.Tables[z];
+        //        try
+        //        {
+        //            List<SingleHTBill> lstformattedbills = new List<SingleHTBill>();
+
+
+        //            if ((LotNoCopy != dtSingleHTBill.Rows[0][4].ToString().Trim() || Counter == 51 || TOD_NonTODFlag != dtSingleHTBill.Rows[0][7].ToString().Trim()) && LotNoCopy != "InitialLot" && TOD_NonTODFlag != "")
+        //            {
+        //                MemoryStream ms = new MemoryStream();
+        //                var buffer = ms.GetBuffer();
+        //                Array.Clear(buffer, 0, buffer.Length);
+        //                ms.Position = 0;
+        //                ms.SetLength(0);
+        //                ms.Capacity = 0; 
+        //                collectorReport.Print(cbDefaultPrinter.Text);
+        //                collectorReport.Pages.Clear();
+        //                Counter = 1;
+        //                collectorReport.Dispose();
+
+        //            }
+
+        //            if (LotNo != dtSingleHTBill.Rows[0][4].ToString().Trim())
+        //            {
+        //                if (Name != "sbSavePDF")
+        //                {
+        //                    LotNo = (String)dtSingleHTBill.Rows[0][4];
+        //                    LotNoCopy = (String)dtSingleHTBill.Rows[0][4];
+        //                    SingleHTBill billSaprator = new SingleHTBill();
+        //                    billSaprator.Sap_Zone = "Zone No. " + dtSingleHTBill.Rows[0][1];
+        //                    billSaprator.Sap_LotNo = "LOT No. " + dtSingleHTBill.Rows[0][4];
+        //                    billSaprator.Sap_GrpNo = "Group No. " + dtSingleHTBill.Rows[0][2];
+        //                    lstformattedbills.Add(billSaprator);
+
+        //                    Rpt_Saprator sap_rpt = new Rpt_Saprator
+        //                    {
+        //                        DataSource = lstformattedbills
+        //                    };
+
+        //                    sap_rpt.CreateDocument();
+        //                    sap_rpt.ShowPrintMarginsWarning = false;
+        //                    sap_rpt.PrinterName = cbDefaultPrinter.Text;
+        //                    sap_rpt.PrintingSystem.StartPrint += sap_print;
+        //                    sap_rpt.Print(cbDefaultPrinter.Text);
+        //                    lstformattedbills.Clear();
+
+        //                }
+        //            }
+
+        //            SingleHTBill sht = parseSingleHTBill(dtSingleHTBill);
+        //            TOD_NonTODFlag = sht.L1_TODOrNon_TODFlag;
+        //            sht.MVPicture = mVImagePath;
+        //            lstformattedbills.Add(sht);
+
+        //            #region HT-PDF Non-TOD
+
+        //            if (Name == "sbSavePDF" && String.Equals(sht.L1_TODOrNon_TODFlag, "0"))
+        //            {
+
+        //                AT.Print.PDF.Rpt_HT_TodPDF rptsd1 = new AT.Print.PDF.Rpt_HT_TodPDF
+        //                {
+        //                    DataSource = lstformattedbills,
+        //                };
+
+        //                #region WaterMark Picture Front Page PDF Non-TOD
+        //                DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkFrontNonTOD = new DevExpress.XtraPrinting.Drawing.Watermark();
+        //                pictureWatermarkFrontNonTOD.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_Non_TOD_Front_Page.png");
+        //                pictureWatermarkFrontNonTOD.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        //                pictureWatermarkFrontNonTOD.ImageTiling = false;
+        //                pictureWatermarkFrontNonTOD.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Zoom;
+        //                pictureWatermarkFrontNonTOD.ImageTransparency = 0;
+        //                pictureWatermarkFrontNonTOD.ShowBehind = true;
+        //                rptsd1.Watermark.CopyFrom(pictureWatermarkFrontNonTOD);
+        //                #endregion
+
+        //                rptsd1.CreateDocument(false);
+        //                AT.Print.PDF.rpt_HT_Back rpts = new AT.Print.PDF.rpt_HT_Back
+        //                {
+        //                    DataSource = lstformattedbills,
+        //                };
+
+        //                #region WaterMark Picture Back Page PDF Non-TOD
+        //                DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkBackNonTOD = new DevExpress.XtraPrinting.Drawing.Watermark();
+        //                pictureWatermarkBackNonTOD.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_Non_Tod_Back_Page.png");
+        //                pictureWatermarkBackNonTOD.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        //                pictureWatermarkBackNonTOD.ImageTiling = false;
+        //                pictureWatermarkBackNonTOD.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Clip;
+        //                pictureWatermarkBackNonTOD.ImageTransparency = 0;
+        //                pictureWatermarkBackNonTOD.ShowBehind = true;
+        //                rpts.Watermark.CopyFrom(pictureWatermarkBackNonTOD);
+        //                #endregion
+
+        //                rpts.CreateDocument(false);
+        //                rptsd1.ModifyDocument(x => { x.AddPages(rpts.Pages); });
+        //                DevExpress.XtraPrinting.Page myPage2 = rptsd1.Pages[1];
+        //                myPage2.AssignWatermark(pictureWatermarkBackNonTOD);
+        //                string billdate = lstformattedbills.FirstOrDefault().L1_MonthYear;
+        //                string ServiceNo = lstformattedbills.FirstOrDefault().L6_SERVDET_SERVNO;
+
+        //                var outputfolder = "C://Bills//HTFiles//" + billdate + "//" + textFileName;
+        //                OutputFolderPath OFP = new OutputFolderPath();
+        //                outputfolder = OFP.LoadLocation() + "//HTFiles//" + billdate + "//" + textFileName; ;
+        //                if (!Directory.Exists(outputfolder))
+        //                    Directory.CreateDirectory(outputfolder);
+        //                if (Directory.Exists(outputfolder))
+        //                {
+        //                    rptsd1.ExportToPdf(outputfolder + "//" + ServiceNo + ".pdf");
+        //                    rptsd1.Dispose();
+        //                }
+        //                ParsedBills++;
+        //            }
+        //            #endregion
+
+        //            #region Print non-Tod_HT
+
+        //            else if (string.Equals(sht.L1_TODOrNon_TODFlag, "0"))
+        //            {
+        //                PrinterSettings ps = new PrinterSettings() { PrinterName = cbDefaultPrinter.Text };
+        //                using (Graphics g = ps.CreateMeasurementGraphics(ps.DefaultPageSettings))
+        //                {
+        //                    Margins MinMargins = DevExpress.XtraPrinting.Native.DeviceCaps.GetMinMargins(g);
+        //                    Console.WriteLine("Minimum Margins for " + ps.PrinterName + ": " + MinMargins.ToString());
+        //                }
+        //                AT.Print.Rpt_HT_Print rpta = new Rpt_HT_Print
+        //                {
+        //                    DataSource = lstformattedbills,
+        //                    DisplayName = sht.L6_SERVDET_SERVNO,
+        //                };
+        //                rpta.Watermark.ImageTransparency = 255;
+        //                rpta.PrinterName = cbDefaultPrinter.SelectedItem.ToString();    
+        //                rpta.PrintingSystem.Document.Name = sht.L6_SERVDET_SERVNO;
+        //                rpta.CreateDocument();
+        //                AT.Print.Rpt_HT_Print_Back rptb = new AT.Print.Rpt_HT_Print_Back
+        //                {
+        //                    DataSource = lstformattedbills,
+        //                };
+        //                rptb.CreateDocument();
+        //                rpta.ModifyDocument(x => { x.AddPages(rptb.Pages); });
+        //                collectorReport.PrintingSystem.StartPrint += NonTOD_StartPrint;
+        //                collectorReport.Pages.AddRange(rpta.Pages);
+        //                if (Bills.Count() == BillNo && LotNoCopy != "InitialLot")
+        //                {
+        //                    collectorReport.Print(cbDefaultPrinter.Text);
+        //                    collectorReport.Pages.Clear();
+        //                }
+        //                AppFunctions.CloseWaitForm();
+        //                ParsedBills++;
+        //            }
+        //            #endregion
+
+        //            #region  HT-pdf with tod
+
+        //            else if (Name == "sbSavePDF" && string.Equals(sht.L1_TODOrNon_TODFlag, "1"))
+        //            {
+        //                AT.Print.PDF.Rpt_HT_TodPDF rptsd = new AT.Print.PDF.Rpt_HT_TodPDF
+        //                {
+        //                    DataSource = lstformattedbills,
+        //                };
+
+        //                #region WaterMark Picture Front Page PDF TOD
+        //                DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkFrontTOD = new DevExpress.XtraPrinting.Drawing.Watermark();
+        //                pictureWatermarkFrontTOD.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_TOD_Front_Page.png");
+        //                pictureWatermarkFrontTOD.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        //                pictureWatermarkFrontTOD.ImageTiling = false;
+        //                pictureWatermarkFrontTOD.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Clip;
+        //                pictureWatermarkFrontTOD.ImageTransparency = 0;
+        //                pictureWatermarkFrontTOD.ShowBehind = true;
+        //                rptsd.Watermark.CopyFrom(pictureWatermarkFrontTOD);
+        //                #endregion
+
+        //                rptsd.CreateDocument(false);
+
+
+        //                AT.Print.PDF.rpt_HT_BackPDF rpts = new AT.Print.PDF.rpt_HT_BackPDF
+        //                {
+        //                    DataSource = lstformattedbills,
+        //                };
+
+        //                #region WaterMark Picture Back Page PDF TOD
+        //                DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkBackTOD = new DevExpress.XtraPrinting.Drawing.Watermark();
+        //                pictureWatermarkBackTOD.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_TOD_Back_Page.png");
+        //                pictureWatermarkBackTOD.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        //                pictureWatermarkBackTOD.ImageTiling = false;
+        //                pictureWatermarkBackTOD.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Clip;
+        //                pictureWatermarkBackTOD.ImageTransparency = 0;
+        //                pictureWatermarkBackTOD.ShowBehind = true;
+        //                rpts.Watermark.CopyFrom(pictureWatermarkBackTOD);
+        //                #endregion
+
+        //                rpts.CreateDocument(false);
+        //                rptsd.ModifyDocument(x => { x.AddPages(rpts.Pages); });
+        //                DevExpress.XtraPrinting.Page myPage = rptsd.Pages[1];
+        //                myPage.AssignWatermark(pictureWatermarkBackTOD);
+        //                string billdate = lstformattedbills.FirstOrDefault().L1_MonthYear;
+        //                string serviceno = lstformattedbills.FirstOrDefault().L6_SERVDET_SERVNO;
+        //                var outputfolder = "C://Bills//HTFiles//" + billdate + "//" + textFileName;
+        //                OutputFolderPath OFP = new OutputFolderPath();
+        //                outputfolder = OFP.LoadLocation() + "//HTFiles//" + billdate + "//" + textFileName; ;
+        //                if (!Directory.Exists(outputfolder))
+        //                    Directory.CreateDirectory(outputfolder);
+        //                if (Directory.Exists(outputfolder))
+        //                {
+        //                    rptsd.ExportToPdf(outputfolder + "//" + ServiceNo + ".pdf");
+        //                    rptsd.Dispose();
+        //                }
+
+        //                ParsedBills++;
+        //            }
+        //            #endregion
+
+        //            #region HT-print with tod
+
+        //            else if (string.Equals(sht.L1_TODOrNon_TODFlag, "1"))
+        //            {
+        //                AT.Print.Rpt_HT_TOD_Print rpta = new AT.Print.Rpt_HT_TOD_Print
+        //                {
+        //                    DataSource = lstformattedbills,
+        //                    DisplayName = sht.L6_SERVDET_SERVNO,
+        //                };
+
+        //                rpta.Watermark.ImageTransparency = 255;
+        //                rpta.PrinterName = cbDefaultPrinter.SelectedItem.ToString();    
+        //                rpta.PrintingSystem.Document.Name = sht.L6_SERVDET_SERVNO;
+        //                rpta.CreateDocument();
+        //                AT.Print.Rpt_HT_TOD_Print_Back rptb = new AT.Print.Rpt_HT_TOD_Print_Back
+        //                {
+        //                    DataSource = lstformattedbills,
+        //                };
+
+        //                rptb.CreateDocument();
+        //                rpta.ModifyDocument(x => { x.AddPages(rptb.Pages); });
+        //                collectorReport.PrintingSystem.StartPrint += TOD_StartPrint;
+        //                collectorReport.Pages.AddRange(rpta.Pages);
+        //                if (Bills.Count() == BillNo && LotNoCopy != "InitialLot")
+        //                {
+        //                    collectorReport.Print(cbDefaultPrinter.Text);
+        //                    collectorReport.Pages.Clear();
+        //                }
+        //                AppFunctions.CloseWaitForm();
+        //                ParsedBills++;
+        //            }
+        //            #endregion
+        //            else
+        //                Console.WriteLine("could not find tod flag in bill: " + sht.L6_SERVDET_SERVNO);
+
+        //        }
+        //        catch (System.OutOfMemoryException)
+        //        {
+        //            AppFunctions.LogError("Error Parsing Service No. " + ServiceNo + " of the given file due to out of memory.");
+        //            AppFunctions.LogProcessedBill(Convert.ToString(dtSingleHTBill.Rows[0][1]), Convert.ToString(dtSingleHTBill.Rows[0][4]), Convert.ToString(dtSingleHTBill.Rows[0][2]), Convert.ToString(dtSingleHTBill.Rows[0][5]), ServiceNo, FileName, "No");
+        //            System.Runtime.GCSettings.LargeObjectHeapCompactionMode = System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce;
+        //            GC.Collect();
+        //            GC.RemoveMemoryPressure(1024 * 1024);
+        //            break;
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            AppFunctions.LogError(ex);
+        //            AppFunctions.LogProcessedBill(Convert.ToString(dtSingleHTBill.Rows[0][1]), Convert.ToString(dtSingleHTBill.Rows[0][4]), Convert.ToString(dtSingleHTBill.Rows[0][2]), Convert.ToString(dtSingleHTBill.Rows[0][5]), ServiceNo, FileName, "No");
+        //            AppFunctions.CloseWaitForm();
+        //            break;
+        //        }
+        //        AppFunctions.LogProcessedBill(Convert.ToString(dtSingleHTBill.Rows[0][1]), Convert.ToString(dtSingleHTBill.Rows[0][4]), Convert.ToString(dtSingleHTBill.Rows[0][2]), Convert.ToString(dtSingleHTBill.Rows[0][5]), ServiceNo, FileName, "Yes");
+        //        BillNo++;
+        //    }
+        //    DSBill.Reset();
+        //    DSBill.Dispose();
+        //}
+
+        private void StartPrinting_HTBills(string[] Bills, string Name)
         {
             string LotNo = "InitialLot";
             string LotNoCopy = "InitialLot";
             string TOD_NonTODFlag = "";
             int BillNo = 1, Counter = 1, ParsedBills = 0;
-            DataTable dtSingleHTBill=new DataTable();
+            DataTable dtSingleHTBill = new DataTable();
             XtraReport NonTODReport = new XtraReport();
             XtraReport TODReport = new XtraReport();
             NonTODReport.PrinterName = cbDefaultPrinter.Text;
@@ -152,254 +445,178 @@ namespace AT.Print
             {
                 DisplayName = "HT Print",
             };
-            
-            int z = Initial - 1;
-            while (z < Final)
+
+            foreach (var Bill in Bills)
             {
-                z++;
-                dtSingleHTBill = DSBill.Tables[z];
                 try
                 {
+                    AppFunctions.ShowWaitForm("Generating Bill..!!");
                     List<SingleHTBill> lstformattedbills = new List<SingleHTBill>();
 
+                    dtSingleHTBill = ParseAsDataTable.HT_FileTxtToDataTable(Bill);
 
-                    if ((LotNoCopy != dtSingleHTBill.Rows[0][4].ToString().Trim() || Counter == 51 || TOD_NonTODFlag != dtSingleHTBill.Rows[0][7].ToString().Trim()) && LotNoCopy != "InitialLot" && TOD_NonTODFlag != "")
+                    if ((LotNoCopy != dtSingleHTBill.Rows[0][4].ToString().Trim() || Counter == 51 || TOD_NonTODFlag != dtSingleHTBill.Rows[0][10].ToString().Trim()) && LotNoCopy != "InitialLot" && TOD_NonTODFlag != "")
                     {
                         MemoryStream ms = new MemoryStream();
                         var buffer = ms.GetBuffer();
                         Array.Clear(buffer, 0, buffer.Length);
                         ms.Position = 0;
                         ms.SetLength(0);
-                        ms.Capacity = 0; 
+                        ms.Capacity = 0;
                         collectorReport.Print(cbDefaultPrinter.Text);
                         collectorReport.Pages.Clear();
                         Counter = 1;
                         collectorReport.Dispose();
-
                     }
+
 
                     if (LotNo != dtSingleHTBill.Rows[0][4].ToString().Trim())
                     {
                         if (Name != "sbSavePDF")
                         {
                             LotNo = (String)dtSingleHTBill.Rows[0][4];
-                            LotNoCopy = (String)dtSingleHTBill.Rows[0][4];
+                            LotNoCopy = dtSingleHTBill.Rows[0][4].ToString().Trim();
                             SingleHTBill billSaprator = new SingleHTBill();
                             billSaprator.Sap_Zone = "Zone No. " + dtSingleHTBill.Rows[0][1];
                             billSaprator.Sap_LotNo = "LOT No. " + dtSingleHTBill.Rows[0][4];
                             billSaprator.Sap_GrpNo = "Group No. " + dtSingleHTBill.Rows[0][2];
                             lstformattedbills.Add(billSaprator);
-
                             Rpt_Saprator sap_rpt = new Rpt_Saprator
                             {
                                 DataSource = lstformattedbills
                             };
-
-                            sap_rpt.CreateDocument();
-                            sap_rpt.ShowPrintMarginsWarning = false;
-                            sap_rpt.PrinterName = cbDefaultPrinter.Text;
-                            sap_rpt.PrintingSystem.StartPrint += sap_print;
-                            sap_rpt.Print(cbDefaultPrinter.Text);
+                            {
+                                sap_rpt.CreateDocument();
+                                sap_rpt.ShowPrintMarginsWarning = false;
+                                sap_rpt.PrinterName = cbDefaultPrinter.Text;
+                                sap_rpt.PrintingSystem.StartPrint += sap_print;
+                                sap_rpt.Print(cbDefaultPrinter.Text);
+                            }
                             lstformattedbills.Clear();
-
                         }
                     }
 
-                    SingleHTBill sht = parseSingleHTBill(dtSingleHTBill);
-                    TOD_NonTODFlag = sht.L1_TODOrNon_TODFlag;
-                    sht.MVPicture = mVImagePath;
-                    lstformattedbills.Add(sht);
+                    SingleHTBill slt = parseSingleHTBill(dtSingleHTBill);
 
-                    #region HT-PDF Non-TOD
+                    TOD_NonTODFlag = slt.L1_TODOrNon_TODFlag;
 
-                    if (Name == "sbSavePDF" && String.Equals(sht.L1_TODOrNon_TODFlag, "0"))
+                    //slt.MVPicture = mVImagePath;
+                    //lstformattedbills.Add(slt);
+
+
+                    bool isPDF = Name == "sbSavePDF";
+                    // bool isPDF = Name == "sbSavePDF";
+                    bool isPrint = Name == "sbPrintBill";
+
+                    slt.MVPicture = mVImagePath;
+                    lstformattedbills.Clear();
+                    lstformattedbills.Add(slt);
+
+                    Rpt_HT_TodPDF rpt = new Rpt_HT_TodPDF
                     {
+                        DataSource = lstformattedbills,
+                        DisplayName = slt.L6_SERVDET_SERVNO
+                    };
 
-                        AT.Print.PDF.Rpt_HT_TodPDF rptsd1 = new AT.Print.PDF.Rpt_HT_TodPDF
+                    var frontWatermark = GetWatermark("Duplex_Non_TOD_Front_Page.png");
+                    var backWatermark = GetWatermark("Duplex_Non_TOD_Back_Page.png");
+
+                    #region PDF CASE
+
+                    if (isPDF)
+                    {
+                        rpt.Watermark.CopyFrom(frontWatermark);
+                        rpt.CreateDocument(false);
+
+                        AT.Print.PDF.rpt_HT_Back rptBack = new AT.Print.PDF.rpt_HT_Back
                         {
-                            DataSource = lstformattedbills,
-                        };
-                        
-                        #region WaterMark Picture Front Page PDF Non-TOD
-                        DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkFrontNonTOD = new DevExpress.XtraPrinting.Drawing.Watermark();
-                        pictureWatermarkFrontNonTOD.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_Non_TOD_Front_Page.png");
-                        pictureWatermarkFrontNonTOD.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                        pictureWatermarkFrontNonTOD.ImageTiling = false;
-                        pictureWatermarkFrontNonTOD.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Zoom;
-                        pictureWatermarkFrontNonTOD.ImageTransparency = 0;
-                        pictureWatermarkFrontNonTOD.ShowBehind = true;
-                        rptsd1.Watermark.CopyFrom(pictureWatermarkFrontNonTOD);
-                        #endregion
-                        
-                        rptsd1.CreateDocument(false);
-                        AT.Print.PDF.rpt_HT_Back rpts = new AT.Print.PDF.rpt_HT_Back
-                        {
-                            DataSource = lstformattedbills,
+                            DataSource = lstformattedbills
                         };
 
-                        #region WaterMark Picture Back Page PDF Non-TOD
-                        DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkBackNonTOD = new DevExpress.XtraPrinting.Drawing.Watermark();
-                        pictureWatermarkBackNonTOD.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_Non_Tod_Back_Page.png");
-                        pictureWatermarkBackNonTOD.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                        pictureWatermarkBackNonTOD.ImageTiling = false;
-                        pictureWatermarkBackNonTOD.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Clip;
-                        pictureWatermarkBackNonTOD.ImageTransparency = 0;
-                        pictureWatermarkBackNonTOD.ShowBehind = true;
-                        rpts.Watermark.CopyFrom(pictureWatermarkBackNonTOD);
-                        #endregion
+                        rptBack.Watermark.CopyFrom(backWatermark);
+                        rptBack.CreateDocument(false);
 
-                        rpts.CreateDocument(false);
-                        rptsd1.ModifyDocument(x => { x.AddPages(rpts.Pages); });
-                        DevExpress.XtraPrinting.Page myPage2 = rptsd1.Pages[1];
-                        myPage2.AssignWatermark(pictureWatermarkBackNonTOD);
-                        string billdate = lstformattedbills.FirstOrDefault().L1_MonthYear;
-                        string ServiceNo = lstformattedbills.FirstOrDefault().L6_SERVDET_SERVNO;
-                                              
-                        var outputfolder = "C://Bills//HTFiles//" + billdate + "//" + textFileName;
+                        rpt.ModifyDocument(x => x.AddPages(rptBack.Pages));
+
+                        if (rpt.Pages.Count > 1)
+                            rpt.Pages[1].AssignWatermark(backWatermark);
+
+                        string billdate = lstformattedbills.FirstOrDefault()?.L1_MonthYear;
+                        string serviceNo = lstformattedbills.FirstOrDefault()?.L6_SERVDET_SERVNO;
+
                         OutputFolderPath OFP = new OutputFolderPath();
-                        outputfolder = OFP.LoadLocation() + "//HTFiles//" + billdate + "//" + textFileName; ;
-                        if (!Directory.Exists(outputfolder))
-                            Directory.CreateDirectory(outputfolder);
-                        if (Directory.Exists(outputfolder))
-                        {
-                            rptsd1.ExportToPdf(outputfolder + "//" + ServiceNo + ".pdf");
-                            rptsd1.Dispose();
-                        }
+                        string outputFolder = OFP.LoadLocation() +
+                                              "//HTFiles//" + billdate + "//" + textFileName;
+
+                        if (!Directory.Exists(outputFolder))
+                            Directory.CreateDirectory(outputFolder);
+
+                        rpt.ExportToPdf(outputFolder + "//" + serviceNo + ".pdf");
+
                         ParsedBills++;
+                        AppFunctions.CloseWaitForm();
                     }
+
                     #endregion
 
-                    #region Print non-Tod_HT
+                    #region PRINT CASE
 
-                    else if (string.Equals(sht.L1_TODOrNon_TODFlag, "0"))
+                    else if (isPrint)
                     {
-                        PrinterSettings ps = new PrinterSettings() { PrinterName = cbDefaultPrinter.Text };
-                        using (Graphics g = ps.CreateMeasurementGraphics(ps.DefaultPageSettings))
+                        rpt.Watermark.ImageTransparency = 255;
+                        rpt.PrinterName = cbDefaultPrinter.SelectedItem.ToString();
+                        rpt.PrintingSystem.Document.Name = slt.L6_SERVDET_SERVNO;
+
+                        rpt.CreateDocument();
+
+                        AT.Print.PDF.rpt_HT_Back rptBack = new AT.Print.PDF.rpt_HT_Back
                         {
-                            Margins MinMargins = DevExpress.XtraPrinting.Native.DeviceCaps.GetMinMargins(g);
-                            Console.WriteLine("Minimum Margins for " + ps.PrinterName + ": " + MinMargins.ToString());
-                        }
-                        AT.Print.Rpt_HT_Print rpta = new Rpt_HT_Print
-                        {
-                            DataSource = lstformattedbills,
-                            DisplayName = sht.L6_SERVDET_SERVNO,
+                            DataSource = lstformattedbills
                         };
-                        rpta.Watermark.ImageTransparency = 255;
-                        rpta.PrinterName = cbDefaultPrinter.SelectedItem.ToString();    
-                        rpta.PrintingSystem.Document.Name = sht.L6_SERVDET_SERVNO;
-                        rpta.CreateDocument();
-                        AT.Print.Rpt_HT_Print_Back rptb = new AT.Print.Rpt_HT_Print_Back
-                        {
-                            DataSource = lstformattedbills,
-                        };
-                        rptb.CreateDocument();
-                        rpta.ModifyDocument(x => { x.AddPages(rptb.Pages); });
-                        collectorReport.PrintingSystem.StartPrint += NonTOD_StartPrint;
-                        collectorReport.Pages.AddRange(rpta.Pages);
+
+                        rptBack.CreateDocument();
+                        rpt.ModifyDocument(x => x.AddPages(rptBack.Pages));
+                        collectorReport.PrintingSystem.StartPrint -= NonTOD_StartPrint;
+                        collectorReport.PrintingSystem.StartPrint -= TOD_StartPrint;
+
+                        if (TOD_NonTODFlag == "0")
+                            collectorReport.PrintingSystem.StartPrint += NonTOD_StartPrint;
+                        else
+                            collectorReport.PrintingSystem.StartPrint += TOD_StartPrint;
+
+                        collectorReport.Pages.AddRange(rpt.Pages);
+
+
                         if (Bills.Count() == BillNo && LotNoCopy != "InitialLot")
                         {
                             collectorReport.Print(cbDefaultPrinter.Text);
                             collectorReport.Pages.Clear();
                         }
+
+                        ParsedBills++;
                         AppFunctions.CloseWaitForm();
-                        ParsedBills++;
                     }
+
                     #endregion
 
-                    #region  HT-pdf with tod
+                    #region SAFETY ELSE
 
-                    else if (Name == "sbSavePDF" && string.Equals(sht.L1_TODOrNon_TODFlag, "1"))
-                    {
-                        AT.Print.PDF.Rpt_HT_TodPDF rptsd = new AT.Print.PDF.Rpt_HT_TodPDF
-                        {
-                            DataSource = lstformattedbills,
-                        };
-
-                        #region WaterMark Picture Front Page PDF TOD
-                        DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkFrontTOD = new DevExpress.XtraPrinting.Drawing.Watermark();
-                        pictureWatermarkFrontTOD.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_TOD_Front_Page.png");
-                        pictureWatermarkFrontTOD.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                        pictureWatermarkFrontTOD.ImageTiling = false;
-                        pictureWatermarkFrontTOD.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Clip;
-                        pictureWatermarkFrontTOD.ImageTransparency = 0;
-                        pictureWatermarkFrontTOD.ShowBehind = true;
-                        rptsd.Watermark.CopyFrom(pictureWatermarkFrontTOD);
-                        #endregion
-
-                        rptsd.CreateDocument(false);
-
-
-                        AT.Print.PDF.rpt_HT_BackPDF rpts = new AT.Print.PDF.rpt_HT_BackPDF
-                        {
-                            DataSource = lstformattedbills,
-                        };
-
-                        #region WaterMark Picture Back Page PDF TOD
-                        DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkBackTOD = new DevExpress.XtraPrinting.Drawing.Watermark();
-                        pictureWatermarkBackTOD.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_TOD_Back_Page.png");
-                        pictureWatermarkBackTOD.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                        pictureWatermarkBackTOD.ImageTiling = false;
-                        pictureWatermarkBackTOD.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Clip;
-                        pictureWatermarkBackTOD.ImageTransparency = 0;
-                        pictureWatermarkBackTOD.ShowBehind = true;
-                        rpts.Watermark.CopyFrom(pictureWatermarkBackTOD);
-                        #endregion
-
-                        rpts.CreateDocument(false);
-                        rptsd.ModifyDocument(x => { x.AddPages(rpts.Pages); });
-                        DevExpress.XtraPrinting.Page myPage = rptsd.Pages[1];
-                        myPage.AssignWatermark(pictureWatermarkBackTOD);
-                        string billdate = lstformattedbills.FirstOrDefault().L1_MonthYear;
-                        string serviceno = lstformattedbills.FirstOrDefault().L6_SERVDET_SERVNO;
-                        var outputfolder = "C://Bills//HTFiles//" + billdate + "//" + textFileName;
-                        OutputFolderPath OFP = new OutputFolderPath();
-                        outputfolder = OFP.LoadLocation() + "//HTFiles//" + billdate + "//" + textFileName; ;
-                        if (!Directory.Exists(outputfolder))
-                            Directory.CreateDirectory(outputfolder);
-                        if (Directory.Exists(outputfolder))
-                        {
-                            rptsd.ExportToPdf(outputfolder + "//" + ServiceNo + ".pdf");
-                            rptsd.Dispose();
-                        }
-
-                        ParsedBills++;
-                    }
-                    #endregion
-
-                    #region HT-print with tod
-
-                    else if (string.Equals(sht.L1_TODOrNon_TODFlag, "1"))
-                    {
-                        AT.Print.Rpt_HT_TOD_Print rpta = new AT.Print.Rpt_HT_TOD_Print
-                        {
-                            DataSource = lstformattedbills,
-                            DisplayName = sht.L6_SERVDET_SERVNO,
-                        };
-                        
-                        rpta.Watermark.ImageTransparency = 255;
-                        rpta.PrinterName = cbDefaultPrinter.SelectedItem.ToString();    
-                        rpta.PrintingSystem.Document.Name = sht.L6_SERVDET_SERVNO;
-                        rpta.CreateDocument();
-                        AT.Print.Rpt_HT_TOD_Print_Back rptb = new AT.Print.Rpt_HT_TOD_Print_Back
-                        {
-                            DataSource = lstformattedbills,
-                        };
-
-                        rptb.CreateDocument();
-                        rpta.ModifyDocument(x => { x.AddPages(rptb.Pages); });
-                        collectorReport.PrintingSystem.StartPrint += TOD_StartPrint;
-                        collectorReport.Pages.AddRange(rpta.Pages);
-                        if (Bills.Count() == BillNo && LotNoCopy != "InitialLot")
-                        {
-                            collectorReport.Print(cbDefaultPrinter.Text);
-                            collectorReport.Pages.Clear();
-                        }
-                        AppFunctions.CloseWaitForm();
-                        ParsedBills++;
-                    }
-                    #endregion
                     else
-                        Console.WriteLine("could not find tod flag in bill: " + sht.L6_SERVDET_SERVNO);
+                    {
+                        AppFunctions.CloseWaitForm();
+
+                        XtraMessageBox.Show(
+                            "Unknown operation type for Bill: " + slt.L6_SERVDET_SERVNO,
+                            Application.ProductName,
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Error);
+
+                        Console.WriteLine(
+                            "Unknown operation type for Bill: " + slt.L6_SERVDET_SERVNO);
+                    }
+
+                    #endregion
+
 
                 }
                 catch (System.OutOfMemoryException)
@@ -421,13 +638,15 @@ namespace AT.Print
                 AppFunctions.LogProcessedBill(Convert.ToString(dtSingleHTBill.Rows[0][1]), Convert.ToString(dtSingleHTBill.Rows[0][4]), Convert.ToString(dtSingleHTBill.Rows[0][2]), Convert.ToString(dtSingleHTBill.Rows[0][5]), ServiceNo, FileName, "Yes");
                 BillNo++;
             }
-            DSBill.Reset();
-            DSBill.Dispose();
+
+            XtraMessageBox.Show(ParsedBills + " Bills Parsed Successfully", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
+
 
         SingleHTBill parseSingleHTBill(DataTable dtSingleHTBill)
         {
-            
+
             SingleHTBill sht = new SingleHTBill();
             #region --Lines
             #region Line-1
@@ -451,7 +670,7 @@ namespace AT.Print
             }
             else
             {
-                sht.L1_Customer_PAN = "PAN: " + dtSingleHTBill.Rows[0][11].ToString();
+                sht.L1_Customer_PAN = "PAN No: " + dtSingleHTBill.Rows[0][11].ToString();
             }
             #endregion
 
@@ -527,10 +746,10 @@ namespace AT.Print
             sht.L8_TNo = dtSingleHTBill.Rows[7][11].ToString().Trim('�');
             sht.L8_ParkingAmount = Math.Ceiling(Convert.ToDecimal(string.IsNullOrEmpty(dtSingleHTBill.Rows[7][12].ToString()) ? "0" : dtSingleHTBill.Rows[7][12].ToString())).ToString();
             sht.L8_Subsidy_Charges = dtSingleHTBill.Rows[7][13].ToString();
-           
+
             sht.L8_Solar_Export_Energy = dtSingleHTBill.Rows[7][14].ToString();
             sht.L8_GreenTariff_Charges = dtSingleHTBill.Rows[7][15].ToString();
-             #endregion
+            #endregion
 
             #region Line-9
             LineNo = "9";
@@ -681,14 +900,14 @@ namespace AT.Print
                 }
                 else
                 {
-                    KVAchrtData.Rows.Add(new object[] { MonthYear.Replace("-","  "), string.IsNullOrEmpty(Convert.ToString(dtSingleHTBill.Rows[23][i + 1])) ? 0 : Convert.ToDecimal(dtSingleHTBill.Rows[23][i + 1]) });
+                    KVAchrtData.Rows.Add(new object[] { MonthYear.Replace("-", "  "), string.IsNullOrEmpty(Convert.ToString(dtSingleHTBill.Rows[23][i + 1])) ? 0 : Convert.ToDecimal(dtSingleHTBill.Rows[23][i + 1]) });
                     MonthYear = string.IsNullOrEmpty(Convert.ToString(dtSingleHTBill.Rows[23][i])) ? ((i / 2) + 1).ToString() : Convert.ToString(dtSingleHTBill.Rows[23][i]);
                 }
             }
             MonthYear = "";
             sht.KVAgrph = KVAchrtData;
 
-            
+
             #endregion
 
             #region Line-25
@@ -725,7 +944,7 @@ namespace AT.Print
                 }
             }
             MonthYear = "";
-                sht.KVAHgrph = KVAchrtData_1;
+            sht.KVAHgrph = KVAchrtData_1;
             #endregion
 
 
@@ -757,11 +976,11 @@ namespace AT.Print
                 {
                     sht.L33_MESSAGE7 += TemplateConditionalWithSTHindiCopy.Rows[i]["4"].ToString().Trim('�') + " \r\n";
                 }
-                else if (sht.L6_MeasureContractDemand.ToUpper() == "KVA" && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD))*(0.9)) >= Convert.ToDouble(TemplateConditionalWithSTHindiCopy.Rows[i]["2"].ToString()) && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD))*(0.9)) <= Convert.ToDouble(TemplateConditionalWithSTHindiCopy.Rows[i]["3"].ToString()))
+                else if (sht.L6_MeasureContractDemand.ToUpper() == "KVA" && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD)) * (0.9)) >= Convert.ToDouble(TemplateConditionalWithSTHindiCopy.Rows[i]["2"].ToString()) && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD)) * (0.9)) <= Convert.ToDouble(TemplateConditionalWithSTHindiCopy.Rows[i]["3"].ToString()))
                 {
                     sht.L33_MESSAGE7 += TemplateConditionalWithSTHindiCopy.Rows[i]["4"].ToString().Trim('�') + " \r\n";
                 }
-                else if (sht.L6_MeasureContractDemand.ToUpper() == "HP" && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD))*(0.746)) >= Convert.ToDouble(TemplateConditionalWithSTHindiCopy.Rows[i]["2"].ToString()) && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD))*(0.746)) <= Convert.ToDouble(TemplateConditionalWithSTHindiCopy.Rows[i]["3"].ToString()))
+                else if (sht.L6_MeasureContractDemand.ToUpper() == "HP" && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD)) * (0.746)) >= Convert.ToDouble(TemplateConditionalWithSTHindiCopy.Rows[i]["2"].ToString()) && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD)) * (0.746)) <= Convert.ToDouble(TemplateConditionalWithSTHindiCopy.Rows[i]["3"].ToString()))
                 {
                     sht.L33_MESSAGE7 += TemplateConditionalWithSTHindiCopy.Rows[i]["4"].ToString().Trim('�') + " \r\n";
                 }
@@ -787,11 +1006,11 @@ namespace AT.Print
                 {
                     sht.L34_MESSAGE8 += TemplateConditionalWithSTEnglishCopy.Rows[i]["4"].ToString().Trim('�') + " \r\n";
                 }
-                else if (sht.L6_MeasureContractDemand.ToUpper() == "KVA" && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD))*(0.9)) >= Convert.ToDouble(TemplateConditionalWithSTEnglishCopy.Rows[i]["2"].ToString()) && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD))*(0.9)) <= Convert.ToDouble(TemplateConditionalWithSTEnglishCopy.Rows[i]["3"].ToString()))
+                else if (sht.L6_MeasureContractDemand.ToUpper() == "KVA" && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD)) * (0.9)) >= Convert.ToDouble(TemplateConditionalWithSTEnglishCopy.Rows[i]["2"].ToString()) && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD)) * (0.9)) <= Convert.ToDouble(TemplateConditionalWithSTEnglishCopy.Rows[i]["3"].ToString()))
                 {
                     sht.L34_MESSAGE8 += TemplateConditionalWithSTEnglishCopy.Rows[i]["4"].ToString().Trim('�') + " \r\n";
                 }
-                else if (sht.L6_MeasureContractDemand.ToUpper() == "HP" && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD))*(0.746)) >= Convert.ToDouble(TemplateConditionalWithSTEnglishCopy.Rows[i]["2"].ToString()) && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD))*(0.746)) <= Convert.ToDouble(TemplateConditionalWithSTEnglishCopy.Rows[i]["3"].ToString()))
+                else if (sht.L6_MeasureContractDemand.ToUpper() == "HP" && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD)) * (0.746)) >= Convert.ToDouble(TemplateConditionalWithSTEnglishCopy.Rows[i]["2"].ToString()) && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD)) * (0.746)) <= Convert.ToDouble(TemplateConditionalWithSTEnglishCopy.Rows[i]["3"].ToString()))
                 {
                     sht.L34_MESSAGE8 += TemplateConditionalWithSTEnglishCopy.Rows[i]["4"].ToString().Trim('�') + " \r\n";
                 }
@@ -867,17 +1086,17 @@ namespace AT.Print
             DataTable PFchrtData = new DataTable();
             PFchrtData.Columns.Add("MonthYear");
             PFchrtData.Columns.Add("Value", typeof(decimal));
-            
+
             for (int i = 0; i <= 25; i += 2)
             {
                 if (MonthYear != (string.IsNullOrEmpty(Convert.ToString(dtSingleHTBill.Rows[23][i])) ? ((i / 2) + 1).ToString() : Convert.ToString(dtSingleHTBill.Rows[23][i])))
                 {
-                    PFchrtData.Rows.Add(new object[] {string.IsNullOrEmpty(Convert.ToString(dtSingleHTBill.Rows[23][i])) ? ((i / 2) + 1).ToString() : Convert.ToString(dtSingleHTBill.Rows[23][i]), string.IsNullOrEmpty(Convert.ToString(dtSingleHTBill.Rows[36][i + 1])) ? 0 : Convert.ToDecimal(dtSingleHTBill.Rows[36][i + 1]) });
+                    PFchrtData.Rows.Add(new object[] { string.IsNullOrEmpty(Convert.ToString(dtSingleHTBill.Rows[23][i])) ? ((i / 2) + 1).ToString() : Convert.ToString(dtSingleHTBill.Rows[23][i]), string.IsNullOrEmpty(Convert.ToString(dtSingleHTBill.Rows[36][i + 1])) ? 0 : Convert.ToDecimal(dtSingleHTBill.Rows[36][i + 1]) });
                     MonthYear = string.IsNullOrEmpty(Convert.ToString(dtSingleHTBill.Rows[23][i])) ? ((i / 2) + 1).ToString() : Convert.ToString(dtSingleHTBill.Rows[23][i]);
                 }
                 else
                 {
-                    PFchrtData.Rows.Add(new object[] { MonthYear.Replace("-","  "), string.IsNullOrEmpty(Convert.ToString(dtSingleHTBill.Rows[36][i + 1])) ? 0 : Convert.ToDecimal(dtSingleHTBill.Rows[36][i + 1]) });
+                    PFchrtData.Rows.Add(new object[] { MonthYear.Replace("-", "  "), string.IsNullOrEmpty(Convert.ToString(dtSingleHTBill.Rows[36][i + 1])) ? 0 : Convert.ToDecimal(dtSingleHTBill.Rows[36][i + 1]) });
                     MonthYear = string.IsNullOrEmpty(Convert.ToString(dtSingleHTBill.Rows[23][i])) ? ((i / 2) + 1).ToString() : Convert.ToString(dtSingleHTBill.Rows[23][i]);
                 }
             }
@@ -894,13 +1113,15 @@ namespace AT.Print
             sht.TopPanel_Row_2 = "Meter No. : " + meter;
             sht.TopPanel_Row_3 = "T No. : " + sht.L8_TNo;
             sht.TopPanel_Row_4 = "Bill Date : " + sht.L7_BillDt;
-            if (String.Equals(sht.L1_TODOrNon_TODFlag, "1"))
-            {
-                sht.TopPanel_Row_5 = "Bill Days : " + sht.L10_Mode;
-                sht.TopPanel_Row_6 = "11 KV FEEDER : " + sht.L1_FeederName;
-            }
-            else
-                sht.TopPanel_Row_5 = "11 KV FEEDER : " + sht.L1_FeederName;
+            sht.TopPanel_Row_5 = "11 KV FEEDER : " + sht.L1_FeederName;
+
+            //if (String.Equals(sht.L1_TODOrNon_TODFlag, "1"))
+            //{
+            //    sht.TopPanel_Row_5 = "Bill Days : " + sht.L10_Mode;
+            //    sht.TopPanel_Row_6 = "11 KV FEEDER : " + sht.L1_FeederName;
+            //}
+            //else
+            //    sht.TopPanel_Row_5 = "11 KV FEEDER : " + sht.L1_FeederName;
 
             Console.WriteLine("Custom Fields calculated");
 
@@ -1027,15 +1248,18 @@ namespace AT.Print
             try
             {
                 int BillNo = 0;
-                DSBill.Dispose();
-                DSBill.Reset();
+                //DSBill.Dispose();
+                //DSBill.Reset();
                 foreach (var Bill in Bills)
                 {
                     BillNo++;
-                    DSBill.Tables.Add(ParseAsDataTable.HT_FileTxtToDataTable(Bill, BillNo, "HT"));
-                    if (DSBill.Tables[BillNo - 1].Rows.Count == 37)
+                    //DSBill.Tables.Add(ParseAsDataTable.HT_FileTxtToDataTable(Bill, BillNo, "HT"));
+                    DataTable  dtSingleHTBill = ParseAsDataTable.HT_FileTxtToDataTable(Bill, BillNo, "HT");
+                    //if (DSBill.Tables[BillNo - 1].Rows.Count == 37)
+                    if(dtSingleHTBill.Rows.Count == 37)
                     {
-                        SingleHTBill sht = parseSingleHTBill(DSBill.Tables[BillNo - 1]);
+                        //SingleHTBill sht = parseSingleHTBill(DSBill.Tables[BillNo - 1]);
+                        SingleHTBill sht = parseSingleHTBill(dtSingleHTBill);
                     }
                     else
                     {
@@ -1052,5 +1276,25 @@ namespace AT.Print
             }
 
         }
+
+        private DevExpress.XtraPrinting.Drawing.Watermark GetWatermark(string imageName)
+        {
+            var watermark = new DevExpress.XtraPrinting.Drawing.Watermark();
+
+            watermark.ImageSource =
+                DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(
+                    Application.StartupPath +
+                    "\\Contents\\CategorySlabImages\\" + imageName);
+
+            watermark.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            watermark.ImageTiling = false;
+            watermark.ImageViewMode =
+                DevExpress.XtraPrinting.Drawing.ImageViewMode.Clip;
+            watermark.ImageTransparency = 0;
+            watermark.ShowBehind = true;
+
+            return watermark;
+        }
+
     }
 }
