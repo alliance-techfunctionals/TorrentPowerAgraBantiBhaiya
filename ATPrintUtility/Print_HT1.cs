@@ -91,19 +91,17 @@ namespace AT.Print
                         AppFunctions.ShowWaitForm("Validating HT Bills Now before I generate the PDF files !!");
                         if (ValidatetxtFile(singleHTBills))
                         {
-                            {
                                 StartPrinting_HTBills(singleHTBills, sb.Name);
                                 //Thread myNewThread1 = new Thread(() => StartPrinting_HTBills(singleHTBills, sb.Name, 0, singleHTBills.Count() - 1, "1"));
                                 //myNewThread1.Start();
-                            }
                         }
                         else
                         {
                             AppFunctions.CloseWaitForm();
                             return;
                         }
-                        AppFunctions.CloseWaitForm();
-                        XtraMessageBox.Show(singleHTBills.Count() + " bills has been parsed.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                      //AppFunctions.CloseWaitForm();
+                    //  XtraMessageBox.Show(singleHTBills.Count() + " bills has been parsed.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {

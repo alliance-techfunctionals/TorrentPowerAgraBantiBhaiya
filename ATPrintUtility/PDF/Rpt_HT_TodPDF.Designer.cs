@@ -489,7 +489,7 @@
             // 
             this.xrLabel56.Dpi = 96F;
             this.xrLabel56.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L9_AmountPayable]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L9_Amount_Payable]")});
             this.xrLabel56.Font = new DevExpress.Drawing.DXFont("Manrope", 8F);
             this.xrLabel56.LocationFloat = new DevExpress.Utils.PointFloat(382F, 4F);
             this.xrLabel56.Multiline = true;
@@ -532,7 +532,7 @@
             // 
             this.xrLabel59.Dpi = 96F;
             this.xrLabel59.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_AmountPayableBeforeDueDateCeilied]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_AmountPayableBeforeDueDate]\n")});
             this.xrLabel59.Font = new DevExpress.Drawing.DXFont("Manrope", 8F);
             this.xrLabel59.LocationFloat = new DevExpress.Utils.PointFloat(655.8132F, 4F);
             this.xrLabel59.Multiline = true;
@@ -547,7 +547,7 @@
             // 
             this.xrLabel61.Dpi = 96F;
             this.xrLabel61.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L10_TotArrUPPCLIntUPPCLIntArrUPPCLCeilied]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L10_TotArrUPPCLIntUPPCLIntArrUPPCL_Rounded]")});
             this.xrLabel61.Font = new DevExpress.Drawing.DXFont("Manrope", 8F);
             this.xrLabel61.LocationFloat = new DevExpress.Utils.PointFloat(655.8132F, 19.07983F);
             this.xrLabel61.Multiline = true;
@@ -562,7 +562,7 @@
             // 
             this.xrLabel63.Dpi = 96F;
             this.xrLabel63.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Ceiling([L8_ParkingAmountCeilied])")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L8_ParkingAmount]")});
             this.xrLabel63.Font = new DevExpress.Drawing.DXFont("Manrope", 8F);
             this.xrLabel63.LocationFloat = new DevExpress.Utils.PointFloat(655.8132F, 35.16003F);
             this.xrLabel63.Multiline = true;
@@ -1677,7 +1677,7 @@
             // 
             this.xrLabel8.Dpi = 96F;
             this.xrLabel8.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L9_AmountPayable]\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L9_Amount_Payable]")});
             this.xrLabel8.Font = new DevExpress.Drawing.DXFont("Manrope", 9F);
             this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(496F, 370.16F);
             this.xrLabel8.Multiline = true;
@@ -1805,11 +1805,11 @@
             this.xrLabel149.Multiline = true;
             this.xrLabel149.Name = "xrLabel149";
             this.xrLabel149.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel149.SizeF = new System.Drawing.SizeF(40.99991F, 22.08F);
+            this.xrLabel149.SizeF = new System.Drawing.SizeF(25F, 22.08F);
             this.xrLabel149.StylePriority.UseBorders = false;
             this.xrLabel149.StylePriority.UseFont = false;
             this.xrLabel149.StylePriority.UseTextAlignment = false;
-            this.xrLabel149.Text = "LTMD";
+            this.xrLabel149.Text = "HT";
             this.xrLabel149.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // xrLabel20
@@ -2017,14 +2017,14 @@
             this.xrLabel43.CanGrow = false;
             this.xrLabel43.Dpi = 96F;
             this.xrLabel43.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L15_Purpose]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L13_Purpose]")});
             this.xrLabel43.Font = new DevExpress.Drawing.DXFont("Manrope", 7F);
             this.xrLabel43.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabel43.LocationFloat = new DevExpress.Utils.PointFloat(528.93F, 236.76F);
             this.xrLabel43.Multiline = true;
             this.xrLabel43.Name = "xrLabel43";
             this.xrLabel43.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel43.SizeF = new System.Drawing.SizeF(90F, 22.08F);
+            this.xrLabel43.SizeF = new System.Drawing.SizeF(130.0792F, 22.08F);
             this.xrLabel43.StylePriority.UseFont = false;
             this.xrLabel43.StylePriority.UseTextAlignment = false;
             this.xrLabel43.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
