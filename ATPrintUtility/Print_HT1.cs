@@ -652,149 +652,6 @@ namespace AT.Print
 
         }
 
-        SingleHTBill ParseSingleHTBill_Optimized(string billText)
-        {
-            SingleHTBill sht = new SingleHTBill();
-
-            try
-            {
-                string[] lines = billText.Split(new[] { "\r\n", "\n" }, StringSplitOptions.None);
-
-                if (lines.Length < 37)
-                    return null;
-
-                // har line ko columns me split kar lo
-                string[][] cols = lines.Select(l => l.Split('|')).ToArray();
-
-                #region Line-1
-
-                ServiceNo = cols[5][0];
-
-                sht.L1_BillType = "HT";
-                sht.L1_MonthYear = cols[0][0];
-                sht.L1_Zone = cols[0][1];
-                sht.L1_BU = cols[0][2];
-                sht.L1_PC = cols[0][3];
-                sht.L1_Route = cols[0][4];
-                sht.L1_Bill_seq_no = cols[0][5];
-                sht.L1_FeederName = cols[0][6];
-                sht.L1_TODOrNon_TODFlag = cols[0][7];
-                sht.L1_AKY_indicator = cols[0][8];
-                sht.L1_DisconnectionMSGPrintingIMMEDIATE = cols[0][9];
-                sht.L1_BillingCode = cols[0][10];
-
-                if (string.IsNullOrEmpty(cols[0][11]))
-                    sht.L1_Customer_PAN = "";
-                else
-                    sht.L1_Customer_PAN = "PAN No: " + cols[0][11];
-
-                #endregion
-
-                #region Line-2
-
-                sht.L2_Name = cols[1][0].Trim('�');
-
-                #endregion
-
-                #region Line-3
-
-                sht.L3_Addr1 = cols[2][0].Trim('�');
-
-                #endregion
-
-                #region Line-4
-
-                sht.L4_Addr2 = cols[3][0].Trim('�');
-
-                #endregion
-
-                #region Line-5
-
-                sht.L5_Addr3 = cols[4][0].Trim('�');
-
-                #endregion
-
-                #region Line-6
-
-                sht.L6_SERVDET_SERVNO = cols[5][0];
-                sht.L6_SERVDET_SANC_LOAD = cols[5][1];
-                sht.L6_bill_demand = cols[5][2];
-                sht.L6_ACTUAL_DEMAND = cols[5][3];
-                sht.L6_TARIFF_DESCR = cols[5][4];
-                sht.L6_EXCESS_DEMAND = cols[5][5];
-                sht.L6_SUPPLY_VOLTAGE = cols[5][6];
-                sht.L6_Avg_Power_Factor = cols[5][7];
-                sht.L6_MTRDET_LF_PERC = cols[5][8];
-                sht.L6_BILL_TYPE = cols[5][9];
-                sht.L6_MeasureContractDemand = cols[5][10];
-                sht.L6_Kvah_Indicator = cols[5][11];
-                sht.L6_LT_Metering_Flag = cols[5][12];
-
-                #endregion
-
-                #region Line-7
-
-                sht.L7_Due_Date = cols[6][0];
-                sht.L7_BillDt = cols[6][1];
-
-                DateTime readDate = DateTime.Parse(cols[6][2]);
-                sht.L7_PrevReadDt = readDate.AddDays(-1).ToString("dd-MM-yy");
-
-                sht.L7_ReaDt = cols[6][3];
-                sht.L7_LastPymtDate = cols[6][4];
-                sht.L7_LastPayementAmount = cols[6][5];
-                sht.L7_LastPayementMode = cols[6][6];
-
-                #endregion
-
-                #region Line-8
-
-                sht.L8_FixedCharge = cols[7][0];
-                sht.L8_EnergyCharge = cols[7][1];
-                sht.L8_TODCharges = cols[7][2];
-                sht.L8_ACCharge = cols[7][3];
-                sht.L8_GovTax = cols[7][4];
-                sht.L8_MinCharge = cols[7][5];
-                sht.L8_ServdetTotbBdtOthr = cols[7][6];
-                sht.L8_RegulatoryCharge_1 = cols[7][7];
-                sht.L8_RegulatoryCharge_2 = cols[7][8];
-                sht.L8_RebateIncurredCurrentMonth = cols[7][9];
-                sht.L8_AmountPayableBeforeDueDate = cols[7][10];
-                sht.L8_TNo = cols[7][11];
-
-                #endregion
-
-                #region Line-9
-
-                sht.L9_TotDbArr = cols[8][0];
-                sht.L9_CurrBillAmt = cols[8][1];
-                sht.L9_Int_Tpl = cols[8][2];
-                sht.L9_ArrsTpl = cols[8][3];
-                sht.L9_CurrBillAmtIntTplArrsTpl = cols[8][4];
-                sht.L9_Amount_Payable = cols[8][5];
-
-                if (Convert.ToDouble(sht.L9_Amount_Payable) < 0)
-                    sht.L9_Amount_Payable = "NOT TO PAY";
-
-                #endregion
-
-                #region Line-11
-
-                sht.L11_MTRSNO_1 = cols[10][0];
-                sht.L11_MTRSNO_2_IF_AVAILABLE = cols[10][1];
-
-                #endregion
-
-                Console.WriteLine("HT Bill Parsed Successfully");
-
-                return sht;
-            }
-            catch (Exception ex)
-            {
-                AppFunctions.LogError(ex);
-                return null;
-            }
-        }
         SingleHTBill parseSingleHTBill(DataTable dtSingleHTBill)
         {
 
@@ -1394,7 +1251,7 @@ namespace AT.Print
 
         }
 
-        private List<SingleHTBill> ValidatetxtFile(string[] Bills)
+        private List<SingleHTBill> ValidatetxtFile(string[] Bills)  // need to work on it
         {
             var validatedBills = new List<SingleHTBill>();
 
@@ -1407,25 +1264,56 @@ namespace AT.Print
                 {
                     billNo++;
 
-                    string[] lines = billContent
-               .Split(new[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries);
+                    if (!ValidateHTBill(billContent, billNo))
+                        return;
 
-                    if (lines.Length < 30) // tumhari structure ke according change kar sakti ho
+                    string[] lines = billContent
+              .Split(new[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries);
+
+                    if (lines.Length < 37) 
                     {
                         XtraMessageBox.Show($"Invalid bill format at Bill No: {billNo}");
                         return null;
                     }
 
-                    // Direct parsing
-                    SingleHTBill bill = ParseSingleHTBillOptimized(lines);
-
+                    var bill = ParseSingleHTBill_Optimized(billContent);
                     if (bill == null)
                     {
                         XtraMessageBox.Show($"Parsing failed for Bill No: {billNo}");
                         return null;
                     }
-
                     validatedBills.Add(bill);
+
+
+
+
+
+               //     string[] lines = billContent
+               //.Split(new[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries);
+
+               //     if (lines.Length < 37) // tumhari structure ke according change kar sakti ho
+               //     {
+               //         XtraMessageBox.Show($"Invalid bill format at Bill No: {billNo}");
+               //         return null;
+               //     }
+
+               //     // Direct parsing
+               //     SingleHTBill bill = ParseSingleHTBillOptimized(lines);
+
+               //     if (bill == null)
+               //     {
+               //         XtraMessageBox.Show($"Parsing failed for Bill No: {billNo}");
+               //         return null;
+               //     }
+
+               //     validatedBills.Add(bill);
+
+
+
+
+
+
+
                 }
 
                 return validatedBills;
@@ -1438,6 +1326,223 @@ namespace AT.Print
         }
 
 
+        private bool ValidateHTBill(string billText, int BillNo) //need to work on it
+        {
+            string[] lines = billText.Split('\n');
+
+            if (lines.Length != 37)
+            {
+                XtraMessageBox.Show($"Bill No: {BillNo} has not 37 rows.");
+                return false;
+            }
+
+            string serviceNo = lines[5].Split('|')[0];
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                string[] fields = lines[i].Split('|');
+
+                switch (i + 1)
+                {
+                    case 1:
+                        if (fields.Length != 12)
+                        {
+                            XtraMessageBox.Show($"Bill {BillNo}, Service {serviceNo} row1 column mismatch");
+                            return false;
+                        }
+
+                        if (string.IsNullOrEmpty(fields[7]) || (fields[7] != "0" && fields[7] != "1"))
+                        {
+                            XtraMessageBox.Show($"Bill {BillNo}, Service {serviceNo} TOD flag invalid");
+                            return false;
+                        }
+
+                        break;
+
+                    case 6:
+                        if (fields.Length != 13)
+                        {
+                            XtraMessageBox.Show($"Bill {BillNo}, Service {serviceNo} row6 column mismatch");
+                            return false;
+                        }
+                        break;
+
+                    case 7:
+                        if (fields.Length != 7)
+                        {
+                            XtraMessageBox.Show($"Bill {BillNo}, Service {serviceNo} row7 column mismatch");
+                            return false;
+                        }
+                        break;
+
+                    case 8:
+                        if (fields.Length != 16)
+                        {
+                            XtraMessageBox.Show($"Bill {BillNo}, Service {serviceNo} row8 column mismatch");
+                            return false;
+                        }
+                        break;
+
+                    case 9:
+                        if (fields.Length != 6)
+                        {
+                            XtraMessageBox.Show($"Bill {BillNo}, Service {serviceNo} row9 column mismatch");
+                            return false;
+                        }
+                        break;
+                }
+            }
+
+            return true;
+        }
+
+        SingleHTBill ParseSingleHTBill_Optimized(string billText) // need to work on it
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(billText))
+                    return null;
+
+                var lines = billText.Split(new[] { "\r\n", "\n" }, StringSplitOptions.None);
+
+                if (lines.Length < 10)
+                    return null;
+
+                var cols = lines.Select(l => l.Split('|')).ToArray();
+
+                SingleHTBill sht = new SingleHTBill();
+
+                #region Line1 Basic Info
+
+                sht.L1_BillType = "HT";
+                sht.L1_MonthYear = GetCol(cols, 0, 0);
+                sht.L1_Zone = GetCol(cols, 0, 1);
+                sht.L1_BU = GetCol(cols, 0, 2);
+                sht.L1_PC = GetCol(cols, 0, 3);
+                sht.L1_Route = GetCol(cols, 0, 4);
+                sht.L1_Bill_seq_no = GetCol(cols, 0, 5);
+                sht.L1_FeederName = GetCol(cols, 0, 6);
+                sht.L1_TODOrNon_TODFlag = GetCol(cols, 0, 7);
+                sht.L1_AKY_indicator = GetCol(cols, 0, 8);
+                sht.L1_DisconnectionMSGPrintingIMMEDIATE = GetCol(cols, 0, 9);
+                sht.L1_BillingCode = GetCol(cols, 0, 10);
+
+                var pan = GetCol(cols, 0, 11);
+                sht.L1_Customer_PAN = string.IsNullOrEmpty(pan) ? "" : "PAN No: " + pan;
+
+                #endregion
+
+                #region Customer Name & Address
+
+                sht.L2_Name = GetCol(cols, 1, 0).Trim('�');
+                sht.L3_Addr1 = GetCol(cols, 2, 0).Trim('�');
+                sht.L4_Addr2 = GetCol(cols, 3, 0).Trim('�');
+                sht.L5_Addr3 = GetCol(cols, 4, 0).Trim('�');
+
+                #endregion
+
+                #region Service Details
+
+                ServiceNo = GetCol(cols, 5, 0);
+
+                sht.L6_SERVDET_SERVNO = ServiceNo;
+                sht.L6_SERVDET_SANC_LOAD = GetCol(cols, 5, 1);
+                sht.L6_bill_demand = GetCol(cols, 5, 2);
+                sht.L6_ACTUAL_DEMAND = GetCol(cols, 5, 3);
+                sht.L6_TARIFF_DESCR = GetCol(cols, 5, 4);
+                sht.L6_EXCESS_DEMAND = GetCol(cols, 5, 5);
+                sht.L6_SUPPLY_VOLTAGE = GetCol(cols, 5, 6);
+                sht.L6_Avg_Power_Factor = GetCol(cols, 5, 7);
+                sht.L6_MTRDET_LF_PERC = GetCol(cols, 5, 8);
+                sht.L6_BILL_TYPE = GetCol(cols, 5, 9);
+                sht.L6_MeasureContractDemand = GetCol(cols, 5, 10);
+                sht.L6_Kvah_Indicator = GetCol(cols, 5, 11);
+                sht.L6_LT_Metering_Flag = GetCol(cols, 5, 12);
+
+                #endregion
+
+                #region Billing Dates
+
+                sht.L7_Due_Date = GetCol(cols, 6, 0);
+                sht.L7_BillDt = GetCol(cols, 6, 1);
+
+                DateTime prev;
+                if (DateTime.TryParse(GetCol(cols, 6, 2), out prev))
+                    sht.L7_PrevReadDt = prev.AddDays(-1).ToString("dd-MM-yy");
+
+                sht.L7_ReaDt = GetCol(cols, 6, 3);
+                sht.L7_LastPymtDate = GetCol(cols, 6, 4);
+                sht.L7_LastPayementAmount = GetCol(cols, 6, 5);
+                sht.L7_LastPayementMode = GetCol(cols, 6, 6);
+
+                #endregion
+
+                #region Charges
+
+                sht.L8_FixedCharge = GetCol(cols, 7, 0);
+                sht.L8_EnergyCharge = GetCol(cols, 7, 1);
+                sht.L8_TODCharges = GetCol(cols, 7, 2);
+                sht.L8_ACCharge = GetCol(cols, 7, 3);
+                sht.L8_GovTax = GetCol(cols, 7, 4);
+                sht.L8_MinCharge = GetCol(cols, 7, 5);
+                sht.L8_ServdetTotbBdtOthr = GetCol(cols, 7, 6);
+                sht.L8_RegulatoryCharge_1 = GetCol(cols, 7, 7);
+                sht.L8_RegulatoryCharge_2 = GetCol(cols, 7, 8);
+                sht.L8_RebateIncurredCurrentMonth = GetCol(cols, 7, 9);
+                sht.L8_AmountPayableBeforeDueDate = GetCol(cols, 7, 10);
+                sht.L8_TNo = GetCol(cols, 7, 11);
+
+                #endregion
+
+                #region Final Amount
+
+                sht.L9_TotDbArr = GetCol(cols, 8, 0);
+                sht.L9_CurrBillAmt = GetCol(cols, 8, 1);
+                sht.L9_Int_Tpl = GetCol(cols, 8, 2);
+                sht.L9_ArrsTpl = GetCol(cols, 8, 3);
+                sht.L9_CurrBillAmtIntTplArrsTpl = GetCol(cols, 8, 4);
+                sht.L9_Amount_Payable = GetCol(cols, 8, 5);
+
+                double payable;
+                if (double.TryParse(sht.L9_Amount_Payable, out payable))
+                {
+                    if (payable < 0)
+                        sht.L9_Amount_Payable = "NOT TO PAY";
+                }
+
+                #endregion
+
+                #region Meter
+
+                sht.L11_MTRSNO_1 = GetCol(cols, 10, 0);
+                sht.L11_MTRSNO_2_IF_AVAILABLE = GetCol(cols, 10, 1);
+
+                #endregion
+
+                return sht;
+            }
+            catch (Exception ex)
+            {
+                AppFunctions.LogError(ex);
+                return null;
+            }
+        }
+
+
+        private string GetCol(string[][] cols, int row, int col)
+        {
+            if (cols.Length > row && cols[row].Length > col)
+                return cols[row][col]?.Trim() ?? "";
+
+            return "";
+        }
+
+        private double GetDouble(string[][] cols, int row, int col)
+        {
+            double val;
+            double.TryParse(GetCol(cols, row, col), out val);
+            return val;
+        }
         private DevExpress.XtraPrinting.Drawing.Watermark GetWatermark(string imageName)
         {
             var watermark = new DevExpress.XtraPrinting.Drawing.Watermark();
