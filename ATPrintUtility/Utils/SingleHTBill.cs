@@ -213,7 +213,7 @@ namespace AT.Print.Utils
 
         public System.Data.DataTable KVAgrph { get; set; }
         public System.Data.DataTable KVAHgrph { get; set; }
-        public System.Data.DataTable PFgrph { get; set; }
+        //public System.Data.DataTable PFgrph { get; set; }
 
         public string unit { get; set; }
 
