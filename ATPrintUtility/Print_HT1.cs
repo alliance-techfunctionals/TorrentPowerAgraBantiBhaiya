@@ -84,11 +84,11 @@ namespace AT.Print
                     if (contents.StartsWith("HT|"))
                     {
                         singleHTBills = contents.Split(new String[] { "HT|" }, StringSplitOptions.RemoveEmptyEntries);
-                        if (!select_mVImg())
-                        {
-                            AppFunctions.CloseWaitForm();
-                            return;
-                        }
+                        //if (!select_mVImg())
+                        //{
+                        //    AppFunctions.CloseWaitForm();
+                        //    return;
+                        //}
                         XtraMessageBox.Show("Total Bills in this file: " + singleHTBills.Length.ToString(), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         AppFunctions.ShowWaitForm("Validating HT Bills Now before I generate the PDF files !!");
                         var validatedBills = ValidatetxtFile(singleHTBills);
@@ -103,8 +103,8 @@ namespace AT.Print
                             AppFunctions.CloseWaitForm();
                             return;
                         }
-                        AppFunctions.CloseWaitForm();
-                        XtraMessageBox.Show(singleHTBills.Count() + " bills has been parsed.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                      //AppFunctions.CloseWaitForm();
+                    //  XtraMessageBox.Show(singleHTBills.Count() + " bills has been parsed.", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
@@ -115,29 +115,6 @@ namespace AT.Print
                 }
             }
         }
-
-        private bool select_mVImg()
-        {
-            using (OpenFileDialog ofdMv = new OpenFileDialog())
-            {
-                ofdMv.Title = "Select Mobile Van Image ";
-                ofdMv.Multiselect = false;
-                ofdMv.Filter = "All Image Files|*.png;*.jpg;*.jpeg;*.bmp;*.gif";
-                if (ofdMv.ShowDialog() == DialogResult.OK)
-                {
-                    mVImagePath = ofdMv.FileName;
-                    return true;
-                }
-                else
-                {
-                    XtraMessageBox.Show("Canceled the selection.");
-                    AppFunctions.CloseWaitForm();
-                    return false;
-                }
-            }
-        }
-
-        
 
         private void StartPrinting_HTBills(List<SingleHTBill> bills, string Name)
         {
@@ -1305,13 +1282,15 @@ namespace AT.Print
             sht.TopPanel_Row_2 = "Meter No. : " + meter;
             sht.TopPanel_Row_3 = "T No. : " + sht.L8_TNo;
             sht.TopPanel_Row_4 = "Bill Date : " + sht.L7_BillDt;
-            if (String.Equals(sht.L1_TODOrNon_TODFlag, "1"))
-            {
-                sht.TopPanel_Row_5 = "Bill Days : " + sht.L10_Mode;
-                sht.TopPanel_Row_6 = "11 KV FEEDER : " + sht.L1_FeederName;
-            }
-            else
-                sht.TopPanel_Row_5 = "11 KV FEEDER : " + sht.L1_FeederName;
+            sht.TopPanel_Row_5 = "11 KV FEEDER : " + sht.L1_FeederName;
+
+            //if (String.Equals(sht.L1_TODOrNon_TODFlag, "1"))
+            //{
+            //    sht.TopPanel_Row_5 = "Bill Days : " + sht.L10_Mode;
+            //    sht.TopPanel_Row_6 = "11 KV FEEDER : " + sht.L1_FeederName;
+            //}
+            //else
+            //    sht.TopPanel_Row_5 = "11 KV FEEDER : " + sht.L1_FeederName;
 
             Console.WriteLine("Custom Fields calculated");
 
