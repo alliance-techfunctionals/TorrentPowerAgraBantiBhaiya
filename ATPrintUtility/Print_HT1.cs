@@ -212,8 +212,8 @@ namespace AT.Print
                             DisplayName = bill.L6_SERVDET_SERVNO
                         };
 
-                        var frontWatermark = GetWatermark("Duplex_Non_TOD_Front_Page.png");
-                        var backWatermark = GetWatermark("Duplex_Non_TOD_Back_Page.png");
+                        var frontWatermark = GetWatermark("HT_Duplex_Non_TOD_Front_Page.png");
+                        var backWatermark = GetWatermark("HT_Duplex_Non_TOD_Back_Page.png");
 
                         #region PDF CASE
 
