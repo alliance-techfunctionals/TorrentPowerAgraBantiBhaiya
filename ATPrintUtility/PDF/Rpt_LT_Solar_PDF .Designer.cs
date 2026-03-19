@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraPrinting.BarCode.EAN128Generator eaN128Generator1 = new DevExpress.XtraPrinting.BarCode.EAN128Generator();
             DevExpress.XtraReports.UI.XRWatermark xrWatermark1 = new DevExpress.XtraReports.UI.XRWatermark();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -272,8 +273,8 @@
             this.xrlTopPanelRow_1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrQRCODE = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrLabel18 = new DevExpress.XtraReports.UI.XRLabel();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource();
-            this.objectDataSource1 = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.objectDataSource1 = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.xrChartPie)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource1)).BeginInit();
@@ -3621,7 +3622,7 @@
             this.xrLabelPurData.Multiline = true;
             this.xrLabelPurData.Name = "xrLabelPurData";
             this.xrLabelPurData.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabelPurData.SizeF = new System.Drawing.SizeF(90F, 22.08F);
+            this.xrLabelPurData.SizeF = new System.Drawing.SizeF(119.66F, 22.08F);
             this.xrLabelPurData.StylePriority.UseFont = false;
             this.xrLabelPurData.StylePriority.UseTextAlignment = false;
             this.xrLabelPurData.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;

@@ -1,4 +1,5 @@
-﻿using AT.Print.Utils;
+﻿using AT.Print.PDF;
+using AT.Print.Utils;
 using DevExpress.XtraEditors;
 using DevExpress.XtraReports.UI;
 using System;
@@ -65,11 +66,11 @@ namespace AT.Print
                     if (contents.StartsWith("HT")) 
                     {
                         Solar_Bill_HT = contents.Split(new String[] { "HT " }, StringSplitOptions.RemoveEmptyEntries);
-                        if (!select_mVImg())
-                        {
-                            AppFunctions.CloseWaitForm();
-                            return;
-                        }
+                        //if (!select_mVImg())
+                        //{
+                        //    AppFunctions.CloseWaitForm();
+                        //    return;
+                        //}
                         XtraMessageBox.Show("Total Bills in this file: " + Solar_Bill_HT.Length.ToString(), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         var sb = sender as SimpleButton;
                         if (ValidatetxtFile(Solar_Bill_HT))
@@ -91,26 +92,26 @@ namespace AT.Print
             }
         }
 
-        private bool select_mVImg()
-        {
-            using (OpenFileDialog ofdMv = new OpenFileDialog())
-            {
-                ofdMv.Title = "Select Mobile Van Image ";
-                ofdMv.Multiselect = false;
-                ofdMv.Filter = "All Image Files|*.png;*.jpg;*.jpeg;*.bmp;*.gif";
-                if (ofdMv.ShowDialog() == DialogResult.OK)
-                {
-                    mVImagePath = ofdMv.FileName;
-                    return true;
-                }
-                else
-                {
-                    XtraMessageBox.Show("Canceled the selection.");
-                    AppFunctions.CloseWaitForm();
-                    return false;
-                }
-            }
-        }
+        //private bool select_mVImg()
+        //{
+        //    using (OpenFileDialog ofdMv = new OpenFileDialog())
+        //    {
+        //        ofdMv.Title = "Select Mobile Van Image ";
+        //        ofdMv.Multiselect = false;
+        //        ofdMv.Filter = "All Image Files|*.png;*.jpg;*.jpeg;*.bmp;*.gif";
+        //        if (ofdMv.ShowDialog() == DialogResult.OK)
+        //        {
+        //            mVImagePath = ofdMv.FileName;
+        //            return true;
+        //        }
+        //        else
+        //        {
+        //            XtraMessageBox.Show("Canceled the selection.");
+        //            AppFunctions.CloseWaitForm();
+        //            return false;
+        //        }
+        //    }
+        //}
 
         private void StartPrinting_HT_Solar_Bills(string[] Bills, string Name)
         {
@@ -138,19 +139,19 @@ namespace AT.Print
 
                     if (Name == "sbSavePDF")
                     {
-                        AT.Print.PDF.Rpt_HT_Solar_back_PDF rpts = new AT.Print.PDF.Rpt_HT_Solar_back_PDF
+                        Rpt_HT_Solar_back_PDF rpts = new Rpt_HT_Solar_back_PDF
                         {
                             DataSource = lstformattedbills,
                         };
 
-                        AT.Print.PDF.Rpt_HT_Solar_PDF rptsd = new AT.Print.PDF.Rpt_HT_Solar_PDF(rpts)
+                        Rpt_HT_Solar_PDF rptsd = new Rpt_HT_Solar_PDF(rpts)
                         {
                             DataSource = lstformattedbills,
                         };
 
                         #region WaterMark Picture Front Page PDF Solar
                         DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkFrontSolar = new DevExpress.XtraPrinting.Drawing.Watermark();
-                        pictureWatermarkFrontSolar.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_Solar_Front_Page.jpg");
+                        pictureWatermarkFrontSolar.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\HT_Duplex_Non_TOD_Front_Page.png");
                         pictureWatermarkFrontSolar.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
                         pictureWatermarkFrontSolar.ImageTiling = false;
                         pictureWatermarkFrontSolar.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Zoom;
@@ -163,7 +164,7 @@ namespace AT.Print
                         
                         #region WaterMark Picture Back Page PDF Solar
                         DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkBackSolar = new DevExpress.XtraPrinting.Drawing.Watermark();
-                        pictureWatermarkBackSolar.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_Solar_Back_Page.jpg");
+                        pictureWatermarkBackSolar.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\HT_Duplex_Non_TOD_Back_Page.png");
                         pictureWatermarkBackSolar.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
                         pictureWatermarkBackSolar.ImageTiling = false;
                         pictureWatermarkBackSolar.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Zoom;
@@ -205,12 +206,12 @@ namespace AT.Print
                              Margins MinMargins = DevExpress.XtraPrinting.Native.DeviceCaps.GetMinMargins(g);
                              Console.WriteLine("Minimum Margins for " + ps.PrinterName + ": " + MinMargins.ToString());
                          }
-                        AT.Print.Rpt_HT_Solar_Print_Back rptb = new Rpt_HT_Solar_Print_Back
+                        Rpt_HT_Solar_back_PDF rptb = new Rpt_HT_Solar_back_PDF
                         {
                             DataSource = lstformattedbills,
                         };
 
-                        AT.Print.Rpt_HT_Solar_Print rpta = new Rpt_HT_Solar_Print(rptb)
+                        Rpt_HT_Solar_PDF rpta = new Rpt_HT_Solar_PDF(rptb)
                          {
                              DataSource = lstformattedbills,
                              DisplayName = sht.L6_SERVDET_SERVNO,
@@ -269,13 +270,14 @@ namespace AT.Print
             sht.L1_PC = dtSolarBill.Rows[0][3].ToString();
             sht.L1_route = dtSolarBill.Rows[0][4].ToString();
             sht.L1_Bill_seq_no = dtSolarBill.Rows[0][5].ToString();
+            sht.L1_subroute = dtSolarBill.Rows[0][6].ToString();
             if (dtSolarBill.Rows[0][9].ToString() == "")
             {
                 sht.L1_Customer_PAN = dtSolarBill.Rows[0][9].ToString();
             }
             else
             {
-                sht.L1_Customer_PAN = "PAN: " + dtSolarBill.Rows[0][9].ToString();
+                sht.L1_Customer_PAN = "PAN No: " + dtSolarBill.Rows[0][9].ToString();
             }
             #endregion
 
@@ -929,7 +931,8 @@ namespace AT.Print
             #region Custom Fields
 
             var meter = sht.L11_MTRSNO_METER_2_IF_AVAILABLE.Trim() != "" ? sht.L11_MTRSNO_METER_2_IF_AVAILABLE : sht.L11_MTRSNO_METER1;
-            sht.TopPanel_Row_1 = sht.L1_MONTH_YEAR + " / " + sht.L1_ZONE + " / " + sht.L1_BU + " / " + sht.L1_route + " / " + sht.L1_Bill_seq_no;
+            sht.TopPanel_Row_1 = sht.L1_MONTH_YEAR + " / " + sht.L1_ZONE + " / " + sht.L1_BU + " / " + sht.L1_route + " / " + sht.L1_subroute + " / " + sht.L1_Bill_seq_no;
+            sht.TopPanel_Row_2 = "Meter No. : " + meter;
             sht.TopPanel_Row_3 = "T No.  " + sht.L8_T_No;
             sht.TopPanel_Row_4 = "Bill Date  " + sht.L7_Billdt;
           
