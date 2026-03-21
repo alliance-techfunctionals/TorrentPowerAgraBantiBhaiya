@@ -274,6 +274,8 @@ namespace AT.Print.PDF
 
             op[0].L6_SERVDET_SANC_LOAD = op[0].L6_SERVDET_SANC_LOAD + "(" + op[0].L6_MEASURE_OF_CONTRACT_Demand + ")";
 
+            xrLabel2.BringToFront();
+            xrLabel18.BringToFront();
             #region pieChart
             //PieChart//
             decimal energyCharge = ToDecimal(op[0].L8_EnergyCharge);
@@ -317,8 +319,7 @@ namespace AT.Print.PDF
             xrLabelTotalAmt.Text = "₹" + tValue.ToString();
             #endregion
 
-            xrLabel2.BringToFront();
-            xrLabel18.BringToFront();
+          
             #region front page details
             #region Meter Change
             //Meter Change Print
@@ -631,11 +632,11 @@ namespace AT.Print.PDF
                     MTR2_KWH4.Text = op[0].L22_TOD4_KVAH_Units;
                     xrLabel11.Text = totalA1.ToString("0.00");
 
-                    MTR2_KWH1_ex.Text = op[0].L51_Exp_TOD1_KWH_Units;
-                    MTR2_KWH2_ex.Text = op[0].L51_Exp_TOD2_KWH_Units;
-                    MTR2_KWH3_ex.Text = op[0].L51_Exp_TOD3_KWH_Units;
-                    MTR2_KWH4_ex.Text = op[0].L51_Exp_TOD4_KWH_Units;
-                    xrLabel12.Text = totalA2.ToString("0.00");
+                    MTR2_KWH1_ex.Text = op[0].L50_Exp_TOD1_KVAH_Units;
+                    MTR2_KWH2_ex.Text = op[0].L50_Exp_TOD2_KVAH_Units;
+                    MTR2_KWH3_ex.Text = op[0].L50_Exp_TOD3_KVAH_Units;
+                    MTR2_KWH4_ex.Text = op[0].L50_Exp_TOD4_KVAH_Units;
+                    xrLabel12.Text = totalA3.ToString("0.00");
 
 
 
@@ -689,11 +690,11 @@ namespace AT.Print.PDF
                     MTR2_KWH3.Text = op[0].L22_TOD3_KVAH_Units;
                     MTR2_KWH4.Text = op[0].L22_TOD4_KVAH_Units;
                     xrLabel11.Text = totalA1.ToString("0.00");
-                    MTR2_KWH1_ex.Text = op[0].L50_Exp_TOD1_KVAH_Units;
-                    MTR2_KWH2_ex.Text = op[0].L50_Exp_TOD2_KVAH_Units;
-                    MTR2_KWH3_ex.Text = op[0].L50_Exp_TOD3_KVAH_Units;
-                    MTR2_KWH4_ex.Text = op[0].L50_Exp_TOD4_KVAH_Units;
-                    xrLabel12.Text = totalA3.ToString("0.00");
+                    MTR2_KWH1_ex.Text = op[0].L51_Exp_TOD1_KWH_Units;
+                    MTR2_KWH2_ex.Text = op[0].L51_Exp_TOD2_KWH_Units;
+                    MTR2_KWH3_ex.Text = op[0].L51_Exp_TOD3_KWH_Units;
+                    MTR2_KWH4_ex.Text = op[0].L51_Exp_TOD4_KWH_Units;
+                    xrLabel12.Text = totalA2.ToString("0.00");
 
 
                 }
