@@ -979,14 +979,14 @@
             this.bd_FixedCharge_Hindi.CanGrow = false;
             this.bd_FixedCharge_Hindi.CanShrink = true;
             this.bd_FixedCharge_Hindi.Font = new DevExpress.Drawing.DXFont("Noto Sans Devanagari", 8F);
-            this.bd_FixedCharge_Hindi.LocationFloat = new DevExpress.Utils.PointFloat(85.42F, 1.04F);
+            this.bd_FixedCharge_Hindi.LocationFloat = new DevExpress.Utils.PointFloat(99.42F, 1.04F);
             this.bd_FixedCharge_Hindi.Name = "bd_FixedCharge_Hindi";
             this.bd_FixedCharge_Hindi.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.bd_FixedCharge_Hindi.SizeF = new System.Drawing.SizeF(64.87F, 16.75F);
             this.bd_FixedCharge_Hindi.StylePriority.UseFont = false;
             this.bd_FixedCharge_Hindi.StylePriority.UsePadding = false;
             this.bd_FixedCharge_Hindi.StylePriority.UseTextAlignment = false;
-            this.bd_FixedCharge_Hindi.Text = "फिक्स चार्ज";
+            this.bd_FixedCharge_Hindi.Text = "डिमांड चार्ज";
             this.bd_FixedCharge_Hindi.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // bd_ElectricityDutyHindi
@@ -1353,7 +1353,7 @@
             this.bd_FixedCharge.StylePriority.UseBorders = false;
             this.bd_FixedCharge.StylePriority.UseFont = false;
             this.bd_FixedCharge.StylePriority.UsePadding = false;
-            this.bd_FixedCharge.Text = "Fixed Charges / ";
+            this.bd_FixedCharge.Text = "Demand Charges / ";
             // 
             // xrPictureBox3
             // 

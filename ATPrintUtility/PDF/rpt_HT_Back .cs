@@ -331,6 +331,28 @@ namespace AT.Print.PDF
 
             #region Custom Messages
             var totalMessages = messageFromFile;
+
+            if (!string.IsNullOrEmpty(op[0].L6_EXCESS_DEMAND) && op[0].L6_EXCESS_DEMAND != "0.00(" + op[0].unit + ")")
+            {
+                if (!IsMessageLimitExceeds(totalMessages))
+                {
+                    totalMessages++;
+                    XRLabel xrMessageExcessDemand = new XRLabel
+                    {
+                        Font = new DXFont("Noto Sans Devanagari", 8),
+                        TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft,
+                        Text = getMessage(LoadStaticData._HindiMessage, "EDC"),
+                        WordWrap = true,
+                        WidthF = xrPanel1.WidthF,
+                        KeepTogether = true,
+                        HeightF = 1,
+                        Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0),
+                    };
+                    xrPanel1.Controls.Add(xrMessageExcessDemand);
+                    adjustMessages(xrMessageExcessDemand);
+                }
+            }
+
             if (!String.IsNullOrEmpty(op[0].L6_LT_Metering_Flag))
             {
 

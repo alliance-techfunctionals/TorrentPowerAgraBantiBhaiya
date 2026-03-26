@@ -1161,7 +1161,7 @@
             // 
             this.MTR2_PR4.CanGrow = false;
             this.MTR2_PR4.Dpi = 96F;
-            this.MTR2_PR4.Font = new DevExpress.Drawing.DXFont("Manrope", 6F);
+            this.MTR2_PR4.Font = new DevExpress.Drawing.DXFont("Manrope", 5F);
             this.MTR2_PR4.LocationFloat = new DevExpress.Utils.PointFloat(174.6F, 716F);
             this.MTR2_PR4.Name = "MTR2_PR4";
             this.MTR2_PR4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1174,7 +1174,7 @@
             // 
             this.MTR2_CR4.CanGrow = false;
             this.MTR2_CR4.Dpi = 96F;
-            this.MTR2_CR4.Font = new DevExpress.Drawing.DXFont("Manrope", 6F);
+            this.MTR2_CR4.Font = new DevExpress.Drawing.DXFont("Manrope", 5F);
             this.MTR2_CR4.LocationFloat = new DevExpress.Utils.PointFloat(174.6F, 735.4401F);
             this.MTR2_CR4.Name = "MTR2_CR4";
             this.MTR2_CR4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1187,7 +1187,7 @@
             // 
             this.MTR2_MF4.CanGrow = false;
             this.MTR2_MF4.Dpi = 96F;
-            this.MTR2_MF4.Font = new DevExpress.Drawing.DXFont("Manrope", 6F);
+            this.MTR2_MF4.Font = new DevExpress.Drawing.DXFont("Manrope", 5F);
             this.MTR2_MF4.LocationFloat = new DevExpress.Utils.PointFloat(174.6F, 755.5201F);
             this.MTR2_MF4.Name = "MTR2_MF4";
             this.MTR2_MF4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1200,7 +1200,7 @@
             // 
             this.MTR2_CU4.CanGrow = false;
             this.MTR2_CU4.Dpi = 96F;
-            this.MTR2_CU4.Font = new DevExpress.Drawing.DXFont("Manrope", 6F);
+            this.MTR2_CU4.Font = new DevExpress.Drawing.DXFont("Manrope", 5F);
             this.MTR2_CU4.LocationFloat = new DevExpress.Utils.PointFloat(174.6F, 775.6001F);
             this.MTR2_CU4.Name = "MTR2_CU4";
             this.MTR2_CU4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1213,11 +1213,11 @@
             // 
             this.imp11.CanGrow = false;
             this.imp11.Dpi = 96F;
-            this.imp11.Font = new DevExpress.Drawing.DXFont("Manrope", 6F);
-            this.imp11.LocationFloat = new DevExpress.Utils.PointFloat(219.93F, 716F);
+            this.imp11.Font = new DevExpress.Drawing.DXFont("Manrope", 5F);
+            this.imp11.LocationFloat = new DevExpress.Utils.PointFloat(214.93F, 716F);
             this.imp11.Name = "imp11";
             this.imp11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.imp11.SizeF = new System.Drawing.SizeF(40F, 20F);
+            this.imp11.SizeF = new System.Drawing.SizeF(43F, 20F);
             this.imp11.StylePriority.UseFont = false;
             this.imp11.StylePriority.UseTextAlignment = false;
             this.imp11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
@@ -1226,11 +1226,11 @@
             // 
             this.imp12.CanGrow = false;
             this.imp12.Dpi = 96F;
-            this.imp12.Font = new DevExpress.Drawing.DXFont("Manrope", 6F);
-            this.imp12.LocationFloat = new DevExpress.Utils.PointFloat(219.9269F, 735.4401F);
+            this.imp12.Font = new DevExpress.Drawing.DXFont("Manrope", 5F);
+            this.imp12.LocationFloat = new DevExpress.Utils.PointFloat(214.9269F, 735.4401F);
             this.imp12.Name = "imp12";
             this.imp12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.imp12.SizeF = new System.Drawing.SizeF(40F, 20F);
+            this.imp12.SizeF = new System.Drawing.SizeF(43F, 20F);
             this.imp12.StylePriority.UseFont = false;
             this.imp12.StylePriority.UseTextAlignment = false;
             this.imp12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
@@ -1239,11 +1239,11 @@
             // 
             this.imp13.CanGrow = false;
             this.imp13.Dpi = 96F;
-            this.imp13.Font = new DevExpress.Drawing.DXFont("Manrope", 6F);
-            this.imp13.LocationFloat = new DevExpress.Utils.PointFloat(219.9269F, 755.5203F);
+            this.imp13.Font = new DevExpress.Drawing.DXFont("Manrope", 5F);
+            this.imp13.LocationFloat = new DevExpress.Utils.PointFloat(214.9269F, 755.5203F);
             this.imp13.Name = "imp13";
             this.imp13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.imp13.SizeF = new System.Drawing.SizeF(40F, 20F);
+            this.imp13.SizeF = new System.Drawing.SizeF(43F, 20F);
             this.imp13.StylePriority.UseFont = false;
             this.imp13.StylePriority.UseTextAlignment = false;
             this.imp13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
@@ -1252,11 +1252,11 @@
             // 
             this.imp14.CanGrow = false;
             this.imp14.Dpi = 96F;
-            this.imp14.Font = new DevExpress.Drawing.DXFont("Manrope", 6F);
-            this.imp14.LocationFloat = new DevExpress.Utils.PointFloat(219.9269F, 775.6F);
+            this.imp14.Font = new DevExpress.Drawing.DXFont("Manrope", 5F);
+            this.imp14.LocationFloat = new DevExpress.Utils.PointFloat(214.9269F, 775.6F);
             this.imp14.Name = "imp14";
             this.imp14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.imp14.SizeF = new System.Drawing.SizeF(40F, 20F);
+            this.imp14.SizeF = new System.Drawing.SizeF(43F, 20F);
             this.imp14.StylePriority.UseFont = false;
             this.imp14.StylePriority.UseTextAlignment = false;
             this.imp14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
@@ -1265,11 +1265,11 @@
             // 
             this.imp21.CanGrow = false;
             this.imp21.Dpi = 96F;
-            this.imp21.Font = new DevExpress.Drawing.DXFont("Manrope", 6F);
-            this.imp21.LocationFloat = new DevExpress.Utils.PointFloat(259.78F, 716F);
+            this.imp21.Font = new DevExpress.Drawing.DXFont("Manrope", 5F);
+            this.imp21.LocationFloat = new DevExpress.Utils.PointFloat(257.78F, 716F);
             this.imp21.Name = "imp21";
             this.imp21.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.imp21.SizeF = new System.Drawing.SizeF(40F, 20F);
+            this.imp21.SizeF = new System.Drawing.SizeF(43F, 20F);
             this.imp21.StylePriority.UseFont = false;
             this.imp21.StylePriority.UseTextAlignment = false;
             this.imp21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
@@ -1278,11 +1278,11 @@
             // 
             this.imp22.CanGrow = false;
             this.imp22.Dpi = 96F;
-            this.imp22.Font = new DevExpress.Drawing.DXFont("Manrope", 6F);
-            this.imp22.LocationFloat = new DevExpress.Utils.PointFloat(259.7757F, 735.4401F);
+            this.imp22.Font = new DevExpress.Drawing.DXFont("Manrope", 5F);
+            this.imp22.LocationFloat = new DevExpress.Utils.PointFloat(257.7757F, 735.4401F);
             this.imp22.Name = "imp22";
             this.imp22.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.imp22.SizeF = new System.Drawing.SizeF(40F, 20F);
+            this.imp22.SizeF = new System.Drawing.SizeF(43F, 20F);
             this.imp22.StylePriority.UseFont = false;
             this.imp22.StylePriority.UseTextAlignment = false;
             this.imp22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
@@ -1291,11 +1291,11 @@
             // 
             this.imp23.CanGrow = false;
             this.imp23.Dpi = 96F;
-            this.imp23.Font = new DevExpress.Drawing.DXFont("Manrope", 6F);
-            this.imp23.LocationFloat = new DevExpress.Utils.PointFloat(259.7757F, 755.5203F);
+            this.imp23.Font = new DevExpress.Drawing.DXFont("Manrope", 5F);
+            this.imp23.LocationFloat = new DevExpress.Utils.PointFloat(257.7757F, 755.5203F);
             this.imp23.Name = "imp23";
             this.imp23.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.imp23.SizeF = new System.Drawing.SizeF(40F, 20F);
+            this.imp23.SizeF = new System.Drawing.SizeF(43F, 20F);
             this.imp23.StylePriority.UseFont = false;
             this.imp23.StylePriority.UseTextAlignment = false;
             this.imp23.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
@@ -1304,11 +1304,11 @@
             // 
             this.imp24.CanGrow = false;
             this.imp24.Dpi = 96F;
-            this.imp24.Font = new DevExpress.Drawing.DXFont("Manrope", 6F);
-            this.imp24.LocationFloat = new DevExpress.Utils.PointFloat(259.7757F, 775.6003F);
+            this.imp24.Font = new DevExpress.Drawing.DXFont("Manrope", 5F);
+            this.imp24.LocationFloat = new DevExpress.Utils.PointFloat(257.7757F, 775.6003F);
             this.imp24.Name = "imp24";
             this.imp24.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.imp24.SizeF = new System.Drawing.SizeF(40F, 20F);
+            this.imp24.SizeF = new System.Drawing.SizeF(43F, 20F);
             this.imp24.StylePriority.UseFont = false;
             this.imp24.StylePriority.UseTextAlignment = false;
             this.imp24.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
@@ -1317,7 +1317,7 @@
             // 
             this.exp21.CanGrow = false;
             this.exp21.Dpi = 96F;
-            this.exp21.Font = new DevExpress.Drawing.DXFont("Manrope", 6F);
+            this.exp21.Font = new DevExpress.Drawing.DXFont("Manrope", 5F);
             this.exp21.LocationFloat = new DevExpress.Utils.PointFloat(299.4F, 716F);
             this.exp21.Name = "exp21";
             this.exp21.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1330,7 +1330,7 @@
             // 
             this.exp22.CanGrow = false;
             this.exp22.Dpi = 96F;
-            this.exp22.Font = new DevExpress.Drawing.DXFont("Manrope", 6F);
+            this.exp22.Font = new DevExpress.Drawing.DXFont("Manrope", 5F);
             this.exp22.LocationFloat = new DevExpress.Utils.PointFloat(299.4001F, 735.4401F);
             this.exp22.Name = "exp22";
             this.exp22.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1343,7 +1343,7 @@
             // 
             this.exp23.CanGrow = false;
             this.exp23.Dpi = 96F;
-            this.exp23.Font = new DevExpress.Drawing.DXFont("Manrope", 6F);
+            this.exp23.Font = new DevExpress.Drawing.DXFont("Manrope", 5F);
             this.exp23.LocationFloat = new DevExpress.Utils.PointFloat(299.4001F, 755.5203F);
             this.exp23.Name = "exp23";
             this.exp23.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1356,7 +1356,7 @@
             // 
             this.exp24.CanGrow = false;
             this.exp24.Dpi = 96F;
-            this.exp24.Font = new DevExpress.Drawing.DXFont("Manrope", 6F);
+            this.exp24.Font = new DevExpress.Drawing.DXFont("Manrope", 5F);
             this.exp24.LocationFloat = new DevExpress.Utils.PointFloat(299.4001F, 775.6003F);
             this.exp24.Name = "exp24";
             this.exp24.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1442,7 +1442,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "FormatString(\'{0}{1}\',[unit1],\'(I)\')")});
             this.KW_HEAD1.Font = new DevExpress.Drawing.DXFont("Manrope", 6F);
             this.KW_HEAD1.ForeColor = System.Drawing.Color.Black;
-            this.KW_HEAD1.LocationFloat = new DevExpress.Utils.PointFloat(220F, 693.3599F);
+            this.KW_HEAD1.LocationFloat = new DevExpress.Utils.PointFloat(216F, 693.3599F);
             this.KW_HEAD1.Multiline = true;
             this.KW_HEAD1.Name = "KW_HEAD1";
             this.KW_HEAD1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1566,7 +1566,7 @@
             // 
             this.MTR2_PR1.CanGrow = false;
             this.MTR2_PR1.Dpi = 96F;
-            this.MTR2_PR1.Font = new DevExpress.Drawing.DXFont("Manrope", 6F);
+            this.MTR2_PR1.Font = new DevExpress.Drawing.DXFont("Manrope", 5F);
             this.MTR2_PR1.LocationFloat = new DevExpress.Utils.PointFloat(94.6F, 716F);
             this.MTR2_PR1.Name = "MTR2_PR1";
             this.MTR2_PR1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1579,7 +1579,7 @@
             // 
             this.MTR2_CR1.CanGrow = false;
             this.MTR2_CR1.Dpi = 96F;
-            this.MTR2_CR1.Font = new DevExpress.Drawing.DXFont("Manrope", 6F);
+            this.MTR2_CR1.Font = new DevExpress.Drawing.DXFont("Manrope", 5F);
             this.MTR2_CR1.LocationFloat = new DevExpress.Utils.PointFloat(94.6F, 735.4401F);
             this.MTR2_CR1.Name = "MTR2_CR1";
             this.MTR2_CR1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1592,7 +1592,7 @@
             // 
             this.MTR2_MF1.CanGrow = false;
             this.MTR2_MF1.Dpi = 96F;
-            this.MTR2_MF1.Font = new DevExpress.Drawing.DXFont("Manrope", 6F);
+            this.MTR2_MF1.Font = new DevExpress.Drawing.DXFont("Manrope", 5F);
             this.MTR2_MF1.LocationFloat = new DevExpress.Utils.PointFloat(94.6F, 755.5201F);
             this.MTR2_MF1.Name = "MTR2_MF1";
             this.MTR2_MF1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1605,7 +1605,7 @@
             // 
             this.MTR2_CU1.CanGrow = false;
             this.MTR2_CU1.Dpi = 96F;
-            this.MTR2_CU1.Font = new DevExpress.Drawing.DXFont("Manrope", 6F);
+            this.MTR2_CU1.Font = new DevExpress.Drawing.DXFont("Manrope", 5F);
             this.MTR2_CU1.LocationFloat = new DevExpress.Utils.PointFloat(94.6F, 775.6001F);
             this.MTR2_CU1.Name = "MTR2_CU1";
             this.MTR2_CU1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1618,7 +1618,7 @@
             // 
             this.MTR2_PR3.CanGrow = false;
             this.MTR2_PR3.Dpi = 96F;
-            this.MTR2_PR3.Font = new DevExpress.Drawing.DXFont("Manrope", 6F);
+            this.MTR2_PR3.Font = new DevExpress.Drawing.DXFont("Manrope", 5F);
             this.MTR2_PR3.LocationFloat = new DevExpress.Utils.PointFloat(134.6F, 716F);
             this.MTR2_PR3.Name = "MTR2_PR3";
             this.MTR2_PR3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1631,7 +1631,7 @@
             // 
             this.MTR2_CR3.CanGrow = false;
             this.MTR2_CR3.Dpi = 96F;
-            this.MTR2_CR3.Font = new DevExpress.Drawing.DXFont("Manrope", 6F);
+            this.MTR2_CR3.Font = new DevExpress.Drawing.DXFont("Manrope", 5F);
             this.MTR2_CR3.LocationFloat = new DevExpress.Utils.PointFloat(134.6F, 735.4401F);
             this.MTR2_CR3.Name = "MTR2_CR3";
             this.MTR2_CR3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1644,7 +1644,7 @@
             // 
             this.MTR2_MF3.CanGrow = false;
             this.MTR2_MF3.Dpi = 96F;
-            this.MTR2_MF3.Font = new DevExpress.Drawing.DXFont("Manrope", 6F);
+            this.MTR2_MF3.Font = new DevExpress.Drawing.DXFont("Manrope", 5F);
             this.MTR2_MF3.LocationFloat = new DevExpress.Utils.PointFloat(134.6F, 755.5201F);
             this.MTR2_MF3.Name = "MTR2_MF3";
             this.MTR2_MF3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
@@ -1657,7 +1657,7 @@
             // 
             this.MTR2_CU3.CanGrow = false;
             this.MTR2_CU3.Dpi = 96F;
-            this.MTR2_CU3.Font = new DevExpress.Drawing.DXFont("Manrope", 6F);
+            this.MTR2_CU3.Font = new DevExpress.Drawing.DXFont("Manrope", 5F);
             this.MTR2_CU3.LocationFloat = new DevExpress.Utils.PointFloat(134.6F, 775.6001F);
             this.MTR2_CU3.Name = "MTR2_CU3";
             this.MTR2_CU3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
