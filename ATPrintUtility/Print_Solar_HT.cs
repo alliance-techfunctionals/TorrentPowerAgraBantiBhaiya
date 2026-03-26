@@ -63,7 +63,7 @@ namespace AT.Print
                     textFileName = ofd.SafeFileName.ToUpper().Replace(".TXT", "");
 
                     string contents = File.ReadAllText(ofd.FileName);
-                    if (contents.StartsWith("HT")) 
+                    if (contents.StartsWith("HT"))
                     {
                         Solar_Bill_HT = contents.Split(new String[] { "HT " }, StringSplitOptions.RemoveEmptyEntries);
                         //if (!select_mVImg())
@@ -115,8 +115,8 @@ namespace AT.Print
 
         private void StartPrinting_HT_Solar_Bills(string[] Bills, string Name)
         {
-            int BillNo = 1,  ParsedBills = 0;
-            DataTable dtSolarBill=new DataTable();
+            int BillNo = 1, ParsedBills = 0;
+            DataTable dtSolarBill = new DataTable();
             string FileName = AppFunctions.ProcessedBillData();
             XtraReport collectorReport = new XtraReport
             {
@@ -129,11 +129,11 @@ namespace AT.Print
                     AppFunctions.ShowWaitForm("Loading...");
                     List<Solar_Bill_HT> lstformattedbills = new List<Solar_Bill_HT>();
 
-                   dtSolarBill = ParseAsDataTable.LTMD_Solar_FileTxtToDataTable(Bill);
-                   
+                    dtSolarBill = ParseAsDataTable.LTMD_Solar_FileTxtToDataTable(Bill);
+
                     Solar_Bill_HT sht = parseSolarBill(dtSolarBill);
-                     sht.MVPicture = mVImagePath;
-                     lstformattedbills.Add(sht);
+                    sht.MVPicture = mVImagePath;
+                    lstformattedbills.Add(sht);
 
                     #region HT_solar-PDF 
 
@@ -161,7 +161,7 @@ namespace AT.Print
                         #endregion
 
                         rptsd.CreateDocument(false);
-                        
+
                         #region WaterMark Picture Back Page PDF Solar
                         DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkBackSolar = new DevExpress.XtraPrinting.Drawing.Watermark();
                         pictureWatermarkBackSolar.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\HT_Duplex_Non_TOD_Back_Page.png");
@@ -198,36 +198,36 @@ namespace AT.Print
 
                     #region Print HT_solar 
 
-                        else 
+                    else
+                    {
+                        PrinterSettings ps = new PrinterSettings() { PrinterName = cbDefaultPrinter.Text };
+                        using (Graphics g = ps.CreateMeasurementGraphics(ps.DefaultPageSettings))
                         {
-                         PrinterSettings ps = new PrinterSettings() { PrinterName = cbDefaultPrinter.Text };
-                         using (Graphics g = ps.CreateMeasurementGraphics(ps.DefaultPageSettings))
-                         {
-                             Margins MinMargins = DevExpress.XtraPrinting.Native.DeviceCaps.GetMinMargins(g);
-                             Console.WriteLine("Minimum Margins for " + ps.PrinterName + ": " + MinMargins.ToString());
-                         }
+                            Margins MinMargins = DevExpress.XtraPrinting.Native.DeviceCaps.GetMinMargins(g);
+                            Console.WriteLine("Minimum Margins for " + ps.PrinterName + ": " + MinMargins.ToString());
+                        }
                         Rpt_HT_Solar_back_PDF rptb = new Rpt_HT_Solar_back_PDF
                         {
                             DataSource = lstformattedbills,
                         };
 
                         Rpt_HT_Solar_PDF rpta = new Rpt_HT_Solar_PDF(rptb)
-                         {
-                             DataSource = lstformattedbills,
-                             DisplayName = sht.L6_SERVDET_SERVNO,
-                         };
-                         rpta.Watermark.ImageTransparency = 255;
-                         rpta.PrinterName = cbDefaultPrinter.SelectedItem.ToString();    
-                         rpta.PrintingSystem.Document.Name = sht.L6_SERVDET_SERVNO;
-                         rpta.CreateDocument();
-                         rptb.CreateDocument();
-                         rpta.ModifyDocument(x => { x.AddPages(rptb.Pages); });
-                         rpta.PrintingSystem.StartPrint += NonTOD_StartPrint;
-                         rpta.Print(cbDefaultPrinter.Text);
-                        
-                         AppFunctions.CloseWaitForm();
-                        
-                         ParsedBills++;
+                        {
+                            DataSource = lstformattedbills,
+                            DisplayName = sht.L6_SERVDET_SERVNO,
+                        };
+                        rpta.Watermark.ImageTransparency = 255;
+                        rpta.PrinterName = cbDefaultPrinter.SelectedItem.ToString();
+                        rpta.PrintingSystem.Document.Name = sht.L6_SERVDET_SERVNO;
+                        rpta.CreateDocument();
+                        rptb.CreateDocument();
+                        rpta.ModifyDocument(x => { x.AddPages(rptb.Pages); });
+                        rpta.PrintingSystem.StartPrint += NonTOD_StartPrint;
+                        rpta.Print(cbDefaultPrinter.Text);
+
+                        AppFunctions.CloseWaitForm();
+
+                        ParsedBills++;
                     }
                     #endregion
                 }
@@ -308,11 +308,11 @@ namespace AT.Print
             sht.L6_SERVDET_SANC_LOAD = dtSolarBill.Rows[5][1].ToString();
             sht.L6_Bill_Demand = dtSolarBill.Rows[5][2].ToString();
             sht.L6_ACTUAL_DEMAND = dtSolarBill.Rows[5][3].ToString();
-            sht.L6_TARIFF_DESCR = dtSolarBill.Rows[5][4].ToString(); 
+            sht.L6_TARIFF_DESCR = dtSolarBill.Rows[5][4].ToString();
             sht.L6_EXCESS_DEMAND = dtSolarBill.Rows[5][5].ToString();
             sht.L6_SUPPLY_VOLTAGE = dtSolarBill.Rows[5][6].ToString();
             sht.L6_Avg_Power_Factor = dtSolarBill.Rows[5][7].ToString();
-            sht.L6_MTRDET_LF_PERC = dtSolarBill.Rows[5][8].ToString(); 
+            sht.L6_MTRDET_LF_PERC = dtSolarBill.Rows[5][8].ToString();
             sht.L6_Bill_Type_Assess_OR_normal = dtSolarBill.Rows[5][9].ToString();
             sht.L6_Kvah_indicator = dtSolarBill.Rows[5][11].ToString();
             sht.L6_LT_Metering_Flag = dtSolarBill.Rows[5][12].ToString();
@@ -349,16 +349,16 @@ namespace AT.Print
             sht.L8_Regulatory_Charge2 = dtSolarBill.Rows[7][8].ToString();
             sht.L8_Rebate_incurred_of_current_month = dtSolarBill.Rows[7][9].ToString();
             sht.L8_amount_payable_before_due_date = dtSolarBill.Rows[7][10].ToString();
-            
+
             sht.L8_amount_payable_before_due_date = string.IsNullOrEmpty(sht.L8_amount_payable_before_due_date) ? "0" : sht.L8_amount_payable_before_due_date;
             sht.L8_amount_payable_before_due_date = sht.L8_amount_payable_before_due_date.Contains("CR") ? ("-" + sht.L8_amount_payable_before_due_date.Replace("CR", "")) : (sht.L8_amount_payable_before_due_date.Contains("-") ? ("-" + sht.L8_amount_payable_before_due_date.Replace("-", "")) : sht.L8_amount_payable_before_due_date);
 
-            
+
             sht.L8_T_No = dtSolarBill.Rows[7][11].ToString().Trim('�');
             sht.L8_Subsidy_Charges = dtSolarBill.Rows[7][13].ToString();
             sht.L8_Solar_Export_Energy = dtSolarBill.Rows[7][14].ToString();
             sht.L8_GreenTariff_Charges = dtSolarBill.Rows[7][15].ToString();
-          
+
             #endregion
 
             #region Line-9
@@ -402,127 +402,127 @@ namespace AT.Print
 
             #region Line-12
             LineNo = "12";
-            sht.L12_KWH_PRESREAD  = dtSolarBill.Rows[11][0].ToString();
+            sht.L12_KWH_PRESREAD = dtSolarBill.Rows[11][0].ToString();
             sht.L12_KVAH_PRESREAD = dtSolarBill.Rows[11][1].ToString();
-            sht.L12_KVA_PRESREAD  = dtSolarBill.Rows[11][2].ToString();
+            sht.L12_KVA_PRESREAD = dtSolarBill.Rows[11][2].ToString();
             #endregion
 
             #region Line-13
             LineNo = "13";
-            sht.L13_KWH_PASTREAD   = dtSolarBill.Rows[12][0].ToString();
-            sht.L13_KVAH_PASTREAD  = dtSolarBill.Rows[12][1].ToString();
-            sht.L13_KVA_PASTREAD   = dtSolarBill.Rows[12][2].ToString();
-            sht.L13_Purpose        = dtSolarBill.Rows[12][3].ToString();
+            sht.L13_KWH_PASTREAD = dtSolarBill.Rows[12][0].ToString();
+            sht.L13_KVAH_PASTREAD = dtSolarBill.Rows[12][1].ToString();
+            sht.L13_KVA_PASTREAD = dtSolarBill.Rows[12][2].ToString();
+            sht.L13_Purpose = dtSolarBill.Rows[12][3].ToString();
             #endregion
 
             #region Line-14
             LineNo = "14";
-            sht.L14_Multiplying_factor_KWH   = dtSolarBill.Rows[13][0].ToString();
-            sht.L14_Multiplying_factor_KVAH  = dtSolarBill.Rows[13][1].ToString();
-            sht.L14_Multiplying_factor_KVA   = dtSolarBill.Rows[13][2].ToString();
+            sht.L14_Multiplying_factor_KWH = dtSolarBill.Rows[13][0].ToString();
+            sht.L14_Multiplying_factor_KVAH = dtSolarBill.Rows[13][1].ToString();
+            sht.L14_Multiplying_factor_KVA = dtSolarBill.Rows[13][2].ToString();
             #endregion
 
             #region Line-15
             LineNo = "15";
-            sht.L15_KWH_UNITS  = dtSolarBill.Rows[14][0].ToString();
-            sht.L15_KVAH_UNITS = dtSolarBill.Rows[14][1].ToString(); 
-            sht.L15_KVA_UNITS  = dtSolarBill.Rows[14][2].ToString();
+            sht.L15_KWH_UNITS = dtSolarBill.Rows[14][0].ToString();
+            sht.L15_KVAH_UNITS = dtSolarBill.Rows[14][1].ToString();
+            sht.L15_KVA_UNITS = dtSolarBill.Rows[14][2].ToString();
             #endregion
 
             #region Line-16
             LineNo = "16";
-            sht.L16_TOD1_KVAH_Units  = dtSolarBill.Rows[15][0].ToString();
-            sht.L16_TOD2_KVAH_Units  = dtSolarBill.Rows[15][1].ToString();
-            sht.L16_TOD3_KVAH_Units  = dtSolarBill.Rows[15][2].ToString();
-            sht.L16_TOD4_KVAH_Units  = dtSolarBill.Rows[15][3].ToString();
+            sht.L16_TOD1_KVAH_Units = dtSolarBill.Rows[15][0].ToString();
+            sht.L16_TOD2_KVAH_Units = dtSolarBill.Rows[15][1].ToString();
+            sht.L16_TOD3_KVAH_Units = dtSolarBill.Rows[15][2].ToString();
+            sht.L16_TOD4_KVAH_Units = dtSolarBill.Rows[15][3].ToString();
             #endregion
 
             #region Line-17
             LineNo = "17";
-            sht.L17_TOD1_KVA_Units   = dtSolarBill.Rows[16][0].ToString();
-            sht.L17_TOD2_KVA_Units   = dtSolarBill.Rows[16][1].ToString();
-            sht.L17_TOD3_KVA_Units   = dtSolarBill.Rows[16][2].ToString();
-            sht.L17_TOD4_KVA_Units   = dtSolarBill.Rows[16][3].ToString();
+            sht.L17_TOD1_KVA_Units = dtSolarBill.Rows[16][0].ToString();
+            sht.L17_TOD2_KVA_Units = dtSolarBill.Rows[16][1].ToString();
+            sht.L17_TOD3_KVA_Units = dtSolarBill.Rows[16][2].ToString();
+            sht.L17_TOD4_KVA_Units = dtSolarBill.Rows[16][3].ToString();
             #endregion
 
             #region Line-18
             LineNo = "18";
-            sht.L18_KWH_PRESREAD    = dtSolarBill.Rows[17][0].ToString();
-            sht.L18_KVAH_PRESREAD   = dtSolarBill.Rows[17][1].ToString();
-            sht.L18_KVA_PRESREAD    = dtSolarBill.Rows[17][2].ToString();
+            sht.L18_KWH_PRESREAD = dtSolarBill.Rows[17][0].ToString();
+            sht.L18_KVAH_PRESREAD = dtSolarBill.Rows[17][1].ToString();
+            sht.L18_KVA_PRESREAD = dtSolarBill.Rows[17][2].ToString();
             #endregion
 
             #region Line-19
             LineNo = "19";
-            sht.L19_KWH_PASTREAD    = dtSolarBill.Rows[18][0].ToString();
-            sht.L19_KVAH_PASTREAD   = dtSolarBill.Rows[18][1].ToString();
-            sht.L19_KVA_PASTREAD    = dtSolarBill.Rows[18][2].ToString();
+            sht.L19_KWH_PASTREAD = dtSolarBill.Rows[18][0].ToString();
+            sht.L19_KVAH_PASTREAD = dtSolarBill.Rows[18][1].ToString();
+            sht.L19_KVA_PASTREAD = dtSolarBill.Rows[18][2].ToString();
             #endregion
 
             #region Line-20
             LineNo = "20";
-            sht.L20_Multiplying_Factor_KWH   = dtSolarBill.Rows[19][0].ToString();
-            sht.L20_Multiplying_Factor_KVAH  = dtSolarBill.Rows[19][1].ToString();
-            sht.L20_Multiplying_Factor_KVA   = dtSolarBill.Rows[19][2].ToString();
+            sht.L20_Multiplying_Factor_KWH = dtSolarBill.Rows[19][0].ToString();
+            sht.L20_Multiplying_Factor_KVAH = dtSolarBill.Rows[19][1].ToString();
+            sht.L20_Multiplying_Factor_KVA = dtSolarBill.Rows[19][2].ToString();
             #endregion
 
             #region Line-21
             LineNo = "21";
-            sht.L21_KWH_UNITS   = dtSolarBill.Rows[20][0].ToString();
-            sht.L21_KVAH_UNITS  = dtSolarBill.Rows[20][1].ToString();
-            sht.L21_KVA_UNITS   = dtSolarBill.Rows[20][2].ToString();
+            sht.L21_KWH_UNITS = dtSolarBill.Rows[20][0].ToString();
+            sht.L21_KVAH_UNITS = dtSolarBill.Rows[20][1].ToString();
+            sht.L21_KVA_UNITS = dtSolarBill.Rows[20][2].ToString();
             #endregion
 
             #region Line-22
             LineNo = "22";
-            sht.L22_TOD1_KVAH_Units   = dtSolarBill.Rows[21][0].ToString();
-             sht.L22_TOD2_KVAH_Units   = dtSolarBill.Rows[21][1].ToString();
-             sht.L22_TOD3_KVAH_Units   = dtSolarBill.Rows[21][2].ToString();
-             sht.L22_TOD4_KVAH_Units   = dtSolarBill.Rows[21][3].ToString();
+            sht.L22_TOD1_KVAH_Units = dtSolarBill.Rows[21][0].ToString();
+            sht.L22_TOD2_KVAH_Units = dtSolarBill.Rows[21][1].ToString();
+            sht.L22_TOD3_KVAH_Units = dtSolarBill.Rows[21][2].ToString();
+            sht.L22_TOD4_KVAH_Units = dtSolarBill.Rows[21][3].ToString();
             #endregion
 
             #region Line-23
             LineNo = "23";
-            sht.L23_TOD1_KVA_Units  = dtSolarBill.Rows[22][0].ToString();
-           sht.L23_TOD2_KVA_Units  = dtSolarBill.Rows[22][1].ToString();
-           sht.L23_TOD3_KVA_Units  = dtSolarBill.Rows[22][2].ToString();
-           sht.L23_TOD4_KVA_Units  = dtSolarBill.Rows[22][3].ToString();
+            sht.L23_TOD1_KVA_Units = dtSolarBill.Rows[22][0].ToString();
+            sht.L23_TOD2_KVA_Units = dtSolarBill.Rows[22][1].ToString();
+            sht.L23_TOD3_KVA_Units = dtSolarBill.Rows[22][2].ToString();
+            sht.L23_TOD4_KVA_Units = dtSolarBill.Rows[22][3].ToString();
             #endregion
 
             #region Line-24
             LineNo = "24";
-            sht.L24_MonYear_1    = dtSolarBill.Rows[23][0].ToString();
-            sht.L24_KVA_UNITS_1  = dtSolarBill.Rows[23][1].ToString();
-            sht.L24_MonYear_2    = dtSolarBill.Rows[23][2].ToString();
-            sht.L24_KVA_UNITS_2  = dtSolarBill.Rows[23][3].ToString();
-            sht.L24_MonYear_3    = dtSolarBill.Rows[23][4].ToString();
-            sht.L24_KVA_UNITS_3  = dtSolarBill.Rows[23][5].ToString();
-            sht.L24_MonYear_4    = dtSolarBill.Rows[23][6].ToString();
-            sht.L24_KVA_UNITS_4  = dtSolarBill.Rows[23][7].ToString();
-            sht.L24_MonYear_5    = dtSolarBill.Rows[23][8].ToString();
-            sht.L24_KVA_UNITS_5  = dtSolarBill.Rows[23][9].ToString();
-            sht.L24_MonYear_6    = dtSolarBill.Rows[23][10].ToString();
-            sht.L24_KVA_UNITS_6  = dtSolarBill.Rows[23][11].ToString();
-            sht.L24_MonYear_7    = dtSolarBill.Rows[23][12].ToString();
-            sht.L24_KVA_UNITS_7  = dtSolarBill.Rows[23][13].ToString();
+            sht.L24_MonYear_1 = dtSolarBill.Rows[23][0].ToString();
+            sht.L24_KVA_UNITS_1 = dtSolarBill.Rows[23][1].ToString();
+            sht.L24_MonYear_2 = dtSolarBill.Rows[23][2].ToString();
+            sht.L24_KVA_UNITS_2 = dtSolarBill.Rows[23][3].ToString();
+            sht.L24_MonYear_3 = dtSolarBill.Rows[23][4].ToString();
+            sht.L24_KVA_UNITS_3 = dtSolarBill.Rows[23][5].ToString();
+            sht.L24_MonYear_4 = dtSolarBill.Rows[23][6].ToString();
+            sht.L24_KVA_UNITS_4 = dtSolarBill.Rows[23][7].ToString();
+            sht.L24_MonYear_5 = dtSolarBill.Rows[23][8].ToString();
+            sht.L24_KVA_UNITS_5 = dtSolarBill.Rows[23][9].ToString();
+            sht.L24_MonYear_6 = dtSolarBill.Rows[23][10].ToString();
+            sht.L24_KVA_UNITS_6 = dtSolarBill.Rows[23][11].ToString();
+            sht.L24_MonYear_7 = dtSolarBill.Rows[23][12].ToString();
+            sht.L24_KVA_UNITS_7 = dtSolarBill.Rows[23][13].ToString();
             #endregion
 
 
             #region Line-25
             LineNo = "25";
-            sht.L25_MonYear_1    = dtSolarBill.Rows[24][0].ToString();
+            sht.L25_MonYear_1 = dtSolarBill.Rows[24][0].ToString();
             sht.L25_KVAH_UNITS_1 = dtSolarBill.Rows[24][1].ToString();
-            sht.L25_MonYear_2    = dtSolarBill.Rows[24][2].ToString();
+            sht.L25_MonYear_2 = dtSolarBill.Rows[24][2].ToString();
             sht.L25_KVAH_UNITS_2 = dtSolarBill.Rows[24][3].ToString();
-            sht.L25_MonYear_3    = dtSolarBill.Rows[24][4].ToString();
+            sht.L25_MonYear_3 = dtSolarBill.Rows[24][4].ToString();
             sht.L25_KVAH_UNITS_3 = dtSolarBill.Rows[24][5].ToString();
-            sht.L25_MonYear_4    = dtSolarBill.Rows[24][6].ToString();
+            sht.L25_MonYear_4 = dtSolarBill.Rows[24][6].ToString();
             sht.L25_KVAH_UNITS_4 = dtSolarBill.Rows[24][7].ToString();
-            sht.L25_MonYear_5    = dtSolarBill.Rows[24][8].ToString();
+            sht.L25_MonYear_5 = dtSolarBill.Rows[24][8].ToString();
             sht.L25_KVAH_UNITS_5 = dtSolarBill.Rows[24][9].ToString();
-            sht.L25_MonYear_6    = dtSolarBill.Rows[24][10].ToString();
+            sht.L25_MonYear_6 = dtSolarBill.Rows[24][10].ToString();
             sht.L25_KVAH_UNITS_6 = dtSolarBill.Rows[24][11].ToString();
-            sht.L25_MonYear_7    = dtSolarBill.Rows[24][12].ToString();
+            sht.L25_MonYear_7 = dtSolarBill.Rows[24][12].ToString();
             sht.L25_KVAH_UNITS_7 = dtSolarBill.Rows[24][13].ToString();
             #endregion
 
@@ -554,11 +554,11 @@ namespace AT.Print
                 {
                     sht.L33_MESSAGE7 += TemplateConditionalWithSTHindiCopy.Rows[i]["4"].ToString().Trim('�') + " \r\n";
                 }
-                else if (sht.L6_MEASURE_OF_CONTRACT_Demand.ToUpper() == "KVA" && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD))*(0.9)) >= Convert.ToDouble(TemplateConditionalWithSTHindiCopy.Rows[i]["2"].ToString()) && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD))*(0.9)) <= Convert.ToDouble(TemplateConditionalWithSTHindiCopy.Rows[i]["3"].ToString()))
+                else if (sht.L6_MEASURE_OF_CONTRACT_Demand.ToUpper() == "KVA" && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD)) * (0.9)) >= Convert.ToDouble(TemplateConditionalWithSTHindiCopy.Rows[i]["2"].ToString()) && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD)) * (0.9)) <= Convert.ToDouble(TemplateConditionalWithSTHindiCopy.Rows[i]["3"].ToString()))
                 {
                     sht.L33_MESSAGE7 += TemplateConditionalWithSTHindiCopy.Rows[i]["4"].ToString().Trim('�') + " \r\n";
                 }
-                else if (sht.L6_MEASURE_OF_CONTRACT_Demand.ToUpper() == "HP" && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD))*(0.746)) >= Convert.ToDouble(TemplateConditionalWithSTHindiCopy.Rows[i]["2"].ToString()) && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD))*(0.746)) <= Convert.ToDouble(TemplateConditionalWithSTHindiCopy.Rows[i]["3"].ToString()))
+                else if (sht.L6_MEASURE_OF_CONTRACT_Demand.ToUpper() == "HP" && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD)) * (0.746)) >= Convert.ToDouble(TemplateConditionalWithSTHindiCopy.Rows[i]["2"].ToString()) && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD)) * (0.746)) <= Convert.ToDouble(TemplateConditionalWithSTHindiCopy.Rows[i]["3"].ToString()))
                 {
                     sht.L33_MESSAGE7 += TemplateConditionalWithSTHindiCopy.Rows[i]["4"].ToString().Trim('�') + " \r\n";
                 }
@@ -584,11 +584,11 @@ namespace AT.Print
                 {
                     sht.L34_MESSAGE8 += TemplateConditionalWithSTEnglishCopy.Rows[i]["4"].ToString().Trim('�') + " \r\n";
                 }
-                else if (sht.L6_MEASURE_OF_CONTRACT_Demand.ToUpper() == "KVA" && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD))*(0.9)) >= Convert.ToDouble(TemplateConditionalWithSTEnglishCopy.Rows[i]["2"].ToString()) && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD))*(0.9)) <= Convert.ToDouble(TemplateConditionalWithSTEnglishCopy.Rows[i]["3"].ToString()))
+                else if (sht.L6_MEASURE_OF_CONTRACT_Demand.ToUpper() == "KVA" && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD)) * (0.9)) >= Convert.ToDouble(TemplateConditionalWithSTEnglishCopy.Rows[i]["2"].ToString()) && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD)) * (0.9)) <= Convert.ToDouble(TemplateConditionalWithSTEnglishCopy.Rows[i]["3"].ToString()))
                 {
                     sht.L34_MESSAGE8 += TemplateConditionalWithSTEnglishCopy.Rows[i]["4"].ToString().Trim('�') + " \r\n";
                 }
-                else if (sht.L6_MEASURE_OF_CONTRACT_Demand.ToUpper() == "HP" && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD))*(0.9)) >= Convert.ToDouble(TemplateConditionalWithSTEnglishCopy.Rows[i]["2"].ToString()) && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD))*(0.746)) <= Convert.ToDouble(TemplateConditionalWithSTEnglishCopy.Rows[i]["3"].ToString()))
+                else if (sht.L6_MEASURE_OF_CONTRACT_Demand.ToUpper() == "HP" && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD)) * (0.9)) >= Convert.ToDouble(TemplateConditionalWithSTEnglishCopy.Rows[i]["2"].ToString()) && ((Convert.ToDouble(sht.L6_SERVDET_SANC_LOAD)) * (0.746)) <= Convert.ToDouble(TemplateConditionalWithSTEnglishCopy.Rows[i]["3"].ToString()))
                 {
                     sht.L34_MESSAGE8 += TemplateConditionalWithSTEnglishCopy.Rows[i]["4"].ToString().Trim('�') + " \r\n";
                 }
@@ -696,19 +696,19 @@ namespace AT.Print
 
             #region Line-38
             LineNo = "38";
-            sht.L38_Gen_KWH_PRESREAD  = dtSolarBill.Rows[37][0].ToString();
+            sht.L38_Gen_KWH_PRESREAD = dtSolarBill.Rows[37][0].ToString();
             sht.L38_Gen_KVAH_PRESREAD = dtSolarBill.Rows[37][1].ToString();
-            sht.L38_Gen_KVA_PRESREAD  = dtSolarBill.Rows[37][2].ToString();
-            sht.L38_Gen_KW_PRESREAD   = dtSolarBill.Rows[37][3].ToString();
+            sht.L38_Gen_KVA_PRESREAD = dtSolarBill.Rows[37][2].ToString();
+            sht.L38_Gen_KW_PRESREAD = dtSolarBill.Rows[37][3].ToString();
 
             #endregion
 
             #region Line-39
             LineNo = "39";
-            sht.L39_Gen_KWH_PASTREAD  = dtSolarBill.Rows[38][0].ToString();
+            sht.L39_Gen_KWH_PASTREAD = dtSolarBill.Rows[38][0].ToString();
             sht.L39_Gen_KVAH_PASTREAD = dtSolarBill.Rows[38][1].ToString();
-            sht.L39_Gen_KVA_PASTREAD  = dtSolarBill.Rows[38][2].ToString();
-            sht.L39_Gen_KW_PASTREAD   = dtSolarBill.Rows[38][3].ToString();
+            sht.L39_Gen_KVA_PASTREAD = dtSolarBill.Rows[38][2].ToString();
+            sht.L39_Gen_KW_PASTREAD = dtSolarBill.Rows[38][3].ToString();
 
             #endregion
 
@@ -722,10 +722,10 @@ namespace AT.Print
 
             #region Line-41
             LineNo = "41";
-            sht.L41_Gen_KWH_NET_UNITS  = dtSolarBill.Rows[40][0].ToString();
+            sht.L41_Gen_KWH_NET_UNITS = dtSolarBill.Rows[40][0].ToString();
             sht.L41_Gen_KVAH_NET_UNITS = dtSolarBill.Rows[40][1].ToString();
-            sht.L41_Gen_KVA_NET_UNITS  = dtSolarBill.Rows[40][2].ToString();
-            sht.L41_Gen_KW_NET_UNITS   = dtSolarBill.Rows[40][3].ToString();
+            sht.L41_Gen_KVA_NET_UNITS = dtSolarBill.Rows[40][2].ToString();
+            sht.L41_Gen_KW_NET_UNITS = dtSolarBill.Rows[40][3].ToString();
 
             #endregion
 
@@ -935,7 +935,7 @@ namespace AT.Print
             sht.TopPanel_Row_2 = "Meter No. : " + meter;
             sht.TopPanel_Row_3 = "T No.  " + sht.L8_T_No;
             sht.TopPanel_Row_4 = "Bill Date  " + sht.L7_Billdt;
-          
+
             dtSolarBill.Rows[9][2].ToString();
             Console.WriteLine("Custom Fields calculated");
             #endregion
@@ -961,7 +961,7 @@ namespace AT.Print
             if (e.PrintDocument.PrinterSettings.CanDuplex)
                 e.PrintDocument.PrinterSettings.Duplex = Duplex.Simplex;
         }
-        
+
         void PrintDocument_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             e.PageSettings.PrinterSettings.Duplex = Duplex.Vertical;
@@ -979,10 +979,10 @@ namespace AT.Print
                 PaperSource pkSource = printDoc.PrinterSettings.PaperSources[i];
                 cbNonTODTraySource.Properties.Items.Add(ps[i].SourceName);
             }
-            
-           
+
+
             cbNonTODTraySource.SelectedIndex = 0;
-        
+
             AppFunctions.CloseWaitForm();
         }
 
@@ -1028,7 +1028,7 @@ namespace AT.Print
             cbDefaultPrinter.SelectedIndex = -1;
             cbDefaultPrinter.Properties.Items.Clear();
             cbNonTODTraySource.Properties.Items.Clear();
-          
+
             foreach (var printers in System.Drawing.Printing.PrinterSettings.InstalledPrinters)
             {
                 cbDefaultPrinter.Properties.Items.Add(printers);
