@@ -148,7 +148,7 @@ namespace AT.Print
 
 
                     //if ((LotNoCopy != dtSingleHTBill.Rows[0][4].ToString().Trim() || Counter == 51 || TOD_NonTODFlag != dtSingleHTBill.Rows[0][10].ToString().Trim()) && LotNoCopy != "InitialLot" && TOD_NonTODFlag != "")
-                    if ((LotNoCopy != bill.Sap_LotNo || Counter == 51 || TOD_NonTODFlag != bill.L1_TODOrNon_TODFlag)
+                    if ((LotNoCopy != bill.L1_Route || Counter == 51 || TOD_NonTODFlag != bill.L1_TODOrNon_TODFlag)
                && LotNoCopy != "InitialLot" && TOD_NonTODFlag != "")
 
                     {
@@ -166,16 +166,16 @@ namespace AT.Print
 
 
                     //if (LotNo != dtSingleHTBill.Rows[0][4].ToString().Trim())
-                    if (LotNo != bill.Sap_LotNo)
+                    if (LotNo != bill.L1_Route)
                     {
                         if (Name != "sbSavePDF")
                         {
-                            LotNo = bill.Sap_LotNo; //(String)dtSingleHTBill.Rows[0][4];
-                            LotNoCopy = bill.Sap_LotNo;//dtSingleHTBill.Rows[0][4].ToString().Trim();
+                            LotNo = bill.L1_Route; //(String)dtSingleHTBill.Rows[0][4];
+                            LotNoCopy = bill.L1_Route;//dtSingleHTBill.Rows[0][4].ToString().Trim();
                             SingleHTBill billSaprator = new SingleHTBill();
-                            billSaprator.Sap_Zone = "Zone No. " + bill.Sap_Zone;// dtSingleHTBill.Rows[0][1];
-                            billSaprator.Sap_LotNo = "LOT No. " + bill.Sap_LotNo;  //dtSingleHTBill.Rows[0][4];
-                            billSaprator.Sap_GrpNo = "Group No. " + bill.Sap_GrpNo;  //dtSingleHTBill.Rows[0][2];
+                            billSaprator.Sap_Zone = "Zone No. " + bill.L1_Zone;//.Sap_Zone;// dtSingleHTBill.Rows[0][1];
+                            billSaprator.Sap_LotNo = "LOT No. " + bill.L1_Route;//dtSingleHTBill.Rows[0][4];
+                            billSaprator.Sap_GrpNo = "Group No. " + bill.L1_BU;  //dtSingleHTBill.Rows[0][2];
                             lstformattedbills.Add(billSaprator);
                             Rpt_Saprator sap_rpt = new Rpt_Saprator
                             {
@@ -311,7 +311,7 @@ namespace AT.Print
                 catch (System.OutOfMemoryException)
                 {
                     AppFunctions.LogError("Error Parsing Service No. " + ServiceNo + " of the given file due to out of memory.");
-                    AppFunctions.LogProcessedBill(Convert.ToString(bill.Sap_Zone), Convert.ToString(bill.Sap_LotNo), Convert.ToString(bill.Sap_GrpNo), Convert.ToString(bill.L6_SERVDET_SERVNO), ServiceNo, FileName, "No");
+                    AppFunctions.LogProcessedBill(Convert.ToString(bill.L1_Zone), Convert.ToString(bill.L1_Route), Convert.ToString(bill.L1_BU), Convert.ToString(bill.L6_SERVDET_SERVNO), ServiceNo, FileName, "No");
                     System.Runtime.GCSettings.LargeObjectHeapCompactionMode = System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce;
                     GC.Collect();
                     GC.RemoveMemoryPressure(1024 * 1024);
@@ -320,11 +320,11 @@ namespace AT.Print
                 catch (Exception ex)
                 {
                     AppFunctions.LogError(ex);
-                    AppFunctions.LogProcessedBill(Convert.ToString(bill.Sap_Zone), Convert.ToString(bill.Sap_LotNo), Convert.ToString(bill.Sap_GrpNo), Convert.ToString(bill.L6_SERVDET_SERVNO), ServiceNo, FileName, "No");
+                    AppFunctions.LogProcessedBill(Convert.ToString(bill.L1_Zone), Convert.ToString(bill.L1_Route), Convert.ToString(bill.L1_BU), Convert.ToString(bill.L6_SERVDET_SERVNO), ServiceNo, FileName, "No");
                     AppFunctions.CloseWaitForm();
                     break;
                 }
-                AppFunctions.LogProcessedBill(Convert.ToString(bill.Sap_Zone), Convert.ToString(bill.Sap_LotNo), Convert.ToString(bill.Sap_GrpNo), Convert.ToString(bill.L6_SERVDET_SERVNO), ServiceNo, FileName, "Yes");
+                AppFunctions.LogProcessedBill(Convert.ToString(bill.L1_Zone), Convert.ToString(bill.L1_Route), Convert.ToString(bill.L1_BU), Convert.ToString(bill.L6_SERVDET_SERVNO), ServiceNo, FileName, "Yes");
 
                 BillNo++;
             }           
