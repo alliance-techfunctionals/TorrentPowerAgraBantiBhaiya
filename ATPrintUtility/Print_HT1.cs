@@ -144,7 +144,7 @@ namespace AT.Print
                 try
                 {
                     List<SingleHTBill> lstformattedbills = new List<SingleHTBill>();
-                    lstformattedbills.Add(bill);
+                    //lstformattedbills.Add(bill);
 
 
                     //if ((LotNoCopy != dtSingleHTBill.Rows[0][4].ToString().Trim() || Counter == 51 || TOD_NonTODFlag != dtSingleHTBill.Rows[0][10].ToString().Trim()) && LotNoCopy != "InitialLot" && TOD_NonTODFlag != "")
