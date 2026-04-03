@@ -172,6 +172,7 @@
             this.xrLabel62 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrBarCode1 = new DevExpress.XtraReports.UI.XRBarCode();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.xrLabel49 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrChartPie)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrChart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).BeginInit();
@@ -202,6 +203,7 @@
             // 
             this.Detail.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel49,
             this.xrLabel48,
             this.xrLabel47,
             this.MeterSerial2,
@@ -644,6 +646,8 @@
             // 
             this.xrLabel40.CanGrow = false;
             this.xrLabel40.Dpi = 96F;
+            this.xrLabel40.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "trim([L1_EmailId])")});
             this.xrLabel40.Font = new DevExpress.Drawing.DXFont("Manrope", 8F);
             this.xrLabel40.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabel40.LocationFloat = new DevExpress.Utils.PointFloat(56F, 279.84F);
@@ -652,13 +656,14 @@
             this.xrLabel40.SizeF = new System.Drawing.SizeF(308.76F, 22.08F);
             this.xrLabel40.StylePriority.UseFont = false;
             this.xrLabel40.StylePriority.UseTextAlignment = false;
-            this.xrLabel40.Text = "Registered Email Id :";
             this.xrLabel40.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel31
             // 
             this.xrLabel31.CanGrow = false;
             this.xrLabel31.Dpi = 96F;
+            this.xrLabel31.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "trim([L1_MobileNumber])")});
             this.xrLabel31.Font = new DevExpress.Drawing.DXFont("Manrope", 8F);
             this.xrLabel31.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabel31.LocationFloat = new DevExpress.Utils.PointFloat(56F, 260.84F);
@@ -667,7 +672,6 @@
             this.xrLabel31.SizeF = new System.Drawing.SizeF(308.76F, 22.08F);
             this.xrLabel31.StylePriority.UseFont = false;
             this.xrLabel31.StylePriority.UseTextAlignment = false;
-            this.xrLabel31.Text = "Registered Mobile :";
             this.xrLabel31.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel42
@@ -2122,6 +2126,7 @@
             this.xrLabel26.StylePriority.UseFont = false;
             this.xrLabel26.StylePriority.UseTextAlignment = false;
             this.xrLabel26.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabel26.Visible = false;
             // 
             // xrlTopPanelRow_1
             // 
@@ -2205,6 +2210,7 @@
             this.xrLabel24.SizeF = new System.Drawing.SizeF(71F, 22.08F);
             this.xrLabel24.StylePriority.UseFont = false;
             this.xrLabel24.Text = "Bill Days : ";
+            this.xrLabel24.Visible = false;
             // 
             // xrLabel25
             // 
@@ -2221,6 +2227,7 @@
             this.xrLabel25.StylePriority.UseTextAlignment = false;
             this.xrLabel25.Text = "Days";
             this.xrLabel25.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabel25.Visible = false;
             // 
             // xrQRCODE
             // 
@@ -2442,6 +2449,20 @@
             eaN128Generator1.CharacterSet = DevExpress.XtraPrinting.BarCode.Code128Charset.CharsetAuto;
             this.xrBarCode1.Symbology = eaN128Generator1;
             // 
+            // xrLabel49
+            // 
+            this.xrLabel49.CanGrow = false;
+            this.xrLabel49.Dpi = 96F;
+            this.xrLabel49.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TopPanel_Row_6]")});
+            this.xrLabel49.Font = new DevExpress.Drawing.DXFont("Manrope", 8F);
+            this.xrLabel49.InteractiveSorting.FieldName = "OwnerName";
+            this.xrLabel49.LocationFloat = new DevExpress.Utils.PointFloat(268.0001F, 103.92F);
+            this.xrLabel49.Name = "xrLabel49";
+            this.xrLabel49.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel49.SizeF = new System.Drawing.SizeF(260.9299F, 17.08F);
+            this.xrLabel49.StylePriority.UseFont = false;
+            // 
             // Rpt_LTMDPDF
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -2620,6 +2641,7 @@
         private DevExpress.XtraReports.UI.XRLabel Tod4Label2;
         private DevExpress.XtraReports.UI.XRLabel xrLabel47;
         private DevExpress.XtraReports.UI.XRLabel xrLabel48;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel49;
         //private System.Windows.Forms.BindingSource bsrptData;
         //private System.Windows.Forms.BindingSource bindingSource1;
     }

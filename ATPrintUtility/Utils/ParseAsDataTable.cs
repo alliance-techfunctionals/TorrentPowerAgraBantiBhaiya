@@ -73,7 +73,7 @@ namespace AT.Print.Utils
                         {
                             case 1:
                                 {
-                                    if (fields.Length != 14)
+                                    if (fields.Length != 18)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 1 has " + fields.Length + " columns only.");
@@ -529,7 +529,7 @@ namespace AT.Print.Utils
                         {
                             case 1:
                                 {
-                                    if (fields.Length != 15)
+                                    if (fields.Length != 19)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 1 has " + fields.Length + " columns only.");

@@ -324,6 +324,9 @@ namespace AT.Print
             {
                 slt.L1_Customer_PAN = "PAN No: " + dtSingleLTBill.Rows[0][13].ToString();
             }
+            slt.L1_MobileNumber = "Registered Mobile : " + dtSingleLTBill.Rows[0][14].ToString();
+            slt.L1_EmailId = "Registered Email Id : " + dtSingleLTBill.Rows[0][15].ToString();
+            slt.L1_BillDays = dtSingleLTBill.Rows[0][17].ToString();
 
             #endregion
 
@@ -841,6 +844,7 @@ namespace AT.Print
             slt.TopPanel_Row_3 = "T No. " + slt.L8_TNo;
             slt.TopPanel_Row_4 = "Bill Date  " + slt.L7_BillDt;
             slt.TopPanel_Row_5 = "11 KV FEEDER :" + slt.L1_FeederName;
+            slt.TopPanel_Row_6 = slt.L1_BillDays == "1" ? "" : "Bill Days : " + slt.L10_Mode + " Days";
 
 
             slt.L10_TotArrUPPCLIntUPPCLIntArrUPPCL_Rounded = string.IsNullOrEmpty(dtSingleLTBill.Rows[9][2].ToString()) ? "0" : Math.Round(Convert.ToDecimal(dtSingleLTBill.Rows[9][2].ToString()) + (decimal).49, 0, MidpointRounding.AwayFromZero).ToString();
@@ -1184,6 +1188,8 @@ namespace AT.Print
             slt.TopPanel_Row_3 = "T No. " + slt.L8_TNo;
             slt.TopPanel_Row_4 = "Bill Date  " + slt.L7_BillDt;
             slt.TopPanel_Row_5 = "11 KV FEEDER :" + slt.L1_FeederName;
+            slt.TopPanel_Row_6 = slt.L1_BillDays == "1" ? "" : "Bill Days : " + slt.L10_Mode + " Days";
+
 
             LineNo = "10";
             slt.L10_TotArrUPPCLIntUPPCLIntArrUPPCL_Rounded = string.IsNullOrEmpty(dtSingleLTBill.Rows[9][2].ToString()) ? "0" : Math.Round(Convert.ToDecimal(dtSingleLTBill.Rows[9][2].ToString()) + (decimal).49, 0, MidpointRounding.AwayFromZero).ToString();

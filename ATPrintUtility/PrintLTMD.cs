@@ -402,6 +402,10 @@ namespace AT.Print
             {
                 slt.L1_Customer_PAN = "PAN No: " + dtSingleLTBill.Rows[0][14].ToString();
             }
+            slt.L1_MobileNumber = "Registered Mobile : " + dtSingleLTBill.Rows[0][15].ToString();
+            slt.L1_EmailId = "Registered Email Id : " + dtSingleLTBill.Rows[0][16].ToString();
+            slt.L1_BillDays = dtSingleLTBill.Rows[0][18].ToString();
+
             //Line 1 End
             #endregion
 
@@ -952,6 +956,7 @@ namespace AT.Print
             slt.TopPanel_Row_4 = "Bill Date : " + slt.L7_BillDt;
             slt.TopPanel_Row_5 = "11 KV FEEDER : " + slt.L1_FeederName;
 
+            slt.TopPanel_Row_6 = slt.L1_BillDays == "1" ? "" : "Bill Days : " + slt.L10_Mode +" Days";
             //if (String.Equals(slt.L1_TODOrNon_TODFlag, "1"))
             //{
             //    slt.TopPanel_Row_5 = "Bill Days : " + slt.L10_Mode;
