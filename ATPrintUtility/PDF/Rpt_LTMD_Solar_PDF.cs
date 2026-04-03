@@ -52,6 +52,7 @@ namespace AT.Print.PDF
             #endregion
             xrLblAmount.Text = "₹" + ToDecimal(op[0].L8_amount_payable_before_due_date).ToString("G");
             xrLabelTotalAmt.BringToFront();
+            xrLabel51.Text = op[0].L1_Net == "B" ? "(Net Billing)" : "(Net Metering)";//"(Net Billing)"; // New Solar Req
 
             //xrLabelTotalAmt.Text = "₹" + ToDecimal(op[0].L8_amount_payable_before_due_date).ToString("G");
             xrLabelTotal.Text = "Thank you for your previous payment of ₹" + op[0].L7_Last_Payement_amount + " on " + op[0].L7_LastpymtDate;
@@ -60,6 +61,7 @@ namespace AT.Print.PDF
             xrLabel19.BringToFront();
             xrLine1.SendToBack();
 
+           
 
             if (!string.IsNullOrEmpty(op[0].L1_Customer_PAN))
             {
@@ -907,7 +909,7 @@ namespace AT.Print.PDF
 
             if (!(op[0].L8_Solar_Export_Energy == "0.00" || op[0].L8_Solar_Export_Energy == ""))
             {
-                xrLabel51.Text = "(Net Billing)"; // New Solar Req
+
                 xrLabelTotalAmt.LocationF = new DevExpress.Utils.PointFloat(104.83F, 562F);
 
 
@@ -931,20 +933,22 @@ namespace AT.Print.PDF
             }
             #endregion
 
+
+            
             #region Disconnection Message
-            //if (op[0].L1_DisconnectionMSGPrintingIMMEDIATE == "1")
-            //{
-            //    xrDueDate.Text = "IMMEDIATE";
-            //    bd_Bottom_BillDueDate.Text = "IMMEDIATE";
-            //    xrImmediatedissconnectiondate.Text = "IMMEDIATE";
-            //    xrImmediatedissconnectiondate.Visible = true;
-            //}
-            //else
-            //{
+            if (op[0].L1_DisconnectionMSGPrintingIMMEDIATE == "1")
+            {
+                xrDueDate.Text = "IMMEDIATE";
+                bd_Bottom_BillDueDate.Text = "IMMEDIATE";
+                xrImmediatedissconnectiondate.Text = "IMMEDIATE";
+                xrImmediatedissconnectiondate.Visible = true;
+            }
+            else
+            {
                 xrDueDate.Text = op[0].L7_due_date;
                 bd_Bottom_BillDueDate.Text = op[0].L7_due_date;
                 xrImmediatedissconnectiondate.Text = op[0].L10_DISCONN_DATE_date;
-            // }
+            }
             #endregion
 
 
