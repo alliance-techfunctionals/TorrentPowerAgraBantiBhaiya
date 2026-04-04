@@ -34,6 +34,7 @@
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.xrLabel64 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel51 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLine1 = new DevExpress.XtraReports.UI.XRLabel();
@@ -275,7 +276,6 @@
             this.xrLabel18 = new DevExpress.XtraReports.UI.XRLabel();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.objectDataSource1 = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
-            this.xrLabel64 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrChartPie)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource1)).BeginInit();
@@ -529,6 +529,20 @@
             this.Detail.Name = "Detail";
             this.Detail.StylePriority.UseFont = false;
             // 
+            // xrLabel64
+            // 
+            this.xrLabel64.CanGrow = false;
+            this.xrLabel64.Dpi = 96F;
+            this.xrLabel64.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TopPanel_Row_6]")});
+            this.xrLabel64.Font = new DevExpress.Drawing.DXFont("Manrope", 8F);
+            this.xrLabel64.InteractiveSorting.FieldName = "OwnerName";
+            this.xrLabel64.LocationFloat = new DevExpress.Utils.PointFloat(268.0001F, 103.92F);
+            this.xrLabel64.Name = "xrLabel64";
+            this.xrLabel64.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel64.SizeF = new System.Drawing.SizeF(260.9299F, 17.08F);
+            this.xrLabel64.StylePriority.UseFont = false;
+            // 
             // xrLabel7
             // 
             this.xrLabel7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -655,8 +669,6 @@
             // bd_Bottom_BillDueDate
             // 
             this.bd_Bottom_BillDueDate.Dpi = 96F;
-            this.bd_Bottom_BillDueDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L7_due_date]")});
             this.bd_Bottom_BillDueDate.Font = new DevExpress.Drawing.DXFont("Manrope", 8F);
             this.bd_Bottom_BillDueDate.LocationFloat = new DevExpress.Utils.PointFloat(210.4001F, 4F);
             this.bd_Bottom_BillDueDate.Multiline = true;
@@ -665,6 +677,7 @@
             this.bd_Bottom_BillDueDate.SizeF = new System.Drawing.SizeF(68.59995F, 15.07983F);
             this.bd_Bottom_BillDueDate.StylePriority.UseFont = false;
             this.bd_Bottom_BillDueDate.StylePriority.UseTextAlignment = false;
+            this.bd_Bottom_BillDueDate.Text = "IMMEDIATE";
             this.bd_Bottom_BillDueDate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel57
@@ -4094,20 +4107,6 @@
             // 
             this.objectDataSource1.DataSourceType = null;
             this.objectDataSource1.Name = "objectDataSource1";
-            // 
-            // xrLabel64
-            // 
-            this.xrLabel64.CanGrow = false;
-            this.xrLabel64.Dpi = 96F;
-            this.xrLabel64.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TopPanel_Row_6]")});
-            this.xrLabel64.Font = new DevExpress.Drawing.DXFont("Manrope", 8F);
-            this.xrLabel64.InteractiveSorting.FieldName = "OwnerName";
-            this.xrLabel64.LocationFloat = new DevExpress.Utils.PointFloat(268.0001F, 103.92F);
-            this.xrLabel64.Name = "xrLabel64";
-            this.xrLabel64.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel64.SizeF = new System.Drawing.SizeF(260.9299F, 17.08F);
-            this.xrLabel64.StylePriority.UseFont = false;
             // 
             // Rpt_LT_Solar_PDF
             // 

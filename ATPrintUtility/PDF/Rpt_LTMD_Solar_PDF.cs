@@ -52,7 +52,6 @@ namespace AT.Print.PDF
             #endregion
             xrLblAmount.Text = "₹" + ToDecimal(op[0].L8_amount_payable_before_due_date).ToString("G");
             xrLabelTotalAmt.BringToFront();
-            xrLabel51.Text = op[0].L1_Net == "B" ? "(Net Billing)" : "(Net Metering)";//"(Net Billing)"; // New Solar Req
 
             //xrLabelTotalAmt.Text = "₹" + ToDecimal(op[0].L8_amount_payable_before_due_date).ToString("G");
             xrLabelTotal.Text = "Thank you for your previous payment of ₹" + op[0].L7_Last_Payement_amount + " on " + op[0].L7_LastpymtDate;
@@ -907,8 +906,10 @@ namespace AT.Print.PDF
             #region Solar Export Energy Adjustment
             //Solar Export Energy Adjustment
 
-            if (!(op[0].L8_Solar_Export_Energy == "0.00" || op[0].L8_Solar_Export_Energy == ""))
+            //if (!(op[0].L8_Solar_Export_Energy == "0.00" || op[0].L8_Solar_Export_Energy == ""))
+            if (op[0].L1_Net == "B")
             {
+                xrLabel51.Text = "(Net Billing)";//"(Net Billing)"; // New Solar Req
 
                 xrLabelTotalAmt.LocationF = new DevExpress.Utils.PointFloat(104.83F, 562F);
 
@@ -929,6 +930,7 @@ namespace AT.Print.PDF
             }
             else
             {
+                xrLabel51.Text = "(Net Metering)";
                 visibleon();
             }
             #endregion
