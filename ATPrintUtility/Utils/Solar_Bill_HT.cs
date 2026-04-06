@@ -14,7 +14,22 @@ namespace AT.Print.Utils
         public string L1_route { get; set; }
         public string L1_subroute {  get; set; }
         public string L1_Bill_seq_no { get; set; }
+
+        public string L1_PowerFactorMSGIndicator { get; set; }
+        public string L1_FeederName { get; set; }
+        public string L1_TODOrNon_TODFlag { get; set; }
+        public string L1_AKY_indicator { get; set; }
+        public string L1_DisconnectionMSGPrintingIMMEDIATE { get; set; }
+        public string L1_BillingCode { get; set; }
+
+
         public string L1_Customer_PAN { get; set; }
+        public string L1_MobileNumber { get; set; }
+        public string L1_EmailId { get; set; }
+        public string L1_Net { get; set; }
+        public string L1_BillDays { get; set; }
+
+
         public string L2_NAME { get; set; }
         public string L3_ADDR1 { get; set; }
         public string L4_ADDR2 { get; set; }
@@ -40,7 +55,7 @@ namespace AT.Print.Utils
         public string L7_readt { get; set; }
         public string L7_LastpymtDate { get; set; }
         public string L7_Last_Payement_amount { get; set; }
-
+        public string L7_LastPayementMode { get; set; }
 
         public string L8_FixedCharge { get; set; }
         public string L8_EnergyCharge { get; set; }

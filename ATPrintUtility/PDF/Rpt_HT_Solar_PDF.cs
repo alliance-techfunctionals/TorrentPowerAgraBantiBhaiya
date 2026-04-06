@@ -28,7 +28,7 @@ namespace AT.Print.PDF
             var data = sender as Rpt_HT_Solar_PDF;
             var op = data.DataSource as List<Solar_Bill_HT>;
 
-         
+
             #region QRCODE
             if (ConfigurationManager.AppSettings["generateQRCodeinSolarHTBills"].ToString() == "True")
             {
@@ -319,7 +319,7 @@ namespace AT.Print.PDF
             xrLabelTotalAmt.Text = "₹" + tValue.ToString();
             #endregion
 
-          
+
             #region front page details
             #region Meter Change
             //Meter Change Print
@@ -850,7 +850,7 @@ namespace AT.Print.PDF
                     xrLabel86.Text = op[0].L38_Gen_KVAH_PRESREAD;
                     xrLabel87.Text = op[0].L40_Gen_MF2;
                     xrLabel88.Text = op[0].L41_Gen_KVAH_NET_UNITS;
-                    
+
 
                     #region Consumption Information
                     //Months
@@ -898,9 +898,11 @@ namespace AT.Print.PDF
             #region Solar Export Energy Adjustment
             //Solar Export Energy Adjustment
 
-            if (!(op[0].L8_Solar_Export_Energy == "0.00" || op[0].L8_Solar_Export_Energy == ""))
+            //if (!(op[0].L8_Solar_Export_Energy == "0.00" || op[0].L8_Solar_Export_Energy == ""))
+            if (op[0].L1_Net == "B")
             {
-                xrLabel51.Text = "(Net Billing)"; // New Solar Req
+                xrLabel51.Text = "(Net Billing)";
+                //xrLabel51.Text = "(Net Billing)"; // New Solar Req
                 xrLabelTotalAmt.LocationF = new DevExpress.Utils.PointFloat(104.83F, 562F);
 
 
@@ -920,24 +922,25 @@ namespace AT.Print.PDF
             }
             else
             {
+                xrLabel51.Text = "(Net Metering)";
                 visibleon();
             }
             #endregion
 
             #region Disconnection Message
-            //if (op[0].L1_DisconnectionMSGPrintingIMMEDIATE == "1")
-            //{
-            //    xrDueDate.Text = "IMMEDIATE";
-            //    bd_Bottom_BillDueDate.Text = "IMMEDIATE";
-            //    xrImmediatedissconnectiondate.Text = "IMMEDIATE";
-            //    xrImmediatedissconnectiondate.Visible = true;
-            //}
-            //else
-            //{
-            xrDueDate.Text = op[0].L7_due_date;
-            bd_Bottom_BillDueDate.Text = op[0].L7_due_date;
-            xrImmediatedissconnectiondate.Text = op[0].L10_DISCONN_DATE_date;
-            // }
+            if (op[0].L1_DisconnectionMSGPrintingIMMEDIATE == "1")
+            {
+                xrDueDate.Text = "IMMEDIATE";
+                bd_Bottom_BillDueDate.Text = "IMMEDIATE";
+                xrImmediatedissconnectiondate.Text = "IMMEDIATE";
+                xrImmediatedissconnectiondate.Visible = true;
+            }
+            else
+            {
+                xrDueDate.Text = op[0].L7_due_date;
+                bd_Bottom_BillDueDate.Text = op[0].L7_due_date;
+                xrImmediatedissconnectiondate.Text = op[0].L10_DISCONN_DATE_date;
+            }
             #endregion
 
             if (!String.IsNullOrEmpty(op[0].L6_LT_Metering_Flag))
@@ -955,7 +958,7 @@ namespace AT.Print.PDF
 
             //#endregion
 
-          
+
         }
         private decimal ToDecimal(string value)
         {

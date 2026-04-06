@@ -1490,7 +1490,7 @@ namespace AT.Print.Utils
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 1 has " + fields.Length + " columns only.");
                                         return dt;
                                     }
-                                    else if (BillType == "HT Solar" && fields.Length != 7)
+                                    else if (BillType == "HT Solar" && fields.Length != 16) //7
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 1 has " + fields.Length + " columns only.");

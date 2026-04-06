@@ -270,15 +270,27 @@ namespace AT.Print
             sht.L1_PC = dtSolarBill.Rows[0][3].ToString();
             sht.L1_route = dtSolarBill.Rows[0][4].ToString();
             sht.L1_Bill_seq_no = dtSolarBill.Rows[0][5].ToString();
-            sht.L1_subroute = dtSolarBill.Rows[0][6].ToString();
-            if (dtSolarBill.Rows[0][9].ToString() == "")
+          //  sht.L1_subroute = dtSolarBill.Rows[0][6].ToString();  // FEEDER 
+
+           // sht.L1_PowerFactorMSGIndicator = dtSolarBill.Rows[0][7].ToString();
+            sht.L1_FeederName = dtSolarBill.Rows[0][6].ToString();
+            sht.L1_TODOrNon_TODFlag = dtSolarBill.Rows[0][7].ToString(); //BIILING CODE
+            sht.L1_AKY_indicator = dtSolarBill.Rows[0][8].ToString();
+            sht.L1_DisconnectionMSGPrintingIMMEDIATE = dtSolarBill.Rows[0][9].ToString();
+            sht.L1_BillingCode = dtSolarBill.Rows[0][10].ToString(); //EMAIL
+            if (dtSolarBill.Rows[0][11].ToString() == "")  //b/m
             {
-                sht.L1_Customer_PAN = dtSolarBill.Rows[0][9].ToString();
+                sht.L1_Customer_PAN = dtSolarBill.Rows[0][11].ToString();
             }
             else
             {
-                sht.L1_Customer_PAN = "PAN No: " + dtSolarBill.Rows[0][9].ToString();
+                sht.L1_Customer_PAN = "PAN No: " + dtSolarBill.Rows[0][11].ToString();
             }
+            sht.L1_MobileNumber = "Registered Mobile : " + dtSolarBill.Rows[0][12].ToString();
+            sht.L1_EmailId = "Registered Email Id : " + dtSolarBill.Rows[0][13].ToString();
+            sht.L1_Net = dtSolarBill.Rows[0][14].ToString(); //for net metering/billing
+            sht.L1_BillDays = dtSolarBill.Rows[0][15].ToString();
+
             #endregion
 
             #region Line-2
@@ -332,6 +344,8 @@ namespace AT.Print
             sht.L7_readt = dtSolarBill.Rows[6][3].ToString();
             sht.L7_LastpymtDate = dtSolarBill.Rows[6][4].ToString();
             sht.L7_Last_Payement_amount = dtSolarBill.Rows[6][5].ToString();
+            sht.L7_LastPayementMode = dtSolarBill.Rows[6][6].ToString();
+
 
             #endregion
 
@@ -935,6 +949,9 @@ namespace AT.Print
             sht.TopPanel_Row_2 = "Meter No. : " + meter;
             sht.TopPanel_Row_3 = "T No.  " + sht.L8_T_No;
             sht.TopPanel_Row_4 = "Bill Date  " + sht.L7_Billdt;
+
+            sht.TopPanel_Row_5 = "11 KV FEEDER : " + sht.L1_FeederName;
+            sht.TopPanel_Row_6 = sht.L1_BillDays == "1" ? "" : "Bill Days : " + sht.L10_Mode + " Days";
 
             dtSolarBill.Rows[9][2].ToString();
             Console.WriteLine("Custom Fields calculated");

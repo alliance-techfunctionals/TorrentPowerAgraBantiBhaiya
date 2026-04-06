@@ -481,7 +481,7 @@ namespace AT.Print
             }
         }
 
-        private bool ValidateHTBill(string billText, int BillNo) //Done
+        private bool ValidateHTBill(string billText, int BillNo) //CHECK--
         {
             try
             {
@@ -513,7 +513,7 @@ namespace AT.Print
                     {
                         case 1:
 
-                            if (fields.Length != 12)
+                            if (fields.Length != 16) //12
                             {
                                 AppFunctions.CloseWaitForm();
                                 XtraMessageBox.Show($"Bill No: {BillNo}, Service No. {serviceNo} and row 1 has {fields.Length} columns only.");
@@ -829,6 +829,10 @@ namespace AT.Print
             {
                 sht.L1_Customer_PAN = "PAN: " + GetCol(rows, 0, 11);
             }
+            sht.L1_MobileNumber = "Registered Mobile : " + GetCol(rows,0,12); // (rows, ).Rows[0][12].ToString();
+            sht.L1_EmailId = "Registered Email Id : " + GetCol(rows, 0, 13);//GetCol.Rows[0][13].ToString();
+            sht.L1_BillDays = GetCol(rows, 0, 15);  //GetCol.Rows[0][15].ToString();
+
             #endregion
 
             #region Line-2
@@ -1251,6 +1255,7 @@ namespace AT.Print
             sht.TopPanel_Row_3 = "T No. : " + sht.L8_TNo;
             sht.TopPanel_Row_4 = "Bill Date : " + sht.L7_BillDt;
             sht.TopPanel_Row_5 = "11 KV FEEDER : " + sht.L1_FeederName;
+            sht.TopPanel_Row_6 = sht.L1_BillDays == "1" ? "" : "Bill Days : " + sht.L10_Mode + " Days";
 
             //if (String.Equals(sht.L1_TODOrNon_TODFlag, "1"))
             //{

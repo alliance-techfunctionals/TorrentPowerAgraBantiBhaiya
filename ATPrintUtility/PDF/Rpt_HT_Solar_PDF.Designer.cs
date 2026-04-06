@@ -276,6 +276,7 @@
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.objectDataSource1 = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
             this.objectDataSource2 = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
+            this.xrLabel65 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrChartPie)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource1)).BeginInit();
@@ -297,6 +298,7 @@
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel65,
             this.xrLabel26,
             this.xrLabel2,
             this.xrLabel64,
@@ -621,7 +623,6 @@
             this.xrBarCode1.SizeF = new System.Drawing.SizeF(235F, 26.16F);
             eaN128Generator1.CharacterSet = DevExpress.XtraPrinting.BarCode.Code128Charset.CharsetAuto;
             this.xrBarCode1.Symbology = eaN128Generator1;
-            this.xrBarCode1.Visible = false;
             // 
             // xrLabel28
             // 
@@ -670,8 +671,6 @@
             // bd_Bottom_BillDueDate
             // 
             this.bd_Bottom_BillDueDate.Dpi = 96F;
-            this.bd_Bottom_BillDueDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L7_due_date]")});
             this.bd_Bottom_BillDueDate.Font = new DevExpress.Drawing.DXFont("Manrope", 8F);
             this.bd_Bottom_BillDueDate.LocationFloat = new DevExpress.Utils.PointFloat(210.4001F, 4F);
             this.bd_Bottom_BillDueDate.Multiline = true;
@@ -680,6 +679,7 @@
             this.bd_Bottom_BillDueDate.SizeF = new System.Drawing.SizeF(68.59995F, 15.07983F);
             this.bd_Bottom_BillDueDate.StylePriority.UseFont = false;
             this.bd_Bottom_BillDueDate.StylePriority.UseTextAlignment = false;
+            this.bd_Bottom_BillDueDate.Text = "IMMEDIATE";
             this.bd_Bottom_BillDueDate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabel57
@@ -1379,7 +1379,6 @@
             this.xrLabel51.StylePriority.UseForeColor = false;
             this.xrLabel51.StylePriority.UsePadding = false;
             this.xrLabel51.StylePriority.UseTextAlignment = false;
-            this.xrLabel51.Text = "(Net Metering)";
             this.xrLabel51.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // KWH_HEAD2
@@ -3433,6 +3432,8 @@
             // 
             this.xrLabelPayModeData.CanGrow = false;
             this.xrLabelPayModeData.Dpi = 96F;
+            this.xrLabelPayModeData.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[L7_LastPayementMode]")});
             this.xrLabelPayModeData.Font = new DevExpress.Drawing.DXFont("Manrope", 9F);
             this.xrLabelPayModeData.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabelPayModeData.LocationFloat = new DevExpress.Utils.PointFloat(496F, 422F);
@@ -3527,6 +3528,8 @@
             // 
             this.xrLabelRegMobile.CanGrow = false;
             this.xrLabelRegMobile.Dpi = 96F;
+            this.xrLabelRegMobile.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "trim([L1_MobileNumber])")});
             this.xrLabelRegMobile.Font = new DevExpress.Drawing.DXFont("Manrope", 8F);
             this.xrLabelRegMobile.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabelRegMobile.LocationFloat = new DevExpress.Utils.PointFloat(56F, 260.84F);
@@ -3535,13 +3538,14 @@
             this.xrLabelRegMobile.SizeF = new System.Drawing.SizeF(308.76F, 22.08F);
             this.xrLabelRegMobile.StylePriority.UseFont = false;
             this.xrLabelRegMobile.StylePriority.UseTextAlignment = false;
-            this.xrLabelRegMobile.Text = "Registered Mobile :";
             this.xrLabelRegMobile.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabelRedEmail
             // 
             this.xrLabelRedEmail.CanGrow = false;
             this.xrLabelRedEmail.Dpi = 96F;
+            this.xrLabelRedEmail.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "trim([L1_EmailId])")});
             this.xrLabelRedEmail.Font = new DevExpress.Drawing.DXFont("Manrope", 8F);
             this.xrLabelRedEmail.InteractiveSorting.FieldName = "OwnerName";
             this.xrLabelRedEmail.LocationFloat = new DevExpress.Utils.PointFloat(56F, 279.84F);
@@ -3550,7 +3554,6 @@
             this.xrLabelRedEmail.SizeF = new System.Drawing.SizeF(308.76F, 22.08F);
             this.xrLabelRedEmail.StylePriority.UseFont = false;
             this.xrLabelRedEmail.StylePriority.UseTextAlignment = false;
-            this.xrLabelRedEmail.Text = "Registered Email Id :";
             this.xrLabelRedEmail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // xrLabelPanNo
@@ -3985,6 +3988,7 @@
             this.xrLabelday.StylePriority.UseFont = false;
             this.xrLabelday.StylePriority.UseTextAlignment = false;
             this.xrLabelday.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabelday.Visible = false;
             // 
             // xrlTopPanelRow_2
             // 
@@ -4039,7 +4043,7 @@
             this.xrlTopPanelRow_5.LocationFloat = new DevExpress.Utils.PointFloat(268F, 86.0213F);
             this.xrlTopPanelRow_5.Name = "xrlTopPanelRow_5";
             this.xrlTopPanelRow_5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrlTopPanelRow_5.SizeF = new System.Drawing.SizeF(260.9299F, 17.08F);
+            this.xrlTopPanelRow_5.SizeF = new System.Drawing.SizeF(275.7614F, 17.08F);
             this.xrlTopPanelRow_5.StylePriority.UseFont = false;
             // 
             // xrLabelBillDays
@@ -4054,6 +4058,7 @@
             this.xrLabelBillDays.SizeF = new System.Drawing.SizeF(71F, 22.08F);
             this.xrLabelBillDays.StylePriority.UseFont = false;
             this.xrLabelBillDays.Text = "Bill Days : ";
+            this.xrLabelBillDays.Visible = false;
             // 
             // xrLabelbill
             // 
@@ -4070,6 +4075,7 @@
             this.xrLabelbill.StylePriority.UseTextAlignment = false;
             this.xrLabelbill.Text = "Days";
             this.xrLabelbill.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabelbill.Visible = false;
             // 
             // xrlTopPanelRow_1
             // 
@@ -4094,6 +4100,20 @@
             // 
             this.objectDataSource2.DataSourceType = null;
             this.objectDataSource2.Name = "objectDataSource2";
+            // 
+            // xrLabel65
+            // 
+            this.xrLabel65.CanGrow = false;
+            this.xrLabel65.Dpi = 96F;
+            this.xrLabel65.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TopPanel_Row_6]")});
+            this.xrLabel65.Font = new DevExpress.Drawing.DXFont("Manrope", 8F);
+            this.xrLabel65.InteractiveSorting.FieldName = "OwnerName";
+            this.xrLabel65.LocationFloat = new DevExpress.Utils.PointFloat(268.0001F, 103.92F);
+            this.xrLabel65.Name = "xrLabel65";
+            this.xrLabel65.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel65.SizeF = new System.Drawing.SizeF(260.9299F, 17.08F);
+            this.xrLabel65.StylePriority.UseFont = false;
             // 
             // Rpt_HT_Solar_PDF
             // 
@@ -4379,6 +4399,7 @@
         private DevExpress.XtraReports.UI.XRBarCode xrBarCode1;
         private DevExpress.XtraReports.UI.XRLabel xrLabel2;
         private DevExpress.XtraReports.UI.XRLabel xrLabel26;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel65;
         //private System.Windows.Forms.BindingSource bsrptData;
         //private System.Windows.Forms.BindingSource bindingSource1;
     }
