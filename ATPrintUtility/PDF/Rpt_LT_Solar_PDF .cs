@@ -446,10 +446,10 @@ namespace AT.Print.PDF
             decimal total3 = v51 + v61 + v71 + v81;
 
             //tod details total meter 2
-            decimal a11 = ToDecimal(op[0].L24_TOD_1_KWH);
-            decimal a21 = ToDecimal(op[0].L24_TOD_2_KWH);
-            decimal a31 = ToDecimal(op[0].L24_TOD_3_KWH);
-            decimal a41 = ToDecimal(op[0].L24_TOD_4_KWH);
+            decimal a11 = ToDecimal(op[0].L54_Exp_TOD1_KW_Units); //L24_TOD_1_KWH);
+            decimal a21 = ToDecimal(op[0].L54_Exp_TOD2_KW_Units); //L24_TOD_2_KWH);
+            decimal a31 = ToDecimal(op[0].L54_Exp_TOD3_KW_Units); //L24_TOD_3_KWH);
+            decimal a41 = ToDecimal(op[0].L54_Exp_TOD4_KW_Units); //L24_TOD_4_KWH);
             decimal totalA1 = a11 + a21 + a31 + a41;
 
             decimal a12 = ToDecimal(op[0].L51_Exp_TOD1_KWH_Units);
@@ -564,10 +564,10 @@ namespace AT.Print.PDF
 
 
 
-                MTR2_KWH1.Text = op[0].L24_TOD_1_KWH;
-                MTR2_KWH2.Text = op[0].L24_TOD_2_KWH;
-                MTR2_KWH3.Text = op[0].L24_TOD_3_KWH;
-                MTR2_KWH4.Text = op[0].L24_TOD_4_KWH;
+                MTR2_KWH1.Text = op[0].L54_Exp_TOD1_KW_Units;//L24_TOD_1_KWH;
+                MTR2_KWH2.Text = op[0].L54_Exp_TOD2_KW_Units;//L24_TOD_2_KWH;
+                MTR2_KWH3.Text = op[0].L54_Exp_TOD3_KW_Units;//L24_TOD_3_KWH;
+                MTR2_KWH4.Text = op[0].L54_Exp_TOD4_KW_Units;//L24_TOD_4_KWH;
                 xrLabel11.Text = totalA1.ToString("0.00");
 
                 MTR2_KWH1_ex.Text = op[0].L51_Exp_TOD1_KWH_Units;
