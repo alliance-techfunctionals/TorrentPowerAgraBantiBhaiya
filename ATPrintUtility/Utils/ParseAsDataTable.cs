@@ -1,6 +1,7 @@
 ﻿using DevExpress.XtraEditors;
 using System;
 using System.Data;
+using System.Globalization;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
@@ -72,7 +73,7 @@ namespace AT.Print.Utils
                         {
                             case 1:
                                 {
-                                    if (fields.Length != 14)
+                                    if (fields.Length != 18)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 1 has " + fields.Length + " columns only.");
@@ -528,7 +529,7 @@ namespace AT.Print.Utils
                         {
                             case 1:
                                 {
-                                    if (fields.Length != 15)
+                                    if (fields.Length != 19)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 1 has " + fields.Length + " columns only.");
@@ -1483,20 +1484,20 @@ namespace AT.Print.Utils
                         {
                             case 1:
                                 {
-                                    if (BillType == "LTMD Solar" && fields.Length != 10)
+                                    if (BillType == "LTMD Solar" && fields.Length != 19)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 1 has " + fields.Length + " columns only.");
                                         return dt;
                                     }
-                                    else if (BillType == "HT Solar" && fields.Length != 7)
+                                    else if (BillType == "HT Solar" && fields.Length != 16) //7
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 1 has " + fields.Length + " columns only.");
                                         return dt;
 
                                     }
-                                    else if (BillType == "LT Solar" && fields.Length != 9)
+                                    else if (BillType == "LT Solar" && fields.Length != 18)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 1 has " + fields.Length + " columns only.");
@@ -1562,7 +1563,7 @@ namespace AT.Print.Utils
                                 break;
                             case 7:
                                 {
-                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 6)
+                                    if ((BillType == "LTMD Solar" || BillType == "HT Solar" || BillType == "LT Solar") && fields.Length != 7)
                                     {
                                         AppFunctions.CloseWaitForm();
                                         XtraMessageBox.Show("Bill No: " + BillNo + ", Service No. " + ServiceNoLine + " and row 7 has " + fields.Length + " columns only.");
@@ -2356,6 +2357,20 @@ namespace AT.Print.Utils
 
         }
 
+        public static string ChangeMonthToHindi(string Date)
+        {
+
+            if (string.IsNullOrEmpty(Date))
+                return "";
+
+            DateTime dt;
+            if (DateTime.TryParse(Date, out dt))
+            {
+                return dt.ToString("dd-MMMM-yy", new CultureInfo("hi-IN"));
+            }
+
+            return Date;
+        }
 
     }
 }

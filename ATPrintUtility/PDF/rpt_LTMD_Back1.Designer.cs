@@ -19,7 +19,7 @@ namespace AT.Print.PDF {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class rpt_LTMD_Back {
@@ -57,56 +57,6 @@ namespace AT.Print.PDF {
             }
             set {
                 resourceCulture = value;
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=17,Y=17}.
-        /// </summary>
-        internal static System.Drawing.Point bindingSource1_TrayLocation {
-            get {
-                object obj = ResourceManager.GetObject("bindingSource1.TrayLocation", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=17,Y=56}.
-        /// </summary>
-        internal static System.Drawing.Point bindingSource2_TrayLocation {
-            get {
-                object obj = ResourceManager.GetObject("bindingSource2.TrayLocation", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=17,Y=95}.
-        /// </summary>
-        internal static System.Drawing.Point bindingSource3_TrayLocation {
-            get {
-                object obj = ResourceManager.GetObject("bindingSource3.TrayLocation", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=17,Y=134}.
-        /// </summary>
-        internal static System.Drawing.Point bindingSource4_TrayLocation {
-            get {
-                object obj = ResourceManager.GetObject("bindingSource4.TrayLocation", resourceCulture);
-                return ((System.Drawing.Point)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Point similar to {X=17,Y=173}.
-        /// </summary>
-        internal static System.Drawing.Point bindingSource5_TrayLocation {
-            get {
-                object obj = ResourceManager.GetObject("bindingSource5.TrayLocation", resourceCulture);
-                return ((System.Drawing.Point)(obj));
             }
         }
     }

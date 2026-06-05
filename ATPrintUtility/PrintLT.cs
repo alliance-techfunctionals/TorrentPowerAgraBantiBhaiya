@@ -74,11 +74,11 @@ namespace AT.Print
                     if (String.Equals(this.Name, "PrintLT") && contents.StartsWith("LT|"))
                     {
                         singleLTBills = contents.Split(new String[] { "LT|" }, StringSplitOptions.RemoveEmptyEntries);
-                        if (!select_mVImg())
-                        {
-                            AppFunctions.CloseWaitForm();
-                            return;
-                        }
+                        //if (!select_mVImg())
+                        //{
+                        //    AppFunctions.CloseWaitForm();
+                        //    return;
+                        //}
                         XtraMessageBox.Show("Total Bill in this file " + singleLTBills.Length.ToString(), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         AppFunctions.ShowWaitForm("Generating LT Bills Now..!!");
                         var sb = sender as SimpleButton;
@@ -200,8 +200,8 @@ namespace AT.Print
                         Margins MinMargins = DevExpress.XtraPrinting.Native.DeviceCaps.GetMinMargins(g);
                         Console.WriteLine("Minimum Margins for " + ps.PrinterName + ": " + MinMargins.ToString());
                     }
-
-                    AT.Print.Rpt_LT_Print rpta = new AT.Print.Rpt_LT_Print
+                    AT.Print.PDF.Rpt_LTPDF rpta = new AT.Print.PDF.Rpt_LTPDF
+                    //AT.Print.Rpt_LT_Print rpta = new AT.Print.Rpt_LT_Print
                     {
                         DataSource = lstformattedbills,
                         ShowPrintStatusDialog = false,
@@ -213,7 +213,8 @@ namespace AT.Print
                     rpta.DesignerOptions.ShowPrintingWarnings = false;
                     rpta.DesignerOptions.ShowExportWarnings = false;
                     rpta.ShowPrintMarginsWarning = false;
-                    AT.Print.Rpt_LT_Print_Back rptb = new AT.Print.Rpt_LT_Print_Back
+                    AT.Print.PDF.rpt_LT_Back rptb = new AT.Print.PDF.rpt_LT_Back
+                    //AT.Print.Rpt_LT_Print_Back rptb = new AT.Print.Rpt_LT_Print_Back
                     {
                         DataSource = lstformattedbills,
                         ShowPrintStatusDialog = false,
@@ -321,8 +322,11 @@ namespace AT.Print
             }
             else
             {
-                slt.L1_Customer_PAN = "PAN: " + dtSingleLTBill.Rows[0][13].ToString();
+                slt.L1_Customer_PAN = "PAN No: " + dtSingleLTBill.Rows[0][13].ToString();
             }
+            slt.L1_MobileNumber = "Registered Mobile : " + dtSingleLTBill.Rows[0][14].ToString();
+            slt.L1_EmailId = "Registered Email Id : " + dtSingleLTBill.Rows[0][15].ToString();
+            slt.L1_BillDays = dtSingleLTBill.Rows[0][17].ToString();
 
             #endregion
 
@@ -840,6 +844,7 @@ namespace AT.Print
             slt.TopPanel_Row_3 = "T No. " + slt.L8_TNo;
             slt.TopPanel_Row_4 = "Bill Date  " + slt.L7_BillDt;
             slt.TopPanel_Row_5 = "11 KV FEEDER :" + slt.L1_FeederName;
+            slt.TopPanel_Row_6 = slt.L1_BillDays == "1" ? "" : "Bill Days : " + slt.L10_Mode + " Days";
 
 
             slt.L10_TotArrUPPCLIntUPPCLIntArrUPPCL_Rounded = string.IsNullOrEmpty(dtSingleLTBill.Rows[9][2].ToString()) ? "0" : Math.Round(Convert.ToDecimal(dtSingleLTBill.Rows[9][2].ToString()) + (decimal).49, 0, MidpointRounding.AwayFromZero).ToString();
@@ -1183,6 +1188,8 @@ namespace AT.Print
             slt.TopPanel_Row_3 = "T No. " + slt.L8_TNo;
             slt.TopPanel_Row_4 = "Bill Date  " + slt.L7_BillDt;
             slt.TopPanel_Row_5 = "11 KV FEEDER :" + slt.L1_FeederName;
+            slt.TopPanel_Row_6 = slt.L1_BillDays == "1" ? "" : "Bill Days : " + slt.L10_Mode + " Days";
+
 
             LineNo = "10";
             slt.L10_TotArrUPPCLIntUPPCLIntArrUPPCL_Rounded = string.IsNullOrEmpty(dtSingleLTBill.Rows[9][2].ToString()) ? "0" : Math.Round(Convert.ToDecimal(dtSingleLTBill.Rows[9][2].ToString()) + (decimal).49, 0, MidpointRounding.AwayFromZero).ToString();
@@ -1243,11 +1250,11 @@ namespace AT.Print
                     if (String.Equals(this.Name, "PrintLT") && contents.StartsWith("LT|"))
                     {
                         singleLTBills = contents.Split(new String[] { "LT|" }, StringSplitOptions.RemoveEmptyEntries);
-                        if (!select_mVImg())
-                        {
-                            AppFunctions.CloseWaitForm();
-                            return;
-                        }
+                        //if (!select_mVImg())
+                        //{
+                        //    AppFunctions.CloseWaitForm();
+                        //    return;
+                        //}
 
                         XtraMessageBox.Show("Total Bill in this file " + singleLTBills.Length.ToString(), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         AppFunctions.ShowWaitForm("Validating LT Bills Now before I generate the PDF files !!");
@@ -1383,309 +1390,6 @@ namespace AT.Print
         }
 
 
-        void GeneratePDFFormatsForLTBills(string[] Bills, string Name, int Initial, int Final, string FolderName)
-        {
-            int ParsedBills = 0;
-
-            XtraReport collectorReport = new XtraReport
-            {
-                DisplayName = "LT Print",
-            };
-
-            Final = 1000;
-            if (Final > 200)
-            {
-                List<int> inlist = Enumerable.Range(0, Final / 2).ToList();
-                List<int> inlist1 = Enumerable.Range(Final / 2 + 1, Final / 2 + 1).ToList();
-
-                Parallel.ForEach(inlist, z =>
-                {
-                    if (z < DSBill.Tables.Count)
-                    {
-                        DataTable dtSingleLTBill = DSBill.Tables[z];
-                        if (dtSingleLTBill.Rows.Count != 0)
-                        {
-                            try
-                            {
-                                List<SingleLTBill> lstformattedbills = new List<SingleLTBill>();
-
-                                SingleLTBill slt = parseSingleLTBill(dtSingleLTBill);
-                                slt.MVPicture = mVImagePath;
-                                lstformattedbills.Add(slt);
-
-                                using (AT.Print.PDF.Rpt_LTPDF rptsd = new AT.Print.PDF.Rpt_LTPDF
-                                {
-                                    DataSource = lstformattedbills,
-
-                                })
-                                {
-                                    #region WaterMark Picture Front Page PDF Non-TOD
-                                    DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkFrontNonTOD = new DevExpress.XtraPrinting.Drawing.Watermark();
-                                    pictureWatermarkFrontNonTOD.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_Non_TOD_Front_Page.png");
-                                    pictureWatermarkFrontNonTOD.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                                    pictureWatermarkFrontNonTOD.ImageTiling = false;
-                                    pictureWatermarkFrontNonTOD.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Clip;
-                                    pictureWatermarkFrontNonTOD.ImageTransparency = 0;
-                                    pictureWatermarkFrontNonTOD.ShowBehind = true;
-                                    rptsd.Watermark.CopyFrom(pictureWatermarkFrontNonTOD);
-                                    #endregion
-
-
-
-
-
-
-                                    rptsd.CreateDocument(false);
-
-                                    using (AT.Print.PDF.rpt_LT_Back rpts = new AT.Print.PDF.rpt_LT_Back
-                                    {
-                                        DataSource = lstformattedbills,
-
-                                    })
-                                    {
-                                        #region WaterMark Picture Back Page PDF Non-TOD
-                                        DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkBackNonTOD = new DevExpress.XtraPrinting.Drawing.Watermark();
-                                        pictureWatermarkBackNonTOD.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_Non_TOD_Back_Page.png");
-                                        pictureWatermarkBackNonTOD.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                                        pictureWatermarkBackNonTOD.ImageTiling = false;
-                                        pictureWatermarkBackNonTOD.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Clip;
-                                        pictureWatermarkBackNonTOD.ImageTransparency = 0;
-                                        pictureWatermarkBackNonTOD.ShowBehind = true;
-                                        rpts.Watermark.CopyFrom(pictureWatermarkBackNonTOD);
-                                        #endregion
-
-
-                                        rpts.CreateDocument(false);
-
-                                        rptsd.ModifyDocument(x => { x.AddPages(rpts.Pages); });
-                                        DevExpress.XtraPrinting.Page myPage2 = rptsd.Pages[1];
-                                        myPage2.AssignWatermark(pictureWatermarkBackNonTOD);
-                                        string billdate = lstformattedbills.FirstOrDefault().L1_MonthYear;
-                                        string ServiceNo = lstformattedbills.FirstOrDefault().L6_SERVDET_SERVNO;
-                                        var outputfolder = "C://Bills//LT Files//" + billdate + "//" + textFileName;
-                                        OutputFolderPath OFP = new OutputFolderPath();
-                                        outputfolder = OFP.LoadLocation() + "//LT Files//" + billdate + "//" + textFileName;
-                                        if (!Directory.Exists(outputfolder))
-                                            Directory.CreateDirectory(outputfolder);
-                                        if (Directory.Exists(outputfolder))
-                                        {
-                                            rptsd.ExportToPdf(outputfolder + "//" + ServiceNo + ".pdf");
-                                        }
-                                    }
-
-
-                                    ParsedBills++;
-                                }
-
-                            }
-                            catch (System.OutOfMemoryException)
-                            {
-                                System.Runtime.GCSettings.LargeObjectHeapCompactionMode = System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce;
-                                GC.Collect();
-                                GC.RemoveMemoryPressure(1024 * 1024);
-                            }
-                            catch (Exception ex)
-                            {
-                                AppFunctions.LogError(ex);
-                                AppFunctions.CloseWaitForm();
-                                XtraMessageBox.Show("Error Parsing Bill " + (ParsedBills + 1) + " of the given file", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                Console.WriteLine(ex.Message);
-                            }
-                        }
-                    }
-                });
-
-                Parallel.ForEach(inlist1, z =>
-                {
-                    if (z < DSBill.Tables.Count)
-                    {
-                        DataTable dtSingleLTBill = DSBill.Tables[z];
-                        if (dtSingleLTBill.Rows.Count != 0)
-                        {
-                            try
-                            {
-                                List<SingleLTBill> lstformattedbills = new List<SingleLTBill>();
-
-                                SingleLTBill slt = parseSingleLTBill(dtSingleLTBill);
-                                slt.MVPicture = mVImagePath;
-                                lstformattedbills.Add(slt);
-
-                                using (AT.Print.PDF.Rpt_LTPDF rptsd = new AT.Print.PDF.Rpt_LTPDF
-                                {
-                                    DataSource = lstformattedbills,
-
-                                })
-                                {
-                                    #region WaterMark Picture Front Page PDF Non-TOD
-                                    DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkFrontNonTOD = new DevExpress.XtraPrinting.Drawing.Watermark();
-                                    pictureWatermarkFrontNonTOD.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_Non_TOD_Front_Page.png");
-                                    pictureWatermarkFrontNonTOD.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                                    pictureWatermarkFrontNonTOD.ImageTiling = false;
-                                    pictureWatermarkFrontNonTOD.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Clip;
-                                    pictureWatermarkFrontNonTOD.ImageTransparency = 0;
-                                    pictureWatermarkFrontNonTOD.ShowBehind = true;
-                                    rptsd.Watermark.CopyFrom(pictureWatermarkFrontNonTOD);
-                                    #endregion
-
-
-
-
-
-
-                                    rptsd.CreateDocument(false);
-
-                                    using (AT.Print.PDF.rpt_LT_Back rpts = new AT.Print.PDF.rpt_LT_Back
-                                    {
-                                        DataSource = lstformattedbills,
-
-                                    })
-                                    {
-                                        #region WaterMark Picture Back Page PDF Non-TOD
-                                        DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkBackNonTOD = new DevExpress.XtraPrinting.Drawing.Watermark();
-                                        pictureWatermarkBackNonTOD.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_Non_TOD_Back_Page.png");
-                                        pictureWatermarkBackNonTOD.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                                        pictureWatermarkBackNonTOD.ImageTiling = false;
-                                        pictureWatermarkBackNonTOD.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Clip;
-                                        pictureWatermarkBackNonTOD.ImageTransparency = 0;
-                                        pictureWatermarkBackNonTOD.ShowBehind = true;
-                                        rpts.Watermark.CopyFrom(pictureWatermarkBackNonTOD);
-                                        #endregion
-
-
-                                        rpts.CreateDocument(false);
-
-                                        rptsd.ModifyDocument(x => { x.AddPages(rpts.Pages); });
-                                        DevExpress.XtraPrinting.Page myPage2 = rptsd.Pages[1];
-                                        myPage2.AssignWatermark(pictureWatermarkBackNonTOD);
-                                        string billdate = lstformattedbills.FirstOrDefault().L1_MonthYear;
-                                        string ServiceNo = lstformattedbills.FirstOrDefault().L6_SERVDET_SERVNO;
-                                        var outputfolder = "C://Bills//LT Files//" + billdate + "//" + textFileName;
-                                        OutputFolderPath OFP = new OutputFolderPath();
-                                        outputfolder = OFP.LoadLocation() + "//LT Files//" + billdate + "//" + textFileName;
-                                        if (!Directory.Exists(outputfolder))
-                                            Directory.CreateDirectory(outputfolder);
-                                        if (Directory.Exists(outputfolder))
-                                        {
-                                            rptsd.ExportToPdf(outputfolder + "//" + ServiceNo + ".pdf");
-                                        }
-                                    }
-                                    ParsedBills++;
-                                }
-                            }
-                            catch (System.OutOfMemoryException)
-                            {
-                                System.Runtime.GCSettings.LargeObjectHeapCompactionMode = System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce;
-                                GC.Collect();
-                                GC.RemoveMemoryPressure(1024 * 1024);
-                            }
-                            catch (Exception ex)
-                            {
-                                AppFunctions.LogError(ex);
-                                AppFunctions.CloseWaitForm();
-                                XtraMessageBox.Show("Error Parsing Bill " + (ParsedBills + 1) + " of the given file", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                Console.WriteLine(ex.Message);
-                            }
-                        }
-                    }
-                });
-
-
-                DSBill.Reset();
-                DSBill.Dispose();
-                AppFunctions.CloseWaitForm();
-                XtraMessageBox.Show(ParsedBills + " Bills Parsed Successfully", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                List<int> inlist = Enumerable.Range(0, Final).ToList();
-
-                Parallel.ForEach(inlist, z =>
-                {
-
-                    DataTable dtSingleLTBill = DSBill.Tables[z];
-                    try
-                    {
-                        List<SingleLTBill> lstformattedbills = new List<SingleLTBill>();
-
-                        SingleLTBill slt = parseSingleLTBill(dtSingleLTBill);
-                        slt.MVPicture = mVImagePath;
-                        lstformattedbills.Add(slt);
-
-                        AT.Print.PDF.Rpt_LTPDF rptsd = new AT.Print.PDF.Rpt_LTPDF
-                        {
-                            DataSource = lstformattedbills,
-                        };
-                        #region WaterMark Picture Front Page PDF Non-TOD
-                        DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkFrontNonTOD = new DevExpress.XtraPrinting.Drawing.Watermark();
-                        pictureWatermarkFrontNonTOD.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_Non_TOD_Front_Page.png");
-                        pictureWatermarkFrontNonTOD.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                        pictureWatermarkFrontNonTOD.ImageTiling = false;
-                        pictureWatermarkFrontNonTOD.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Clip;
-                        pictureWatermarkFrontNonTOD.ImageTransparency = 0;
-                        pictureWatermarkFrontNonTOD.ShowBehind = true;
-                        rptsd.Watermark.CopyFrom(pictureWatermarkFrontNonTOD);
-                        #endregion
-                        rptsd.CreateDocument(false);
-
-                        AT.Print.PDF.rpt_LT_Back rpts = new AT.Print.PDF.rpt_LT_Back
-                        {
-                            DataSource = lstformattedbills,
-
-                        };
-                        #region WaterMark Picture Back Page PDF Non-TOD
-                        DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkBackNonTOD = new DevExpress.XtraPrinting.Drawing.Watermark();
-                        pictureWatermarkBackNonTOD.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_Non_TOD_Back_Page.png");
-                        pictureWatermarkBackNonTOD.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                        pictureWatermarkBackNonTOD.ImageTiling = false;
-                        pictureWatermarkBackNonTOD.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Clip;
-                        pictureWatermarkBackNonTOD.ImageTransparency = 0;
-                        pictureWatermarkBackNonTOD.ShowBehind = true;
-                        rpts.Watermark.CopyFrom(pictureWatermarkBackNonTOD);
-                        #endregion
-
-
-                        rpts.CreateDocument(false);
-
-                        rptsd.ModifyDocument(x => { x.AddPages(rpts.Pages); });
-                        DevExpress.XtraPrinting.Page myPage2 = rptsd.Pages[1];
-                        myPage2.AssignWatermark(pictureWatermarkBackNonTOD);
-                        string billdate = lstformattedbills.FirstOrDefault().L1_MonthYear;
-                        string ServiceNo = lstformattedbills.FirstOrDefault().L6_SERVDET_SERVNO;
-                        var outputfolder = "C://Bills//LT Files//" + billdate + "//" + textFileName;
-                        OutputFolderPath OFP = new OutputFolderPath();
-                        outputfolder = OFP.LoadLocation() + "//LT Files//" + billdate + "//" + textFileName;
-                        if (!Directory.Exists(outputfolder))
-                            Directory.CreateDirectory(outputfolder);
-                        if (Directory.Exists(outputfolder))
-                        {
-                            rptsd.ExportToPdf(outputfolder + "//" + ServiceNo + ".pdf");
-                        }
-                        rpts.Dispose();
-                        rptsd.Dispose();
-                        ParsedBills++;
-                    }
-                    catch (System.OutOfMemoryException)
-                    {
-                        System.Runtime.GCSettings.LargeObjectHeapCompactionMode = System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce;
-                        GC.Collect();
-                        GC.RemoveMemoryPressure(1024 * 1024);
-                    }
-                    catch (Exception ex)
-                    {
-                        AppFunctions.LogError(ex);
-                        AppFunctions.CloseWaitForm();
-                        XtraMessageBox.Show("Error Parsing Bill " + (ParsedBills + 1) + " of the given file", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        Console.WriteLine(ex.Message);
-                    }
-                });
-
-                DSBill.Reset();
-                DSBill.Dispose();
-                AppFunctions.CloseWaitForm();
-                XtraMessageBox.Show(ParsedBills + " Bills Parsed Successfully", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
-        }
 
 
         AT.Print.PDF.Rpt_LTPDF rptsd = new AT.Print.PDF.Rpt_LTPDF();
@@ -1695,116 +1399,6 @@ namespace AT.Print
 
         DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkFrontNonTOD = new DevExpress.XtraPrinting.Drawing.Watermark();
         DevExpress.XtraPrinting.Drawing.Watermark pictureWatermarkBackNonTOD = new DevExpress.XtraPrinting.Drawing.Watermark();
-
-        async void GeneratePDFFormatsForLTBillsSir(string[] Bills, string Name, int Initial, int Final, string FolderName)
-        {
-
-            int processedBills = 0;
-
-            List<int> inlist = Enumerable.Range(0, Final).ToList();
-
-            lstformattedbills = new List<SingleLTBill>();
-
-            rptsd = new AT.Print.PDF.Rpt_LTPDF();
-            rpts = new AT.Print.PDF.rpt_LT_Back();
-
-
-
-            pictureWatermarkFrontNonTOD = new DevExpress.XtraPrinting.Drawing.Watermark();
-            pictureWatermarkFrontNonTOD.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_Non_TOD_Front_Page.png");
-            pictureWatermarkFrontNonTOD.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            pictureWatermarkFrontNonTOD.ImageTiling = false;
-            pictureWatermarkFrontNonTOD.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Clip;
-            pictureWatermarkFrontNonTOD.ImageTransparency = 0;
-            pictureWatermarkFrontNonTOD.ShowBehind = true;
-
-            pictureWatermarkBackNonTOD = new DevExpress.XtraPrinting.Drawing.Watermark();
-            pictureWatermarkBackNonTOD.ImageSource = DevExpress.XtraPrinting.Drawing.ImageSource.FromFile(Application.StartupPath + "\\Contents\\CategorySlabImages\\Duplex_Non_TOD_Back_Page.png");
-            pictureWatermarkBackNonTOD.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            pictureWatermarkBackNonTOD.ImageTiling = false;
-            pictureWatermarkBackNonTOD.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Clip;
-            pictureWatermarkBackNonTOD.ImageTransparency = 0;
-            pictureWatermarkBackNonTOD.ShowBehind = true;
-
-
-            var watch = new System.Diagnostics.Stopwatch();
-
-            watch.Start();
-            while (processedBills < Final)
-            {
-                await Task.Run(() => generatebill(processedBills));
-                processedBills++;
-                
-
-            }
-            watch.Stop();
-
-            Console.WriteLine($"Execution Time: {watch.ElapsedMilliseconds} ms");
-            DSBill.Reset();
-            DSBill.Dispose();
-            XtraMessageBox.Show(processedBills + " Bills Processed Successfully in minutes " + watch.ElapsedMilliseconds, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            AppFunctions.CloseWaitForm();
-
-        }
-
-        public void generatebill(int processedBills)
-        {
-
-
-            DataTable dtLTBill = DSBill.Tables[processedBills];
-
-            try
-            {
-                SingleLTBill slt = parseSingleLTBill(dtLTBill);
-
-                slt.MVPicture = mVImagePath;
-                lstformattedbills.Add(slt);
-                rptsd.DataSource = lstformattedbills;
-                rptsd.Watermark.CopyFrom(pictureWatermarkFrontNonTOD);
-                rptsd.CreateDocument();
-                rpts.DataSource = lstformattedbills;
-                rpts.Watermark.CopyFrom(pictureWatermarkBackNonTOD);
-
-                rpts.CreateDocument();
-
-                rptsd.ModifyDocument(x => { x.AddPages(rpts.Pages); });
-
-                DevExpress.XtraPrinting.Page myPage2 = rptsd.Pages[1];
-                myPage2.AssignWatermark(pictureWatermarkBackNonTOD);
-
-                string billDate = slt.L1_MonthYear;
-                string serviceNo = slt.L6_SERVDET_SERVNO;
-
-                var outputfolder = "C://Bills//LT Files//" + billDate + "//" + textFileName;
-                OutputFolderPath OFP = new OutputFolderPath();
-                outputfolder = OFP.LoadLocation() + "//LT Files//" + billDate + "//" + textFileName;
-
-                if (!Directory.Exists(outputfolder))
-                    Directory.CreateDirectory(outputfolder);
-
-
-                new PdfStreamingExporter(rptsd, true).Export(outputfolder + "//" + serviceNo + ".pdf");
-                processedBills += 1;
-                lstformattedbills.Clear();
-                System.Runtime.GCSettings.LargeObjectHeapCompactionMode = System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce;
-                GC.Collect();
-                GC.RemoveMemoryPressure(1024 * 1024);
-            }
-            catch (System.OutOfMemoryException)
-            {
-                System.Runtime.GCSettings.LargeObjectHeapCompactionMode = System.Runtime.GCLargeObjectHeapCompactionMode.CompactOnce;
-                GC.Collect();
-                GC.RemoveMemoryPressure(1024 * 1024);
-            }
-
-            catch (Exception ex)
-            {
-                AppFunctions.LogError(ex);
-                AppFunctions.CloseWaitForm();
-                XtraMessageBox.Show("Error Parsing Bill " + processedBills + " of the given file", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Console.WriteLine(ex.Message);
-            }
-        }
 
     }
     

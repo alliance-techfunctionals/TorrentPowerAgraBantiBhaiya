@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.rcRibbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.bbiPrintLT = new DevExpress.XtraBars.BarButtonItem();
@@ -52,9 +51,9 @@
             this.rpgConfiguration = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgBroadCastMessage = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgOutputLocation = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ATDocumentManager = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
-            this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
-            this.dockManager = new DevExpress.XtraBars.Docking.DockManager(this.components);
+            this.ATDocumentManager = new DevExpress.XtraBars.Docking2010.DocumentManager();
+            this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView();
+            this.dockManager = new DevExpress.XtraBars.Docking.DockManager();
             ((System.ComponentModel.ISupportInitialize)(this.rcRibbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ATDocumentManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -204,7 +203,7 @@
             // 
             this.bbiLTSolar.Caption = "Print LT Solar";
             this.bbiLTSolar.Id = 17;
-            this.bbiLTSolar.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
+            this.bbiLTSolar.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bbiLTSolar.ImageOptions.LargeImage")));
             this.bbiLTSolar.Name = "bbiLTSolar";
             this.bbiLTSolar.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiLTSolar_ItemClick);
             // 
@@ -293,7 +292,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1235, 714);
             this.Controls.Add(this.rcRibbonControl);
-            this.IconOptions.Image = global::AT.Print.Properties.Resources.smalllogo;
+            this.IconOptions.Image = global::AT.Print.Properties.Resources.NewLogo;
             this.Name = "MainForm";
             this.Ribbon = this.rcRibbonControl;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

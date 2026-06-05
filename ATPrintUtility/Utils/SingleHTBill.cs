@@ -22,6 +22,11 @@ namespace AT.Print.Utils
         public string L1_DisconnectionMSGPrintingIMMEDIATE { get; set; }
         public string L1_BillingCode { get; set; }
         public string L1_Customer_PAN { get; set; }
+        public string L1_MobileNumber { get; set; }
+        public string L1_EmailId { get; set; }
+        public string L1_Net { get; set; }  //no use
+        public string L1_BillDays { get; set; }
+
         public string L2_Name { get; set; }
         public string L3_Addr1 { get; set; }
         public string L4_Addr2 { get; set; }
@@ -34,7 +39,7 @@ namespace AT.Print.Utils
         public string L6_TARIFF_DESCR { get; set; }
         public string L6_EXCESS_DEMAND { get; set; }
         public string L6_SUPPLY_VOLTAGE { get; set; }
-        public string L6_BILL_PF { get; set; }
+        public string L6_Avg_Power_Factor { get; set; } //changed from L6_BILL_PF
         public string L6_MTRDET_LF_PERC { get; set; }
         public string L6_BILL_TYPE { get; set; }
         public string L6_MeasureContractDemand { get; set; }
@@ -213,7 +218,7 @@ namespace AT.Print.Utils
 
         public System.Data.DataTable KVAgrph { get; set; }
         public System.Data.DataTable KVAHgrph { get; set; }
-        public System.Data.DataTable PFgrph { get; set; }
+        //public System.Data.DataTable PFgrph { get; set; }
 
         public string unit { get; set; }
 

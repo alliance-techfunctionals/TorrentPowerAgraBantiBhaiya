@@ -34,7 +34,7 @@ namespace AT.Print
             xrChart2.WidthF = xrChart1.WidthF;
 
 
-            xrChart3.Series[0].DataSource = Data[0].PFgrph;
+            //xrChart3.Series[0].DataSource = Data[0].PFgrph;
             xrChart3.Series[0].ArgumentScaleType = ScaleType.Qualitative;
             xrChart3.Series[0].ArgumentDataMember = "MonthYear";
             xrChart3.Series[0].Label.TextOrientation = TextOrientation.BottomToTop;
